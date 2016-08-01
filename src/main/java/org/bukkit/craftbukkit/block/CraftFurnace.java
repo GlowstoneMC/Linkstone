@@ -10,7 +10,7 @@ import org.bukkit.inventory.FurnaceInventory;
 
 public class CraftFurnace extends CraftBlockState implements Furnace {
 
-    private final TileEntityFurnace furnace;
+    private final TileEntityFurnace furnace = null;
 
     public CraftFurnace(final Block block) {
     }

@@ -8,7 +8,7 @@ import java.util.HashSet;
 
 public class BlockStateInteger extends BlockState<Integer> {
 
-    private final ImmutableSet<Integer> a;
+    private final ImmutableSet<Integer> a = null;
 
     protected BlockStateInteger(String s, int i, int j) {
     }

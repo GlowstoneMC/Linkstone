@@ -24,13 +24,13 @@ import org.bukkit.util.Vector;
 
 public abstract class CraftEntity implements org.bukkit.entity.Entity {
 
-    private static PermissibleBase perm;
+    private static PermissibleBase perm = null;
 
-    protected final CraftServer server;
+    protected final CraftServer server = null;
 
-    protected Entity entity;
+    protected Entity entity = null;
 
-    private EntityDamageEvent lastDamageEvent;
+    private EntityDamageEvent lastDamageEvent = null;
 
     public CraftEntity(final CraftServer server, final Entity entity) {
     }

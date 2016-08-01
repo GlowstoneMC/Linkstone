@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class BlockStructure extends BlockTileEntity {
 
-    public static final BlockStateEnum<TileEntityStructure.UsageMode> a;
+    public static final BlockStateEnum<TileEntityStructure.UsageMode> a = null;
 
     public BlockStructure() {
     }
@@ -58,7 +58,7 @@ public class BlockStructure extends BlockTileEntity {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

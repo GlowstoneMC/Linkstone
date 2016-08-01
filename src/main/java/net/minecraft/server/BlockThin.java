@@ -6,17 +6,17 @@ import javax.annotation.Nullable;
 
 public class BlockThin extends Block {
 
-    public static final BlockStateBoolean NORTH;
+    public static final BlockStateBoolean NORTH = null;
 
-    public static final BlockStateBoolean EAST;
+    public static final BlockStateBoolean EAST = null;
 
-    public static final BlockStateBoolean SOUTH;
+    public static final BlockStateBoolean SOUTH = null;
 
-    public static final BlockStateBoolean WEST;
+    public static final BlockStateBoolean WEST = null;
 
-    protected static final AxisAlignedBB[] f;
+    protected static final AxisAlignedBB[] f = null;
 
-    private final boolean a;
+    private final boolean a = false;
 
     protected BlockThin(Material material, boolean flag) {
     }
@@ -79,9 +79,9 @@ public class BlockThin extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }

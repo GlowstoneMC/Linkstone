@@ -13,9 +13,9 @@ import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 // CraftBukkit end
 public final class SpawnerCreature {
 
-    private static final int a;
+    private static final int a = 0;
 
-    private final LongHashSet b;
+    private final LongHashSet b = null;
 
     // CraftBukkit
     public SpawnerCreature() {

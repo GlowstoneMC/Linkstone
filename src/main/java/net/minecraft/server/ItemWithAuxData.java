@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class ItemWithAuxData extends ItemBlock {
 
-    private String[] b;
+    private String[] b = null;
 
     public ItemWithAuxData(Block block, boolean flag) {
     }

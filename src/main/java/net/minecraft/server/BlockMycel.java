@@ -11,7 +11,7 @@ import org.bukkit.event.block.BlockSpreadEvent;
 // CraftBukkit end
 public class BlockMycel extends Block {
 
-    public static final BlockStateBoolean SNOWY;
+    public static final BlockStateBoolean SNOWY = null;
 
     protected BlockMycel() {
     }

@@ -7,9 +7,9 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class BlockPoweredRail extends BlockMinecartTrackAbstract {
 
-    public static final BlockStateEnum<BlockMinecartTrackAbstract.EnumTrackPosition> SHAPE;
+    public static final BlockStateEnum<BlockMinecartTrackAbstract.EnumTrackPosition> SHAPE = null;
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
     protected BlockPoweredRail() {
     }
@@ -51,11 +51,11 @@ public class BlockPoweredRail extends BlockMinecartTrackAbstract {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
         static {
         }

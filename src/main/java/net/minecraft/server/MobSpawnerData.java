@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class MobSpawnerData extends WeightedRandom.WeightedRandomChoice {
 
-    private final NBTTagCompound b;
+    private final NBTTagCompound b = null;
 
     public MobSpawnerData() {
     }

@@ -24,13 +24,13 @@ import org.bukkit.util.BlockVector;
 
 public class CraftBlock implements Block {
 
-    private final CraftChunk chunk;
+    private final CraftChunk chunk = null;
 
-    private final int x;
+    private final int x = 0;
 
-    private final int y;
+    private final int y = 0;
 
-    private final int z;
+    private final int z = 0;
 
     public CraftBlock(CraftChunk chunk, int x, int y, int z) {
     }

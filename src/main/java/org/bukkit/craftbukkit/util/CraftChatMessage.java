@@ -17,28 +17,28 @@ import net.minecraft.server.ChatMessage;
 
 public final class CraftChatMessage {
 
-    private static final Pattern LINK_PATTERN;
+    private static final Pattern LINK_PATTERN = null;
 
     private static class StringMessage {
 
-        private static final Map<Character, EnumChatFormat> formatMap;
+        private static final Map<Character, EnumChatFormat> formatMap = null;
 
-        private static final Pattern INCREMENTAL_PATTERN;
+        private static final Pattern INCREMENTAL_PATTERN = null;
 
         static {
         }
 
-        private final List<IChatBaseComponent> list;
+        private final List<IChatBaseComponent> list = null;
 
-        private IChatBaseComponent currentChatComponent;
+        private IChatBaseComponent currentChatComponent = null;
 
-        private ChatModifier modifier;
+        private ChatModifier modifier = null;
 
-        private final IChatBaseComponent[] output;
+        private final IChatBaseComponent[] output = null;
 
-        private int currentIndex;
+        private int currentIndex = 0;
 
-        private final String message;
+        private final String message = null;
 
         private StringMessage(String message, boolean keepNewlines) {
         }

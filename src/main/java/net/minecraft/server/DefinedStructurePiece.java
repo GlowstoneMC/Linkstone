@@ -6,13 +6,13 @@ import java.util.Random;
 
 public abstract class DefinedStructurePiece extends StructurePiece {
 
-    private static final DefinedStructureInfo d;
+    private static final DefinedStructureInfo d = null;
 
-    protected DefinedStructure a;
+    protected DefinedStructure a = null;
 
-    protected DefinedStructureInfo b;
+    protected DefinedStructureInfo b = null;
 
-    protected BlockPosition c;
+    protected BlockPosition c = null;
 
     public DefinedStructurePiece() {
     }
@@ -43,7 +43,7 @@ public abstract class DefinedStructurePiece extends StructurePiece {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

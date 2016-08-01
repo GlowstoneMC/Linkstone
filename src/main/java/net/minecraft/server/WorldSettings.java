@@ -2,21 +2,21 @@ package net.minecraft.server;
 
 public final class WorldSettings {
 
-    private final long a;
+    private final long a = 0;
 
-    private final EnumGamemode b;
+    private final EnumGamemode b = null;
 
-    private final boolean c;
+    private final boolean c = false;
 
-    private final boolean d;
+    private final boolean d = false;
 
-    private final WorldType e;
+    private final WorldType e = null;
 
-    private boolean f;
+    private boolean f = false;
 
-    private boolean g;
+    private boolean g = false;
 
-    private String h;
+    private String h = null;
 
     public WorldSettings(long i, EnumGamemode enumgamemode, boolean flag, boolean flag1, WorldType worldtype) {
     }

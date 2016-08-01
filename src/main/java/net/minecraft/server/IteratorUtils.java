@@ -40,9 +40,9 @@ public class IteratorUtils {
 
     static class ClassIterable<T> implements Iterable<T[]> {
 
-        private final Class<T> a;
+        private final Class<T> a = null;
 
-        private final Iterable<? extends T>[] b;
+        private final Iterable<? extends T>[] b = null;
 
         private ClassIterable(Class<T> oclass, Iterable<? extends T>[] aiterable) {
         }
@@ -56,13 +56,13 @@ public class IteratorUtils {
 
         static class ClassIterable$ClassIterator<T> extends UnmodifiableIterator<T[]> {
 
-            private int a;
+            private int a = 0;
 
-            private final Iterable<? extends T>[] b;
+            private final Iterable<? extends T>[] b = null;
 
-            private final Iterator<? extends T>[] c;
+            private final Iterator<? extends T>[] c = null;
 
-            private final T[] d;
+            private final T[] d = null;
 
             private ClassIterable$ClassIterator(Class<T> oclass, Iterable<? extends T>[] aiterable) {
             }

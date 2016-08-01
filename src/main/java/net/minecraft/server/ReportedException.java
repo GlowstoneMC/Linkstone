@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class ReportedException extends RuntimeException {
 
-    private final CrashReport a;
+    private final CrashReport a = null;
 
     public ReportedException(CrashReport crashreport) {
     }

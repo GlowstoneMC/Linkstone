@@ -8,13 +8,13 @@ import net.minecraft.server.RecipesFurnace;
 
 public class RecipeIterator implements Iterator<Recipe> {
 
-    private final Iterator<IRecipe> recipes;
+    private final Iterator<IRecipe> recipes = null;
 
-    private final Iterator<net.minecraft.server.ItemStack> smeltingCustom;
+    private final Iterator<net.minecraft.server.ItemStack> smeltingCustom = null;
 
-    private final Iterator<net.minecraft.server.ItemStack> smeltingVanilla;
+    private final Iterator<net.minecraft.server.ItemStack> smeltingVanilla = null;
 
-    private Iterator<?> removeFrom;
+    private Iterator<?> removeFrom = null;
 
     public RecipeIterator() {
     }

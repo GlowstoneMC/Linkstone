@@ -6,7 +6,7 @@ import org.bukkit.command.RemoteConsoleCommandSender;
 
 public class CraftRemoteConsoleCommandSender extends ServerCommandSender implements RemoteConsoleCommandSender {
 
-    private final RemoteControlCommandListener listener;
+    private final RemoteControlCommandListener listener = null;
 
     public CraftRemoteConsoleCommandSender(RemoteControlCommandListener listener) {
     }

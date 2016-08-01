@@ -6,15 +6,15 @@ import java.util.List;
 
 public class PersistentVillage extends PersistentBase {
 
-    private World world;
+    private World world = null;
 
-    private final List<BlockPosition> c;
+    private final List<BlockPosition> c = null;
 
-    private final List<VillageDoor> d;
+    private final List<VillageDoor> d = null;
 
-    private final List<Village> villages;
+    private final List<Village> villages = null;
 
-    private int time;
+    private int time = 0;
 
     public PersistentVillage(String s) {
     }

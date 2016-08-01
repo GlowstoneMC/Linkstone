@@ -14,9 +14,9 @@ import org.fusesource.jansi.AnsiConsole;
 
 public class Main {
 
-    public static boolean useJline;
+    public static boolean useJline = false;
 
-    public static boolean useConsole;
+    public static boolean useConsole = false;
 
     public static void main(String[] args) {
     }

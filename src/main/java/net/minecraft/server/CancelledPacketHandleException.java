@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public final class CancelledPacketHandleException extends RuntimeException {
 
-    public static final CancelledPacketHandleException INSTANCE;
+    public static final CancelledPacketHandleException INSTANCE = null;
 
     private CancelledPacketHandleException() {
     }

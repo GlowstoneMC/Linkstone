@@ -12,30 +12,30 @@ import org.bukkit.craftbukkit.entity.CraftHumanEntity;
 // CraftBukkit end
 public class TileEntityFurnace extends TileEntityContainer implements ITickable, IWorldInventory {
 
-    private static final int[] a;
+    private static final int[] a = null;
 
-    private static final int[] f;
+    private static final int[] f = null;
 
-    private static final int[] g;
+    private static final int[] g = null;
 
-    private ItemStack[] items;
+    private ItemStack[] items = null;
 
-    private int burnTime;
+    private int burnTime = 0;
 
-    private int ticksForCurrentFuel;
+    private int ticksForCurrentFuel = 0;
 
-    private int cookTime;
+    private int cookTime = 0;
 
-    private int cookTimeTotal;
+    private int cookTimeTotal = 0;
 
-    private String m;
+    private String m = null;
 
     // CraftBukkit start - add fields and methods
-    private int lastTick;
+    private int lastTick = 0;
 
-    private int maxStack;
+    private int maxStack = 0;
 
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
     public ItemStack[] getContents() {
         return null;

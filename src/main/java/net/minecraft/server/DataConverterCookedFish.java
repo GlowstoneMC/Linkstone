@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class DataConverterCookedFish implements IDataConverter {
 
-    private static final MinecraftKey a;
+    private static final MinecraftKey a = null;
 
     public DataConverterCookedFish() {
     }

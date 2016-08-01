@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class CommandDispatcher extends CommandHandler implements ICommandDispatcher {
 
-    private final MinecraftServer a;
+    private final MinecraftServer a = null;
 
     public CommandDispatcher(MinecraftServer minecraftserver) {
     }

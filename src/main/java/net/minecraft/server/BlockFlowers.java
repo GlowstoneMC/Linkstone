@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 
 public abstract class BlockFlowers extends BlockPlant {
 
-    protected BlockStateEnum<BlockFlowers.EnumFlowerVarient> TYPE;
+    protected BlockStateEnum<BlockFlowers.EnumFlowerVarient> TYPE = null;
 
     protected BlockFlowers() {
     }
@@ -39,15 +39,15 @@ public abstract class BlockFlowers extends BlockPlant {
 
         DANDELION(BlockFlowers.EnumFlowerType.YELLOW, 0, "dandelion"), POPPY(BlockFlowers.EnumFlowerType.RED, 0, "poppy"), BLUE_ORCHID(BlockFlowers.EnumFlowerType.RED, 1, "blue_orchid", "blueOrchid"), ALLIUM(BlockFlowers.EnumFlowerType.RED, 2, "allium"), HOUSTONIA(BlockFlowers.EnumFlowerType.RED, 3, "houstonia"), RED_TULIP(BlockFlowers.EnumFlowerType.RED, 4, "red_tulip", "tulipRed"), ORANGE_TULIP(BlockFlowers.EnumFlowerType.RED, 5, "orange_tulip", "tulipOrange"), WHITE_TULIP(BlockFlowers.EnumFlowerType.RED, 6, "white_tulip", "tulipWhite"), PINK_TULIP(BlockFlowers.EnumFlowerType.RED, 7, "pink_tulip", "tulipPink"), OXEYE_DAISY(BlockFlowers.EnumFlowerType.RED, 8, "oxeye_daisy", "oxeyeDaisy");
 
-        private static final BlockFlowers.EnumFlowerVarient[][] k;
+        private static final BlockFlowers.EnumFlowerVarient[][] k = null;
 
-        private final BlockFlowers.EnumFlowerType l;
+        private final BlockFlowers.EnumFlowerType l = null;
 
-        private final int m;
+        private final int m = 0;
 
-        private final String n;
+        private final String n = null;
 
-        private final String o;
+        private final String o = null;
 
         private EnumFlowerVarient(BlockFlowers.EnumFlowerType blockflowers_enumflowertype, int i, String s) {
         }

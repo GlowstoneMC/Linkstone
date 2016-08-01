@@ -11,9 +11,9 @@ import org.bukkit.craftbukkit.util.CraftMagicNumbers;
 
 public class CraftJukebox extends CraftBlockState implements Jukebox {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final TileEntityRecordPlayer jukebox;
+    private final TileEntityRecordPlayer jukebox = null;
 
     public CraftJukebox(final Block block) {
     }

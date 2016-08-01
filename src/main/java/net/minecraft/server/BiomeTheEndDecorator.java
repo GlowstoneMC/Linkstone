@@ -14,9 +14,9 @@ import java.util.concurrent.TimeUnit;
 
 public class BiomeTheEndDecorator extends BiomeDecorator {
 
-    private static final LoadingCache<Long, WorldGenEnder.Spike[]> M;
+    private static final LoadingCache<Long, WorldGenEnder.Spike[]> M = null;
 
-    private final WorldGenEnder N;
+    private final WorldGenEnder N = null;
 
     public BiomeTheEndDecorator() {
     }

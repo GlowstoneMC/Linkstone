@@ -5,9 +5,9 @@ import javax.swing.JList;
 
 public class PlayerListBox extends JList implements ITickable {
 
-    private final MinecraftServer a;
+    private final MinecraftServer a = null;
 
-    private int b;
+    private int b = 0;
 
     public PlayerListBox(MinecraftServer minecraftserver) {
     }

@@ -12,9 +12,9 @@ import org.bukkit.craftbukkit.inventory.CraftShapelessRecipe;
 // CraftBukkit end
 public class ShapelessRecipes implements IRecipe {
 
-    private final ItemStack result;
+    private final ItemStack result = null;
 
-    private final List<ItemStack> ingredients;
+    private final List<ItemStack> ingredients = null;
 
     public ShapelessRecipes(ItemStack itemstack, List<ItemStack> list) {
     }

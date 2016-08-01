@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayOutHeldItemSlot implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
     public PacketPlayOutHeldItemSlot() {
     }

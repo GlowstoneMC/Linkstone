@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutServerDifficulty implements Packet<PacketListenerPlayOut> {
 
-    private EnumDifficulty a;
+    private EnumDifficulty a = null;
 
-    private boolean b;
+    private boolean b = false;
 
     public PacketPlayOutServerDifficulty() {
     }

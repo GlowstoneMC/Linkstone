@@ -15,30 +15,30 @@ import org.bukkit.craftbukkit.map.CraftMapView;
 // CraftBukkit end
 public class WorldMap extends PersistentBase {
 
-    public int centerX;
+    public int centerX = 0;
 
-    public int centerZ;
+    public int centerZ = 0;
 
-    public byte map;
+    public byte map = 0;
 
-    public boolean track;
+    public boolean track = false;
 
-    public byte scale;
+    public byte scale = 0;
 
-    public byte[] colors;
+    public byte[] colors = null;
 
-    public List<WorldMap.WorldMapHumanTracker> h;
+    public List<WorldMap.WorldMapHumanTracker> h = null;
 
-    private final Map<EntityHuman, WorldMap.WorldMapHumanTracker> j;
+    private final Map<EntityHuman, WorldMap.WorldMapHumanTracker> j = null;
 
-    public Map<String, MapIcon> decorations;
+    public Map<String, MapIcon> decorations = null;
 
     // CraftBukkit start
-    public final CraftMapView mapView;
+    public final CraftMapView mapView = null;
 
-    private CraftServer server;
+    private CraftServer server = null;
 
-    private UUID uniqueId;
+    private UUID uniqueId = null;
 
     // CraftBukkit end
     public WorldMap(String s) {
@@ -74,21 +74,21 @@ public class WorldMap extends PersistentBase {
 
     public class WorldMapHumanTracker {
 
-        public final EntityHuman trackee;
+        public final EntityHuman trackee = null;
 
-        private boolean d;
+        private boolean d = false;
 
-        private int e;
+        private int e = 0;
 
-        private int f;
+        private int f = 0;
 
-        private int g;
+        private int g = 0;
 
-        private int h;
+        private int h = 0;
 
-        private int i;
+        private int i = 0;
 
-        public int b;
+        public int b = 0;
 
         public WorldMapHumanTracker(EntityHuman entityhuman) {
         }

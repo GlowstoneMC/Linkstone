@@ -18,19 +18,19 @@ import java.util.Set;
 @SuppressWarnings("unchecked")
 public class LongObjectHashMap<V> implements Cloneable, Serializable {
 
-    static final long serialVersionUID;
+    static final long serialVersionUID = 0;
 
-    private static final long EMPTY_KEY;
+    private static final long EMPTY_KEY = 0;
 
-    private static final int BUCKET_SIZE;
+    private static final int BUCKET_SIZE = 0;
 
-    private transient long[][] keys;
+    private transient long[][] keys = null;
 
-    private transient V[][] values;
+    private transient V[][] values = null;
 
-    private transient int modCount;
+    private transient int modCount = 0;
 
-    private transient int size;
+    private transient int size = 0;
 
     public LongObjectHashMap() {
     }
@@ -112,19 +112,19 @@ public class LongObjectHashMap<V> implements Cloneable, Serializable {
 
     private class ValueIterator implements Iterator<V> {
 
-        private int count;
+        private int count = 0;
 
-        private int index;
+        private int index = 0;
 
-        private int innerIndex;
+        private int innerIndex = 0;
 
-        private int expectedModCount;
+        private int expectedModCount = 0;
 
-        private long lastReturned;
+        private long lastReturned = 0;
 
-        long prevKey;
+        long prevKey = 0;
 
-        V prevValue;
+        V prevValue = null;
 
         ValueIterator() {
         }
@@ -143,7 +143,7 @@ public class LongObjectHashMap<V> implements Cloneable, Serializable {
 
     private class KeyIterator implements Iterator<Long> {
 
-        final ValueIterator iterator;
+        final ValueIterator iterator = null;
 
         public KeyIterator() {
         }
@@ -202,9 +202,9 @@ public class LongObjectHashMap<V> implements Cloneable, Serializable {
 
     private class Entry implements Map.Entry<Long, V> {
 
-        private final Long key;
+        private final Long key = null;
 
-        private V value;
+        private V value = null;
 
         Entry(long k, V v) {
         }

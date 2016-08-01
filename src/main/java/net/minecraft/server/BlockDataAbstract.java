@@ -10,9 +10,9 @@ import javax.annotation.Nullable;
 
 public abstract class BlockDataAbstract implements IBlockData {
 
-    private static final Joiner a;
+    private static final Joiner a = null;
 
-    private static final Function<Entry<IBlockState<?>, Comparable<?>>, String> b;
+    private static final Function<Entry<IBlockState<?>, Comparable<?>>, String> b = null;
 
     public BlockDataAbstract() {
     }

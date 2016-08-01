@@ -7,9 +7,9 @@ import javax.annotation.Nullable;
 
 public class BlockRedstoneComparator extends BlockDiodeAbstract implements ITileEntity {
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
-    public static final BlockStateEnum<BlockRedstoneComparator.EnumComparatorMode> MODE;
+    public static final BlockStateEnum<BlockRedstoneComparator.EnumComparatorMode> MODE = null;
 
     public BlockRedstoneComparator(boolean flag) {
     }
@@ -119,7 +119,7 @@ public class BlockRedstoneComparator extends BlockDiodeAbstract implements ITile
 
         COMPARE("compare"), SUBTRACT("subtract");
 
-        private final String c;
+        private final String c = null;
 
         private EnumComparatorMode(String s) {
         }

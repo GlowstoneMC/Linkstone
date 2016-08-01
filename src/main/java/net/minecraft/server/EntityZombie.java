@@ -13,31 +13,31 @@ import org.bukkit.event.entity.EntityTargetEvent;
 //CraftBukkit end
 public class EntityZombie extends EntityMonster {
 
-    protected static final IAttribute a;
+    protected static final IAttribute a = null;
 
-    private static final UUID b;
+    private static final UUID b = null;
 
-    private static final AttributeModifier c;
+    private static final AttributeModifier c = null;
 
-    private static final DataWatcherObject<Boolean> bx;
+    private static final DataWatcherObject<Boolean> bx = null;
 
-    private static final DataWatcherObject<Integer> by;
+    private static final DataWatcherObject<Integer> by = null;
 
-    private static final DataWatcherObject<Boolean> bz;
+    private static final DataWatcherObject<Boolean> bz = null;
 
-    private static final DataWatcherObject<Boolean> bA;
+    private static final DataWatcherObject<Boolean> bA = null;
 
-    private final PathfinderGoalBreakDoor bB;
+    private final PathfinderGoalBreakDoor bB = null;
 
-    private int bC;
+    private int bC = 0;
 
-    private boolean bD;
+    private boolean bD = false;
 
-    private float bE;
+    private float bE = 0.0F;
 
-    private float bF;
+    private float bF = 0.0F;
 
-    private int lastTick;
+    private int lastTick = 0;
 
     // CraftBukkit - add field
     public EntityZombie(World world) {
@@ -207,9 +207,9 @@ public class EntityZombie extends EntityMonster {
 
     class GroupDataZombie implements GroupDataEntity {
 
-        public boolean a;
+        public boolean a = false;
 
-        public boolean b;
+        public boolean b = false;
 
         private GroupDataZombie(boolean flag, boolean flag1) {
         }

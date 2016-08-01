@@ -4,17 +4,17 @@ import javax.annotation.Nullable;
 
 public class CombatEntry {
 
-    private final DamageSource a;
+    private final DamageSource a = null;
 
-    private final int b;
+    private final int b = 0;
 
-    private final float c;
+    private final float c = 0.0F;
 
-    private final float d;
+    private final float d = 0.0F;
 
-    private final String e;
+    private final String e = null;
 
-    private final float f;
+    private final float f = 0.0F;
 
     public CombatEntry(DamageSource damagesource, int i, float f, float f1, String s, float f2) {
     }

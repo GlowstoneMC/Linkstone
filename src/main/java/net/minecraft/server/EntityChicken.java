@@ -6,21 +6,21 @@ import javax.annotation.Nullable;
 
 public class EntityChicken extends EntityAnimal {
 
-    private static final Set<Item> bF;
+    private static final Set<Item> bF = null;
 
-    public float bx;
+    public float bx = 0.0F;
 
-    public float by;
+    public float by = 0.0F;
 
-    public float bz;
+    public float bz = 0.0F;
 
-    public float bB;
+    public float bB = 0.0F;
 
-    public float bC;
+    public float bC = 0.0F;
 
-    public int bD;
+    public int bD = 0;
 
-    public boolean bE;
+    public boolean bE = false;
 
     public EntityChicken(World world) {
     }

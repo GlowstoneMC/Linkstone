@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class EntityFireworks extends Entity {
 
-    public static final DataWatcherObject<Optional<ItemStack>> FIREWORK_ITEM;
+    public static final DataWatcherObject<Optional<ItemStack>> FIREWORK_ITEM = null;
 
-    private int ticksFlown;
+    private int ticksFlown = 0;
 
-    public int expectedLifespan;
+    public int expectedLifespan = 0;
 
     public EntityFireworks(World world) {
     }

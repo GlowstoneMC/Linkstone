@@ -9,9 +9,9 @@ import org.bukkit.scheduler.BukkitWorker;
 
 class CraftAsyncTask extends CraftTask {
 
-    private final LinkedList<BukkitWorker> workers;
+    private final LinkedList<BukkitWorker> workers = null;
 
-    private final Map<Integer, CraftTask> runners;
+    private final Map<Integer, CraftTask> runners = null;
 
     CraftAsyncTask(final Map<Integer, CraftTask> runners, final Plugin plugin, final Runnable task, final int id, final long delay) {
     }

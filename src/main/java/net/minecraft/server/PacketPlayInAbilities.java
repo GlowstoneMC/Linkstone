@@ -4,17 +4,17 @@ import java.io.IOException;
 
 public class PacketPlayInAbilities implements Packet<PacketListenerPlayIn> {
 
-    private boolean a;
+    private boolean a = false;
 
-    private boolean b;
+    private boolean b = false;
 
-    private boolean c;
+    private boolean c = false;
 
-    private boolean d;
+    private boolean d = false;
 
-    private float e;
+    private float e = 0.0F;
 
-    private float f;
+    private float f = 0.0F;
 
     public PacketPlayInAbilities() {
     }

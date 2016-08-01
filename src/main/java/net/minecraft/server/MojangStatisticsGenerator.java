@@ -15,25 +15,25 @@ import java.util.UUID;
 
 public class MojangStatisticsGenerator {
 
-    private final Map<String, Object> a;
+    private final Map<String, Object> a = null;
 
-    private final Map<String, Object> b;
+    private final Map<String, Object> b = null;
 
-    private final String c;
+    private final String c = null;
 
-    private final URL d;
+    private final URL d = null;
 
-    private final IMojangStatistics e;
+    private final IMojangStatistics e = null;
 
-    private final Timer f;
+    private final Timer f = null;
 
-    private final Object g;
+    private final Object g = null;
 
-    private final long h;
+    private final long h = 0;
 
-    private boolean i;
+    private boolean i = false;
 
-    private int j;
+    private int j = 0;
 
     public MojangStatisticsGenerator(String s, IMojangStatistics imojangstatistics, long i) {
     }

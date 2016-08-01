@@ -10,21 +10,21 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public abstract class RemoteConnectionThread implements Runnable {
 
-    private static final AtomicInteger h;
+    private static final AtomicInteger h = null;
 
-    protected boolean a;
+    protected boolean a = false;
 
-    protected IMinecraftServer b;
+    protected IMinecraftServer b = null;
 
-    protected final String c;
+    protected final String c = null;
 
-    protected Thread d;
+    protected Thread d = null;
 
-    protected int e;
+    protected int e = 0;
 
-    protected List<DatagramSocket> f;
+    protected List<DatagramSocket> f = null;
 
-    protected List<ServerSocket> g;
+    protected List<ServerSocket> g = null;
 
     protected RemoteConnectionThread(IMinecraftServer iminecraftserver, String s) {
     }

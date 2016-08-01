@@ -9,19 +9,19 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public class BlockTripwireHook extends Block {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
-    public static final BlockStateBoolean ATTACHED;
+    public static final BlockStateBoolean ATTACHED = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
     public BlockTripwireHook() {
     }
@@ -117,7 +117,7 @@ public class BlockTripwireHook extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

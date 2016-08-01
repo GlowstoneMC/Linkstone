@@ -9,13 +9,13 @@ import java.util.Map.Entry;
 
 public class WorldGenVillage extends StructureGenerator {
 
-    public static final List<BiomeBase> a;
+    public static final List<BiomeBase> a = null;
 
-    private int b;
+    private int b = 0;
 
-    private int d;
+    private int d = 0;
 
-    private final int h;
+    private final int h = 0;
 
     public WorldGenVillage() {
     }
@@ -37,7 +37,7 @@ public class WorldGenVillage extends StructureGenerator {
 
     public static class WorldGenVillageStart extends StructureStart {
 
-        private boolean c;
+        private boolean c = false;
 
         public WorldGenVillageStart() {
         }

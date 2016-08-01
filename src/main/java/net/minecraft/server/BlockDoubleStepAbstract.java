@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public abstract class BlockDoubleStepAbstract extends BlockStepAbstract {
 
-    public static final BlockStateBoolean SEAMLESS;
+    public static final BlockStateBoolean SEAMLESS = null;
 
-    public static final BlockStateEnum<BlockDoubleStepAbstract.EnumStoneSlabVariant> VARIANT;
+    public static final BlockStateEnum<BlockDoubleStepAbstract.EnumStoneSlabVariant> VARIANT = null;
 
     public BlockDoubleStepAbstract() {
     }
@@ -57,15 +57,15 @@ public abstract class BlockDoubleStepAbstract extends BlockStepAbstract {
 
         STONE(0, MaterialMapColor.m, "stone"), SAND(1, MaterialMapColor.d, "sandstone", "sand"), WOOD(2, MaterialMapColor.o, "wood_old", "wood"), COBBLESTONE(3, MaterialMapColor.m, "cobblestone", "cobble"), BRICK(4, MaterialMapColor.D, "brick"), SMOOTHBRICK(5, MaterialMapColor.m, "stone_brick", "smoothStoneBrick"), NETHERBRICK(6, MaterialMapColor.K, "nether_brick", "netherBrick"), QUARTZ(7, MaterialMapColor.p, "quartz");
 
-        private static final BlockDoubleStepAbstract.EnumStoneSlabVariant[] i;
+        private static final BlockDoubleStepAbstract.EnumStoneSlabVariant[] i = null;
 
-        private final int j;
+        private final int j = 0;
 
-        private final MaterialMapColor k;
+        private final MaterialMapColor k = null;
 
-        private final String l;
+        private final String l = null;
 
-        private final String m;
+        private final String m = null;
 
         private EnumStoneSlabVariant(int i, MaterialMapColor materialmapcolor, String s) {
         }

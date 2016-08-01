@@ -4,15 +4,15 @@ import javax.annotation.Nullable;
 
 public class TileEntitySign extends TileEntity {
 
-    public final IChatBaseComponent[] lines;
+    public final IChatBaseComponent[] lines = null;
 
-    public int f;
+    public int f = 0;
 
-    public boolean isEditable;
+    public boolean isEditable = false;
 
-    private EntityHuman h;
+    private EntityHuman h = null;
 
-    private final CommandObjectiveExecutor i;
+    private final CommandObjectiveExecutor i = null;
 
     public TileEntitySign() {
     }

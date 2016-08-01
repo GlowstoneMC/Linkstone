@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public abstract class BlockWoodenStep extends BlockStepAbstract {
 
-    public static final BlockStateEnum<BlockWood.EnumLogVariant> VARIANT;
+    public static final BlockStateEnum<BlockWood.EnumLogVariant> VARIANT = null;
 
     public BlockWoodenStep() {
     }

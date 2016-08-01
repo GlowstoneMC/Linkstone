@@ -15,57 +15,57 @@ import org.bukkit.event.player.PlayerArmorStandManipulateEvent;
 // CraftBukkit end
 public class EntityArmorStand extends EntityLiving {
 
-    private static final Vector3f br;
+    private static final Vector3f br = null;
 
-    private static final Vector3f bs;
+    private static final Vector3f bs = null;
 
-    private static final Vector3f bt;
+    private static final Vector3f bt = null;
 
-    private static final Vector3f bu;
+    private static final Vector3f bu = null;
 
-    private static final Vector3f bv;
+    private static final Vector3f bv = null;
 
-    private static final Vector3f bw;
+    private static final Vector3f bw = null;
 
-    public static final DataWatcherObject<Byte> a;
+    public static final DataWatcherObject<Byte> a = null;
 
-    public static final DataWatcherObject<Vector3f> b;
+    public static final DataWatcherObject<Vector3f> b = null;
 
-    public static final DataWatcherObject<Vector3f> c;
+    public static final DataWatcherObject<Vector3f> c = null;
 
-    public static final DataWatcherObject<Vector3f> d;
+    public static final DataWatcherObject<Vector3f> d = null;
 
-    public static final DataWatcherObject<Vector3f> e;
+    public static final DataWatcherObject<Vector3f> e = null;
 
-    public static final DataWatcherObject<Vector3f> f;
+    public static final DataWatcherObject<Vector3f> f = null;
 
-    public static final DataWatcherObject<Vector3f> g;
+    public static final DataWatcherObject<Vector3f> g = null;
 
-    private static final Predicate<Entity> bx;
+    private static final Predicate<Entity> bx = null;
 
-    private final ItemStack[] by;
+    private final ItemStack[] by = null;
 
-    private final ItemStack[] bz;
+    private final ItemStack[] bz = null;
 
-    private boolean bA;
+    private boolean bA = false;
 
-    public long h;
+    public long h = 0;
 
-    private int bB;
+    private int bB = 0;
 
-    private boolean bC;
+    private boolean bC = false;
 
-    public Vector3f headPose;
+    public Vector3f headPose = null;
 
-    public Vector3f bodyPose;
+    public Vector3f bodyPose = null;
 
-    public Vector3f leftArmPose;
+    public Vector3f leftArmPose = null;
 
-    public Vector3f rightArmPose;
+    public Vector3f rightArmPose = null;
 
-    public Vector3f leftLegPose;
+    public Vector3f leftLegPose = null;
 
-    public Vector3f rightLegPose;
+    public Vector3f rightLegPose = null;
 
     public EntityArmorStand(World world) {
     }
@@ -280,7 +280,7 @@ public class EntityArmorStand extends EntityLiving {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

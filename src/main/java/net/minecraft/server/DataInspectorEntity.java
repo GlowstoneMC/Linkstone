@@ -5,7 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 public class DataInspectorEntity implements DataInspector {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
     public DataInspectorEntity() {
     }

@@ -5,23 +5,23 @@ import java.util.UUID;
 
 public class PacketPlayOutBoss implements Packet<PacketListenerPlayOut> {
 
-    private UUID a;
+    private UUID a = null;
 
-    private PacketPlayOutBoss.Action b;
+    private PacketPlayOutBoss.Action b = null;
 
-    private IChatBaseComponent c;
+    private IChatBaseComponent c = null;
 
-    private float d;
+    private float d = 0.0F;
 
-    private BossBattle.BarColor e;
+    private BossBattle.BarColor e = null;
 
-    private BossBattle.BarStyle f;
+    private BossBattle.BarStyle f = null;
 
-    private boolean g;
+    private boolean g = false;
 
-    private boolean h;
+    private boolean h = false;
 
-    private boolean i;
+    private boolean i = false;
 
     public PacketPlayOutBoss() {
     }
@@ -47,7 +47,7 @@ public class PacketPlayOutBoss implements Packet<PacketListenerPlayOut> {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

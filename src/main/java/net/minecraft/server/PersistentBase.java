@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public abstract class PersistentBase {
 
-    public final String id;
+    public final String id = null;
 
-    private boolean b;
+    private boolean b = false;
 
     public PersistentBase(String s) {
     }

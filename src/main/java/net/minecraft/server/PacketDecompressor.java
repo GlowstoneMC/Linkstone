@@ -10,9 +10,9 @@ import java.util.zip.Inflater;
 
 public class PacketDecompressor extends ByteToMessageDecoder {
 
-    private final Inflater a;
+    private final Inflater a = null;
 
-    private int b;
+    private int b = 0;
 
     public PacketDecompressor(int i) {
     }

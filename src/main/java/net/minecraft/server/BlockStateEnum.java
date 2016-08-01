@@ -13,9 +13,9 @@ import java.util.Map;
 
 public class BlockStateEnum<T extends Enum<T> & INamable> extends BlockState<T> {
 
-    private final ImmutableSet<T> a;
+    private final ImmutableSet<T> a = null;
 
-    private final Map<String, T> b;
+    private final Map<String, T> b = null;
 
     protected BlockStateEnum(String s, Class<T> oclass, Collection<T> collection) {
     }

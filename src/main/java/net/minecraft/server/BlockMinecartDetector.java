@@ -10,9 +10,9 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public class BlockMinecartDetector extends BlockMinecartTrackAbstract {
 
-    public static final BlockStateEnum<BlockMinecartTrackAbstract.EnumTrackPosition> SHAPE;
+    public static final BlockStateEnum<BlockMinecartTrackAbstract.EnumTrackPosition> SHAPE = null;
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
     public BlockMinecartDetector() {
     }
@@ -93,11 +93,11 @@ public class BlockMinecartDetector extends BlockMinecartTrackAbstract {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
         static {
         }

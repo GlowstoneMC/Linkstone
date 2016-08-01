@@ -11,20 +11,20 @@ import org.bukkit.entity.HumanEntity;
 // CraftBukkit end
 public class InventoryMerchant implements IInventory {
 
-    private final IMerchant merchant;
+    private final IMerchant merchant = null;
 
-    private final ItemStack[] itemsInSlots;
+    private final ItemStack[] itemsInSlots = null;
 
-    private final EntityHuman player;
+    private final EntityHuman player = null;
 
-    private MerchantRecipe recipe;
+    private MerchantRecipe recipe = null;
 
-    public int selectedIndex;
+    public int selectedIndex = 0;
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;

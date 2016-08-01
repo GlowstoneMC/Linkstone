@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class Path {
 
-    private PathPoint[] a;
+    private PathPoint[] a = null;
 
-    private int b;
+    private int b = 0;
 
     public Path() {
     }

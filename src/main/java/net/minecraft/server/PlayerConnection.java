@@ -60,114 +60,114 @@ import org.bukkit.util.NumberConversions;
 // CraftBukkit end
 public class PlayerConnection implements PacketListenerPlayIn, ITickable {
 
-    private static final Logger LOGGER;
+    private static final Logger LOGGER = null;
 
-    public final NetworkManager networkManager;
+    public final NetworkManager networkManager = null;
 
-    private final MinecraftServer minecraftServer;
+    private final MinecraftServer minecraftServer = null;
 
-    public EntityPlayer player;
+    public EntityPlayer player = null;
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
-    private long g;
+    private long g = 0;
 
-    private long h;
+    private long h = 0;
 
     // CraftBukkit start - multithreaded fields
-    private volatile int chatThrottle;
+    private volatile int chatThrottle = 0;
 
-    private static final AtomicIntegerFieldUpdater chatSpamField;
+    private static final AtomicIntegerFieldUpdater chatSpamField = null;
 
     // CraftBukkit end
-    private int j;
+    private int j = 0;
 
-    private final IntHashMap<Short> k;
+    private final IntHashMap<Short> k = null;
 
-    private double l;
+    private double l = 0.0;
 
-    private double m;
+    private double m = 0.0;
 
-    private double n;
+    private double n = 0.0;
 
-    private double o;
+    private double o = 0.0;
 
-    private double p;
+    private double p = 0.0;
 
-    private double q;
+    private double q = 0.0;
 
-    private Entity r;
+    private Entity r = null;
 
-    private double s;
+    private double s = 0.0;
 
-    private double t;
+    private double t = 0.0;
 
-    private double u;
+    private double u = 0.0;
 
-    private double v;
+    private double v = 0.0;
 
-    private double w;
+    private double w = 0.0;
 
-    private double x;
+    private double x = 0.0;
 
-    private Vec3D teleportPos;
+    private Vec3D teleportPos = null;
 
-    private int teleportAwait;
+    private int teleportAwait = 0;
 
-    private int A;
+    private int A = 0;
 
-    private boolean B;
+    private boolean B = false;
 
-    private int C;
+    private int C = 0;
 
-    private boolean D;
+    private boolean D = false;
 
-    private int E;
+    private int E = 0;
 
-    private int F;
+    private int F = 0;
 
-    private int G;
+    private int G = 0;
 
-    private boolean processedDisconnect;
+    private boolean processedDisconnect = false;
 
     // CraftBukkit - Added
     public PlayerConnection(MinecraftServer minecraftserver, NetworkManager networkmanager, EntityPlayer entityplayer) {
     }
 
-    private final org.bukkit.craftbukkit.CraftServer server;
+    private final org.bukkit.craftbukkit.CraftServer server = null;
 
-    private int lastTick;
+    private int lastTick = 0;
 
-    private int allowedPlayerTicks;
+    private int allowedPlayerTicks = 0;
 
-    private int lastDropTick;
+    private int lastDropTick = 0;
 
-    private int dropCount;
+    private int dropCount = 0;
 
-    private static final int SURVIVAL_PLACE_DISTANCE_SQUARED;
+    private static final int SURVIVAL_PLACE_DISTANCE_SQUARED = 0;
 
-    private static final int CREATIVE_PLACE_DISTANCE_SQUARED;
+    private static final int CREATIVE_PLACE_DISTANCE_SQUARED = 0;
 
     // Get position of last block hit for BlockDamageLevel.STOPPED
-    private double lastPosX;
+    private double lastPosX = 0.0;
 
-    private double lastPosY;
+    private double lastPosY = 0.0;
 
-    private double lastPosZ;
+    private double lastPosZ = 0.0;
 
-    private float lastPitch;
+    private float lastPitch = 0.0F;
 
-    private float lastYaw;
+    private float lastYaw = 0.0F;
 
-    private boolean justTeleported;
+    private boolean justTeleported = false;
 
     public CraftPlayer getPlayer() {
         return null;
     }
 
-    private static final HashSet<Integer> invalidItems;
+    private static final HashSet<Integer> invalidItems = null;
 
     // TODO: Check after every update.
     // CraftBukkit end
@@ -312,13 +312,13 @@ public class PlayerConnection implements PacketListenerPlayIn, ITickable {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
-        static final int[] d;
+        static final int[] d = null;
 
         static {
         }

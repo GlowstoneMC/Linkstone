@@ -6,29 +6,29 @@ import java.util.Locale;
 
 public class Statistic {
 
-    public final String name;
+    public final String name = null;
 
-    private final IChatBaseComponent a;
+    private final IChatBaseComponent a = null;
 
-    public boolean f;
+    public boolean f = false;
 
-    private final Counter b;
+    private final Counter b = null;
 
-    private final IScoreboardCriteria c;
+    private final IScoreboardCriteria c = null;
 
-    private Class<? extends IJsonStatistic> d;
+    private Class<? extends IJsonStatistic> d = null;
 
-    private static final NumberFormat k;
+    private static final NumberFormat k = null;
 
-    public static Counter g;
+    public static Counter g = null;
 
-    private static final DecimalFormat l;
+    private static final DecimalFormat l = null;
 
-    public static Counter h;
+    public static Counter h = null;
 
-    public static Counter i;
+    public static Counter i = null;
 
-    public static Counter j;
+    public static Counter j = null;
 
     public Statistic(String s, IChatBaseComponent ichatbasecomponent, Counter counter) {
     }

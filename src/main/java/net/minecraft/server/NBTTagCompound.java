@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 public class NBTTagCompound extends NBTBase {
 
-    private final Map<String, NBTBase> map;
+    private final Map<String, NBTBase> map = null;
 
     public NBTTagCompound() {
     }

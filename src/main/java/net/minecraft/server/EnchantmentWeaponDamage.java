@@ -2,15 +2,15 @@ package net.minecraft.server;
 
 public class EnchantmentWeaponDamage extends Enchantment {
 
-    private static final String[] e;
+    private static final String[] e = null;
 
-    private static final int[] f;
+    private static final int[] f = null;
 
-    private static final int[] g;
+    private static final int[] g = null;
 
-    private static final int[] h;
+    private static final int[] h = null;
 
-    public final int a;
+    public final int a = 0;
 
     public EnchantmentWeaponDamage(Enchantment.Rarity enchantment_rarity, int i, EnumItemSlot... aenumitemslot) {
     }

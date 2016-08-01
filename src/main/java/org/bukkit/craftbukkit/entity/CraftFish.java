@@ -13,7 +13,7 @@ import org.bukkit.projectiles.ProjectileSource;
 
 public class CraftFish extends AbstractProjectile implements Fish {
 
-    private double biteChance;
+    private double biteChance = 0.0;
 
     public CraftFish(CraftServer server, EntityFishingHook entity) {
     }

@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutMultiBlockChange implements Packet<PacketListenerPlayOut> {
 
-    private ChunkCoordIntPair a;
+    private ChunkCoordIntPair a = null;
 
-    private PacketPlayOutMultiBlockChange.MultiBlockChangeInfo[] b;
+    private PacketPlayOutMultiBlockChange.MultiBlockChangeInfo[] b = null;
 
     public PacketPlayOutMultiBlockChange() {
     }
@@ -25,9 +25,9 @@ public class PacketPlayOutMultiBlockChange implements Packet<PacketListenerPlayO
 
     public class MultiBlockChangeInfo {
 
-        private final short b;
+        private final short b = 0;
 
-        private final IBlockData c;
+        private final IBlockData c = null;
 
         public MultiBlockChangeInfo(short short0, IBlockData iblockdata) {
         }

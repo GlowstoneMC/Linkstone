@@ -8,16 +8,16 @@ import javax.annotation.Nullable;
 
 public class RecipesFurnace {
 
-    private static final RecipesFurnace a;
+    private static final RecipesFurnace a = null;
 
-    public Map<ItemStack, ItemStack> recipes;
+    public Map<ItemStack, ItemStack> recipes = null;
 
-    private final Map<ItemStack, Float> experience;
+    private final Map<ItemStack, Float> experience = null;
 
-    public Map<ItemStack, ItemStack> customRecipes;
+    public Map<ItemStack, ItemStack> customRecipes = null;
 
     // CraftBukkit - add field
-    public Map<ItemStack, Float> customExperience;
+    public Map<ItemStack, Float> customExperience = null;
 
     // CraftBukkit - add field
     public static RecipesFurnace getInstance() {

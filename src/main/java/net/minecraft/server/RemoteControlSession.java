@@ -11,15 +11,15 @@ import org.apache.logging.log4j.Logger;
 
 public class RemoteControlSession extends RemoteConnectionThread {
 
-    private static final Logger h;
+    private static final Logger h = null;
 
-    private boolean i;
+    private boolean i = false;
 
-    private Socket j;
+    private Socket j = null;
 
-    private final byte[] k;
+    private final byte[] k = null;
 
-    private final String l;
+    private final String l = null;
 
     RemoteControlSession(IMinecraftServer iminecraftserver, Socket socket) {
     }

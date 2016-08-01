@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class ItemBlock extends Item {
 
-    protected final Block a;
+    protected final Block a = null;
 
     public ItemBlock(Block block) {
     }

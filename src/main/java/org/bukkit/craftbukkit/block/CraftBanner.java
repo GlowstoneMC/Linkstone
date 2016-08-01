@@ -15,11 +15,11 @@ import org.bukkit.craftbukkit.CraftWorld;
 
 public class CraftBanner extends CraftBlockState implements Banner {
 
-    private final TileEntityBanner banner;
+    private final TileEntityBanner banner = null;
 
-    private DyeColor base;
+    private DyeColor base = null;
 
-    private List<Pattern> patterns;
+    private List<Pattern> patterns = null;
 
     public CraftBanner(final Block block) {
     }

@@ -2,17 +2,17 @@ package net.minecraft.server;
 
 public class Achievement extends Statistic {
 
-    public final int a;
+    public final int a = 0;
 
-    public final int b;
+    public final int b = 0;
 
-    public final Achievement c;
+    public final Achievement c = null;
 
-    private final String k;
+    private final String k = null;
 
-    public final ItemStack d;
+    public final ItemStack d = null;
 
-    private boolean m;
+    private boolean m = false;
 
     public Achievement(String s, String s1, int i, int j, Item item, Achievement achievement) {
     }

@@ -14,15 +14,15 @@ import org.apache.commons.io.IOUtils;
 
 public class LocaleLanguage {
 
-    private static final Pattern a;
+    private static final Pattern a = null;
 
-    private static final Splitter b;
+    private static final Splitter b = null;
 
-    private static final LocaleLanguage c;
+    private static final LocaleLanguage c = null;
 
-    private final Map<String, String> d;
+    private final Map<String, String> d = null;
 
-    private long e;
+    private long e = 0;
 
     public LocaleLanguage() {
     }

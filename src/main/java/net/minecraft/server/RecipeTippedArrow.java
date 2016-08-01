@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 class RecipeTippedArrow extends ShapedRecipes implements IRecipe {
 
     // CraftBukkit
-    private static final ItemStack[] a;
+    private static final ItemStack[] a = null;
 
     // CraftBukkit start
     RecipeTippedArrow() {

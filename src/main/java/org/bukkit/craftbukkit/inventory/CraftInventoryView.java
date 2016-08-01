@@ -12,11 +12,11 @@ import net.minecraft.server.Container;
 
 public class CraftInventoryView extends InventoryView {
 
-    private final Container container;
+    private final Container container = null;
 
-    private final CraftHumanEntity player;
+    private final CraftHumanEntity player = null;
 
-    private final CraftInventory viewing;
+    private final CraftInventory viewing = null;
 
     public CraftInventoryView(HumanEntity player, Inventory viewing, Container container) {
     }

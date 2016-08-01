@@ -7,9 +7,9 @@ import org.bukkit.inventory.ItemStack;
 
 public class CraftInventoryAnvil extends CraftInventory implements AnvilInventory {
 
-    private final Location location;
+    private final Location location = null;
 
-    private final IInventory resultInventory;
+    private final IInventory resultInventory = null;
 
     public CraftInventoryAnvil(Location location, IInventory inventory, IInventory resultInventory) {
     }

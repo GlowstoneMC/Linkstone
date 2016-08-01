@@ -11,15 +11,15 @@ import com.google.common.collect.ImmutableMap;
 @DelegateDeserialization(SerializableMeta.class)
 class CraftMetaMap extends CraftMetaItem implements MapMeta {
 
-    static final ItemMetaKey MAP_SCALING;
+    static final ItemMetaKey MAP_SCALING = null;
 
-    static final byte SCALING_EMPTY;
+    static final byte SCALING_EMPTY = 0;
 
-    static final byte SCALING_TRUE;
+    static final byte SCALING_TRUE = 0;
 
-    static final byte SCALING_FALSE;
+    static final byte SCALING_FALSE = 0;
 
-    private byte scaling;
+    private byte scaling = 0;
 
     CraftMetaMap(CraftMetaItem meta) {
     }

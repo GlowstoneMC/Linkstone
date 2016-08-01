@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class WorldGenLiquids extends WorldGenerator {
 
-    private final Block a;
+    private final Block a = null;
 
     public WorldGenLiquids(Block block) {
     }

@@ -11,13 +11,13 @@ import org.bukkit.entity.Player;
 // CraftBukkit end
 public class PacketStatusListener implements PacketStatusInListener {
 
-    private static final IChatBaseComponent a;
+    private static final IChatBaseComponent a = null;
 
-    private final MinecraftServer minecraftServer;
+    private final MinecraftServer minecraftServer = null;
 
-    private final NetworkManager networkManager;
+    private final NetworkManager networkManager = null;
 
-    private boolean d;
+    private boolean d = false;
 
     public PacketStatusListener(MinecraftServer minecraftserver, NetworkManager networkmanager) {
     }

@@ -25,15 +25,15 @@ import javax.annotation.Nullable;
 
 public class BlockStateList {
 
-    private static final Pattern a;
+    private static final Pattern a = null;
 
-    private static final Function<IBlockState<?>, String> b;
+    private static final Function<IBlockState<?>, String> b = null;
 
-    private final Block c;
+    private final Block c = null;
 
-    private final ImmutableSortedMap<String, IBlockState<?>> d;
+    private final ImmutableSortedMap<String, IBlockState<?>> d = null;
 
-    private final ImmutableList<IBlockData> e;
+    private final ImmutableList<IBlockData> e = null;
 
     public BlockStateList(Block block, IBlockState<?>... aiblockstate) {
     }
@@ -73,11 +73,11 @@ public class BlockStateList {
 
     static class BlockData extends BlockDataAbstract {
 
-        private final Block a;
+        private final Block a = null;
 
-        private final ImmutableMap<IBlockState<?>, Comparable<?>> b;
+        private final ImmutableMap<IBlockState<?>, Comparable<?>> b = null;
 
-        private ImmutableTable<IBlockState<?>, Comparable<?>, IBlockData> c;
+        private ImmutableTable<IBlockState<?>, Comparable<?>, IBlockData> c = null;
 
         private BlockData(Block block, ImmutableMap<IBlockState<?>, Comparable<?>> immutablemap) {
         }

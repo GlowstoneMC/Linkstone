@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class ChatComponentSelector extends ChatBaseComponent {
 
-    private final String b;
+    private final String b = null;
 
     public ChatComponentSelector(String s) {
     }

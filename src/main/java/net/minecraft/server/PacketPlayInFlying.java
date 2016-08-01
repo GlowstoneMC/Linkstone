@@ -4,21 +4,21 @@ import java.io.IOException;
 
 public class PacketPlayInFlying implements Packet<PacketListenerPlayIn> {
 
-    protected double x;
+    protected double x = 0.0;
 
-    protected double y;
+    protected double y = 0.0;
 
-    protected double z;
+    protected double z = 0.0;
 
-    protected float yaw;
+    protected float yaw = 0.0F;
 
-    protected float pitch;
+    protected float pitch = 0.0F;
 
-    protected boolean f;
+    protected boolean f = false;
 
-    protected boolean hasPos;
+    protected boolean hasPos = false;
 
-    protected boolean hasLook;
+    protected boolean hasLook = false;
 
     public PacketPlayInFlying() {
     }

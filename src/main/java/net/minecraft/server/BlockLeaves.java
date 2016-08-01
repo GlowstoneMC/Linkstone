@@ -7,13 +7,13 @@ import org.bukkit.event.block.LeavesDecayEvent;
 // CraftBukkit
 public abstract class BlockLeaves extends Block {
 
-    public static final BlockStateBoolean DECAYABLE;
+    public static final BlockStateBoolean DECAYABLE = null;
 
-    public static final BlockStateBoolean CHECK_DECAY;
+    public static final BlockStateBoolean CHECK_DECAY = null;
 
-    protected boolean c;
+    protected boolean c = false;
 
-    int[] d;
+    int[] d = null;
 
     public BlockLeaves() {
     }

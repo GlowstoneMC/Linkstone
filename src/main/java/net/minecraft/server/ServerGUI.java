@@ -30,11 +30,11 @@ import org.apache.logging.log4j.Logger;
 
 public class ServerGUI extends JComponent {
 
-    private static final Font a;
+    private static final Font a = null;
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private final DedicatedServer c;
+    private final DedicatedServer c = null;
 
     public static void a(final DedicatedServer dedicatedserver) {
     }

@@ -7,19 +7,19 @@ import org.bukkit.event.entity.EntityUnleashEvent;
 // CraftBukkit end
 public abstract class EntityCreature extends EntityInsentient {
 
-    public static final UUID bv;
+    public static final UUID bv = null;
 
-    public static final AttributeModifier bw;
+    public static final AttributeModifier bw = null;
 
-    private BlockPosition a;
+    private BlockPosition a = null;
 
-    private float b;
+    private float b = 0.0F;
 
-    private final PathfinderGoal c;
+    private final PathfinderGoal c = null;
 
-    private boolean bx;
+    private boolean bx = false;
 
-    private float by;
+    private float by = 0.0F;
 
     public EntityCreature(World world) {
     }

@@ -8,9 +8,9 @@ public enum SoundCategory {
 
     MASTER("master"), MUSIC("music"), RECORDS("record"), WEATHER("weather"), BLOCKS("block"), HOSTILE("hostile"), NEUTRAL("neutral"), PLAYERS("player"), AMBIENT("ambient"), VOICE("voice");
 
-    private static final Map<String, SoundCategory> k;
+    private static final Map<String, SoundCategory> k = null;
 
-    private final String l;
+    private final String l = null;
 
     private SoundCategory(String s) {
     }

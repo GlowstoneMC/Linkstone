@@ -6,9 +6,9 @@ import org.bukkit.WorldBorder;
 
 public class CraftWorldBorder implements WorldBorder {
 
-    private final World world;
+    private final World world = null;
 
-    private final net.minecraft.server.WorldBorder handle;
+    private final net.minecraft.server.WorldBorder handle = null;
 
     public CraftWorldBorder(CraftWorld world) {
     }

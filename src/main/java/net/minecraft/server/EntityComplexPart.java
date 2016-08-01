@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class EntityComplexPart extends Entity {
 
-    public final IComplex owner;
+    public final IComplex owner = null;
 
-    public final String b;
+    public final String b = null;
 
     public EntityComplexPart(IComplex icomplex, String s, float f, float f1) {
     }

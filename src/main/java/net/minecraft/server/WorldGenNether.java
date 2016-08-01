@@ -6,7 +6,7 @@ import java.util.Random;
 
 public class WorldGenNether extends StructureGenerator {
 
-    private final List<BiomeBase.BiomeMeta> a;
+    private final List<BiomeBase.BiomeMeta> a = null;
 
     public WorldGenNether() {
     }

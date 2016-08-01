@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayInHeldItemSlot implements Packet<PacketListenerPlayIn> {
 
-    private int itemInHandIndex;
+    private int itemInHandIndex = 0;
 
     public PacketPlayInHeldItemSlot() {
     }

@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class BiomeIcePlains extends BiomeBase {
 
-    private final boolean y;
+    private final boolean y = false;
 
-    private final WorldGenPackedIce2 z;
+    private final WorldGenPackedIce2 z = null;
 
-    private final WorldGenPackedIce1 A;
+    private final WorldGenPackedIce1 A = null;
 
     public BiomeIcePlains(boolean flag, BiomeBase.a biomebase_a) {
     }

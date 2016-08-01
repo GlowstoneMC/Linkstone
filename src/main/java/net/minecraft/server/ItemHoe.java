@@ -4,9 +4,9 @@ import com.google.common.collect.Multimap;
 
 public class ItemHoe extends Item {
 
-    private final float b;
+    private final float b = 0.0F;
 
-    protected Item.EnumToolMaterial a;
+    protected Item.EnumToolMaterial a = null;
 
     public ItemHoe(Item.EnumToolMaterial item_enumtoolmaterial) {
     }
@@ -32,7 +32,7 @@ public class ItemHoe extends Item {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

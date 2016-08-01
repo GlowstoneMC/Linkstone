@@ -11,9 +11,9 @@ import org.bukkit.craftbukkit.util.CraftChatMessage;
 
 public class CraftSign extends CraftBlockState implements Sign {
 
-    private final TileEntitySign sign;
+    private final TileEntitySign sign = null;
 
-    private final String[] lines;
+    private final String[] lines = null;
 
     public CraftSign(final Block block) {
     }

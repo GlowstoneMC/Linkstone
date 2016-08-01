@@ -20,17 +20,17 @@ import org.bukkit.event.world.ChunkUnloadEvent;
 // CraftBukkit end
 public class ChunkProviderServer implements IChunkProvider {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    public final Set<Long> unloadQueue;
+    public final Set<Long> unloadQueue = null;
 
-    public final ChunkGenerator chunkGenerator;
+    public final ChunkGenerator chunkGenerator = null;
 
-    private final IChunkLoader chunkLoader;
+    private final IChunkLoader chunkLoader = null;
 
-    public final Long2ObjectMap<Chunk> chunks;
+    public final Long2ObjectMap<Chunk> chunks = null;
 
-    public final WorldServer world;
+    public final WorldServer world = null;
 
     public ChunkProviderServer(WorldServer worldserver, IChunkLoader ichunkloader, ChunkGenerator chunkgenerator) {
     }

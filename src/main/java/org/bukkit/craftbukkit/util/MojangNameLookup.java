@@ -14,7 +14,7 @@ import org.apache.commons.io.IOUtils;
 
 public class MojangNameLookup {
 
-    private static final Logger logger;
+    private static final Logger logger = null;
 
     public static String lookupName(UUID id) {
         return null;
@@ -22,10 +22,10 @@ public class MojangNameLookup {
 
     private class Response {
 
-        String errorMessage;
+        String errorMessage = null;
 
-        String cause;
+        String cause = null;
 
-        String name;
+        String name = null;
     }
 }

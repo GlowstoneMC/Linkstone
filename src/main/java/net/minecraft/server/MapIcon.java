@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public class MapIcon {
 
-    private byte type;
+    private byte type = 0;
 
-    private byte x;
+    private byte x = 0;
 
-    private byte y;
+    private byte y = 0;
 
-    private byte rotation;
+    private byte rotation = 0;
 
     public MapIcon(byte b0, byte b1, byte b2, byte b3) {
     }

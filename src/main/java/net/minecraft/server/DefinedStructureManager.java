@@ -13,9 +13,9 @@ import org.apache.commons.io.IOUtils;
 
 public class DefinedStructureManager {
 
-    private final Map<String, DefinedStructure> a;
+    private final Map<String, DefinedStructure> a = null;
 
-    private final String b;
+    private final String b = null;
 
     public DefinedStructureManager(String s) {
     }

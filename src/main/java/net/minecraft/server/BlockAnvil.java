@@ -6,15 +6,15 @@ import org.apache.logging.log4j.Logger;
 
 public class BlockAnvil extends BlockFalling {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateInteger DAMAGE;
+    public static final BlockStateInteger DAMAGE = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final Logger e;
+    protected static final Logger e = null;
 
     protected BlockAnvil() {
     }
@@ -67,9 +67,9 @@ public class BlockAnvil extends BlockFalling {
 
     public static class TileEntityContainerAnvil implements ITileEntityContainer {
 
-        private final World a;
+        private final World a = null;
 
-        private final BlockPosition b;
+        private final BlockPosition b = null;
 
         public TileEntityContainerAnvil(World world, BlockPosition blockposition) {
         }

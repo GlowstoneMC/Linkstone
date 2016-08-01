@@ -62,14 +62,14 @@ import org.bukkit.inventory.meta.BookMeta;
 
 public class CraftEventFactory {
 
-    public static final DamageSource MELTING;
+    public static final DamageSource MELTING = null;
 
-    public static final DamageSource POISON;
+    public static final DamageSource POISON = null;
 
-    public static org.bukkit.block.Block blockDamage;
+    public static org.bukkit.block.Block blockDamage = null;
 
     // For use in EntityDamageByBlockEvent
-    public static Entity entityDamage;
+    public static Entity entityDamage = null;
 
     // For use in EntityDamageByEntityEvent
     // helper methods
@@ -220,7 +220,7 @@ public class CraftEventFactory {
         return null;
     }
 
-    private static final Function<? super Double, Double> ZERO;
+    private static final Function<? super Double, Double> ZERO = null;
 
     public static EntityDamageEvent handleLivingEntityDamageEvent(Entity damagee, DamageSource source, double rawDamage, double hardHatModifier, double blockingModifier, double armorModifier, double resistanceModifier, double magicModifier, double absorptionModifier, Function<Double, Double> hardHat, Function<Double, Double> blocking, Function<Double, Double> armor, Function<Double, Double> resistance, Function<Double, Double> magic, Function<Double, Double> absorption) {
         return null;

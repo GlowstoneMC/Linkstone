@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class RecipesTools {
 
-    private final String[][] a;
+    private final String[][] a = null;
 
-    private final Object[][] b;
+    private final Object[][] b = null;
 
     public RecipesTools() {
     }

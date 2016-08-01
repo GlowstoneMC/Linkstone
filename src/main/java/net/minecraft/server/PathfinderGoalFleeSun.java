@@ -5,17 +5,17 @@ import javax.annotation.Nullable;
 
 public class PathfinderGoalFleeSun extends PathfinderGoal {
 
-    private final EntityCreature a;
+    private final EntityCreature a = null;
 
-    private double b;
+    private double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private double d;
+    private double d = 0.0;
 
-    private final double e;
+    private final double e = 0.0;
 
-    private final World f;
+    private final World f = null;
 
     public PathfinderGoalFleeSun(EntityCreature entitycreature, double d0) {
     }

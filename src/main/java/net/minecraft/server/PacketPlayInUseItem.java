@@ -4,17 +4,17 @@ import java.io.IOException;
 
 public class PacketPlayInUseItem implements Packet<PacketListenerPlayIn> {
 
-    private BlockPosition a;
+    private BlockPosition a = null;
 
-    private EnumDirection b;
+    private EnumDirection b = null;
 
-    private EnumHand c;
+    private EnumHand c = null;
 
-    private float d;
+    private float d = 0.0F;
 
-    private float e;
+    private float e = 0.0F;
 
-    private float f;
+    private float f = 0.0F;
 
     public PacketPlayInUseItem() {
     }

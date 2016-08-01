@@ -4,21 +4,21 @@ import java.util.Random;
 
 public class NoiseGenerator3Handler {
 
-    private static final int[][] e;
+    private static final int[][] e = null;
 
-    public static final double a;
+    public static final double a = 0.0;
 
-    private final int[] f;
+    private final int[] f = null;
 
-    public double b;
+    public double b = 0.0;
 
-    public double c;
+    public double c = 0.0;
 
-    public double d;
+    public double d = 0.0;
 
-    private static final double g;
+    private static final double g = 0.0;
 
-    private static final double h;
+    private static final double h = 0.0;
 
     public NoiseGenerator3Handler() {
     }

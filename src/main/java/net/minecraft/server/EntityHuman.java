@@ -24,91 +24,91 @@ import org.bukkit.util.Vector;
 // CraftBukkit end
 public abstract class EntityHuman extends EntityLiving {
 
-    private static final DataWatcherObject<Float> a;
+    private static final DataWatcherObject<Float> a = null;
 
-    private static final DataWatcherObject<Integer> b;
+    private static final DataWatcherObject<Integer> b = null;
 
-    protected static final DataWatcherObject<Byte> br;
+    protected static final DataWatcherObject<Byte> br = null;
 
-    protected static final DataWatcherObject<Byte> bs;
+    protected static final DataWatcherObject<Byte> bs = null;
 
-    public PlayerInventory inventory;
+    public PlayerInventory inventory = null;
 
-    private InventoryEnderChest enderChest;
+    private InventoryEnderChest enderChest = null;
 
-    public Container defaultContainer;
+    public Container defaultContainer = null;
 
-    public Container activeContainer;
+    public Container activeContainer = null;
 
-    protected FoodMetaData foodData;
+    protected FoodMetaData foodData = null;
 
     // CraftBukkit - add "this" to constructor
-    protected int bx;
+    protected int bx = 0;
 
-    public float by;
+    public float by = 0.0F;
 
-    public float bz;
+    public float bz = 0.0F;
 
-    public int bA;
+    public int bA = 0;
 
-    public double bB;
+    public double bB = 0.0;
 
-    public double bC;
+    public double bC = 0.0;
 
-    public double bD;
+    public double bD = 0.0;
 
-    public double bE;
+    public double bE = 0.0;
 
-    public double bF;
+    public double bF = 0.0;
 
-    public double bG;
+    public double bG = 0.0;
 
-    public boolean sleeping;
+    public boolean sleeping = false;
 
-    public BlockPosition bedPosition;
+    public BlockPosition bedPosition = null;
 
-    public int sleepTicks;
+    public int sleepTicks = 0;
 
-    public float bJ;
+    public float bJ = 0.0F;
 
-    public float bK;
+    public float bK = 0.0F;
 
-    private BlockPosition e;
+    private BlockPosition e = null;
 
-    private boolean f;
+    private boolean f = false;
 
-    private BlockPosition g;
+    private BlockPosition g = null;
 
-    public PlayerAbilities abilities;
+    public PlayerAbilities abilities = null;
 
-    public int expLevel;
+    public int expLevel = 0;
 
-    public int expTotal;
+    public int expTotal = 0;
 
-    public float exp;
+    public float exp = 0.0F;
 
-    private int h;
+    private int h = 0;
 
-    protected float bP;
+    protected float bP = 0.0F;
 
-    protected float bQ;
+    protected float bQ = 0.0F;
 
-    private int bS;
+    private int bS = 0;
 
-    private final GameProfile bT;
+    private final GameProfile bT = null;
 
-    private ItemStack bV;
+    private ItemStack bV = null;
 
-    private final ItemCooldown bW;
+    private final ItemCooldown bW = null;
 
-    public EntityFishingHook hookedFish;
+    public EntityFishingHook hookedFish = null;
 
     // CraftBukkit start
-    public boolean fauxSleeping;
+    public boolean fauxSleeping = false;
 
-    public String spawnWorld;
+    public String spawnWorld = null;
 
-    public int oldLevel;
+    public int oldLevel = 0;
 
     @Override
     public CraftHumanEntity getBukkitEntity() {
@@ -590,7 +590,7 @@ public abstract class EntityHuman extends EntityLiving {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -608,11 +608,11 @@ public abstract class EntityHuman extends EntityLiving {
 
         FULL(0, "options.chat.visibility.full"), SYSTEM(1, "options.chat.visibility.system"), HIDDEN(2, "options.chat.visibility.hidden");
 
-        private static final EntityHuman.EnumChatVisibility[] d;
+        private static final EntityHuman.EnumChatVisibility[] d = null;
 
-        private final int e;
+        private final int e = 0;
 
-        private final String f;
+        private final String f = null;
 
         private EnumChatVisibility(int i, String s) {
         }

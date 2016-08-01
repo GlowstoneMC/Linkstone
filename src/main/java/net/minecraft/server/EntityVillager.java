@@ -14,41 +14,41 @@ import org.bukkit.event.entity.VillagerReplenishTradeEvent;
 // CraftBukkit end
 public class EntityVillager extends EntityAgeable implements IMerchant, NPC {
 
-    private static final DataWatcherObject<Integer> by;
+    private static final DataWatcherObject<Integer> by = null;
 
-    private int profession;
+    private int profession = 0;
 
-    private boolean bA;
+    private boolean bA = false;
 
-    private boolean bB;
+    private boolean bB = false;
 
-    Village village;
+    Village village = null;
 
-    private EntityHuman tradingPlayer;
+    private EntityHuman tradingPlayer = null;
 
-    private MerchantRecipeList trades;
+    private MerchantRecipeList trades = null;
 
-    private int bE;
+    private int bE = 0;
 
-    private boolean bF;
+    private boolean bF = false;
 
-    private boolean bG;
+    private boolean bG = false;
 
-    public int riches;
+    public int riches = 0;
 
-    private String bI;
+    private String bI = null;
 
-    private int bJ;
+    private int bJ = 0;
 
-    private int bK;
+    private int bK = 0;
 
-    private boolean bL;
+    private boolean bL = false;
 
-    private boolean bM;
+    private boolean bM = false;
 
-    public final InventorySubcontainer inventory;
+    public final InventorySubcontainer inventory = null;
 
-    private static final EntityVillager.IMerchantRecipeOption[][][][] bO;
+    private static final EntityVillager.IMerchantRecipeOption[][][][] bO = null;
 
     public EntityVillager(World world) {
     }
@@ -229,13 +229,13 @@ public class EntityVillager extends EntityAgeable implements IMerchant, NPC {
 
     static class MerchantRecipeOptionProcess implements EntityVillager.IMerchantRecipeOption {
 
-        public ItemStack a;
+        public ItemStack a = null;
 
-        public EntityVillager.MerchantOptionRandomRange b;
+        public EntityVillager.MerchantOptionRandomRange b = null;
 
-        public ItemStack c;
+        public ItemStack c = null;
 
-        public EntityVillager.MerchantOptionRandomRange d;
+        public EntityVillager.MerchantOptionRandomRange d = null;
 
         public MerchantRecipeOptionProcess(Item item, EntityVillager.MerchantOptionRandomRange entityvillager_merchantoptionrandomrange, Item item1, EntityVillager.MerchantOptionRandomRange entityvillager_merchantoptionrandomrange1) {
         }
@@ -255,9 +255,9 @@ public class EntityVillager extends EntityAgeable implements IMerchant, NPC {
 
     static class MerchantRecipeOptionEnchant implements EntityVillager.IMerchantRecipeOption {
 
-        public ItemStack a;
+        public ItemStack a = null;
 
-        public EntityVillager.MerchantOptionRandomRange b;
+        public EntityVillager.MerchantOptionRandomRange b = null;
 
         public MerchantRecipeOptionEnchant(Item item, EntityVillager.MerchantOptionRandomRange entityvillager_merchantoptionrandomrange) {
         }
@@ -268,9 +268,9 @@ public class EntityVillager extends EntityAgeable implements IMerchant, NPC {
 
     static class MerchantRecipeOptionSell implements EntityVillager.IMerchantRecipeOption {
 
-        public ItemStack a;
+        public ItemStack a = null;
 
-        public EntityVillager.MerchantOptionRandomRange b;
+        public EntityVillager.MerchantOptionRandomRange b = null;
 
         public MerchantRecipeOptionSell(Item item, EntityVillager.MerchantOptionRandomRange entityvillager_merchantoptionrandomrange) {
         }
@@ -284,9 +284,9 @@ public class EntityVillager extends EntityAgeable implements IMerchant, NPC {
 
     static class MerchantRecipeOptionBuy implements EntityVillager.IMerchantRecipeOption {
 
-        public Item a;
+        public Item a = null;
 
-        public EntityVillager.MerchantOptionRandomRange b;
+        public EntityVillager.MerchantOptionRandomRange b = null;
 
         public MerchantRecipeOptionBuy(Item item, EntityVillager.MerchantOptionRandomRange entityvillager_merchantoptionrandomrange) {
         }

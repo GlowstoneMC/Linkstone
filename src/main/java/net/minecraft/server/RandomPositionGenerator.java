@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class RandomPositionGenerator {
 
-    private static Vec3D a;
+    private static Vec3D a = null;
 
     @Nullable
     public static Vec3D a(EntityCreature entitycreature, int i, int j) {

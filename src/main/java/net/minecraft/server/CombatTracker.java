@@ -7,21 +7,21 @@ import javax.annotation.Nullable;
 
 public class CombatTracker {
 
-    private final List<CombatEntry> a;
+    private final List<CombatEntry> a = null;
 
-    private final EntityLiving b;
+    private final EntityLiving b = null;
 
-    private int c;
+    private int c = 0;
 
-    private int d;
+    private int d = 0;
 
-    private int e;
+    private int e = 0;
 
-    private boolean f;
+    private boolean f = false;
 
-    private boolean g;
+    private boolean g = false;
 
-    private String h;
+    private String h = null;
 
     public CombatTracker(EntityLiving entityliving) {
     }

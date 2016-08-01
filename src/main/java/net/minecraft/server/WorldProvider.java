@@ -2,23 +2,23 @@ package net.minecraft.server;
 
 public abstract class WorldProvider {
 
-    public static final float[] a;
+    public static final float[] a = null;
 
-    protected World b;
+    protected World b = null;
 
-    private WorldType type;
+    private WorldType type = null;
 
-    private String h;
+    private String h = null;
 
-    protected WorldChunkManager c;
+    protected WorldChunkManager c = null;
 
-    protected boolean d;
+    protected boolean d = false;
 
-    protected boolean e;
+    protected boolean e = false;
 
-    protected final float[] f;
+    protected final float[] f = null;
 
-    private final float[] i;
+    private final float[] i = null;
 
     public WorldProvider() {
     }

@@ -4,11 +4,11 @@ import javax.annotation.Nullable;
 
 public class EntityBlaze extends EntityMonster {
 
-    private float a;
+    private float a = 0.0F;
 
-    private int b;
+    private int b = 0;
 
-    private static final DataWatcherObject<Byte> c;
+    private static final DataWatcherObject<Byte> c = null;
 
     public EntityBlaze(World world) {
     }
@@ -72,11 +72,11 @@ public class EntityBlaze extends EntityMonster {
 
     static class PathfinderGoalBlazeFireball extends PathfinderGoal {
 
-        private final EntityBlaze a;
+        private final EntityBlaze a = null;
 
-        private int b;
+        private int b = 0;
 
-        private int c;
+        private int c = 0;
 
         public PathfinderGoalBlazeFireball(EntityBlaze entityblaze) {
         }

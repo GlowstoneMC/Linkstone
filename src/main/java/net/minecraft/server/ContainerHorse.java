@@ -9,14 +9,14 @@ import org.bukkit.inventory.InventoryView;
 // CraftBukkit end
 public class ContainerHorse extends Container {
 
-    private final IInventory a;
+    private final IInventory a = null;
 
-    private final EntityHorse f;
+    private final EntityHorse f = null;
 
     // CraftBukkit start
-    org.bukkit.craftbukkit.inventory.CraftInventoryView bukkitEntity;
+    org.bukkit.craftbukkit.inventory.CraftInventoryView bukkitEntity = null;
 
-    PlayerInventory player;
+    PlayerInventory player = null;
 
     @Override
     public InventoryView getBukkitView() {

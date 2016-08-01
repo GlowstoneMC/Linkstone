@@ -2,931 +2,931 @@ package net.minecraft.server;
 
 public class SoundEffects {
 
-    public static final SoundEffect a;
+    public static final SoundEffect a = null;
 
-    public static final SoundEffect b;
+    public static final SoundEffect b = null;
 
-    public static final SoundEffect c;
+    public static final SoundEffect c = null;
 
-    public static final SoundEffect d;
+    public static final SoundEffect d = null;
 
-    public static final SoundEffect e;
+    public static final SoundEffect e = null;
 
-    public static final SoundEffect f;
+    public static final SoundEffect f = null;
 
-    public static final SoundEffect g;
+    public static final SoundEffect g = null;
 
-    public static final SoundEffect h;
+    public static final SoundEffect h = null;
 
-    public static final SoundEffect i;
+    public static final SoundEffect i = null;
 
-    public static final SoundEffect j;
+    public static final SoundEffect j = null;
 
-    public static final SoundEffect k;
+    public static final SoundEffect k = null;
 
-    public static final SoundEffect l;
+    public static final SoundEffect l = null;
 
-    public static final SoundEffect m;
+    public static final SoundEffect m = null;
 
-    public static final SoundEffect n;
+    public static final SoundEffect n = null;
 
-    public static final SoundEffect o;
+    public static final SoundEffect o = null;
 
-    public static final SoundEffect p;
+    public static final SoundEffect p = null;
 
-    public static final SoundEffect q;
+    public static final SoundEffect q = null;
 
-    public static final SoundEffect r;
+    public static final SoundEffect r = null;
 
-    public static final SoundEffect s;
+    public static final SoundEffect s = null;
 
-    public static final SoundEffect t;
+    public static final SoundEffect t = null;
 
-    public static final SoundEffect u;
+    public static final SoundEffect u = null;
 
-    public static final SoundEffect v;
+    public static final SoundEffect v = null;
 
-    public static final SoundEffect w;
+    public static final SoundEffect w = null;
 
-    public static final SoundEffect x;
+    public static final SoundEffect x = null;
 
-    public static final SoundEffect y;
+    public static final SoundEffect y = null;
 
-    public static final SoundEffect z;
+    public static final SoundEffect z = null;
 
-    public static final SoundEffect A;
+    public static final SoundEffect A = null;
 
-    public static final SoundEffect B;
+    public static final SoundEffect B = null;
 
-    public static final SoundEffect C;
+    public static final SoundEffect C = null;
 
-    public static final SoundEffect D;
+    public static final SoundEffect D = null;
 
-    public static final SoundEffect E;
+    public static final SoundEffect E = null;
 
-    public static final SoundEffect F;
+    public static final SoundEffect F = null;
 
-    public static final SoundEffect G;
+    public static final SoundEffect G = null;
 
-    public static final SoundEffect H;
+    public static final SoundEffect H = null;
 
-    public static final SoundEffect I;
+    public static final SoundEffect I = null;
 
-    public static final SoundEffect J;
+    public static final SoundEffect J = null;
 
-    public static final SoundEffect K;
+    public static final SoundEffect K = null;
 
-    public static final SoundEffect L;
+    public static final SoundEffect L = null;
 
-    public static final SoundEffect M;
+    public static final SoundEffect M = null;
 
-    public static final SoundEffect N;
+    public static final SoundEffect N = null;
 
-    public static final SoundEffect O;
+    public static final SoundEffect O = null;
 
-    public static final SoundEffect P;
+    public static final SoundEffect P = null;
 
-    public static final SoundEffect Q;
+    public static final SoundEffect Q = null;
 
-    public static final SoundEffect R;
+    public static final SoundEffect R = null;
 
-    public static final SoundEffect S;
+    public static final SoundEffect S = null;
 
-    public static final SoundEffect T;
+    public static final SoundEffect T = null;
 
-    public static final SoundEffect U;
+    public static final SoundEffect U = null;
 
-    public static final SoundEffect V;
+    public static final SoundEffect V = null;
 
-    public static final SoundEffect W;
+    public static final SoundEffect W = null;
 
-    public static final SoundEffect X;
+    public static final SoundEffect X = null;
 
-    public static final SoundEffect Y;
+    public static final SoundEffect Y = null;
 
-    public static final SoundEffect Z;
+    public static final SoundEffect Z = null;
 
-    public static final SoundEffect aa;
+    public static final SoundEffect aa = null;
 
-    public static final SoundEffect ab;
+    public static final SoundEffect ab = null;
 
-    public static final SoundEffect ac;
+    public static final SoundEffect ac = null;
 
-    public static final SoundEffect ad;
+    public static final SoundEffect ad = null;
 
-    public static final SoundEffect ae;
+    public static final SoundEffect ae = null;
 
-    public static final SoundEffect af;
+    public static final SoundEffect af = null;
 
-    public static final SoundEffect ag;
+    public static final SoundEffect ag = null;
 
-    public static final SoundEffect ah;
+    public static final SoundEffect ah = null;
 
-    public static final SoundEffect ai;
+    public static final SoundEffect ai = null;
 
-    public static final SoundEffect aj;
+    public static final SoundEffect aj = null;
 
-    public static final SoundEffect ak;
+    public static final SoundEffect ak = null;
 
-    public static final SoundEffect al;
+    public static final SoundEffect al = null;
 
-    public static final SoundEffect am;
+    public static final SoundEffect am = null;
 
-    public static final SoundEffect an;
+    public static final SoundEffect an = null;
 
-    public static final SoundEffect ao;
+    public static final SoundEffect ao = null;
 
-    public static final SoundEffect ap;
+    public static final SoundEffect ap = null;
 
-    public static final SoundEffect aq;
+    public static final SoundEffect aq = null;
 
-    public static final SoundEffect ar;
+    public static final SoundEffect ar = null;
 
-    public static final SoundEffect as;
+    public static final SoundEffect as = null;
 
-    public static final SoundEffect at;
+    public static final SoundEffect at = null;
 
-    public static final SoundEffect au;
+    public static final SoundEffect au = null;
 
-    public static final SoundEffect av;
+    public static final SoundEffect av = null;
 
-    public static final SoundEffect aw;
+    public static final SoundEffect aw = null;
 
-    public static final SoundEffect ax;
+    public static final SoundEffect ax = null;
 
-    public static final SoundEffect ay;
+    public static final SoundEffect ay = null;
 
-    public static final SoundEffect az;
+    public static final SoundEffect az = null;
 
-    public static final SoundEffect aA;
+    public static final SoundEffect aA = null;
 
-    public static final SoundEffect aB;
+    public static final SoundEffect aB = null;
 
-    public static final SoundEffect aC;
+    public static final SoundEffect aC = null;
 
-    public static final SoundEffect aD;
+    public static final SoundEffect aD = null;
 
-    public static final SoundEffect aE;
+    public static final SoundEffect aE = null;
 
-    public static final SoundEffect aF;
+    public static final SoundEffect aF = null;
 
-    public static final SoundEffect aG;
+    public static final SoundEffect aG = null;
 
-    public static final SoundEffect aH;
+    public static final SoundEffect aH = null;
 
-    public static final SoundEffect aI;
+    public static final SoundEffect aI = null;
 
-    public static final SoundEffect aJ;
+    public static final SoundEffect aJ = null;
 
-    public static final SoundEffect aK;
+    public static final SoundEffect aK = null;
 
-    public static final SoundEffect aL;
+    public static final SoundEffect aL = null;
 
-    public static final SoundEffect aM;
+    public static final SoundEffect aM = null;
 
-    public static final SoundEffect aN;
+    public static final SoundEffect aN = null;
 
-    public static final SoundEffect aO;
+    public static final SoundEffect aO = null;
 
-    public static final SoundEffect aP;
+    public static final SoundEffect aP = null;
 
-    public static final SoundEffect aQ;
+    public static final SoundEffect aQ = null;
 
-    public static final SoundEffect aR;
+    public static final SoundEffect aR = null;
 
-    public static final SoundEffect aS;
+    public static final SoundEffect aS = null;
 
-    public static final SoundEffect aT;
+    public static final SoundEffect aT = null;
 
-    public static final SoundEffect aU;
+    public static final SoundEffect aU = null;
 
-    public static final SoundEffect aV;
+    public static final SoundEffect aV = null;
 
-    public static final SoundEffect aW;
+    public static final SoundEffect aW = null;
 
-    public static final SoundEffect aX;
+    public static final SoundEffect aX = null;
 
-    public static final SoundEffect aY;
+    public static final SoundEffect aY = null;
 
-    public static final SoundEffect aZ;
+    public static final SoundEffect aZ = null;
 
-    public static final SoundEffect ba;
+    public static final SoundEffect ba = null;
 
-    public static final SoundEffect bb;
+    public static final SoundEffect bb = null;
 
-    public static final SoundEffect bc;
+    public static final SoundEffect bc = null;
 
-    public static final SoundEffect bd;
+    public static final SoundEffect bd = null;
 
-    public static final SoundEffect be;
+    public static final SoundEffect be = null;
 
-    public static final SoundEffect bf;
+    public static final SoundEffect bf = null;
 
-    public static final SoundEffect bg;
+    public static final SoundEffect bg = null;
 
-    public static final SoundEffect bh;
+    public static final SoundEffect bh = null;
 
-    public static final SoundEffect bi;
+    public static final SoundEffect bi = null;
 
-    public static final SoundEffect bj;
+    public static final SoundEffect bj = null;
 
-    public static final SoundEffect bk;
+    public static final SoundEffect bk = null;
 
-    public static final SoundEffect bl;
+    public static final SoundEffect bl = null;
 
-    public static final SoundEffect bm;
+    public static final SoundEffect bm = null;
 
-    public static final SoundEffect bn;
+    public static final SoundEffect bn = null;
 
-    public static final SoundEffect bo;
+    public static final SoundEffect bo = null;
 
-    public static final SoundEffect bp;
+    public static final SoundEffect bp = null;
 
-    public static final SoundEffect bq;
+    public static final SoundEffect bq = null;
 
-    public static final SoundEffect br;
+    public static final SoundEffect br = null;
 
-    public static final SoundEffect bs;
+    public static final SoundEffect bs = null;
 
-    public static final SoundEffect bt;
+    public static final SoundEffect bt = null;
 
-    public static final SoundEffect bu;
+    public static final SoundEffect bu = null;
 
-    public static final SoundEffect bv;
+    public static final SoundEffect bv = null;
 
-    public static final SoundEffect bw;
+    public static final SoundEffect bw = null;
 
-    public static final SoundEffect bx;
+    public static final SoundEffect bx = null;
 
-    public static final SoundEffect by;
+    public static final SoundEffect by = null;
 
-    public static final SoundEffect bz;
+    public static final SoundEffect bz = null;
 
-    public static final SoundEffect bA;
+    public static final SoundEffect bA = null;
 
-    public static final SoundEffect bB;
+    public static final SoundEffect bB = null;
 
-    public static final SoundEffect bC;
+    public static final SoundEffect bC = null;
 
-    public static final SoundEffect bD;
+    public static final SoundEffect bD = null;
 
-    public static final SoundEffect bE;
+    public static final SoundEffect bE = null;
 
-    public static final SoundEffect bF;
+    public static final SoundEffect bF = null;
 
-    public static final SoundEffect bG;
+    public static final SoundEffect bG = null;
 
-    public static final SoundEffect bH;
+    public static final SoundEffect bH = null;
 
-    public static final SoundEffect bI;
+    public static final SoundEffect bI = null;
 
-    public static final SoundEffect bJ;
+    public static final SoundEffect bJ = null;
 
-    public static final SoundEffect bK;
+    public static final SoundEffect bK = null;
 
-    public static final SoundEffect bL;
+    public static final SoundEffect bL = null;
 
-    public static final SoundEffect bM;
+    public static final SoundEffect bM = null;
 
-    public static final SoundEffect bN;
+    public static final SoundEffect bN = null;
 
-    public static final SoundEffect bO;
+    public static final SoundEffect bO = null;
 
-    public static final SoundEffect bP;
+    public static final SoundEffect bP = null;
 
-    public static final SoundEffect bQ;
+    public static final SoundEffect bQ = null;
 
-    public static final SoundEffect bR;
+    public static final SoundEffect bR = null;
 
-    public static final SoundEffect bS;
+    public static final SoundEffect bS = null;
 
-    public static final SoundEffect bT;
+    public static final SoundEffect bT = null;
 
-    public static final SoundEffect bU;
+    public static final SoundEffect bU = null;
 
-    public static final SoundEffect bV;
+    public static final SoundEffect bV = null;
 
-    public static final SoundEffect bW;
+    public static final SoundEffect bW = null;
 
-    public static final SoundEffect bX;
+    public static final SoundEffect bX = null;
 
-    public static final SoundEffect bY;
+    public static final SoundEffect bY = null;
 
-    public static final SoundEffect bZ;
+    public static final SoundEffect bZ = null;
 
-    public static final SoundEffect ca;
+    public static final SoundEffect ca = null;
 
-    public static final SoundEffect cb;
+    public static final SoundEffect cb = null;
 
-    public static final SoundEffect cc;
+    public static final SoundEffect cc = null;
 
-    public static final SoundEffect cd;
+    public static final SoundEffect cd = null;
 
-    public static final SoundEffect ce;
+    public static final SoundEffect ce = null;
 
-    public static final SoundEffect cf;
+    public static final SoundEffect cf = null;
 
-    public static final SoundEffect cg;
+    public static final SoundEffect cg = null;
 
-    public static final SoundEffect ch;
+    public static final SoundEffect ch = null;
 
-    public static final SoundEffect ci;
+    public static final SoundEffect ci = null;
 
-    public static final SoundEffect cj;
+    public static final SoundEffect cj = null;
 
-    public static final SoundEffect ck;
+    public static final SoundEffect ck = null;
 
-    public static final SoundEffect cl;
+    public static final SoundEffect cl = null;
 
-    public static final SoundEffect cm;
+    public static final SoundEffect cm = null;
 
-    public static final SoundEffect cn;
+    public static final SoundEffect cn = null;
 
-    public static final SoundEffect co;
+    public static final SoundEffect co = null;
 
-    public static final SoundEffect cp;
+    public static final SoundEffect cp = null;
 
-    public static final SoundEffect cq;
+    public static final SoundEffect cq = null;
 
-    public static final SoundEffect cr;
+    public static final SoundEffect cr = null;
 
-    public static final SoundEffect cs;
+    public static final SoundEffect cs = null;
 
-    public static final SoundEffect ct;
+    public static final SoundEffect ct = null;
 
-    public static final SoundEffect cu;
+    public static final SoundEffect cu = null;
 
-    public static final SoundEffect cv;
+    public static final SoundEffect cv = null;
 
-    public static final SoundEffect cw;
+    public static final SoundEffect cw = null;
 
-    public static final SoundEffect cx;
+    public static final SoundEffect cx = null;
 
-    public static final SoundEffect cy;
+    public static final SoundEffect cy = null;
 
-    public static final SoundEffect cz;
+    public static final SoundEffect cz = null;
 
-    public static final SoundEffect cA;
+    public static final SoundEffect cA = null;
 
-    public static final SoundEffect cB;
+    public static final SoundEffect cB = null;
 
-    public static final SoundEffect cC;
+    public static final SoundEffect cC = null;
 
-    public static final SoundEffect cD;
+    public static final SoundEffect cD = null;
 
-    public static final SoundEffect cE;
+    public static final SoundEffect cE = null;
 
-    public static final SoundEffect cF;
+    public static final SoundEffect cF = null;
 
-    public static final SoundEffect cG;
+    public static final SoundEffect cG = null;
 
-    public static final SoundEffect cH;
+    public static final SoundEffect cH = null;
 
-    public static final SoundEffect cI;
+    public static final SoundEffect cI = null;
 
-    public static final SoundEffect cJ;
+    public static final SoundEffect cJ = null;
 
-    public static final SoundEffect cK;
+    public static final SoundEffect cK = null;
 
-    public static final SoundEffect cL;
+    public static final SoundEffect cL = null;
 
-    public static final SoundEffect cM;
+    public static final SoundEffect cM = null;
 
-    public static final SoundEffect cN;
+    public static final SoundEffect cN = null;
 
-    public static final SoundEffect cO;
+    public static final SoundEffect cO = null;
 
-    public static final SoundEffect cP;
+    public static final SoundEffect cP = null;
 
-    public static final SoundEffect cQ;
+    public static final SoundEffect cQ = null;
 
-    public static final SoundEffect cR;
+    public static final SoundEffect cR = null;
 
-    public static final SoundEffect cS;
+    public static final SoundEffect cS = null;
 
-    public static final SoundEffect cT;
+    public static final SoundEffect cT = null;
 
-    public static final SoundEffect cU;
+    public static final SoundEffect cU = null;
 
-    public static final SoundEffect cV;
+    public static final SoundEffect cV = null;
 
-    public static final SoundEffect cW;
+    public static final SoundEffect cW = null;
 
-    public static final SoundEffect cX;
+    public static final SoundEffect cX = null;
 
-    public static final SoundEffect cY;
+    public static final SoundEffect cY = null;
 
-    public static final SoundEffect cZ;
+    public static final SoundEffect cZ = null;
 
-    public static final SoundEffect da;
+    public static final SoundEffect da = null;
 
-    public static final SoundEffect db;
+    public static final SoundEffect db = null;
 
-    public static final SoundEffect dc;
+    public static final SoundEffect dc = null;
 
-    public static final SoundEffect dd;
+    public static final SoundEffect dd = null;
 
-    public static final SoundEffect de;
+    public static final SoundEffect de = null;
 
-    public static final SoundEffect df;
+    public static final SoundEffect df = null;
 
-    public static final SoundEffect dg;
+    public static final SoundEffect dg = null;
 
-    public static final SoundEffect dh;
+    public static final SoundEffect dh = null;
 
-    public static final SoundEffect di;
+    public static final SoundEffect di = null;
 
-    public static final SoundEffect dj;
+    public static final SoundEffect dj = null;
 
-    public static final SoundEffect dk;
+    public static final SoundEffect dk = null;
 
-    public static final SoundEffect dl;
+    public static final SoundEffect dl = null;
 
-    public static final SoundEffect dm;
+    public static final SoundEffect dm = null;
 
-    public static final SoundEffect dn;
+    public static final SoundEffect dn = null;
 
-    public static final SoundEffect _do;
+    public static final SoundEffect _do = null;
 
-    public static final SoundEffect dp;
+    public static final SoundEffect dp = null;
 
-    public static final SoundEffect dq;
+    public static final SoundEffect dq = null;
 
-    public static final SoundEffect dr;
+    public static final SoundEffect dr = null;
 
-    public static final SoundEffect ds;
+    public static final SoundEffect ds = null;
 
-    public static final SoundEffect dt;
+    public static final SoundEffect dt = null;
 
-    public static final SoundEffect du;
+    public static final SoundEffect du = null;
 
-    public static final SoundEffect dv;
+    public static final SoundEffect dv = null;
 
-    public static final SoundEffect dw;
+    public static final SoundEffect dw = null;
 
-    public static final SoundEffect BLOCK_METAL_PRESSUREPLATE_CLICK_OFF;
+    public static final SoundEffect BLOCK_METAL_PRESSUREPLATE_CLICK_OFF = null;
 
-    public static final SoundEffect dy;
+    public static final SoundEffect dy = null;
 
-    public static final SoundEffect dz;
+    public static final SoundEffect dz = null;
 
-    public static final SoundEffect dA;
+    public static final SoundEffect dA = null;
 
-    public static final SoundEffect dB;
+    public static final SoundEffect dB = null;
 
-    public static final SoundEffect dC;
+    public static final SoundEffect dC = null;
 
-    public static final SoundEffect dD;
+    public static final SoundEffect dD = null;
 
-    public static final SoundEffect dE;
+    public static final SoundEffect dE = null;
 
-    public static final SoundEffect dF;
+    public static final SoundEffect dF = null;
 
-    public static final SoundEffect dG;
+    public static final SoundEffect dG = null;
 
-    public static final SoundEffect dH;
+    public static final SoundEffect dH = null;
 
-    public static final SoundEffect dI;
+    public static final SoundEffect dI = null;
 
-    public static final SoundEffect dJ;
+    public static final SoundEffect dJ = null;
 
-    public static final SoundEffect dK;
+    public static final SoundEffect dK = null;
 
-    public static final SoundEffect dL;
+    public static final SoundEffect dL = null;
 
-    public static final SoundEffect dM;
+    public static final SoundEffect dM = null;
 
-    public static final SoundEffect dN;
+    public static final SoundEffect dN = null;
 
-    public static final SoundEffect dO;
+    public static final SoundEffect dO = null;
 
-    public static final SoundEffect dP;
+    public static final SoundEffect dP = null;
 
-    public static final SoundEffect dQ;
+    public static final SoundEffect dQ = null;
 
-    public static final SoundEffect dR;
+    public static final SoundEffect dR = null;
 
-    public static final SoundEffect dS;
+    public static final SoundEffect dS = null;
 
-    public static final SoundEffect dT;
+    public static final SoundEffect dT = null;
 
-    public static final SoundEffect dU;
+    public static final SoundEffect dU = null;
 
-    public static final SoundEffect dV;
+    public static final SoundEffect dV = null;
 
-    public static final SoundEffect dW;
+    public static final SoundEffect dW = null;
 
-    public static final SoundEffect dX;
+    public static final SoundEffect dX = null;
 
-    public static final SoundEffect dY;
+    public static final SoundEffect dY = null;
 
-    public static final SoundEffect dZ;
+    public static final SoundEffect dZ = null;
 
-    public static final SoundEffect ea;
+    public static final SoundEffect ea = null;
 
-    public static final SoundEffect eb;
+    public static final SoundEffect eb = null;
 
-    public static final SoundEffect ENTITY_PLAYER_ATTACK_CRIT;
+    public static final SoundEffect ENTITY_PLAYER_ATTACK_CRIT = null;
 
-    public static final SoundEffect ed;
+    public static final SoundEffect ed = null;
 
-    public static final SoundEffect ee;
+    public static final SoundEffect ee = null;
 
-    public static final SoundEffect ef;
+    public static final SoundEffect ef = null;
 
-    public static final SoundEffect eg;
+    public static final SoundEffect eg = null;
 
-    public static final SoundEffect eh;
+    public static final SoundEffect eh = null;
 
-    public static final SoundEffect ei;
+    public static final SoundEffect ei = null;
 
-    public static final SoundEffect ej;
+    public static final SoundEffect ej = null;
 
-    public static final SoundEffect ek;
+    public static final SoundEffect ek = null;
 
-    public static final SoundEffect el;
+    public static final SoundEffect el = null;
 
-    public static final SoundEffect ENTITY_PLAYER_HURT;
+    public static final SoundEffect ENTITY_PLAYER_HURT = null;
 
-    public static final SoundEffect en;
+    public static final SoundEffect en = null;
 
-    public static final SoundEffect eo;
+    public static final SoundEffect eo = null;
 
-    public static final SoundEffect ep;
+    public static final SoundEffect ep = null;
 
-    public static final SoundEffect eq;
+    public static final SoundEffect eq = null;
 
-    public static final SoundEffect er;
+    public static final SoundEffect er = null;
 
-    public static final SoundEffect es;
+    public static final SoundEffect es = null;
 
-    public static final SoundEffect et;
+    public static final SoundEffect et = null;
 
-    public static final SoundEffect eu;
+    public static final SoundEffect eu = null;
 
-    public static final SoundEffect ev;
+    public static final SoundEffect ev = null;
 
-    public static final SoundEffect ew;
+    public static final SoundEffect ew = null;
 
-    public static final SoundEffect ex;
+    public static final SoundEffect ex = null;
 
-    public static final SoundEffect ey;
+    public static final SoundEffect ey = null;
 
-    public static final SoundEffect ez;
+    public static final SoundEffect ez = null;
 
-    public static final SoundEffect eA;
+    public static final SoundEffect eA = null;
 
-    public static final SoundEffect eB;
+    public static final SoundEffect eB = null;
 
-    public static final SoundEffect eC;
+    public static final SoundEffect eC = null;
 
-    public static final SoundEffect eD;
+    public static final SoundEffect eD = null;
 
-    public static final SoundEffect eE;
+    public static final SoundEffect eE = null;
 
-    public static final SoundEffect eF;
+    public static final SoundEffect eF = null;
 
-    public static final SoundEffect eG;
+    public static final SoundEffect eG = null;
 
-    public static final SoundEffect eH;
+    public static final SoundEffect eH = null;
 
-    public static final SoundEffect eI;
+    public static final SoundEffect eI = null;
 
-    public static final SoundEffect eJ;
+    public static final SoundEffect eJ = null;
 
-    public static final SoundEffect eK;
+    public static final SoundEffect eK = null;
 
-    public static final SoundEffect eL;
+    public static final SoundEffect eL = null;
 
-    public static final SoundEffect eM;
+    public static final SoundEffect eM = null;
 
-    public static final SoundEffect eN;
+    public static final SoundEffect eN = null;
 
-    public static final SoundEffect eO;
+    public static final SoundEffect eO = null;
 
-    public static final SoundEffect eP;
+    public static final SoundEffect eP = null;
 
-    public static final SoundEffect eQ;
+    public static final SoundEffect eQ = null;
 
-    public static final SoundEffect eR;
+    public static final SoundEffect eR = null;
 
-    public static final SoundEffect eS;
+    public static final SoundEffect eS = null;
 
-    public static final SoundEffect eT;
+    public static final SoundEffect eT = null;
 
-    public static final SoundEffect eU;
+    public static final SoundEffect eU = null;
 
-    public static final SoundEffect eV;
+    public static final SoundEffect eV = null;
 
-    public static final SoundEffect eW;
+    public static final SoundEffect eW = null;
 
-    public static final SoundEffect eX;
+    public static final SoundEffect eX = null;
 
-    public static final SoundEffect eY;
+    public static final SoundEffect eY = null;
 
-    public static final SoundEffect eZ;
+    public static final SoundEffect eZ = null;
 
-    public static final SoundEffect fa;
+    public static final SoundEffect fa = null;
 
-    public static final SoundEffect fb;
+    public static final SoundEffect fb = null;
 
-    public static final SoundEffect fc;
+    public static final SoundEffect fc = null;
 
-    public static final SoundEffect fd;
+    public static final SoundEffect fd = null;
 
-    public static final SoundEffect fe;
+    public static final SoundEffect fe = null;
 
-    public static final SoundEffect ff;
+    public static final SoundEffect ff = null;
 
-    public static final SoundEffect fg;
+    public static final SoundEffect fg = null;
 
-    public static final SoundEffect fh;
+    public static final SoundEffect fh = null;
 
-    public static final SoundEffect fi;
+    public static final SoundEffect fi = null;
 
-    public static final SoundEffect fj;
+    public static final SoundEffect fj = null;
 
-    public static final SoundEffect fk;
+    public static final SoundEffect fk = null;
 
-    public static final SoundEffect fl;
+    public static final SoundEffect fl = null;
 
-    public static final SoundEffect fm;
+    public static final SoundEffect fm = null;
 
-    public static final SoundEffect fn;
+    public static final SoundEffect fn = null;
 
-    public static final SoundEffect fo;
+    public static final SoundEffect fo = null;
 
-    public static final SoundEffect fp;
+    public static final SoundEffect fp = null;
 
-    public static final SoundEffect fq;
+    public static final SoundEffect fq = null;
 
-    public static final SoundEffect fr;
+    public static final SoundEffect fr = null;
 
-    public static final SoundEffect fs;
+    public static final SoundEffect fs = null;
 
-    public static final SoundEffect ft;
+    public static final SoundEffect ft = null;
 
-    public static final SoundEffect fu;
+    public static final SoundEffect fu = null;
 
-    public static final SoundEffect fv;
+    public static final SoundEffect fv = null;
 
-    public static final SoundEffect fw;
+    public static final SoundEffect fw = null;
 
-    public static final SoundEffect fx;
+    public static final SoundEffect fx = null;
 
-    public static final SoundEffect fy;
+    public static final SoundEffect fy = null;
 
-    public static final SoundEffect fz;
+    public static final SoundEffect fz = null;
 
-    public static final SoundEffect fA;
+    public static final SoundEffect fA = null;
 
-    public static final SoundEffect fB;
+    public static final SoundEffect fB = null;
 
-    public static final SoundEffect fC;
+    public static final SoundEffect fC = null;
 
-    public static final SoundEffect fD;
+    public static final SoundEffect fD = null;
 
-    public static final SoundEffect fE;
+    public static final SoundEffect fE = null;
 
-    public static final SoundEffect fF;
+    public static final SoundEffect fF = null;
 
-    public static final SoundEffect fG;
+    public static final SoundEffect fG = null;
 
-    public static final SoundEffect fH;
+    public static final SoundEffect fH = null;
 
-    public static final SoundEffect fI;
+    public static final SoundEffect fI = null;
 
-    public static final SoundEffect fJ;
+    public static final SoundEffect fJ = null;
 
-    public static final SoundEffect fK;
+    public static final SoundEffect fK = null;
 
-    public static final SoundEffect fL;
+    public static final SoundEffect fL = null;
 
-    public static final SoundEffect fM;
+    public static final SoundEffect fM = null;
 
-    public static final SoundEffect fN;
+    public static final SoundEffect fN = null;
 
-    public static final SoundEffect fO;
+    public static final SoundEffect fO = null;
 
-    public static final SoundEffect fP;
+    public static final SoundEffect fP = null;
 
-    public static final SoundEffect fQ;
+    public static final SoundEffect fQ = null;
 
-    public static final SoundEffect fR;
+    public static final SoundEffect fR = null;
 
-    public static final SoundEffect fS;
+    public static final SoundEffect fS = null;
 
-    public static final SoundEffect fT;
+    public static final SoundEffect fT = null;
 
-    public static final SoundEffect fU;
+    public static final SoundEffect fU = null;
 
-    public static final SoundEffect fV;
+    public static final SoundEffect fV = null;
 
-    public static final SoundEffect fW;
+    public static final SoundEffect fW = null;
 
-    public static final SoundEffect fX;
+    public static final SoundEffect fX = null;
 
-    public static final SoundEffect fY;
+    public static final SoundEffect fY = null;
 
-    public static final SoundEffect fZ;
+    public static final SoundEffect fZ = null;
 
-    public static final SoundEffect ga;
+    public static final SoundEffect ga = null;
 
-    public static final SoundEffect gb;
+    public static final SoundEffect gb = null;
 
-    public static final SoundEffect gc;
+    public static final SoundEffect gc = null;
 
-    public static final SoundEffect gd;
+    public static final SoundEffect gd = null;
 
-    public static final SoundEffect ge;
+    public static final SoundEffect ge = null;
 
-    public static final SoundEffect gf;
+    public static final SoundEffect gf = null;
 
-    public static final SoundEffect gg;
+    public static final SoundEffect gg = null;
 
-    public static final SoundEffect gh;
+    public static final SoundEffect gh = null;
 
-    public static final SoundEffect gi;
+    public static final SoundEffect gi = null;
 
-    public static final SoundEffect gj;
+    public static final SoundEffect gj = null;
 
-    public static final SoundEffect gk;
+    public static final SoundEffect gk = null;
 
-    public static final SoundEffect gl;
+    public static final SoundEffect gl = null;
 
-    public static final SoundEffect gm;
+    public static final SoundEffect gm = null;
 
-    public static final SoundEffect gn;
+    public static final SoundEffect gn = null;
 
-    public static final SoundEffect go;
+    public static final SoundEffect go = null;
 
-    public static final SoundEffect gp;
+    public static final SoundEffect gp = null;
 
-    public static final SoundEffect gq;
+    public static final SoundEffect gq = null;
 
-    public static final SoundEffect gr;
+    public static final SoundEffect gr = null;
 
-    public static final SoundEffect gs;
+    public static final SoundEffect gs = null;
 
-    public static final SoundEffect gt;
+    public static final SoundEffect gt = null;
 
-    public static final SoundEffect gu;
+    public static final SoundEffect gu = null;
 
-    public static final SoundEffect gv;
+    public static final SoundEffect gv = null;
 
-    public static final SoundEffect gw;
+    public static final SoundEffect gw = null;
 
-    public static final SoundEffect gx;
+    public static final SoundEffect gx = null;
 
-    public static final SoundEffect gy;
+    public static final SoundEffect gy = null;
 
-    public static final SoundEffect gz;
+    public static final SoundEffect gz = null;
 
-    public static final SoundEffect gA;
+    public static final SoundEffect gA = null;
 
-    public static final SoundEffect gB;
+    public static final SoundEffect gB = null;
 
-    public static final SoundEffect gC;
+    public static final SoundEffect gC = null;
 
-    public static final SoundEffect gD;
+    public static final SoundEffect gD = null;
 
-    public static final SoundEffect gE;
+    public static final SoundEffect gE = null;
 
-    public static final SoundEffect gF;
+    public static final SoundEffect gF = null;
 
-    public static final SoundEffect gG;
+    public static final SoundEffect gG = null;
 
-    public static final SoundEffect gH;
+    public static final SoundEffect gH = null;
 
-    public static final SoundEffect gI;
+    public static final SoundEffect gI = null;
 
-    public static final SoundEffect gJ;
+    public static final SoundEffect gJ = null;
 
-    public static final SoundEffect gK;
+    public static final SoundEffect gK = null;
 
-    public static final SoundEffect gL;
+    public static final SoundEffect gL = null;
 
-    public static final SoundEffect gM;
+    public static final SoundEffect gM = null;
 
-    public static final SoundEffect gN;
+    public static final SoundEffect gN = null;
 
-    public static final SoundEffect gO;
+    public static final SoundEffect gO = null;
 
-    public static final SoundEffect gP;
+    public static final SoundEffect gP = null;
 
-    public static final SoundEffect gQ;
+    public static final SoundEffect gQ = null;
 
-    public static final SoundEffect gR;
+    public static final SoundEffect gR = null;
 
-    public static final SoundEffect gS;
+    public static final SoundEffect gS = null;
 
-    public static final SoundEffect gT;
+    public static final SoundEffect gT = null;
 
-    public static final SoundEffect gU;
+    public static final SoundEffect gU = null;
 
-    public static final SoundEffect gV;
+    public static final SoundEffect gV = null;
 
-    public static final SoundEffect gW;
+    public static final SoundEffect gW = null;
 
-    public static final SoundEffect gX;
+    public static final SoundEffect gX = null;
 
-    public static final SoundEffect gY;
+    public static final SoundEffect gY = null;
 
-    public static final SoundEffect gZ;
+    public static final SoundEffect gZ = null;
 
-    public static final SoundEffect ha;
+    public static final SoundEffect ha = null;
 
-    public static final SoundEffect hb;
+    public static final SoundEffect hb = null;
 
-    public static final SoundEffect hc;
+    public static final SoundEffect hc = null;
 
-    public static final SoundEffect hd;
+    public static final SoundEffect hd = null;
 
-    public static final SoundEffect he;
+    public static final SoundEffect he = null;
 
-    public static final SoundEffect hf;
+    public static final SoundEffect hf = null;
 
-    public static final SoundEffect hg;
+    public static final SoundEffect hg = null;
 
-    public static final SoundEffect hh;
+    public static final SoundEffect hh = null;
 
-    public static final SoundEffect hi;
+    public static final SoundEffect hi = null;
 
-    public static final SoundEffect hj;
+    public static final SoundEffect hj = null;
 
-    public static final SoundEffect hk;
+    public static final SoundEffect hk = null;
 
-    public static final SoundEffect hl;
+    public static final SoundEffect hl = null;
 
-    public static final SoundEffect hm;
+    public static final SoundEffect hm = null;
 
-    public static final SoundEffect hn;
+    public static final SoundEffect hn = null;
 
-    public static final SoundEffect ho;
+    public static final SoundEffect ho = null;
 
-    public static final SoundEffect hp;
+    public static final SoundEffect hp = null;
 
-    public static final SoundEffect hq;
+    public static final SoundEffect hq = null;
 
-    public static final SoundEffect hr;
+    public static final SoundEffect hr = null;
 
-    public static final SoundEffect hs;
+    public static final SoundEffect hs = null;
 
-    public static final SoundEffect ht;
+    public static final SoundEffect ht = null;
 
-    public static final SoundEffect hu;
+    public static final SoundEffect hu = null;
 
-    public static final SoundEffect hv;
+    public static final SoundEffect hv = null;
 
-    public static final SoundEffect hw;
+    public static final SoundEffect hw = null;
 
-    public static final SoundEffect hx;
+    public static final SoundEffect hx = null;
 
-    public static final SoundEffect hy;
+    public static final SoundEffect hy = null;
 
-    public static final SoundEffect hz;
+    public static final SoundEffect hz = null;
 
-    public static final SoundEffect hA;
+    public static final SoundEffect hA = null;
 
-    public static final SoundEffect hB;
+    public static final SoundEffect hB = null;
 
-    public static final SoundEffect hC;
+    public static final SoundEffect hC = null;
 
-    public static final SoundEffect hD;
+    public static final SoundEffect hD = null;
 
-    public static final SoundEffect hE;
+    public static final SoundEffect hE = null;
 
-    public static final SoundEffect hF;
+    public static final SoundEffect hF = null;
 
-    public static final SoundEffect hG;
+    public static final SoundEffect hG = null;
 
-    public static final SoundEffect hH;
+    public static final SoundEffect hH = null;
 
-    public static final SoundEffect hI;
+    public static final SoundEffect hI = null;
 
-    public static final SoundEffect hJ;
+    public static final SoundEffect hJ = null;
 
-    public static final SoundEffect hK;
+    public static final SoundEffect hK = null;
 
-    public static final SoundEffect hL;
+    public static final SoundEffect hL = null;
 
-    public static final SoundEffect hM;
+    public static final SoundEffect hM = null;
 
-    public static final SoundEffect hN;
+    public static final SoundEffect hN = null;
 
-    public static final SoundEffect hO;
+    public static final SoundEffect hO = null;
 
-    public static final SoundEffect hP;
+    public static final SoundEffect hP = null;
 
-    public static final SoundEffect hQ;
+    public static final SoundEffect hQ = null;
 
-    public static final SoundEffect hR;
+    public static final SoundEffect hR = null;
 
-    public static final SoundEffect hS;
+    public static final SoundEffect hS = null;
 
-    public static final SoundEffect hT;
+    public static final SoundEffect hT = null;
 
-    public static final SoundEffect hU;
+    public static final SoundEffect hU = null;
 
     private static SoundEffect a(String s) {
         return null;

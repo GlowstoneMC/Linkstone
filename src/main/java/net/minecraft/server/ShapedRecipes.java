@@ -8,15 +8,15 @@ import org.bukkit.craftbukkit.inventory.CraftShapedRecipe;
 // CraftBukkit end
 public class ShapedRecipes implements IRecipe {
 
-    private final int width;
+    private final int width = 0;
 
-    private final int height;
+    private final int height = 0;
 
-    private final ItemStack[] items;
+    private final ItemStack[] items = null;
 
-    private final ItemStack result;
+    private final ItemStack result = null;
 
-    private boolean e;
+    private boolean e = false;
 
     public ShapedRecipes(int i, int j, ItemStack[] aitemstack, ItemStack itemstack) {
     }

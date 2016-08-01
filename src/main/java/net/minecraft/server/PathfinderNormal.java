@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 
 public class PathfinderNormal extends PathfinderAbstract {
 
-    private float j;
+    private float j = 0.0F;
 
     public PathfinderNormal() {
     }

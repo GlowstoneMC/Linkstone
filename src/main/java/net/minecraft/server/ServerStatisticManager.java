@@ -21,17 +21,17 @@ import org.apache.logging.log4j.Logger;
 
 public class ServerStatisticManager extends StatisticManager {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private final MinecraftServer c;
+    private final MinecraftServer c = null;
 
-    private final File d;
+    private final File d = null;
 
-    private final Set<Statistic> e;
+    private final Set<Statistic> e = null;
 
-    private int f;
+    private int f = 0;
 
-    private boolean g;
+    private boolean g = false;
 
     public ServerStatisticManager(MinecraftServer minecraftserver, File file) {
     }

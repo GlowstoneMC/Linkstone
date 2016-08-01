@@ -6,15 +6,15 @@ import java.util.List;
 
 public class FileIOThread implements Runnable {
 
-    private static final FileIOThread a;
+    private static final FileIOThread a = null;
 
-    private final List<IAsyncChunkSaver> b;
+    private final List<IAsyncChunkSaver> b = null;
 
-    private volatile long c;
+    private volatile long c = 0;
 
-    private volatile long d;
+    private volatile long d = 0;
 
-    private volatile boolean e;
+    private volatile boolean e = false;
 
     private FileIOThread() {
     }

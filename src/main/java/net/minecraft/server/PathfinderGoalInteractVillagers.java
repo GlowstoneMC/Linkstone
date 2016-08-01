@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class PathfinderGoalInteractVillagers extends PathfinderGoalInteract {
 
-    private int e;
+    private int e = 0;
 
-    private final EntityVillager f;
+    private final EntityVillager f = null;
 
     public PathfinderGoalInteractVillagers(EntityVillager entityvillager) {
     }

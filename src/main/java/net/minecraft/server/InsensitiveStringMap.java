@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 
 public class InsensitiveStringMap<V> implements Map<String, V> {
 
-    private final Map<String, V> a;
+    private final Map<String, V> a = null;
 
     public InsensitiveStringMap() {
     }

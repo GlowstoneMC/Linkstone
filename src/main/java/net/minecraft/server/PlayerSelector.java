@@ -21,13 +21,13 @@ import javax.annotation.Nullable;
 
 public class PlayerSelector {
 
-    private static final Pattern a;
+    private static final Pattern a = null;
 
-    private static final Pattern b;
+    private static final Pattern b = null;
 
-    private static final Pattern c;
+    private static final Pattern c = null;
 
-    private static final Set<String> d;
+    private static final Set<String> d = null;
 
     @Nullable
     public static EntityPlayer getPlayer(ICommandListener icommandlistener, String s) {

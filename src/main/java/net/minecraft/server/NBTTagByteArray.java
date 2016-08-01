@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class NBTTagByteArray extends NBTBase {
 
-    private byte[] data;
+    private byte[] data = null;
 
     NBTTagByteArray() {
     }

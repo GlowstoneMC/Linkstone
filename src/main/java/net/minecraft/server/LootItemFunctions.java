@@ -14,9 +14,9 @@ import java.util.Map;
 
 public class LootItemFunctions {
 
-    private static final Map<MinecraftKey, LootItemFunction.a<?>> a;
+    private static final Map<MinecraftKey, LootItemFunction.a<?>> a = null;
 
-    private static final Map<Class<? extends LootItemFunction>, LootItemFunction.a<?>> b;
+    private static final Map<Class<? extends LootItemFunction>, LootItemFunction.a<?>> b = null;
 
     public static <T extends LootItemFunction> void a(LootItemFunction.a<? extends T> lootitemfunction_a) {
     }

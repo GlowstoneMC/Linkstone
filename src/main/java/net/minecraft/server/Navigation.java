@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class Navigation extends NavigationAbstract {
 
-    private boolean f;
+    private boolean f = false;
 
     public Navigation(EntityInsentient entityinsentient, World world) {
     }

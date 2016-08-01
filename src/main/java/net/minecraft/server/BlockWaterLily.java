@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class BlockWaterLily extends BlockPlant {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
     protected BlockWaterLily() {
     }

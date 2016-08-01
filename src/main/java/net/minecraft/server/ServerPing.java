@@ -14,13 +14,13 @@ import java.util.UUID;
 
 public class ServerPing {
 
-    private IChatBaseComponent a;
+    private IChatBaseComponent a = null;
 
-    private ServerPing.ServerPingPlayerSample b;
+    private ServerPing.ServerPingPlayerSample b = null;
 
-    private ServerPing.ServerData c;
+    private ServerPing.ServerData c = null;
 
-    private String d;
+    private String d = null;
 
     public ServerPing() {
     }
@@ -77,9 +77,9 @@ public class ServerPing {
 
     public static class ServerData {
 
-        private final String a;
+        private final String a = null;
 
-        private final int b;
+        private final int b = 0;
 
         public ServerData(String s, int i) {
         }
@@ -117,11 +117,11 @@ public class ServerPing {
 
     public static class ServerPingPlayerSample {
 
-        private final int a;
+        private final int a = 0;
 
-        private final int b;
+        private final int b = 0;
 
-        private GameProfile[] c;
+        private GameProfile[] c = null;
 
         public ServerPingPlayerSample(int i, int j) {
         }

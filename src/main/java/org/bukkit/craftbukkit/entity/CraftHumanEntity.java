@@ -31,15 +31,15 @@ import org.bukkit.plugin.Plugin;
 
 public class CraftHumanEntity extends CraftLivingEntity implements HumanEntity {
 
-    private CraftInventoryPlayer inventory;
+    private CraftInventoryPlayer inventory = null;
 
-    private final CraftInventory enderChest;
+    private final CraftInventory enderChest = null;
 
-    protected final PermissibleBase perm;
+    protected final PermissibleBase perm = null;
 
-    private boolean op;
+    private boolean op = false;
 
-    private GameMode mode;
+    private GameMode mode = null;
 
     public CraftHumanEntity(final CraftServer server, final EntityHuman entity) {
     }

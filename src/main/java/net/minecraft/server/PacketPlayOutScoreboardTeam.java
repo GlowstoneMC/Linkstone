@@ -7,25 +7,25 @@ import java.util.Iterator;
 
 public class PacketPlayOutScoreboardTeam implements Packet<PacketListenerPlayOut> {
 
-    private String a;
+    private String a = null;
 
-    private String b;
+    private String b = null;
 
-    private String c;
+    private String c = null;
 
-    private String d;
+    private String d = null;
 
-    private String e;
+    private String e = null;
 
-    private String f;
+    private String f = null;
 
-    private int g;
+    private int g = 0;
 
-    private final Collection<String> h;
+    private final Collection<String> h = null;
 
-    private int i;
+    private int i = 0;
 
-    private int j;
+    private int j = 0;
 
     public PacketPlayOutScoreboardTeam() {
     }

@@ -7,7 +7,7 @@ import javax.crypto.Cipher;
 
 public class PacketEncrypter extends MessageToByteEncoder<ByteBuf> {
 
-    private final PacketEncryptionHandler a;
+    private final PacketEncryptionHandler a = null;
 
     public PacketEncrypter(Cipher cipher) {
     }

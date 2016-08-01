@@ -5,19 +5,19 @@ import org.apache.commons.lang3.Validate;
 
 public class PacketPlayOutCustomSoundEffect implements Packet<PacketListenerPlayOut> {
 
-    private String a;
+    private String a = null;
 
-    private SoundCategory b;
+    private SoundCategory b = null;
 
-    private int c;
+    private int c = 0;
 
-    private int d;
+    private int d = 0;
 
-    private int e;
+    private int e = 0;
 
-    private float f;
+    private float f = 0.0F;
 
-    private float g;
+    private float g = 0.0F;
 
     public PacketPlayOutCustomSoundEffect() {
     }

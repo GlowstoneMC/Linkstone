@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 
 public class PacketPlayOutStatistic implements Packet<PacketListenerPlayOut> {
 
-    private Map<Statistic, Integer> a;
+    private Map<Statistic, Integer> a = null;
 
     public PacketPlayOutStatistic() {
     }

@@ -2,11 +2,11 @@ package net.minecraft.server;
 
 public class BlockEndRod extends BlockDirectional {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
     protected BlockEndRod() {
     }
@@ -63,7 +63,7 @@ public class BlockEndRod extends BlockDirectional {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class PathfinderGoalBreakDoor extends PathfinderGoalDoorInteract {
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
     public PathfinderGoalBreakDoor(EntityInsentient entityinsentient) {
     }

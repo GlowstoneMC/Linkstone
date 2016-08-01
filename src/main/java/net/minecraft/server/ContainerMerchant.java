@@ -6,16 +6,16 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit
 public class ContainerMerchant extends Container {
 
-    private final IMerchant merchant;
+    private final IMerchant merchant = null;
 
-    private final InventoryMerchant f;
+    private final InventoryMerchant f = null;
 
-    private final World g;
+    private final World g = null;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     @Override
     public CraftInventoryView getBukkitView() {

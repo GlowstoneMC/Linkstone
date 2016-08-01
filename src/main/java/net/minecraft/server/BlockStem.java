@@ -8,13 +8,13 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class BlockStem extends BlockPlant implements IBlockFragilePlantElement {
 
-    public static final BlockStateInteger AGE;
+    public static final BlockStateInteger AGE = null;
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    private final Block blockFruit;
+    private final Block blockFruit = null;
 
-    protected static final AxisAlignedBB[] d;
+    protected static final AxisAlignedBB[] d = null;
 
     protected BlockStem(Block block) {
     }

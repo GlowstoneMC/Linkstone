@@ -9,30 +9,30 @@ import javax.annotation.Nullable;
 
 public class EntityShulkerBullet extends Entity {
 
-    private EntityLiving shooter;
+    private EntityLiving shooter = null;
 
-    private Entity target;
-
-    @Nullable
-    private EnumDirection c;
-
-    private int d;
-
-    private double e;
-
-    private double f;
-
-    private double g;
+    private Entity target = null;
 
     @Nullable
-    private UUID h;
+    private EnumDirection c = null;
 
-    private BlockPosition au;
+    private int d = 0;
+
+    private double e = 0.0;
+
+    private double f = 0.0;
+
+    private double g = 0.0;
 
     @Nullable
-    private UUID av;
+    private UUID h = null;
 
-    private BlockPosition aw;
+    private BlockPosition au = null;
+
+    @Nullable
+    private UUID av = null;
+
+    private BlockPosition aw = null;
 
     public EntityShulkerBullet(World world) {
     }

@@ -11,9 +11,9 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public class BlockRedstoneTorch extends BlockTorch {
 
-    private static final Map<World, List<BlockRedstoneTorch.RedstoneUpdateInfo>> g;
+    private static final Map<World, List<BlockRedstoneTorch.RedstoneUpdateInfo>> g = null;
 
-    private final boolean isOn;
+    private final boolean isOn = false;
 
     private boolean a(World world, BlockPosition blockposition, boolean flag) {
         return false;
@@ -72,9 +72,9 @@ public class BlockRedstoneTorch extends BlockTorch {
 
     static class RedstoneUpdateInfo {
 
-        BlockPosition a;
+        BlockPosition a = null;
 
-        long b;
+        long b = 0;
 
         public RedstoneUpdateInfo(BlockPosition blockposition, long i) {
         }

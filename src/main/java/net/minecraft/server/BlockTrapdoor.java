@@ -6,23 +6,23 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public class BlockTrapdoor extends Block {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateBoolean OPEN;
+    public static final BlockStateBoolean OPEN = null;
 
-    public static final BlockStateEnum<BlockTrapdoor.EnumTrapdoorHalf> HALF;
+    public static final BlockStateEnum<BlockTrapdoor.EnumTrapdoorHalf> HALF = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
-    protected static final AxisAlignedBB C;
+    protected static final AxisAlignedBB C = null;
 
     protected BlockTrapdoor(Material material) {
     }
@@ -91,7 +91,7 @@ public class BlockTrapdoor extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -101,7 +101,7 @@ public class BlockTrapdoor extends Block {
 
         TOP("top"), BOTTOM("bottom");
 
-        private final String c;
+        private final String c = null;
 
         private EnumTrapdoorHalf(String s) {
         }

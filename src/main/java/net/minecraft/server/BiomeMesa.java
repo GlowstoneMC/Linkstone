@@ -5,31 +5,31 @@ import java.util.Random;
 
 public class BiomeMesa extends BiomeBase {
 
-    protected static final IBlockData y;
+    protected static final IBlockData y = null;
 
-    protected static final IBlockData z;
+    protected static final IBlockData z = null;
 
-    protected static final IBlockData A;
+    protected static final IBlockData A = null;
 
-    protected static final IBlockData B;
+    protected static final IBlockData B = null;
 
-    protected static final IBlockData C;
+    protected static final IBlockData C = null;
 
-    protected static final IBlockData D;
+    protected static final IBlockData D = null;
 
-    private IBlockData[] E;
+    private IBlockData[] E = null;
 
-    private long F;
+    private long F = 0;
 
-    private NoiseGenerator3 G;
+    private NoiseGenerator3 G = null;
 
-    private NoiseGenerator3 H;
+    private NoiseGenerator3 H = null;
 
-    private NoiseGenerator3 I;
+    private NoiseGenerator3 I = null;
 
-    private final boolean J;
+    private final boolean J = false;
 
-    private final boolean K;
+    private final boolean K = false;
 
     public BiomeMesa(boolean flag, boolean flag1, BiomeBase.a biomebase_a) {
     }

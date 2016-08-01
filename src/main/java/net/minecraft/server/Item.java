@@ -11,39 +11,39 @@ import javax.annotation.Nullable;
 
 public class Item {
 
-    public static final RegistryMaterials<MinecraftKey, Item> REGISTRY;
+    public static final RegistryMaterials<MinecraftKey, Item> REGISTRY = null;
 
-    private static final Map<Block, Item> a;
+    private static final Map<Block, Item> a = null;
 
-    private static final IDynamicTexture b;
+    private static final IDynamicTexture b = null;
 
-    private static final IDynamicTexture c;
+    private static final IDynamicTexture c = null;
 
-    private static final IDynamicTexture d;
+    private static final IDynamicTexture d = null;
 
-    private static final IDynamicTexture e;
+    private static final IDynamicTexture e = null;
 
-    private final IRegistry<MinecraftKey, IDynamicTexture> f;
+    private final IRegistry<MinecraftKey, IDynamicTexture> f = null;
 
-    protected static final UUID h;
+    protected static final UUID h = null;
 
-    protected static final UUID i;
+    protected static final UUID i = null;
 
-    private CreativeModeTab n;
+    private CreativeModeTab n = null;
 
-    protected static Random j;
+    protected static Random j = null;
 
-    protected int maxStackSize;
+    protected int maxStackSize = 0;
 
-    private int durability;
+    private int durability = 0;
 
-    protected boolean l;
+    protected boolean l = false;
 
-    protected boolean m;
+    protected boolean m = false;
 
-    private Item craftingResult;
+    private Item craftingResult = null;
 
-    private String name;
+    private String name = null;
 
     public static int getId(Item item) {
         return 0;
@@ -249,15 +249,15 @@ public class Item {
 
         WOOD(0, 59, 2.0F, 0.0F, 15), STONE(1, 131, 4.0F, 1.0F, 5), IRON(2, 250, 6.0F, 2.0F, 14), DIAMOND(3, 1561, 8.0F, 3.0F, 10), GOLD(0, 32, 12.0F, 0.0F, 22);
 
-        private final int f;
+        private final int f = 0;
 
-        private final int g;
+        private final int g = 0;
 
-        private final float h;
+        private final float h = 0.0F;
 
-        private final float i;
+        private final float i = 0.0F;
 
-        private final int j;
+        private final int j = 0;
 
         private EnumToolMaterial(int i, int j, float f, float f1, int k) {
         }

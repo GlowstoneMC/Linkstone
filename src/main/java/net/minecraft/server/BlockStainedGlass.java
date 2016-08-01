@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class BlockStainedGlass extends BlockHalfTransparent {
 
-    public static final BlockStateEnum<EnumColor> COLOR;
+    public static final BlockStateEnum<EnumColor> COLOR = null;
 
     public BlockStainedGlass(Material material) {
     }

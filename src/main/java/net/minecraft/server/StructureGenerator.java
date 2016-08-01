@@ -8,9 +8,9 @@ import java.util.Random;
 
 public abstract class StructureGenerator extends WorldGenBase {
 
-    private PersistentStructure a;
+    private PersistentStructure a = null;
 
-    protected Long2ObjectMap<StructureStart> c;
+    protected Long2ObjectMap<StructureStart> c = null;
 
     public StructureGenerator() {
     }

@@ -12,17 +12,17 @@ import joptsimple.OptionSet;
 // CraftBukkit
 public class PropertyManager {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    public final Properties properties;
+    public final Properties properties = null;
 
-    private final File file;
+    private final File file = null;
 
     public PropertyManager(File file) {
     }
 
     // CraftBukkit start
-    private OptionSet options;
+    private OptionSet options = null;
 
     public PropertyManager(final OptionSet options) {
     }

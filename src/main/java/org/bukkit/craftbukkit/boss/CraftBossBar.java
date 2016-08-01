@@ -19,13 +19,13 @@ import java.util.Set;
 
 public class CraftBossBar implements BossBar {
 
-    private final BossBattleServer handle;
+    private final BossBattleServer handle = null;
 
-    private final Set<BarFlag> flags;
+    private final Set<BarFlag> flags = null;
 
-    private BarColor color;
+    private BarColor color = null;
 
-    private BarStyle style;
+    private BarStyle style = null;
 
     public CraftBossBar(String title, BarColor color, BarStyle style, BarFlag... flags) {
     }

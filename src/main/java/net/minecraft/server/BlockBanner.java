@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class BlockBanner extends BlockTileEntity {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateInteger ROTATION;
+    public static final BlockStateInteger ROTATION = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
     protected BlockBanner() {
     }
@@ -69,7 +69,7 @@ public class BlockBanner extends BlockTileEntity {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -110,13 +110,13 @@ public class BlockBanner extends BlockTileEntity {
 
     public static class BlockWallBanner extends BlockBanner {
 
-        protected static final AxisAlignedBB d;
+        protected static final AxisAlignedBB d = null;
 
-        protected static final AxisAlignedBB e;
+        protected static final AxisAlignedBB e = null;
 
-        protected static final AxisAlignedBB f;
+        protected static final AxisAlignedBB f = null;
 
-        protected static final AxisAlignedBB g;
+        protected static final AxisAlignedBB g = null;
 
         public BlockWallBanner() {
         }

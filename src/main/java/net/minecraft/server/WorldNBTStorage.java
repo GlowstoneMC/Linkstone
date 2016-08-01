@@ -18,23 +18,23 @@ import org.bukkit.craftbukkit.entity.CraftPlayer;
 // CraftBukkit end
 public class WorldNBTStorage implements IDataManager, IPlayerFileData {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private final File baseDir;
+    private final File baseDir = null;
 
-    private final File playerDir;
+    private final File playerDir = null;
 
-    private final File dataDir;
+    private final File dataDir = null;
 
-    private final long sessionId;
+    private final long sessionId = 0;
 
-    private final String g;
+    private final String g = null;
 
-    private final DefinedStructureManager h;
+    private final DefinedStructureManager h = null;
 
-    protected final DataConverterManager a;
+    protected final DataConverterManager a = null;
 
-    private UUID uuid;
+    private UUID uuid = null;
 
     // CraftBukkit
     public WorldNBTStorage(File file, String s, boolean flag, DataConverterManager dataconvertermanager) {

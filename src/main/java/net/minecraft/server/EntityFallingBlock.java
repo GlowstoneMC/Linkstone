@@ -9,23 +9,23 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class EntityFallingBlock extends Entity {
 
-    private IBlockData block;
+    private IBlockData block = null;
 
-    public int ticksLived;
+    public int ticksLived = 0;
 
-    public boolean dropItem;
+    public boolean dropItem = false;
 
-    private boolean f;
+    private boolean f = false;
 
-    public boolean hurtEntities;
+    public boolean hurtEntities = false;
 
-    private int fallHurtMax;
+    private int fallHurtMax = 0;
 
-    private float fallHurtAmount;
+    private float fallHurtAmount = 0.0F;
 
-    public NBTTagCompound tileEntityData;
+    public NBTTagCompound tileEntityData = null;
 
-    protected static final DataWatcherObject<BlockPosition> d;
+    protected static final DataWatcherObject<BlockPosition> d = null;
 
     public EntityFallingBlock(World world) {
     }

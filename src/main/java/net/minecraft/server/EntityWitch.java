@@ -7,13 +7,13 @@ import javax.annotation.Nullable;
 
 public class EntityWitch extends EntityMonster implements IRangedEntity {
 
-    private static final UUID a;
+    private static final UUID a = null;
 
-    private static final AttributeModifier b;
+    private static final AttributeModifier b = null;
 
-    private static final DataWatcherObject<Boolean> c;
+    private static final DataWatcherObject<Boolean> c = null;
 
-    private int bx;
+    private int bx = 0;
 
     public EntityWitch(World world) {
     }

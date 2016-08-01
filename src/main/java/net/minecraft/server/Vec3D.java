@@ -4,13 +4,13 @@ import javax.annotation.Nullable;
 
 public class Vec3D {
 
-    public static final Vec3D a;
+    public static final Vec3D a = null;
 
-    public final double x;
+    public final double x = 0.0;
 
-    public final double y;
+    public final double y = 0.0;
 
-    public final double z;
+    public final double z = 0.0;
 
     public Vec3D(double d0, double d1, double d2) {
     }

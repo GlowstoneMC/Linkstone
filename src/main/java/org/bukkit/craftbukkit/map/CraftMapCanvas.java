@@ -10,13 +10,13 @@ import org.bukkit.map.MapPalette;
 
 public class CraftMapCanvas implements MapCanvas {
 
-    private final byte[] buffer;
+    private final byte[] buffer = null;
 
-    private final CraftMapView mapView;
+    private final CraftMapView mapView = null;
 
-    private byte[] base;
+    private byte[] base = null;
 
-    private MapCursorCollection cursors;
+    private MapCursorCollection cursors = null;
 
     protected CraftMapCanvas(CraftMapView mapView) {
     }

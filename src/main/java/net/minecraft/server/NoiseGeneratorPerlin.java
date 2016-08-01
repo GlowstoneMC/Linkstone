@@ -4,23 +4,23 @@ import java.util.Random;
 
 public class NoiseGeneratorPerlin extends NoiseGenerator {
 
-    private final int[] d;
+    private final int[] d = null;
 
-    public double a;
+    public double a = 0.0;
 
-    public double b;
+    public double b = 0.0;
 
-    public double c;
+    public double c = 0.0;
 
-    private static final double[] e;
+    private static final double[] e = null;
 
-    private static final double[] f;
+    private static final double[] f = null;
 
-    private static final double[] g;
+    private static final double[] g = null;
 
-    private static final double[] h;
+    private static final double[] h = null;
 
-    private static final double[] i;
+    private static final double[] i = null;
 
     public NoiseGeneratorPerlin() {
     }

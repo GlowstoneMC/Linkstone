@@ -2,23 +2,23 @@ package net.minecraft.server;
 
 public class PathfinderGoalBowShoot extends PathfinderGoal {
 
-    private final EntitySkeleton a;
+    private final EntitySkeleton a = null;
 
-    private final double b;
+    private final double b = 0.0;
 
-    private int c;
+    private int c = 0;
 
-    private final float d;
+    private final float d = 0.0F;
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
-    private boolean g;
+    private boolean g = false;
 
-    private boolean h;
+    private boolean h = false;
 
-    private int i;
+    private int i = 0;
 
     public PathfinderGoalBowShoot(EntitySkeleton entityskeleton, double d0, int i, float f) {
     }

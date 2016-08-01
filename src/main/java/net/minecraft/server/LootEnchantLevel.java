@@ -7,9 +7,9 @@ import java.util.Random;
 
 public class LootEnchantLevel extends LootItemFunction {
 
-    private final LootValueBounds a;
+    private final LootValueBounds a = null;
 
-    private final boolean b;
+    private final boolean b = false;
 
     public LootEnchantLevel(LootItemCondition[] alootitemcondition, LootValueBounds lootvaluebounds, boolean flag) {
     }

@@ -9,19 +9,19 @@ import javax.annotation.Nullable;
 
 public class TileEntitySkull extends TileEntity implements ITickable {
 
-    private int a;
+    private int a = 0;
 
-    public int rotation;
+    public int rotation = 0;
 
-    private GameProfile g;
+    private GameProfile g = null;
 
-    private int h;
+    private int h = 0;
 
-    private boolean i;
+    private boolean i = false;
 
-    private static UserCache j;
+    private static UserCache j = null;
 
-    private static MinecraftSessionService k;
+    private static MinecraftSessionService k = null;
 
     public TileEntitySkull() {
     }

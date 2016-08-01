@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public class WorldGenFlatLayerInfo {
 
-    private final int a;
+    private final int a = 0;
 
-    private IBlockData b;
+    private IBlockData b = null;
 
-    private int c;
+    private int c = 0;
 
-    private int d;
+    private int d = 0;
 
     public WorldGenFlatLayerInfo(int i, Block block) {
     }

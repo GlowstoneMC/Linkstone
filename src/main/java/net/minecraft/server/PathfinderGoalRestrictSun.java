@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class PathfinderGoalRestrictSun extends PathfinderGoal {
 
-    private final EntityCreature a;
+    private final EntityCreature a = null;
 
     public PathfinderGoalRestrictSun(EntityCreature entitycreature) {
     }

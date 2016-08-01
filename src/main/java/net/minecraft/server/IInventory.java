@@ -89,6 +89,6 @@ public interface IInventory extends INamableTileEntity {
         return null;
     }
 
-    int MAX_STACK;
+    int MAX_STACK = 0;
     // CraftBukkit end
 }

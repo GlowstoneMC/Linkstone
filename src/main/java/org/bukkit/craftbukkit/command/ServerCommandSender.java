@@ -12,7 +12,7 @@ import java.util.Set;
 
 public abstract class ServerCommandSender implements CommandSender {
 
-    private final PermissibleBase perm;
+    private final PermissibleBase perm = null;
 
     public ServerCommandSender() {
     }

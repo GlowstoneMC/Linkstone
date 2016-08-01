@@ -22,21 +22,21 @@ import java.util.NoSuchElementException;
 
 public class LongHashSet {
 
-    private static final int INITIAL_SIZE;
+    private static final int INITIAL_SIZE = 0;
 
-    private static final double LOAD_FACTOR;
+    private static final double LOAD_FACTOR = 0.0;
 
-    private static final long FREE;
+    private static final long FREE = 0;
 
-    private static final long REMOVED;
+    private static final long REMOVED = 0;
 
-    private int freeEntries;
+    private int freeEntries = 0;
 
-    private int elements;
+    private int elements = 0;
 
-    private long[] values;
+    private long[] values = null;
 
-    private int modCount;
+    private int modCount = 0;
 
     public LongHashSet() {
     }
@@ -107,11 +107,11 @@ public class LongHashSet {
 
     private class Itr implements Iterator {
 
-        private int index;
+        private int index = 0;
 
-        private int lastReturned;
+        private int lastReturned = 0;
 
-        private int expectedModCount;
+        private int expectedModCount = 0;
 
         public Itr() {
         }

@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 
 public class CommandBanIp extends CommandAbstract {
 
-    public static final Pattern a;
+    public static final Pattern a = null;
 
     public CommandBanIp() {
     }

@@ -5,7 +5,7 @@ import org.bukkit.event.entity.ExplosionPrimeEvent;
 // CraftBukkit
 public class EntityLargeFireball extends EntityFireball {
 
-    public int yield;
+    public int yield = 0;
 
     public EntityLargeFireball(World world) {
     }

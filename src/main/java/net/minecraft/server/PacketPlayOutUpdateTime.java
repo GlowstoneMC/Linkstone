@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutUpdateTime implements Packet<PacketListenerPlayOut> {
 
-    private long a;
+    private long a = 0;
 
-    private long b;
+    private long b = 0;
 
     public PacketPlayOutUpdateTime() {
     }

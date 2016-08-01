@@ -18,21 +18,21 @@ import org.apache.logging.log4j.Logger;
 
 public class CrashReport {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final String b;
+    private final String b = null;
 
-    private final Throwable c;
+    private final Throwable c = null;
 
-    private final CrashReportSystemDetails d;
+    private final CrashReportSystemDetails d = null;
 
-    private final List<CrashReportSystemDetails> e;
+    private final List<CrashReportSystemDetails> e = null;
 
-    private File f;
+    private File f = null;
 
-    private boolean g;
+    private boolean g = false;
 
-    private StackTraceElement[] h;
+    private StackTraceElement[] h = null;
 
     public CrashReport(String s, Throwable throwable) {
     }

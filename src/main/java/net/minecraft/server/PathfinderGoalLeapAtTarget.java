@@ -2,11 +2,11 @@ package net.minecraft.server;
 
 public class PathfinderGoalLeapAtTarget extends PathfinderGoal {
 
-    EntityInsentient a;
+    EntityInsentient a = null;
 
-    EntityLiving b;
+    EntityLiving b = null;
 
-    float c;
+    float c = 0.0F;
 
     public PathfinderGoalLeapAtTarget(EntityInsentient entityinsentient, float f) {
     }

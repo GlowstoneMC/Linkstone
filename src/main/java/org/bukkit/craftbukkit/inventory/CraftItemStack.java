@@ -56,7 +56,7 @@ public final class CraftItemStack extends ItemStack {
         return null;
     }
 
-    net.minecraft.server.ItemStack handle;
+    net.minecraft.server.ItemStack handle = null;
 
     /**
      * Mirror

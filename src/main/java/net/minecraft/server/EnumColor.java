@@ -4,21 +4,21 @@ public enum EnumColor implements INamable {
 
     WHITE(0, 15, "white", "white", MaterialMapColor.j, EnumChatFormat.WHITE), ORANGE(1, 14, "orange", "orange", MaterialMapColor.q, EnumChatFormat.GOLD), MAGENTA(2, 13, "magenta", "magenta", MaterialMapColor.r, EnumChatFormat.AQUA), LIGHT_BLUE(3, 12, "light_blue", "lightBlue", MaterialMapColor.s, EnumChatFormat.BLUE), YELLOW(4, 11, "yellow", "yellow", MaterialMapColor.t, EnumChatFormat.YELLOW), LIME(5, 10, "lime", "lime", MaterialMapColor.u, EnumChatFormat.GREEN), PINK(6, 9, "pink", "pink", MaterialMapColor.v, EnumChatFormat.LIGHT_PURPLE), GRAY(7, 8, "gray", "gray", MaterialMapColor.w, EnumChatFormat.DARK_GRAY), SILVER(8, 7, "silver", "silver", MaterialMapColor.x, EnumChatFormat.GRAY), CYAN(9, 6, "cyan", "cyan", MaterialMapColor.y, EnumChatFormat.DARK_AQUA), PURPLE(10, 5, "purple", "purple", MaterialMapColor.z, EnumChatFormat.DARK_PURPLE), BLUE(11, 4, "blue", "blue", MaterialMapColor.A, EnumChatFormat.DARK_BLUE), BROWN(12, 3, "brown", "brown", MaterialMapColor.B, EnumChatFormat.GOLD), GREEN(13, 2, "green", "green", MaterialMapColor.C, EnumChatFormat.DARK_GREEN), RED(14, 1, "red", "red", MaterialMapColor.D, EnumChatFormat.DARK_RED), BLACK(15, 0, "black", "black", MaterialMapColor.E, EnumChatFormat.BLACK);
 
-    private static final EnumColor[] q;
+    private static final EnumColor[] q = null;
 
-    private static final EnumColor[] r;
+    private static final EnumColor[] r = null;
 
-    private final int s;
+    private final int s = 0;
 
-    private final int t;
+    private final int t = 0;
 
-    private final String u;
+    private final String u = null;
 
-    private final String v;
+    private final String v = null;
 
-    private final MaterialMapColor w;
+    private final MaterialMapColor w = null;
 
-    private final EnumChatFormat x;
+    private final EnumChatFormat x = null;
 
     private EnumColor(int i, int j, String s, String s1, MaterialMapColor materialmapcolor, EnumChatFormat enumchatformat) {
     }

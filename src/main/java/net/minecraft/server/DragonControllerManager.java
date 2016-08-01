@@ -9,13 +9,13 @@ import org.bukkit.event.entity.EnderDragonChangePhaseEvent;
 // CraftBukkit end
 public class DragonControllerManager {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final EntityEnderDragon enderDragon;
+    private final EntityEnderDragon enderDragon = null;
 
-    private final IDragonController[] dragonControllers;
+    private final IDragonController[] dragonControllers = null;
 
-    private IDragonController currentDragonController;
+    private IDragonController currentDragonController = null;
 
     public DragonControllerManager(EntityEnderDragon entityenderdragon) {
     }

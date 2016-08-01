@@ -7,9 +7,9 @@ import org.apache.commons.lang3.Validate;
 
 public class RegistryBlocks<K, V> extends RegistryMaterials<K, V> {
 
-    private final K d;
+    private final K d = null;
 
-    private V e;
+    private V e = null;
 
     public RegistryBlocks(K k0) {
     }

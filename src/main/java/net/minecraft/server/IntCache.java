@@ -5,15 +5,15 @@ import java.util.List;
 
 public class IntCache {
 
-    private static int a;
+    private static int a = 0;
 
-    private static final List<int[]> b;
+    private static final List<int[]> b = null;
 
-    private static final List<int[]> c;
+    private static final List<int[]> c = null;
 
-    private static final List<int[]> d;
+    private static final List<int[]> d = null;
 
-    private static final List<int[]> e;
+    private static final List<int[]> e = null;
 
     public static synchronized int[] a(int i) {
         return null;

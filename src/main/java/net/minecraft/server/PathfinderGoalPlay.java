@@ -5,13 +5,13 @@ import java.util.List;
 
 public class PathfinderGoalPlay extends PathfinderGoal {
 
-    private final EntityVillager a;
+    private final EntityVillager a = null;
 
-    private EntityLiving b;
+    private EntityLiving b = null;
 
-    private final double c;
+    private final double c = 0.0;
 
-    private int d;
+    private int d = 0;
 
     public PathfinderGoalPlay(EntityVillager entityvillager, double d0) {
     }

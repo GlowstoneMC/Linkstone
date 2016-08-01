@@ -4,9 +4,9 @@ import com.google.common.base.Objects;
 
 public abstract class BlockState<T extends Comparable<T>> implements IBlockState<T> {
 
-    private final Class<T> a;
+    private final Class<T> a = null;
 
-    private final String b;
+    private final String b = null;
 
     protected BlockState(String s, Class<T> oclass) {
     }

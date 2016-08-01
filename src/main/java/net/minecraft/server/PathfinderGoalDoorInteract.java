@@ -2,17 +2,17 @@ package net.minecraft.server;
 
 public abstract class PathfinderGoalDoorInteract extends PathfinderGoal {
 
-    protected EntityInsentient a;
+    protected EntityInsentient a = null;
 
-    protected BlockPosition b;
+    protected BlockPosition b = null;
 
-    protected BlockDoor c;
+    protected BlockDoor c = null;
 
-    boolean d;
+    boolean d = false;
 
-    float e;
+    float e = 0.0F;
 
-    float f;
+    float f = 0.0F;
 
     public PathfinderGoalDoorInteract(EntityInsentient entityinsentient) {
     }

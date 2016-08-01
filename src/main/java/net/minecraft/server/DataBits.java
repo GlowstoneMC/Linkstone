@@ -4,13 +4,13 @@ import org.apache.commons.lang3.Validate;
 
 public class DataBits {
 
-    private final long[] a;
+    private final long[] a = null;
 
-    private final int b;
+    private final int b = 0;
 
-    private final long c;
+    private final long c = 0;
 
-    private final int d;
+    private final int d = 0;
 
     public DataBits(int i, int j) {
     }

@@ -47,7 +47,7 @@ import net.minecraft.server.TileEntityDispenser;
 
 public class CraftBlockProjectileSource implements BlockProjectileSource {
 
-    private final TileEntityDispenser dispenserBlock;
+    private final TileEntityDispenser dispenserBlock = null;
 
     public CraftBlockProjectileSource(TileEntityDispenser dispenserBlock) {
     }

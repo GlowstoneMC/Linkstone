@@ -10,7 +10,7 @@ import org.bukkit.inventory.Inventory;
 @SuppressWarnings("deprecation")
 public class CraftMinecartChest extends CraftMinecart implements StorageMinecart {
 
-    private final CraftInventory inventory;
+    private final CraftInventory inventory = null;
 
     public CraftMinecartChest(CraftServer server, EntityMinecartChest entity) {
     }

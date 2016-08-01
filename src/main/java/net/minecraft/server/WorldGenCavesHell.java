@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class WorldGenCavesHell extends WorldGenBase {
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
     public WorldGenCavesHell() {
     }

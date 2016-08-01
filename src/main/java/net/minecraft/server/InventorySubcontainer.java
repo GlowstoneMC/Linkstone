@@ -12,22 +12,22 @@ import org.bukkit.entity.HumanEntity;
 // CraftBukkit end
 public class InventorySubcontainer implements IInventory {
 
-    private String a;
+    private String a = null;
 
-    private final int b;
+    private final int b = 0;
 
-    public final ItemStack[] items;
+    public final ItemStack[] items = null;
 
-    private List<IInventoryListener> d;
+    private List<IInventoryListener> d = null;
 
-    private boolean e;
+    private boolean e = false;
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
-    protected org.bukkit.inventory.InventoryHolder bukkitOwner;
+    protected org.bukkit.inventory.InventoryHolder bukkitOwner = null;
 
     public ItemStack[] getContents() {
         return null;

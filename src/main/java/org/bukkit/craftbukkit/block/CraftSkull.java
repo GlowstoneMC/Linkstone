@@ -15,15 +15,15 @@ import org.bukkit.craftbukkit.CraftWorld;
 
 public class CraftSkull extends CraftBlockState implements Skull {
 
-    private static final int MAX_OWNER_LENGTH;
+    private static final int MAX_OWNER_LENGTH = 0;
 
-    private final TileEntitySkull skull;
+    private final TileEntitySkull skull = null;
 
-    private GameProfile profile;
+    private GameProfile profile = null;
 
-    private SkullType skullType;
+    private SkullType skullType = null;
 
-    private byte rotation;
+    private byte rotation = 0;
 
     public CraftSkull(final Block block) {
     }

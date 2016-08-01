@@ -10,14 +10,14 @@ import org.bukkit.event.hanging.HangingBreakEvent;
 // CraftBukkit end
 public abstract class EntityHanging extends Entity {
 
-    private static final Predicate<Entity> c;
+    private static final Predicate<Entity> c = null;
 
-    private int d;
+    private int d = 0;
 
-    public BlockPosition blockPosition;
+    public BlockPosition blockPosition = null;
 
     @Nullable
-    public EnumDirection direction;
+    public EnumDirection direction = null;
 
     public EntityHanging(World world) {
     }
@@ -114,7 +114,7 @@ public abstract class EntityHanging extends Entity {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

@@ -7,11 +7,11 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public abstract class BlockPressurePlateAbstract extends Block {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
     protected BlockPressurePlateAbstract(Material material) {
     }

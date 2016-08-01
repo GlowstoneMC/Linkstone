@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class BlockFurnace extends BlockTileEntity {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    private final boolean b;
+    private final boolean b = false;
 
-    private static boolean c;
+    private static boolean c = false;
 
     protected BlockFurnace(boolean flag) {
     }

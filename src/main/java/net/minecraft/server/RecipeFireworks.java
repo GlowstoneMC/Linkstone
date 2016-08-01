@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 public class RecipeFireworks extends ShapelessRecipes implements IRecipe {
 
     // CraftBukkit - added extends
-    private ItemStack a;
+    private ItemStack a = null;
 
     // CraftBukkit start - Delegate to new parent class with bogus info
     public RecipeFireworks() {

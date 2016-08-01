@@ -4,13 +4,13 @@ import javax.annotation.Nullable;
 
 public class CommandObjectiveExecutor {
 
-    private static final int a;
+    private static final int a = 0;
 
-    private static final String[] b;
+    private static final String[] b = null;
 
-    private String[] c;
+    private String[] c = null;
 
-    private String[] d;
+    private String[] d = null;
 
     public CommandObjectiveExecutor() {
     }
@@ -37,9 +37,9 @@ public class CommandObjectiveExecutor {
 
         SUCCESS_COUNT(0, "SuccessCount"), AFFECTED_BLOCKS(1, "AffectedBlocks"), AFFECTED_ENTITIES(2, "AffectedEntities"), AFFECTED_ITEMS(3, "AffectedItems"), QUERY_RESULT(4, "QueryResult");
 
-        final int f;
+        final int f = 0;
 
-        final String g;
+        final String g = null;
 
         private EnumCommandResult(int i, String s) {
         }

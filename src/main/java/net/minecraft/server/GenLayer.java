@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public abstract class GenLayer {
 
-    private long c;
+    private long c = 0;
 
-    protected GenLayer a;
+    protected GenLayer a = null;
 
-    private long d;
+    private long d = 0;
 
-    protected long b;
+    protected long b = 0;
 
     public static GenLayer[] a(long i, WorldType worldtype, String s) {
         return null;

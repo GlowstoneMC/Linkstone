@@ -125,87 +125,87 @@ import org.bukkit.event.server.TabCompleteEvent;
 
 public final class CraftServer implements Server {
 
-    private static final Player[] EMPTY_PLAYER_ARRAY;
+    private static final Player[] EMPTY_PLAYER_ARRAY = null;
 
-    private final String serverName;
+    private final String serverName = null;
 
-    private final String serverVersion;
+    private final String serverVersion = null;
 
-    private final String bukkitVersion;
+    private final String bukkitVersion = null;
 
-    private final Logger logger;
+    private final Logger logger = null;
 
-    private final ServicesManager servicesManager;
+    private final ServicesManager servicesManager = null;
 
-    private final CraftScheduler scheduler;
+    private final CraftScheduler scheduler = null;
 
-    private final SimpleCommandMap commandMap;
+    private final SimpleCommandMap commandMap = null;
 
-    private final SimpleHelpMap helpMap;
+    private final SimpleHelpMap helpMap = null;
 
-    private final StandardMessenger messenger;
+    private final StandardMessenger messenger = null;
 
-    private final PluginManager pluginManager;
+    private final PluginManager pluginManager = null;
 
-    protected final MinecraftServer console;
+    protected final MinecraftServer console = null;
 
-    protected final DedicatedPlayerList playerList;
+    protected final DedicatedPlayerList playerList = null;
 
-    private final Map<String, World> worlds;
+    private final Map<String, World> worlds = null;
 
-    private YamlConfiguration configuration;
+    private YamlConfiguration configuration = null;
 
-    private YamlConfiguration commandsConfiguration;
+    private YamlConfiguration commandsConfiguration = null;
 
-    private final Yaml yaml;
+    private final Yaml yaml = null;
 
-    private final Map<UUID, OfflinePlayer> offlinePlayers;
+    private final Map<UUID, OfflinePlayer> offlinePlayers = null;
 
-    private final EntityMetadataStore entityMetadata;
+    private final EntityMetadataStore entityMetadata = null;
 
-    private final PlayerMetadataStore playerMetadata;
+    private final PlayerMetadataStore playerMetadata = null;
 
-    private final WorldMetadataStore worldMetadata;
+    private final WorldMetadataStore worldMetadata = null;
 
-    private int monsterSpawn;
+    private int monsterSpawn = 0;
 
-    private int animalSpawn;
+    private int animalSpawn = 0;
 
-    private int waterAnimalSpawn;
+    private int waterAnimalSpawn = 0;
 
-    private int ambientSpawn;
+    private int ambientSpawn = 0;
 
-    public int chunkGCPeriod;
+    public int chunkGCPeriod = 0;
 
-    public int chunkGCLoadThresh;
+    public int chunkGCLoadThresh = 0;
 
-    private File container;
+    private File container = null;
 
-    private WarningState warningState;
+    private WarningState warningState = null;
 
-    private final BooleanWrapper online;
+    private final BooleanWrapper online = null;
 
-    public CraftScoreboardManager scoreboardManager;
+    public CraftScoreboardManager scoreboardManager = null;
 
-    public boolean playerCommandState;
+    public boolean playerCommandState = false;
 
-    private boolean printSaveWarning;
+    private boolean printSaveWarning = false;
 
-    private CraftIconCache icon;
+    private CraftIconCache icon = null;
 
-    private boolean overrideAllCommandBlockCommands;
+    private boolean overrideAllCommandBlockCommands = false;
 
-    private final Pattern validUserPattern;
+    private final Pattern validUserPattern = null;
 
-    private final UUID invalidUserUUID;
+    private final UUID invalidUserUUID = null;
 
-    private final List<CraftPlayer> playerView;
+    private final List<CraftPlayer> playerView = null;
 
-    public int reloadCount;
+    public int reloadCount = 0;
 
     private final class BooleanWrapper {
 
-        private boolean value;
+        private boolean value = false;
     }
 
     static {

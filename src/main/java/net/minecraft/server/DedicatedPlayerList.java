@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 public class DedicatedPlayerList extends PlayerList {
 
-    private static final Logger f;
+    private static final Logger f = null;
 
     public DedicatedPlayerList(DedicatedServer dedicatedserver) {
     }

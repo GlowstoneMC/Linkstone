@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class BlockGrassPath extends Block {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
     protected BlockGrassPath() {
     }

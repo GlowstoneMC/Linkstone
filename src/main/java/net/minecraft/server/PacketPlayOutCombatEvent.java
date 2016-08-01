@@ -4,15 +4,15 @@ import java.io.IOException;
 
 public class PacketPlayOutCombatEvent implements Packet<PacketListenerPlayOut> {
 
-    public PacketPlayOutCombatEvent.EnumCombatEventType a;
+    public PacketPlayOutCombatEvent.EnumCombatEventType a = null;
 
-    public int b;
+    public int b = 0;
 
-    public int c;
+    public int c = 0;
 
-    public int d;
+    public int d = 0;
 
-    public IChatBaseComponent e;
+    public IChatBaseComponent e = null;
 
     public PacketPlayOutCombatEvent() {
     }
@@ -34,7 +34,7 @@ public class PacketPlayOutCombatEvent implements Packet<PacketListenerPlayOut> {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

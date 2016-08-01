@@ -4,33 +4,33 @@ import javax.annotation.Nullable;
 
 public class EntitySquid extends EntityWaterAnimal {
 
-    public float a;
+    public float a = 0.0F;
 
-    public float b;
+    public float b = 0.0F;
 
-    public float c;
+    public float c = 0.0F;
 
-    public float bv;
+    public float bv = 0.0F;
 
-    public float bw;
+    public float bw = 0.0F;
 
-    public float bx;
+    public float bx = 0.0F;
 
-    public float by;
+    public float by = 0.0F;
 
-    public float bz;
+    public float bz = 0.0F;
 
-    private float bA;
+    private float bA = 0.0F;
 
-    private float bB;
+    private float bB = 0.0F;
 
-    private float bC;
+    private float bC = 0.0F;
 
-    private float bD;
+    private float bD = 0.0F;
 
-    private float bE;
+    private float bE = 0.0F;
 
-    private float bF;
+    private float bF = 0.0F;
 
     public EntitySquid(World world) {
     }
@@ -96,7 +96,7 @@ public class EntitySquid extends EntityWaterAnimal {
 
     static class PathfinderGoalSquid extends PathfinderGoal {
 
-        private final EntitySquid a;
+        private final EntitySquid a = null;
 
         public PathfinderGoalSquid(EntitySquid entitysquid) {
         }

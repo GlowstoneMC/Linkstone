@@ -6,17 +6,17 @@ import java.util.List;
 
 public class PathfinderGoalMoveThroughVillage extends PathfinderGoal {
 
-    private final EntityCreature a;
+    private final EntityCreature a = null;
 
-    private final double b;
+    private final double b = 0.0;
 
-    private PathEntity c;
+    private PathEntity c = null;
 
-    private VillageDoor d;
+    private VillageDoor d = null;
 
-    private final boolean e;
+    private final boolean e = false;
 
-    private final List<VillageDoor> f;
+    private final List<VillageDoor> f = null;
 
     public PathfinderGoalMoveThroughVillage(EntityCreature entitycreature, double d0, boolean flag) {
     }

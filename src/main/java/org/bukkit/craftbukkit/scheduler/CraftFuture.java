@@ -10,11 +10,11 @@ import org.bukkit.plugin.Plugin;
 
 class CraftFuture<T> extends CraftTask implements Future<T> {
 
-    private final Callable<T> callable;
+    private final Callable<T> callable = null;
 
-    private T value;
+    private T value = null;
 
-    private Exception exception;
+    private Exception exception = null;
 
     CraftFuture(final Callable<T> callable, final Plugin plugin, final int id) {
     }

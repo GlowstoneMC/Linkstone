@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayOutExperience implements Packet<PacketListenerPlayOut> {
 
-    private float a;
+    private float a = 0.0F;
 
-    private int b;
+    private int b = 0;
 
-    private int c;
+    private int c = 0;
 
     public PacketPlayOutExperience() {
     }

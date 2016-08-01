@@ -11,25 +11,25 @@ import org.apache.logging.log4j.Logger;
 @Immutable
 public class BlockPosition extends BaseBlockPosition {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    public static final BlockPosition ZERO;
+    public static final BlockPosition ZERO = null;
 
-    private static final int c;
+    private static final int c = 0;
 
-    private static final int d;
+    private static final int d = 0;
 
-    private static final int f;
+    private static final int f = 0;
 
-    private static final int g;
+    private static final int g = 0;
 
-    private static final int h;
+    private static final int h = 0;
 
-    private static final long i;
+    private static final long i = 0;
 
-    private static final long j;
+    private static final long j = 0;
 
-    private static final long k;
+    private static final long k = 0;
 
     public BlockPosition(int i, int j, int k) {
     }
@@ -148,9 +148,9 @@ public class BlockPosition extends BaseBlockPosition {
 
     public static final class PooledBlockPosition extends BlockPosition.MutableBlockPosition {
 
-        private boolean f;
+        private boolean f = false;
 
-        private static final List<BlockPosition.PooledBlockPosition> g;
+        private static final List<BlockPosition.PooledBlockPosition> g = null;
 
         private PooledBlockPosition(int i, int j, int k) {
         }
@@ -213,11 +213,11 @@ public class BlockPosition extends BaseBlockPosition {
 
     public static class MutableBlockPosition extends BlockPosition {
 
-        protected int b;
+        protected int b = 0;
 
-        protected int c;
+        protected int c = 0;
 
-        protected int d;
+        protected int d = 0;
 
         public MutableBlockPosition() {
         }

@@ -7,15 +7,15 @@ import org.bukkit.event.entity.SlimeSplitEvent;
 // CraftBukkit end
 public class EntitySlime extends EntityInsentient implements IMonster {
 
-    private static final DataWatcherObject<Integer> bv;
+    private static final DataWatcherObject<Integer> bv = null;
 
-    public float a;
+    public float a = 0.0F;
 
-    public float b;
+    public float b = 0.0F;
 
-    public float c;
+    public float c = 0.0F;
 
-    private boolean bw;
+    private boolean bw = false;
 
     public EntitySlime(World world) {
     }
@@ -142,7 +142,7 @@ public class EntitySlime extends EntityInsentient implements IMonster {
 
     static class PathfinderGoalSlimeIdle extends PathfinderGoal {
 
-        private final EntitySlime a;
+        private final EntitySlime a = null;
 
         public PathfinderGoalSlimeIdle(EntitySlime entityslime) {
         }
@@ -157,7 +157,7 @@ public class EntitySlime extends EntityInsentient implements IMonster {
 
     static class PathfinderGoalSlimeRandomJump extends PathfinderGoal {
 
-        private final EntitySlime a;
+        private final EntitySlime a = null;
 
         public PathfinderGoalSlimeRandomJump(EntitySlime entityslime) {
         }
@@ -172,11 +172,11 @@ public class EntitySlime extends EntityInsentient implements IMonster {
 
     static class PathfinderGoalSlimeRandomDirection extends PathfinderGoal {
 
-        private final EntitySlime a;
+        private final EntitySlime a = null;
 
-        private float b;
+        private float b = 0.0F;
 
-        private int c;
+        private int c = 0;
 
         public PathfinderGoalSlimeRandomDirection(EntitySlime entityslime) {
         }
@@ -191,9 +191,9 @@ public class EntitySlime extends EntityInsentient implements IMonster {
 
     static class PathfinderGoalSlimeNearestPlayer extends PathfinderGoal {
 
-        private final EntitySlime a;
+        private final EntitySlime a = null;
 
-        private int b;
+        private int b = 0;
 
         public PathfinderGoalSlimeNearestPlayer(EntitySlime entityslime) {
         }
@@ -215,13 +215,13 @@ public class EntitySlime extends EntityInsentient implements IMonster {
 
     static class ControllerMoveSlime extends ControllerMove {
 
-        private float i;
+        private float i = 0.0F;
 
-        private int j;
+        private int j = 0;
 
-        private final EntitySlime k;
+        private final EntitySlime k = null;
 
-        private boolean l;
+        private boolean l = false;
 
         public ControllerMoveSlime(EntitySlime entityslime) {
         }

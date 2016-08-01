@@ -9,11 +9,11 @@ import org.bukkit.event.entity.ExplosionPrimeEvent;
 // CraftBukkit end
 public class EntityEnderCrystal extends Entity {
 
-    private static final DataWatcherObject<Optional<BlockPosition>> b;
+    private static final DataWatcherObject<Optional<BlockPosition>> b = null;
 
-    private static final DataWatcherObject<Boolean> c;
+    private static final DataWatcherObject<Boolean> c = null;
 
-    public int a;
+    public int a = 0;
 
     public EntityEnderCrystal(World world) {
     }

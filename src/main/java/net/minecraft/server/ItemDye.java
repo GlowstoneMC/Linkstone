@@ -5,7 +5,7 @@ import org.bukkit.event.entity.SheepDyeWoolEvent;
 // CraftBukkit
 public class ItemDye extends Item {
 
-    public static final int[] a;
+    public static final int[] a = null;
 
     public ItemDye() {
     }

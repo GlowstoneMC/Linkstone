@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class SourceBlock implements ISourceBlock {
 
-    private final World a;
+    private final World a = null;
 
-    private final BlockPosition b;
+    private final BlockPosition b = null;
 
     public SourceBlock(World world, BlockPosition blockposition) {
     }

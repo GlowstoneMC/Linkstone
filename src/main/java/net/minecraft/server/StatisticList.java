@@ -11,129 +11,129 @@ import javax.annotation.Nullable;
 
 public class StatisticList {
 
-    protected static final Map<String, Statistic> a;
+    protected static final Map<String, Statistic> a = null;
 
-    public static final List<Statistic> stats;
+    public static final List<Statistic> stats = null;
 
-    public static final List<Statistic> c;
+    public static final List<Statistic> c = null;
 
-    public static final List<CraftingStatistic> d;
+    public static final List<CraftingStatistic> d = null;
 
-    public static final List<CraftingStatistic> e;
+    public static final List<CraftingStatistic> e = null;
 
-    public static final Statistic f;
+    public static final Statistic f = null;
 
-    public static final Statistic g;
+    public static final Statistic g = null;
 
-    public static final Statistic h;
+    public static final Statistic h = null;
 
-    public static final Statistic i;
+    public static final Statistic i = null;
 
-    public static final Statistic j;
+    public static final Statistic j = null;
 
-    public static final Statistic k;
+    public static final Statistic k = null;
 
-    public static final Statistic l;
+    public static final Statistic l = null;
 
-    public static final Statistic m;
+    public static final Statistic m = null;
 
-    public static final Statistic n;
+    public static final Statistic n = null;
 
-    public static final Statistic o;
+    public static final Statistic o = null;
 
-    public static final Statistic p;
+    public static final Statistic p = null;
 
-    public static final Statistic q;
+    public static final Statistic q = null;
 
-    public static final Statistic r;
+    public static final Statistic r = null;
 
-    public static final Statistic s;
+    public static final Statistic s = null;
 
-    public static final Statistic t;
+    public static final Statistic t = null;
 
-    public static final Statistic u;
+    public static final Statistic u = null;
 
-    public static final Statistic v;
+    public static final Statistic v = null;
 
-    public static final Statistic w;
+    public static final Statistic w = null;
 
-    public static final Statistic x;
+    public static final Statistic x = null;
 
-    public static final Statistic y;
+    public static final Statistic y = null;
 
-    public static final Statistic z;
+    public static final Statistic z = null;
 
-    public static final Statistic A;
+    public static final Statistic A = null;
 
-    public static final Statistic B;
+    public static final Statistic B = null;
 
-    public static final Statistic C;
+    public static final Statistic C = null;
 
-    public static final Statistic D;
+    public static final Statistic D = null;
 
-    public static final Statistic E;
+    public static final Statistic E = null;
 
-    public static final Statistic F;
+    public static final Statistic F = null;
 
-    public static final Statistic G;
+    public static final Statistic G = null;
 
-    public static final Statistic H;
+    public static final Statistic H = null;
 
-    public static final Statistic I;
+    public static final Statistic I = null;
 
-    public static final Statistic J;
+    public static final Statistic J = null;
 
-    public static final Statistic K;
+    public static final Statistic K = null;
 
-    public static final Statistic L;
+    public static final Statistic L = null;
 
-    public static final Statistic M;
+    public static final Statistic M = null;
 
-    public static final Statistic N;
+    public static final Statistic N = null;
 
-    public static final Statistic O;
+    public static final Statistic O = null;
 
-    public static final Statistic P;
+    public static final Statistic P = null;
 
-    public static final Statistic Q;
+    public static final Statistic Q = null;
 
-    public static final Statistic R;
+    public static final Statistic R = null;
 
-    public static final Statistic S;
+    public static final Statistic S = null;
 
-    public static final Statistic T;
+    public static final Statistic T = null;
 
-    public static final Statistic U;
+    public static final Statistic U = null;
 
-    public static final Statistic V;
+    public static final Statistic V = null;
 
-    public static final Statistic W;
+    public static final Statistic W = null;
 
-    public static final Statistic X;
+    public static final Statistic X = null;
 
-    public static final Statistic Y;
+    public static final Statistic Y = null;
 
-    public static final Statistic Z;
+    public static final Statistic Z = null;
 
-    public static final Statistic aa;
+    public static final Statistic aa = null;
 
-    public static final Statistic ab;
+    public static final Statistic ab = null;
 
-    public static final Statistic ac;
+    public static final Statistic ac = null;
 
-    public static final Statistic ad;
+    public static final Statistic ad = null;
 
-    private static final Statistic[] ae;
+    private static final Statistic[] ae = null;
 
-    private static final Statistic[] af;
+    private static final Statistic[] af = null;
 
-    private static final Statistic[] ag;
+    private static final Statistic[] ag = null;
 
-    private static final Statistic[] ah;
+    private static final Statistic[] ah = null;
 
-    private static final Statistic[] ai;
+    private static final Statistic[] ai = null;
 
-    private static final Statistic[] aj;
+    private static final Statistic[] aj = null;
 
     @Nullable
     public static Statistic a(Block block) {

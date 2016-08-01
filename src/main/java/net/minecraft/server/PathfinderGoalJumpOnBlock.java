@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class PathfinderGoalJumpOnBlock extends PathfinderGoalGotoTarget {
 
-    private final EntityOcelot c;
+    private final EntityOcelot c = null;
 
     public PathfinderGoalJumpOnBlock(EntityOcelot entityocelot, double d0) {
     }

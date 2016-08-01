@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class ChunkCoordIntPair {
 
-    public final int x;
+    public final int x = 0;
 
-    public final int z;
+    public final int z = 0;
 
     public ChunkCoordIntPair(int i, int j) {
     }

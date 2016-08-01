@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class NavigationSpider extends Navigation {
 
-    private BlockPosition f;
+    private BlockPosition f = null;
 
     public NavigationSpider(EntityInsentient entityinsentient, World world) {
     }

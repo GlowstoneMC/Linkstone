@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class BiomeForest extends BiomeBase {
 
-    protected static final WorldGenForest y;
+    protected static final WorldGenForest y = null;
 
-    protected static final WorldGenForest z;
+    protected static final WorldGenForest z = null;
 
-    protected static final WorldGenForestTree A;
+    protected static final WorldGenForestTree A = null;
 
-    private final BiomeForest.Type B;
+    private final BiomeForest.Type B = null;
 
     public BiomeForest(BiomeForest.Type biomeforest_type, BiomeBase.a biomebase_a) {
     }

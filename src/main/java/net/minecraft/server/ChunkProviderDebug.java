@@ -7,17 +7,17 @@ import javax.annotation.Nullable;
 
 public class ChunkProviderDebug implements ChunkGenerator {
 
-    private static final List<IBlockData> c;
+    private static final List<IBlockData> c = null;
 
-    private static final int d;
+    private static final int d = 0;
 
-    private static final int e;
+    private static final int e = 0;
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
-    protected static final IBlockData b;
+    protected static final IBlockData b = null;
 
-    private final World f;
+    private final World f = null;
 
     public ChunkProviderDebug(World world) {
     }

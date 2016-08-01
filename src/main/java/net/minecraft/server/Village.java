@@ -9,29 +9,29 @@ import java.util.UUID;
 
 public class Village {
 
-    private World a;
+    private World a = null;
 
-    private final List<VillageDoor> b;
+    private final List<VillageDoor> b = null;
 
-    private BlockPosition c;
+    private BlockPosition c = null;
 
-    private BlockPosition d;
+    private BlockPosition d = null;
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private int i;
+    private int i = 0;
 
-    private final TreeMap<String, Integer> j;
+    private final TreeMap<String, Integer> j = null;
 
-    private final List<Village.Aggressor> k;
+    private final List<Village.Aggressor> k = null;
 
-    private int l;
+    private int l = 0;
 
     public Village() {
     }
@@ -160,9 +160,9 @@ public class Village {
 
     class Aggressor {
 
-        public EntityLiving a;
+        public EntityLiving a = null;
 
-        public int b;
+        public int b = 0;
 
         Aggressor(EntityLiving entityliving, int i) {
         }

@@ -5,16 +5,16 @@ import org.bukkit.event.entity.ExplosionPrimeEvent;
 // CraftBukkit
 public class EntityTNTPrimed extends Entity {
 
-    private static final DataWatcherObject<Integer> FUSE_TICKS;
+    private static final DataWatcherObject<Integer> FUSE_TICKS = null;
 
-    private EntityLiving source;
+    private EntityLiving source = null;
 
-    private int c;
+    private int c = 0;
 
-    public float yield;
+    public float yield = 0.0F;
 
     // CraftBukkit - add field
-    public boolean isIncendiary;
+    public boolean isIncendiary = false;
 
     // CraftBukkit - add field
     public EntityTNTPrimed(World world) {

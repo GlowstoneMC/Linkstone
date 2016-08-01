@@ -7,7 +7,7 @@ import java.util.LinkedList;
 
 public class BlockSponge extends Block {
 
-    public static final BlockStateBoolean WET;
+    public static final BlockStateBoolean WET = null;
 
     protected BlockSponge() {
     }

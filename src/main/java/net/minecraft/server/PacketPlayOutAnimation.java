@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutAnimation implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private int b;
+    private int b = 0;
 
     public PacketPlayOutAnimation() {
     }

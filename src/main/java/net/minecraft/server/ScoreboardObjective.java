@@ -2,15 +2,15 @@ package net.minecraft.server;
 
 public class ScoreboardObjective {
 
-    private final Scoreboard a;
+    private final Scoreboard a = null;
 
-    private final String b;
+    private final String b = null;
 
-    private final IScoreboardCriteria c;
+    private final IScoreboardCriteria c = null;
 
-    private IScoreboardCriteria.EnumScoreboardHealthDisplay d;
+    private IScoreboardCriteria.EnumScoreboardHealthDisplay d = null;
 
-    private String e;
+    private String e = null;
 
     public ScoreboardObjective(Scoreboard scoreboard, String s, IScoreboardCriteria iscoreboardcriteria) {
     }

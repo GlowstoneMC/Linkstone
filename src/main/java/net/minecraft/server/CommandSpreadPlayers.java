@@ -64,9 +64,9 @@ public class CommandSpreadPlayers extends CommandAbstract {
     // CraftBukkit end
     static class Location2D {
 
-        double a;
+        double a = 0.0;
 
-        double b;
+        double b = 0.0;
 
         Location2D() {
         }

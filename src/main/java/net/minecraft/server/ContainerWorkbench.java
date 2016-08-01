@@ -8,20 +8,20 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit end
 public class ContainerWorkbench extends Container {
 
-    public InventoryCrafting craftInventory;
+    public InventoryCrafting craftInventory = null;
 
     // CraftBukkit - move initialization into constructor
-    public IInventory resultInventory;
+    public IInventory resultInventory = null;
 
     // CraftBukkit - move initialization into constructor
-    private final World g;
+    private final World g = null;
 
-    private final BlockPosition h;
+    private final BlockPosition h = null;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     // CraftBukkit end
     public ContainerWorkbench(PlayerInventory playerinventory, World world, BlockPosition blockposition) {

@@ -4,9 +4,9 @@ public enum EnumBlockRotation {
 
     NONE("rotate_0"), CLOCKWISE_90("rotate_90"), CLOCKWISE_180("rotate_180"), COUNTERCLOCKWISE_90("rotate_270");
 
-    private final String e;
+    private final String e = null;
 
-    private static final String[] f;
+    private static final String[] f = null;
 
     private EnumBlockRotation(String s) {
     }
@@ -28,7 +28,7 @@ public enum EnumBlockRotation {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

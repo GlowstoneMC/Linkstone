@@ -39,9 +39,9 @@ public class CraftRabbit extends CraftAnimals implements Rabbit {
 
     private static class CraftMagicMapping {
 
-        private static final int[] types;
+        private static final int[] types = null;
 
-        private static final Type[] reverse;
+        private static final Type[] reverse = null;
 
         static {
         }

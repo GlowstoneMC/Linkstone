@@ -6,9 +6,9 @@ import org.bukkit.util.permissions.DefaultPermissions;
 
 public final class CommandPermissions {
 
-    private static final String ROOT;
+    private static final String ROOT = null;
 
-    private static final String PREFIX;
+    private static final String PREFIX = null;
 
     private CommandPermissions() {
     }

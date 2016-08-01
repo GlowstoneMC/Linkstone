@@ -4,17 +4,17 @@ import java.util.Random;
 
 public class BiomeTaiga extends BiomeBase {
 
-    private static final WorldGenTaiga1 y;
+    private static final WorldGenTaiga1 y = null;
 
-    private static final WorldGenTaiga2 z;
+    private static final WorldGenTaiga2 z = null;
 
-    private static final WorldGenMegaTree A;
+    private static final WorldGenMegaTree A = null;
 
-    private static final WorldGenMegaTree B;
+    private static final WorldGenMegaTree B = null;
 
-    private static final WorldGenTaigaStructure C;
+    private static final WorldGenTaigaStructure C = null;
 
-    private final BiomeTaiga.Type D;
+    private final BiomeTaiga.Type D = null;
 
     public BiomeTaiga(BiomeTaiga.Type biometaiga_type, BiomeBase.a biomebase_a) {
     }

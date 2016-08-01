@@ -12,9 +12,9 @@ import org.bukkit.material.MaterialData;
 
 public class StructureGrowDelegate implements BlockChangeDelegate {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final List<BlockState> blocks;
+    private final List<BlockState> blocks = null;
 
     public StructureGrowDelegate(World world) {
     }

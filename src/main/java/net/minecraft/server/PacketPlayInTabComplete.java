@@ -6,12 +6,12 @@ import org.apache.commons.lang3.StringUtils;
 
 public class PacketPlayInTabComplete implements Packet<PacketListenerPlayIn> {
 
-    private String a;
+    private String a = null;
 
-    private boolean b;
+    private boolean b = false;
 
     @Nullable
-    private BlockPosition c;
+    private BlockPosition c = null;
 
     public PacketPlayInTabComplete() {
     }

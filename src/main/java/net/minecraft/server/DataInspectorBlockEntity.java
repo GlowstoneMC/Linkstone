@@ -8,9 +8,9 @@ import org.apache.logging.log4j.Logger;
 
 public class DataInspectorBlockEntity implements DataInspector {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final Map<String, String> b;
+    private static final Map<String, String> b = null;
 
     public DataInspectorBlockEntity() {
     }

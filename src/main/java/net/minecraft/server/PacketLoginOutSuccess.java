@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class PacketLoginOutSuccess implements Packet<PacketLoginOutListener> {
 
-    private GameProfile a;
+    private GameProfile a = null;
 
     public PacketLoginOutSuccess() {
     }

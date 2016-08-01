@@ -7,9 +7,9 @@ import org.apache.logging.log4j.Logger;
 
 public class WorldGenDungeons extends WorldGenerator {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final String[] b;
+    private static final String[] b = null;
 
     public WorldGenDungeons() {
     }

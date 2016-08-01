@@ -12,74 +12,74 @@ import org.apache.logging.log4j.Logger;
 
 public abstract class BiomeBase {
 
-    private static final Logger y;
+    private static final Logger y = null;
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
-    protected static final IBlockData b;
+    protected static final IBlockData b = null;
 
-    protected static final IBlockData c;
+    protected static final IBlockData c = null;
 
-    protected static final IBlockData d;
+    protected static final IBlockData d = null;
 
-    protected static final IBlockData e;
+    protected static final IBlockData e = null;
 
-    protected static final IBlockData f;
+    protected static final IBlockData f = null;
 
-    protected static final IBlockData g;
+    protected static final IBlockData g = null;
 
-    protected static final IBlockData h;
+    protected static final IBlockData h = null;
 
-    public static final Set<BiomeBase> i;
+    public static final Set<BiomeBase> i = null;
 
-    public static final RegistryBlockID<BiomeBase> j;
+    public static final RegistryBlockID<BiomeBase> j = null;
 
-    protected static final NoiseGenerator3 k;
+    protected static final NoiseGenerator3 k = null;
 
-    protected static final NoiseGenerator3 l;
+    protected static final NoiseGenerator3 l = null;
 
-    protected static final WorldGenTallPlant m;
+    protected static final WorldGenTallPlant m = null;
 
-    protected static final WorldGenTrees n;
+    protected static final WorldGenTrees n = null;
 
-    protected static final WorldGenBigTree o;
+    protected static final WorldGenBigTree o = null;
 
-    protected static final WorldGenSwampTree p;
+    protected static final WorldGenSwampTree p = null;
 
-    public static final RegistryMaterials<MinecraftKey, BiomeBase> REGISTRY_ID;
+    public static final RegistryMaterials<MinecraftKey, BiomeBase> REGISTRY_ID = null;
 
-    private final String z;
+    private final String z = null;
 
-    private final float A;
+    private final float A = 0.0F;
 
-    private final float B;
+    private final float B = 0.0F;
 
-    private final float C;
+    private final float C = 0.0F;
 
-    private final float D;
+    private final float D = 0.0F;
 
-    private final int E;
+    private final int E = 0;
 
-    private final boolean F;
+    private final boolean F = false;
 
-    private final boolean G;
+    private final boolean G = false;
 
     @Nullable
-    private final String H;
+    private final String H = null;
 
-    public IBlockData r;
+    public IBlockData r = null;
 
-    public IBlockData s;
+    public IBlockData s = null;
 
-    public BiomeDecorator t;
+    public BiomeDecorator t = null;
 
-    protected List<BiomeBase.BiomeMeta> u;
+    protected List<BiomeBase.BiomeMeta> u = null;
 
-    protected List<BiomeBase.BiomeMeta> v;
+    protected List<BiomeBase.BiomeMeta> v = null;
 
-    protected List<BiomeBase.BiomeMeta> w;
+    protected List<BiomeBase.BiomeMeta> w = null;
 
-    protected List<BiomeBase.BiomeMeta> x;
+    protected List<BiomeBase.BiomeMeta> x = null;
 
     public static int a(BiomeBase biomebase) {
         return 0;
@@ -204,7 +204,7 @@ public abstract class BiomeBase {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -212,24 +212,24 @@ public abstract class BiomeBase {
 
     public static class a {
 
-        private final String a;
+        private final String a = null;
 
-        private float b;
+        private float b = 0.0F;
 
-        private float c;
+        private float c = 0.0F;
 
-        private float d;
+        private float d = 0.0F;
 
-        private float e;
+        private float e = 0.0F;
 
-        private int f;
+        private int f = 0;
 
-        private boolean g;
+        private boolean g = false;
 
-        private boolean h;
+        private boolean h = false;
 
         @Nullable
-        private String i;
+        private String i = null;
 
         public a(String s) {
         }
@@ -269,11 +269,11 @@ public abstract class BiomeBase {
 
     public static class BiomeMeta extends WeightedRandom.WeightedRandomChoice {
 
-        public Class<? extends EntityInsentient> b;
+        public Class<? extends EntityInsentient> b = null;
 
-        public int c;
+        public int c = 0;
 
-        public int d;
+        public int d = 0;
 
         public BiomeMeta(Class<? extends EntityInsentient> oclass, int i, int j, int k) {
         }

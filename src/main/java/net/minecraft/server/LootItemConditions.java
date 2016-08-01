@@ -16,9 +16,9 @@ import javax.annotation.Nullable;
 
 public class LootItemConditions {
 
-    private static final Map<MinecraftKey, LootItemCondition.a<?>> a;
+    private static final Map<MinecraftKey, LootItemCondition.a<?>> a = null;
 
-    private static final Map<Class<? extends LootItemCondition>, LootItemCondition.a<?>> b;
+    private static final Map<Class<? extends LootItemCondition>, LootItemCondition.a<?>> b = null;
 
     public static <T extends LootItemCondition> void a(LootItemCondition.a<? extends T> lootitemcondition_a) {
     }

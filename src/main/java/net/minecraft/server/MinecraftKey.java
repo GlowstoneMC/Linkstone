@@ -5,9 +5,9 @@ import org.apache.commons.lang3.Validate;
 
 public class MinecraftKey {
 
-    protected final String a;
+    protected final String a = null;
 
-    protected final String b;
+    protected final String b = null;
 
     protected MinecraftKey(int i, String... astring) {
     }

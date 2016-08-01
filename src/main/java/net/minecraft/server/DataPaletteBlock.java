@@ -4,15 +4,15 @@ import javax.annotation.Nullable;
 
 public class DataPaletteBlock implements DataPaletteExpandable {
 
-    private static final DataPalette d;
+    private static final DataPalette d = null;
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
-    protected DataBits b;
+    protected DataBits b = null;
 
-    protected DataPalette c;
+    protected DataPalette c = null;
 
-    private int e;
+    private int e = 0;
 
     public DataPaletteBlock() {
     }

@@ -14,11 +14,11 @@ import org.apache.logging.log4j.Logger;
 
 public class RegistrySimple<K, V> implements IRegistry<K, V> {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    protected final Map<K, V> c;
+    protected final Map<K, V> c = null;
 
-    private Object[] b;
+    private Object[] b = null;
 
     public RegistrySimple() {
     }

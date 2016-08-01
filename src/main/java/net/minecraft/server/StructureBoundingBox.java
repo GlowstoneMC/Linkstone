@@ -4,17 +4,17 @@ import com.google.common.base.Objects;
 
 public class StructureBoundingBox {
 
-    public int a;
+    public int a = 0;
 
-    public int b;
+    public int b = 0;
 
-    public int c;
+    public int c = 0;
 
-    public int d;
+    public int d = 0;
 
-    public int e;
+    public int e = 0;
 
-    public int f;
+    public int f = 0;
 
     public StructureBoundingBox() {
     }
@@ -94,7 +94,7 @@ public class StructureBoundingBox {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

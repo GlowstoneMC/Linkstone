@@ -7,19 +7,19 @@ import java.util.Set;
 
 public class PacketPlayOutPosition implements Packet<PacketListenerPlayOut> {
 
-    private double a;
+    private double a = 0.0;
 
-    private double b;
+    private double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private float d;
+    private float d = 0.0F;
 
-    private float e;
+    private float e = 0.0F;
 
-    private Set<PacketPlayOutPosition.EnumPlayerTeleportFlags> f;
+    private Set<PacketPlayOutPosition.EnumPlayerTeleportFlags> f = null;
 
-    private int g;
+    private int g = 0;
 
     public PacketPlayOutPosition() {
     }
@@ -40,7 +40,7 @@ public class PacketPlayOutPosition implements Packet<PacketListenerPlayOut> {
 
         X(0), Y(1), Z(2), Y_ROT(3), X_ROT(4);
 
-        private final int f;
+        private final int f = 0;
 
         private EnumPlayerTeleportFlags(int i) {
         }

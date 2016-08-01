@@ -9,15 +9,15 @@ import javax.annotation.Nullable;
 
 public class PathfinderGoalNearestAttackableTarget<T extends EntityLiving> extends PathfinderGoalTarget {
 
-    protected final Class<T> a;
+    protected final Class<T> a = null;
 
-    private final int i;
+    private final int i = 0;
 
-    protected final PathfinderGoalNearestAttackableTarget.DistanceComparator b;
+    protected final PathfinderGoalNearestAttackableTarget.DistanceComparator b = null;
 
-    protected final Predicate<? super T> c;
+    protected final Predicate<? super T> c = null;
 
-    protected T d;
+    protected T d = null;
 
     public PathfinderGoalNearestAttackableTarget(EntityCreature entitycreature, Class<T> oclass, boolean flag) {
     }
@@ -41,7 +41,7 @@ public class PathfinderGoalNearestAttackableTarget<T extends EntityLiving> exten
 
     public static class DistanceComparator implements Comparator<Entity> {
 
-        private final Entity a;
+        private final Entity a = null;
 
         public DistanceComparator(Entity entity) {
         }

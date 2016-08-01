@@ -12,37 +12,37 @@ import org.bukkit.event.player.PlayerPickupArrowEvent;
 // CraftBukkit end
 public abstract class EntityArrow extends Entity implements IProjectile {
 
-    private static final Predicate<Entity> f;
+    private static final Predicate<Entity> f = null;
 
-    private static final DataWatcherObject<Byte> g;
+    private static final DataWatcherObject<Byte> g = null;
 
-    private int h;
+    private int h = 0;
 
-    private int au;
+    private int au = 0;
 
-    private int av;
+    private int av = 0;
 
-    private Block aw;
+    private Block aw = null;
 
-    private int ax;
+    private int ax = 0;
 
-    protected boolean inGround;
+    protected boolean inGround = false;
 
-    protected int b;
+    protected int b = 0;
 
-    public EntityArrow.PickupStatus fromPlayer;
+    public EntityArrow.PickupStatus fromPlayer = null;
 
-    public int shake;
+    public int shake = 0;
 
-    public Entity shooter;
+    public Entity shooter = null;
 
-    private int ay;
+    private int ay = 0;
 
-    private int az;
+    private int az = 0;
 
-    private double damage;
+    private double damage = 0.0;
 
-    public int knockbackStrength;
+    public int knockbackStrength = 0;
 
     public EntityArrow(World world) {
     }

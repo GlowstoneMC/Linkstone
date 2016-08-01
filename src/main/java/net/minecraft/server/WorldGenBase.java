@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class WorldGenBase {
 
-    protected int e;
+    protected int e = 0;
 
-    protected Random f;
+    protected Random f = null;
 
-    protected World g;
+    protected World g = null;
 
     public WorldGenBase() {
     }

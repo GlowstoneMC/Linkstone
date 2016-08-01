@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class BlockPistonMoving extends BlockTileEntity {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateEnum<BlockPistonExtension.EnumPistonType> TYPE;
+    public static final BlockStateEnum<BlockPistonExtension.EnumPistonType> TYPE = null;
 
     public BlockPistonMoving() {
     }

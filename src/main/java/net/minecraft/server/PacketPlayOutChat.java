@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutChat implements Packet<PacketListenerPlayOut> {
 
-    private IChatBaseComponent a;
+    private IChatBaseComponent a = null;
 
-    private byte b;
+    private byte b = 0;
 
     public PacketPlayOutChat() {
     }

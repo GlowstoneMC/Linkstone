@@ -6,11 +6,11 @@ import javax.annotation.Nullable;
 
 public class BlockBed extends BlockFacingHorizontal {
 
-    public static final BlockStateEnum<BlockBed.EnumBedPart> PART;
+    public static final BlockStateEnum<BlockBed.EnumBedPart> PART = null;
 
-    public static final BlockStateBoolean OCCUPIED;
+    public static final BlockStateBoolean OCCUPIED = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
     public BlockBed() {
     }
@@ -95,7 +95,7 @@ public class BlockBed extends BlockFacingHorizontal {
 
         HEAD("head"), FOOT("foot");
 
-        private final String c;
+        private final String c = null;
 
         private EnumBedPart(String s) {
         }

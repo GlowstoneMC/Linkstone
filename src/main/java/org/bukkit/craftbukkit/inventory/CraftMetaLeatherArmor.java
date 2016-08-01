@@ -14,9 +14,9 @@ import com.google.common.collect.ImmutableMap.Builder;
 @DelegateDeserialization(SerializableMeta.class)
 class CraftMetaLeatherArmor extends CraftMetaItem implements LeatherArmorMeta {
 
-    static final ItemMetaKey COLOR;
+    static final ItemMetaKey COLOR = null;
 
-    private Color color;
+    private Color color = null;
 
     CraftMetaLeatherArmor(CraftMetaItem meta) {
     }

@@ -5,9 +5,9 @@ import org.bukkit.event.entity.EntityInteractEvent;
 // CraftBukkit
 public class BlockPressurePlateWeighted extends BlockPressurePlateAbstract {
 
-    public static final BlockStateInteger POWER;
+    public static final BlockStateInteger POWER = null;
 
-    private final int weight;
+    private final int weight = 0;
 
     protected BlockPressurePlateWeighted(Material material, int i) {
     }

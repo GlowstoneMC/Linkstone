@@ -25,31 +25,31 @@ import org.bukkit.event.player.PlayerPreLoginEvent;
 // CraftBukkit end
 public class LoginListener implements PacketLoginInListener, ITickable {
 
-    private static final AtomicInteger b;
+    private static final AtomicInteger b = null;
 
-    private static final Logger c;
+    private static final Logger c = null;
 
-    private static final Random random;
+    private static final Random random = null;
 
-    private final byte[] e;
+    private final byte[] e = null;
 
-    private final MinecraftServer server;
+    private final MinecraftServer server = null;
 
-    public final NetworkManager networkManager;
+    public final NetworkManager networkManager = null;
 
-    private LoginListener.EnumProtocolState g;
+    private LoginListener.EnumProtocolState g = null;
 
-    private int h;
+    private int h = 0;
 
-    private GameProfile i;
+    private GameProfile i = null;
 
-    private final String j;
+    private final String j = null;
 
-    private SecretKey loginKey;
+    private SecretKey loginKey = null;
 
-    private EntityPlayer l;
+    private EntityPlayer l = null;
 
-    public String hostname;
+    public String hostname = null;
 
     // CraftBukkit - add field
     public LoginListener(MinecraftServer minecraftserver, NetworkManager networkmanager) {

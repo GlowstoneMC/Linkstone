@@ -7,7 +7,7 @@ import java.util.Random;
 
 public abstract class LootItemFunction {
 
-    private final LootItemCondition[] a;
+    private final LootItemCondition[] a = null;
 
     protected LootItemFunction(LootItemCondition[] alootitemcondition) {
     }
@@ -20,9 +20,9 @@ public abstract class LootItemFunction {
 
     public abstract static class a<T extends LootItemFunction> {
 
-        private final MinecraftKey a;
+        private final MinecraftKey a = null;
 
-        private final Class<T> b;
+        private final Class<T> b = null;
 
         protected a(MinecraftKey minecraftkey, Class<T> oclass) {
         }

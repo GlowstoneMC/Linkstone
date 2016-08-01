@@ -5,9 +5,9 @@ import java.io.IOException;
 
 public class PacketPlayInCustomPayload implements Packet<PacketListenerPlayIn> {
 
-    private String a;
+    private String a = null;
 
-    private PacketDataSerializer b;
+    private PacketDataSerializer b = null;
 
     public PacketPlayInCustomPayload() {
     }

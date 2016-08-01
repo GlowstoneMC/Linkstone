@@ -2,15 +2,15 @@ package net.minecraft.server;
 
 public class EntityEnderSignal extends Entity {
 
-    private double a;
+    private double a = 0.0;
 
-    private double b;
+    private double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private int d;
+    private int d = 0;
 
-    private boolean e;
+    private boolean e = false;
 
     public EntityEnderSignal(World world) {
     }

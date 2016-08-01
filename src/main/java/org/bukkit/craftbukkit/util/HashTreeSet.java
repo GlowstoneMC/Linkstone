@@ -8,9 +8,9 @@ import java.util.TreeSet;
 
 public class HashTreeSet<V> implements Set<V> {
 
-    private HashSet<V> hash;
+    private HashSet<V> hash = null;
 
-    private TreeSet<V> tree;
+    private TreeSet<V> tree = null;
 
     public HashTreeSet() {
     }

@@ -2,19 +2,19 @@ package net.minecraft.server;
 
 public class PathfinderGoalRandomStroll extends PathfinderGoal {
 
-    private final EntityCreature a;
+    private final EntityCreature a = null;
 
-    private double b;
+    private double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private double d;
+    private double d = 0.0;
 
-    private final double e;
+    private final double e = 0.0;
 
-    private int f;
+    private int f = 0;
 
-    private boolean g;
+    private boolean g = false;
 
     public PathfinderGoalRandomStroll(EntityCreature entitycreature, double d0) {
     }

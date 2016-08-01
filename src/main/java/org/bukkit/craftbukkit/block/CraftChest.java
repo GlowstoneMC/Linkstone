@@ -12,9 +12,9 @@ import org.bukkit.inventory.Inventory;
 
 public class CraftChest extends CraftBlockState implements Chest {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final TileEntityChest chest;
+    private final TileEntityChest chest = null;
 
     public CraftChest(final Block block) {
     }

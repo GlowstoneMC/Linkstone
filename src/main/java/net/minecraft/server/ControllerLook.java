@@ -2,19 +2,19 @@ package net.minecraft.server;
 
 public class ControllerLook {
 
-    private final EntityInsentient a;
+    private final EntityInsentient a = null;
 
-    private float b;
+    private float b = 0.0F;
 
-    private float c;
+    private float c = 0.0F;
 
-    private boolean d;
+    private boolean d = false;
 
-    private double e;
+    private double e = 0.0;
 
-    private double f;
+    private double f = 0.0;
 
-    private double g;
+    private double g = 0.0;
 
     public ControllerLook(EntityInsentient entityinsentient) {
     }

@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class BlockLeaves1 extends BlockLeaves {
 
-    public static final BlockStateEnum<BlockWood.EnumLogVariant> VARIANT;
+    public static final BlockStateEnum<BlockWood.EnumLogVariant> VARIANT = null;
 
     public BlockLeaves1() {
     }

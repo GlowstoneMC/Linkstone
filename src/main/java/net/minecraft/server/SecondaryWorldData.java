@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class SecondaryWorldData extends WorldData {
 
-    private final WorldData b;
+    private final WorldData b = null;
 
     public SecondaryWorldData(WorldData worlddata) {
     }

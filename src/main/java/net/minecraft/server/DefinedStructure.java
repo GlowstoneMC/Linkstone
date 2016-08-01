@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 
 public class DefinedStructure {
 
-    private final List<DefinedStructure.BlockInfo> a;
+    private final List<DefinedStructure.BlockInfo> a = null;
 
-    private final List<DefinedStructure.EntityInfo> b;
+    private final List<DefinedStructure.EntityInfo> b = null;
 
-    private BlockPosition c;
+    private BlockPosition c = null;
 
-    private String d;
+    private String d = null;
 
     public DefinedStructure() {
     }
@@ -101,9 +101,9 @@ public class DefinedStructure {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }
@@ -111,11 +111,11 @@ public class DefinedStructure {
 
     public static class EntityInfo {
 
-        public final Vec3D a;
+        public final Vec3D a = null;
 
-        public final BlockPosition b;
+        public final BlockPosition b = null;
 
-        public final NBTTagCompound c;
+        public final NBTTagCompound c = null;
 
         public EntityInfo(Vec3D vec3d, BlockPosition blockposition, NBTTagCompound nbttagcompound) {
         }
@@ -123,11 +123,11 @@ public class DefinedStructure {
 
     public static class BlockInfo {
 
-        public final BlockPosition a;
+        public final BlockPosition a = null;
 
-        public final IBlockData b;
+        public final IBlockData b = null;
 
-        public final NBTTagCompound c;
+        public final NBTTagCompound c = null;
 
         public BlockInfo(BlockPosition blockposition, IBlockData iblockdata, @Nullable NBTTagCompound nbttagcompound) {
         }
@@ -135,11 +135,11 @@ public class DefinedStructure {
 
     static class a implements Iterable<IBlockData> {
 
-        public static final IBlockData a;
+        public static final IBlockData a = null;
 
-        final RegistryBlockID<IBlockData> b;
+        final RegistryBlockID<IBlockData> b = null;
 
-        private int c;
+        private int c = 0;
 
         private a() {
         }

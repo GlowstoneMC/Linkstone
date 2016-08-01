@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class BiomeSwamp extends BiomeBase {
 
-    protected static final IBlockData y;
+    protected static final IBlockData y = null;
 
     protected BiomeSwamp(BiomeBase.a biomebase_a) {
     }

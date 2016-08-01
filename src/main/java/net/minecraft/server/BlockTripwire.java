@@ -9,23 +9,23 @@ import org.bukkit.event.entity.EntityInteractEvent;
 // CraftBukkit
 public class BlockTripwire extends Block {
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
-    public static final BlockStateBoolean ATTACHED;
+    public static final BlockStateBoolean ATTACHED = null;
 
-    public static final BlockStateBoolean DISARMED;
+    public static final BlockStateBoolean DISARMED = null;
 
-    public static final BlockStateBoolean NORTH;
+    public static final BlockStateBoolean NORTH = null;
 
-    public static final BlockStateBoolean EAST;
+    public static final BlockStateBoolean EAST = null;
 
-    public static final BlockStateBoolean SOUTH;
+    public static final BlockStateBoolean SOUTH = null;
 
-    public static final BlockStateBoolean WEST;
+    public static final BlockStateBoolean WEST = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
-    protected static final AxisAlignedBB C;
+    protected static final AxisAlignedBB C = null;
 
     public BlockTripwire() {
     }
@@ -110,9 +110,9 @@ public class BlockTripwire extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }

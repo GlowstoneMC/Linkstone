@@ -6,9 +6,9 @@ import com.google.common.collect.ImmutableBiMap;
 
 class CraftScoreboardTranslations {
 
-    static final int MAX_DISPLAY_SLOT;
+    static final int MAX_DISPLAY_SLOT = 0;
 
-    static ImmutableBiMap<DisplaySlot, String> SLOTS;
+    static ImmutableBiMap<DisplaySlot, String> SLOTS = null;
 
     private CraftScoreboardTranslations() {
     }

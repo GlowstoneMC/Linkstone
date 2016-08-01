@@ -4,13 +4,13 @@ import java.io.IOException;
 
 public class PacketPlayOutEntityVelocity implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private int b;
+    private int b = 0;
 
-    private int c;
+    private int c = 0;
 
-    private int d;
+    private int d = 0;
 
     public PacketPlayOutEntityVelocity() {
     }

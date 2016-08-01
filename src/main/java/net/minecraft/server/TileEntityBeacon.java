@@ -17,33 +17,33 @@ import org.bukkit.potion.PotionEffect;
 // CraftBukkit end
 public class TileEntityBeacon extends TileEntityContainer implements ITickable, IWorldInventory {
 
-    public static final MobEffectList[][] a;
+    public static final MobEffectList[][] a = null;
 
-    private static final Set<MobEffectList> f;
+    private static final Set<MobEffectList> f = null;
 
-    private final List<TileEntityBeacon.BeaconColorTracker> g;
+    private final List<TileEntityBeacon.BeaconColorTracker> g = null;
 
-    private boolean j;
+    private boolean j = false;
 
-    public int k;
-
-    // PAIL: private -> public
-    @Nullable
-    public MobEffectList l;
+    public int k = 0;
 
     // PAIL: private -> public
     @Nullable
-    public MobEffectList m;
+    public MobEffectList l = null;
 
     // PAIL: private -> public
-    private ItemStack inventorySlot;
+    @Nullable
+    public MobEffectList m = null;
 
-    private String o;
+    // PAIL: private -> public
+    private ItemStack inventorySlot = null;
+
+    private String o = null;
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;
@@ -222,9 +222,9 @@ public class TileEntityBeacon extends TileEntityContainer implements ITickable, 
 
     public static class BeaconColorTracker {
 
-        private final float[] a;
+        private final float[] a = null;
 
-        private int b;
+        private int b = 0;
 
         public BeaconColorTracker(float[] afloat) {
         }

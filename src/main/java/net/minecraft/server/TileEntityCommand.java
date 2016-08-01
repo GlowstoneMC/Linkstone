@@ -4,15 +4,15 @@ import javax.annotation.Nullable;
 
 public class TileEntityCommand extends TileEntity {
 
-    private boolean a;
+    private boolean a = false;
 
-    private boolean f;
+    private boolean f = false;
 
-    private boolean g;
+    private boolean g = false;
 
-    private boolean h;
+    private boolean h = false;
 
-    private final CommandBlockListenerAbstract i;
+    private final CommandBlockListenerAbstract i = null;
 
     public TileEntityCommand() {
     }

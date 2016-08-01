@@ -17,26 +17,26 @@ import org.bukkit.entity.Player;
 public class ContainerEnchantTable extends Container {
 
     // CraftBukkit - make type specific (changed from IInventory)
-    public InventorySubcontainer enchantSlots;
+    public InventorySubcontainer enchantSlots = null;
 
-    public World world;
+    public World world = null;
 
-    private final BlockPosition position;
+    private final BlockPosition position = null;
 
-    private final Random l;
+    private final Random l = null;
 
-    public int f;
+    public int f = 0;
 
-    public int[] costs;
+    public int[] costs = null;
 
-    public int[] h;
+    public int[] h = null;
 
-    public int[] i;
+    public int[] i = null;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private Player player;
+    private Player player = null;
 
     // CraftBukkit end
     public ContainerEnchantTable(PlayerInventory playerinventory, World world, BlockPosition blockposition) {

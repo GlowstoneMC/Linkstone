@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public class PathfinderGoalOcelotAttack extends PathfinderGoal {
 
-    World a;
+    World a = null;
 
-    EntityInsentient b;
+    EntityInsentient b = null;
 
-    EntityLiving c;
+    EntityLiving c = null;
 
-    int d;
+    int d = 0;
 
     public PathfinderGoalOcelotAttack(EntityInsentient entityinsentient) {
     }

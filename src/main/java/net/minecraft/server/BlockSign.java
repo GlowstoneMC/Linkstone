@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class BlockSign extends BlockTileEntity {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
     protected BlockSign() {
     }

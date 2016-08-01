@@ -11,26 +11,26 @@ import org.bukkit.entity.HumanEntity;
 // CraftBukkit end
 public class PlayerInventory implements IInventory {
 
-    public final ItemStack[] items;
+    public final ItemStack[] items = null;
 
-    public final ItemStack[] armor;
+    public final ItemStack[] armor = null;
 
-    public final ItemStack[] extraSlots;
+    public final ItemStack[] extraSlots = null;
 
-    private final ItemStack[][] g;
+    private final ItemStack[][] g = null;
 
-    public int itemInHandIndex;
+    public int itemInHandIndex = 0;
 
-    public EntityHuman player;
+    public EntityHuman player = null;
 
-    private ItemStack carried;
+    private ItemStack carried = null;
 
-    public boolean f;
+    public boolean f = false;
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;

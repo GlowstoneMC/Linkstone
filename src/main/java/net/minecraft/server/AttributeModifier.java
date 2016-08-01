@@ -7,15 +7,15 @@ import org.apache.commons.lang3.Validate;
 
 public class AttributeModifier {
 
-    private final double a;
+    private final double a = 0.0;
 
-    private final int b;
+    private final int b = 0;
 
-    private final String c;
+    private final String c = null;
 
-    private final UUID d;
+    private final UUID d = null;
 
-    private boolean e;
+    private boolean e = false;
 
     public AttributeModifier(String s, double d0, int i) {
     }

@@ -4,17 +4,17 @@ import java.util.List;
 
 public class TileEntityPiston extends TileEntity implements ITickable {
 
-    private IBlockData a;
+    private IBlockData a = null;
 
-    private EnumDirection f;
+    private EnumDirection f = null;
 
-    private boolean g;
+    private boolean g = false;
 
-    private boolean h;
+    private boolean h = false;
 
-    private float i;
+    private float i = 0.0F;
 
-    private float j;
+    private float j = 0.0F;
 
     public TileEntityPiston() {
     }
@@ -71,7 +71,7 @@ public class TileEntityPiston extends TileEntity implements ITickable {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

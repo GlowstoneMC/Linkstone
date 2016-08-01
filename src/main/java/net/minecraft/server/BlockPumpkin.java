@@ -10,15 +10,15 @@ import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 // CraftBukkit end
 public class BlockPumpkin extends BlockFacingHorizontal {
 
-    private ShapeDetector snowGolemPart;
+    private ShapeDetector snowGolemPart = null;
 
-    private ShapeDetector snowGolem;
+    private ShapeDetector snowGolem = null;
 
-    private ShapeDetector ironGolemPart;
+    private ShapeDetector ironGolemPart = null;
 
-    private ShapeDetector ironGolem;
+    private ShapeDetector ironGolem = null;
 
-    private static final Predicate<IBlockData> e;
+    private static final Predicate<IBlockData> e = null;
 
     protected BlockPumpkin() {
     }

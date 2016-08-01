@@ -4,15 +4,15 @@ import javax.annotation.Nullable;
 
 public class ChunkCache implements IBlockAccess {
 
-    protected int a;
+    protected int a = 0;
 
-    protected int b;
+    protected int b = 0;
 
-    protected Chunk[][] c;
+    protected Chunk[][] c = null;
 
-    protected boolean d;
+    protected boolean d = false;
 
-    protected World e;
+    protected World e = null;
 
     public ChunkCache(World world, BlockPosition blockposition, BlockPosition blockposition1, int i) {
     }

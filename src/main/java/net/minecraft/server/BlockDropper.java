@@ -8,7 +8,7 @@ import org.bukkit.event.inventory.InventoryMoveItemEvent;
 // CraftBukkit end
 public class BlockDropper extends BlockDispenser {
 
-    private final IDispenseBehavior e;
+    private final IDispenseBehavior e = null;
 
     public BlockDropper() {
     }

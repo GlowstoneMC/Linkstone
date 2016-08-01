@@ -3,9 +3,9 @@ package net.minecraft.server;
 @Deprecated
 public class LocaleI18n {
 
-    private static final LocaleLanguage a;
+    private static final LocaleLanguage a = null;
 
-    private static final LocaleLanguage b;
+    private static final LocaleLanguage b = null;
 
     @Deprecated
     public static String get(String s) {

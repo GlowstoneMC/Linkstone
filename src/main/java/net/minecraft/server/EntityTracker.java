@@ -10,15 +10,15 @@ import org.apache.logging.log4j.Logger;
 
 public class EntityTracker {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final WorldServer world;
+    private final WorldServer world = null;
 
-    private final Set<EntityTrackerEntry> c;
+    private final Set<EntityTrackerEntry> c = null;
 
-    public final IntHashMap<EntityTrackerEntry> trackedEntities;
+    public final IntHashMap<EntityTrackerEntry> trackedEntities = null;
 
-    private int e;
+    private int e = 0;
 
     public EntityTracker(WorldServer worldserver) {
     }

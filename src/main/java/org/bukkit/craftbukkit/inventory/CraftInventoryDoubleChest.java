@@ -11,9 +11,9 @@ import org.bukkit.Location;
 
 public class CraftInventoryDoubleChest extends CraftInventory implements DoubleChestInventory {
 
-    private final CraftInventory left;
+    private final CraftInventory left = null;
 
-    private final CraftInventory right;
+    private final CraftInventory right = null;
 
     public CraftInventoryDoubleChest(CraftInventory left, CraftInventory right) {
     }

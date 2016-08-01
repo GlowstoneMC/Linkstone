@@ -6,11 +6,11 @@ import javax.annotation.Nullable;
 
 public abstract class EntityTameableAnimal extends EntityAnimal implements EntityOwnable {
 
-    protected static final DataWatcherObject<Byte> bx;
+    protected static final DataWatcherObject<Byte> bx = null;
 
-    protected static final DataWatcherObject<Optional<UUID>> by;
+    protected static final DataWatcherObject<Optional<UUID>> by = null;
 
-    protected PathfinderGoalSit goalSit;
+    protected PathfinderGoalSit goalSit = null;
 
     public EntityTameableAnimal(World world) {
     }

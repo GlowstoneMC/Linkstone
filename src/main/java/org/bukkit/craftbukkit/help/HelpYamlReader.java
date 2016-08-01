@@ -18,11 +18,11 @@ import java.util.logging.Level;
  */
 public class HelpYamlReader {
 
-    private YamlConfiguration helpYaml;
+    private YamlConfiguration helpYaml = null;
 
-    private final char ALT_COLOR_CODE;
+    private final char ALT_COLOR_CODE = '?';
 
-    private final Server server;
+    private final Server server = null;
 
     public HelpYamlReader(Server server) {
     }

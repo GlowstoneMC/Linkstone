@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public abstract class DataInspectorTagged implements DataInspector {
 
-    private final String a;
+    private final String a = null;
 
-    private final String b;
+    private final String b = null;
 
     public DataInspectorTagged(String s, String s1) {
     }

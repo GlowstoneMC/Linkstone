@@ -13,19 +13,19 @@ import org.apache.logging.log4j.Logger;
 
 public class EntityTypes {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private static final Map<String, Class<? extends Entity>> c;
+    private static final Map<String, Class<? extends Entity>> c = null;
 
-    private static final Map<Class<? extends Entity>, String> d;
+    private static final Map<Class<? extends Entity>, String> d = null;
 
-    private static final Map<Integer, Class<? extends Entity>> e;
+    private static final Map<Integer, Class<? extends Entity>> e = null;
 
-    private static final Map<Class<? extends Entity>, Integer> f;
+    private static final Map<Class<? extends Entity>, Integer> f = null;
 
-    private static final Map<String, Integer> g;
+    private static final Map<String, Integer> g = null;
 
-    public static final Map<String, EntityTypes.MonsterEggInfo> eggInfo;
+    public static final Map<String, EntityTypes.MonsterEggInfo> eggInfo = null;
 
     private static void a(Class<? extends Entity> oclass, String s, int i) {
     }
@@ -94,15 +94,15 @@ public class EntityTypes {
 
     public static class MonsterEggInfo {
 
-        public final String a;
+        public final String a = null;
 
-        public final int b;
+        public final int b = 0;
 
-        public final int c;
+        public final int c = 0;
 
-        public final Statistic killEntityStatistic;
+        public final Statistic killEntityStatistic = null;
 
-        public final Statistic killedByEntityStatistic;
+        public final Statistic killedByEntityStatistic = null;
 
         public MonsterEggInfo(String s, int i, int j) {
         }

@@ -10,7 +10,7 @@ import org.bukkit.inventory.Recipe;
 
 public class CraftInventoryCrafting extends CraftInventory implements CraftingInventory {
 
-    private final IInventory resultInventory;
+    private final IInventory resultInventory = null;
 
     public CraftInventoryCrafting(InventoryCrafting inventory, IInventory resultInventory) {
     }

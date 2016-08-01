@@ -9,19 +9,19 @@ import org.apache.logging.log4j.Logger;
 
 public class PathfinderGoalSelector {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final Set<PathfinderGoalSelector.PathfinderGoalSelectorItem> b;
+    private final Set<PathfinderGoalSelector.PathfinderGoalSelectorItem> b = null;
 
-    private final Set<PathfinderGoalSelector.PathfinderGoalSelectorItem> c;
+    private final Set<PathfinderGoalSelector.PathfinderGoalSelectorItem> c = null;
 
-    private final MethodProfiler d;
+    private final MethodProfiler d = null;
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
-    private int g;
+    private int g = 0;
 
     public PathfinderGoalSelector(MethodProfiler methodprofiler) {
     }
@@ -62,11 +62,11 @@ public class PathfinderGoalSelector {
 
     class PathfinderGoalSelectorItem {
 
-        public final PathfinderGoal a;
+        public final PathfinderGoal a = null;
 
-        public final int b;
+        public final int b = 0;
 
-        public boolean c;
+        public boolean c = false;
 
         public PathfinderGoalSelectorItem(int i, PathfinderGoal pathfindergoal) {
         }

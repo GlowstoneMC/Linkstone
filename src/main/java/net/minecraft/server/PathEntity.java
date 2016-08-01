@@ -2,15 +2,15 @@ package net.minecraft.server;
 
 public class PathEntity {
 
-    private final PathPoint[] a;
+    private final PathPoint[] a = null;
 
-    private PathPoint[] b;
+    private PathPoint[] b = null;
 
-    private PathPoint[] c;
+    private PathPoint[] c = null;
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
     public PathEntity(PathPoint[] apathpoint) {
     }

@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class MaterialPredicate implements Predicate<IBlockData> {
 
-    private final Material a;
+    private final Material a = null;
 
     private MaterialPredicate(Material material) {
     }

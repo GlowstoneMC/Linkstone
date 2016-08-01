@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class EntitySilverfish extends EntityMonster {
 
-    private EntitySilverfish.PathfinderGoalSilverfishWakeOthers a;
+    private EntitySilverfish.PathfinderGoalSilverfishWakeOthers a = null;
 
     public EntitySilverfish(World world) {
     }
@@ -76,11 +76,11 @@ public class EntitySilverfish extends EntityMonster {
 
     static class PathfinderGoalSilverfishHideInBlock extends PathfinderGoalRandomStroll {
 
-        private final EntitySilverfish silverfish;
+        private final EntitySilverfish silverfish = null;
 
-        private EnumDirection b;
+        private EnumDirection b = null;
 
-        private boolean c;
+        private boolean c = false;
 
         public PathfinderGoalSilverfishHideInBlock(EntitySilverfish entitysilverfish) {
         }
@@ -99,9 +99,9 @@ public class EntitySilverfish extends EntityMonster {
 
     static class PathfinderGoalSilverfishWakeOthers extends PathfinderGoal {
 
-        private final EntitySilverfish silverfish;
+        private final EntitySilverfish silverfish = null;
 
-        private int b;
+        private int b = 0;
 
         public PathfinderGoalSilverfishWakeOthers(EntitySilverfish entitysilverfish) {
         }

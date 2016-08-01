@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 
 public class Scoreboard {
 
-    private final Map<String, ScoreboardObjective> objectivesByName;
+    private final Map<String, ScoreboardObjective> objectivesByName = null;
 
-    private final Map<IScoreboardCriteria, List<ScoreboardObjective>> objectivesByCriteria;
+    private final Map<IScoreboardCriteria, List<ScoreboardObjective>> objectivesByCriteria = null;
 
-    private final Map<String, Map<ScoreboardObjective, ScoreboardScore>> playerScores;
+    private final Map<String, Map<ScoreboardObjective, ScoreboardScore>> playerScores = null;
 
-    private final ScoreboardObjective[] displaySlots;
+    private final ScoreboardObjective[] displaySlots = null;
 
-    private final Map<String, ScoreboardTeam> teamsByName;
+    private final Map<String, ScoreboardTeam> teamsByName = null;
 
-    private final Map<String, ScoreboardTeam> teamsByPlayer;
+    private final Map<String, ScoreboardTeam> teamsByPlayer = null;
 
-    private static String[] g;
+    private static String[] g = null;
 
     public Scoreboard() {
     }

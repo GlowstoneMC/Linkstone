@@ -5,7 +5,7 @@ import java.util.UUID;
 
 public class ItemSkull extends Item {
 
-    private static final String[] a;
+    private static final String[] a = null;
 
     public ItemSkull() {
     }

@@ -14,33 +14,33 @@ import org.bukkit.craftbukkit.chunkio.ChunkIOExecutor;
 // CraftBukkit end
 public class PlayerChunk {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final PlayerChunkMap playerChunkMap;
+    private final PlayerChunkMap playerChunkMap = null;
 
-    public final List<EntityPlayer> c;
+    public final List<EntityPlayer> c = null;
 
     // CraftBukkit - public
-    private final ChunkCoordIntPair location;
+    private final ChunkCoordIntPair location = null;
 
-    private final short[] dirtyBlocks;
+    private final short[] dirtyBlocks = null;
 
     @Nullable
-    public Chunk chunk;
+    public Chunk chunk = null;
 
     // CraftBukkit - public
-    private int dirtyCount;
+    private int dirtyCount = 0;
 
-    private int h;
+    private int h = 0;
 
-    private long i;
+    private long i = 0;
 
-    private boolean done;
+    private boolean done = false;
 
     // CraftBukkit start - add fields
-    private boolean loadInProgress;
+    private boolean loadInProgress = false;
 
-    private Runnable loadedRunnable;
+    private Runnable loadedRunnable = null;
 
     // CraftBukkit end
     public PlayerChunk(PlayerChunkMap playerchunkmap, int i, int j) {

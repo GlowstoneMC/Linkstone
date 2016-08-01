@@ -10,11 +10,11 @@ import java.util.Map.Entry;
 
 public abstract class AttributeMapBase {
 
-    protected final Map<IAttribute, AttributeInstance> a;
+    protected final Map<IAttribute, AttributeInstance> a = null;
 
-    protected final Map<String, AttributeInstance> b;
+    protected final Map<String, AttributeInstance> b = null;
 
-    protected final Multimap<IAttribute, IAttribute> c;
+    protected final Multimap<IAttribute, IAttribute> c = null;
 
     public AttributeMapBase() {
     }

@@ -7,15 +7,15 @@ import javax.annotation.Nullable;
 
 public class BlockEnderPortalFrame extends Block {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateBoolean EYE;
+    public static final BlockStateBoolean EYE = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    private static ShapeDetector e;
+    private static ShapeDetector e = null;
 
     public BlockEnderPortalFrame() {
     }

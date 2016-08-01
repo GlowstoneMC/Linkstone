@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayInBlockDig implements Packet<PacketListenerPlayIn> {
 
-    private BlockPosition a;
+    private BlockPosition a = null;
 
-    private EnumDirection b;
+    private EnumDirection b = null;
 
-    private PacketPlayInBlockDig.EnumPlayerDigType c;
+    private PacketPlayInBlockDig.EnumPlayerDigType c = null;
 
     public PacketPlayInBlockDig() {
     }

@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class DataConverterSpawnEgg implements IDataConverter {
 
-    private static final String[] a;
+    private static final String[] a = null;
 
     public DataConverterSpawnEgg() {
     }

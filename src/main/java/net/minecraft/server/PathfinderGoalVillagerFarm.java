@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public class PathfinderGoalVillagerFarm extends PathfinderGoalGotoTarget {
 
-    private final EntityVillager c;
+    private final EntityVillager c = null;
 
-    private boolean d;
+    private boolean d = false;
 
-    private boolean e;
+    private boolean e = false;
 
-    private int f;
+    private int f = 0;
 
     public PathfinderGoalVillagerFarm(EntityVillager entityvillager, double d0) {
     }

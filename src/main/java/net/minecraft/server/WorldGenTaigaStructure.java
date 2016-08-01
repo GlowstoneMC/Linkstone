@@ -5,9 +5,9 @@ import java.util.Random;
 
 public class WorldGenTaigaStructure extends WorldGenerator {
 
-    private final Block a;
+    private final Block a = null;
 
-    private final int b;
+    private final int b = 0;
 
     public WorldGenTaigaStructure(Block block, int i) {
     }

@@ -5,9 +5,9 @@ import javax.annotation.concurrent.Immutable;
 @Immutable
 public class ChestLock {
 
-    public static final ChestLock a;
+    public static final ChestLock a = null;
 
-    private final String b;
+    private final String b = null;
 
     public ChestLock(String s) {
     }

@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class BlockStructureVoid extends Block {
 
-    private static final AxisAlignedBB a;
+    private static final AxisAlignedBB a = null;
 
     protected BlockStructureVoid() {
     }

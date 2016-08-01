@@ -4,17 +4,17 @@ import java.io.IOException;
 
 public class PacketPlayInWindowClick implements Packet<PacketListenerPlayIn> {
 
-    private int a;
+    private int a = 0;
 
-    private int slot;
+    private int slot = 0;
 
-    private int button;
+    private int button = 0;
 
-    private short d;
+    private short d = 0;
 
-    private ItemStack item;
+    private ItemStack item = null;
 
-    private InventoryClickType shift;
+    private InventoryClickType shift = null;
 
     public PacketPlayInWindowClick() {
     }

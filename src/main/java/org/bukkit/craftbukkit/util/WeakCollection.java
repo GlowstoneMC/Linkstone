@@ -9,9 +9,9 @@ import org.apache.commons.lang.Validate;
 
 public final class WeakCollection<T> implements Collection<T> {
 
-    static final Object NO_VALUE;
+    static final Object NO_VALUE = null;
 
-    private final Collection<WeakReference<T>> collection;
+    private final Collection<WeakReference<T>> collection = null;
 
     public WeakCollection() {
     }

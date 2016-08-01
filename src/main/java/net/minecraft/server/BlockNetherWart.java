@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class BlockNetherWart extends BlockPlant {
 
-    public static final BlockStateInteger AGE;
+    public static final BlockStateInteger AGE = null;
 
-    private static final AxisAlignedBB[] c;
+    private static final AxisAlignedBB[] c = null;
 
     protected BlockNetherWart() {
     }

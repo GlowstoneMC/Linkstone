@@ -4,19 +4,19 @@ import javax.annotation.Nullable;
 
 public abstract class EntityAgeable extends EntityCreature {
 
-    private static final DataWatcherObject<Boolean> bx;
+    private static final DataWatcherObject<Boolean> bx = null;
 
-    protected int a;
+    protected int a = 0;
 
-    protected int b;
+    protected int b = 0;
 
-    protected int c;
+    protected int c = 0;
 
-    private float by;
+    private float by = 0.0F;
 
-    private float bz;
+    private float bz = 0.0F;
 
-    public boolean ageLocked;
+    public boolean ageLocked = false;
 
     // CraftBukkit
     public EntityAgeable(World world) {

@@ -4,15 +4,15 @@ import javax.annotation.Nullable;
 
 public class Slot {
 
-    public final int index;
+    public final int index = 0;
 
-    public final IInventory inventory;
+    public final IInventory inventory = null;
 
-    public int rawSlotIndex;
+    public int rawSlotIndex = 0;
 
-    public int f;
+    public int f = 0;
 
-    public int g;
+    public int g = 0;
 
     public Slot(IInventory iinventory, int i, int j, int k) {
     }

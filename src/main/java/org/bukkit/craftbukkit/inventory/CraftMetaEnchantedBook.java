@@ -14,9 +14,9 @@ import com.google.common.collect.ImmutableMap.Builder;
 @DelegateDeserialization(SerializableMeta.class)
 class CraftMetaEnchantedBook extends CraftMetaItem implements EnchantmentStorageMeta {
 
-    static final ItemMetaKey STORED_ENCHANTMENTS;
+    static final ItemMetaKey STORED_ENCHANTMENTS = null;
 
-    private Map<Enchantment, Integer> enchantments;
+    private Map<Enchantment, Integer> enchantments = null;
 
     CraftMetaEnchantedBook(CraftMetaItem meta) {
     }

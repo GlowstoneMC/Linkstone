@@ -7,11 +7,11 @@ import org.apache.logging.log4j.Logger;
 
 public class PersistentScoreboard extends PersistentBase {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private Scoreboard c;
+    private Scoreboard c = null;
 
-    private NBTTagCompound d;
+    private NBTTagCompound d = null;
 
     public PersistentScoreboard() {
     }

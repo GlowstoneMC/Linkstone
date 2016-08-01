@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class PacketStatusOutServerInfo implements Packet<PacketStatusOutListener> {
 
-    private static final Gson a;
+    private static final Gson a = null;
 
-    private ServerPing b;
+    private ServerPing b = null;
 
     public PacketStatusOutServerInfo() {
     }

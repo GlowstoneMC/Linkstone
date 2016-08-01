@@ -6,7 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 
 public class UtilColor {
 
-    private static final Pattern a;
+    private static final Pattern a = null;
 
     public static boolean b(@Nullable String s) {
         return false;

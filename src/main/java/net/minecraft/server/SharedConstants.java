@@ -5,11 +5,11 @@ import io.netty.util.ResourceLeakDetector.Level;
 
 public class SharedConstants {
 
-    public static final Level a;
+    public static final Level a = null;
 
-    public static final char[] b;
+    public static final char[] b = null;
 
-    public static final char[] allowedCharacters;
+    public static final char[] allowedCharacters = null;
 
     public static boolean isAllowedChatCharacter(char c0) {
         return false;

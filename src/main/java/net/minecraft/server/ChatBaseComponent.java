@@ -9,9 +9,9 @@ import javax.annotation.Nullable;
 
 public abstract class ChatBaseComponent implements IChatBaseComponent {
 
-    protected List<IChatBaseComponent> a;
+    protected List<IChatBaseComponent> a = null;
 
-    private ChatModifier b;
+    private ChatModifier b = null;
 
     public ChatBaseComponent() {
     }

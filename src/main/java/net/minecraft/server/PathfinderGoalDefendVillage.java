@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class PathfinderGoalDefendVillage extends PathfinderGoalTarget {
 
-    EntityIronGolem a;
+    EntityIronGolem a = null;
 
-    EntityLiving b;
+    EntityLiving b = null;
 
     public PathfinderGoalDefendVillage(EntityIronGolem entityirongolem) {
     }

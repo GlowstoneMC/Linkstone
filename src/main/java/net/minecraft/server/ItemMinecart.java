@@ -7,9 +7,9 @@ import org.bukkit.event.block.BlockDispenseEvent;
 // CraftBukkit end
 public class ItemMinecart extends Item {
 
-    private static final IDispenseBehavior a;
+    private static final IDispenseBehavior a = null;
 
-    private final EntityMinecartAbstract.EnumMinecartType b;
+    private final EntityMinecartAbstract.EnumMinecartType b = null;
 
     public ItemMinecart(EntityMinecartAbstract.EnumMinecartType entityminecartabstract_enumminecarttype) {
     }

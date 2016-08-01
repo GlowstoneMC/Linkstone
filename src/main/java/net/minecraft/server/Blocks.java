@@ -6,445 +6,445 @@ import javax.annotation.Nullable;
 
 public class Blocks {
 
-    private static final Set<Block> dl;
+    private static final Set<Block> dl = null;
 
-    public static final Block AIR;
+    public static final Block AIR = null;
 
-    public static final Block STONE;
+    public static final Block STONE = null;
 
-    public static final BlockGrass GRASS;
+    public static final BlockGrass GRASS = null;
 
-    public static final Block DIRT;
+    public static final Block DIRT = null;
 
-    public static final Block COBBLESTONE;
+    public static final Block COBBLESTONE = null;
 
-    public static final Block PLANKS;
+    public static final Block PLANKS = null;
 
-    public static final Block SAPLING;
+    public static final Block SAPLING = null;
 
-    public static final Block BEDROCK;
+    public static final Block BEDROCK = null;
 
-    public static final BlockFlowing FLOWING_WATER;
+    public static final BlockFlowing FLOWING_WATER = null;
 
-    public static final BlockStationary WATER;
+    public static final BlockStationary WATER = null;
 
-    public static final BlockFlowing FLOWING_LAVA;
+    public static final BlockFlowing FLOWING_LAVA = null;
 
-    public static final BlockStationary LAVA;
+    public static final BlockStationary LAVA = null;
 
-    public static final BlockSand SAND;
+    public static final BlockSand SAND = null;
 
-    public static final Block GRAVEL;
+    public static final Block GRAVEL = null;
 
-    public static final Block GOLD_ORE;
+    public static final Block GOLD_ORE = null;
 
-    public static final Block IRON_ORE;
+    public static final Block IRON_ORE = null;
 
-    public static final Block COAL_ORE;
+    public static final Block COAL_ORE = null;
 
-    public static final Block LOG;
+    public static final Block LOG = null;
 
-    public static final Block LOG2;
+    public static final Block LOG2 = null;
 
-    public static final BlockLeaves LEAVES;
+    public static final BlockLeaves LEAVES = null;
 
-    public static final BlockLeaves LEAVES2;
+    public static final BlockLeaves LEAVES2 = null;
 
-    public static final Block SPONGE;
+    public static final Block SPONGE = null;
 
-    public static final Block GLASS;
+    public static final Block GLASS = null;
 
-    public static final Block LAPIS_ORE;
+    public static final Block LAPIS_ORE = null;
 
-    public static final Block LAPIS_BLOCK;
+    public static final Block LAPIS_BLOCK = null;
 
-    public static final Block DISPENSER;
+    public static final Block DISPENSER = null;
 
-    public static final Block SANDSTONE;
+    public static final Block SANDSTONE = null;
 
-    public static final Block NOTEBLOCK;
+    public static final Block NOTEBLOCK = null;
 
-    public static final Block BED;
+    public static final Block BED = null;
 
-    public static final Block GOLDEN_RAIL;
+    public static final Block GOLDEN_RAIL = null;
 
-    public static final Block DETECTOR_RAIL;
+    public static final Block DETECTOR_RAIL = null;
 
-    public static final BlockPiston STICKY_PISTON;
+    public static final BlockPiston STICKY_PISTON = null;
 
-    public static final Block WEB;
+    public static final Block WEB = null;
 
-    public static final BlockLongGrass TALLGRASS;
+    public static final BlockLongGrass TALLGRASS = null;
 
-    public static final BlockDeadBush DEADBUSH;
+    public static final BlockDeadBush DEADBUSH = null;
 
-    public static final BlockPiston PISTON;
+    public static final BlockPiston PISTON = null;
 
-    public static final BlockPistonExtension PISTON_HEAD;
+    public static final BlockPistonExtension PISTON_HEAD = null;
 
-    public static final Block WOOL;
+    public static final Block WOOL = null;
 
-    public static final BlockPistonMoving PISTON_EXTENSION;
+    public static final BlockPistonMoving PISTON_EXTENSION = null;
 
-    public static final BlockFlowers YELLOW_FLOWER;
+    public static final BlockFlowers YELLOW_FLOWER = null;
 
-    public static final BlockFlowers RED_FLOWER;
+    public static final BlockFlowers RED_FLOWER = null;
 
-    public static final BlockPlant BROWN_MUSHROOM;
+    public static final BlockPlant BROWN_MUSHROOM = null;
 
-    public static final BlockPlant RED_MUSHROOM;
+    public static final BlockPlant RED_MUSHROOM = null;
 
-    public static final Block GOLD_BLOCK;
+    public static final Block GOLD_BLOCK = null;
 
-    public static final Block IRON_BLOCK;
+    public static final Block IRON_BLOCK = null;
 
-    public static final BlockStepAbstract DOUBLE_STONE_SLAB;
+    public static final BlockStepAbstract DOUBLE_STONE_SLAB = null;
 
-    public static final BlockStepAbstract STONE_SLAB;
+    public static final BlockStepAbstract STONE_SLAB = null;
 
-    public static final Block BRICK_BLOCK;
+    public static final Block BRICK_BLOCK = null;
 
-    public static final Block TNT;
+    public static final Block TNT = null;
 
-    public static final Block BOOKSHELF;
+    public static final Block BOOKSHELF = null;
 
-    public static final Block MOSSY_COBBLESTONE;
+    public static final Block MOSSY_COBBLESTONE = null;
 
-    public static final Block OBSIDIAN;
+    public static final Block OBSIDIAN = null;
 
-    public static final Block TORCH;
+    public static final Block TORCH = null;
 
-    public static final BlockFire FIRE;
+    public static final BlockFire FIRE = null;
 
-    public static final Block MOB_SPAWNER;
+    public static final Block MOB_SPAWNER = null;
 
-    public static final Block OAK_STAIRS;
+    public static final Block OAK_STAIRS = null;
 
-    public static final BlockChest CHEST;
+    public static final BlockChest CHEST = null;
 
-    public static final BlockRedstoneWire REDSTONE_WIRE;
+    public static final BlockRedstoneWire REDSTONE_WIRE = null;
 
-    public static final Block DIAMOND_ORE;
+    public static final Block DIAMOND_ORE = null;
 
-    public static final Block DIAMOND_BLOCK;
+    public static final Block DIAMOND_BLOCK = null;
 
-    public static final Block CRAFTING_TABLE;
+    public static final Block CRAFTING_TABLE = null;
 
-    public static final Block WHEAT;
+    public static final Block WHEAT = null;
 
-    public static final Block FARMLAND;
+    public static final Block FARMLAND = null;
 
-    public static final Block FURNACE;
+    public static final Block FURNACE = null;
 
-    public static final Block LIT_FURNACE;
+    public static final Block LIT_FURNACE = null;
 
-    public static final Block STANDING_SIGN;
+    public static final Block STANDING_SIGN = null;
 
-    public static final BlockDoor WOODEN_DOOR;
+    public static final BlockDoor WOODEN_DOOR = null;
 
-    public static final BlockDoor SPRUCE_DOOR;
+    public static final BlockDoor SPRUCE_DOOR = null;
 
-    public static final BlockDoor BIRCH_DOOR;
+    public static final BlockDoor BIRCH_DOOR = null;
 
-    public static final BlockDoor JUNGLE_DOOR;
+    public static final BlockDoor JUNGLE_DOOR = null;
 
-    public static final BlockDoor ACACIA_DOOR;
+    public static final BlockDoor ACACIA_DOOR = null;
 
-    public static final BlockDoor DARK_OAK_DOOR;
+    public static final BlockDoor DARK_OAK_DOOR = null;
 
-    public static final Block LADDER;
+    public static final Block LADDER = null;
 
-    public static final Block RAIL;
+    public static final Block RAIL = null;
 
-    public static final Block STONE_STAIRS;
+    public static final Block STONE_STAIRS = null;
 
-    public static final Block WALL_SIGN;
+    public static final Block WALL_SIGN = null;
 
-    public static final Block LEVER;
+    public static final Block LEVER = null;
 
-    public static final Block STONE_PRESSURE_PLATE;
+    public static final Block STONE_PRESSURE_PLATE = null;
 
-    public static final BlockDoor IRON_DOOR;
+    public static final BlockDoor IRON_DOOR = null;
 
-    public static final Block WOODEN_PRESSURE_PLATE;
+    public static final Block WOODEN_PRESSURE_PLATE = null;
 
-    public static final Block REDSTONE_ORE;
+    public static final Block REDSTONE_ORE = null;
 
-    public static final Block LIT_REDSTONE_ORE;
+    public static final Block LIT_REDSTONE_ORE = null;
 
-    public static final Block UNLIT_REDSTONE_TORCH;
+    public static final Block UNLIT_REDSTONE_TORCH = null;
 
-    public static final Block REDSTONE_TORCH;
+    public static final Block REDSTONE_TORCH = null;
 
-    public static final Block STONE_BUTTON;
+    public static final Block STONE_BUTTON = null;
 
-    public static final Block SNOW_LAYER;
+    public static final Block SNOW_LAYER = null;
 
-    public static final Block ICE;
+    public static final Block ICE = null;
 
-    public static final Block SNOW;
+    public static final Block SNOW = null;
 
-    public static final BlockCactus CACTUS;
+    public static final BlockCactus CACTUS = null;
 
-    public static final Block CLAY;
+    public static final Block CLAY = null;
 
-    public static final BlockReed REEDS;
+    public static final BlockReed REEDS = null;
 
-    public static final Block JUKEBOX;
+    public static final Block JUKEBOX = null;
 
-    public static final Block FENCE;
+    public static final Block FENCE = null;
 
-    public static final Block SPRUCE_FENCE;
+    public static final Block SPRUCE_FENCE = null;
 
-    public static final Block BIRCH_FENCE;
+    public static final Block BIRCH_FENCE = null;
 
-    public static final Block JUNGLE_FENCE;
+    public static final Block JUNGLE_FENCE = null;
 
-    public static final Block DARK_OAK_FENCE;
+    public static final Block DARK_OAK_FENCE = null;
 
-    public static final Block ACACIA_FENCE;
+    public static final Block ACACIA_FENCE = null;
 
-    public static final Block PUMPKIN;
+    public static final Block PUMPKIN = null;
 
-    public static final Block NETHERRACK;
+    public static final Block NETHERRACK = null;
 
-    public static final Block SOUL_SAND;
+    public static final Block SOUL_SAND = null;
 
-    public static final Block GLOWSTONE;
+    public static final Block GLOWSTONE = null;
 
-    public static final BlockPortal PORTAL;
+    public static final BlockPortal PORTAL = null;
 
-    public static final Block LIT_PUMPKIN;
+    public static final Block LIT_PUMPKIN = null;
 
-    public static final Block CAKE;
+    public static final Block CAKE = null;
 
-    public static final BlockRepeater UNPOWERED_REPEATER;
+    public static final BlockRepeater UNPOWERED_REPEATER = null;
 
-    public static final BlockRepeater POWERED_REPEATER;
+    public static final BlockRepeater POWERED_REPEATER = null;
 
-    public static final Block TRAPDOOR;
+    public static final Block TRAPDOOR = null;
 
-    public static final Block MONSTER_EGG;
+    public static final Block MONSTER_EGG = null;
 
-    public static final Block STONEBRICK;
+    public static final Block STONEBRICK = null;
 
-    public static final Block BROWN_MUSHROOM_BLOCK;
+    public static final Block BROWN_MUSHROOM_BLOCK = null;
 
-    public static final Block RED_MUSHROOM_BLOCK;
+    public static final Block RED_MUSHROOM_BLOCK = null;
 
-    public static final Block IRON_BARS;
+    public static final Block IRON_BARS = null;
 
-    public static final Block GLASS_PANE;
+    public static final Block GLASS_PANE = null;
 
-    public static final Block MELON_BLOCK;
+    public static final Block MELON_BLOCK = null;
 
-    public static final Block PUMPKIN_STEM;
+    public static final Block PUMPKIN_STEM = null;
 
-    public static final Block MELON_STEM;
+    public static final Block MELON_STEM = null;
 
-    public static final Block VINE;
+    public static final Block VINE = null;
 
-    public static final Block FENCE_GATE;
+    public static final Block FENCE_GATE = null;
 
-    public static final Block SPRUCE_FENCE_GATE;
+    public static final Block SPRUCE_FENCE_GATE = null;
 
-    public static final Block BIRCH_FENCE_GATE;
+    public static final Block BIRCH_FENCE_GATE = null;
 
-    public static final Block JUNGLE_FENCE_GATE;
+    public static final Block JUNGLE_FENCE_GATE = null;
 
-    public static final Block DARK_OAK_FENCE_GATE;
+    public static final Block DARK_OAK_FENCE_GATE = null;
 
-    public static final Block ACACIA_FENCE_GATE;
+    public static final Block ACACIA_FENCE_GATE = null;
 
-    public static final Block BRICK_STAIRS;
+    public static final Block BRICK_STAIRS = null;
 
-    public static final Block STONE_BRICK_STAIRS;
+    public static final Block STONE_BRICK_STAIRS = null;
 
-    public static final BlockMycel MYCELIUM;
+    public static final BlockMycel MYCELIUM = null;
 
-    public static final Block WATERLILY;
+    public static final Block WATERLILY = null;
 
-    public static final Block NETHER_BRICK;
+    public static final Block NETHER_BRICK = null;
 
-    public static final Block NETHER_BRICK_FENCE;
+    public static final Block NETHER_BRICK_FENCE = null;
 
-    public static final Block NETHER_BRICK_STAIRS;
+    public static final Block NETHER_BRICK_STAIRS = null;
 
-    public static final Block NETHER_WART;
+    public static final Block NETHER_WART = null;
 
-    public static final Block ENCHANTING_TABLE;
+    public static final Block ENCHANTING_TABLE = null;
 
-    public static final Block BREWING_STAND;
+    public static final Block BREWING_STAND = null;
 
-    public static final BlockCauldron cauldron;
+    public static final BlockCauldron cauldron = null;
 
-    public static final Block END_PORTAL;
+    public static final Block END_PORTAL = null;
 
-    public static final Block END_PORTAL_FRAME;
+    public static final Block END_PORTAL_FRAME = null;
 
-    public static final Block END_STONE;
+    public static final Block END_STONE = null;
 
-    public static final Block DRAGON_EGG;
+    public static final Block DRAGON_EGG = null;
 
-    public static final Block REDSTONE_LAMP;
+    public static final Block REDSTONE_LAMP = null;
 
-    public static final Block LIT_REDSTONE_LAMP;
+    public static final Block LIT_REDSTONE_LAMP = null;
 
-    public static final BlockStepAbstract DOUBLE_WOODEN_SLAB;
+    public static final BlockStepAbstract DOUBLE_WOODEN_SLAB = null;
 
-    public static final BlockStepAbstract WOODEN_SLAB;
+    public static final BlockStepAbstract WOODEN_SLAB = null;
 
-    public static final Block COCOA;
+    public static final Block COCOA = null;
 
-    public static final Block SANDSTONE_STAIRS;
+    public static final Block SANDSTONE_STAIRS = null;
 
-    public static final Block EMERALD_ORE;
+    public static final Block EMERALD_ORE = null;
 
-    public static final Block ENDER_CHEST;
+    public static final Block ENDER_CHEST = null;
 
-    public static final BlockTripwireHook TRIPWIRE_HOOK;
+    public static final BlockTripwireHook TRIPWIRE_HOOK = null;
 
-    public static final Block TRIPWIRE;
+    public static final Block TRIPWIRE = null;
 
-    public static final Block EMERALD_BLOCK;
+    public static final Block EMERALD_BLOCK = null;
 
-    public static final Block SPRUCE_STAIRS;
+    public static final Block SPRUCE_STAIRS = null;
 
-    public static final Block BIRCH_STAIRS;
+    public static final Block BIRCH_STAIRS = null;
 
-    public static final Block JUNGLE_STAIRS;
+    public static final Block JUNGLE_STAIRS = null;
 
-    public static final Block COMMAND_BLOCK;
+    public static final Block COMMAND_BLOCK = null;
 
-    public static final BlockBeacon BEACON;
+    public static final BlockBeacon BEACON = null;
 
-    public static final Block COBBLESTONE_WALL;
+    public static final Block COBBLESTONE_WALL = null;
 
-    public static final Block FLOWER_POT;
+    public static final Block FLOWER_POT = null;
 
-    public static final Block CARROTS;
+    public static final Block CARROTS = null;
 
-    public static final Block POTATOES;
+    public static final Block POTATOES = null;
 
-    public static final Block WOODEN_BUTTON;
+    public static final Block WOODEN_BUTTON = null;
 
-    public static final BlockSkull SKULL;
+    public static final BlockSkull SKULL = null;
 
-    public static final Block ANVIL;
+    public static final Block ANVIL = null;
 
-    public static final Block TRAPPED_CHEST;
+    public static final Block TRAPPED_CHEST = null;
 
-    public static final Block LIGHT_WEIGHTED_PRESSURE_PLATE;
+    public static final Block LIGHT_WEIGHTED_PRESSURE_PLATE = null;
 
-    public static final Block HEAVY_WEIGHTED_PRESSURE_PLATE;
+    public static final Block HEAVY_WEIGHTED_PRESSURE_PLATE = null;
 
-    public static final BlockRedstoneComparator UNPOWERED_COMPARATOR;
+    public static final BlockRedstoneComparator UNPOWERED_COMPARATOR = null;
 
-    public static final BlockRedstoneComparator POWERED_COMPARATOR;
+    public static final BlockRedstoneComparator POWERED_COMPARATOR = null;
 
-    public static final BlockDaylightDetector DAYLIGHT_DETECTOR;
+    public static final BlockDaylightDetector DAYLIGHT_DETECTOR = null;
 
-    public static final BlockDaylightDetector DAYLIGHT_DETECTOR_INVERTED;
+    public static final BlockDaylightDetector DAYLIGHT_DETECTOR_INVERTED = null;
 
-    public static final Block REDSTONE_BLOCK;
+    public static final Block REDSTONE_BLOCK = null;
 
-    public static final Block QUARTZ_ORE;
+    public static final Block QUARTZ_ORE = null;
 
-    public static final BlockHopper HOPPER;
+    public static final BlockHopper HOPPER = null;
 
-    public static final Block QUARTZ_BLOCK;
+    public static final Block QUARTZ_BLOCK = null;
 
-    public static final Block QUARTZ_STAIRS;
+    public static final Block QUARTZ_STAIRS = null;
 
-    public static final Block ACTIVATOR_RAIL;
+    public static final Block ACTIVATOR_RAIL = null;
 
-    public static final Block DROPPER;
+    public static final Block DROPPER = null;
 
-    public static final Block STAINED_HARDENED_CLAY;
+    public static final Block STAINED_HARDENED_CLAY = null;
 
-    public static final Block BARRIER;
+    public static final Block BARRIER = null;
 
-    public static final Block IRON_TRAPDOOR;
+    public static final Block IRON_TRAPDOOR = null;
 
-    public static final Block HAY_BLOCK;
+    public static final Block HAY_BLOCK = null;
 
-    public static final Block CARPET;
+    public static final Block CARPET = null;
 
-    public static final Block HARDENED_CLAY;
+    public static final Block HARDENED_CLAY = null;
 
-    public static final Block COAL_BLOCK;
+    public static final Block COAL_BLOCK = null;
 
-    public static final Block PACKED_ICE;
+    public static final Block PACKED_ICE = null;
 
-    public static final Block ACACIA_STAIRS;
+    public static final Block ACACIA_STAIRS = null;
 
-    public static final Block DARK_OAK_STAIRS;
+    public static final Block DARK_OAK_STAIRS = null;
 
-    public static final Block SLIME;
+    public static final Block SLIME = null;
 
-    public static final BlockTallPlant DOUBLE_PLANT;
+    public static final BlockTallPlant DOUBLE_PLANT = null;
 
-    public static final BlockStainedGlass STAINED_GLASS;
+    public static final BlockStainedGlass STAINED_GLASS = null;
 
-    public static final BlockStainedGlassPane STAINED_GLASS_PANE;
+    public static final BlockStainedGlassPane STAINED_GLASS_PANE = null;
 
-    public static final Block PRISMARINE;
+    public static final Block PRISMARINE = null;
 
-    public static final Block SEA_LANTERN;
+    public static final Block SEA_LANTERN = null;
 
-    public static final Block STANDING_BANNER;
+    public static final Block STANDING_BANNER = null;
 
-    public static final Block WALL_BANNER;
+    public static final Block WALL_BANNER = null;
 
-    public static final Block RED_SANDSTONE;
+    public static final Block RED_SANDSTONE = null;
 
-    public static final Block RED_SANDSTONE_STAIRS;
+    public static final Block RED_SANDSTONE_STAIRS = null;
 
-    public static final BlockStepAbstract DOUBLE_STONE_SLAB2;
+    public static final BlockStepAbstract DOUBLE_STONE_SLAB2 = null;
 
-    public static final BlockStepAbstract STONE_SLAB2;
+    public static final BlockStepAbstract STONE_SLAB2 = null;
 
-    public static final Block END_ROD;
+    public static final Block END_ROD = null;
 
-    public static final Block CHORUS_PLANT;
+    public static final Block CHORUS_PLANT = null;
 
-    public static final Block CHORUS_FLOWER;
+    public static final Block CHORUS_FLOWER = null;
 
-    public static final Block PURPUR_BLOCK;
+    public static final Block PURPUR_BLOCK = null;
 
-    public static final Block PURPUR_PILLAR;
+    public static final Block PURPUR_PILLAR = null;
 
-    public static final Block PURPUR_STAIRS;
+    public static final Block PURPUR_STAIRS = null;
 
-    public static final BlockStepAbstract PURPUR_DOUBLE_SLAB;
+    public static final BlockStepAbstract PURPUR_DOUBLE_SLAB = null;
 
-    public static final BlockStepAbstract PURPUR_SLAB;
+    public static final BlockStepAbstract PURPUR_SLAB = null;
 
-    public static final Block END_BRICKS;
+    public static final Block END_BRICKS = null;
 
-    public static final Block BEETROOT;
+    public static final Block BEETROOT = null;
 
-    public static final Block GRASS_PATH;
+    public static final Block GRASS_PATH = null;
 
-    public static final Block END_GATEWAY;
+    public static final Block END_GATEWAY = null;
 
-    public static final Block dc;
+    public static final Block dc = null;
 
-    public static final Block dd;
+    public static final Block dd = null;
 
-    public static final Block FROSTED_ICE;
+    public static final Block FROSTED_ICE = null;
 
-    public static final Block df;
+    public static final Block df = null;
 
-    public static final Block dg;
+    public static final Block dg = null;
 
-    public static final Block dh;
+    public static final Block dh = null;
 
-    public static final Block di;
+    public static final Block di = null;
 
-    public static final Block dj;
+    public static final Block dj = null;
 
-    public static final Block STRUCTURE_BLOCK;
+    public static final Block STRUCTURE_BLOCK = null;
 
     @Nullable
     private static Block get(String s) {

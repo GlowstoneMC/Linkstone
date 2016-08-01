@@ -8,9 +8,9 @@ import javax.annotation.Nullable;
 
 public class RegistryMaterials<K, V> extends RegistrySimple<K, V> implements Registry<V> {
 
-    protected final RegistryID<V> a;
+    protected final RegistryID<V> a = null;
 
-    protected final Map<V, K> b;
+    protected final Map<V, K> b = null;
 
     public RegistryMaterials() {
     }

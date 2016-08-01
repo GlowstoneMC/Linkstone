@@ -5,11 +5,11 @@ import java.util.Random;
 
 public class WorldGenEndTrophy extends WorldGenerator {
 
-    public static final BlockPosition a;
+    public static final BlockPosition a = null;
 
-    public static final BlockPosition b;
+    public static final BlockPosition b = null;
 
-    private final boolean c;
+    private final boolean c = false;
 
     public WorldGenEndTrophy(boolean flag) {
     }

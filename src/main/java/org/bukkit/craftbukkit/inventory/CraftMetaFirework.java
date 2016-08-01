@@ -37,30 +37,30 @@ class CraftMetaFirework extends CraftMetaItem implements FireworkMeta {
         ---- IntArray: FadeColors
      */
     @Specific(To.NBT)
-    static final ItemMetaKey FIREWORKS;
+    static final ItemMetaKey FIREWORKS = null;
 
-    static final ItemMetaKey FLIGHT;
+    static final ItemMetaKey FLIGHT = null;
 
-    static final ItemMetaKey EXPLOSIONS;
-
-    @Specific(To.NBT)
-    static final ItemMetaKey EXPLOSION_COLORS;
+    static final ItemMetaKey EXPLOSIONS = null;
 
     @Specific(To.NBT)
-    static final ItemMetaKey EXPLOSION_TYPE;
+    static final ItemMetaKey EXPLOSION_COLORS = null;
 
     @Specific(To.NBT)
-    static final ItemMetaKey EXPLOSION_TRAIL;
+    static final ItemMetaKey EXPLOSION_TYPE = null;
 
     @Specific(To.NBT)
-    static final ItemMetaKey EXPLOSION_FLICKER;
+    static final ItemMetaKey EXPLOSION_TRAIL = null;
 
     @Specific(To.NBT)
-    static final ItemMetaKey EXPLOSION_FADE;
+    static final ItemMetaKey EXPLOSION_FLICKER = null;
 
-    private List<FireworkEffect> effects;
+    @Specific(To.NBT)
+    static final ItemMetaKey EXPLOSION_FADE = null;
 
-    private int power;
+    private List<FireworkEffect> effects = null;
+
+    private int power = 0;
 
     CraftMetaFirework(CraftMetaItem meta) {
     }

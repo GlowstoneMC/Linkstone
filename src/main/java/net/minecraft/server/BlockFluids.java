@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 
 public abstract class BlockFluids extends Block {
 
-    public static final BlockStateInteger LEVEL;
+    public static final BlockStateInteger LEVEL = null;
 
     protected BlockFluids(Material material) {
     }

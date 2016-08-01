@@ -59,35 +59,35 @@ import org.bukkit.util.Vector;
 
 public class CraftWorld implements World {
 
-    public static final int CUSTOM_DIMENSION_OFFSET;
+    public static final int CUSTOM_DIMENSION_OFFSET = 0;
 
-    private final WorldServer world;
+    private final WorldServer world = null;
 
-    private WorldBorder worldBorder;
+    private WorldBorder worldBorder = null;
 
-    private Environment environment;
+    private Environment environment = null;
 
-    private final CraftServer server;
+    private final CraftServer server = null;
 
-    private final ChunkGenerator generator;
+    private final ChunkGenerator generator = null;
 
-    private final List<BlockPopulator> populators;
+    private final List<BlockPopulator> populators = null;
 
-    private final BlockMetadataStore blockMetadata;
+    private final BlockMetadataStore blockMetadata = null;
 
-    private int monsterSpawn;
+    private int monsterSpawn = 0;
 
-    private int animalSpawn;
+    private int animalSpawn = 0;
 
-    private int waterAnimalSpawn;
+    private int waterAnimalSpawn = 0;
 
-    private int ambientSpawn;
+    private int ambientSpawn = 0;
 
-    private int chunkLoadCount;
+    private int chunkLoadCount = 0;
 
-    private int chunkGCTickCount;
+    private int chunkGCTickCount = 0;
 
-    private static final Random rand;
+    private static final Random rand = null;
 
     public CraftWorld(WorldServer world, ChunkGenerator gen, Environment env) {
     }

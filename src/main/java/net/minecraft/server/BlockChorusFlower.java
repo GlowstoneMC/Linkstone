@@ -8,7 +8,7 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class BlockChorusFlower extends Block {
 
-    public static final BlockStateInteger AGE;
+    public static final BlockStateInteger AGE = null;
 
     protected BlockChorusFlower() {
     }

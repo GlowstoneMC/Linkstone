@@ -44,42 +44,42 @@ public class CraftScheduler implements BukkitScheduler {
     /**
      * Counter for IDs. Order doesn't matter, only uniqueness.
      */
-    private final AtomicInteger ids;
+    private final AtomicInteger ids = null;
 
     /**
      * Current head of linked-list. This reference is always stale, {@link CraftTask#next} is the live reference.
      */
-    private volatile CraftTask head;
+    private volatile CraftTask head = null;
 
     /**
      * Tail of a linked-list. AtomicReference only matters when adding to queue
      */
-    private final AtomicReference<CraftTask> tail;
+    private final AtomicReference<CraftTask> tail = null;
 
     /**
      * Main thread logic only
      */
-    private final PriorityQueue<CraftTask> pending;
+    private final PriorityQueue<CraftTask> pending = null;
 
     /**
      * Main thread logic only
      */
-    private final List<CraftTask> temp;
+    private final List<CraftTask> temp = null;
 
     /**
      * These are tasks that are currently active. It's provided for 'viewing' the current state.
      */
-    private final ConcurrentHashMap<Integer, CraftTask> runners;
+    private final ConcurrentHashMap<Integer, CraftTask> runners = null;
 
-    private volatile int currentTick;
+    private volatile int currentTick = 0;
 
-    private final Executor executor;
+    private final Executor executor = null;
 
-    private CraftAsyncDebugger debugHead;
+    private CraftAsyncDebugger debugHead = null;
 
-    private CraftAsyncDebugger debugTail;
+    private CraftAsyncDebugger debugTail = null;
 
-    private static final int RECENT_TICKS;
+    private static final int RECENT_TICKS = 0;
 
     static {
     }

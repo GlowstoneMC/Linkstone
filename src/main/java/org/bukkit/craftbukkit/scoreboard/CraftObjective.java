@@ -10,9 +10,9 @@ import org.bukkit.scoreboard.Score;
 
 final class CraftObjective extends CraftScoreboardComponent implements Objective {
 
-    private final ScoreboardObjective objective;
+    private final ScoreboardObjective objective = null;
 
-    private final CraftCriteria criteria;
+    private final CraftCriteria criteria = null;
 
     CraftObjective(CraftScoreboard scoreboard, ScoreboardObjective objective) {
     }

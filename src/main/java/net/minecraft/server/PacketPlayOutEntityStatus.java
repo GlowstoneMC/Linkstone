@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutEntityStatus implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private byte b;
+    private byte b = 0;
 
     public PacketPlayOutEntityStatus() {
     }

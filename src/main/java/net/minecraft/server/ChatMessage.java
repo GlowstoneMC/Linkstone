@@ -12,18 +12,18 @@ import java.util.regex.Pattern;
 
 public class ChatMessage extends ChatBaseComponent {
 
-    private final String d;
+    private final String d = null;
 
-    private final Object[] e;
+    private final Object[] e = null;
 
-    private final Object f;
+    private final Object f = null;
 
-    private long g;
+    private long g = 0;
 
     @VisibleForTesting
-    List<IChatBaseComponent> b;
+    List<IChatBaseComponent> b = null;
 
-    public static final Pattern c;
+    public static final Pattern c = null;
 
     public ChatMessage(String s, Object... aobject) {
     }

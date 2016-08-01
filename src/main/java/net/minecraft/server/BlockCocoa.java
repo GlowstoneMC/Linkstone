@@ -6,15 +6,15 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class BlockCocoa extends BlockFacingHorizontal implements IBlockFragilePlantElement {
 
-    public static final BlockStateInteger AGE;
+    public static final BlockStateInteger AGE = null;
 
-    protected static final AxisAlignedBB[] b;
+    protected static final AxisAlignedBB[] b = null;
 
-    protected static final AxisAlignedBB[] c;
+    protected static final AxisAlignedBB[] c = null;
 
-    protected static final AxisAlignedBB[] d;
+    protected static final AxisAlignedBB[] d = null;
 
-    protected static final AxisAlignedBB[] e;
+    protected static final AxisAlignedBB[] e = null;
 
     public BlockCocoa() {
     }
@@ -91,7 +91,7 @@ public class BlockCocoa extends BlockFacingHorizontal implements IBlockFragilePl
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

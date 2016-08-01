@@ -60,7 +60,7 @@ public final class AsynchronousExecutor<P, T, C, E extends Throwable> {
     }
 
     @SuppressWarnings("rawtypes")
-    static final AtomicIntegerFieldUpdater STATE_FIELD;
+    static final AtomicIntegerFieldUpdater STATE_FIELD = null;
 
     @SuppressWarnings({ "unchecked", "rawtypes" })
     private static boolean set(AsynchronousExecutor.Task $this, int expected, int value) {
@@ -69,25 +69,25 @@ public final class AsynchronousExecutor<P, T, C, E extends Throwable> {
 
     class Task implements Runnable {
 
-        static final int PENDING;
+        static final int PENDING = 0;
 
-        static final int STAGE_1_ASYNC;
+        static final int STAGE_1_ASYNC = 0;
 
-        static final int STAGE_1_SYNC;
+        static final int STAGE_1_SYNC = 0;
 
-        static final int STAGE_1_COMPLETE;
+        static final int STAGE_1_COMPLETE = 0;
 
-        static final int FINISHED;
+        static final int FINISHED = 0;
 
-        volatile int state;
+        volatile int state = 0;
 
-        final P parameter;
+        final P parameter = null;
 
-        T object;
+        T object = null;
 
-        final List<C> callbacks;
+        final List<C> callbacks = null;
 
-        E t;
+        E t = null;
 
         Task(final P parameter) {
         }
@@ -119,13 +119,13 @@ public final class AsynchronousExecutor<P, T, C, E extends Throwable> {
         }
     }
 
-    final CallBackProvider<P, T, C, E> provider;
+    final CallBackProvider<P, T, C, E> provider = null;
 
-    final Queue<Task> finished;
+    final Queue<Task> finished = null;
 
-    final Map<P, Task> tasks;
+    final Map<P, Task> tasks = null;
 
-    final ThreadPoolExecutor pool;
+    final ThreadPoolExecutor pool = null;
 
     /**
      * Uses a thread pool to pass executions to the provider.

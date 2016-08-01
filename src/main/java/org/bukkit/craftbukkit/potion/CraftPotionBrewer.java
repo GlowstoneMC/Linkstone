@@ -16,7 +16,7 @@ import com.google.common.collect.Maps;
 
 public class CraftPotionBrewer implements PotionBrewer {
 
-    private static final Map<PotionType, Collection<PotionEffect>> cache;
+    private static final Map<PotionType, Collection<PotionEffect>> cache = null;
 
     public Collection<PotionEffect> getEffects(PotionType damage, boolean upgraded, boolean extended) {
         return null;

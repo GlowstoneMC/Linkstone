@@ -9,51 +9,51 @@ import javax.annotation.Nullable;
 
 public class BlockStairs extends Block {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateEnum<BlockStairs.EnumHalf> HALF;
+    public static final BlockStateEnum<BlockStairs.EnumHalf> HALF = null;
 
-    public static final BlockStateEnum<BlockStairs.EnumStairShape> SHAPE;
+    public static final BlockStateEnum<BlockStairs.EnumStairShape> SHAPE = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
-    protected static final AxisAlignedBB C;
+    protected static final AxisAlignedBB C = null;
 
-    protected static final AxisAlignedBB D;
+    protected static final AxisAlignedBB D = null;
 
-    protected static final AxisAlignedBB E;
+    protected static final AxisAlignedBB E = null;
 
-    protected static final AxisAlignedBB F;
+    protected static final AxisAlignedBB F = null;
 
-    protected static final AxisAlignedBB G;
+    protected static final AxisAlignedBB G = null;
 
-    protected static final AxisAlignedBB H;
+    protected static final AxisAlignedBB H = null;
 
-    protected static final AxisAlignedBB I;
+    protected static final AxisAlignedBB I = null;
 
-    protected static final AxisAlignedBB J;
+    protected static final AxisAlignedBB J = null;
 
-    protected static final AxisAlignedBB K;
+    protected static final AxisAlignedBB K = null;
 
-    protected static final AxisAlignedBB L;
+    protected static final AxisAlignedBB L = null;
 
-    protected static final AxisAlignedBB M;
+    protected static final AxisAlignedBB M = null;
 
-    protected static final AxisAlignedBB N;
+    protected static final AxisAlignedBB N = null;
 
-    protected static final AxisAlignedBB O;
+    protected static final AxisAlignedBB O = null;
 
-    private final Block P;
+    private final Block P = null;
 
-    private final IBlockData Q;
+    private final IBlockData Q = null;
 
     protected BlockStairs(IBlockData iblockdata) {
     }
@@ -185,11 +185,11 @@ public class BlockStairs extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
         static {
         }
@@ -199,7 +199,7 @@ public class BlockStairs extends Block {
 
         STRAIGHT("straight"), INNER_LEFT("inner_left"), INNER_RIGHT("inner_right"), OUTER_LEFT("outer_left"), OUTER_RIGHT("outer_right");
 
-        private final String f;
+        private final String f = null;
 
         private EnumStairShape(String s) {
         }
@@ -217,7 +217,7 @@ public class BlockStairs extends Block {
 
         TOP("top"), BOTTOM("bottom");
 
-        private final String c;
+        private final String c = null;
 
         private EnumHalf(String s) {
         }

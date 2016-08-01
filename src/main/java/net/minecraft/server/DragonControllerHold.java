@@ -4,11 +4,11 @@ import javax.annotation.Nullable;
 
 public class DragonControllerHold extends AbstractDragonController {
 
-    private PathEntity b;
+    private PathEntity b = null;
 
-    private Vec3D c;
+    private Vec3D c = null;
 
-    private boolean d;
+    private boolean d = false;
 
     public DragonControllerHold(EntityEnderDragon entityenderdragon) {
     }

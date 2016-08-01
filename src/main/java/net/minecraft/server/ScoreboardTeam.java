@@ -7,29 +7,29 @@ import javax.annotation.Nullable;
 
 public class ScoreboardTeam extends ScoreboardTeamBase {
 
-    private final Scoreboard a;
+    private final Scoreboard a = null;
 
-    private final String b;
+    private final String b = null;
 
-    private final Set<String> c;
+    private final Set<String> c = null;
 
-    private String d;
+    private String d = null;
 
-    private String e;
+    private String e = null;
 
-    private String f;
+    private String f = null;
 
-    private boolean g;
+    private boolean g = false;
 
-    private boolean h;
+    private boolean h = false;
 
-    private ScoreboardTeamBase.EnumNameTagVisibility i;
+    private ScoreboardTeamBase.EnumNameTagVisibility i = null;
 
-    private ScoreboardTeamBase.EnumNameTagVisibility j;
+    private ScoreboardTeamBase.EnumNameTagVisibility j = null;
 
-    private EnumChatFormat k;
+    private EnumChatFormat k = null;
 
-    private ScoreboardTeamBase.EnumTeamPush l;
+    private ScoreboardTeamBase.EnumTeamPush l = null;
 
     public ScoreboardTeam(Scoreboard scoreboard, String s) {
     }

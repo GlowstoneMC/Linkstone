@@ -4,15 +4,15 @@ import java.io.IOException;
 
 public class PacketPlayOutVehicleMove implements Packet<PacketListenerPlayOut> {
 
-    private double a;
+    private double a = 0.0;
 
-    private double b;
+    private double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private float d;
+    private float d = 0.0F;
 
-    private float e;
+    private float e = 0.0F;
 
     public PacketPlayOutVehicleMove() {
     }

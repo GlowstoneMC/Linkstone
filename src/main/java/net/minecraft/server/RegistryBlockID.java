@@ -10,9 +10,9 @@ import javax.annotation.Nullable;
 
 public class RegistryBlockID<T> implements Registry<T> {
 
-    private final IdentityHashMap<T, Integer> a;
+    private final IdentityHashMap<T, Integer> a = null;
 
-    private final List<T> b;
+    private final List<T> b = null;
 
     public RegistryBlockID() {
     }

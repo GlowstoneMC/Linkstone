@@ -21,9 +21,9 @@ public class WorldGenMineshaftPieces {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }
@@ -57,9 +57,9 @@ public class WorldGenMineshaftPieces {
 
     public static class WorldGenMineshaftCross extends WorldGenMineshaftPieces.c {
 
-        private EnumDirection b;
+        private EnumDirection b = null;
 
-        private boolean c;
+        private boolean c = false;
 
         public WorldGenMineshaftCross() {
         }
@@ -90,13 +90,13 @@ public class WorldGenMineshaftPieces {
 
     public static class WorldGenMineshaftCorridor extends WorldGenMineshaftPieces.c {
 
-        private boolean b;
+        private boolean b = false;
 
-        private boolean c;
+        private boolean c = false;
 
-        private boolean d;
+        private boolean d = false;
 
-        private int e;
+        private int e = 0;
 
         public WorldGenMineshaftCorridor() {
         }
@@ -134,7 +134,7 @@ public class WorldGenMineshaftPieces {
 
     public static class WorldGenMineshaftRoom extends WorldGenMineshaftPieces.c {
 
-        private final List<StructureBoundingBox> b;
+        private final List<StructureBoundingBox> b = null;
 
         public WorldGenMineshaftRoom() {
         }
@@ -161,7 +161,7 @@ public class WorldGenMineshaftPieces {
 
     abstract static class c extends StructurePiece {
 
-        protected WorldGenMineshaft.Type a;
+        protected WorldGenMineshaft.Type a = null;
 
         public c() {
         }

@@ -5,9 +5,9 @@ import java.util.List;
 
 public class PacketPlayOutWindowItems implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private ItemStack[] b;
+    private ItemStack[] b = null;
 
     public PacketPlayOutWindowItems() {
     }

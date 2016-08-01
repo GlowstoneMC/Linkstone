@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class RegistryDefault<K, V> extends RegistrySimple<K, V> {
 
-    private final V a;
+    private final V a = null;
 
     public RegistryDefault(V v0) {
     }

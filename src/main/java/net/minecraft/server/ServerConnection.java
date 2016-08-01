@@ -28,21 +28,21 @@ import org.apache.logging.log4j.Logger;
 
 public class ServerConnection {
 
-    private static final Logger e;
+    private static final Logger e = null;
 
-    public static final LazyInitVar<NioEventLoopGroup> a;
+    public static final LazyInitVar<NioEventLoopGroup> a = null;
 
-    public static final LazyInitVar<EpollEventLoopGroup> b;
+    public static final LazyInitVar<EpollEventLoopGroup> b = null;
 
-    public static final LazyInitVar<LocalEventLoopGroup> c;
+    public static final LazyInitVar<LocalEventLoopGroup> c = null;
 
-    private final MinecraftServer f;
+    private final MinecraftServer f = null;
 
-    public volatile boolean d;
+    public volatile boolean d = false;
 
-    private final List<ChannelFuture> g;
+    private final List<ChannelFuture> g = null;
 
-    private final List<NetworkManager> h;
+    private final List<NetworkManager> h = null;
 
     public ServerConnection(MinecraftServer minecraftserver) {
     }

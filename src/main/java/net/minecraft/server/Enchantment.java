@@ -6,15 +6,15 @@ import javax.annotation.Nullable;
 
 public abstract class Enchantment {
 
-    public static final RegistryMaterials<MinecraftKey, Enchantment> enchantments;
+    public static final RegistryMaterials<MinecraftKey, Enchantment> enchantments = null;
 
-    private final EnumItemSlot[] a;
+    private final EnumItemSlot[] a = null;
 
-    private final Enchantment.Rarity e;
+    private final Enchantment.Rarity e = null;
 
-    public EnchantmentSlotType itemTarget;
+    public EnchantmentSlotType itemTarget = null;
 
-    protected String d;
+    protected String d = null;
 
     @Nullable
     public static Enchantment c(int i) {
@@ -103,7 +103,7 @@ public abstract class Enchantment {
 
         COMMON(10), UNCOMMON(5), RARE(2), VERY_RARE(1);
 
-        private final int e;
+        private final int e = 0;
 
         private Rarity(int i) {
         }

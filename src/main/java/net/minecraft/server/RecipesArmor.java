@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class RecipesArmor {
 
-    private final String[][] a;
+    private final String[][] a = null;
 
-    private final Item[][] b;
+    private final Item[][] b = null;
 
     public RecipesArmor() {
     }

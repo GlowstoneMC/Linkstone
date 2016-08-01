@@ -4,13 +4,13 @@ import javax.annotation.Nullable;
 
 public class EntityMinecartFurnace extends EntityMinecartAbstract {
 
-    private static final DataWatcherObject<Boolean> c;
+    private static final DataWatcherObject<Boolean> c = null;
 
-    private int d;
+    private int d = 0;
 
-    public double a;
+    public double a = 0.0;
 
-    public double b;
+    public double b = 0.0;
 
     public EntityMinecartFurnace(World world) {
     }

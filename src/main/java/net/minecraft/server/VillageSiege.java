@@ -6,23 +6,23 @@ import javax.annotation.Nullable;
 
 public class VillageSiege {
 
-    private final World a;
+    private final World a = null;
 
-    private boolean b;
+    private boolean b = false;
 
-    private int c;
+    private int c = 0;
 
-    private int d;
+    private int d = 0;
 
-    private int e;
+    private int e = 0;
 
-    private Village f;
+    private Village f = null;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private int i;
+    private int i = 0;
 
     public VillageSiege(World world) {
     }

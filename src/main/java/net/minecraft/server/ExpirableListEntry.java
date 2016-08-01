@@ -7,15 +7,15 @@ import java.util.Date;
 
 public abstract class ExpirableListEntry<T> extends JsonListEntry<T> {
 
-    public static final SimpleDateFormat a;
+    public static final SimpleDateFormat a = null;
 
-    protected final Date b;
+    protected final Date b = null;
 
-    protected final String c;
+    protected final String c = null;
 
-    protected final Date d;
+    protected final Date d = null;
 
-    protected final String e;
+    protected final String e = null;
 
     public ExpirableListEntry(T t0, Date date, String s, Date date1, String s1) {
     }

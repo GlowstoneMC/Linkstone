@@ -40,190 +40,190 @@ import org.bukkit.plugin.PluginManager;
 public abstract class Entity implements ICommandListener {
 
     // CraftBukkit start
-    private static final int CURRENT_LEVEL;
+    private static final int CURRENT_LEVEL = 0;
 
     static boolean isLevelAtLeast(NBTTagCompound tag, int level) {
         return false;
     }
 
-    protected CraftEntity bukkitEntity;
+    protected CraftEntity bukkitEntity = null;
 
     public CraftEntity getBukkitEntity() {
         return null;
     }
 
     // CraftBukikt end
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final AxisAlignedBB b;
+    private static final AxisAlignedBB b = null;
 
-    private static double c;
+    private static double c = 0.0;
 
-    private static int entityCount;
+    private static int entityCount = 0;
 
-    private int id;
+    private int id = 0;
 
-    public boolean i;
+    public boolean i = false;
 
-    public final List<Entity> passengers;
+    public final List<Entity> passengers = null;
 
-    protected int j;
+    protected int j = 0;
 
-    private Entity au;
+    private Entity au = null;
 
-    public boolean attachedToPlayer;
+    public boolean attachedToPlayer = false;
 
-    public World world;
+    public World world = null;
 
-    public double lastX;
+    public double lastX = 0.0;
 
-    public double lastY;
+    public double lastY = 0.0;
 
-    public double lastZ;
+    public double lastZ = 0.0;
 
-    public double locX;
+    public double locX = 0.0;
 
-    public double locY;
+    public double locY = 0.0;
 
-    public double locZ;
+    public double locZ = 0.0;
 
-    public double motX;
+    public double motX = 0.0;
 
-    public double motY;
+    public double motY = 0.0;
 
-    public double motZ;
+    public double motZ = 0.0;
 
-    public float yaw;
+    public float yaw = 0.0F;
 
-    public float pitch;
+    public float pitch = 0.0F;
 
-    public float lastYaw;
+    public float lastYaw = 0.0F;
 
-    public float lastPitch;
+    public float lastPitch = 0.0F;
 
-    private AxisAlignedBB boundingBox;
+    private AxisAlignedBB boundingBox = null;
 
-    public boolean onGround;
+    public boolean onGround = false;
 
-    public boolean positionChanged;
+    public boolean positionChanged = false;
 
-    public boolean B;
+    public boolean B = false;
 
-    public boolean C;
+    public boolean C = false;
 
-    public boolean velocityChanged;
+    public boolean velocityChanged = false;
 
-    protected boolean E;
+    protected boolean E = false;
 
-    private boolean aw;
+    private boolean aw = false;
 
-    public boolean dead;
+    public boolean dead = false;
 
-    public float width;
+    public float width = 0.0F;
 
-    public float length;
+    public float length = 0.0F;
 
-    public float I;
+    public float I = 0.0F;
 
-    public float J;
+    public float J = 0.0F;
 
-    public float K;
+    public float K = 0.0F;
 
-    public float fallDistance;
+    public float fallDistance = 0.0F;
 
-    private int ax;
+    private int ax = 0;
 
-    public double M;
+    public double M = 0.0;
 
-    public double N;
+    public double N = 0.0;
 
-    public double O;
+    public double O = 0.0;
 
-    public float P;
+    public float P = 0.0F;
 
-    public boolean noclip;
+    public boolean noclip = false;
 
-    public float R;
+    public float R = 0.0F;
 
-    protected Random random;
+    protected Random random = null;
 
-    public int ticksLived;
+    public int ticksLived = 0;
 
-    public int maxFireTicks;
+    public int maxFireTicks = 0;
 
-    public int fireTicks;
+    public int fireTicks = 0;
 
-    public boolean inWater;
+    public boolean inWater = false;
 
-    public int noDamageTicks;
+    public int noDamageTicks = 0;
 
-    protected boolean justCreated;
+    protected boolean justCreated = false;
 
-    protected boolean fireProof;
+    protected boolean fireProof = false;
 
-    protected DataWatcher datawatcher;
+    protected DataWatcher datawatcher = null;
 
-    protected static final DataWatcherObject<Byte> aa;
+    protected static final DataWatcherObject<Byte> aa = null;
 
-    private static final DataWatcherObject<Integer> az;
+    private static final DataWatcherObject<Integer> az = null;
 
-    private static final DataWatcherObject<String> aA;
+    private static final DataWatcherObject<String> aA = null;
 
-    private static final DataWatcherObject<Boolean> aB;
+    private static final DataWatcherObject<Boolean> aB = null;
 
-    private static final DataWatcherObject<Boolean> aC;
+    private static final DataWatcherObject<Boolean> aC = null;
 
-    private static final DataWatcherObject<Boolean> aD;
+    private static final DataWatcherObject<Boolean> aD = null;
 
-    public boolean ab;
+    public boolean ab = false;
 
-    public int ac;
+    public int ac = 0;
 
-    public int ad;
+    public int ad = 0;
 
-    public int ae;
+    public int ae = 0;
 
-    public boolean ai;
+    public boolean ai = false;
 
-    public boolean impulse;
+    public boolean impulse = false;
 
-    public int portalCooldown;
+    public int portalCooldown = 0;
 
-    protected boolean al;
+    protected boolean al = false;
 
-    protected int am;
+    protected int am = 0;
 
-    public int dimension;
+    public int dimension = 0;
 
-    protected BlockPosition ao;
+    protected BlockPosition ao = null;
 
-    protected Vec3D ap;
+    protected Vec3D ap = null;
 
-    protected EnumDirection aq;
+    protected EnumDirection aq = null;
 
-    private boolean invulnerable;
+    private boolean invulnerable = false;
 
-    protected UUID uniqueID;
+    protected UUID uniqueID = null;
 
-    protected String as;
+    protected String as = null;
 
-    private final CommandObjectiveExecutor aF;
+    private final CommandObjectiveExecutor aF = null;
 
-    private final List<ItemStack> aG;
+    private final List<ItemStack> aG = null;
 
-    public boolean glowing;
+    public boolean glowing = false;
 
-    private final Set<String> aH;
+    private final Set<String> aH = null;
 
-    private boolean aI;
+    private boolean aI = false;
 
-    public boolean valid;
+    public boolean valid = false;
 
     // CraftBukkit
-    public org.bukkit.projectiles.ProjectileSource projectileSource;
+    public org.bukkit.projectiles.ProjectileSource projectileSource = null;
 
     // CraftBukkit - For projectiles only
-    public boolean forceExplosionKnockback;
+    public boolean forceExplosionKnockback = false;
 
     // CraftBukkit - SPIGOT-949
     public Entity(World world) {
@@ -993,9 +993,9 @@ public abstract class Entity implements ICommandListener {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }

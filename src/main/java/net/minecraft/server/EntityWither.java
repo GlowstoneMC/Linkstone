@@ -13,33 +13,33 @@ import org.bukkit.event.entity.ExplosionPrimeEvent;
 // CraftBukkit end
 public class EntityWither extends EntityMonster implements IRangedEntity {
 
-    private static final DataWatcherObject<Integer> a;
+    private static final DataWatcherObject<Integer> a = null;
 
-    private static final DataWatcherObject<Integer> b;
+    private static final DataWatcherObject<Integer> b = null;
 
-    private static final DataWatcherObject<Integer> c;
+    private static final DataWatcherObject<Integer> c = null;
 
-    private static final DataWatcherObject<Integer>[] bx;
+    private static final DataWatcherObject<Integer>[] bx = null;
 
-    private static final DataWatcherObject<Integer> by;
+    private static final DataWatcherObject<Integer> by = null;
 
-    private final float[] bz;
+    private final float[] bz = null;
 
-    private final float[] bA;
+    private final float[] bA = null;
 
-    private final float[] bB;
+    private final float[] bB = null;
 
-    private final float[] bC;
+    private final float[] bC = null;
 
-    private final int[] bD;
+    private final int[] bD = null;
 
-    private final int[] bE;
+    private final int[] bE = null;
 
-    private int bF;
+    private int bF = 0;
 
-    private final BossBattleServer bG;
+    private final BossBattleServer bG = null;
 
-    private static final Predicate<Entity> bH;
+    private static final Predicate<Entity> bH = null;
 
     public EntityWither(World world) {
     }

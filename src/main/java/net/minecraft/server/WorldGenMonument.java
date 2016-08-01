@@ -12,15 +12,15 @@ import java.util.Map.Entry;
 
 public class WorldGenMonument extends StructureGenerator {
 
-    private int d;
+    private int d = 0;
 
-    private int h;
+    private int h = 0;
 
-    public static final List<BiomeBase> a;
+    public static final List<BiomeBase> a = null;
 
-    public static final List<BiomeBase> b;
+    public static final List<BiomeBase> b = null;
 
-    private static final List<BiomeBase.BiomeMeta> i;
+    private static final List<BiomeBase.BiomeMeta> i = null;
 
     public WorldGenMonument() {
     }
@@ -49,9 +49,9 @@ public class WorldGenMonument extends StructureGenerator {
 
     public static class WorldGenMonumentStart extends StructureStart {
 
-        private final Set<ChunkCoordIntPair> c;
+        private final Set<ChunkCoordIntPair> c = null;
 
-        private boolean d;
+        private boolean d = false;
 
         public WorldGenMonumentStart() {
         }

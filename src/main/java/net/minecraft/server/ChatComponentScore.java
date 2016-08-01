@@ -4,11 +4,11 @@ import java.util.Iterator;
 
 public class ChatComponentScore extends ChatBaseComponent {
 
-    private final String b;
+    private final String b = null;
 
-    private final String c;
+    private final String c = null;
 
-    private String d;
+    private String d = null;
 
     public ChatComponentScore(String s, String s1) {
     }

@@ -11,7 +11,7 @@ import org.bukkit.event.block.BlockFromToEvent;
 // CraftBukkit end
 public class BlockFlowing extends BlockFluids {
 
-    int a;
+    int a = 0;
 
     protected BlockFlowing(Material material) {
     }

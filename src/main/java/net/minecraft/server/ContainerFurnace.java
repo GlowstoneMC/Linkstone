@@ -8,20 +8,20 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit end
 public class ContainerFurnace extends Container {
 
-    private final IInventory furnace;
+    private final IInventory furnace = null;
 
-    private int f;
+    private int f = 0;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private int i;
+    private int i = 0;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     @Override
     public CraftInventoryView getBukkitView() {

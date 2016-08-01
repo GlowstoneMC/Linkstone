@@ -19,13 +19,13 @@ import org.apache.logging.log4j.Logger;
 
 public class LootTableRegistry {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final Gson b;
+    private static final Gson b = null;
 
-    private final LoadingCache<MinecraftKey, LootTable> c;
+    private final LoadingCache<MinecraftKey, LootTable> c = null;
 
-    private final File d;
+    private final File d = null;
 
     public LootTableRegistry(File file) {
     }

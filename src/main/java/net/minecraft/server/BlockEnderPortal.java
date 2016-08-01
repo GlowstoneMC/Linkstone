@@ -8,7 +8,7 @@ import org.bukkit.event.entity.EntityPortalEnterEvent;
 // CraftBukkit
 public class BlockEnderPortal extends BlockTileEntity {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
     protected BlockEnderPortal(Material material) {
     }

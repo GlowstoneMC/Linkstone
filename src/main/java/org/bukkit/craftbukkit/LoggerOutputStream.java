@@ -7,11 +7,11 @@ import org.apache.logging.log4j.Logger;
 
 public class LoggerOutputStream extends ByteArrayOutputStream {
 
-    private final String separator;
+    private final String separator = null;
 
-    private final Logger logger;
+    private final Logger logger = null;
 
-    private final Level level;
+    private final Level level = null;
 
     public LoggerOutputStream(Logger logger, Level level) {
     }

@@ -10,15 +10,15 @@ import java.util.Map.Entry;
 
 public class WorldGenStronghold extends StructureGenerator {
 
-    private final List<BiomeBase> a;
+    private final List<BiomeBase> a = null;
 
-    private boolean b;
+    private boolean b = false;
 
-    private ChunkCoordIntPair[] d;
+    private ChunkCoordIntPair[] d = null;
 
-    private double h;
+    private double h = 0.0;
 
-    private int i;
+    private int i = 0;
 
     public WorldGenStronghold() {
     }

@@ -5,13 +5,13 @@ import java.util.List;
 
 public class PathfinderGoalFollowParent extends PathfinderGoal {
 
-    EntityAnimal a;
+    EntityAnimal a = null;
 
-    EntityAnimal b;
+    EntityAnimal b = null;
 
-    double c;
+    double c = 0.0;
 
-    private int d;
+    private int d = 0;
 
     public PathfinderGoalFollowParent(EntityAnimal entityanimal, double d0) {
     }

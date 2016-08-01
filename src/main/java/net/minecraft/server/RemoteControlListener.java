@@ -13,17 +13,17 @@ import java.util.Map.Entry;
 
 public class RemoteControlListener extends RemoteConnectionThread {
 
-    private int h;
+    private int h = 0;
 
-    private final int i;
+    private final int i = 0;
 
-    private String j;
+    private String j = null;
 
-    private ServerSocket k;
+    private ServerSocket k = null;
 
-    private final String l;
+    private final String l = null;
 
-    private Map<SocketAddress, RemoteControlSession> m;
+    private Map<SocketAddress, RemoteControlSession> m = null;
 
     public RemoteControlListener(IMinecraftServer iminecraftserver) {
     }

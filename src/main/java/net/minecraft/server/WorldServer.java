@@ -29,40 +29,40 @@ import org.bukkit.event.weather.LightningStrikeEvent;
 // CraftBukkit end
 public class WorldServer extends World implements IAsyncTaskHandler {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final MinecraftServer server;
+    private final MinecraftServer server = null;
 
-    public EntityTracker tracker;
+    public EntityTracker tracker = null;
 
-    private final PlayerChunkMap manager;
+    private final PlayerChunkMap manager = null;
 
     // private final Set<NextTickListEntry> nextTickListHash = Sets.newHashSet();
-    private final HashTreeSet<NextTickListEntry> nextTickList;
+    private final HashTreeSet<NextTickListEntry> nextTickList = null;
 
     // CraftBukkit - HashTreeSet
-    private final Map<UUID, Entity> entitiesByUUID;
+    private final Map<UUID, Entity> entitiesByUUID = null;
 
-    public boolean savingDisabled;
+    public boolean savingDisabled = false;
 
-    private boolean O;
+    private boolean O = false;
 
-    private int emptyTime;
+    private int emptyTime = 0;
 
-    private final PortalTravelAgent portalTravelAgent;
+    private final PortalTravelAgent portalTravelAgent = null;
 
-    private final SpawnerCreature spawnerCreature;
+    private final SpawnerCreature spawnerCreature = null;
 
-    protected final VillageSiege siegeManager;
+    protected final VillageSiege siegeManager = null;
 
-    private final WorldServer.BlockActionDataList[] S;
+    private final WorldServer.BlockActionDataList[] S = null;
 
-    private int T;
+    private int T = 0;
 
-    private final List<NextTickListEntry> U;
+    private final List<NextTickListEntry> U = null;
 
     // CraftBukkit start
-    public final int dimension;
+    public final int dimension = 0;
 
     // Add env and gen to constructor
     public WorldServer(MinecraftServer minecraftserver, IDataManager idatamanager, WorldData worlddata, int i, MethodProfiler methodprofiler, org.bukkit.World.Environment env, org.bukkit.generator.ChunkGenerator gen) {

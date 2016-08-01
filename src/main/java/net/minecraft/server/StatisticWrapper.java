@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class StatisticWrapper {
 
-    private int a;
+    private int a = 0;
 
-    private IJsonStatistic b;
+    private IJsonStatistic b = null;
 
     public StatisticWrapper() {
     }

@@ -16,11 +16,11 @@ import org.apache.logging.log4j.Logger;
 
 public abstract class CommandHandler implements ICommandHandler {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final Map<String, ICommand> b;
+    private final Map<String, ICommand> b = null;
 
-    private final Set<ICommand> c;
+    private final Set<ICommand> c = null;
 
     public CommandHandler() {
     }

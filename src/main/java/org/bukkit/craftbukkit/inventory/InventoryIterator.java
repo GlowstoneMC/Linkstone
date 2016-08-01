@@ -6,11 +6,11 @@ import org.bukkit.inventory.ItemStack;
 
 public class InventoryIterator implements ListIterator<ItemStack> {
 
-    private final Inventory inventory;
+    private final Inventory inventory = null;
 
-    private int nextIndex;
+    private int nextIndex = 0;
 
-    private Boolean lastDirection;
+    private Boolean lastDirection = null;
 
     // true = forward, false = backward, null = haven't moved yet
     InventoryIterator(Inventory craftInventory) {

@@ -15,7 +15,7 @@ import org.bukkit.Bukkit;
 
 public class CraftIpBanList implements org.bukkit.BanList {
 
-    private final IpBanList list;
+    private final IpBanList list = null;
 
     public CraftIpBanList(IpBanList list) {
     }

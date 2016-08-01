@@ -27,160 +27,160 @@ import org.bukkit.event.player.PlayerItemConsumeEvent;
 // CraftBukkit end
 public abstract class EntityLiving extends Entity {
 
-    private static final UUID a;
+    private static final UUID a = null;
 
-    private static final AttributeModifier b;
+    private static final AttributeModifier b = null;
 
-    protected static final DataWatcherObject<Byte> au;
+    protected static final DataWatcherObject<Byte> au = null;
 
-    public static final DataWatcherObject<Float> HEALTH;
+    public static final DataWatcherObject<Float> HEALTH = null;
 
-    private static final DataWatcherObject<Integer> f;
+    private static final DataWatcherObject<Integer> f = null;
 
-    private static final DataWatcherObject<Boolean> g;
+    private static final DataWatcherObject<Boolean> g = null;
 
-    private static final DataWatcherObject<Integer> h;
+    private static final DataWatcherObject<Integer> h = null;
 
-    private AttributeMapBase br;
+    private AttributeMapBase br = null;
 
-    public CombatTracker combatTracker;
+    public CombatTracker combatTracker = null;
 
-    public final Map<MobEffectList, MobEffect> effects;
+    public final Map<MobEffectList, MobEffect> effects = null;
 
-    private final ItemStack[] bu;
+    private final ItemStack[] bu = null;
 
-    private final ItemStack[] bv;
+    private final ItemStack[] bv = null;
 
-    public boolean av;
+    public boolean av = false;
 
-    public EnumHand aw;
+    public EnumHand aw = null;
 
-    public int ax;
+    public int ax = 0;
 
-    public int ay;
+    public int ay = 0;
 
-    public int hurtTicks;
+    public int hurtTicks = 0;
 
-    public int aA;
+    public int aA = 0;
 
-    public float aB;
+    public float aB = 0.0F;
 
-    public int deathTicks;
+    public int deathTicks = 0;
 
-    public float aD;
+    public float aD = 0.0F;
 
-    public float aE;
+    public float aE = 0.0F;
 
-    protected int aF;
+    protected int aF = 0;
 
-    public float aG;
+    public float aG = 0.0F;
 
-    public float aH;
+    public float aH = 0.0F;
 
-    public float aI;
+    public float aI = 0.0F;
 
-    public int maxNoDamageTicks;
+    public int maxNoDamageTicks = 0;
 
-    public float aK;
+    public float aK = 0.0F;
 
-    public float aL;
+    public float aL = 0.0F;
 
-    public float aM;
+    public float aM = 0.0F;
 
-    public float aN;
+    public float aN = 0.0F;
 
-    public float aO;
+    public float aO = 0.0F;
 
-    public float aP;
+    public float aP = 0.0F;
 
-    public float aQ;
+    public float aQ = 0.0F;
 
-    public float aR;
+    public float aR = 0.0F;
 
-    public float aS;
+    public float aS = 0.0F;
 
-    public EntityHuman killer;
+    public EntityHuman killer = null;
 
-    protected int lastDamageByPlayerTime;
+    protected int lastDamageByPlayerTime = 0;
 
-    protected boolean aV;
+    protected boolean aV = false;
 
-    protected int ticksFarFromPlayer;
+    protected int ticksFarFromPlayer = 0;
 
-    protected float aX;
+    protected float aX = 0.0F;
 
-    protected float aY;
+    protected float aY = 0.0F;
 
-    protected float aZ;
+    protected float aZ = 0.0F;
 
-    protected float ba;
+    protected float ba = 0.0F;
 
-    protected float bb;
+    protected float bb = 0.0F;
 
-    protected int bc;
+    protected int bc = 0;
 
-    public float lastDamage;
+    public float lastDamage = 0.0F;
 
-    protected boolean be;
+    protected boolean be = false;
 
-    public float bf;
+    public float bf = 0.0F;
 
-    public float bg;
+    public float bg = 0.0F;
 
-    public float bh;
+    public float bh = 0.0F;
 
-    protected int bi;
+    protected int bi = 0;
 
-    protected double bj;
+    protected double bj = 0.0;
 
-    protected double bk;
+    protected double bk = 0.0;
 
-    protected double bl;
+    protected double bl = 0.0;
 
-    protected double bm;
+    protected double bm = 0.0;
 
-    protected double bn;
+    protected double bn = 0.0;
 
-    public boolean updateEffects;
+    public boolean updateEffects = false;
 
-    public EntityLiving lastDamager;
+    public EntityLiving lastDamager = null;
 
-    public int hurtTimestamp;
+    public int hurtTimestamp = 0;
 
-    private EntityLiving bz;
+    private EntityLiving bz = null;
 
-    private int bA;
+    private int bA = 0;
 
-    private float bB;
+    private float bB = 0.0F;
 
-    private int bC;
+    private int bC = 0;
 
-    private float bD;
+    private float bD = 0.0F;
 
-    protected ItemStack bo;
+    protected ItemStack bo = null;
 
-    protected int bp;
+    protected int bp = 0;
 
-    protected int bq;
+    protected int bq = 0;
 
-    private BlockPosition bE;
+    private BlockPosition bE = null;
 
-    private DamageSource bF;
+    private DamageSource bF = null;
 
-    private long bG;
+    private long bG = 0;
 
     // CraftBukkit start
-    public int expToDrop;
+    public int expToDrop = 0;
 
-    public int maxAirTicks;
+    public int maxAirTicks = 0;
 
-    boolean forceDrops;
+    boolean forceDrops = false;
 
-    ArrayList<org.bukkit.inventory.ItemStack> drops;
+    ArrayList<org.bukkit.inventory.ItemStack> drops = null;
 
-    public org.bukkit.craftbukkit.attribute.CraftAttributeMap craftAttributes;
+    public org.bukkit.craftbukkit.attribute.CraftAttributeMap craftAttributes = null;
 
-    public boolean collides;
+    public boolean collides = false;
 
     // CraftBukkit end
     public void Q() {
@@ -277,9 +277,9 @@ public abstract class EntityLiving extends Entity {
     }
 
     // CraftBukkit start
-    private boolean isTickingEffects;
+    private boolean isTickingEffects = false;
 
-    private List<Object> effectsToProcess;
+    private List<Object> effectsToProcess = null;
 
     // CraftBukkit end
     protected void tickPotionEffects() {
@@ -711,7 +711,7 @@ public abstract class EntityLiving extends Entity {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class EntityMinecartTNT extends EntityMinecartAbstract {
 
-    private int a;
+    private int a = 0;
 
     public EntityMinecartTNT(World world) {
     }

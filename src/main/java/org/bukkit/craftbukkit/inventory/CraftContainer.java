@@ -14,13 +14,13 @@ import net.minecraft.server.Slot;
 
 public class CraftContainer extends Container {
 
-    private final InventoryView view;
+    private final InventoryView view = null;
 
-    private InventoryType cachedType;
+    private InventoryType cachedType = null;
 
-    private String cachedTitle;
+    private String cachedTitle = null;
 
-    private final int cachedSize;
+    private final int cachedSize = 0;
 
     public CraftContainer(InventoryView view, int id) {
     }

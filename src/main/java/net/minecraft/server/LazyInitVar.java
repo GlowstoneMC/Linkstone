@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public abstract class LazyInitVar<T> {
 
-    private T a;
+    private T a = null;
 
-    private boolean b;
+    private boolean b = false;
 
     public LazyInitVar() {
     }

@@ -10,21 +10,21 @@ import org.bukkit.inventory.InventoryHolder;
 // CraftBukkit
 public abstract class TileEntity {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final Map<String, Class<? extends TileEntity>> f;
+    private static final Map<String, Class<? extends TileEntity>> f = null;
 
-    private static final Map<Class<? extends TileEntity>, String> g;
+    private static final Map<Class<? extends TileEntity>, String> g = null;
 
-    protected World world;
+    protected World world = null;
 
-    protected BlockPosition position;
+    protected BlockPosition position = null;
 
-    protected boolean d;
+    protected boolean d = false;
 
-    private int h;
+    private int h = 0;
 
-    protected Block e;
+    protected Block e = null;
 
     public TileEntity() {
     }

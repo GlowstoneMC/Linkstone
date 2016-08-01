@@ -8,21 +8,21 @@ import org.bukkit.event.entity.ExplosionPrimeEvent;
 // CraftBukkit end
 public class EntityCreeper extends EntityMonster {
 
-    private static final DataWatcherObject<Integer> a;
+    private static final DataWatcherObject<Integer> a = null;
 
-    private static final DataWatcherObject<Boolean> b;
+    private static final DataWatcherObject<Boolean> b = null;
 
-    private static final DataWatcherObject<Boolean> c;
+    private static final DataWatcherObject<Boolean> c = null;
 
-    private int bx;
+    private int bx = 0;
 
-    private int fuseTicks;
+    private int fuseTicks = 0;
 
-    private int maxFuseTicks;
+    private int maxFuseTicks = 0;
 
-    private int explosionRadius;
+    private int explosionRadius = 0;
 
-    private int bB;
+    private int bB = 0;
 
     public EntityCreeper(World world) {
     }

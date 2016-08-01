@@ -7,9 +7,9 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public class BlockCommand extends BlockTileEntity {
 
-    public static final BlockStateDirection a;
+    public static final BlockStateDirection a = null;
 
-    public static final BlockStateBoolean b;
+    public static final BlockStateBoolean b = null;
 
     public BlockCommand(MaterialMapColor materialmapcolor) {
     }

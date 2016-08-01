@@ -2,21 +2,21 @@ package net.minecraft.server;
 
 public class ControllerMove {
 
-    protected final EntityInsentient a;
+    protected final EntityInsentient a = null;
 
-    protected double b;
+    protected double b = 0.0;
 
-    protected double c;
+    protected double c = 0.0;
 
-    protected double d;
+    protected double d = 0.0;
 
-    protected double e;
+    protected double e = 0.0;
 
-    protected float f;
+    protected float f = 0.0F;
 
-    protected float g;
+    protected float g = 0.0F;
 
-    protected ControllerMove.Operation h;
+    protected ControllerMove.Operation h = null;
 
     public ControllerMove(EntityInsentient entityinsentient) {
     }

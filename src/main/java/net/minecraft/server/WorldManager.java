@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class WorldManager implements IWorldAccess {
 
-    private final MinecraftServer a;
+    private final MinecraftServer a = null;
 
-    private final WorldServer world;
+    private final WorldServer world = null;
 
     public WorldManager(MinecraftServer minecraftserver, WorldServer worldserver) {
     }

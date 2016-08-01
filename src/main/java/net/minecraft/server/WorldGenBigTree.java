@@ -7,31 +7,31 @@ import java.util.Random;
 
 public class WorldGenBigTree extends WorldGenTreeAbstract {
 
-    private Random k;
+    private Random k = null;
 
-    private World l;
+    private World l = null;
 
-    private BlockPosition m;
+    private BlockPosition m = null;
 
-    int a;
+    int a = 0;
 
-    int b;
+    int b = 0;
 
-    double c;
+    double c = 0.0;
 
-    double d;
+    double d = 0.0;
 
-    double e;
+    double e = 0.0;
 
-    double f;
+    double f = 0.0;
 
-    int g;
+    int g = 0;
 
-    int h;
+    int h = 0;
 
-    int i;
+    int i = 0;
 
-    List<WorldGenBigTree.Position> j;
+    List<WorldGenBigTree.Position> j = null;
 
     public WorldGenBigTree(boolean flag) {
     }
@@ -94,7 +94,7 @@ public class WorldGenBigTree extends WorldGenTreeAbstract {
 
     static class Position extends BlockPosition {
 
-        private final int b;
+        private final int b = 0;
 
         public Position(BlockPosition blockposition, int i) {
         }

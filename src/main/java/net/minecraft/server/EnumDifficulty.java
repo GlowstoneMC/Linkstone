@@ -4,11 +4,11 @@ public enum EnumDifficulty {
 
     PEACEFUL(0, "options.difficulty.peaceful"), EASY(1, "options.difficulty.easy"), NORMAL(2, "options.difficulty.normal"), HARD(3, "options.difficulty.hard");
 
-    private static final EnumDifficulty[] e;
+    private static final EnumDifficulty[] e = null;
 
-    private final int f;
+    private final int f = 0;
 
-    private final String g;
+    private final String g = null;
 
     private EnumDifficulty(int i, String s) {
     }

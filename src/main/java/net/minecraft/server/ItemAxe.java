@@ -5,11 +5,11 @@ import java.util.Set;
 
 public class ItemAxe extends ItemTool {
 
-    private static final Set<Block> e;
+    private static final Set<Block> e = null;
 
-    private static final float[] f;
+    private static final float[] f = null;
 
-    private static final float[] n;
+    private static final float[] n = null;
 
     protected ItemAxe(Item.EnumToolMaterial item_enumtoolmaterial) {
     }

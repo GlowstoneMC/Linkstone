@@ -9,17 +9,17 @@ import org.apache.logging.log4j.Logger;
 
 public class PathfinderGoalNearestAttackableTargetInsentient extends PathfinderGoal {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final EntityInsentient b;
+    private final EntityInsentient b = null;
 
-    private final Predicate<EntityLiving> c;
+    private final Predicate<EntityLiving> c = null;
 
-    private final PathfinderGoalNearestAttackableTarget.DistanceComparator d;
+    private final PathfinderGoalNearestAttackableTarget.DistanceComparator d = null;
 
-    private EntityLiving e;
+    private EntityLiving e = null;
 
-    private final Class<? extends EntityLiving> f;
+    private final Class<? extends EntityLiving> f = null;
 
     public PathfinderGoalNearestAttackableTargetInsentient(EntityInsentient entityinsentient, Class<? extends EntityLiving> oclass) {
     }

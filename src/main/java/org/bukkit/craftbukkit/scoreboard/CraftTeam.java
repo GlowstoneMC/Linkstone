@@ -13,7 +13,7 @@ import net.minecraft.server.ScoreboardTeamBase;
 
 final class CraftTeam extends CraftScoreboardComponent implements Team {
 
-    private final ScoreboardTeam team;
+    private final ScoreboardTeam team = null;
 
     CraftTeam(CraftScoreboard scoreboard, ScoreboardTeam team) {
     }

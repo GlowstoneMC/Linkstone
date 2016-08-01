@@ -9,11 +9,11 @@ public abstract class Waitable<T> implements Runnable {
         WAITING, RUNNING, FINISHED
     }
 
-    Throwable t;
+    Throwable t = null;
 
-    T value;
+    T value = null;
 
-    Status status;
+    Status status = null;
 
     public final void run() {
     }

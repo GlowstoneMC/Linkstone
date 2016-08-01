@@ -2,17 +2,17 @@ package net.minecraft.server;
 
 public class VillageDoor {
 
-    private final BlockPosition a;
+    private final BlockPosition a = null;
 
-    private final BlockPosition b;
+    private final BlockPosition b = null;
 
-    private final EnumDirection c;
+    private final EnumDirection c = null;
 
-    private int d;
+    private int d = 0;
 
-    private boolean e;
+    private boolean e = false;
 
-    private int f;
+    private int f = 0;
 
     public VillageDoor(BlockPosition blockposition, int i, int j, int k) {
     }

@@ -8,15 +8,15 @@ import javax.annotation.Nullable;
 
 public class WorldGenStrongholdPieces {
 
-    private static final WorldGenStrongholdPieces.WorldGenStrongholdPieceWeight[] b;
+    private static final WorldGenStrongholdPieces.WorldGenStrongholdPieceWeight[] b = null;
 
-    private static List<WorldGenStrongholdPieces.WorldGenStrongholdPieceWeight> c;
+    private static List<WorldGenStrongholdPieces.WorldGenStrongholdPieceWeight> c = null;
 
-    private static Class<? extends WorldGenStrongholdPieces.WorldGenStrongholdPiece> d;
+    private static Class<? extends WorldGenStrongholdPieces.WorldGenStrongholdPiece> d = null;
 
-    static int a;
+    static int a = 0;
 
-    private static final WorldGenStrongholdPieces.WorldGenStrongholdStones e;
+    private static final WorldGenStrongholdPieces.WorldGenStrongholdStones e = null;
 
     public static void a() {
     }
@@ -42,9 +42,9 @@ public class WorldGenStrongholdPieces {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }
@@ -64,7 +64,7 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdPortalRoom extends WorldGenStrongholdPieces.WorldGenStrongholdPiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenStrongholdPortalRoom() {
         }
@@ -92,13 +92,13 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdCrossing extends WorldGenStrongholdPieces.WorldGenStrongholdPiece {
 
-        private boolean a;
+        private boolean a = false;
 
-        private boolean b;
+        private boolean b = false;
 
-        private boolean c;
+        private boolean c = false;
 
-        private boolean e;
+        private boolean e = false;
 
         public WorldGenStrongholdCrossing() {
         }
@@ -126,7 +126,7 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdLibrary extends WorldGenStrongholdPieces.WorldGenStrongholdPiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenStrongholdLibrary() {
         }
@@ -171,7 +171,7 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdRoomCrossing extends WorldGenStrongholdPieces.WorldGenStrongholdPiece {
 
-        protected int a;
+        protected int a = 0;
 
         public WorldGenStrongholdRoomCrossing() {
         }
@@ -252,7 +252,7 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdChestCorridor extends WorldGenStrongholdPieces.WorldGenStrongholdPiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenStrongholdChestCorridor() {
         }
@@ -280,9 +280,9 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdStairs extends WorldGenStrongholdPieces.WorldGenStrongholdPiece {
 
-        private boolean a;
+        private boolean a = false;
 
-        private boolean b;
+        private boolean b = false;
 
         public WorldGenStrongholdStairs() {
         }
@@ -310,11 +310,11 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdStart extends WorldGenStrongholdPieces.WorldGenStrongholdStairs2 {
 
-        public WorldGenStrongholdPieces.WorldGenStrongholdPieceWeight a;
+        public WorldGenStrongholdPieces.WorldGenStrongholdPieceWeight a = null;
 
-        public WorldGenStrongholdPieces.WorldGenStrongholdPortalRoom b;
+        public WorldGenStrongholdPieces.WorldGenStrongholdPortalRoom b = null;
 
-        public List<StructurePiece> c;
+        public List<StructurePiece> c = null;
 
         public WorldGenStrongholdStart() {
         }
@@ -329,7 +329,7 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdStairs2 extends WorldGenStrongholdPieces.WorldGenStrongholdPiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenStrongholdStairs2() {
         }
@@ -360,7 +360,7 @@ public class WorldGenStrongholdPieces {
 
     public static class WorldGenStrongholdCorridor extends WorldGenStrongholdPieces.WorldGenStrongholdPiece {
 
-        private int a;
+        private int a = 0;
 
         public WorldGenStrongholdCorridor() {
         }
@@ -385,7 +385,7 @@ public class WorldGenStrongholdPieces {
 
     abstract static class WorldGenStrongholdPiece extends StructurePiece {
 
-        protected WorldGenStrongholdPieces.WorldGenStrongholdPiece.WorldGenStrongholdPiece$WorldGenStrongholdDoorType d;
+        protected WorldGenStrongholdPieces.WorldGenStrongholdPiece.WorldGenStrongholdPiece$WorldGenStrongholdDoorType d = null;
 
         public WorldGenStrongholdPiece() {
         }
@@ -433,13 +433,13 @@ public class WorldGenStrongholdPieces {
 
     static class WorldGenStrongholdPieceWeight {
 
-        public Class<? extends WorldGenStrongholdPieces.WorldGenStrongholdPiece> a;
+        public Class<? extends WorldGenStrongholdPieces.WorldGenStrongholdPiece> a = null;
 
-        public final int b;
+        public final int b = 0;
 
-        public int c;
+        public int c = 0;
 
-        public int d;
+        public int d = 0;
 
         public WorldGenStrongholdPieceWeight(Class<? extends WorldGenStrongholdPieces.WorldGenStrongholdPiece> oclass, int i, int j) {
         }

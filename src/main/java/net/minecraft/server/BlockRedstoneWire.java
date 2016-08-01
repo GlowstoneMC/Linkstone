@@ -13,21 +13,21 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public class BlockRedstoneWire extends Block {
 
-    public static final BlockStateEnum<BlockRedstoneWire.EnumRedstoneWireConnection> NORTH;
+    public static final BlockStateEnum<BlockRedstoneWire.EnumRedstoneWireConnection> NORTH = null;
 
-    public static final BlockStateEnum<BlockRedstoneWire.EnumRedstoneWireConnection> EAST;
+    public static final BlockStateEnum<BlockRedstoneWire.EnumRedstoneWireConnection> EAST = null;
 
-    public static final BlockStateEnum<BlockRedstoneWire.EnumRedstoneWireConnection> SOUTH;
+    public static final BlockStateEnum<BlockRedstoneWire.EnumRedstoneWireConnection> SOUTH = null;
 
-    public static final BlockStateEnum<BlockRedstoneWire.EnumRedstoneWireConnection> WEST;
+    public static final BlockStateEnum<BlockRedstoneWire.EnumRedstoneWireConnection> WEST = null;
 
-    public static final BlockStateInteger POWER;
+    public static final BlockStateInteger POWER = null;
 
-    protected static final AxisAlignedBB[] f;
+    protected static final AxisAlignedBB[] f = null;
 
-    private boolean g;
+    private boolean g = false;
 
-    private final Set<BlockPosition> B;
+    private final Set<BlockPosition> B = null;
 
     public BlockRedstoneWire() {
     }
@@ -148,9 +148,9 @@ public class BlockRedstoneWire extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }
@@ -160,7 +160,7 @@ public class BlockRedstoneWire extends Block {
 
         UP("up"), SIDE("side"), NONE("none");
 
-        private final String d;
+        private final String d = null;
 
         private EnumRedstoneWireConnection(String s) {
         }

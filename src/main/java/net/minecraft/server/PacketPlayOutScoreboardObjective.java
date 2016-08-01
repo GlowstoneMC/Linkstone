@@ -4,13 +4,13 @@ import java.io.IOException;
 
 public class PacketPlayOutScoreboardObjective implements Packet<PacketListenerPlayOut> {
 
-    private String a;
+    private String a = null;
 
-    private String b;
+    private String b = null;
 
-    private IScoreboardCriteria.EnumScoreboardHealthDisplay c;
+    private IScoreboardCriteria.EnumScoreboardHealthDisplay c = null;
 
-    private int d;
+    private int d = 0;
 
     public PacketPlayOutScoreboardObjective() {
     }

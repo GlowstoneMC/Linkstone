@@ -6,9 +6,9 @@ import java.util.UUID;
 
 public class OpListEntry extends JsonListEntry<GameProfile> {
 
-    private final int a;
+    private final int a = 0;
 
-    private final boolean b;
+    private final boolean b = false;
 
     public OpListEntry(GameProfile gameprofile, int i, boolean flag) {
     }

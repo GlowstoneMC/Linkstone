@@ -6,11 +6,11 @@ import javax.annotation.Nullable;
 
 public class BlockBrewingStand extends BlockTileEntity {
 
-    public static final BlockStateBoolean[] HAS_BOTTLE;
+    public static final BlockStateBoolean[] HAS_BOTTLE = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
     public BlockBrewingStand() {
     }

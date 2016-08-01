@@ -4,11 +4,11 @@ import javax.annotation.Nullable;
 
 public class DataPaletteHash implements DataPalette {
 
-    private final RegistryID<IBlockData> a;
+    private final RegistryID<IBlockData> a = null;
 
-    private final DataPaletteExpandable b;
+    private final DataPaletteExpandable b = null;
 
-    private final int c;
+    private final int c = 0;
 
     public DataPaletteHash(int i, DataPaletteExpandable datapaletteexpandable) {
     }

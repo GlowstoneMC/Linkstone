@@ -2,15 +2,15 @@ package net.minecraft.server;
 
 public class PathfinderGoalTame extends PathfinderGoal {
 
-    private final EntityHorse entity;
+    private final EntityHorse entity = null;
 
-    private final double b;
+    private final double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private double d;
+    private double d = 0.0;
 
-    private double e;
+    private double e = 0.0;
 
     public PathfinderGoalTame(EntityHorse entityhorse, double d0) {
     }

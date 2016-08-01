@@ -8,11 +8,11 @@ import org.bukkit.craftbukkit.CraftWorld;
 
 public class CraftCommandBlock extends CraftBlockState implements CommandBlock {
 
-    private final TileEntityCommand commandBlock;
+    private final TileEntityCommand commandBlock = null;
 
-    private String command;
+    private String command = null;
 
-    private String name;
+    private String name = null;
 
     public CraftCommandBlock(Block block) {
     }

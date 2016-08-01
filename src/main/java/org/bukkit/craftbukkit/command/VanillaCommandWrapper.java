@@ -19,7 +19,7 @@ import org.bukkit.entity.minecart.CommandMinecart;
 
 public final class VanillaCommandWrapper extends VanillaCommand {
 
-    protected final CommandAbstract vanillaCommand;
+    protected final CommandAbstract vanillaCommand = null;
 
     public VanillaCommandWrapper(CommandAbstract vanillaCommand, String usage) {
     }
@@ -34,7 +34,7 @@ public final class VanillaCommandWrapper extends VanillaCommand {
         return null;
     }
 
-    public static CommandSender lastSender;
+    public static CommandSender lastSender = null;
 
     // Nasty :(
     public final int dispatchVanillaCommand(CommandSender bSender, ICommandListener icommandlistener, String[] as) {

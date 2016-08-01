@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class StatisticManager {
 
-    protected final Map<Statistic, StatisticWrapper> a;
+    protected final Map<Statistic, StatisticWrapper> a = null;
 
     public StatisticManager() {
     }

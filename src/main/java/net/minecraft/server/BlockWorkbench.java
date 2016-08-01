@@ -13,9 +13,9 @@ public class BlockWorkbench extends Block {
 
     public static class TileEntityContainerWorkbench implements ITileEntityContainer {
 
-        private final World a;
+        private final World a = null;
 
-        private final BlockPosition b;
+        private final BlockPosition b = null;
 
         public TileEntityContainerWorkbench(World world, BlockPosition blockposition) {
         }

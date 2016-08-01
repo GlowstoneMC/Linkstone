@@ -8,19 +8,19 @@ import org.bukkit.event.entity.EntityTargetEvent;
 // CraftBukkit end
 public class EntityExperienceOrb extends Entity {
 
-    public int a;
+    public int a = 0;
 
-    public int b;
+    public int b = 0;
 
-    public int c;
+    public int c = 0;
 
-    private int d;
+    private int d = 0;
 
-    public int value;
+    public int value = 0;
 
-    private EntityHuman targetPlayer;
+    private EntityHuman targetPlayer = null;
 
-    private int targetTime;
+    private int targetTime = 0;
 
     public EntityExperienceOrb(World world, double d0, double d1, double d2, int i) {
     }

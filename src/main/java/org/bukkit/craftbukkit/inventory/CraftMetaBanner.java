@@ -17,17 +17,17 @@ import org.bukkit.inventory.meta.BannerMeta;
 @DelegateDeserialization(CraftMetaItem.SerializableMeta.class)
 public class CraftMetaBanner extends CraftMetaItem implements BannerMeta {
 
-    static final ItemMetaKey BASE;
+    static final ItemMetaKey BASE = null;
 
-    static final ItemMetaKey PATTERNS;
+    static final ItemMetaKey PATTERNS = null;
 
-    static final ItemMetaKey COLOR;
+    static final ItemMetaKey COLOR = null;
 
-    static final ItemMetaKey PATTERN;
+    static final ItemMetaKey PATTERN = null;
 
-    private DyeColor base;
+    private DyeColor base = null;
 
-    private List<Pattern> patterns;
+    private List<Pattern> patterns = null;
 
     CraftMetaBanner(CraftMetaItem meta) {
     }

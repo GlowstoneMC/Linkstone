@@ -20,41 +20,41 @@ import org.apache.logging.log4j.Logger;
 
 public class EnderDragonBattle {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final Predicate<EntityPlayer> b;
+    private static final Predicate<EntityPlayer> b = null;
 
-    private final BossBattleServer c;
+    private final BossBattleServer c = null;
 
-    private final WorldServer d;
+    private final WorldServer d = null;
 
-    private final List<Integer> e;
+    private final List<Integer> e = null;
 
-    private final ShapeDetector f;
+    private final ShapeDetector f = null;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private int i;
+    private int i = 0;
 
-    private int j;
+    private int j = 0;
 
-    private boolean k;
+    private boolean k = false;
 
-    private boolean l;
+    private boolean l = false;
 
-    private UUID m;
+    private UUID m = null;
 
-    private boolean n;
+    private boolean n = false;
 
-    private BlockPosition o;
+    private BlockPosition o = null;
 
-    private EnumDragonRespawn p;
+    private EnumDragonRespawn p = null;
 
-    private int q;
+    private int q = 0;
 
-    private List<EntityEnderCrystal> r;
+    private List<EntityEnderCrystal> r = null;
 
     public EnderDragonBattle(WorldServer worldserver, NBTTagCompound nbttagcompound) {
     }

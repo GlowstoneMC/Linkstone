@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public class BlockActionData {
 
-    private final BlockPosition a;
+    private final BlockPosition a = null;
 
-    private final Block b;
+    private final Block b = null;
 
-    private final int c;
+    private final int c = 0;
 
-    private final int d;
+    private final int d = 0;
 
     public BlockActionData(BlockPosition blockposition, Block block, int i, int j) {
     }

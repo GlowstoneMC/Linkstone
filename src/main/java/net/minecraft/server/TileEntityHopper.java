@@ -14,16 +14,16 @@ import org.bukkit.inventory.Inventory;
 // CraftBukkit end
 public class TileEntityHopper extends TileEntityLootable implements IHopper, ITickable {
 
-    private ItemStack[] items;
+    private ItemStack[] items = null;
 
-    private String f;
+    private String f = null;
 
-    private int g;
+    private int g = 0;
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;

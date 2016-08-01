@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class ItemPickaxe extends ItemTool {
 
-    private static final Set<Block> e;
+    private static final Set<Block> e = null;
 
     protected ItemPickaxe(Item.EnumToolMaterial item_enumtoolmaterial) {
     }

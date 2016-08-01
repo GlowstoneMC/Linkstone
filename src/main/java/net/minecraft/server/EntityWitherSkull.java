@@ -5,7 +5,7 @@ import org.bukkit.event.entity.ExplosionPrimeEvent;
 // CraftBukkit
 public class EntityWitherSkull extends EntityFireball {
 
-    private static final DataWatcherObject<Boolean> e;
+    private static final DataWatcherObject<Boolean> e = null;
 
     public EntityWitherSkull(World world) {
     }

@@ -32,11 +32,11 @@ public abstract class ScoreboardTeamBase {
 
         ALWAYS("always", 0), NEVER("never", 1), HIDE_FOR_OTHER_TEAMS("pushOtherTeams", 2), HIDE_FOR_OWN_TEAM("pushOwnTeam", 3);
 
-        private static final Map<String, ScoreboardTeamBase.EnumTeamPush> g;
+        private static final Map<String, ScoreboardTeamBase.EnumTeamPush> g = null;
 
-        public final String e;
+        public final String e = null;
 
-        public final int f;
+        public final int f = 0;
 
         public static String[] a() {
             return null;
@@ -57,11 +57,11 @@ public abstract class ScoreboardTeamBase {
 
         ALWAYS("always", 0), NEVER("never", 1), HIDE_FOR_OTHER_TEAMS("hideForOtherTeams", 2), HIDE_FOR_OWN_TEAM("hideForOwnTeam", 3);
 
-        private static final Map<String, ScoreboardTeamBase.EnumNameTagVisibility> g;
+        private static final Map<String, ScoreboardTeamBase.EnumNameTagVisibility> g = null;
 
-        public final String e;
+        public final String e = null;
 
-        public final int f;
+        public final int f = 0;
 
         public static String[] a() {
             return null;

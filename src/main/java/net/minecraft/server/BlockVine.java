@@ -8,27 +8,27 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class BlockVine extends Block {
 
-    public static final BlockStateBoolean UP;
+    public static final BlockStateBoolean UP = null;
 
-    public static final BlockStateBoolean NORTH;
+    public static final BlockStateBoolean NORTH = null;
 
-    public static final BlockStateBoolean EAST;
+    public static final BlockStateBoolean EAST = null;
 
-    public static final BlockStateBoolean SOUTH;
+    public static final BlockStateBoolean SOUTH = null;
 
-    public static final BlockStateBoolean WEST;
+    public static final BlockStateBoolean WEST = null;
 
-    public static final BlockStateBoolean[] f;
+    public static final BlockStateBoolean[] f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
-    protected static final AxisAlignedBB C;
+    protected static final AxisAlignedBB C = null;
 
-    protected static final AxisAlignedBB D;
+    protected static final AxisAlignedBB D = null;
 
-    protected static final AxisAlignedBB E;
+    protected static final AxisAlignedBB E = null;
 
     public BlockVine() {
     }
@@ -122,11 +122,11 @@ public class BlockVine extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
         static {
         }

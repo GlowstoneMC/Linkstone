@@ -10,16 +10,16 @@ import org.bukkit.entity.HumanEntity;
 // CraftBukkit end
 public class TileEntityDispenser extends TileEntityLootable implements IInventory {
 
-    private static final Random f;
+    private static final Random f = null;
 
-    private ItemStack[] items;
+    private ItemStack[] items = null;
 
-    protected String a;
+    protected String a = null;
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;

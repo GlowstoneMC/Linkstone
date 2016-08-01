@@ -10,22 +10,22 @@ import javax.annotation.Nullable;
 
 public class LootTableInfo {
 
-    private final float a;
+    private final float a = 0.0F;
 
-    private final WorldServer b;
+    private final WorldServer b = null;
 
-    private final LootTableRegistry c;
-
-    @Nullable
-    private final Entity d;
+    private final LootTableRegistry c = null;
 
     @Nullable
-    private final EntityHuman e;
+    private final Entity d = null;
 
     @Nullable
-    private final DamageSource f;
+    private final EntityHuman e = null;
 
-    private final Set<LootTable> g;
+    @Nullable
+    private final DamageSource f = null;
+
+    private final Set<LootTable> g = null;
 
     public LootTableInfo(float f, WorldServer worldserver, LootTableRegistry loottableregistry, @Nullable Entity entity, @Nullable EntityHuman entityhuman, @Nullable DamageSource damagesource) {
     }
@@ -67,7 +67,7 @@ public class LootTableInfo {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -77,7 +77,7 @@ public class LootTableInfo {
 
         THIS("this"), KILLER("killer"), KILLER_PLAYER("killer_player");
 
-        private final String d;
+        private final String d = null;
 
         private EntityTarget(String s) {
         }
@@ -109,15 +109,15 @@ public class LootTableInfo {
 
     public static class a {
 
-        private final WorldServer a;
+        private final WorldServer a = null;
 
-        private float b;
+        private float b = 0.0F;
 
-        private Entity c;
+        private Entity c = null;
 
-        private EntityHuman d;
+        private EntityHuman d = null;
 
-        private DamageSource e;
+        private DamageSource e = null;
 
         public a(WorldServer worldserver) {
         }

@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayInBoatMove implements Packet<PacketListenerPlayIn> {
 
-    private boolean a;
+    private boolean a = false;
 
-    private boolean b;
+    private boolean b = false;
 
     public PacketPlayInBoatMove() {
     }

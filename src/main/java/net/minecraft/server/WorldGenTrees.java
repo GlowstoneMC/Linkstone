@@ -5,17 +5,17 @@ import java.util.Random;
 
 public class WorldGenTrees extends WorldGenTreeAbstract {
 
-    private static final IBlockData a;
+    private static final IBlockData a = null;
 
-    private static final IBlockData b;
+    private static final IBlockData b = null;
 
-    private final int c;
+    private final int c = 0;
 
-    private final boolean d;
+    private final boolean d = false;
 
-    private final IBlockData e;
+    private final IBlockData e = null;
 
-    private final IBlockData f;
+    private final IBlockData f = null;
 
     public WorldGenTrees(boolean flag) {
     }

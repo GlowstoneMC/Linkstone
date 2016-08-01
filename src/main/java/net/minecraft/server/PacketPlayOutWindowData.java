@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayOutWindowData implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private int b;
+    private int b = 0;
 
-    private int c;
+    private int c = 0;
 
     public PacketPlayOutWindowData() {
     }

@@ -6,19 +6,19 @@ import org.apache.logging.log4j.Logger;
 
 public class MobEffect implements Comparable<MobEffect> {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final MobEffectList b;
+    private final MobEffectList b = null;
 
-    private int duration;
+    private int duration = 0;
 
-    private int amplification;
+    private int amplification = 0;
 
-    private boolean splash;
+    private boolean splash = false;
 
-    private boolean ambient;
+    private boolean ambient = false;
 
-    private boolean h;
+    private boolean h = false;
 
     public MobEffect(MobEffectList mobeffectlist) {
     }

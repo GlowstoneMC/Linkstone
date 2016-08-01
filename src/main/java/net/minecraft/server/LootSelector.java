@@ -17,13 +17,13 @@ import org.apache.commons.lang3.ArrayUtils;
 
 public class LootSelector {
 
-    private final LotoSelectorEntry[] a;
+    private final LotoSelectorEntry[] a = null;
 
-    private final LootItemCondition[] b;
+    private final LootItemCondition[] b = null;
 
-    private final LootValueBounds c;
+    private final LootValueBounds c = null;
 
-    private final LootValueBounds d;
+    private final LootValueBounds d = null;
 
     public LootSelector(LotoSelectorEntry[] alotoselectorentry, LootItemCondition[] alootitemcondition, LootValueBounds lootvaluebounds, LootValueBounds lootvaluebounds1) {
     }

@@ -8,15 +8,15 @@ import org.apache.logging.log4j.Logger;
 
 public class WorldGenFactory {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final Map<String, Class<? extends StructureStart>> b;
+    private static final Map<String, Class<? extends StructureStart>> b = null;
 
-    private static final Map<Class<? extends StructureStart>, String> c;
+    private static final Map<Class<? extends StructureStart>, String> c = null;
 
-    private static final Map<String, Class<? extends StructurePiece>> d;
+    private static final Map<String, Class<? extends StructurePiece>> d = null;
 
-    private static final Map<Class<? extends StructurePiece>, String> e;
+    private static final Map<Class<? extends StructurePiece>, String> e = null;
 
     private static void b(Class<? extends StructureStart> oclass, String s) {
     }

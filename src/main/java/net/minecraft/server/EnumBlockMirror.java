@@ -4,9 +4,9 @@ public enum EnumBlockMirror {
 
     NONE("no_mirror"), LEFT_RIGHT("mirror_left_right"), FRONT_BACK("mirror_front_back");
 
-    private final String d;
+    private final String d = null;
 
-    private static final String[] e;
+    private static final String[] e = null;
 
     private EnumBlockMirror(String s) {
     }
@@ -28,7 +28,7 @@ public enum EnumBlockMirror {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

@@ -4,15 +4,15 @@ import java.io.IOException;
 
 public class PacketPlayOutOpenWindow implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private String b;
+    private String b = null;
 
-    private IChatBaseComponent c;
+    private IChatBaseComponent c = null;
 
-    private int d;
+    private int d = 0;
 
-    private int e;
+    private int e = 0;
 
     public PacketPlayOutOpenWindow() {
     }

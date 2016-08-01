@@ -2,25 +2,25 @@ package net.minecraft.server;
 
 public class PathfinderGoalArrowAttack extends PathfinderGoal {
 
-    private final EntityInsentient a;
+    private final EntityInsentient a = null;
 
-    private final IRangedEntity b;
+    private final IRangedEntity b = null;
 
-    private EntityLiving c;
+    private EntityLiving c = null;
 
-    private int d;
+    private int d = 0;
 
-    private final double e;
+    private final double e = 0.0;
 
-    private int f;
+    private int f = 0;
 
-    private final int g;
+    private final int g = 0;
 
-    private final int h;
+    private final int h = 0;
 
-    private final float i;
+    private final float i = 0.0F;
 
-    private final float j;
+    private final float j = 0.0F;
 
     public PathfinderGoalArrowAttack(IRangedEntity irangedentity, double d0, int i, float f) {
     }

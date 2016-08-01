@@ -4,14 +4,14 @@ import javax.annotation.Nullable;
 
 public class EntityMinecartCommandBlock extends EntityMinecartAbstract {
 
-    public static final DataWatcherObject<String> a;
+    public static final DataWatcherObject<String> a = null;
 
     // PAIL: private -> public
-    private static final DataWatcherObject<IChatBaseComponent> b;
+    private static final DataWatcherObject<IChatBaseComponent> b = null;
 
-    private final CommandBlockListenerAbstract c;
+    private final CommandBlockListenerAbstract c = null;
 
-    private int d;
+    private int d = 0;
 
     public EntityMinecartCommandBlock(World world) {
     }

@@ -6,9 +6,9 @@ import java.io.IOException;
 
 public class RemoteStatusReply {
 
-    private final ByteArrayOutputStream a;
+    private final ByteArrayOutputStream a = null;
 
-    private final DataOutputStream b;
+    private final DataOutputStream b = null;
 
     public RemoteStatusReply(int i) {
     }

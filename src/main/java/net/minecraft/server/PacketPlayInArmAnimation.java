@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayInArmAnimation implements Packet<PacketListenerPlayIn> {
 
-    private EnumHand a;
+    private EnumHand a = null;
 
     public PacketPlayInArmAnimation() {
     }

@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class ScoreboardBaseCriteria implements IScoreboardCriteria {
 
-    private final String o;
+    private final String o = null;
 
     public ScoreboardBaseCriteria(String s) {
     }

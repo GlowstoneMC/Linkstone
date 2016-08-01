@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class EntityItemFrame extends EntityHanging {
 
-    private static final DataWatcherObject<Optional<ItemStack>> c;
+    private static final DataWatcherObject<Optional<ItemStack>> c = null;
 
-    private static final DataWatcherObject<Integer> d;
+    private static final DataWatcherObject<Integer> d = null;
 
-    private float e;
+    private float e = 0.0F;
 
     public EntityItemFrame(World world) {
     }

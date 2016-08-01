@@ -4,7 +4,7 @@ import java.util.Random;
 
 public abstract class WorldGenerator {
 
-    private final boolean a;
+    private final boolean a = false;
 
     public WorldGenerator() {
     }

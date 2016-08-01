@@ -10,7 +10,7 @@ import org.bukkit.inventory.Inventory;
 
 public class CraftHopper extends CraftBlockState implements Hopper {
 
-    private final TileEntityHopper hopper;
+    private final TileEntityHopper hopper = null;
 
     public CraftHopper(final Block block) {
     }

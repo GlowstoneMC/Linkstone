@@ -50,11 +50,11 @@ import org.bukkit.inventory.meta.BlockStateMeta;
 public class CraftMetaBlockState extends CraftMetaItem implements BlockStateMeta {
 
     @ItemMetaKey.Specific(ItemMetaKey.Specific.To.NBT)
-    static final ItemMetaKey BLOCK_ENTITY_TAG;
+    static final ItemMetaKey BLOCK_ENTITY_TAG = null;
 
-    final Material material;
+    final Material material = null;
 
-    NBTTagCompound blockEntityTag;
+    NBTTagCompound blockEntityTag = null;
 
     CraftMetaBlockState(CraftMetaItem meta, Material material) {
     }

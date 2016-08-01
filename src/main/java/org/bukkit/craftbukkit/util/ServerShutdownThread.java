@@ -5,7 +5,7 @@ import net.minecraft.server.MinecraftServer;
 
 public class ServerShutdownThread extends Thread {
 
-    private final MinecraftServer server;
+    private final MinecraftServer server = null;
 
     public ServerShutdownThread(MinecraftServer server) {
     }

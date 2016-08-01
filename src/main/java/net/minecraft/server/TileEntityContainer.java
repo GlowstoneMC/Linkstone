@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public abstract class TileEntityContainer extends TileEntity implements ITileEntityContainer, ITileInventory {
 
-    private ChestLock a;
+    private ChestLock a = null;
 
     public TileEntityContainer() {
     }

@@ -5,19 +5,19 @@ import java.util.UUID;
 
 public class MathHelper {
 
-    public static final float a;
+    public static final float a = 0.0F;
 
-    private static final float[] b;
+    private static final float[] b = null;
 
-    private static final Random c;
+    private static final Random c = null;
 
-    private static final int[] d;
+    private static final int[] d = null;
 
-    private static final double e;
+    private static final double e = 0.0;
 
-    private static final double[] f;
+    private static final double[] f = null;
 
-    private static final double[] g;
+    private static final double[] g = null;
 
     public static float sin(float f) {
         return 0.0F;

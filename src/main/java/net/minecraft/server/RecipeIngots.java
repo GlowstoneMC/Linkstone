@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class RecipeIngots {
 
-    private final Object[][] a;
+    private final Object[][] a = null;
 
     public RecipeIngots() {
     }

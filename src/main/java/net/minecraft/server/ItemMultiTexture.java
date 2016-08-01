@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class ItemMultiTexture extends ItemBlock {
 
-    protected final Block b;
+    protected final Block b = null;
 
-    protected final Function<ItemStack, String> c;
+    protected final Function<ItemStack, String> c = null;
 
     public ItemMultiTexture(Block block, Block block1, Function<ItemStack, String> function) {
     }

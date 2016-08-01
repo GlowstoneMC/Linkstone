@@ -12,11 +12,11 @@ import org.bukkit.potion.PotionData;
 
 public class CraftPotionUtil {
 
-    private static final BiMap<PotionType, String> regular;
+    private static final BiMap<PotionType, String> regular = null;
 
-    private static final BiMap<PotionType, String> upgradeable;
+    private static final BiMap<PotionType, String> upgradeable = null;
 
-    private static final BiMap<PotionType, String> extendable;
+    private static final BiMap<PotionType, String> extendable = null;
 
     public static String fromBukkit(PotionData data) {
         return null;

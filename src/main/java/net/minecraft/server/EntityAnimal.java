@@ -4,13 +4,13 @@ import javax.annotation.Nullable;
 
 public abstract class EntityAnimal extends EntityAgeable implements IAnimal {
 
-    protected Block bA;
+    protected Block bA = null;
 
-    private int bx;
+    private int bx = 0;
 
-    private EntityHuman by;
+    private EntityHuman by = null;
 
-    public ItemStack breedItem;
+    public ItemStack breedItem = null;
 
     // CraftBukkit - Add breedItem variable
     public EntityAnimal(World world) {

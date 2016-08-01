@@ -5,32 +5,32 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public abstract class EntityFireball extends Entity {
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
-    private int g;
+    private int g = 0;
 
-    private Block h;
+    private Block h = null;
 
-    private boolean au;
+    private boolean au = false;
 
-    public EntityLiving shooter;
+    public EntityLiving shooter = null;
 
-    private int av;
+    private int av = 0;
 
-    private int aw;
+    private int aw = 0;
 
-    public double dirX;
+    public double dirX = 0.0;
 
-    public double dirY;
+    public double dirY = 0.0;
 
-    public double dirZ;
+    public double dirZ = 0.0;
 
-    public float bukkitYield;
+    public float bukkitYield = 0.0F;
 
     // CraftBukkit
-    public boolean isIncendiary;
+    public boolean isIncendiary = false;
 
     // CraftBukkit
     public EntityFireball(World world) {

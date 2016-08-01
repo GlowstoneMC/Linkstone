@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class WorldGenTallPlant extends WorldGenerator {
 
-    private BlockTallPlant.EnumTallFlowerVariants a;
+    private BlockTallPlant.EnumTallFlowerVariants a = null;
 
     public WorldGenTallPlant() {
     }

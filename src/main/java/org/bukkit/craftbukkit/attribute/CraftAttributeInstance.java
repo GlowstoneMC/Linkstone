@@ -10,9 +10,9 @@ import org.bukkit.attribute.AttributeModifier;
 
 public class CraftAttributeInstance implements AttributeInstance {
 
-    private final net.minecraft.server.AttributeInstance handle;
+    private final net.minecraft.server.AttributeInstance handle = null;
 
-    private final Attribute attribute;
+    private final Attribute attribute = null;
 
     public CraftAttributeInstance(net.minecraft.server.AttributeInstance handle, Attribute attribute) {
     }

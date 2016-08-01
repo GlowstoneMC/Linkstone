@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 // CraftBukkit start - Strip down to empty methods, performance cost
 public class MethodProfiler {
 
-    public boolean a;
+    public boolean a = false;
 
     public MethodProfiler() {
     }
@@ -40,11 +40,11 @@ public class MethodProfiler {
 
     public static final class ProfilerInfo implements Comparable<MethodProfiler.ProfilerInfo> {
 
-        public double a;
+        public double a = 0.0;
 
-        public double b;
+        public double b = 0.0;
 
-        public String c;
+        public String c = null;
 
         public ProfilerInfo(String s, double d0, double d1) {
         }

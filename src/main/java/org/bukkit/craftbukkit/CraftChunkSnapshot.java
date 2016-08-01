@@ -11,31 +11,31 @@ import net.minecraft.server.BiomeBase;
  */
 public class CraftChunkSnapshot implements ChunkSnapshot {
 
-    private final int x, z;
+    private final int x = 0, z = 0;
 
-    private final String worldname;
+    private final String worldname = null;
 
-    private final short[][] blockids;
+    private final short[][] blockids = null;
 
     /* Block IDs, by section */
-    private final byte[][] blockdata;
+    private final byte[][] blockdata = null;
 
-    private final byte[][] skylight;
+    private final byte[][] skylight = null;
 
-    private final byte[][] emitlight;
+    private final byte[][] emitlight = null;
 
-    private final boolean[] empty;
+    private final boolean[] empty = null;
 
-    private final int[] hmap;
+    private final int[] hmap = null;
 
     // Height map
-    private final long captureFulltime;
+    private final long captureFulltime = 0;
 
-    private final BiomeBase[] biome;
+    private final BiomeBase[] biome = null;
 
-    private final double[] biomeTemp;
+    private final double[] biomeTemp = null;
 
-    private final double[] biomeRain;
+    private final double[] biomeRain = null;
 
     CraftChunkSnapshot(int x, int z, String wname, long wtime, short[][] sectionBlockIDs, byte[][] sectionBlockData, byte[][] sectionSkyLights, byte[][] sectionEmitLights, boolean[] sectionEmpty, int[] hmap, BiomeBase[] biome, double[] biomeTemp, double[] biomeRain) {
     }

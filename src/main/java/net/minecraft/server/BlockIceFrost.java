@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class BlockIceFrost extends BlockIce {
 
-    public static final BlockStateInteger a;
+    public static final BlockStateInteger a = null;
 
     public BlockIceFrost() {
     }

@@ -5,9 +5,9 @@ import javax.annotation.concurrent.Immutable;
 @Immutable
 public class DifficultyDamageScaler {
 
-    private final EnumDifficulty a;
+    private final EnumDifficulty a = null;
 
-    private final float b;
+    private final float b = 0.0F;
 
     public DifficultyDamageScaler(EnumDifficulty enumdifficulty, long i, long j, float f) {
     }

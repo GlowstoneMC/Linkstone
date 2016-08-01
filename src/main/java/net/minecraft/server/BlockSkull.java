@@ -11,25 +11,25 @@ import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 // CraftBukkit end
 public class BlockSkull extends BlockTileEntity {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateBoolean NODROP;
+    public static final BlockStateBoolean NODROP = null;
 
-    private static final Predicate<ShapeDetectorBlock> B;
+    private static final Predicate<ShapeDetectorBlock> B = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    private ShapeDetector C;
+    private ShapeDetector C = null;
 
-    private ShapeDetector D;
+    private ShapeDetector D = null;
 
     protected BlockSkull() {
     }
@@ -116,7 +116,7 @@ public class BlockSkull extends BlockTileEntity {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

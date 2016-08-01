@@ -5,9 +5,9 @@ import org.apache.logging.log4j.Logger;
 
 public class GenLayerRegionHills extends GenLayer {
 
-    private static final Logger c;
+    private static final Logger c = null;
 
-    private final GenLayer d;
+    private final GenLayer d = null;
 
     public GenLayerRegionHills(long i, GenLayer genlayer, GenLayer genlayer1) {
     }

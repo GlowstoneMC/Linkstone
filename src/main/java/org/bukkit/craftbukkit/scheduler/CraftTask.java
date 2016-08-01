@@ -6,7 +6,7 @@ import org.bukkit.scheduler.BukkitTask;
 
 class CraftTask implements BukkitTask, Runnable {
 
-    private volatile CraftTask next;
+    private volatile CraftTask next = null;
 
     /**
      * -1 means no repeating <br>
@@ -16,15 +16,15 @@ class CraftTask implements BukkitTask, Runnable {
      * Never 0 <br>
      * >0 means number of ticks to wait between each execution
      */
-    private volatile long period;
+    private volatile long period = 0;
 
-    private long nextRun;
+    private long nextRun = 0;
 
-    private final Runnable task;
+    private final Runnable task = null;
 
-    private final Plugin plugin;
+    private final Plugin plugin = null;
 
-    private final int id;
+    private final int id = 0;
 
     CraftTask() {
     }

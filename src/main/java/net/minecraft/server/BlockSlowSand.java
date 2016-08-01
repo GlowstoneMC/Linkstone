@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class BlockSlowSand extends Block {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
     public BlockSlowSand() {
     }

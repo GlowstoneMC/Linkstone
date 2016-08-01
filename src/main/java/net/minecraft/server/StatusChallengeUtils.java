@@ -4,7 +4,7 @@ import com.google.common.base.Charsets;
 
 public class StatusChallengeUtils {
 
-    public static final char[] a;
+    public static final char[] a = null;
 
     public static String a(byte[] abyte, int i, int j) {
         return null;

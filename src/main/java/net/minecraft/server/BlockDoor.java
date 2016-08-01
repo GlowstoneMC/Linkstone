@@ -7,23 +7,23 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public class BlockDoor extends Block {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateBoolean OPEN;
+    public static final BlockStateBoolean OPEN = null;
 
-    public static final BlockStateEnum<BlockDoor.EnumDoorHinge> HINGE;
+    public static final BlockStateEnum<BlockDoor.EnumDoorHinge> HINGE = null;
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
-    public static final BlockStateEnum<BlockDoor.EnumDoorHalf> HALF;
+    public static final BlockStateEnum<BlockDoor.EnumDoorHalf> HALF = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
-    protected static final AxisAlignedBB C;
+    protected static final AxisAlignedBB C = null;
 
     protected BlockDoor(Material material) {
     }
@@ -148,7 +148,7 @@ public class BlockDoor extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

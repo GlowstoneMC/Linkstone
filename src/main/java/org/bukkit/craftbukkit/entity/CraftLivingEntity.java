@@ -75,7 +75,7 @@ import org.bukkit.util.Vector;
 
 public class CraftLivingEntity extends CraftEntity implements LivingEntity {
 
-    private CraftEntityEquipment equipment;
+    private CraftEntityEquipment equipment = null;
 
     public CraftLivingEntity(final CraftServer server, final EntityLiving entity) {
     }

@@ -5,17 +5,17 @@ import javax.annotation.Nullable;
 
 public class ShapeDetectorBlock {
 
-    private final World a;
+    private final World a = null;
 
-    private final BlockPosition b;
+    private final BlockPosition b = null;
 
-    private final boolean c;
+    private final boolean c = false;
 
-    private IBlockData d;
+    private IBlockData d = null;
 
-    private TileEntity e;
+    private TileEntity e = null;
 
-    private boolean f;
+    private boolean f = false;
 
     public ShapeDetectorBlock(World world, BlockPosition blockposition, boolean flag) {
     }

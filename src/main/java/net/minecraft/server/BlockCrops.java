@@ -7,9 +7,9 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class BlockCrops extends BlockPlant implements IBlockFragilePlantElement {
 
-    public static final BlockStateInteger AGE;
+    public static final BlockStateInteger AGE = null;
 
-    private static final AxisAlignedBB[] a;
+    private static final AxisAlignedBB[] a = null;
 
     protected BlockCrops() {
     }

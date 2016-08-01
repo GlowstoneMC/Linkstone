@@ -2,11 +2,11 @@ package net.minecraft.server;
 
 public class OldNibbleArray {
 
-    public final byte[] a;
+    public final byte[] a = null;
 
-    private final int b;
+    private final int b = 0;
 
-    private final int c;
+    private final int c = 0;
 
     public OldNibbleArray(byte[] abyte, int i) {
     }

@@ -25,13 +25,13 @@ import org.bukkit.scoreboard.ScoreboardManager;
 
 public final class CraftScoreboardManager implements ScoreboardManager {
 
-    private final CraftScoreboard mainScoreboard;
+    private final CraftScoreboard mainScoreboard = null;
 
-    private final MinecraftServer server;
+    private final MinecraftServer server = null;
 
-    private final Collection<CraftScoreboard> scoreboards;
+    private final Collection<CraftScoreboard> scoreboards = null;
 
-    private final Map<CraftPlayer, CraftScoreboard> playerBoards;
+    private final Map<CraftPlayer, CraftScoreboard> playerBoards = null;
 
     public CraftScoreboardManager(MinecraftServer minecraftserver, net.minecraft.server.Scoreboard scoreboardServer) {
     }

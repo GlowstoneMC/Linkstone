@@ -9,7 +9,7 @@ import org.bukkit.event.block.BlockPhysicsEvent;
 // CraftBukkit end
 public class BlockPlant extends Block {
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
     protected BlockPlant() {
     }

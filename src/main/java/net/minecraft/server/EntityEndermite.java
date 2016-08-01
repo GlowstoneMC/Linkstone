@@ -4,9 +4,9 @@ import javax.annotation.Nullable;
 
 public class EntityEndermite extends EntityMonster {
 
-    private int a;
+    private int a = 0;
 
-    private boolean b;
+    private boolean b = false;
 
     public EntityEndermite(World world) {
     }

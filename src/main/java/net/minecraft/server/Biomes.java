@@ -2,131 +2,131 @@ package net.minecraft.server;
 
 public abstract class Biomes {
 
-    public static final BiomeBase a;
+    public static final BiomeBase a = null;
 
-    public static final BiomeBase b;
+    public static final BiomeBase b = null;
 
-    public static final BiomeBase c;
+    public static final BiomeBase c = null;
 
-    public static final BiomeBase d;
+    public static final BiomeBase d = null;
 
-    public static final BiomeBase e;
+    public static final BiomeBase e = null;
 
-    public static final BiomeBase f;
+    public static final BiomeBase f = null;
 
-    public static final BiomeBase g;
+    public static final BiomeBase g = null;
 
-    public static final BiomeBase h;
+    public static final BiomeBase h = null;
 
-    public static final BiomeBase i;
+    public static final BiomeBase i = null;
 
-    public static final BiomeBase j;
+    public static final BiomeBase j = null;
 
-    public static final BiomeBase k;
+    public static final BiomeBase k = null;
 
-    public static final BiomeBase l;
+    public static final BiomeBase l = null;
 
-    public static final BiomeBase m;
+    public static final BiomeBase m = null;
 
-    public static final BiomeBase n;
+    public static final BiomeBase n = null;
 
-    public static final BiomeBase o;
+    public static final BiomeBase o = null;
 
-    public static final BiomeBase p;
+    public static final BiomeBase p = null;
 
-    public static final BiomeBase q;
+    public static final BiomeBase q = null;
 
-    public static final BiomeBase r;
+    public static final BiomeBase r = null;
 
-    public static final BiomeBase s;
+    public static final BiomeBase s = null;
 
-    public static final BiomeBase t;
+    public static final BiomeBase t = null;
 
-    public static final BiomeBase u;
+    public static final BiomeBase u = null;
 
-    public static final BiomeBase v;
+    public static final BiomeBase v = null;
 
-    public static final BiomeBase w;
+    public static final BiomeBase w = null;
 
-    public static final BiomeBase x;
+    public static final BiomeBase x = null;
 
-    public static final BiomeBase y;
+    public static final BiomeBase y = null;
 
-    public static final BiomeBase z;
+    public static final BiomeBase z = null;
 
-    public static final BiomeBase A;
+    public static final BiomeBase A = null;
 
-    public static final BiomeBase B;
+    public static final BiomeBase B = null;
 
-    public static final BiomeBase C;
+    public static final BiomeBase C = null;
 
-    public static final BiomeBase D;
+    public static final BiomeBase D = null;
 
-    public static final BiomeBase E;
+    public static final BiomeBase E = null;
 
-    public static final BiomeBase F;
+    public static final BiomeBase F = null;
 
-    public static final BiomeBase G;
+    public static final BiomeBase G = null;
 
-    public static final BiomeBase H;
+    public static final BiomeBase H = null;
 
-    public static final BiomeBase I;
+    public static final BiomeBase I = null;
 
-    public static final BiomeBase J;
+    public static final BiomeBase J = null;
 
-    public static final BiomeBase K;
+    public static final BiomeBase K = null;
 
-    public static final BiomeBase L;
+    public static final BiomeBase L = null;
 
-    public static final BiomeBase M;
+    public static final BiomeBase M = null;
 
-    public static final BiomeBase N;
+    public static final BiomeBase N = null;
 
-    public static final BiomeBase O;
+    public static final BiomeBase O = null;
 
-    public static final BiomeBase P;
+    public static final BiomeBase P = null;
 
-    public static final BiomeBase Q;
+    public static final BiomeBase Q = null;
 
-    public static final BiomeBase R;
+    public static final BiomeBase R = null;
 
-    public static final BiomeBase S;
+    public static final BiomeBase S = null;
 
-    public static final BiomeBase T;
+    public static final BiomeBase T = null;
 
-    public static final BiomeBase U;
+    public static final BiomeBase U = null;
 
-    public static final BiomeBase V;
+    public static final BiomeBase V = null;
 
-    public static final BiomeBase W;
+    public static final BiomeBase W = null;
 
-    public static final BiomeBase X;
+    public static final BiomeBase X = null;
 
-    public static final BiomeBase Y;
+    public static final BiomeBase Y = null;
 
-    public static final BiomeBase Z;
+    public static final BiomeBase Z = null;
 
-    public static final BiomeBase aa;
+    public static final BiomeBase aa = null;
 
-    public static final BiomeBase ab;
+    public static final BiomeBase ab = null;
 
-    public static final BiomeBase ac;
+    public static final BiomeBase ac = null;
 
-    public static final BiomeBase ad;
+    public static final BiomeBase ad = null;
 
-    public static final BiomeBase ae;
+    public static final BiomeBase ae = null;
 
-    public static final BiomeBase af;
+    public static final BiomeBase af = null;
 
-    public static final BiomeBase ag;
+    public static final BiomeBase ag = null;
 
-    public static final BiomeBase ah;
+    public static final BiomeBase ah = null;
 
-    public static final BiomeBase ai;
+    public static final BiomeBase ai = null;
 
-    public static final BiomeBase aj;
+    public static final BiomeBase aj = null;
 
-    public static final BiomeBase ak;
+    public static final BiomeBase ak = null;
 
     private static BiomeBase a(String s) {
         return null;

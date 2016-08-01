@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public abstract class BlockLogAbstract extends BlockRotatable {
 
-    public static final BlockStateEnum<BlockLogAbstract.EnumLogRotation> AXIS;
+    public static final BlockStateEnum<BlockLogAbstract.EnumLogRotation> AXIS = null;
 
     public BlockLogAbstract() {
     }
@@ -22,11 +22,11 @@ public abstract class BlockLogAbstract extends BlockRotatable {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
         static {
         }
@@ -36,7 +36,7 @@ public abstract class BlockLogAbstract extends BlockRotatable {
 
         X("x"), Y("y"), Z("z"), NONE("none");
 
-        private final String e;
+        private final String e = null;
 
         private EnumLogRotation(String s) {
         }

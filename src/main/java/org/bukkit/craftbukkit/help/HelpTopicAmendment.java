@@ -5,13 +5,13 @@ package org.bukkit.craftbukkit.help;
  */
 public class HelpTopicAmendment {
 
-    private final String topicName;
+    private final String topicName = null;
 
-    private final String shortText;
+    private final String shortText = null;
 
-    private final String fullText;
+    private final String fullText = null;
 
-    private final String permission;
+    private final String permission = null;
 
     public HelpTopicAmendment(String topicName, String shortText, String fullText, String permission) {
     }

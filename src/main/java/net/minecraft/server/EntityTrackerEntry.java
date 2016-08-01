@@ -15,57 +15,57 @@ import org.bukkit.event.player.PlayerVelocityEvent;
 // CraftBukkit end
 public class EntityTrackerEntry {
 
-    private static final Logger c;
+    private static final Logger c = null;
 
-    private final Entity tracker;
+    private final Entity tracker = null;
 
-    private final int e;
+    private final int e = 0;
 
-    private int f;
+    private int f = 0;
 
-    private final int g;
+    private final int g = 0;
 
-    private long xLoc;
+    private long xLoc = 0;
 
-    private long yLoc;
+    private long yLoc = 0;
 
-    private long zLoc;
+    private long zLoc = 0;
 
-    private int yRot;
+    private int yRot = 0;
 
-    private int xRot;
+    private int xRot = 0;
 
-    private int headYaw;
+    private int headYaw = 0;
 
-    private double n;
+    private double n = 0.0;
 
-    private double o;
+    private double o = 0.0;
 
-    private double p;
+    private double p = 0.0;
 
-    public int a;
+    public int a = 0;
 
-    private double q;
+    private double q = 0.0;
 
-    private double r;
+    private double r = 0.0;
 
-    private double s;
+    private double s = 0.0;
 
-    private boolean isMoving;
+    private boolean isMoving = false;
 
-    private final boolean u;
+    private final boolean u = false;
 
-    private int v;
+    private int v = 0;
 
-    private List<Entity> w;
+    private List<Entity> w = null;
 
-    private boolean x;
+    private boolean x = false;
 
-    private boolean y;
+    private boolean y = false;
 
-    public boolean b;
+    public boolean b = false;
 
-    public final Set<EntityPlayer> trackedPlayers;
+    public final Set<EntityPlayer> trackedPlayers = null;
 
     public EntityTrackerEntry(Entity entity, int i, int j, int k, boolean flag) {
     }

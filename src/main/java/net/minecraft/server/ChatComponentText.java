@@ -4,7 +4,7 @@ import java.util.Iterator;
 
 public class ChatComponentText extends ChatBaseComponent {
 
-    private final String b;
+    private final String b = null;
 
     public ChatComponentText(String s) {
     }

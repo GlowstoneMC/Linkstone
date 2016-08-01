@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class BiomeBigHills extends BiomeBase {
 
-    private final WorldGenerator y;
+    private final WorldGenerator y = null;
 
-    private final WorldGenTaiga2 z;
+    private final WorldGenTaiga2 z = null;
 
-    private final BiomeBigHills.Type A;
+    private final BiomeBigHills.Type A = null;
 
     protected BiomeBigHills(BiomeBigHills.Type biomebighills_type, BiomeBase.a biomebase_a) {
     }

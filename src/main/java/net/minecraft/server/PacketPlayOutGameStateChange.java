@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayOutGameStateChange implements Packet<PacketListenerPlayOut> {
 
-    public static final String[] a;
+    public static final String[] a = null;
 
-    private int b;
+    private int b = 0;
 
-    private float c;
+    private float c = 0.0F;
 
     public PacketPlayOutGameStateChange() {
     }

@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class DataConverterHealth implements IDataConverter {
 
-    private static final Set<String> a;
+    private static final Set<String> a = null;
 
     public DataConverterHealth() {
     }

@@ -2,17 +2,17 @@ package net.minecraft.server;
 
 public class PathfinderGoalLookAtPlayer extends PathfinderGoal {
 
-    protected EntityInsentient a;
+    protected EntityInsentient a = null;
 
-    protected Entity b;
+    protected Entity b = null;
 
-    protected float c;
+    protected float c = 0.0F;
 
-    private int e;
+    private int e = 0;
 
-    private final float f;
+    private final float f = 0.0F;
 
-    protected Class<? extends Entity> d;
+    protected Class<? extends Entity> d = null;
 
     public PathfinderGoalLookAtPlayer(EntityInsentient entityinsentient, Class<? extends Entity> oclass, float f) {
     }

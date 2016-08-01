@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class BlockQuartz extends Block {
 
-    public static final BlockStateEnum<BlockQuartz.EnumQuartzVariant> VARIANT;
+    public static final BlockStateEnum<BlockQuartz.EnumQuartzVariant> VARIANT = null;
 
     public BlockQuartz() {
     }
@@ -41,11 +41,11 @@ public class BlockQuartz extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
         static {
         }
@@ -55,13 +55,13 @@ public class BlockQuartz extends Block {
 
         DEFAULT(0, "default", "default"), CHISELED(1, "chiseled", "chiseled"), LINES_Y(2, "lines_y", "lines"), LINES_X(3, "lines_x", "lines"), LINES_Z(4, "lines_z", "lines");
 
-        private static final BlockQuartz.EnumQuartzVariant[] f;
+        private static final BlockQuartz.EnumQuartzVariant[] f = null;
 
-        private final int g;
+        private final int g = 0;
 
-        private final String h;
+        private final String h = null;
 
-        private final String i;
+        private final String i = null;
 
         private EnumQuartzVariant(int i, String s, String s1) {
         }

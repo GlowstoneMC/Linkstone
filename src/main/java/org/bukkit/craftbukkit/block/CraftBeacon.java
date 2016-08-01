@@ -18,9 +18,9 @@ import org.bukkit.potion.PotionEffectType;
 
 public class CraftBeacon extends CraftBlockState implements Beacon {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final TileEntityBeacon beacon;
+    private final TileEntityBeacon beacon = null;
 
     public CraftBeacon(final Block block) {
     }

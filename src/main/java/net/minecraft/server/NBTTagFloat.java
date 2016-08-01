@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class NBTTagFloat extends NBTNumber {
 
-    private float data;
+    private float data = 0.0F;
 
     NBTTagFloat() {
     }

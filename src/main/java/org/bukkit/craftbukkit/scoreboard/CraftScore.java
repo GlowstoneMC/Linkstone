@@ -17,9 +17,9 @@ import org.bukkit.scoreboard.Score;
  */
 final class CraftScore implements Score {
 
-    private final String entry;
+    private final String entry = null;
 
-    private final CraftObjective objective;
+    private final CraftObjective objective = null;
 
     CraftScore(CraftObjective objective, String entry) {
     }

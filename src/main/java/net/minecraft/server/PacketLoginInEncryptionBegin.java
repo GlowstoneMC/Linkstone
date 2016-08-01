@@ -6,9 +6,9 @@ import javax.crypto.SecretKey;
 
 public class PacketLoginInEncryptionBegin implements Packet<PacketLoginInListener> {
 
-    private byte[] a;
+    private byte[] a = null;
 
-    private byte[] b;
+    private byte[] b = null;
 
     public PacketLoginInEncryptionBegin() {
     }

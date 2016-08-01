@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class WorldGenGrass extends WorldGenerator {
 
-    private final IBlockData a;
+    private final IBlockData a = null;
 
     public WorldGenGrass(BlockLongGrass.EnumTallGrassType blocklonggrass_enumtallgrasstype) {
     }

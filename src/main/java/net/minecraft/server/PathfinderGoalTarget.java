@@ -4,21 +4,21 @@ import org.bukkit.event.entity.EntityTargetEvent;
 
 public abstract class PathfinderGoalTarget extends PathfinderGoal {
 
-    protected final EntityCreature e;
+    protected final EntityCreature e = null;
 
-    protected boolean f;
+    protected boolean f = false;
 
-    private final boolean a;
+    private final boolean a = false;
 
-    private int b;
+    private int b = 0;
 
-    private int c;
+    private int c = 0;
 
-    private int d;
+    private int d = 0;
 
-    protected EntityLiving g;
+    protected EntityLiving g = null;
 
-    protected int h;
+    protected int h = 0;
 
     public PathfinderGoalTarget(EntityCreature entitycreature, boolean flag) {
     }

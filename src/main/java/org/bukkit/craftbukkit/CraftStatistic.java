@@ -18,9 +18,9 @@ import org.bukkit.craftbukkit.util.CraftMagicNumbers;
 
 public class CraftStatistic {
 
-    private static final BiMap<String, org.bukkit.Statistic> statistics;
+    private static final BiMap<String, org.bukkit.Statistic> statistics = null;
 
-    private static final BiMap<String, org.bukkit.Achievement> achievements;
+    private static final BiMap<String, org.bukkit.Achievement> achievements = null;
 
     static {
     }

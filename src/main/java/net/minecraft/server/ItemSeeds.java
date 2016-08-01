@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class ItemSeeds extends Item {
 
-    private final Block a;
+    private final Block a = null;
 
-    private final Block b;
+    private final Block b = null;
 
     public ItemSeeds(Block block, Block block1) {
     }

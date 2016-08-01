@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class LootEntityPropertyOnFire implements LootEntityProperty {
 
-    private final boolean a;
+    private final boolean a = false;
 
     public LootEntityPropertyOnFire(boolean flag) {
     }

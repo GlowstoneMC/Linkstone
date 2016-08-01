@@ -5,9 +5,9 @@ import java.util.List;
 
 public class PacketPlayOutEntityMetadata implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private List<DataWatcher.Item<?>> b;
+    private List<DataWatcher.Item<?>> b = null;
 
     public PacketPlayOutEntityMetadata() {
     }

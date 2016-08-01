@@ -2,11 +2,11 @@ package net.minecraft.server;
 
 public class PathfinderGoalOwnerHurtTarget extends PathfinderGoalTarget {
 
-    EntityTameableAnimal a;
+    EntityTameableAnimal a = null;
 
-    EntityLiving b;
+    EntityLiving b = null;
 
-    private int c;
+    private int c = 0;
 
     public PathfinderGoalOwnerHurtTarget(EntityTameableAnimal entitytameableanimal) {
     }

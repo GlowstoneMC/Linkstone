@@ -10,9 +10,9 @@ import java.util.UUID;
 
 public class PacketPlayOutUpdateAttributes implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private final List<PacketPlayOutUpdateAttributes.AttributeSnapshot> b;
+    private final List<PacketPlayOutUpdateAttributes.AttributeSnapshot> b = null;
 
     public PacketPlayOutUpdateAttributes() {
     }
@@ -31,11 +31,11 @@ public class PacketPlayOutUpdateAttributes implements Packet<PacketListenerPlayO
 
     public class AttributeSnapshot {
 
-        private final String b;
+        private final String b = null;
 
-        private final double c;
+        private final double c = 0.0;
 
-        private final Collection<AttributeModifier> d;
+        private final Collection<AttributeModifier> d = null;
 
         public AttributeSnapshot(String s, double d0, Collection collection) {
         }

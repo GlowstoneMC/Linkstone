@@ -23,7 +23,7 @@ public class WeightedRandom {
 
     public static class WeightedRandomChoice {
 
-        protected int a;
+        protected int a = 0;
 
         public WeightedRandomChoice(int i) {
         }

@@ -5,11 +5,11 @@ import java.util.Random;
 
 public class WorldGenMinable extends WorldGenerator {
 
-    private final IBlockData a;
+    private final IBlockData a = null;
 
-    private final int b;
+    private final int b = 0;
 
-    private final Predicate<IBlockData> c;
+    private final Predicate<IBlockData> c = null;
 
     public WorldGenMinable(IBlockData iblockdata, int i) {
     }

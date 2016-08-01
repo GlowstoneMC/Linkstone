@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 
 public class NavigationListener implements IWorldAccess {
 
-    private final List<NavigationAbstract> a;
+    private final List<NavigationAbstract> a = null;
 
     public NavigationListener() {
     }

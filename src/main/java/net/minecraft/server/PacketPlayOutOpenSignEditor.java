@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayOutOpenSignEditor implements Packet<PacketListenerPlayOut> {
 
-    private BlockPosition a;
+    private BlockPosition a = null;
 
     public PacketPlayOutOpenSignEditor() {
     }

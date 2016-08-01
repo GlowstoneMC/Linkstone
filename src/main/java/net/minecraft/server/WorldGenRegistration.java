@@ -15,11 +15,11 @@ public class WorldGenRegistration {
 
     public static class b extends WorldGenRegistration.WorldGenScatteredPiece {
 
-        private static final MinecraftKey e;
+        private static final MinecraftKey e = null;
 
-        private static final MinecraftKey f;
+        private static final MinecraftKey f = null;
 
-        private static final MinecraftKey g;
+        private static final MinecraftKey g = null;
 
         public b() {
         }
@@ -34,7 +34,7 @@ public class WorldGenRegistration {
 
     public static class WorldGenWitchHut extends WorldGenRegistration.WorldGenScatteredPiece {
 
-        private boolean e;
+        private boolean e = false;
 
         public WorldGenWitchHut() {
         }
@@ -55,15 +55,15 @@ public class WorldGenRegistration {
 
     public static class WorldGenJungleTemple extends WorldGenRegistration.WorldGenScatteredPiece {
 
-        private boolean e;
+        private boolean e = false;
 
-        private boolean f;
+        private boolean f = false;
 
-        private boolean g;
+        private boolean g = false;
 
-        private boolean h;
+        private boolean h = false;
 
-        private static final WorldGenRegistration.WorldGenJungleTemple.WorldGenJungleTemple$WorldGenJungleTemplePiece i;
+        private static final WorldGenRegistration.WorldGenJungleTemple.WorldGenJungleTemple$WorldGenJungleTemplePiece i = null;
 
         public WorldGenJungleTemple() {
         }
@@ -96,7 +96,7 @@ public class WorldGenRegistration {
 
     public static class WorldGenPyramidPiece extends WorldGenRegistration.WorldGenScatteredPiece {
 
-        private final boolean[] e;
+        private final boolean[] e = null;
 
         public WorldGenPyramidPiece() {
         }
@@ -117,13 +117,13 @@ public class WorldGenRegistration {
 
     abstract static class WorldGenScatteredPiece extends StructurePiece {
 
-        protected int a;
+        protected int a = 0;
 
-        protected int b;
+        protected int b = 0;
 
-        protected int c;
+        protected int c = 0;
 
-        protected int d;
+        protected int d = 0;
 
         public WorldGenScatteredPiece() {
         }

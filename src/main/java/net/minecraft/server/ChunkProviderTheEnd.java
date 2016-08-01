@@ -6,41 +6,41 @@ import javax.annotation.Nullable;
 
 public class ChunkProviderTheEnd implements ChunkGenerator {
 
-    private final Random h;
+    private final Random h = null;
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
-    protected static final IBlockData b;
+    protected static final IBlockData b = null;
 
-    private final NoiseGeneratorOctaves i;
+    private final NoiseGeneratorOctaves i = null;
 
-    private final NoiseGeneratorOctaves j;
+    private final NoiseGeneratorOctaves j = null;
 
-    private final NoiseGeneratorOctaves k;
+    private final NoiseGeneratorOctaves k = null;
 
-    public NoiseGeneratorOctaves c;
+    public NoiseGeneratorOctaves c = null;
 
-    public NoiseGeneratorOctaves d;
+    public NoiseGeneratorOctaves d = null;
 
-    private final World l;
+    private final World l = null;
 
-    private final boolean m;
+    private final boolean m = false;
 
-    private final WorldGenEndCity n;
+    private final WorldGenEndCity n = null;
 
-    private final NoiseGenerator3Handler o;
+    private final NoiseGenerator3Handler o = null;
 
-    private double[] p;
+    private double[] p = null;
 
-    private BiomeBase[] q;
+    private BiomeBase[] q = null;
 
-    double[] e;
+    double[] e = null;
 
-    double[] f;
+    double[] f = null;
 
-    double[] g;
+    double[] g = null;
 
-    private final WorldGenEndIsland r;
+    private final WorldGenEndIsland r = null;
 
     public ChunkProviderTheEnd(World world, boolean flag, long i) {
     }

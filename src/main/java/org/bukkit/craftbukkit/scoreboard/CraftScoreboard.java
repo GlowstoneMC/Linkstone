@@ -17,7 +17,7 @@ import com.google.common.collect.Iterables;
 
 public final class CraftScoreboard implements org.bukkit.scoreboard.Scoreboard {
 
-    final Scoreboard board;
+    final Scoreboard board = null;
 
     CraftScoreboard(Scoreboard board) {
     }

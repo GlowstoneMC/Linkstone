@@ -8,9 +8,9 @@ import org.bukkit.help.HelpTopic;
 
 public class CommandAliasHelpTopic extends HelpTopic {
 
-    private final String aliasFor;
+    private final String aliasFor = null;
 
-    private final HelpMap helpMap;
+    private final HelpMap helpMap = null;
 
     public CommandAliasHelpTopic(String alias, String aliasFor, HelpMap helpMap) {
     }

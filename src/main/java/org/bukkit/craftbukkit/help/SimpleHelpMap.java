@@ -16,15 +16,15 @@ import java.util.*;
  */
 public class SimpleHelpMap implements HelpMap {
 
-    private HelpTopic defaultTopic;
+    private HelpTopic defaultTopic = null;
 
-    private final Map<String, HelpTopic> helpTopics;
+    private final Map<String, HelpTopic> helpTopics = null;
 
-    private final Map<Class, HelpTopicFactory<Command>> topicFactoryMap;
+    private final Map<Class, HelpTopicFactory<Command>> topicFactoryMap = null;
 
-    private final CraftServer server;
+    private final CraftServer server = null;
 
-    private HelpYamlReader yaml;
+    private HelpYamlReader yaml = null;
 
     @SuppressWarnings("unchecked")
     public SimpleHelpMap(CraftServer server) {

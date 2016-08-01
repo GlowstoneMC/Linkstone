@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class ItemFish extends ItemFood {
 
-    private final boolean b;
+    private final boolean b = false;
 
     public ItemFish(boolean flag) {
     }
@@ -29,21 +29,21 @@ public class ItemFish extends ItemFood {
 
         COD(0, "cod", 2, 0.1F, 5, 0.6F), SALMON(1, "salmon", 2, 0.1F, 6, 0.8F), CLOWNFISH(2, "clownfish", 1, 0.1F), PUFFERFISH(3, "pufferfish", 1, 0.1F);
 
-        private static final Map<Integer, ItemFish.EnumFish> e;
+        private static final Map<Integer, ItemFish.EnumFish> e = null;
 
-        private final int f;
+        private final int f = 0;
 
-        private final String g;
+        private final String g = null;
 
-        private final int h;
+        private final int h = 0;
 
-        private final float i;
+        private final float i = 0.0F;
 
-        private final int j;
+        private final int j = 0;
 
-        private final float k;
+        private final float k = 0.0F;
 
-        private boolean l;
+        private boolean l = false;
 
         private EnumFish(int i, String s, int j, float f, int k, float f1) {
         }

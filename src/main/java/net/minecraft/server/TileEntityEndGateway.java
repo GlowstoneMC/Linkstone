@@ -15,15 +15,15 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 // CraftBukkit end
 public class TileEntityEndGateway extends TileEntity implements ITickable {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private long f;
+    private long f = 0;
 
-    private int g;
+    private int g = 0;
 
-    public BlockPosition exitPortal;
+    public BlockPosition exitPortal = null;
 
-    public boolean exactTeleport;
+    public boolean exactTeleport = false;
 
     public TileEntityEndGateway() {
     }

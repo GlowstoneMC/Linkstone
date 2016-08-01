@@ -4,11 +4,11 @@ import javax.annotation.Nullable;
 
 public class AttributeRanged extends AttributeBase {
 
-    private final double a;
+    private final double a = 0.0;
 
-    private final double b;
+    private final double b = 0.0;
 
-    private String c;
+    private String c = null;
 
     public AttributeRanged(@Nullable IAttribute iattribute, String s, double d0, double d1, double d2) {
     }

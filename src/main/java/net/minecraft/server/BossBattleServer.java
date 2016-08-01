@@ -8,11 +8,11 @@ import java.util.Set;
 
 public class BossBattleServer extends BossBattle {
 
-    private final Set<EntityPlayer> h;
+    private final Set<EntityPlayer> h = null;
 
-    private final Set<EntityPlayer> i;
+    private final Set<EntityPlayer> i = null;
 
-    public boolean visible;
+    public boolean visible = false;
 
     public BossBattleServer(IChatBaseComponent ichatbasecomponent, BossBattle.BarColor bossbattle_barcolor, BossBattle.BarStyle bossbattle_barstyle) {
     }

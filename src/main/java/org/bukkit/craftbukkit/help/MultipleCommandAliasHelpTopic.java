@@ -12,7 +12,7 @@ import org.bukkit.help.HelpTopic;
  */
 public class MultipleCommandAliasHelpTopic extends HelpTopic {
 
-    private final MultipleCommandAlias alias;
+    private final MultipleCommandAlias alias = null;
 
     public MultipleCommandAliasHelpTopic(MultipleCommandAlias alias) {
     }

@@ -4,9 +4,9 @@ import javax.annotation.Nullable;
 
 public class EntityDamageSource extends DamageSource {
 
-    protected Entity t;
+    protected Entity t = null;
 
-    private boolean u;
+    private boolean u = false;
 
     public EntityDamageSource(String s, Entity entity) {
     }

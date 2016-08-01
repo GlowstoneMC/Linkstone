@@ -10,7 +10,7 @@ import java.util.logging.LogRecord;
 
 public class ForwardLogHandler extends ConsoleHandler {
 
-    private Map<String, Logger> cachedLoggers;
+    private Map<String, Logger> cachedLoggers = null;
 
     private Logger getLogger(String name) {
         return null;

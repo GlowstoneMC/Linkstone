@@ -12,21 +12,21 @@ import javax.annotation.Nullable;
 
 public class AttributeModifiable implements AttributeInstance {
 
-    private final AttributeMapBase a;
+    private final AttributeMapBase a = null;
 
-    private final IAttribute b;
+    private final IAttribute b = null;
 
-    private final Map<Integer, Set<AttributeModifier>> c;
+    private final Map<Integer, Set<AttributeModifier>> c = null;
 
-    private final Map<String, Set<AttributeModifier>> d;
+    private final Map<String, Set<AttributeModifier>> d = null;
 
-    private final Map<UUID, AttributeModifier> e;
+    private final Map<UUID, AttributeModifier> e = null;
 
-    private double f;
+    private double f = 0.0;
 
-    private boolean g;
+    private boolean g = false;
 
-    private double h;
+    private double h = 0.0;
 
     public AttributeModifiable(AttributeMapBase attributemapbase, IAttribute iattribute) {
     }

@@ -14,9 +14,9 @@ import java.util.Map.Entry;
 
 public class LootItemConditionEntityScore implements LootItemCondition {
 
-    private final Map<String, LootValueBounds> a;
+    private final Map<String, LootValueBounds> a = null;
 
-    private final LootTableInfo.EntityTarget b;
+    private final LootTableInfo.EntityTarget b = null;
 
     public LootItemConditionEntityScore(Map<String, LootValueBounds> map, LootTableInfo.EntityTarget loottableinfo_entitytarget) {
     }

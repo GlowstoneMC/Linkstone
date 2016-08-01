@@ -4,19 +4,19 @@ import java.util.Comparator;
 
 public class ScoreboardScore {
 
-    public static final Comparator<ScoreboardScore> a;
+    public static final Comparator<ScoreboardScore> a = null;
 
-    private final Scoreboard b;
+    private final Scoreboard b = null;
 
-    private final ScoreboardObjective c;
+    private final ScoreboardObjective c = null;
 
-    private final String playerName;
+    private final String playerName = null;
 
-    private int score;
+    private int score = 0;
 
-    private boolean f;
+    private boolean f = false;
 
-    private boolean g;
+    private boolean g = false;
 
     public ScoreboardScore(Scoreboard scoreboard, ScoreboardObjective scoreboardobjective, String s) {
     }

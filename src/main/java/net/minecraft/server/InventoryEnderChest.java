@@ -8,14 +8,14 @@ import org.bukkit.entity.HumanEntity;
 // CraftBukkit end
 public class InventoryEnderChest extends InventorySubcontainer {
 
-    private TileEntityEnderChest a;
+    private TileEntityEnderChest a = null;
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    public org.bukkit.entity.Player player;
+    public org.bukkit.entity.Player player = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;

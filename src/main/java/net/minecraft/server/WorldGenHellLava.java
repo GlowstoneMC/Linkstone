@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class WorldGenHellLava extends WorldGenerator {
 
-    private final Block a;
+    private final Block a = null;
 
-    private final boolean b;
+    private final boolean b = false;
 
     public WorldGenHellLava(Block block, boolean flag) {
     }

@@ -4,21 +4,21 @@ import javax.annotation.Nullable;
 
 public class BlockCobbleWall extends Block {
 
-    public static final BlockStateBoolean UP;
+    public static final BlockStateBoolean UP = null;
 
-    public static final BlockStateBoolean NORTH;
+    public static final BlockStateBoolean NORTH = null;
 
-    public static final BlockStateBoolean EAST;
+    public static final BlockStateBoolean EAST = null;
 
-    public static final BlockStateBoolean SOUTH;
+    public static final BlockStateBoolean SOUTH = null;
 
-    public static final BlockStateBoolean WEST;
+    public static final BlockStateBoolean WEST = null;
 
-    public static final BlockStateEnum<BlockCobbleWall.EnumCobbleVariant> VARIANT;
+    public static final BlockStateEnum<BlockCobbleWall.EnumCobbleVariant> VARIANT = null;
 
-    protected static final AxisAlignedBB[] g;
+    protected static final AxisAlignedBB[] g = null;
 
-    protected static final AxisAlignedBB[] B;
+    protected static final AxisAlignedBB[] B = null;
 
     public BlockCobbleWall(Block block) {
     }
@@ -80,13 +80,13 @@ public class BlockCobbleWall extends Block {
 
         NORMAL(0, "cobblestone", "normal"), MOSSY(1, "mossy_cobblestone", "mossy");
 
-        private static final BlockCobbleWall.EnumCobbleVariant[] c;
+        private static final BlockCobbleWall.EnumCobbleVariant[] c = null;
 
-        private final int d;
+        private final int d = 0;
 
-        private final String e;
+        private final String e = null;
 
-        private final String f;
+        private final String f = null;
 
         private EnumCobbleVariant(int i, String s, String s1) {
         }

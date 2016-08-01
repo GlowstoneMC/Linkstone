@@ -11,13 +11,13 @@ import org.bukkit.event.world.StructureGrowEvent;
 // CraftBukkit end
 public class BlockSapling extends BlockPlant implements IBlockFragilePlantElement {
 
-    public static final BlockStateEnum<BlockWood.EnumLogVariant> TYPE;
+    public static final BlockStateEnum<BlockWood.EnumLogVariant> TYPE = null;
 
-    public static final BlockStateInteger STAGE;
+    public static final BlockStateInteger STAGE = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    public static TreeType treeType;
+    public static TreeType treeType = null;
 
     // CraftBukkit
     protected BlockSapling() {
@@ -77,7 +77,7 @@ public class BlockSapling extends BlockPlant implements IBlockFragilePlantElemen
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

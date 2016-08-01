@@ -8,7 +8,7 @@ import org.bukkit.entity.Player;
 
 public class LazyPlayerSet extends LazyHashSet<Player> {
 
-    private final MinecraftServer server;
+    private final MinecraftServer server = null;
 
     public LazyPlayerSet(MinecraftServer server) {
     }

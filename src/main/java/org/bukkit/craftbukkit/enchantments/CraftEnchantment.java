@@ -8,7 +8,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class CraftEnchantment extends Enchantment {
 
-    private final net.minecraft.server.Enchantment target;
+    private final net.minecraft.server.Enchantment target = null;
 
     public CraftEnchantment(net.minecraft.server.Enchantment target) {
     }

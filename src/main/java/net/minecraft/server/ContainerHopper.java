@@ -8,12 +8,12 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit end
 public class ContainerHopper extends Container {
 
-    private final IInventory hopper;
+    private final IInventory hopper = null;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     @Override
     public CraftInventoryView getBukkitView() {

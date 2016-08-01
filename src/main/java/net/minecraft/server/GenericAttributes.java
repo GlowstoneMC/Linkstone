@@ -9,25 +9,25 @@ import org.apache.logging.log4j.Logger;
 
 public class GenericAttributes {
 
-    private static final Logger j;
+    private static final Logger j = null;
 
-    public static final IAttribute maxHealth;
+    public static final IAttribute maxHealth = null;
 
-    public static final IAttribute FOLLOW_RANGE;
+    public static final IAttribute FOLLOW_RANGE = null;
 
-    public static final IAttribute c;
+    public static final IAttribute c = null;
 
-    public static final IAttribute MOVEMENT_SPEED;
+    public static final IAttribute MOVEMENT_SPEED = null;
 
-    public static final IAttribute ATTACK_DAMAGE;
+    public static final IAttribute ATTACK_DAMAGE = null;
 
-    public static final IAttribute f;
+    public static final IAttribute f = null;
 
-    public static final IAttribute g;
+    public static final IAttribute g = null;
 
-    public static final IAttribute h;
+    public static final IAttribute h = null;
 
-    public static final IAttribute i;
+    public static final IAttribute i = null;
 
     public static NBTTagList a(AttributeMapBase attributemapbase) {
         return null;

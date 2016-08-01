@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class BlockLog1 extends BlockLogAbstract {
 
-    public static final BlockStateEnum<BlockWood.EnumLogVariant> VARIANT;
+    public static final BlockStateEnum<BlockWood.EnumLogVariant> VARIANT = null;
 
     public BlockLog1() {
     }
@@ -36,9 +36,9 @@ public class BlockLog1 extends BlockLogAbstract {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }

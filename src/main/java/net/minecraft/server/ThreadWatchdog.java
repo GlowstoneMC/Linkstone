@@ -13,11 +13,11 @@ import org.apache.logging.log4j.Logger;
 
 public class ThreadWatchdog implements Runnable {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final DedicatedServer b;
+    private final DedicatedServer b = null;
 
-    private final long c;
+    private final long c = 0;
 
     public ThreadWatchdog(DedicatedServer dedicatedserver) {
     }

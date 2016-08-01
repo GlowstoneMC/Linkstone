@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class NBTTagShort extends NBTNumber {
 
-    private short data;
+    private short data = 0;
 
     public NBTTagShort() {
     }

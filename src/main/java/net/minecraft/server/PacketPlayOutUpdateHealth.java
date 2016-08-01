@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayOutUpdateHealth implements Packet<PacketListenerPlayOut> {
 
-    private float a;
+    private float a = 0.0F;
 
-    private int b;
+    private int b = 0;
 
-    private float c;
+    private float c = 0.0F;
 
     public PacketPlayOutUpdateHealth() {
     }

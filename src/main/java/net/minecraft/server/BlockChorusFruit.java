@@ -7,17 +7,17 @@ import javax.annotation.Nullable;
 
 public class BlockChorusFruit extends Block {
 
-    public static final BlockStateBoolean a;
+    public static final BlockStateBoolean a = null;
 
-    public static final BlockStateBoolean b;
+    public static final BlockStateBoolean b = null;
 
-    public static final BlockStateBoolean c;
+    public static final BlockStateBoolean c = null;
 
-    public static final BlockStateBoolean d;
+    public static final BlockStateBoolean d = null;
 
-    public static final BlockStateBoolean e;
+    public static final BlockStateBoolean e = null;
 
-    public static final BlockStateBoolean f;
+    public static final BlockStateBoolean f = null;
 
     protected BlockChorusFruit() {
     }

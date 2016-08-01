@@ -10,17 +10,17 @@ import org.bukkit.Bukkit;
 
 public final class CraftIpBanEntry implements org.bukkit.BanEntry {
 
-    private final IpBanList list;
+    private final IpBanList list = null;
 
-    private final String target;
+    private final String target = null;
 
-    private Date created;
+    private Date created = null;
 
-    private String source;
+    private String source = null;
 
-    private Date expiration;
+    private Date expiration = null;
 
-    private String reason;
+    private String reason = null;
 
     public CraftIpBanEntry(String target, IpBanEntry entry, IpBanList list) {
     }

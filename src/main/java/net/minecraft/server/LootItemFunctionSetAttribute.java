@@ -16,9 +16,9 @@ import org.apache.logging.log4j.Logger;
 
 public class LootItemFunctionSetAttribute extends LootItemFunction {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final LootItemFunctionSetAttribute.a[] b;
+    private final LootItemFunctionSetAttribute.a[] b = null;
 
     public LootItemFunctionSetAttribute(LootItemCondition[] alootitemcondition, LootItemFunctionSetAttribute.a[] alootitemfunctionsetattribute_a) {
     }
@@ -29,18 +29,18 @@ public class LootItemFunctionSetAttribute extends LootItemFunction {
 
     static class a {
 
-        private final String a;
+        private final String a = null;
 
-        private final String b;
+        private final String b = null;
 
-        private final int c;
+        private final int c = 0;
 
-        private final LootValueBounds d;
+        private final LootValueBounds d = null;
 
         @Nullable
-        private final UUID e;
+        private final UUID e = null;
 
-        private final EnumItemSlot[] f;
+        private final EnumItemSlot[] f = null;
 
         private a(String s, String s1, int i, LootValueBounds lootvaluebounds, EnumItemSlot[] aenumitemslot, @Nullable UUID uuid) {
         }

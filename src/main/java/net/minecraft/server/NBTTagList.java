@@ -11,11 +11,11 @@ import org.apache.logging.log4j.Logger;
 
 public class NBTTagList extends NBTBase {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private List<NBTBase> list;
+    private List<NBTBase> list = null;
 
-    private byte type;
+    private byte type = 0;
 
     public NBTTagList() {
     }

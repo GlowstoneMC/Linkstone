@@ -15,7 +15,7 @@ import org.bukkit.plugin.Plugin;
 
 public class CraftMinecartCommand extends CraftMinecart implements CommandMinecart {
 
-    private final PermissibleBase perm;
+    private final PermissibleBase perm = null;
 
     public CraftMinecartCommand(CraftServer server, EntityMinecartCommandBlock entity) {
     }

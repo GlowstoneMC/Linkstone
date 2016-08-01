@@ -83,9 +83,9 @@ class CraftMetaItem implements ItemMeta, Repairable {
             To value();
         }
 
-        final String BUKKIT;
+        final String BUKKIT = null;
 
-        final String NBT;
+        final String NBT = null;
 
         ItemMetaKey(final String both) {
         }
@@ -97,11 +97,11 @@ class CraftMetaItem implements ItemMeta, Repairable {
     @SerializableAs("ItemMeta")
     public static class SerializableMeta implements ConfigurationSerializable {
 
-        static final String TYPE_FIELD;
+        static final String TYPE_FIELD = null;
 
-        static final ImmutableMap<Class<? extends CraftMetaItem>, String> classMap;
+        static final ImmutableMap<Class<? extends CraftMetaItem>, String> classMap = null;
 
-        static final ImmutableMap<String, Constructor<? extends CraftMetaItem>> constructorMap;
+        static final ImmutableMap<String, Constructor<? extends CraftMetaItem>> constructorMap = null;
 
         static {
         }
@@ -130,60 +130,60 @@ class CraftMetaItem implements ItemMeta, Repairable {
         }
     }
 
-    static final ItemMetaKey NAME;
+    static final ItemMetaKey NAME = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey DISPLAY;
+    static final ItemMetaKey DISPLAY = null;
 
-    static final ItemMetaKey LORE;
+    static final ItemMetaKey LORE = null;
 
-    static final ItemMetaKey ENCHANTMENTS;
-
-    @Specific(Specific.To.NBT)
-    static final ItemMetaKey ENCHANTMENTS_ID;
+    static final ItemMetaKey ENCHANTMENTS = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey ENCHANTMENTS_LVL;
-
-    static final ItemMetaKey REPAIR;
+    static final ItemMetaKey ENCHANTMENTS_ID = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey ATTRIBUTES;
+    static final ItemMetaKey ENCHANTMENTS_LVL = null;
+
+    static final ItemMetaKey REPAIR = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey ATTRIBUTES_IDENTIFIER;
+    static final ItemMetaKey ATTRIBUTES = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey ATTRIBUTES_NAME;
+    static final ItemMetaKey ATTRIBUTES_IDENTIFIER = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey ATTRIBUTES_VALUE;
+    static final ItemMetaKey ATTRIBUTES_NAME = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey ATTRIBUTES_TYPE;
+    static final ItemMetaKey ATTRIBUTES_VALUE = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey ATTRIBUTES_UUID_HIGH;
+    static final ItemMetaKey ATTRIBUTES_TYPE = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey ATTRIBUTES_UUID_LOW;
+    static final ItemMetaKey ATTRIBUTES_UUID_HIGH = null;
 
     @Specific(Specific.To.NBT)
-    static final ItemMetaKey HIDEFLAGS;
+    static final ItemMetaKey ATTRIBUTES_UUID_LOW = null;
 
-    private String displayName;
+    @Specific(Specific.To.NBT)
+    static final ItemMetaKey HIDEFLAGS = null;
 
-    private List<String> lore;
+    private String displayName = null;
 
-    private Map<Enchantment, Integer> enchantments;
+    private List<String> lore = null;
 
-    private int repairCost;
+    private Map<Enchantment, Integer> enchantments = null;
 
-    private int hideFlag;
+    private int repairCost = 0;
 
-    private static final Set<String> HANDLED_TAGS;
+    private int hideFlag = 0;
 
-    private final Map<String, NBTBase> unhandledTags;
+    private static final Set<String> HANDLED_TAGS = null;
+
+    private final Map<String, NBTBase> unhandledTags = null;
 
     CraftMetaItem(CraftMetaItem meta) {
     }

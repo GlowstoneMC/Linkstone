@@ -12,9 +12,9 @@ import java.util.List;
  */
 public class CustomIndexHelpTopic extends IndexHelpTopic {
 
-    private List<String> futureTopics;
+    private List<String> futureTopics = null;
 
-    private final HelpMap helpMap;
+    private final HelpMap helpMap = null;
 
     public CustomIndexHelpTopic(HelpMap helpMap, String name, String shortText, String permission, List<String> futureTopics, String preamble) {
     }

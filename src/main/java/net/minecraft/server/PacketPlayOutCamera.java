@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayOutCamera implements Packet<PacketListenerPlayOut> {
 
-    public int a;
+    public int a = 0;
 
     public PacketPlayOutCamera() {
     }

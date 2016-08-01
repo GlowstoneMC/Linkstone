@@ -12,9 +12,9 @@ import com.google.common.collect.ImmutableMap.Builder;
 @DelegateDeserialization(SerializableMeta.class)
 class CraftMetaCharge extends CraftMetaItem implements FireworkEffectMeta {
 
-    static final ItemMetaKey EXPLOSION;
+    static final ItemMetaKey EXPLOSION = null;
 
-    private FireworkEffect effect;
+    private FireworkEffect effect = null;
 
     CraftMetaCharge(CraftMetaItem meta) {
     }

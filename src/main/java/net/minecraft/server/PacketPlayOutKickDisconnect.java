@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayOutKickDisconnect implements Packet<PacketListenerPlayOut> {
 
-    private IChatBaseComponent a;
+    private IChatBaseComponent a = null;
 
     public PacketPlayOutKickDisconnect() {
     }

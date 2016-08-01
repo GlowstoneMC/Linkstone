@@ -9,23 +9,23 @@ import javax.annotation.Nullable;
 
 public class EntityShulker extends EntityGolem implements IMonster {
 
-    private static final UUID bx;
+    private static final UUID bx = null;
 
-    private static final AttributeModifier by;
+    private static final AttributeModifier by = null;
 
-    protected static final DataWatcherObject<EnumDirection> a;
+    protected static final DataWatcherObject<EnumDirection> a = null;
 
-    protected static final DataWatcherObject<Optional<BlockPosition>> b;
+    protected static final DataWatcherObject<Optional<BlockPosition>> b = null;
 
-    protected static final DataWatcherObject<Byte> c;
+    protected static final DataWatcherObject<Byte> c = null;
 
-    private float bz;
+    private float bz = 0.0F;
 
-    private float bA;
+    private float bA = 0.0F;
 
-    private BlockPosition bB;
+    private BlockPosition bB = null;
 
-    private int bC;
+    private int bC = 0;
 
     public EntityShulker(World world) {
     }
@@ -154,7 +154,7 @@ public class EntityShulker extends EntityGolem implements IMonster {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -190,7 +190,7 @@ public class EntityShulker extends EntityGolem implements IMonster {
 
     class a extends PathfinderGoal {
 
-        private int b;
+        private int b = 0;
 
         public a() {
         }
@@ -211,7 +211,7 @@ public class EntityShulker extends EntityGolem implements IMonster {
 
     class e extends PathfinderGoal {
 
-        private int b;
+        private int b = 0;
 
         private e() {
         }

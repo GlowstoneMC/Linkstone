@@ -12,9 +12,9 @@ import org.apache.logging.log4j.Logger;
 
 public class LegacyPingHandler extends ChannelInboundHandlerAdapter {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final ServerConnection b;
+    private final ServerConnection b = null;
 
     public LegacyPingHandler(ServerConnection serverconnection) {
     }

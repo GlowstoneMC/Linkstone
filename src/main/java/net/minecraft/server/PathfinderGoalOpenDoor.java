@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class PathfinderGoalOpenDoor extends PathfinderGoalDoorInteract {
 
-    boolean g;
+    boolean g = false;
 
-    int h;
+    int h = 0;
 
     public PathfinderGoalOpenDoor(EntityInsentient entityinsentient, boolean flag) {
     }

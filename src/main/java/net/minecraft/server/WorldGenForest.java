@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class WorldGenForest extends WorldGenTreeAbstract {
 
-    private static final IBlockData a;
+    private static final IBlockData a = null;
 
-    private static final IBlockData b;
+    private static final IBlockData b = null;
 
-    private final boolean c;
+    private final boolean c = false;
 
     public WorldGenForest(boolean flag, boolean flag1) {
     }

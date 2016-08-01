@@ -8,23 +8,23 @@ import java.util.Random;
 
 public class WorldGenEndCityPieces {
 
-    public static final DefinedStructureManager a;
+    public static final DefinedStructureManager a = null;
 
-    private static final DefinedStructureInfo b;
+    private static final DefinedStructureInfo b = null;
 
-    private static final DefinedStructureInfo c;
+    private static final DefinedStructureInfo c = null;
 
-    private static final WorldGenEndCityPieces.PieceGenerator d;
+    private static final WorldGenEndCityPieces.PieceGenerator d = null;
 
-    private static final List<Tuple<EnumBlockRotation, BlockPosition>> e;
+    private static final List<Tuple<EnumBlockRotation, BlockPosition>> e = null;
 
-    private static final WorldGenEndCityPieces.PieceGenerator f;
+    private static final WorldGenEndCityPieces.PieceGenerator f = null;
 
-    private static final WorldGenEndCityPieces.PieceGenerator g;
+    private static final WorldGenEndCityPieces.PieceGenerator g = null;
 
-    private static final List<Tuple<EnumBlockRotation, BlockPosition>> h;
+    private static final List<Tuple<EnumBlockRotation, BlockPosition>> h = null;
 
-    private static final WorldGenEndCityPieces.PieceGenerator i;
+    private static final WorldGenEndCityPieces.PieceGenerator i = null;
 
     public static void a() {
     }
@@ -56,11 +56,11 @@ public class WorldGenEndCityPieces {
 
     public static class Piece extends DefinedStructurePiece {
 
-        private String d;
+        private String d = null;
 
-        private EnumBlockRotation e;
+        private EnumBlockRotation e = null;
 
-        private boolean f;
+        private boolean f = false;
 
         public Piece() {
         }

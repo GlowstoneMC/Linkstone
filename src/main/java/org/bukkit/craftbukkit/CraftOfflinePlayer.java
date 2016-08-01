@@ -23,11 +23,11 @@ import org.bukkit.plugin.Plugin;
 @SerializableAs("Player")
 public class CraftOfflinePlayer implements OfflinePlayer, ConfigurationSerializable {
 
-    private final GameProfile profile;
+    private final GameProfile profile = null;
 
-    private final CraftServer server;
+    private final CraftServer server = null;
 
-    private final WorldNBTStorage storage;
+    private final WorldNBTStorage storage = null;
 
     protected CraftOfflinePlayer(CraftServer server, GameProfile profile) {
     }

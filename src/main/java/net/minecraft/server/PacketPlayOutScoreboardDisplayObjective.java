@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutScoreboardDisplayObjective implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private String b;
+    private String b = null;
 
     public PacketPlayOutScoreboardDisplayObjective() {
     }

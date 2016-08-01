@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class DragonControllerLandedSearch extends AbstractDragonControllerLanded {
 
-    private int b;
+    private int b = 0;
 
     public DragonControllerLandedSearch(EntityEnderDragon entityenderdragon) {
     }

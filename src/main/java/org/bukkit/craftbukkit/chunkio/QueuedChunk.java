@@ -7,17 +7,17 @@ import net.minecraft.server.World;
 
 class QueuedChunk {
 
-    final int x;
+    final int x = 0;
 
-    final int z;
+    final int z = 0;
 
-    final ChunkRegionLoader loader;
+    final ChunkRegionLoader loader = null;
 
-    final World world;
+    final World world = null;
 
-    final ChunkProviderServer provider;
+    final ChunkProviderServer provider = null;
 
-    NBTTagCompound compound;
+    NBTTagCompound compound = null;
 
     public QueuedChunk(int x, int z, ChunkRegionLoader loader, World world, ChunkProviderServer provider) {
     }

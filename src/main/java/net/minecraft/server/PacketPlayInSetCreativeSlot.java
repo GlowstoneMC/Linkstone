@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayInSetCreativeSlot implements Packet<PacketListenerPlayIn> {
 
-    private int slot;
+    private int slot = 0;
 
-    private ItemStack b;
+    private ItemStack b = null;
 
     public PacketPlayInSetCreativeSlot() {
     }

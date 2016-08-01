@@ -26,82 +26,82 @@ import org.bukkit.inventory.MainHand;
 // CraftBukkit end
 public class EntityPlayer extends EntityHuman implements ICrafting {
 
-    private static final Logger bS;
+    private static final Logger bS = null;
 
-    private String locale;
+    private String locale = null;
 
-    public PlayerConnection playerConnection;
+    public PlayerConnection playerConnection = null;
 
-    public final MinecraftServer server;
+    public final MinecraftServer server = null;
 
-    public final PlayerInteractManager playerInteractManager;
+    public final PlayerInteractManager playerInteractManager = null;
 
-    public double d;
+    public double d = 0.0;
 
-    public double e;
+    public double e = 0.0;
 
-    public final List<Integer> removeQueue;
+    public final List<Integer> removeQueue = null;
 
-    private final ServerStatisticManager bV;
+    private final ServerStatisticManager bV = null;
 
-    private float bW;
+    private float bW = 0.0F;
 
-    private int bX;
+    private int bX = 0;
 
-    private int bY;
+    private int bY = 0;
 
-    private int bZ;
+    private int bZ = 0;
 
-    private int ca;
+    private int ca = 0;
 
-    private int cb;
+    private int cb = 0;
 
-    private float lastHealthSent;
+    private float lastHealthSent = 0.0F;
 
-    private int cd;
+    private int cd = 0;
 
-    private boolean ce;
+    private boolean ce = false;
 
-    public int lastSentExp;
+    public int lastSentExp = 0;
 
-    public int invulnerableTicks;
+    public int invulnerableTicks = 0;
 
-    private EntityHuman.EnumChatVisibility ch;
+    private EntityHuman.EnumChatVisibility ch = null;
 
-    private boolean ci;
+    private boolean ci = false;
 
-    private long cj;
+    private long cj = 0;
 
-    private Entity ck;
+    private Entity ck = null;
 
-    public boolean worldChangeInvuln;
+    public boolean worldChangeInvuln = false;
 
-    private int containerCounter;
+    private int containerCounter = 0;
 
-    public boolean f;
+    public boolean f = false;
 
-    public int ping;
+    public int ping = 0;
 
-    public boolean viewingCredits;
+    public boolean viewingCredits = false;
 
     // CraftBukkit start
-    public String displayName;
+    public String displayName = null;
 
-    public IChatBaseComponent listName;
+    public IChatBaseComponent listName = null;
 
-    public org.bukkit.Location compassTarget;
+    public org.bukkit.Location compassTarget = null;
 
-    public int newExp;
+    public int newExp = 0;
 
-    public int newLevel;
+    public int newLevel = 0;
 
-    public int newTotalExp;
+    public int newTotalExp = 0;
 
-    public boolean keepLevel;
+    public boolean keepLevel = false;
 
-    public double maxHealthCache;
+    public double maxHealthCache = 0.0;
 
-    public boolean joining;
+    public boolean joining = false;
 
     // CraftBukkit end
     public EntityPlayer(MinecraftServer minecraftserver, WorldServer worldserver, GameProfile gameprofile, PlayerInteractManager playerinteractmanager) {
@@ -404,15 +404,15 @@ public class EntityPlayer extends EntityHuman implements ICrafting {
     }
 
     // CraftBukkit start - Add per-player time and weather.
-    public long timeOffset;
+    public long timeOffset = 0;
 
-    public boolean relativeTime;
+    public boolean relativeTime = false;
 
     public long getPlayerTime() {
         return 0;
     }
 
-    public WeatherType weather;
+    public WeatherType weather = null;
 
     public WeatherType getPlayerWeather() {
         return null;
@@ -421,9 +421,9 @@ public class EntityPlayer extends EntityHuman implements ICrafting {
     public void setPlayerWeather(WeatherType type, boolean plugin) {
     }
 
-    private float pluginRainPosition;
+    private float pluginRainPosition = 0.0F;
 
-    private float pluginRainPositionPrevious;
+    private float pluginRainPositionPrevious = 0.0F;
 
     public void updateWeather(float oldRain, float newRain, float oldThunder, float newThunder) {
     }

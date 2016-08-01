@@ -10,9 +10,9 @@ import org.bukkit.block.BlockState;
 
 public class BlockStateListPopulator {
 
-    private final World world;
+    private final World world = null;
 
-    private final List<BlockState> list;
+    private final List<BlockState> list = null;
 
     public BlockStateListPopulator(World world) {
     }

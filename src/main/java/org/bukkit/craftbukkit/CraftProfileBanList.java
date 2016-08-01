@@ -16,7 +16,7 @@ import org.bukkit.Bukkit;
 
 public class CraftProfileBanList implements org.bukkit.BanList {
 
-    private final GameProfileBanList list;
+    private final GameProfileBanList list = null;
 
     public CraftProfileBanList(GameProfileBanList list) {
     }

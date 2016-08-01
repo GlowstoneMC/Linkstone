@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 
 public class WorldChunkManagerHell extends WorldChunkManager {
 
-    private final BiomeBase a;
+    private final BiomeBase a = null;
 
     public WorldChunkManagerHell(BiomeBase biomebase) {
     }

@@ -6,11 +6,11 @@ public enum EnumHorseArmor {
 
     NONE(0), IRON(5, "iron", "meo"), GOLD(7, "gold", "goo"), DIAMOND(11, "diamond", "dio");
 
-    private final String e;
+    private final String e = null;
 
-    private final String f;
+    private final String f = null;
 
-    private final int g;
+    private final int g = 0;
 
     private EnumHorseArmor(int i) {
     }

@@ -10,7 +10,7 @@ import org.bukkit.event.player.PlayerBucketFillEvent;
 // CraftBukkit end
 public class ItemBucket extends Item {
 
-    private final Block a;
+    private final Block a = null;
 
     public ItemBucket(Block block) {
     }

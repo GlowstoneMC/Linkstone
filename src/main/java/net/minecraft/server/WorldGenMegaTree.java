@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class WorldGenMegaTree extends WorldGenMegaTreeAbstract {
 
-    private static final IBlockData e;
+    private static final IBlockData e = null;
 
-    private static final IBlockData f;
+    private static final IBlockData f = null;
 
-    private static final IBlockData g;
+    private static final IBlockData g = null;
 
-    private final boolean h;
+    private final boolean h = false;
 
     public WorldGenMegaTree(boolean flag, boolean flag1) {
     }

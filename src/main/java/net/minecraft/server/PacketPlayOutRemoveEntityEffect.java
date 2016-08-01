@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutRemoveEntityEffect implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private MobEffectList b;
+    private MobEffectList b = null;
 
     public PacketPlayOutRemoveEntityEffect() {
     }

@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ItemBoat extends Item {
 
-    private final EntityBoat.EnumBoatType a;
+    private final EntityBoat.EnumBoatType a = null;
 
     public ItemBoat(EntityBoat.EnumBoatType entityboat_enumboattype) {
     }

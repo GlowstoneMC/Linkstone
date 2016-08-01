@@ -15,9 +15,9 @@ import org.bukkit.projectiles.BlockProjectileSource;
 
 public class CraftDispenser extends CraftBlockState implements Dispenser {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final TileEntityDispenser dispenser;
+    private final TileEntityDispenser dispenser = null;
 
     public CraftDispenser(final Block block) {
     }

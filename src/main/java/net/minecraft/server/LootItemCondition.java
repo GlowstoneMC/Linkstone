@@ -13,9 +13,9 @@ public interface LootItemCondition {
 
     public abstract static class a<T extends LootItemCondition> {
 
-        private final MinecraftKey a;
+        private final MinecraftKey a = null;
 
-        private final Class<T> b;
+        private final Class<T> b = null;
 
         protected a(MinecraftKey minecraftkey, Class<T> oclass) {
         }

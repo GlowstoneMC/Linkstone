@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class WorldGenMineshaftStart extends StructureStart {
 
-    private WorldGenMineshaft.Type c;
+    private WorldGenMineshaft.Type c = null;
 
     public WorldGenMineshaftStart() {
     }

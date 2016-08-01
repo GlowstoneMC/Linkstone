@@ -2,33 +2,33 @@ package net.minecraft.server;
 
 public class WorldType {
 
-    public static final WorldType[] types;
+    public static final WorldType[] types = null;
 
-    public static final WorldType NORMAL;
+    public static final WorldType NORMAL = null;
 
-    public static final WorldType FLAT;
+    public static final WorldType FLAT = null;
 
-    public static final WorldType LARGE_BIOMES;
+    public static final WorldType LARGE_BIOMES = null;
 
-    public static final WorldType AMPLIFIED;
+    public static final WorldType AMPLIFIED = null;
 
-    public static final WorldType CUSTOMIZED;
+    public static final WorldType CUSTOMIZED = null;
 
-    public static final WorldType DEBUG_ALL_BLOCK_STATES;
+    public static final WorldType DEBUG_ALL_BLOCK_STATES = null;
 
-    public static final WorldType NORMAL_1_1;
+    public static final WorldType NORMAL_1_1 = null;
 
-    private final int i;
+    private final int i = 0;
 
-    private final String name;
+    private final String name = null;
 
-    private final int version;
+    private final int version = 0;
 
-    private boolean l;
+    private boolean l = false;
 
-    private boolean m;
+    private boolean m = false;
 
-    private boolean n;
+    private boolean n = false;
 
     private WorldType(int i, String s) {
     }

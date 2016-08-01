@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class BlockTallPlant extends BlockPlant implements IBlockFragilePlantElement {
 
-    public static final BlockStateEnum<BlockTallPlant.EnumTallFlowerVariants> VARIANT;
+    public static final BlockStateEnum<BlockTallPlant.EnumTallFlowerVariants> VARIANT = null;
 
-    public static final BlockStateEnum<BlockTallPlant.EnumTallPlantHalf> HALF;
+    public static final BlockStateEnum<BlockTallPlant.EnumTallPlantHalf> HALF = null;
 
-    public static final BlockStateEnum<EnumDirection> d;
+    public static final BlockStateEnum<EnumDirection> d = null;
 
     public BlockTallPlant() {
     }
@@ -113,13 +113,13 @@ public class BlockTallPlant extends BlockPlant implements IBlockFragilePlantElem
 
         SUNFLOWER(0, "sunflower"), SYRINGA(1, "syringa"), GRASS(2, "double_grass", "grass"), FERN(3, "double_fern", "fern"), ROSE(4, "double_rose", "rose"), PAEONIA(5, "paeonia");
 
-        private static final BlockTallPlant.EnumTallFlowerVariants[] g;
+        private static final BlockTallPlant.EnumTallFlowerVariants[] g = null;
 
-        private final int h;
+        private final int h = 0;
 
-        private final String i;
+        private final String i = null;
 
-        private final String j;
+        private final String j = null;
 
         private EnumTallFlowerVariants(int i, String s) {
         }

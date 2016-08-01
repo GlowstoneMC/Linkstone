@@ -11,7 +11,7 @@ import org.bukkit.conversations.ManuallyAbandonedConversationCanceller;
  */
 public class ConversationTracker {
 
-    private LinkedList<Conversation> conversationQueue;
+    private LinkedList<Conversation> conversationQueue = null;
 
     public synchronized boolean beginConversation(Conversation conversation) {
         return false;

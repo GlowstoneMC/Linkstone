@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayInResourcePackStatus implements Packet<PacketListenerPlayIn> {
 
-    public PacketPlayInResourcePackStatus.EnumResourcePackStatus status;
+    public PacketPlayInResourcePackStatus.EnumResourcePackStatus status = null;
 
     public PacketPlayInResourcePackStatus() {
     }

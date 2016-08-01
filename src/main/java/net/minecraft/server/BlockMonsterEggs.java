@@ -6,7 +6,7 @@ import org.bukkit.event.entity.CreatureSpawnEvent.SpawnReason;
 // CraftBukkit
 public class BlockMonsterEggs extends Block {
 
-    public static final BlockStateEnum<BlockMonsterEggs.EnumMonsterEggVarient> VARIANT;
+    public static final BlockStateEnum<BlockMonsterEggs.EnumMonsterEggVarient> VARIANT = null;
 
     public BlockMonsterEggs() {
     }
@@ -44,7 +44,7 @@ public class BlockMonsterEggs extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -102,13 +102,13 @@ public class BlockMonsterEggs extends Block {
         }
         ;
 
-        private static final BlockMonsterEggs.EnumMonsterEggVarient[] g;
+        private static final BlockMonsterEggs.EnumMonsterEggVarient[] g = null;
 
-        private final int h;
+        private final int h = 0;
 
-        private final String i;
+        private final String i = null;
 
-        private final String j;
+        private final String j = null;
 
         private EnumMonsterEggVarient(int i, String s) {
         }

@@ -4,21 +4,21 @@ import java.io.IOException;
 
 public class PacketPlayOutEntity implements Packet<PacketListenerPlayOut> {
 
-    protected int a;
+    protected int a = 0;
 
-    protected int b;
+    protected int b = 0;
 
-    protected int c;
+    protected int c = 0;
 
-    protected int d;
+    protected int d = 0;
 
-    protected byte e;
+    protected byte e = 0;
 
-    protected byte f;
+    protected byte f = 0;
 
-    protected boolean g;
+    protected boolean g = false;
 
-    protected boolean h;
+    protected boolean h = false;
 
     public PacketPlayOutEntity() {
     }

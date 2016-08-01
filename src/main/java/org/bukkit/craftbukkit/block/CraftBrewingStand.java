@@ -10,7 +10,7 @@ import org.bukkit.inventory.BrewerInventory;
 
 public class CraftBrewingStand extends CraftBlockState implements BrewingStand {
 
-    private final TileEntityBrewingStand brewingStand;
+    private final TileEntityBrewingStand brewingStand = null;
 
     public CraftBrewingStand(Block block) {
     }

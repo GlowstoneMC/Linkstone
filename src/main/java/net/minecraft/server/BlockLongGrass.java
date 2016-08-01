@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class BlockLongGrass extends BlockPlant implements IBlockFragilePlantElement {
 
-    public static final BlockStateEnum<BlockLongGrass.EnumTallGrassType> TYPE;
+    public static final BlockStateEnum<BlockLongGrass.EnumTallGrassType> TYPE = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
     protected BlockLongGrass() {
     }
@@ -67,11 +67,11 @@ public class BlockLongGrass extends BlockPlant implements IBlockFragilePlantElem
 
         DEAD_BUSH(0, "dead_bush"), GRASS(1, "tall_grass"), FERN(2, "fern");
 
-        private static final BlockLongGrass.EnumTallGrassType[] d;
+        private static final BlockLongGrass.EnumTallGrassType[] d = null;
 
-        private final int e;
+        private final int e = 0;
 
-        private final String f;
+        private final String f = null;
 
         private EnumTallGrassType(int i, String s) {
         }

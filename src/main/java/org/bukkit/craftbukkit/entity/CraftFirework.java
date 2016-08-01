@@ -14,9 +14,9 @@ import java.util.Random;
 
 public class CraftFirework extends CraftEntity implements Firework {
 
-    private final Random random;
+    private final Random random = null;
 
-    private final CraftItemStack item;
+    private final CraftItemStack item = null;
 
     public CraftFirework(CraftServer server, EntityFireworks entity) {
     }

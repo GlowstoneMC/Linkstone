@@ -12,9 +12,9 @@ import org.fusesource.jansi.Ansi.Erase;
 
 public class TerminalConsoleWriterThread implements Runnable {
 
-    private final ConsoleReader reader;
+    private final ConsoleReader reader = null;
 
-    private final OutputStream output;
+    private final OutputStream output = null;
 
     public TerminalConsoleWriterThread(OutputStream output, ConsoleReader reader) {
     }

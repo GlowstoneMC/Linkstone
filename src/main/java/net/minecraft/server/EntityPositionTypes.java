@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class EntityPositionTypes {
 
-    private static final Map<Class<?>, EntityInsentient.EnumEntityPositionType> a;
+    private static final Map<Class<?>, EntityInsentient.EnumEntityPositionType> a = null;
 
     public static EntityInsentient.EnumEntityPositionType a(Class<?> oclass) {
         return null;

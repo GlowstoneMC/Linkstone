@@ -5,29 +5,29 @@ import java.util.UUID;
 
 public class PacketPlayOutSpawnEntity implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private UUID b;
+    private UUID b = null;
 
-    private double c;
+    private double c = 0.0;
 
-    private double d;
+    private double d = 0.0;
 
-    private double e;
+    private double e = 0.0;
 
-    private int f;
+    private int f = 0;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private int i;
+    private int i = 0;
 
-    private int j;
+    private int j = 0;
 
-    private int k;
+    private int k = 0;
 
-    private int l;
+    private int l = 0;
 
     public PacketPlayOutSpawnEntity() {
     }

@@ -8,18 +8,18 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit end
 public class ContainerBrewingStand extends Container {
 
-    private final IInventory brewingStand;
+    private final IInventory brewingStand = null;
 
-    private final Slot f;
+    private final Slot f = null;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     // CraftBukkit end
     public ContainerBrewingStand(PlayerInventory playerinventory, IInventory iinventory) {
@@ -74,7 +74,7 @@ public class ContainerBrewingStand extends Container {
 
     static class SlotPotionBottle extends Slot {
 
-        private final EntityHuman a;
+        private final EntityHuman a = null;
 
         public SlotPotionBottle(EntityHuman entityhuman, IInventory iinventory, int i, int j, int k) {
         }

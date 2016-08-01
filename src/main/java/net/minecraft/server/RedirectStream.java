@@ -7,9 +7,9 @@ import org.apache.logging.log4j.Logger;
 
 public class RedirectStream extends PrintStream {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final String b;
+    private final String b = null;
 
     public RedirectStream(String s, OutputStream outputstream) {
     }

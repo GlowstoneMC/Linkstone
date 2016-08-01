@@ -12,21 +12,21 @@ import org.bukkit.event.block.BlockSpreadEvent;
 // CraftBukkit end
 public class BlockFire extends Block {
 
-    public static final BlockStateInteger AGE;
+    public static final BlockStateInteger AGE = null;
 
-    public static final BlockStateBoolean NORTH;
+    public static final BlockStateBoolean NORTH = null;
 
-    public static final BlockStateBoolean EAST;
+    public static final BlockStateBoolean EAST = null;
 
-    public static final BlockStateBoolean SOUTH;
+    public static final BlockStateBoolean SOUTH = null;
 
-    public static final BlockStateBoolean WEST;
+    public static final BlockStateBoolean WEST = null;
 
-    public static final BlockStateBoolean UPPER;
+    public static final BlockStateBoolean UPPER = null;
 
-    private final Map<Block, Integer> flameChances;
+    private final Map<Block, Integer> flameChances = null;
 
-    private final Map<Block, Integer> B;
+    private final Map<Block, Integer> B = null;
 
     public IBlockData updateState(IBlockData iblockdata, IBlockAccess iblockaccess, BlockPosition blockposition) {
         return null;

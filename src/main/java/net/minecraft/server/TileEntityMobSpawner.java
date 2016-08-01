@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class TileEntityMobSpawner extends TileEntity implements ITickable {
 
-    private final MobSpawnerAbstract a;
+    private final MobSpawnerAbstract a = null;
 
     public TileEntityMobSpawner() {
     }

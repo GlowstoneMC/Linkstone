@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class ItemLeaves extends ItemBlock {
 
-    private final BlockLeaves b;
+    private final BlockLeaves b = null;
 
     public ItemLeaves(BlockLeaves blockleaves) {
     }

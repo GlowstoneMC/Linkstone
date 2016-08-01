@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class PacketPlayOutAttachEntity implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private int b;
+    private int b = 0;
 
     public PacketPlayOutAttachEntity() {
     }

@@ -27,13 +27,13 @@
             <artifactId>bukkit</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
-        </dependency>	
+        </dependency> -->	
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>minecraft-server</artifactId>
             <version>${minecraft.version}-SNAPSHOT</version>
             <scope>compile</scope>
-        </dependency> -->
+        </dependency>
 		<dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowkit</artifactId>

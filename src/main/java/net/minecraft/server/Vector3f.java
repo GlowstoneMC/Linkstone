@@ -2,11 +2,11 @@ package net.minecraft.server;
 
 public class Vector3f {
 
-    protected final float x;
+    protected final float x = 0.0F;
 
-    protected final float y;
+    protected final float y = 0.0F;
 
-    protected final float z;
+    protected final float z = 0.0F;
 
     public Vector3f(float f, float f1, float f2) {
     }

@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class InteractionResultWrapper<T> {
 
-    private final EnumInteractionResult a;
+    private final EnumInteractionResult a = null;
 
-    private final T b;
+    private final T b = null;
 
     public InteractionResultWrapper(EnumInteractionResult enuminteractionresult, T t0) {
     }

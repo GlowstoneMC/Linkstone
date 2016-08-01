@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class ItemStep extends ItemBlock {
 
-    private final BlockStepAbstract b;
+    private final BlockStepAbstract b = null;
 
-    private final BlockStepAbstract c;
+    private final BlockStepAbstract c = null;
 
     public ItemStep(Block block, BlockStepAbstract blockstepabstract, BlockStepAbstract blockstepabstract1) {
     }

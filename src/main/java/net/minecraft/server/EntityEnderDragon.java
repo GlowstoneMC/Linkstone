@@ -12,57 +12,57 @@ import org.bukkit.event.entity.EntityRegainHealthEvent;
 // PAIL: Fixme
 public class EntityEnderDragon extends EntityInsentient implements IComplex, IMonster {
 
-    private static final Logger bJ;
+    private static final Logger bJ = null;
 
-    public static final DataWatcherObject<Integer> PHASE;
+    public static final DataWatcherObject<Integer> PHASE = null;
 
-    public double[][] b;
+    public double[][] b = null;
 
-    public int c;
+    public int c = 0;
 
-    public EntityComplexPart[] children;
+    public EntityComplexPart[] children = null;
 
-    public EntityComplexPart bw;
+    public EntityComplexPart bw = null;
 
-    public EntityComplexPart bx;
+    public EntityComplexPart bx = null;
 
-    public EntityComplexPart by;
+    public EntityComplexPart by = null;
 
-    public EntityComplexPart bz;
+    public EntityComplexPart bz = null;
 
-    public EntityComplexPart bA;
+    public EntityComplexPart bA = null;
 
-    public EntityComplexPart bB;
+    public EntityComplexPart bB = null;
 
-    public EntityComplexPart bC;
+    public EntityComplexPart bC = null;
 
-    public EntityComplexPart bD;
+    public EntityComplexPart bD = null;
 
-    public float bE;
+    public float bE = 0.0F;
 
-    public float bF;
+    public float bF = 0.0F;
 
-    public boolean bG;
+    public boolean bG = false;
 
-    public int bH;
+    public int bH = 0;
 
-    public EntityEnderCrystal currentEnderCrystal;
+    public EntityEnderCrystal currentEnderCrystal = null;
 
-    private final EnderDragonBattle bK;
+    private final EnderDragonBattle bK = null;
 
-    private final DragonControllerManager bL;
+    private final DragonControllerManager bL = null;
 
-    private int bM;
+    private int bM = 0;
 
-    private int bN;
+    private int bN = 0;
 
-    private final PathPoint[] bO;
+    private final PathPoint[] bO = null;
 
-    private final int[] bP;
+    private final int[] bP = null;
 
-    private final Path bQ;
+    private final Path bQ = null;
 
-    private Explosion explosionSource;
+    private Explosion explosionSource = null;
 
     // CraftBukkit - reusable source for CraftTNTPrimed.getSource()
     public EntityEnderDragon(World world) {

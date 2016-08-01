@@ -4,9 +4,9 @@ import com.google.common.collect.Multimap;
 
 public class ItemSword extends Item {
 
-    private final float a;
+    private final float a = 0.0F;
 
-    private final Item.EnumToolMaterial b;
+    private final Item.EnumToolMaterial b = null;
 
     public ItemSword(Item.EnumToolMaterial item_enumtoolmaterial) {
     }

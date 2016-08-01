@@ -9,13 +9,13 @@ import org.apache.logging.log4j.Logger;
 
 public class DataConverterManager implements DataConverter {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final Map<DataConverterType, List<DataInspector>> b;
+    private final Map<DataConverterType, List<DataInspector>> b = null;
 
-    private final Map<DataConverterType, List<IDataConverter>> c;
+    private final Map<DataConverterType, List<IDataConverter>> c = null;
 
-    private final int d;
+    private final int d = 0;
 
     public DataConverterManager(int i) {
     }

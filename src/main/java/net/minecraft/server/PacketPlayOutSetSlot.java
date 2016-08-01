@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class PacketPlayOutSetSlot implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private int b;
+    private int b = 0;
 
-    private ItemStack c;
+    private ItemStack c = null;
 
     public PacketPlayOutSetSlot() {
     }

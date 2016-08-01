@@ -4,42 +4,42 @@ import javax.annotation.Nullable;
 
 public abstract class NavigationAbstract {
 
-    protected EntityInsentient a;
+    protected EntityInsentient a = null;
 
-    protected World b;
+    protected World b = null;
 
     @Nullable
-    protected PathEntity c;
+    protected PathEntity c = null;
 
-    protected double d;
+    protected double d = 0.0;
 
-    private final AttributeInstance f;
+    private final AttributeInstance f = null;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private Vec3D i;
+    private Vec3D i = null;
 
-    private Vec3D j;
+    private Vec3D j = null;
 
-    private long k;
+    private long k = 0;
 
-    private long l;
+    private long l = 0;
 
-    private double m;
+    private double m = 0.0;
 
-    private float n;
+    private float n = 0.0F;
 
-    private boolean o;
+    private boolean o = false;
 
-    private long p;
+    private long p = 0;
 
-    protected PathfinderAbstract e;
+    protected PathfinderAbstract e = null;
 
-    private BlockPosition q;
+    private BlockPosition q = null;
 
-    private final Pathfinder r;
+    private final Pathfinder r = null;
 
     public NavigationAbstract(EntityInsentient entityinsentient, World world) {
     }

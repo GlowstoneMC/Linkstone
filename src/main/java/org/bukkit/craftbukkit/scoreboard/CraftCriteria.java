@@ -7,16 +7,16 @@ import com.google.common.collect.ImmutableMap;
 
 final class CraftCriteria {
 
-    static final Map<String, CraftCriteria> DEFAULTS;
+    static final Map<String, CraftCriteria> DEFAULTS = null;
 
-    static final CraftCriteria DUMMY;
+    static final CraftCriteria DUMMY = null;
 
     static {
     }
 
-    final IScoreboardCriteria criteria;
+    final IScoreboardCriteria criteria = null;
 
-    final String bukkitName;
+    final String bukkitName = null;
 
     private CraftCriteria(String bukkitName) {
     }

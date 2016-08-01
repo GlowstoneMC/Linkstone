@@ -37,7 +37,7 @@ public class WorldGenVillagePieces {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -62,13 +62,13 @@ public class WorldGenVillagePieces {
 
     public static class WorldGenVillageFarm2 extends WorldGenVillagePieces.WorldGenVillagePiece {
 
-        private Block a;
+        private Block a = null;
 
-        private Block b;
+        private Block b = null;
 
-        private Block c;
+        private Block c = null;
 
-        private Block d;
+        private Block d = null;
 
         public WorldGenVillageFarm2() {
         }
@@ -97,9 +97,9 @@ public class WorldGenVillagePieces {
 
     public static class WorldGenVillageFarm extends WorldGenVillagePieces.WorldGenVillagePiece {
 
-        private Block a;
+        private Block a = null;
 
-        private Block b;
+        private Block b = null;
 
         public WorldGenVillageFarm() {
         }
@@ -128,7 +128,7 @@ public class WorldGenVillagePieces {
 
     public static class WorldGenVillageBlacksmith extends WorldGenVillagePieces.WorldGenVillagePiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenVillageBlacksmith() {
         }
@@ -195,9 +195,9 @@ public class WorldGenVillagePieces {
 
     public static class WorldGenVillageHut extends WorldGenVillagePieces.WorldGenVillagePiece {
 
-        private boolean a;
+        private boolean a = false;
 
-        private int b;
+        private int b = 0;
 
         public WorldGenVillageHut() {
         }
@@ -264,7 +264,7 @@ public class WorldGenVillagePieces {
 
     public static class WorldGenVillageHouse extends WorldGenVillagePieces.WorldGenVillagePiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenVillageHouse() {
         }
@@ -289,7 +289,7 @@ public class WorldGenVillagePieces {
 
     public static class WorldGenVillageRoad extends WorldGenVillagePieces.WorldGenVillageRoadPiece {
 
-        private int a;
+        private int a = 0;
 
         public WorldGenVillageRoad() {
         }
@@ -326,17 +326,17 @@ public class WorldGenVillagePieces {
 
     public static class WorldGenVillageStartPiece extends WorldGenVillagePieces.WorldGenVillageWell {
 
-        public WorldChunkManager a;
+        public WorldChunkManager a = null;
 
-        public int b;
+        public int b = 0;
 
-        public WorldGenVillagePieces.WorldGenVillagePieceWeight c;
+        public WorldGenVillagePieces.WorldGenVillagePieceWeight c = null;
 
-        public List<WorldGenVillagePieces.WorldGenVillagePieceWeight> d;
+        public List<WorldGenVillagePieces.WorldGenVillagePieceWeight> d = null;
 
-        public List<StructurePiece> e;
+        public List<StructurePiece> e = null;
 
-        public List<StructurePiece> f;
+        public List<StructurePiece> f = null;
 
         public WorldGenVillageStartPiece() {
         }
@@ -363,13 +363,13 @@ public class WorldGenVillagePieces {
 
     abstract static class WorldGenVillagePiece extends StructurePiece {
 
-        protected int g;
+        protected int g = 0;
 
-        private int a;
+        private int a = 0;
 
-        protected int h;
+        protected int h = 0;
 
-        protected boolean i;
+        protected boolean i = false;
 
         public WorldGenVillagePiece() {
         }
@@ -429,13 +429,13 @@ public class WorldGenVillagePieces {
 
     public static class WorldGenVillagePieceWeight {
 
-        public Class<? extends WorldGenVillagePieces.WorldGenVillagePiece> a;
+        public Class<? extends WorldGenVillagePieces.WorldGenVillagePiece> a = null;
 
-        public final int b;
+        public final int b = 0;
 
-        public int c;
+        public int c = 0;
 
-        public int d;
+        public int d = 0;
 
         public WorldGenVillagePieceWeight(Class<? extends WorldGenVillagePieces.WorldGenVillagePiece> oclass, int i, int j) {
         }

@@ -2,19 +2,19 @@ package net.minecraft.server;
 
 public class PlayerAbilities {
 
-    public boolean isInvulnerable;
+    public boolean isInvulnerable = false;
 
-    public boolean isFlying;
+    public boolean isFlying = false;
 
-    public boolean canFly;
+    public boolean canFly = false;
 
-    public boolean canInstantlyBuild;
+    public boolean canInstantlyBuild = false;
 
-    public boolean mayBuild;
+    public boolean mayBuild = false;
 
-    public float flySpeed;
+    public float flySpeed = 0.0F;
 
-    public float walkSpeed;
+    public float walkSpeed = 0.0F;
 
     public PlayerAbilities() {
     }

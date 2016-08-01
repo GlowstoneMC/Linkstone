@@ -5,35 +5,35 @@ import java.util.Arrays;
 
 public class DragonControllerPhase<T extends IDragonController> {
 
-    private static DragonControllerPhase<?>[] l;
+    private static DragonControllerPhase<?>[] l = null;
 
-    public static final DragonControllerPhase<DragonControllerHold> a;
+    public static final DragonControllerPhase<DragonControllerHold> a = null;
 
-    public static final DragonControllerPhase<DragonControllerStrafe> b;
+    public static final DragonControllerPhase<DragonControllerStrafe> b = null;
 
-    public static final DragonControllerPhase<DragonControllerLandingFly> c;
+    public static final DragonControllerPhase<DragonControllerLandingFly> c = null;
 
-    public static final DragonControllerPhase<DragonControllerLanding> d;
+    public static final DragonControllerPhase<DragonControllerLanding> d = null;
 
-    public static final DragonControllerPhase<DragonControllerFly> e;
+    public static final DragonControllerPhase<DragonControllerFly> e = null;
 
-    public static final DragonControllerPhase<DragonControllerLandedFlame> f;
+    public static final DragonControllerPhase<DragonControllerLandedFlame> f = null;
 
-    public static final DragonControllerPhase<DragonControllerLandedSearch> g;
+    public static final DragonControllerPhase<DragonControllerLandedSearch> g = null;
 
-    public static final DragonControllerPhase<DragonControllerLandedAttack> h;
+    public static final DragonControllerPhase<DragonControllerLandedAttack> h = null;
 
-    public static final DragonControllerPhase<DragonControllerCharge> i;
+    public static final DragonControllerPhase<DragonControllerCharge> i = null;
 
-    public static final DragonControllerPhase<DragonControllerDying> j;
+    public static final DragonControllerPhase<DragonControllerDying> j = null;
 
-    public static final DragonControllerPhase<DragonControllerHover> k;
+    public static final DragonControllerPhase<DragonControllerHover> k = null;
 
-    private final Class<? extends IDragonController> m;
+    private final Class<? extends IDragonController> m = null;
 
-    private final int n;
+    private final int n = 0;
 
-    private final String o;
+    private final String o = null;
 
     private DragonControllerPhase(int i, Class<? extends IDragonController> oclass, String s) {
     }

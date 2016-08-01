@@ -7,21 +7,21 @@ import org.bukkit.event.block.BlockRedstoneEvent;
 // CraftBukkit
 public class BlockLever extends Block {
 
-    public static final BlockStateEnum<BlockLever.EnumLeverPosition> FACING;
+    public static final BlockStateEnum<BlockLever.EnumLeverPosition> FACING = null;
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
     protected BlockLever() {
     }
@@ -107,13 +107,13 @@ public class BlockLever extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
-        static final int[] d;
+        static final int[] d = null;
 
         static {
         }
@@ -123,13 +123,13 @@ public class BlockLever extends Block {
 
         DOWN_X(0, "down_x", EnumDirection.DOWN), EAST(1, "east", EnumDirection.EAST), WEST(2, "west", EnumDirection.WEST), SOUTH(3, "south", EnumDirection.SOUTH), NORTH(4, "north", EnumDirection.NORTH), UP_Z(5, "up_z", EnumDirection.UP), UP_X(6, "up_x", EnumDirection.UP), DOWN_Z(7, "down_z", EnumDirection.DOWN);
 
-        private static final BlockLever.EnumLeverPosition[] i;
+        private static final BlockLever.EnumLeverPosition[] i = null;
 
-        private final int j;
+        private final int j = 0;
 
-        private final String k;
+        private final String k = null;
 
-        private final EnumDirection l;
+        private final EnumDirection l = null;
 
         private EnumLeverPosition(int i, String s, EnumDirection enumdirection) {
         }

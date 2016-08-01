@@ -12,19 +12,19 @@ import javax.annotation.Nullable;
 
 public class EntityEnderman extends EntityMonster {
 
-    private static final UUID a;
+    private static final UUID a = null;
 
-    private static final AttributeModifier b;
+    private static final AttributeModifier b = null;
 
-    private static final Set<Block> c;
+    private static final Set<Block> c = null;
 
-    private static final DataWatcherObject<Optional<IBlockData>> bx;
+    private static final DataWatcherObject<Optional<IBlockData>> bx = null;
 
-    private static final DataWatcherObject<Boolean> by;
+    private static final DataWatcherObject<Boolean> by = null;
 
-    private int bz;
+    private int bz = 0;
 
-    private int bA;
+    private int bA = 0;
 
     public EntityEnderman(World world) {
     }
@@ -128,7 +128,7 @@ public class EntityEnderman extends EntityMonster {
 
     static class PathfinderGoalEndermanPickupBlock extends PathfinderGoal {
 
-        private final EntityEnderman enderman;
+        private final EntityEnderman enderman = null;
 
         public PathfinderGoalEndermanPickupBlock(EntityEnderman entityenderman) {
         }
@@ -143,7 +143,7 @@ public class EntityEnderman extends EntityMonster {
 
     static class PathfinderGoalEndermanPlaceBlock extends PathfinderGoal {
 
-        private final EntityEnderman a;
+        private final EntityEnderman a = null;
 
         public PathfinderGoalEndermanPlaceBlock(EntityEnderman entityenderman) {
         }
@@ -162,13 +162,13 @@ public class EntityEnderman extends EntityMonster {
 
     static class PathfinderGoalPlayerWhoLookedAtTarget extends PathfinderGoalNearestAttackableTarget<EntityHuman> {
 
-        private final EntityEnderman i;
+        private final EntityEnderman i = null;
 
-        private EntityHuman j;
+        private EntityHuman j = null;
 
-        private int k;
+        private int k = 0;
 
-        private int l;
+        private int l = 0;
 
         public PathfinderGoalPlayerWhoLookedAtTarget(EntityEnderman entityenderman) {
         }

@@ -17,41 +17,41 @@ import javax.annotation.Nullable;
 
 public class EntityAreaEffectCloud extends Entity {
 
-    private static final DataWatcherObject<Float> a;
+    private static final DataWatcherObject<Float> a = null;
 
-    private static final DataWatcherObject<Integer> b;
+    private static final DataWatcherObject<Integer> b = null;
 
-    private static final DataWatcherObject<Boolean> c;
+    private static final DataWatcherObject<Boolean> c = null;
 
-    private static final DataWatcherObject<Integer> d;
+    private static final DataWatcherObject<Integer> d = null;
 
-    private static final DataWatcherObject<Integer> e;
+    private static final DataWatcherObject<Integer> e = null;
 
-    private static final DataWatcherObject<Integer> f;
+    private static final DataWatcherObject<Integer> f = null;
 
-    private PotionRegistry potionRegistry;
+    private PotionRegistry potionRegistry = null;
 
-    public List<MobEffect> effects;
+    public List<MobEffect> effects = null;
 
-    private final Map<Entity, Integer> au;
+    private final Map<Entity, Integer> au = null;
 
-    private int av;
+    private int av = 0;
 
-    public int waitTime;
+    public int waitTime = 0;
 
-    public int reapplicationDelay;
+    public int reapplicationDelay = 0;
 
-    private boolean hasColor;
+    private boolean hasColor = false;
 
-    public int durationOnUse;
+    public int durationOnUse = 0;
 
-    public float radiusOnUse;
+    public float radiusOnUse = 0.0F;
 
-    public float radiusPerTick;
+    public float radiusPerTick = 0.0F;
 
-    private EntityLiving aC;
+    private EntityLiving aC = null;
 
-    private UUID aD;
+    private UUID aD = null;
 
     public EntityAreaEffectCloud(World world) {
     }

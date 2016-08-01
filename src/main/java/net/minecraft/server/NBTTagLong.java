@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class NBTTagLong extends NBTNumber {
 
-    private long data;
+    private long data = 0;
 
     NBTTagLong() {
     }

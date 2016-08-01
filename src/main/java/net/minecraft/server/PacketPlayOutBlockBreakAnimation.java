@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayOutBlockBreakAnimation implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private BlockPosition b;
+    private BlockPosition b = null;
 
-    private int c;
+    private int c = 0;
 
     public PacketPlayOutBlockBreakAnimation() {
     }

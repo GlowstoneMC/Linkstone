@@ -5,7 +5,7 @@ import org.bukkit.util.permissions.DefaultPermissions;
 
 public final class CraftDefaultPermissions {
 
-    private static final String ROOT;
+    private static final String ROOT = null;
 
     private CraftDefaultPermissions() {
     }

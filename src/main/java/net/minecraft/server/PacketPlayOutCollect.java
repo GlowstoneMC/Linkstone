@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutCollect implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private int b;
+    private int b = 0;
 
     public PacketPlayOutCollect() {
     }

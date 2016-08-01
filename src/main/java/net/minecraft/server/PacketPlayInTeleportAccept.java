@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayInTeleportAccept implements Packet<PacketListenerPlayIn> {
 
-    private int a;
+    private int a = 0;
 
     public PacketPlayInTeleportAccept() {
     }

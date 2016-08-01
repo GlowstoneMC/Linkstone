@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class DragonControllerLanding extends AbstractDragonController {
 
-    private Vec3D b;
+    private Vec3D b = null;
 
     public DragonControllerLanding(EntityEnderDragon entityenderdragon) {
     }

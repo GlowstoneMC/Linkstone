@@ -25,7 +25,7 @@ import org.bukkit.Material;
 
 public class CraftInventory implements Inventory {
 
-    protected final IInventory inventory;
+    protected final IInventory inventory = null;
 
     public CraftInventory(IInventory inventory) {
     }

@@ -29,15 +29,15 @@ import org.apache.logging.log4j.Logger;
 
 public class NameReferencingFileConverter {
 
-    private static final Logger e;
+    private static final Logger e = null;
 
-    public static final File a;
+    public static final File a = null;
 
-    public static final File b;
+    public static final File b = null;
 
-    public static final File c;
+    public static final File c = null;
 
-    public static final File d;
+    public static final File d = null;
 
     static List<String> a(File file, Map<String, String[]> map) throws IOException {
         return null;

@@ -6,29 +6,29 @@ import java.util.List;
 
 public abstract class MobSpawnerAbstract {
 
-    public int spawnDelay;
+    public int spawnDelay = 0;
 
-    private final List<MobSpawnerData> mobs;
+    private final List<MobSpawnerData> mobs = null;
 
-    private MobSpawnerData spawnData;
+    private MobSpawnerData spawnData = null;
 
-    private double d;
+    private double d = 0.0;
 
-    private double e;
+    private double e = 0.0;
 
-    private int minSpawnDelay;
+    private int minSpawnDelay = 0;
 
-    private int maxSpawnDelay;
+    private int maxSpawnDelay = 0;
 
-    private int spawnCount;
+    private int spawnCount = 0;
 
-    private Entity i;
+    private Entity i = null;
 
-    private int maxNearbyEntities;
+    private int maxNearbyEntities = 0;
 
-    private int requiredPlayerRange;
+    private int requiredPlayerRange = 0;
 
-    private int spawnRange;
+    private int spawnRange = 0;
 
     public MobSpawnerAbstract() {
     }

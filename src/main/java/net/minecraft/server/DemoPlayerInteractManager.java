@@ -4,13 +4,13 @@ import javax.annotation.Nullable;
 
 public class DemoPlayerInteractManager extends PlayerInteractManager {
 
-    private boolean c;
+    private boolean c = false;
 
-    private boolean d;
+    private boolean d = false;
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
     public DemoPlayerInteractManager(World world) {
     }

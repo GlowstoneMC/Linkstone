@@ -31,17 +31,17 @@ import org.apache.logging.log4j.Logger;
 
 public class JsonList<K, V extends JsonListEntry<K>> {
 
-    protected static final Logger a;
+    protected static final Logger a = null;
 
-    protected final Gson b;
+    protected final Gson b = null;
 
-    private final File c;
+    private final File c = null;
 
-    private final Map<String, V> d;
+    private final Map<String, V> d = null;
 
-    private boolean e;
+    private boolean e = false;
 
-    private static final ParameterizedType f;
+    private static final ParameterizedType f = null;
 
     public JsonList(File file) {
     }

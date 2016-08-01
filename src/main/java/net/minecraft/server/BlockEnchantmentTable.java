@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class BlockEnchantmentTable extends BlockTileEntity {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
     protected BlockEnchantmentTable() {
     }

@@ -12,7 +12,7 @@ import org.bukkit.event.block.BlockFadeEvent;
 // CraftBukkit end
 public class BlockGrass extends Block implements IBlockFragilePlantElement {
 
-    public static final BlockStateBoolean SNOWY;
+    public static final BlockStateBoolean SNOWY = null;
 
     protected BlockGrass() {
     }

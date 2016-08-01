@@ -6,13 +6,13 @@ import javax.annotation.concurrent.Immutable;
 @Immutable
 public class BaseBlockPosition implements Comparable<BaseBlockPosition> {
 
-    public static final BaseBlockPosition ZERO;
+    public static final BaseBlockPosition ZERO = null;
 
-    private final int a;
+    private final int a = 0;
 
-    private final int b;
+    private final int b = 0;
 
-    private final int c;
+    private final int c = 0;
 
     public BaseBlockPosition(int i, int j, int k) {
     }

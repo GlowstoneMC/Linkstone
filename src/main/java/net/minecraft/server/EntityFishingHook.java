@@ -10,41 +10,41 @@ import org.bukkit.event.player.PlayerFishEvent;
 // CraftBukkit end
 public class EntityFishingHook extends Entity {
 
-    private static final DataWatcherObject<Integer> c;
+    private static final DataWatcherObject<Integer> c = null;
 
-    private BlockPosition d;
+    private BlockPosition d = null;
 
-    private Block e;
+    private Block e = null;
 
-    private boolean isInGround;
+    private boolean isInGround = false;
 
-    public EntityHuman owner;
+    public EntityHuman owner = null;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private int au;
+    private int au = 0;
 
-    private int av;
+    private int av = 0;
 
-    private int aw;
+    private int aw = 0;
 
-    private float ax;
+    private float ax = 0.0F;
 
-    private int ay;
+    private int ay = 0;
 
-    private double az;
+    private double az = 0.0;
 
-    private double aA;
+    private double aA = 0.0;
 
-    private double aB;
+    private double aB = 0.0;
 
-    private double aC;
+    private double aC = 0.0;
 
-    private double aD;
+    private double aD = 0.0;
 
-    public Entity hooked;
+    public Entity hooked = null;
 
     public EntityFishingHook(World world) {
     }

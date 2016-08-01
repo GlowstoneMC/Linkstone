@@ -35,11 +35,11 @@ public class CommandClone extends CommandAbstract {
 
     static class CommandCloneStoredTileEntity {
 
-        public final BlockPosition a;
+        public final BlockPosition a = null;
 
-        public final IBlockData b;
+        public final IBlockData b = null;
 
-        public final NBTTagCompound c;
+        public final NBTTagCompound c = null;
 
         public CommandCloneStoredTileEntity(BlockPosition blockposition, IBlockData iblockdata, NBTTagCompound nbttagcompound) {
         }

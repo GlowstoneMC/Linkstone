@@ -17,13 +17,13 @@ import javax.annotation.Nullable;
 
 public class PersistentCollection {
 
-    private final IDataManager b;
+    private final IDataManager b = null;
 
-    protected Map<String, PersistentBase> a;
+    protected Map<String, PersistentBase> a = null;
 
-    private final List<PersistentBase> c;
+    private final List<PersistentBase> c = null;
 
-    private final Map<String, Short> d;
+    private final Map<String, Short> d = null;
 
     public PersistentCollection(IDataManager idatamanager) {
     }

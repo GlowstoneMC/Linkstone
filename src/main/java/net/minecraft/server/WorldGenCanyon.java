@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class WorldGenCanyon extends WorldGenBase {
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
-    protected static final IBlockData b;
+    protected static final IBlockData b = null;
 
-    private final float[] c;
+    private final float[] c = null;
 
     public WorldGenCanyon() {
     }

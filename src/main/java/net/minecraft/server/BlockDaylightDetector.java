@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class BlockDaylightDetector extends BlockTileEntity {
 
-    public static final BlockStateInteger POWER;
+    public static final BlockStateInteger POWER = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
-    private final boolean c;
+    private final boolean c = false;
 
     public BlockDaylightDetector(boolean flag) {
     }

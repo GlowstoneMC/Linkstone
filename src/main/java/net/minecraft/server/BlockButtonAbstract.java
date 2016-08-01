@@ -10,33 +10,33 @@ import org.bukkit.event.entity.EntityInteractEvent;
 // CraftBukkit end
 public abstract class BlockButtonAbstract extends BlockDirectional {
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
-    protected static final AxisAlignedBB C;
+    protected static final AxisAlignedBB C = null;
 
-    protected static final AxisAlignedBB D;
+    protected static final AxisAlignedBB D = null;
 
-    protected static final AxisAlignedBB E;
+    protected static final AxisAlignedBB E = null;
 
-    protected static final AxisAlignedBB F;
+    protected static final AxisAlignedBB F = null;
 
-    protected static final AxisAlignedBB G;
+    protected static final AxisAlignedBB G = null;
 
-    private final boolean I;
+    private final boolean I = false;
 
     protected BlockButtonAbstract(boolean flag) {
     }
@@ -145,7 +145,7 @@ public abstract class BlockButtonAbstract extends BlockDirectional {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

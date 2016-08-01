@@ -14,14 +14,14 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class CraftingManager {
 
-    private static final CraftingManager a;
+    private static final CraftingManager a = null;
 
-    public List<IRecipe> recipes;
+    public List<IRecipe> recipes = null;
 
     // CraftBukkit start
-    public IRecipe lastRecipe;
+    public IRecipe lastRecipe = null;
 
-    public org.bukkit.inventory.InventoryView lastCraftView;
+    public org.bukkit.inventory.InventoryView lastCraftView = null;
 
     // CraftBukkit end
     public static CraftingManager getInstance() {

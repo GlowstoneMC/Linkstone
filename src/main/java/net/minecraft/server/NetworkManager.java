@@ -30,37 +30,37 @@ import org.apache.logging.log4j.MarkerManager;
 
 public class NetworkManager extends SimpleChannelInboundHandler<Packet<?>> {
 
-    private static final Logger g;
+    private static final Logger g = null;
 
-    public static final Marker a;
+    public static final Marker a = null;
 
-    public static final Marker b;
+    public static final Marker b = null;
 
-    public static final AttributeKey<EnumProtocol> c;
+    public static final AttributeKey<EnumProtocol> c = null;
 
-    public static final LazyInitVar<NioEventLoopGroup> d;
+    public static final LazyInitVar<NioEventLoopGroup> d = null;
 
-    public static final LazyInitVar<EpollEventLoopGroup> e;
+    public static final LazyInitVar<EpollEventLoopGroup> e = null;
 
-    public static final LazyInitVar<LocalEventLoopGroup> f;
+    public static final LazyInitVar<LocalEventLoopGroup> f = null;
 
-    private final EnumProtocolDirection h;
+    private final EnumProtocolDirection h = null;
 
-    private final Queue<NetworkManager.QueuedPacket> i;
+    private final Queue<NetworkManager.QueuedPacket> i = null;
 
-    private final ReentrantReadWriteLock j;
+    private final ReentrantReadWriteLock j = null;
 
-    public Channel channel;
+    public Channel channel = null;
 
-    private SocketAddress l;
+    private SocketAddress l = null;
 
-    private PacketListener m;
+    private PacketListener m = null;
 
-    private IChatBaseComponent n;
+    private IChatBaseComponent n = null;
 
-    private boolean o;
+    private boolean o = false;
 
-    private boolean p;
+    private boolean p = false;
 
     public NetworkManager(EnumProtocolDirection enumprotocoldirection) {
     }
@@ -142,9 +142,9 @@ public class NetworkManager extends SimpleChannelInboundHandler<Packet<?>> {
 
     static class QueuedPacket {
 
-        private final Packet<?> a;
+        private final Packet<?> a = null;
 
-        private final GenericFutureListener<? extends Future<? super Void>>[] b;
+        private final GenericFutureListener<? extends Future<? super Void>>[] b = null;
 
         public QueuedPacket(Packet<?> packet, GenericFutureListener<? extends Future<? super Void>>... agenericfuturelistener) {
         }

@@ -12,11 +12,11 @@ import org.bukkit.plugin.Plugin;
 
 public class ProxiedNativeCommandSender implements ProxiedCommandSender {
 
-    private final ICommandListener orig;
+    private final ICommandListener orig = null;
 
-    private final CommandSender caller;
+    private final CommandSender caller = null;
 
-    private final CommandSender callee;
+    private final CommandSender callee = null;
 
     public ProxiedNativeCommandSender(ICommandListener orig, CommandSender caller, CommandSender callee) {
     }

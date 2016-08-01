@@ -4,11 +4,11 @@ import java.util.Random;
 
 public abstract class BlockStepAbstract extends Block {
 
-    public static final BlockStateEnum<BlockStepAbstract.EnumSlabHalf> HALF;
+    public static final BlockStateEnum<BlockStepAbstract.EnumSlabHalf> HALF = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
     public BlockStepAbstract(Material material) {
     }
@@ -53,7 +53,7 @@ public abstract class BlockStepAbstract extends Block {
 
         TOP("top"), BOTTOM("bottom");
 
-        private final String c;
+        private final String c = null;
 
         private EnumSlabHalf(String s) {
         }

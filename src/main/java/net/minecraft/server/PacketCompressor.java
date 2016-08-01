@@ -7,11 +7,11 @@ import java.util.zip.Deflater;
 
 public class PacketCompressor extends MessageToByteEncoder<ByteBuf> {
 
-    private final byte[] a;
+    private final byte[] a = null;
 
-    private final Deflater b;
+    private final Deflater b = null;
 
-    private int c;
+    private int c = 0;
 
     public PacketCompressor(int i) {
     }

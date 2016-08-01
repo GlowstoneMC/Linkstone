@@ -4,9 +4,9 @@ import javax.annotation.Nullable;
 
 public class TileEntityFlowerPot extends TileEntity {
 
-    private Item a;
+    private Item a = null;
 
-    private int f;
+    private int f = 0;
 
     public TileEntityFlowerPot() {
     }

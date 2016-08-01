@@ -5,25 +5,25 @@ import javax.annotation.Nullable;
 
 public class BlockFence extends Block {
 
-    public static final BlockStateBoolean NORTH;
+    public static final BlockStateBoolean NORTH = null;
 
-    public static final BlockStateBoolean EAST;
+    public static final BlockStateBoolean EAST = null;
 
-    public static final BlockStateBoolean SOUTH;
+    public static final BlockStateBoolean SOUTH = null;
 
-    public static final BlockStateBoolean WEST;
+    public static final BlockStateBoolean WEST = null;
 
-    protected static final AxisAlignedBB[] e;
+    protected static final AxisAlignedBB[] e = null;
 
-    public static final AxisAlignedBB f;
+    public static final AxisAlignedBB f = null;
 
-    public static final AxisAlignedBB g;
+    public static final AxisAlignedBB g = null;
 
-    public static final AxisAlignedBB B;
+    public static final AxisAlignedBB B = null;
 
-    public static final AxisAlignedBB C;
+    public static final AxisAlignedBB C = null;
 
-    public static final AxisAlignedBB D;
+    public static final AxisAlignedBB D = null;
 
     public BlockFence(Material material, MaterialMapColor materialmapcolor) {
     }
@@ -81,9 +81,9 @@ public class BlockFence extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }

@@ -2,11 +2,11 @@ package net.minecraft.server;
 
 public class DragonControllerLandedFlame extends AbstractDragonControllerLanded {
 
-    private int b;
+    private int b = 0;
 
-    private int c;
+    private int c = 0;
 
-    private EntityAreaEffectCloud d;
+    private EntityAreaEffectCloud d = null;
 
     public DragonControllerLandedFlame(EntityEnderDragon entityenderdragon) {
     }

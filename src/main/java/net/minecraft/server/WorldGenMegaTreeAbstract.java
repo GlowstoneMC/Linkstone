@@ -4,13 +4,13 @@ import java.util.Random;
 
 public abstract class WorldGenMegaTreeAbstract extends WorldGenTreeAbstract {
 
-    protected final int a;
+    protected final int a = 0;
 
-    protected final IBlockData b;
+    protected final IBlockData b = null;
 
-    protected final IBlockData c;
+    protected final IBlockData c = null;
 
-    protected int d;
+    protected int d = 0;
 
     public WorldGenMegaTreeAbstract(boolean flag, int i, int j, IBlockData iblockdata, IBlockData iblockdata1) {
     }

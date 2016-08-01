@@ -13,11 +13,11 @@ import org.bukkit.event.block.BlockDispenseEvent;
 // CraftBukkit end
 public class DispenserRegistry {
 
-    public static final PrintStream a;
+    public static final PrintStream a = null;
 
-    private static boolean b;
+    private static boolean b = false;
 
-    private static final Logger c;
+    private static final Logger c = null;
 
     public static boolean a() {
         return false;
@@ -34,9 +34,9 @@ public class DispenserRegistry {
 
     public static class a extends DispenseBehaviorItem {
 
-        private final DispenseBehaviorItem b;
+        private final DispenseBehaviorItem b = null;
 
-        private final EntityBoat.EnumBoatType c;
+        private final EntityBoat.EnumBoatType c = null;
 
         public a(EntityBoat.EnumBoatType entityboat_enumboattype) {
         }

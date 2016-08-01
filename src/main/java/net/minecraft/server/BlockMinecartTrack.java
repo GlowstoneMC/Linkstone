@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class BlockMinecartTrack extends BlockMinecartTrackAbstract {
 
-    public static final BlockStateEnum<BlockMinecartTrackAbstract.EnumTrackPosition> SHAPE;
+    public static final BlockStateEnum<BlockMinecartTrackAbstract.EnumTrackPosition> SHAPE = null;
 
     protected BlockMinecartTrack() {
     }
@@ -36,11 +36,11 @@ public class BlockMinecartTrack extends BlockMinecartTrackAbstract {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
         static {
         }

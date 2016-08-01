@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class PathfinderGoalFloat extends PathfinderGoal {
 
-    private final EntityInsentient a;
+    private final EntityInsentient a = null;
 
     public PathfinderGoalFloat(EntityInsentient entityinsentient) {
     }

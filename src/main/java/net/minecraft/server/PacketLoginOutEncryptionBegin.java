@@ -5,11 +5,11 @@ import java.security.PublicKey;
 
 public class PacketLoginOutEncryptionBegin implements Packet<PacketLoginOutListener> {
 
-    private String a;
+    private String a = null;
 
-    private PublicKey b;
+    private PublicKey b = null;
 
-    private byte[] c;
+    private byte[] c = null;
 
     public PacketLoginOutEncryptionBegin() {
     }

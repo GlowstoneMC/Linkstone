@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class BlockTNT extends Block {
 
-    public static final BlockStateBoolean EXPLODE;
+    public static final BlockStateBoolean EXPLODE = null;
 
     public BlockTNT() {
     }

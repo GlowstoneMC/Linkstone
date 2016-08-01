@@ -22,11 +22,11 @@ import org.apache.logging.log4j.Logger;
 
 public class HttpUtilities {
 
-    public static final ListeningExecutorService a;
+    public static final ListeningExecutorService a = null;
 
-    private static final AtomicInteger b;
+    private static final AtomicInteger b = null;
 
-    private static final Logger c;
+    private static final Logger c = null;
 
     public static String a(Map<String, Object> map) {
         return null;

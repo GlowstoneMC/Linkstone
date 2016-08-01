@@ -4,9 +4,9 @@ public enum EnumSkeletonType {
 
     NORMAL("Skeleton", LootTables.al), WITHER("WitherSkeleton", LootTables.am), STRAY("Stray", LootTables.an);
 
-    private final ChatMessage d;
+    private final ChatMessage d = null;
 
-    private final MinecraftKey e;
+    private final MinecraftKey e = null;
 
     private EnumSkeletonType(String s, MinecraftKey minecraftkey) {
     }
@@ -41,7 +41,7 @@ public enum EnumSkeletonType {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

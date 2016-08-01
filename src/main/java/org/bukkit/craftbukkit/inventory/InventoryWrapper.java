@@ -15,9 +15,9 @@ import org.bukkit.inventory.InventoryHolder;
 
 public class InventoryWrapper implements IInventory {
 
-    private final Inventory inventory;
+    private final Inventory inventory = null;
 
-    private final List<HumanEntity> viewers;
+    private final List<HumanEntity> viewers = null;
 
     public InventoryWrapper(Inventory inventory) {
     }

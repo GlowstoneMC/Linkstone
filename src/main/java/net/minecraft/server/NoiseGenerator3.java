@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class NoiseGenerator3 extends NoiseGenerator {
 
-    private final NoiseGenerator3Handler[] a;
+    private final NoiseGenerator3Handler[] a = null;
 
-    private final int b;
+    private final int b = 0;
 
     public NoiseGenerator3(Random random, int i) {
     }

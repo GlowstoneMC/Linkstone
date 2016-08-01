@@ -2,15 +2,15 @@ package net.minecraft.server;
 
 public class PathfinderGoalBeg extends PathfinderGoal {
 
-    private final EntityWolf a;
+    private final EntityWolf a = null;
 
-    private EntityHuman b;
+    private EntityHuman b = null;
 
-    private final World c;
+    private final World c = null;
 
-    private final float d;
+    private final float d = 0.0F;
 
-    private int e;
+    private int e = 0;
 
     public PathfinderGoalBeg(EntityWolf entitywolf, float f) {
     }

@@ -13,9 +13,9 @@ import java.util.Random;
 
 public class LootValueBounds {
 
-    private final float a;
+    private final float a = 0.0F;
 
-    private final float b;
+    private final float b = 0.0F;
 
     public LootValueBounds(float f, float f1) {
     }

@@ -14,9 +14,9 @@ import org.bukkit.entity.LivingEntity;
 // CraftBukkit end
 public class EntityPotion extends EntityProjectile {
 
-    private static final DataWatcherObject<Optional<ItemStack>> d;
+    private static final DataWatcherObject<Optional<ItemStack>> d = null;
 
-    private static final Logger e;
+    private static final Logger e = null;
 
     public EntityPotion(World world) {
     }

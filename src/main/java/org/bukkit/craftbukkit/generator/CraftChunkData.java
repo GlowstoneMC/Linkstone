@@ -15,9 +15,9 @@ import org.bukkit.material.MaterialData;
  */
 public final class CraftChunkData implements ChunkGenerator.ChunkData {
 
-    private final int maxHeight;
+    private final int maxHeight = 0;
 
-    private final char[][] sections;
+    private final char[][] sections = null;
 
     public CraftChunkData(World world) {
     }

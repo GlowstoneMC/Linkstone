@@ -11,7 +11,7 @@ import net.minecraft.server.MinecraftServer;
 
 public class ShortConsoleLogFormatter extends Formatter {
 
-    private final SimpleDateFormat date;
+    private final SimpleDateFormat date = null;
 
     public ShortConsoleLogFormatter(MinecraftServer server) {
     }

@@ -4,13 +4,13 @@ import javax.annotation.Nullable;
 
 public class IntHashMap<V> {
 
-    private transient IntHashMap.IntHashMapEntry<V>[] a;
+    private transient IntHashMap.IntHashMapEntry<V>[] a = null;
 
-    private transient int b;
+    private transient int b = 0;
 
-    private int c;
+    private int c = 0;
 
-    private final float d;
+    private final float d = 0.0F;
 
     public IntHashMap() {
     }
@@ -64,13 +64,13 @@ public class IntHashMap<V> {
 
     static class IntHashMapEntry<V> {
 
-        final int a;
+        final int a = 0;
 
-        V b;
+        V b = null;
 
-        IntHashMap.IntHashMapEntry<V> c;
+        IntHashMap.IntHashMapEntry<V> c = null;
 
-        final int d;
+        final int d = 0;
 
         IntHashMapEntry(int i, int j, V v0, IntHashMap.IntHashMapEntry<V> inthashmap_inthashmapentry) {
         }

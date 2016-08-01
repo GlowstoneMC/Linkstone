@@ -7,27 +7,27 @@ import javax.annotation.Nullable;
 
 public class EntityGuardian extends EntityMonster {
 
-    private static final DataWatcherObject<Byte> a;
+    private static final DataWatcherObject<Byte> a = null;
 
-    private static final DataWatcherObject<Integer> b;
+    private static final DataWatcherObject<Integer> b = null;
 
-    private float c;
+    private float c = 0.0F;
 
-    private float bx;
+    private float bx = 0.0F;
 
-    private float by;
+    private float by = 0.0F;
 
-    private float bz;
+    private float bz = 0.0F;
 
-    private float bA;
+    private float bA = 0.0F;
 
-    private EntityLiving bB;
+    private EntityLiving bB = null;
 
-    private int bC;
+    private int bC = 0;
 
-    private boolean bD;
+    private boolean bD = false;
 
-    public PathfinderGoalRandomStroll goalRandomStroll;
+    public PathfinderGoalRandomStroll goalRandomStroll = null;
 
     public EntityGuardian(World world) {
     }
@@ -161,7 +161,7 @@ public class EntityGuardian extends EntityMonster {
 
     static class ControllerMoveGuardian extends ControllerMove {
 
-        private final EntityGuardian i;
+        private final EntityGuardian i = null;
 
         public ControllerMoveGuardian(EntityGuardian entityguardian) {
         }
@@ -172,9 +172,9 @@ public class EntityGuardian extends EntityMonster {
 
     static class PathfinderGoalGuardianAttack extends PathfinderGoal {
 
-        private final EntityGuardian a;
+        private final EntityGuardian a = null;
 
-        private int b;
+        private int b = 0;
 
         public PathfinderGoalGuardianAttack(EntityGuardian entityguardian) {
         }
@@ -199,7 +199,7 @@ public class EntityGuardian extends EntityMonster {
 
     static class EntitySelectorGuardianTargetHumanSquid implements Predicate<EntityLiving> {
 
-        private final EntityGuardian a;
+        private final EntityGuardian a = null;
 
         public EntitySelectorGuardianTargetHumanSquid(EntityGuardian entityguardian) {
         }

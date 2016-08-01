@@ -9,7 +9,7 @@ import org.bukkit.event.block.EntityBlockFormEvent;
 // CraftBukkit end
 public class EntitySnowman extends EntityGolem implements IRangedEntity {
 
-    private static final DataWatcherObject<Byte> a;
+    private static final DataWatcherObject<Byte> a = null;
 
     public EntitySnowman(World world) {
     }

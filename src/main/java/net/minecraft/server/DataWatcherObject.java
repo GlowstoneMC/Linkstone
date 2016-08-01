@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class DataWatcherObject<T> {
 
-    private final int a;
+    private final int a = 0;
 
-    private final DataWatcherSerializer<T> b;
+    private final DataWatcherSerializer<T> b = null;
 
     public DataWatcherObject(int i, DataWatcherSerializer<T> datawatcherserializer) {
     }

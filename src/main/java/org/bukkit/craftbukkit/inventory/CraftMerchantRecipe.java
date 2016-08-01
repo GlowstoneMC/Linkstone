@@ -7,7 +7,7 @@ import org.bukkit.inventory.MerchantRecipe;
 
 public class CraftMerchantRecipe extends MerchantRecipe {
 
-    private final net.minecraft.server.MerchantRecipe handle;
+    private final net.minecraft.server.MerchantRecipe handle = null;
 
     public CraftMerchantRecipe(net.minecraft.server.MerchantRecipe merchantRecipe) {
     }

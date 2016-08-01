@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayOutTransaction implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private short b;
+    private short b = 0;
 
-    private boolean c;
+    private boolean c = false;
 
     public PacketPlayOutTransaction() {
     }

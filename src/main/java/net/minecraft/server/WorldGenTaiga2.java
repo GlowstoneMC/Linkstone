@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class WorldGenTaiga2 extends WorldGenTreeAbstract {
 
-    private static final IBlockData a;
+    private static final IBlockData a = null;
 
-    private static final IBlockData b;
+    private static final IBlockData b = null;
 
     public WorldGenTaiga2(boolean flag) {
     }

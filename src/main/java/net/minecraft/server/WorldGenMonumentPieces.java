@@ -14,7 +14,7 @@ public class WorldGenMonumentPieces {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -152,17 +152,17 @@ public class WorldGenMonumentPieces {
 
     static class WorldGenMonumentStateTracker {
 
-        int a;
+        int a = 0;
 
-        WorldGenMonumentPieces.WorldGenMonumentStateTracker[] b;
+        WorldGenMonumentPieces.WorldGenMonumentStateTracker[] b = null;
 
-        boolean[] c;
+        boolean[] c = null;
 
-        boolean d;
+        boolean d = false;
 
-        boolean e;
+        boolean e = false;
 
-        int f;
+        int f = 0;
 
         public WorldGenMonumentStateTracker(int i) {
         }
@@ -201,7 +201,7 @@ public class WorldGenMonumentPieces {
 
     public static class WorldGenMonumentPiece8 extends WorldGenMonumentPieces.WorldGenMonumentPiece {
 
-        private int n;
+        private int n = 0;
 
         public WorldGenMonumentPiece8() {
         }
@@ -307,7 +307,7 @@ public class WorldGenMonumentPieces {
 
     public static class WorldGenMonumentPieceSimple extends WorldGenMonumentPieces.WorldGenMonumentPiece {
 
-        private int n;
+        private int n = 0;
 
         public WorldGenMonumentPieceSimple() {
         }
@@ -335,11 +335,11 @@ public class WorldGenMonumentPieces {
 
     public static class WorldGenMonumentPiece1 extends WorldGenMonumentPieces.WorldGenMonumentPiece {
 
-        private WorldGenMonumentPieces.WorldGenMonumentStateTracker n;
+        private WorldGenMonumentPieces.WorldGenMonumentStateTracker n = null;
 
-        private WorldGenMonumentPieces.WorldGenMonumentStateTracker o;
+        private WorldGenMonumentPieces.WorldGenMonumentStateTracker o = null;
 
-        private final List<WorldGenMonumentPieces.WorldGenMonumentPiece> p;
+        private final List<WorldGenMonumentPieces.WorldGenMonumentPiece> p = null;
 
         public WorldGenMonumentPiece1() {
         }
@@ -379,27 +379,27 @@ public class WorldGenMonumentPieces {
 
     public abstract static class WorldGenMonumentPiece extends StructurePiece {
 
-        protected static final IBlockData a;
+        protected static final IBlockData a = null;
 
-        protected static final IBlockData b;
+        protected static final IBlockData b = null;
 
-        protected static final IBlockData c;
+        protected static final IBlockData c = null;
 
-        protected static final IBlockData d;
+        protected static final IBlockData d = null;
 
-        protected static final IBlockData e;
+        protected static final IBlockData e = null;
 
-        protected static final IBlockData f;
+        protected static final IBlockData f = null;
 
-        protected static final int g;
+        protected static final int g = 0;
 
-        protected static final int h;
+        protected static final int h = 0;
 
-        protected static final int i;
+        protected static final int i = 0;
 
-        protected static final int j;
+        protected static final int j = 0;
 
-        protected WorldGenMonumentPieces.WorldGenMonumentStateTracker k;
+        protected WorldGenMonumentPieces.WorldGenMonumentStateTracker k = null;
 
         protected static final int b(int i, int j, int k) {
             return 0;

@@ -4,17 +4,17 @@ import java.io.IOException;
 
 public class PacketPlayInSettings implements Packet<PacketListenerPlayIn> {
 
-    private String a;
+    private String a = null;
 
-    private int b;
+    private int b = 0;
 
-    private EntityHuman.EnumChatVisibility c;
+    private EntityHuman.EnumChatVisibility c = null;
 
-    private boolean d;
+    private boolean d = false;
 
-    private int e;
+    private int e = 0;
 
-    private EnumMainHand f;
+    private EnumMainHand f = null;
 
     public PacketPlayInSettings() {
     }

@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class LootItemConditionKilledByPlayer implements LootItemCondition {
 
-    private final boolean a;
+    private final boolean a = false;
 
     public LootItemConditionKilledByPlayer(boolean flag) {
     }

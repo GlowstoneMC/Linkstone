@@ -6,20 +6,20 @@ import org.bukkit.craftbukkit.inventory.CraftMerchantRecipe;
 // CraftBukkit
 public class MerchantRecipe {
 
-    public ItemStack buyingItem1;
+    public ItemStack buyingItem1 = null;
 
-    public ItemStack buyingItem2;
+    public ItemStack buyingItem2 = null;
 
-    public ItemStack sellingItem;
+    public ItemStack sellingItem = null;
 
-    public int uses;
+    public int uses = 0;
 
-    public int maxUses;
+    public int maxUses = 0;
 
-    public boolean rewardExp;
+    public boolean rewardExp = false;
 
     // CraftBukkit start
-    private CraftMerchantRecipe bukkitHandle;
+    private CraftMerchantRecipe bukkitHandle = null;
 
     public CraftMerchantRecipe asBukkit() {
         return null;

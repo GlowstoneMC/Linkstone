@@ -17,7 +17,7 @@ import org.apache.commons.lang3.exception.ExceptionUtils;
 
 public abstract class CommandAbstract implements ICommand {
 
-    private static ICommandDispatcher a;
+    private static ICommandDispatcher a = null;
 
     public CommandAbstract() {
     }
@@ -206,11 +206,11 @@ public abstract class CommandAbstract implements ICommand {
 
     public static class CommandNumber {
 
-        private final double a;
+        private final double a = 0.0;
 
-        private final double b;
+        private final double b = 0.0;
 
-        private final boolean c;
+        private final boolean c = false;
 
         protected CommandNumber(double d0, double d1, boolean flag) {
         }

@@ -5,11 +5,11 @@ import java.util.List;
 
 public class EntitySenses {
 
-    EntityInsentient a;
+    EntityInsentient a = null;
 
-    List<Entity> b;
+    List<Entity> b = null;
 
-    List<Entity> c;
+    List<Entity> c = null;
 
     public EntitySenses(EntityInsentient entityinsentient) {
     }

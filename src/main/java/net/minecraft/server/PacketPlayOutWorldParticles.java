@@ -4,27 +4,27 @@ import java.io.IOException;
 
 public class PacketPlayOutWorldParticles implements Packet<PacketListenerPlayOut> {
 
-    private EnumParticle a;
+    private EnumParticle a = null;
 
-    private float b;
+    private float b = 0.0F;
 
-    private float c;
+    private float c = 0.0F;
 
-    private float d;
+    private float d = 0.0F;
 
-    private float e;
+    private float e = 0.0F;
 
-    private float f;
+    private float f = 0.0F;
 
-    private float g;
+    private float g = 0.0F;
 
-    private float h;
+    private float h = 0.0F;
 
-    private int i;
+    private int i = 0;
 
-    private boolean j;
+    private boolean j = false;
 
-    private int[] k;
+    private int[] k = null;
 
     public PacketPlayOutWorldParticles() {
     }

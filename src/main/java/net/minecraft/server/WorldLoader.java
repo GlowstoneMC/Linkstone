@@ -9,11 +9,11 @@ import org.apache.logging.log4j.Logger;
 
 public class WorldLoader implements Convertable {
 
-    private static final Logger c;
+    private static final Logger c = null;
 
-    protected final File a;
+    protected final File a = null;
 
-    protected final DataConverterManager b;
+    protected final DataConverterManager b = null;
 
     public WorldLoader(File file, DataConverterManager dataconvertermanager) {
     }

@@ -6,31 +6,31 @@ package org.bukkit.craftbukkit;
  */
 public class TrigMath {
 
-    static final double sq2p1;
+    static final double sq2p1 = 0.0;
 
-    static final double sq2m1;
+    static final double sq2m1 = 0.0;
 
-    static final double p4;
+    static final double p4 = 0.0;
 
-    static final double p3;
+    static final double p3 = 0.0;
 
-    static final double p2;
+    static final double p2 = 0.0;
 
-    static final double p1;
+    static final double p1 = 0.0;
 
-    static final double p0;
+    static final double p0 = 0.0;
 
-    static final double q4;
+    static final double q4 = 0.0;
 
-    static final double q3;
+    static final double q3 = 0.0;
 
-    static final double q2;
+    static final double q2 = 0.0;
 
-    static final double q1;
+    static final double q1 = 0.0;
 
-    static final double q0;
+    static final double q0 = 0.0;
 
-    static final double PIO2;
+    static final double PIO2 = 0.0;
 
     private static double mxatan(double arg) {
         return 0.0;

@@ -9,7 +9,7 @@ import org.bukkit.entity.EntityType;
 
 public class CraftCreatureSpawner extends CraftBlockState implements CreatureSpawner {
 
-    private final TileEntityMobSpawner spawner;
+    private final TileEntityMobSpawner spawner = null;
 
     public CraftCreatureSpawner(final Block block) {
     }

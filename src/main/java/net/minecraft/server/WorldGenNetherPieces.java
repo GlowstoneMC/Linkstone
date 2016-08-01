@@ -8,9 +8,9 @@ import javax.annotation.Nullable;
 
 public class WorldGenNetherPieces {
 
-    private static final WorldGenNetherPieces.WorldGenNetherPieceWeight[] a;
+    private static final WorldGenNetherPieces.WorldGenNetherPieceWeight[] a = null;
 
-    private static final WorldGenNetherPieces.WorldGenNetherPieceWeight[] b;
+    private static final WorldGenNetherPieces.WorldGenNetherPieceWeight[] b = null;
 
     public static void a() {
     }
@@ -21,7 +21,7 @@ public class WorldGenNetherPieces {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -69,7 +69,7 @@ public class WorldGenNetherPieces {
 
     public static class WorldGenNetherPiece8 extends WorldGenNetherPieces.WorldGenNetherPiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenNetherPiece8() {
         }
@@ -97,7 +97,7 @@ public class WorldGenNetherPieces {
 
     public static class WorldGenNetherPiece10 extends WorldGenNetherPieces.WorldGenNetherPiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenNetherPiece10() {
         }
@@ -205,7 +205,7 @@ public class WorldGenNetherPieces {
 
     public static class WorldGenNetherPiece12 extends WorldGenNetherPieces.WorldGenNetherPiece {
 
-        private boolean a;
+        private boolean a = false;
 
         public WorldGenNetherPiece12() {
         }
@@ -293,7 +293,7 @@ public class WorldGenNetherPieces {
 
     public static class WorldGenNetherPiece2 extends WorldGenNetherPieces.WorldGenNetherPiece {
 
-        private int a;
+        private int a = 0;
 
         public WorldGenNetherPiece2() {
         }
@@ -338,13 +338,13 @@ public class WorldGenNetherPieces {
 
     public static class WorldGenNetherPiece15 extends WorldGenNetherPieces.WorldGenNetherPiece1 {
 
-        public WorldGenNetherPieces.WorldGenNetherPieceWeight a;
+        public WorldGenNetherPieces.WorldGenNetherPieceWeight a = null;
 
-        public List<WorldGenNetherPieces.WorldGenNetherPieceWeight> b;
+        public List<WorldGenNetherPieces.WorldGenNetherPieceWeight> b = null;
 
-        public List<WorldGenNetherPieces.WorldGenNetherPieceWeight> c;
+        public List<WorldGenNetherPieces.WorldGenNetherPieceWeight> c = null;
 
-        public List<StructurePiece> d;
+        public List<StructurePiece> d = null;
 
         public WorldGenNetherPiece15() {
         }
@@ -404,15 +404,15 @@ public class WorldGenNetherPieces {
 
     static class WorldGenNetherPieceWeight {
 
-        public Class<? extends WorldGenNetherPieces.WorldGenNetherPiece> a;
+        public Class<? extends WorldGenNetherPieces.WorldGenNetherPiece> a = null;
 
-        public final int b;
+        public final int b = 0;
 
-        public int c;
+        public int c = 0;
 
-        public int d;
+        public int d = 0;
 
-        public boolean e;
+        public boolean e = false;
 
         public WorldGenNetherPieceWeight(Class<? extends WorldGenNetherPieces.WorldGenNetherPiece> oclass, int i, int j, boolean flag) {
         }

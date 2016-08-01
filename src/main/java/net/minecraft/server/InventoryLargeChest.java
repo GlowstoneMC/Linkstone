@@ -10,14 +10,14 @@ import org.bukkit.entity.HumanEntity;
 // CraftBukkit end
 public class InventoryLargeChest implements ITileInventory {
 
-    private final String a;
+    private final String a = null;
 
-    public final ITileInventory left;
+    public final ITileInventory left = null;
 
-    public final ITileInventory right;
+    public final ITileInventory right = null;
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
     public ItemStack[] getContents() {
         return null;

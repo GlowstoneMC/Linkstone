@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public class PathfinderGoalRandomLookaround extends PathfinderGoal {
 
-    private final EntityInsentient a;
+    private final EntityInsentient a = null;
 
-    private double b;
+    private double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private int d;
+    private int d = 0;
 
     public PathfinderGoalRandomLookaround(EntityInsentient entityinsentient) {
     }

@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class WorldGenGroundBush extends WorldGenTrees {
 
-    private final IBlockData a;
+    private final IBlockData a = null;
 
-    private final IBlockData b;
+    private final IBlockData b = null;
 
     public WorldGenGroundBush(IBlockData iblockdata, IBlockData iblockdata1) {
     }

@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class EntityMinecartMobSpawner extends EntityMinecartAbstract {
 
-    private final MobSpawnerAbstract a;
+    private final MobSpawnerAbstract a = null;
 
     public EntityMinecartMobSpawner(World world) {
     }

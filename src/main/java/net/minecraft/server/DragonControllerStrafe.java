@@ -6,17 +6,17 @@ import org.apache.logging.log4j.Logger;
 
 public class DragonControllerStrafe extends AbstractDragonController {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private int c;
+    private int c = 0;
 
-    private PathEntity d;
+    private PathEntity d = null;
 
-    private Vec3D e;
+    private Vec3D e = null;
 
-    private EntityLiving f;
+    private EntityLiving f = null;
 
-    private boolean g;
+    private boolean g = false;
 
     public DragonControllerStrafe(EntityEnderDragon entityenderdragon) {
     }

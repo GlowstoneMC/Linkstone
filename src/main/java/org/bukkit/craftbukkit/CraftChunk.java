@@ -13,19 +13,19 @@ import org.bukkit.ChunkSnapshot;
 
 public class CraftChunk implements Chunk {
 
-    private WeakReference<net.minecraft.server.Chunk> weakChunk;
+    private WeakReference<net.minecraft.server.Chunk> weakChunk = null;
 
-    private final WorldServer worldServer;
+    private final WorldServer worldServer = null;
 
-    private final int x;
+    private final int x = 0;
 
-    private final int z;
+    private final int z = 0;
 
-    private static final byte[] emptyData;
+    private static final byte[] emptyData = null;
 
-    private static final short[] emptyBlockIDs;
+    private static final short[] emptyBlockIDs = null;
 
-    private static final byte[] emptySkyLight;
+    private static final byte[] emptySkyLight = null;
 
     public CraftChunk(net.minecraft.server.Chunk chunk) {
     }

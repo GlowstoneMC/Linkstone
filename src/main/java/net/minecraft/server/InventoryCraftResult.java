@@ -9,10 +9,10 @@ import org.bukkit.entity.HumanEntity;
 // CraftBukkit end
 public class InventoryCraftResult implements IInventory {
 
-    private final ItemStack[] items;
+    private final ItemStack[] items = null;
 
     // CraftBukkit start
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;

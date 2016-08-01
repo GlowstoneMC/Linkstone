@@ -10,7 +10,7 @@ import java.util.Set;
 
 public class AchievementSet extends ForwardingSet<String> implements IJsonStatistic {
 
-    private final Set<String> a;
+    private final Set<String> a = null;
 
     public AchievementSet() {
     }

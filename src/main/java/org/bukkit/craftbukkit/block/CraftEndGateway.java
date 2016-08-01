@@ -10,9 +10,9 @@ import org.bukkit.craftbukkit.CraftWorld;
 
 public class CraftEndGateway extends CraftBlockState implements EndGateway {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final TileEntityEndGateway gateway;
+    private final TileEntityEndGateway gateway = null;
 
     public CraftEndGateway(Block block) {
     }

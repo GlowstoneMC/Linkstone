@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public interface IMonster extends IAnimal {
 
-    Predicate<Entity> d;
+    Predicate<Entity> d = null;
 
-    Predicate<Entity> e;
+    Predicate<Entity> e = null;
 }

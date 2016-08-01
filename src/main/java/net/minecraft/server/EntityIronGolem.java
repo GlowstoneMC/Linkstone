@@ -5,15 +5,15 @@ import javax.annotation.Nullable;
 
 public class EntityIronGolem extends EntityGolem {
 
-    protected static final DataWatcherObject<Byte> a;
+    protected static final DataWatcherObject<Byte> a = null;
 
-    private int c;
+    private int c = 0;
 
-    Village b;
+    Village b = null;
 
-    private int bx;
+    private int bx = 0;
 
-    private int by;
+    private int by = 0;
 
     public EntityIronGolem(World world) {
     }

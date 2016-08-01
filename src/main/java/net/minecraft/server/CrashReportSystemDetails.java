@@ -6,13 +6,13 @@ import java.util.List;
 
 public class CrashReportSystemDetails {
 
-    private final CrashReport a;
+    private final CrashReport a = null;
 
-    private final String b;
+    private final String b = null;
 
-    private final List<CrashReportSystemDetails.CrashReportDetail> c;
+    private final List<CrashReportSystemDetails.CrashReportDetail> c = null;
 
-    private StackTraceElement[] d;
+    private StackTraceElement[] d = null;
 
     public CrashReportSystemDetails(CrashReport crashreport, String s) {
     }
@@ -60,9 +60,9 @@ public class CrashReportSystemDetails {
 
     static class CrashReportDetail {
 
-        private final String a;
+        private final String a = null;
 
-        private final String b;
+        private final String b = null;
 
         public CrashReportDetail(String s, Object object) {
         }

@@ -5,9 +5,9 @@ import java.util.List;
 
 public class PacketPlayOutMount implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private int[] b;
+    private int[] b = null;
 
     public PacketPlayOutMount() {
     }

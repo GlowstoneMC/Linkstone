@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class WorldGenEndCity extends StructureGenerator {
 
-    private final int a;
+    private final int a = 0;
 
-    private final int b;
+    private final int b = 0;
 
-    private final ChunkProviderTheEnd d;
+    private final ChunkProviderTheEnd d = null;
 
     public WorldGenEndCity(ChunkProviderTheEnd chunkprovidertheend) {
     }
@@ -27,7 +27,7 @@ public class WorldGenEndCity extends StructureGenerator {
 
     public static class Start extends StructureStart {
 
-        private boolean c;
+        private boolean c = false;
 
         public Start() {
         }

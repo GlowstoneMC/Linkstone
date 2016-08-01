@@ -10,17 +10,17 @@ import java.util.Map.Entry;
 
 public class PacketPlayOutMapChunk implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private int b;
+    private int b = 0;
 
-    private int c;
+    private int c = 0;
 
-    private byte[] d;
+    private byte[] d = null;
 
-    private List<NBTTagCompound> e;
+    private List<NBTTagCompound> e = null;
 
-    private boolean f;
+    private boolean f = false;
 
     public PacketPlayOutMapChunk() {
     }

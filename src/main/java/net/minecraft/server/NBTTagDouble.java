@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class NBTTagDouble extends NBTNumber {
 
-    private double data;
+    private double data = 0.0;
 
     NBTTagDouble() {
     }

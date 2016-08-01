@@ -5,15 +5,15 @@ import javax.annotation.Nullable;
 
 public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
 
-    private PacketPlayOutTitle.EnumTitleAction a;
+    private PacketPlayOutTitle.EnumTitleAction a = null;
 
-    private IChatBaseComponent b;
+    private IChatBaseComponent b = null;
 
-    private int c;
+    private int c = 0;
 
-    private int d;
+    private int d = 0;
 
-    private int e;
+    private int e = 0;
 
     public PacketPlayOutTitle() {
     }

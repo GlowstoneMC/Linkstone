@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class GenLayerSpecial extends GenLayer {
 
-    private final GenLayerSpecial.EnumGenLayerSpecial c;
+    private final GenLayerSpecial.EnumGenLayerSpecial c = null;
 
     public GenLayerSpecial(long i, GenLayer genlayer, GenLayerSpecial.EnumGenLayerSpecial genlayerspecial_enumgenlayerspecial) {
     }
@@ -25,7 +25,7 @@ public class GenLayerSpecial extends GenLayer {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

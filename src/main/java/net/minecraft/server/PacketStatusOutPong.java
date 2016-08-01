@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketStatusOutPong implements Packet<PacketStatusOutListener> {
 
-    private long a;
+    private long a = 0;
 
     public PacketStatusOutPong() {
     }

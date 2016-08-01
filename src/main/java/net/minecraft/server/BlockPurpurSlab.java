@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public abstract class BlockPurpurSlab extends BlockStepAbstract {
 
-    public static final BlockStateEnum<BlockPurpurSlab.Type> d;
+    public static final BlockStateEnum<BlockPurpurSlab.Type> d = null;
 
     public BlockPurpurSlab() {
     }

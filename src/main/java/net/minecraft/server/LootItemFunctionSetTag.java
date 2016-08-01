@@ -8,7 +8,7 @@ import java.util.Random;
 
 public class LootItemFunctionSetTag extends LootItemFunction {
 
-    private final NBTTagCompound a;
+    private final NBTTagCompound a = null;
 
     public LootItemFunctionSetTag(LootItemCondition[] alootitemcondition, NBTTagCompound nbttagcompound) {
     }

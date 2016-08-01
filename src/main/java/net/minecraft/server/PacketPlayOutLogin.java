@@ -4,21 +4,21 @@ import java.io.IOException;
 
 public class PacketPlayOutLogin implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private boolean b;
+    private boolean b = false;
 
-    private EnumGamemode c;
+    private EnumGamemode c = null;
 
-    private int d;
+    private int d = 0;
 
-    private EnumDifficulty e;
+    private EnumDifficulty e = null;
 
-    private int f;
+    private int f = 0;
 
-    private WorldType g;
+    private WorldType g = null;
 
-    private boolean h;
+    private boolean h = false;
 
     public PacketPlayOutLogin() {
     }

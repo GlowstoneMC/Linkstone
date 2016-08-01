@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class BlockRedSandstone extends Block {
 
-    public static final BlockStateEnum<BlockRedSandstone.EnumRedSandstoneVariant> TYPE;
+    public static final BlockStateEnum<BlockRedSandstone.EnumRedSandstoneVariant> TYPE = null;
 
     public BlockRedSandstone() {
     }
@@ -27,13 +27,13 @@ public class BlockRedSandstone extends Block {
 
         DEFAULT(0, "red_sandstone", "default"), CHISELED(1, "chiseled_red_sandstone", "chiseled"), SMOOTH(2, "smooth_red_sandstone", "smooth");
 
-        private static final BlockRedSandstone.EnumRedSandstoneVariant[] d;
+        private static final BlockRedSandstone.EnumRedSandstoneVariant[] d = null;
 
-        private final int e;
+        private final int e = 0;
 
-        private final String f;
+        private final String f = null;
 
-        private final String g;
+        private final String g = null;
 
         private EnumRedSandstoneVariant(int i, String s, String s1) {
         }

@@ -17,21 +17,21 @@ import org.bukkit.event.block.BlockPistonExtendEvent;
 // CraftBukkit end
 public class BlockPiston extends BlockDirectional {
 
-    public static final BlockStateBoolean EXTENDED;
+    public static final BlockStateBoolean EXTENDED = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    private final boolean sticky;
+    private final boolean sticky = false;
 
     public BlockPiston(boolean flag) {
     }
@@ -118,7 +118,7 @@ public class BlockPiston extends BlockDirectional {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

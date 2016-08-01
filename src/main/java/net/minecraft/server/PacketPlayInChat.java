@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayInChat implements Packet<PacketListenerPlayIn> {
 
-    private String a;
+    private String a = null;
 
     public PacketPlayInChat() {
     }

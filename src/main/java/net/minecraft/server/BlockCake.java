@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class BlockCake extends Block {
 
-    public static final BlockStateInteger BITES;
+    public static final BlockStateInteger BITES = null;
 
-    protected static final AxisAlignedBB[] b;
+    protected static final AxisAlignedBB[] b = null;
 
     protected BlockCake() {
     }

@@ -7,13 +7,13 @@ import javax.annotation.Nullable;
 
 public class WorldChunkManager {
 
-    private GenLayer a;
+    private GenLayer a = null;
 
-    private GenLayer b;
+    private GenLayer b = null;
 
-    private final BiomeCache c;
+    private final BiomeCache c = null;
 
-    private final List<BiomeBase> d;
+    private final List<BiomeBase> d = null;
 
     protected WorldChunkManager() {
     }

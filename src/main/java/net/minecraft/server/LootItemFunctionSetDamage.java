@@ -9,9 +9,9 @@ import org.apache.logging.log4j.Logger;
 
 public class LootItemFunctionSetDamage extends LootItemFunction {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final LootValueBounds b;
+    private final LootValueBounds b = null;
 
     public LootItemFunctionSetDamage(LootItemCondition[] alootitemcondition, LootValueBounds lootvaluebounds) {
     }

@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class WorldGenSand extends WorldGenerator {
 
-    private final Block a;
+    private final Block a = null;
 
-    private final int b;
+    private final int b = 0;
 
     public WorldGenSand(Block block, int i) {
     }

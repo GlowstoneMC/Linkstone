@@ -2,11 +2,11 @@ package net.minecraft.server;
 
 public class EntityAIBodyControl {
 
-    private final EntityLiving a;
+    private final EntityLiving a = null;
 
-    private int b;
+    private int b = 0;
 
-    private float c;
+    private float c = 0.0F;
 
     public EntityAIBodyControl(EntityLiving entityliving) {
     }

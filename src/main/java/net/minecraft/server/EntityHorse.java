@@ -11,77 +11,77 @@ import org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason;
 // CraftBukkit
 public class EntityHorse extends EntityAnimal implements IInventoryListener, IJumpable {
 
-    private static final Predicate<Entity> bD;
+    private static final Predicate<Entity> bD = null;
 
-    public static final IAttribute attributeJumpStrength;
+    public static final IAttribute attributeJumpStrength = null;
 
-    private static final UUID bF;
+    private static final UUID bF = null;
 
-    private static final DataWatcherObject<Byte> bG;
+    private static final DataWatcherObject<Byte> bG = null;
 
-    private static final DataWatcherObject<Integer> bH;
+    private static final DataWatcherObject<Integer> bH = null;
 
-    private static final DataWatcherObject<Integer> bI;
+    private static final DataWatcherObject<Integer> bI = null;
 
-    private static final DataWatcherObject<Optional<UUID>> bJ;
+    private static final DataWatcherObject<Optional<UUID>> bJ = null;
 
-    private static final DataWatcherObject<Integer> bK;
+    private static final DataWatcherObject<Integer> bK = null;
 
-    private static final String[] bL;
+    private static final String[] bL = null;
 
-    private static final String[] bM;
+    private static final String[] bM = null;
 
-    private static final String[] bN;
+    private static final String[] bN = null;
 
-    private static final String[] bO;
+    private static final String[] bO = null;
 
-    private final PathfinderGoalHorseTrap bP;
+    private final PathfinderGoalHorseTrap bP = null;
 
-    private int bQ;
+    private int bQ = 0;
 
-    private int bR;
+    private int bR = 0;
 
-    private int bS;
+    private int bS = 0;
 
-    public int bx;
+    public int bx = 0;
 
-    public int by;
+    public int by = 0;
 
-    protected boolean bz;
+    protected boolean bz = false;
 
-    public InventoryHorseChest inventoryChest;
+    public InventoryHorseChest inventoryChest = null;
 
-    private boolean bU;
+    private boolean bU = false;
 
-    protected int bB;
+    protected int bB = 0;
 
-    protected float jumpPower;
+    protected float jumpPower = 0.0F;
 
-    private boolean canSlide;
+    private boolean canSlide = false;
 
-    private boolean bW;
+    private boolean bW = false;
 
-    private int bX;
+    private int bX = 0;
 
-    private float bY;
+    private float bY = 0.0F;
 
-    private float bZ;
+    private float bZ = 0.0F;
 
-    private float ca;
+    private float ca = 0.0F;
 
-    private float cb;
+    private float cb = 0.0F;
 
-    private float cc;
+    private float cc = 0.0F;
 
-    private float cd;
+    private float cd = 0.0F;
 
-    private int ce;
+    private int ce = 0;
 
-    private String cf;
+    private String cf = null;
 
-    private final String[] cg;
+    private final String[] cg = null;
 
-    public int maxDomestication;
+    public int maxDomestication = 0;
 
     // CraftBukkit - store max domestication value
     public EntityHorse(World world) {
@@ -456,9 +456,9 @@ public class EntityHorse extends EntityAnimal implements IInventoryListener, IJu
 
     public static class a implements GroupDataEntity {
 
-        public EnumHorseType a;
+        public EnumHorseType a = null;
 
-        public int b;
+        public int b = 0;
 
         public a(EnumHorseType enumhorsetype, int i) {
         }

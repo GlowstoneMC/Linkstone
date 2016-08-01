@@ -16,19 +16,19 @@ import java.util.RandomAccess;
 @SuppressWarnings("unchecked")
 public class UnsafeList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable {
 
-    private static final long serialVersionUID;
+    private static final long serialVersionUID = 0;
 
-    private transient Object[] data;
+    private transient Object[] data = null;
 
-    private int size;
+    private int size = 0;
 
-    private int initialCapacity;
+    private int initialCapacity = 0;
 
-    private Iterator[] iterPool;
+    private Iterator[] iterPool = null;
 
-    private int maxPool;
+    private int maxPool = 0;
 
-    private int poolCounter;
+    private int poolCounter = 0;
 
     public UnsafeList(int capacity, int maxIterPool) {
     }
@@ -111,13 +111,13 @@ public class UnsafeList<E> extends AbstractList<E> implements List<E>, RandomAcc
 
     public class Itr implements Iterator<E> {
 
-        int index;
+        int index = 0;
 
-        int lastRet;
+        int lastRet = 0;
 
-        int expectedModCount;
+        int expectedModCount = 0;
 
-        public boolean valid;
+        public boolean valid = false;
 
         public void reset() {
         }

@@ -5,33 +5,33 @@ import java.util.Map;
 
 public interface IScoreboardCriteria {
 
-    Map<String, IScoreboardCriteria> criteria;
+    Map<String, IScoreboardCriteria> criteria = null;
 
-    IScoreboardCriteria b;
+    IScoreboardCriteria b = null;
 
-    IScoreboardCriteria c;
+    IScoreboardCriteria c = null;
 
-    IScoreboardCriteria d;
+    IScoreboardCriteria d = null;
 
-    IScoreboardCriteria e;
+    IScoreboardCriteria e = null;
 
-    IScoreboardCriteria f;
+    IScoreboardCriteria f = null;
 
-    IScoreboardCriteria g;
+    IScoreboardCriteria g = null;
 
-    IScoreboardCriteria h;
+    IScoreboardCriteria h = null;
 
-    IScoreboardCriteria i;
+    IScoreboardCriteria i = null;
 
-    IScoreboardCriteria j;
+    IScoreboardCriteria j = null;
 
-    IScoreboardCriteria k;
+    IScoreboardCriteria k = null;
 
-    IScoreboardCriteria l;
+    IScoreboardCriteria l = null;
 
-    IScoreboardCriteria[] m;
+    IScoreboardCriteria[] m = null;
 
-    IScoreboardCriteria[] n;
+    IScoreboardCriteria[] n = null;
 
     String getName() {
         return null;
@@ -49,9 +49,9 @@ public interface IScoreboardCriteria {
 
         INTEGER("integer"), HEARTS("hearts");
 
-        private static final Map<String, IScoreboardCriteria.EnumScoreboardHealthDisplay> c;
+        private static final Map<String, IScoreboardCriteria.EnumScoreboardHealthDisplay> c = null;
 
-        private final String d;
+        private final String d = null;
 
         private EnumScoreboardHealthDisplay(String s) {
         }

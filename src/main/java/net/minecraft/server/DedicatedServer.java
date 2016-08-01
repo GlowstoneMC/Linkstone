@@ -28,28 +28,28 @@ import org.bukkit.event.server.RemoteServerCommandEvent;
 // CraftBukkit end
 public class DedicatedServer extends MinecraftServer implements IMinecraftServer {
 
-    private static final Logger LOGGER;
+    private static final Logger LOGGER = null;
 
-    private static final Pattern l;
+    private static final Pattern l = null;
 
-    private final List<ServerCommand> serverCommandQueue;
+    private final List<ServerCommand> serverCommandQueue = null;
 
     // CraftBukkit - fix decompile error
-    private RemoteStatusListener n;
+    private RemoteStatusListener n = null;
 
-    public final RemoteControlCommandListener remoteControlCommandListener;
+    public final RemoteControlCommandListener remoteControlCommandListener = null;
 
-    private RemoteControlListener p;
+    private RemoteControlListener p = null;
 
-    public PropertyManager propertyManager;
+    public PropertyManager propertyManager = null;
 
-    private EULA r;
+    private EULA r = null;
 
-    private boolean generateStructures;
+    private boolean generateStructures = false;
 
-    private EnumGamemode t;
+    private EnumGamemode t = null;
 
-    private boolean u;
+    private boolean u = false;
 
     // CraftBukkit start - Signature changed
     public DedicatedServer(joptsimple.OptionSet options, DataConverterManager dataconvertermanager, YggdrasilAuthenticationService yggdrasilauthenticationservice, MinecraftSessionService minecraftsessionservice, GameProfileRepository gameprofilerepository, UserCache usercache) {

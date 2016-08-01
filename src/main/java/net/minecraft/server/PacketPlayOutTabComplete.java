@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayOutTabComplete implements Packet<PacketListenerPlayOut> {
 
-    private String[] a;
+    private String[] a = null;
 
     public PacketPlayOutTabComplete() {
     }

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayInCloseWindow implements Packet<PacketListenerPlayIn> {
 
-    private int id;
+    private int id = 0;
 
     public PacketPlayInCloseWindow() {
     }

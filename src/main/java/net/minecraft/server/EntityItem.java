@@ -10,23 +10,23 @@ import org.bukkit.event.player.PlayerPickupItemEvent;
 // CraftBukkit
 public class EntityItem extends Entity {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private static final DataWatcherObject<Optional<ItemStack>> c;
+    private static final DataWatcherObject<Optional<ItemStack>> c = null;
 
-    private int age;
+    private int age = 0;
 
-    public int pickupDelay;
+    public int pickupDelay = 0;
 
-    private int f;
+    private int f = 0;
 
-    private String g;
+    private String g = null;
 
-    private String h;
+    private String h = null;
 
-    public float a;
+    public float a = 0.0F;
 
-    private int lastTick;
+    private int lastTick = 0;
 
     // CraftBukkit
     public EntityItem(World world, double d0, double d1, double d2) {

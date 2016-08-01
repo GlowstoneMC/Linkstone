@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 public class EnchantmentManager {
 
-    private static final Random a;
+    private static final Random a = null;
 
-    private static final EnchantmentManager.EnchantmentModifierProtection b;
+    private static final EnchantmentManager.EnchantmentModifierProtection b = null;
 
-    private static final EnchantmentManager.EnchantmentModifierDamage c;
+    private static final EnchantmentManager.EnchantmentModifierDamage c = null;
 
-    private static final EnchantmentManager.EnchantmentModifierThorns d;
+    private static final EnchantmentManager.EnchantmentModifierThorns d = null;
 
-    private static final EnchantmentManager.EnchantmentModifierArthropods e;
+    private static final EnchantmentManager.EnchantmentModifierArthropods e = null;
 
     public static int getEnchantmentLevel(Enchantment enchantment, @Nullable ItemStack itemstack) {
         return 0;
@@ -127,9 +127,9 @@ public class EnchantmentManager {
 
     static final class EnchantmentModifierArthropods implements EnchantmentManager.EnchantmentModifier {
 
-        public EntityLiving a;
+        public EntityLiving a = null;
 
-        public Entity b;
+        public Entity b = null;
 
         private EnchantmentModifierArthropods() {
         }
@@ -143,9 +143,9 @@ public class EnchantmentManager {
 
     static final class EnchantmentModifierThorns implements EnchantmentManager.EnchantmentModifier {
 
-        public EntityLiving a;
+        public EntityLiving a = null;
 
-        public Entity b;
+        public Entity b = null;
 
         private EnchantmentModifierThorns() {
         }
@@ -159,9 +159,9 @@ public class EnchantmentManager {
 
     static final class EnchantmentModifierDamage implements EnchantmentManager.EnchantmentModifier {
 
-        public float a;
+        public float a = 0.0F;
 
-        public EnumMonsterType b;
+        public EnumMonsterType b = null;
 
         private EnchantmentModifierDamage() {
         }
@@ -175,9 +175,9 @@ public class EnchantmentManager {
 
     static final class EnchantmentModifierProtection implements EnchantmentManager.EnchantmentModifier {
 
-        public int a;
+        public int a = 0;
 
-        public DamageSource b;
+        public DamageSource b = null;
 
         private EnchantmentModifierProtection() {
         }

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayInClientCommand implements Packet<PacketListenerPlayIn> {
 
-    private PacketPlayInClientCommand.EnumClientCommand a;
+    private PacketPlayInClientCommand.EnumClientCommand a = null;
 
     public PacketPlayInClientCommand() {
     }

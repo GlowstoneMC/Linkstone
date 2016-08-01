@@ -17,17 +17,17 @@ import org.apache.logging.log4j.Logger;
 
 public class ChunkRegionLoader implements IChunkLoader, IAsyncChunkSaver {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final Map<ChunkCoordIntPair, NBTTagCompound> b;
+    private final Map<ChunkCoordIntPair, NBTTagCompound> b = null;
 
-    private final Set<ChunkCoordIntPair> c;
+    private final Set<ChunkCoordIntPair> c = null;
 
-    private final File d;
+    private final File d = null;
 
-    private final DataConverterManager e;
+    private final DataConverterManager e = null;
 
-    private boolean f;
+    private boolean f = false;
 
     public ChunkRegionLoader(File file, DataConverterManager dataconvertermanager) {
     }

@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class EntitySpectralArrow extends EntityArrow {
 
-    public int duration;
+    public int duration = 0;
 
     public EntitySpectralArrow(World world) {
     }

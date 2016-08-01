@@ -8,7 +8,7 @@ import org.bukkit.event.hanging.HangingPlaceEvent;
 // CraftBukkit end
 public class ItemHanging extends Item {
 
-    private final Class<? extends EntityHanging> a;
+    private final Class<? extends EntityHanging> a = null;
 
     public ItemHanging(Class<? extends EntityHanging> oclass) {
     }

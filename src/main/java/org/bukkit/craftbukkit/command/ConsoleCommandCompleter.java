@@ -11,7 +11,7 @@ import org.bukkit.event.server.TabCompleteEvent;
 
 public class ConsoleCommandCompleter implements Completer {
 
-    private final CraftServer server;
+    private final CraftServer server = null;
 
     public ConsoleCommandCompleter(CraftServer server) {
     }

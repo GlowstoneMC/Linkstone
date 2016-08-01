@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 
 public class BlockNote extends BlockTileEntity {
 
-    private static final List<SoundEffect> a;
+    private static final List<SoundEffect> a = null;
 
     public BlockNote() {
     }

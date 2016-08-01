@@ -2,15 +2,15 @@ package net.minecraft.server;
 
 public class MovingObjectPosition {
 
-    private BlockPosition e;
+    private BlockPosition e = null;
 
-    public MovingObjectPosition.EnumMovingObjectType type;
+    public MovingObjectPosition.EnumMovingObjectType type = null;
 
-    public EnumDirection direction;
+    public EnumDirection direction = null;
 
-    public Vec3D pos;
+    public Vec3D pos = null;
 
-    public Entity entity;
+    public Entity entity = null;
 
     public MovingObjectPosition(Vec3D vec3d, EnumDirection enumdirection, BlockPosition blockposition) {
     }

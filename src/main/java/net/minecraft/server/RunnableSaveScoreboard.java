@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class RunnableSaveScoreboard implements Runnable {
 
-    private final PersistentBase a;
+    private final PersistentBase a = null;
 
     public RunnableSaveScoreboard(PersistentBase persistentbase) {
     }

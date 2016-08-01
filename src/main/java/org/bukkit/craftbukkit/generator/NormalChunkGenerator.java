@@ -9,7 +9,7 @@ import org.bukkit.generator.BlockPopulator;
 
 public class NormalChunkGenerator extends InternalChunkGenerator {
 
-    private final ChunkGenerator generator;
+    private final ChunkGenerator generator = null;
 
     public NormalChunkGenerator(World world, long seed) {
     }

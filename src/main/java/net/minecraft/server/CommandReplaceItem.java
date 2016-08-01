@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 public class CommandReplaceItem extends CommandAbstract {
 
-    private static final Map<String, Integer> a;
+    private static final Map<String, Integer> a = null;
 
     public CommandReplaceItem() {
     }

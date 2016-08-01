@@ -11,7 +11,7 @@ import org.bukkit.craftbukkit.util.CraftChatMessage;
  */
 public class CraftBlockCommandSender extends ServerCommandSender implements BlockCommandSender {
 
-    private final ICommandListener block;
+    private final ICommandListener block = null;
 
     public CraftBlockCommandSender(ICommandListener commandBlockListenerAbstract) {
     }

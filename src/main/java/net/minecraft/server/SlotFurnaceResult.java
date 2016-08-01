@@ -8,9 +8,9 @@ import org.bukkit.event.inventory.FurnaceExtractEvent;
 // CraftBukkit end
 public class SlotFurnaceResult extends Slot {
 
-    private final EntityHuman a;
+    private final EntityHuman a = null;
 
-    private int b;
+    private int b = 0;
 
     public SlotFurnaceResult(EntityHuman entityhuman, IInventory iinventory, int i, int j, int k) {
     }

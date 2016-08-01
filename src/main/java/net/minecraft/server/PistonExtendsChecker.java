@@ -6,17 +6,17 @@ import java.util.List;
 
 public class PistonExtendsChecker {
 
-    private final World a;
+    private final World a = null;
 
-    private final BlockPosition b;
+    private final BlockPosition b = null;
 
-    private final BlockPosition c;
+    private final BlockPosition c = null;
 
-    private final EnumDirection d;
+    private final EnumDirection d = null;
 
-    private final List<BlockPosition> e;
+    private final List<BlockPosition> e = null;
 
-    private final List<BlockPosition> f;
+    private final List<BlockPosition> f = null;
 
     public PistonExtendsChecker(World world, BlockPosition blockposition, EnumDirection enumdirection, boolean flag) {
     }

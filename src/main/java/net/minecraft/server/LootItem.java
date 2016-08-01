@@ -8,9 +8,9 @@ import java.util.Random;
 
 public class LootItem extends LotoSelectorEntry {
 
-    protected final Item a;
+    protected final Item a = null;
 
-    protected final LootItemFunction[] b;
+    protected final LootItemFunction[] b = null;
 
     public LootItem(Item item, int i, int j, LootItemFunction[] alootitemfunction, LootItemCondition[] alootitemcondition) {
     }

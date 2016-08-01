@@ -11,11 +11,11 @@ import java.util.Map.Entry;
 
 public class WorldGenFlatInfo {
 
-    private final List<WorldGenFlatLayerInfo> layers;
+    private final List<WorldGenFlatLayerInfo> layers = null;
 
-    private final Map<String, Map<String, String>> structures;
+    private final Map<String, Map<String, String>> structures = null;
 
-    private int c;
+    private int c = 0;
 
     public WorldGenFlatInfo() {
     }

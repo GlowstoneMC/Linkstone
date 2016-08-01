@@ -12,11 +12,11 @@ import com.google.common.collect.ImmutableSet;
 
 public final class CraftItemFactory implements ItemFactory {
 
-    static final Color DEFAULT_LEATHER_COLOR;
+    static final Color DEFAULT_LEATHER_COLOR = null;
 
-    static final Collection<String> KNOWN_NBT_ATTRIBUTE_NAMES;
+    static final Collection<String> KNOWN_NBT_ATTRIBUTE_NAMES = null;
 
-    private static final CraftItemFactory instance;
+    private static final CraftItemFactory instance = null;
 
     static {
     }

@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class EntityDamageSourceIndirect extends EntityDamageSource {
 
-    private final Entity owner;
+    private final Entity owner = null;
 
     public EntityDamageSourceIndirect(String s, Entity entity, @Nullable Entity entity1) {
     }

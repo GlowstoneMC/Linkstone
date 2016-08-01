@@ -9,7 +9,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class CraftEntityEquipment implements EntityEquipment {
 
-    private final CraftLivingEntity entity;
+    private final CraftLivingEntity entity = null;
 
     public CraftEntityEquipment(CraftLivingEntity entity) {
     }

@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class LootSelectorLootTable extends LotoSelectorEntry {
 
-    protected final MinecraftKey a;
+    protected final MinecraftKey a = null;
 
     public LootSelectorLootTable(MinecraftKey minecraftkey, int i, int j, LootItemCondition[] alootitemcondition) {
     }

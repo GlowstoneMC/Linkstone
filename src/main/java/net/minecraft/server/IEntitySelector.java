@@ -6,17 +6,17 @@ import javax.annotation.Nullable;
 
 public final class IEntitySelector {
 
-    public static final Predicate<Entity> a;
+    public static final Predicate<Entity> a = null;
 
-    public static final Predicate<Entity> b;
+    public static final Predicate<Entity> b = null;
 
-    public static final Predicate<Entity> c;
+    public static final Predicate<Entity> c = null;
 
-    public static final Predicate<Entity> d;
+    public static final Predicate<Entity> d = null;
 
-    public static final Predicate<Entity> e;
+    public static final Predicate<Entity> e = null;
 
-    public static final Predicate<Entity> f;
+    public static final Predicate<Entity> f = null;
 
     public static <T extends Entity> Predicate<T> a(final double d0, final double d1, final double d2, double d3) {
         return null;
@@ -28,7 +28,7 @@ public final class IEntitySelector {
 
     public static class EntitySelectorEquipable implements Predicate<Entity> {
 
-        private final ItemStack a;
+        private final ItemStack a = null;
 
         public EntitySelectorEquipable(ItemStack itemstack) {
         }

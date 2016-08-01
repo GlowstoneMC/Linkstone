@@ -5,15 +5,15 @@ import javax.annotation.Nullable;
 
 public class EntityPigZombie extends EntityZombie {
 
-    private static final UUID b;
+    private static final UUID b = null;
 
-    private static final AttributeModifier c;
+    private static final AttributeModifier c = null;
 
-    public int angerLevel;
+    public int angerLevel = 0;
 
-    private int soundDelay;
+    private int soundDelay = 0;
 
-    private UUID hurtBy;
+    private UUID hurtBy = null;
 
     public EntityPigZombie(World world) {
     }

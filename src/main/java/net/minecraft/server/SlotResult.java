@@ -4,11 +4,11 @@ import javax.annotation.Nullable;
 
 public class SlotResult extends Slot {
 
-    private final InventoryCrafting a;
+    private final InventoryCrafting a = null;
 
-    private final EntityHuman b;
+    private final EntityHuman b = null;
 
-    private int c;
+    private int c = 0;
 
     public SlotResult(EntityHuman entityhuman, InventoryCrafting inventorycrafting, IInventory iinventory, int i, int j, int k) {
     }

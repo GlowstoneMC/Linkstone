@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class EntityGhast extends EntityFlying implements IMonster {
 
-    private static final DataWatcherObject<Boolean> a;
+    private static final DataWatcherObject<Boolean> a = null;
 
-    private int b;
+    private int b = 0;
 
     public EntityGhast(World world) {
     }
@@ -83,9 +83,9 @@ public class EntityGhast extends EntityFlying implements IMonster {
 
     static class PathfinderGoalGhastAttackTarget extends PathfinderGoal {
 
-        private final EntityGhast ghast;
+        private final EntityGhast ghast = null;
 
-        public int a;
+        public int a = 0;
 
         public PathfinderGoalGhastAttackTarget(EntityGhast entityghast) {
         }
@@ -106,7 +106,7 @@ public class EntityGhast extends EntityFlying implements IMonster {
 
     static class PathfinderGoalGhastMoveTowardsTarget extends PathfinderGoal {
 
-        private final EntityGhast a;
+        private final EntityGhast a = null;
 
         public PathfinderGoalGhastMoveTowardsTarget(EntityGhast entityghast) {
         }
@@ -121,7 +121,7 @@ public class EntityGhast extends EntityFlying implements IMonster {
 
     static class PathfinderGoalGhastIdleMove extends PathfinderGoal {
 
-        private final EntityGhast a;
+        private final EntityGhast a = null;
 
         public PathfinderGoalGhastIdleMove(EntityGhast entityghast) {
         }
@@ -140,9 +140,9 @@ public class EntityGhast extends EntityFlying implements IMonster {
 
     static class ControllerGhast extends ControllerMove {
 
-        private final EntityGhast i;
+        private final EntityGhast i = null;
 
-        private int j;
+        private int j = 0;
 
         public ControllerGhast(EntityGhast entityghast) {
         }

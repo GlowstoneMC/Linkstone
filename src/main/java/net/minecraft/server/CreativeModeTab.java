@@ -2,43 +2,43 @@ package net.minecraft.server;
 
 public abstract class CreativeModeTab {
 
-    public static final CreativeModeTab[] a;
+    public static final CreativeModeTab[] a = null;
 
-    public static final CreativeModeTab b;
+    public static final CreativeModeTab b = null;
 
-    public static final CreativeModeTab c;
+    public static final CreativeModeTab c = null;
 
-    public static final CreativeModeTab d;
+    public static final CreativeModeTab d = null;
 
-    public static final CreativeModeTab e;
+    public static final CreativeModeTab e = null;
 
-    public static final CreativeModeTab f;
+    public static final CreativeModeTab f = null;
 
-    public static final CreativeModeTab g;
+    public static final CreativeModeTab g = null;
 
-    public static final CreativeModeTab h;
+    public static final CreativeModeTab h = null;
 
-    public static final CreativeModeTab i;
+    public static final CreativeModeTab i = null;
 
-    public static final CreativeModeTab j;
+    public static final CreativeModeTab j = null;
 
-    public static final CreativeModeTab k;
+    public static final CreativeModeTab k = null;
 
-    public static final CreativeModeTab l;
+    public static final CreativeModeTab l = null;
 
-    public static final CreativeModeTab m;
+    public static final CreativeModeTab m = null;
 
-    private final int n;
+    private final int n = 0;
 
-    private final String o;
+    private final String o = null;
 
-    private String p;
+    private String p = null;
 
-    private boolean q;
+    private boolean q = false;
 
-    private boolean r;
+    private boolean r = false;
 
-    private EnchantmentSlotType[] s;
+    private EnchantmentSlotType[] s = null;
 
     public CreativeModeTab(int i, String s) {
     }

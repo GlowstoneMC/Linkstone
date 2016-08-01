@@ -11,17 +11,17 @@ import org.bukkit.Bukkit;
 
 public final class CraftProfileBanEntry implements org.bukkit.BanEntry {
 
-    private final GameProfileBanList list;
+    private final GameProfileBanList list = null;
 
-    private final GameProfile profile;
+    private final GameProfile profile = null;
 
-    private Date created;
+    private Date created = null;
 
-    private String source;
+    private String source = null;
 
-    private Date expiration;
+    private Date expiration = null;
 
-    private String reason;
+    private String reason = null;
 
     public CraftProfileBanEntry(GameProfile profile, GameProfileBanEntry entry, GameProfileBanList list) {
     }

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketLoginOutDisconnect implements Packet<PacketLoginOutListener> {
 
-    private IChatBaseComponent a;
+    private IChatBaseComponent a = null;
 
     public PacketLoginOutDisconnect() {
     }

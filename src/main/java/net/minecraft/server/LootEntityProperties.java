@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class LootEntityProperties {
 
-    private static final Map<MinecraftKey, LootEntityProperty.a<?>> a;
+    private static final Map<MinecraftKey, LootEntityProperty.a<?>> a = null;
 
-    private static final Map<Class<? extends LootEntityProperty>, LootEntityProperty.a<?>> b;
+    private static final Map<Class<? extends LootEntityProperty>, LootEntityProperty.a<?>> b = null;
 
     public static <T extends LootEntityProperty> void a(LootEntityProperty.a<? extends T> lootentityproperty_a) {
     }

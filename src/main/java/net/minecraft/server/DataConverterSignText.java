@@ -12,7 +12,7 @@ import java.util.Iterator;
 
 public class DataConverterSignText implements IDataConverter {
 
-    public static final Gson a;
+    public static final Gson a = null;
 
     public DataConverterSignText() {
     }

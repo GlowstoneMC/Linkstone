@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public abstract class TileEntityLootable extends TileEntityContainer implements ILootable {
 
-    protected MinecraftKey m;
+    protected MinecraftKey m = null;
 
-    protected long n;
+    protected long n = 0;
 
     public TileEntityLootable() {
     }

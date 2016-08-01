@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class EnchantmentProtection extends Enchantment {
 
-    public final EnchantmentProtection.DamageType a;
+    public final EnchantmentProtection.DamageType a = null;
 
     public EnchantmentProtection(Enchantment.Rarity enchantment_rarity, EnchantmentProtection.DamageType enchantmentprotection_damagetype, EnumItemSlot... aenumitemslot) {
     }
@@ -43,13 +43,13 @@ public class EnchantmentProtection extends Enchantment {
 
         ALL("all", 1, 11, 20), FIRE("fire", 10, 8, 12), FALL("fall", 5, 6, 10), EXPLOSION("explosion", 5, 8, 12), PROJECTILE("projectile", 3, 6, 15);
 
-        private final String f;
+        private final String f = null;
 
-        private final int g;
+        private final int g = 0;
 
-        private final int h;
+        private final int h = 0;
 
-        private final int i;
+        private final int i = 0;
 
         private DamageType(String s, int i, int j, int k) {
         }

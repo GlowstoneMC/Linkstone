@@ -8,11 +8,11 @@ import java.util.Set;
 
 public class EntityTippedArrow extends EntityArrow {
 
-    private static final DataWatcherObject<Integer> f;
+    private static final DataWatcherObject<Integer> f = null;
 
-    private PotionRegistry potionRegistry;
+    private PotionRegistry potionRegistry = null;
 
-    public final Set<MobEffect> effects;
+    public final Set<MobEffect> effects = null;
 
     public EntityTippedArrow(World world) {
     }

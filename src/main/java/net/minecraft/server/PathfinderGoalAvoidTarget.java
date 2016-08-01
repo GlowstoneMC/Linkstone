@@ -7,25 +7,25 @@ import javax.annotation.Nullable;
 
 public class PathfinderGoalAvoidTarget<T extends Entity> extends PathfinderGoal {
 
-    private final Predicate<Entity> c;
+    private final Predicate<Entity> c = null;
 
-    protected EntityCreature a;
+    protected EntityCreature a = null;
 
-    private final double d;
+    private final double d = 0.0;
 
-    private final double e;
+    private final double e = 0.0;
 
-    protected T b;
+    protected T b = null;
 
-    private final float f;
+    private final float f = 0.0F;
 
-    private PathEntity g;
+    private PathEntity g = null;
 
-    private final NavigationAbstract h;
+    private final NavigationAbstract h = null;
 
-    private final Class<T> i;
+    private final Class<T> i = null;
 
-    private final Predicate<? super T> j;
+    private final Predicate<? super T> j = null;
 
     public PathfinderGoalAvoidTarget(EntityCreature entitycreature, Class<T> oclass, float f, double d0, double d1) {
     }

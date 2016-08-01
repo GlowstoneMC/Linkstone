@@ -12,11 +12,11 @@ public class InventoryHorseChest extends InventorySubcontainer {
     }
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private EntityHorse horse;
+    private EntityHorse horse = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public InventoryHorseChest(String s, int i, EntityHorse horse) {
     }

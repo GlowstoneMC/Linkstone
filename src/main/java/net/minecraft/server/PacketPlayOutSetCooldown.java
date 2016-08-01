@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutSetCooldown implements Packet<PacketListenerPlayOut> {
 
-    private Item a;
+    private Item a = null;
 
-    private int b;
+    private int b = 0;
 
     public PacketPlayOutSetCooldown() {
     }

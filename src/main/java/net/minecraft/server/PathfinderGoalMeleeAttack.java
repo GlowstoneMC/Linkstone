@@ -2,27 +2,27 @@ package net.minecraft.server;
 
 public class PathfinderGoalMeleeAttack extends PathfinderGoal {
 
-    World a;
+    World a = null;
 
-    protected EntityCreature b;
+    protected EntityCreature b = null;
 
-    protected int c;
+    protected int c = 0;
 
-    double d;
+    double d = 0.0;
 
-    boolean e;
+    boolean e = false;
 
-    PathEntity f;
+    PathEntity f = null;
 
-    private int h;
+    private int h = 0;
 
-    private double i;
+    private double i = 0.0;
 
-    private double j;
+    private double j = 0.0;
 
-    private double k;
+    private double k = 0.0;
 
-    protected final int g;
+    protected final int g = 0;
 
     public PathfinderGoalMeleeAttack(EntityCreature entitycreature, double d0, boolean flag) {
     }

@@ -12,9 +12,9 @@ import org.bukkit.craftbukkit.util.CraftMagicNumbers;
 
 public class CraftNoteBlock extends CraftBlockState implements NoteBlock {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final TileEntityNote note;
+    private final TileEntityNote note = null;
 
     public CraftNoteBlock(final Block block) {
     }

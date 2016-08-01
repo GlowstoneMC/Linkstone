@@ -6,33 +6,33 @@ import javax.annotation.Nullable;
 
 public class BlockPistonExtension extends BlockDirectional {
 
-    public static final BlockStateEnum<BlockPistonExtension.EnumPistonType> TYPE;
+    public static final BlockStateEnum<BlockPistonExtension.EnumPistonType> TYPE = null;
 
-    public static final BlockStateBoolean SHORT;
+    public static final BlockStateBoolean SHORT = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
-    protected static final AxisAlignedBB C;
+    protected static final AxisAlignedBB C = null;
 
-    protected static final AxisAlignedBB D;
+    protected static final AxisAlignedBB D = null;
 
-    protected static final AxisAlignedBB E;
+    protected static final AxisAlignedBB E = null;
 
-    protected static final AxisAlignedBB F;
+    protected static final AxisAlignedBB F = null;
 
-    protected static final AxisAlignedBB G;
+    protected static final AxisAlignedBB G = null;
 
-    protected static final AxisAlignedBB I;
+    protected static final AxisAlignedBB I = null;
 
     public BlockPistonExtension() {
     }
@@ -112,7 +112,7 @@ public class BlockPistonExtension extends BlockDirectional {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -122,7 +122,7 @@ public class BlockPistonExtension extends BlockDirectional {
 
         DEFAULT("normal"), STICKY("sticky");
 
-        private final String c;
+        private final String c = null;
 
         private EnumPistonType(String s) {
         }

@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class WorldGenFlowers extends WorldGenerator {
 
-    private BlockFlowers a;
+    private BlockFlowers a = null;
 
-    private IBlockData b;
+    private IBlockData b = null;
 
     public WorldGenFlowers(BlockFlowers blockflowers, BlockFlowers.EnumFlowerVarient blockflowers_enumflowervarient) {
     }

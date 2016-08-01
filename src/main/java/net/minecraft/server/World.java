@@ -29,108 +29,108 @@ import org.bukkit.generator.ChunkGenerator;
 // CraftBukkit end
 public abstract class World implements IBlockAccess {
 
-    private int a;
+    private int a = 0;
 
-    protected boolean d;
+    protected boolean d = false;
 
-    public final List<Entity> entityList;
+    public final List<Entity> entityList = null;
 
-    protected final List<Entity> f;
+    protected final List<Entity> f = null;
 
-    public final List<TileEntity> tileEntityList;
+    public final List<TileEntity> tileEntityList = null;
 
-    public final List<TileEntity> tileEntityListTick;
+    public final List<TileEntity> tileEntityListTick = null;
 
-    private final List<TileEntity> b;
+    private final List<TileEntity> b = null;
 
-    private final List<TileEntity> tileEntityListUnload;
+    private final List<TileEntity> tileEntityListUnload = null;
 
-    public final List<EntityHuman> players;
+    public final List<EntityHuman> players = null;
 
-    public final List<Entity> j;
+    public final List<Entity> j = null;
 
-    protected final IntHashMap<Entity> entitiesById;
+    protected final IntHashMap<Entity> entitiesById = null;
 
-    private final long I;
+    private final long I = 0;
 
-    private int J;
+    private int J = 0;
 
-    protected int l;
+    protected int l = 0;
 
-    protected final int m;
+    protected final int m = 0;
 
-    protected float n;
+    protected float n = 0.0F;
 
-    protected float o;
+    protected float o = 0.0F;
 
-    protected float p;
+    protected float p = 0.0F;
 
-    protected float q;
+    protected float q = 0.0F;
 
-    private int K;
+    private int K = 0;
 
-    public final Random random;
+    public final Random random = null;
 
-    public WorldProvider worldProvider;
+    public WorldProvider worldProvider = null;
 
-    protected NavigationListener t;
+    protected NavigationListener t = null;
 
-    protected List<IWorldAccess> u;
+    protected List<IWorldAccess> u = null;
 
-    protected IChunkProvider chunkProvider;
+    protected IChunkProvider chunkProvider = null;
 
-    protected final IDataManager dataManager;
+    protected final IDataManager dataManager = null;
 
-    public WorldData worldData;
+    public WorldData worldData = null;
 
-    protected boolean isLoading;
+    protected boolean isLoading = false;
 
-    public PersistentCollection worldMaps;
+    public PersistentCollection worldMaps = null;
 
-    protected PersistentVillage villages;
+    protected PersistentVillage villages = null;
 
-    protected LootTableRegistry B;
+    protected LootTableRegistry B = null;
 
-    public final MethodProfiler methodProfiler;
+    public final MethodProfiler methodProfiler = null;
 
-    private final Calendar L;
+    private final Calendar L = null;
 
-    public Scoreboard scoreboard;
+    public Scoreboard scoreboard = null;
 
-    public final boolean isClientSide;
+    public final boolean isClientSide = false;
 
-    public boolean allowMonsters;
+    public boolean allowMonsters = false;
 
-    public boolean allowAnimals;
+    public boolean allowAnimals = false;
 
-    private boolean M;
+    private boolean M = false;
 
-    private final WorldBorder N;
+    private final WorldBorder N = null;
 
-    int[] H;
+    int[] H = null;
 
     // CraftBukkit start Added the following
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    public boolean pvpMode;
+    public boolean pvpMode = false;
 
-    public boolean keepSpawnInMemory;
+    public boolean keepSpawnInMemory = false;
 
-    public ChunkGenerator generator;
+    public ChunkGenerator generator = null;
 
-    public boolean captureBlockStates;
+    public boolean captureBlockStates = false;
 
-    public boolean captureTreeGeneration;
+    public boolean captureTreeGeneration = false;
 
-    public ArrayList<BlockState> capturedBlockStates;
+    public ArrayList<BlockState> capturedBlockStates = null;
 
-    public long ticksPerAnimalSpawns;
+    public long ticksPerAnimalSpawns = 0;
 
-    public long ticksPerMonsterSpawns;
+    public long ticksPerMonsterSpawns = 0;
 
-    public boolean populating;
+    public boolean populating = false;
 
-    private int tickPosition;
+    private int tickPosition = 0;
 
     public CraftWorld getWorld() {
         return null;
@@ -515,7 +515,7 @@ public abstract class World implements IBlockAccess {
         return false;
     }
 
-    public Map<BlockPosition, TileEntity> capturedTileEntities;
+    public Map<BlockPosition, TileEntity> capturedTileEntities = null;
 
     @Nullable
     public TileEntity getTileEntity(BlockPosition blockposition) {

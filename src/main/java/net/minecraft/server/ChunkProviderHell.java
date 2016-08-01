@@ -6,77 +6,77 @@ import javax.annotation.Nullable;
 
 public class ChunkProviderHell implements ChunkGenerator {
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
-    protected static final IBlockData b;
+    protected static final IBlockData b = null;
 
-    protected static final IBlockData c;
+    protected static final IBlockData c = null;
 
-    protected static final IBlockData d;
+    protected static final IBlockData d = null;
 
-    protected static final IBlockData e;
+    protected static final IBlockData e = null;
 
-    protected static final IBlockData f;
+    protected static final IBlockData f = null;
 
-    private final World n;
+    private final World n = null;
 
-    private final boolean o;
+    private final boolean o = false;
 
-    private final Random p;
+    private final Random p = null;
 
-    private double[] q;
+    private double[] q = null;
 
-    private double[] r;
+    private double[] r = null;
 
-    private double[] s;
+    private double[] s = null;
 
-    private double[] t;
+    private double[] t = null;
 
-    private final NoiseGeneratorOctaves u;
+    private final NoiseGeneratorOctaves u = null;
 
-    private final NoiseGeneratorOctaves v;
+    private final NoiseGeneratorOctaves v = null;
 
-    private final NoiseGeneratorOctaves w;
+    private final NoiseGeneratorOctaves w = null;
 
-    private final NoiseGeneratorOctaves x;
+    private final NoiseGeneratorOctaves x = null;
 
-    private final NoiseGeneratorOctaves y;
+    private final NoiseGeneratorOctaves y = null;
 
-    public final NoiseGeneratorOctaves g;
+    public final NoiseGeneratorOctaves g = null;
 
-    public final NoiseGeneratorOctaves h;
+    public final NoiseGeneratorOctaves h = null;
 
-    private final WorldGenFire z;
+    private final WorldGenFire z = null;
 
-    private final WorldGenLightStone1 A;
+    private final WorldGenLightStone1 A = null;
 
-    private final WorldGenLightStone2 B;
+    private final WorldGenLightStone2 B = null;
 
-    private final WorldGenerator C;
+    private final WorldGenerator C = null;
 
-    private final WorldGenerator D;
+    private final WorldGenerator D = null;
 
-    private final WorldGenHellLava E;
+    private final WorldGenHellLava E = null;
 
-    private final WorldGenHellLava F;
+    private final WorldGenHellLava F = null;
 
-    private final WorldGenMushrooms G;
+    private final WorldGenMushrooms G = null;
 
-    private final WorldGenMushrooms H;
+    private final WorldGenMushrooms H = null;
 
-    private final WorldGenNether I;
+    private final WorldGenNether I = null;
 
-    private final WorldGenBase J;
+    private final WorldGenBase J = null;
 
-    double[] i;
+    double[] i = null;
 
-    double[] j;
+    double[] j = null;
 
-    double[] k;
+    double[] k = null;
 
-    double[] l;
+    double[] l = null;
 
-    double[] m;
+    double[] m = null;
 
     public ChunkProviderHell(World world, boolean flag, long i) {
     }

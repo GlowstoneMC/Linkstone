@@ -4,13 +4,13 @@ import java.io.IOException;
 
 public class PacketHandshakingInSetProtocol implements Packet<PacketHandshakingInListener> {
 
-    private int a;
+    private int a = 0;
 
-    public String hostname;
+    public String hostname = null;
 
-    public int port;
+    public int port = 0;
 
-    private EnumProtocol d;
+    private EnumProtocol d = null;
 
     public PacketHandshakingInSetProtocol() {
     }

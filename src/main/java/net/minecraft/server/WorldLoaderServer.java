@@ -16,7 +16,7 @@ import org.apache.logging.log4j.Logger;
 
 public class WorldLoaderServer extends WorldLoader {
 
-    private static final Logger c;
+    private static final Logger c = null;
 
     public WorldLoaderServer(File file, DataConverterManager dataconvertermanager) {
     }

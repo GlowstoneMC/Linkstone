@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class NibbleArray {
 
-    private final byte[] a;
+    private final byte[] a = null;
 
     public NibbleArray() {
     }

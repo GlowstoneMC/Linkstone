@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class PathfinderGoalSwell extends PathfinderGoal {
 
-    EntityCreeper a;
+    EntityCreeper a = null;
 
-    EntityLiving b;
+    EntityLiving b = null;
 
     public PathfinderGoalSwell(EntityCreeper entitycreeper) {
     }

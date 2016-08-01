@@ -4,17 +4,17 @@ import javax.annotation.Nullable;
 
 public class EntityRabbit extends EntityAnimal {
 
-    private static final DataWatcherObject<Integer> bx;
+    private static final DataWatcherObject<Integer> bx = null;
 
-    private int by;
+    private int by = 0;
 
-    private int bz;
+    private int bz = 0;
 
-    private boolean bB;
+    private boolean bB = false;
 
-    private int bC;
+    private int bC = 0;
 
-    private int bD;
+    private int bD = 0;
 
     public EntityRabbit(World world) {
     }
@@ -169,7 +169,7 @@ public class EntityRabbit extends EntityAnimal {
 
     static class PathfinderGoalRabbitPanic extends PathfinderGoalPanic {
 
-        private final EntityRabbit b;
+        private final EntityRabbit b = null;
 
         public PathfinderGoalRabbitPanic(EntityRabbit entityrabbit, double d0) {
         }
@@ -180,11 +180,11 @@ public class EntityRabbit extends EntityAnimal {
 
     static class PathfinderGoalEatCarrots extends PathfinderGoalGotoTarget {
 
-        private final EntityRabbit c;
+        private final EntityRabbit c = null;
 
-        private boolean d;
+        private boolean d = false;
 
-        private boolean e;
+        private boolean e = false;
 
         public PathfinderGoalEatCarrots(EntityRabbit entityrabbit) {
         }
@@ -213,7 +213,7 @@ public class EntityRabbit extends EntityAnimal {
 
     static class PathfinderGoalRabbitAvoidTarget<T extends Entity> extends PathfinderGoalAvoidTarget<T> {
 
-        private final EntityRabbit c;
+        private final EntityRabbit c = null;
 
         public PathfinderGoalRabbitAvoidTarget(EntityRabbit entityrabbit, Class<T> oclass, float f, double d0, double d1) {
         }
@@ -225,9 +225,9 @@ public class EntityRabbit extends EntityAnimal {
 
     static class ControllerMoveRabbit extends ControllerMove {
 
-        private final EntityRabbit i;
+        private final EntityRabbit i = null;
 
-        private double j;
+        private double j = 0.0;
 
         public ControllerMoveRabbit(EntityRabbit entityrabbit) {
         }
@@ -241,9 +241,9 @@ public class EntityRabbit extends EntityAnimal {
 
     public class ControllerJumpRabbit extends ControllerJump {
 
-        private final EntityRabbit c;
+        private final EntityRabbit c = null;
 
-        private boolean d;
+        private boolean d = false;
 
         public ControllerJumpRabbit(EntityRabbit entityrabbit) {
         }
@@ -265,7 +265,7 @@ public class EntityRabbit extends EntityAnimal {
 
     public static class GroupDataRabbit implements GroupDataEntity {
 
-        public int a;
+        public int a = 0;
 
         public GroupDataRabbit(int i) {
         }

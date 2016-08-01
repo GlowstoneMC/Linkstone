@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class DataConverterZombie implements IDataConverter {
 
-    private static final Random a;
+    private static final Random a = null;
 
     public DataConverterZombie() {
     }

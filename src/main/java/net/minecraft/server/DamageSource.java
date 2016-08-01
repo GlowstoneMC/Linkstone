@@ -4,61 +4,61 @@ import javax.annotation.Nullable;
 
 public class DamageSource {
 
-    public static DamageSource FIRE;
+    public static DamageSource FIRE = null;
 
-    public static DamageSource LIGHTNING;
+    public static DamageSource LIGHTNING = null;
 
-    public static DamageSource BURN;
+    public static DamageSource BURN = null;
 
-    public static DamageSource LAVA;
+    public static DamageSource LAVA = null;
 
-    public static DamageSource HOT_FLOOR;
+    public static DamageSource HOT_FLOOR = null;
 
-    public static DamageSource STUCK;
+    public static DamageSource STUCK = null;
 
-    public static DamageSource DROWN;
+    public static DamageSource DROWN = null;
 
-    public static DamageSource STARVE;
+    public static DamageSource STARVE = null;
 
-    public static DamageSource CACTUS;
+    public static DamageSource CACTUS = null;
 
-    public static DamageSource FALL;
+    public static DamageSource FALL = null;
 
-    public static DamageSource FLY_INTO_WALL;
+    public static DamageSource FLY_INTO_WALL = null;
 
-    public static DamageSource OUT_OF_WORLD;
+    public static DamageSource OUT_OF_WORLD = null;
 
-    public static DamageSource GENERIC;
+    public static DamageSource GENERIC = null;
 
-    public static DamageSource MAGIC;
+    public static DamageSource MAGIC = null;
 
-    public static DamageSource WITHER;
+    public static DamageSource WITHER = null;
 
-    public static DamageSource ANVIL;
+    public static DamageSource ANVIL = null;
 
-    public static DamageSource FALLING_BLOCK;
+    public static DamageSource FALLING_BLOCK = null;
 
-    public static DamageSource DRAGON_BREATH;
+    public static DamageSource DRAGON_BREATH = null;
 
-    private boolean t;
+    private boolean t = false;
 
-    private boolean u;
+    private boolean u = false;
 
-    private boolean v;
+    private boolean v = false;
 
-    private float w;
+    private float w = 0.0F;
 
-    private boolean x;
+    private boolean x = false;
 
-    private boolean y;
+    private boolean y = false;
 
-    private boolean z;
+    private boolean z = false;
 
-    private boolean A;
+    private boolean A = false;
 
-    private boolean B;
+    private boolean B = false;
 
-    public String translationIndex;
+    public String translationIndex = null;
 
     public static DamageSource mobAttack(EntityLiving entityliving) {
         return null;

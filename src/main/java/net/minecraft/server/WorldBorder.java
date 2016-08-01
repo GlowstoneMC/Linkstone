@@ -6,31 +6,31 @@ import java.util.List;
 
 public class WorldBorder {
 
-    private final List<IWorldBorderListener> a;
+    private final List<IWorldBorderListener> a = null;
 
-    private double b;
+    private double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private double d;
+    private double d = 0.0;
 
-    private double e;
+    private double e = 0.0;
 
-    private long f;
+    private long f = 0;
 
-    private long g;
+    private long g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private double i;
+    private double i = 0.0;
 
-    private double j;
+    private double j = 0.0;
 
-    private int k;
+    private int k = 0;
 
-    private int l;
+    private int l = 0;
 
-    public WorldServer world;
+    public WorldServer world = null;
 
     // CraftBukkit
     public WorldBorder() {

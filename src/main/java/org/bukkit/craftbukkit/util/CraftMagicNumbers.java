@@ -27,7 +27,7 @@ import org.bukkit.util.StringUtil;
 @SuppressWarnings("deprecation")
 public final class CraftMagicNumbers implements UnsafeValues {
 
-    public static final UnsafeValues INSTANCE;
+    public static final UnsafeValues INSTANCE = null;
 
     private CraftMagicNumbers() {
     }

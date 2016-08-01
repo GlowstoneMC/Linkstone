@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class EntityMinecartHopper extends EntityMinecartContainer implements IHopper {
 
-    private boolean a;
+    private boolean a = false;
 
-    private int b;
+    private int b = 0;
 
-    private final BlockPosition c;
+    private final BlockPosition c = null;
 
     public EntityMinecartHopper(World world) {
     }

@@ -12,30 +12,30 @@ import org.bukkit.event.entity.EntityTargetLivingEntityEvent;
 // CraftBukkit end
 public class PathfinderGoalTempt extends PathfinderGoal {
 
-    private final EntityCreature a;
+    private final EntityCreature a = null;
 
-    private final double b;
+    private final double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private double d;
+    private double d = 0.0;
 
-    private double e;
+    private double e = 0.0;
 
-    private double f;
+    private double f = 0.0;
 
-    private double g;
+    private double g = 0.0;
 
-    private EntityLiving h;
+    private EntityLiving h = null;
 
     // CraftBukkit
-    private int i;
+    private int i = 0;
 
-    private boolean j;
+    private boolean j = false;
 
-    private final Set<Item> k;
+    private final Set<Item> k = null;
 
-    private final boolean l;
+    private final boolean l = false;
 
     public PathfinderGoalTempt(EntityCreature entitycreature, double d0, Item item, boolean flag) {
     }

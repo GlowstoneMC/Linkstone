@@ -2,17 +2,17 @@ package net.minecraft.server;
 
 public class ChunkSection {
 
-    private final int yPos;
+    private final int yPos = 0;
 
-    private int nonEmptyBlockCount;
+    private int nonEmptyBlockCount = 0;
 
-    private int tickingBlockCount;
+    private int tickingBlockCount = 0;
 
-    private final DataPaletteBlock blockIds;
+    private final DataPaletteBlock blockIds = null;
 
-    private NibbleArray emittedLight;
+    private NibbleArray emittedLight = null;
 
-    private NibbleArray skyLight;
+    private NibbleArray skyLight = null;
 
     public ChunkSection(int i, boolean flag) {
     }

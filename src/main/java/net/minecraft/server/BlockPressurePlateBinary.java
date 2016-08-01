@@ -7,9 +7,9 @@ import org.bukkit.event.entity.EntityInteractEvent;
 // CraftBukkit
 public class BlockPressurePlateBinary extends BlockPressurePlateAbstract {
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
-    private final BlockPressurePlateBinary.EnumMobType e;
+    private final BlockPressurePlateBinary.EnumMobType e = null;
 
     protected BlockPressurePlateBinary(Material material, BlockPressurePlateBinary.EnumMobType blockpressureplatebinary_enummobtype) {
     }
@@ -46,7 +46,7 @@ public class BlockPressurePlateBinary extends BlockPressurePlateAbstract {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

@@ -7,9 +7,9 @@ import javax.annotation.Nullable;
 
 public abstract class BlockMinecartTrackAbstract extends Block {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
-    protected final boolean b;
+    protected final boolean b = false;
 
     public static boolean b(World world, BlockPosition blockposition) {
         return false;
@@ -67,7 +67,7 @@ public abstract class BlockMinecartTrackAbstract extends Block {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -77,11 +77,11 @@ public abstract class BlockMinecartTrackAbstract extends Block {
 
         NORTH_SOUTH(0, "north_south"), EAST_WEST(1, "east_west"), ASCENDING_EAST(2, "ascending_east"), ASCENDING_WEST(3, "ascending_west"), ASCENDING_NORTH(4, "ascending_north"), ASCENDING_SOUTH(5, "ascending_south"), SOUTH_EAST(6, "south_east"), SOUTH_WEST(7, "south_west"), NORTH_WEST(8, "north_west"), NORTH_EAST(9, "north_east");
 
-        private static final BlockMinecartTrackAbstract.EnumTrackPosition[] k;
+        private static final BlockMinecartTrackAbstract.EnumTrackPosition[] k = null;
 
-        private final int l;
+        private final int l = 0;
 
-        private final String m;
+        private final String m = null;
 
         private EnumTrackPosition(int i, String s) {
         }
@@ -112,17 +112,17 @@ public abstract class BlockMinecartTrackAbstract extends Block {
 
     public class MinecartTrackLogic {
 
-        private final World b;
+        private final World b = null;
 
-        private final BlockPosition c;
+        private final BlockPosition c = null;
 
-        private final BlockMinecartTrackAbstract d;
+        private final BlockMinecartTrackAbstract d = null;
 
-        private IBlockData e;
+        private IBlockData e = null;
 
-        private final boolean f;
+        private final boolean f = false;
 
-        private final List<BlockPosition> g;
+        private final List<BlockPosition> g = null;
 
         public MinecartTrackLogic(World world, BlockPosition blockposition, IBlockData iblockdata) {
         }

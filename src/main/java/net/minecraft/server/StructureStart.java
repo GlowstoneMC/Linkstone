@@ -7,13 +7,13 @@ import java.util.Random;
 
 public abstract class StructureStart {
 
-    protected List<StructurePiece> a;
+    protected List<StructurePiece> a = null;
 
-    protected StructureBoundingBox b;
+    protected StructureBoundingBox b = null;
 
-    private int c;
+    private int c = 0;
 
-    private int d;
+    private int d = 0;
 
     public StructureStart() {
     }

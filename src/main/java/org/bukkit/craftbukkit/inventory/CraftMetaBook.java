@@ -22,28 +22,28 @@ import org.bukkit.craftbukkit.util.CraftChatMessage;
 @DelegateDeserialization(SerializableMeta.class)
 public class CraftMetaBook extends CraftMetaItem implements BookMeta {
 
-    static final ItemMetaKey BOOK_TITLE;
+    static final ItemMetaKey BOOK_TITLE = null;
 
-    static final ItemMetaKey BOOK_AUTHOR;
+    static final ItemMetaKey BOOK_AUTHOR = null;
 
-    static final ItemMetaKey BOOK_PAGES;
+    static final ItemMetaKey BOOK_PAGES = null;
 
-    static final ItemMetaKey RESOLVED;
+    static final ItemMetaKey RESOLVED = null;
 
-    static final ItemMetaKey GENERATION;
+    static final ItemMetaKey GENERATION = null;
 
-    static final int MAX_PAGE_LENGTH;
+    static final int MAX_PAGE_LENGTH = 0;
 
     // TODO: Check me
-    static final int MAX_TITLE_LENGTH;
+    static final int MAX_TITLE_LENGTH = 0;
 
-    protected String title;
+    protected String title = null;
 
-    protected String author;
+    protected String author = null;
 
-    public List<IChatBaseComponent> pages;
+    public List<IChatBaseComponent> pages = null;
 
-    protected Integer generation;
+    protected Integer generation = null;
 
     CraftMetaBook(CraftMetaItem meta) {
     }

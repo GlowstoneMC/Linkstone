@@ -19,53 +19,53 @@ import org.bukkit.event.entity.EntityUnleashEvent.UnleashReason;
 // CraftBukkit end
 public abstract class EntityInsentient extends EntityLiving {
 
-    private static final DataWatcherObject<Byte> a;
+    private static final DataWatcherObject<Byte> a = null;
 
-    public int a_;
+    public int a_ = 0;
 
-    protected int b_;
+    protected int b_ = 0;
 
-    private final ControllerLook lookController;
+    private final ControllerLook lookController = null;
 
-    protected ControllerMove moveController;
+    protected ControllerMove moveController = null;
 
-    protected ControllerJump g;
+    protected ControllerJump g = null;
 
-    private final EntityAIBodyControl c;
+    private final EntityAIBodyControl c = null;
 
-    protected NavigationAbstract navigation;
+    protected NavigationAbstract navigation = null;
 
-    public PathfinderGoalSelector goalSelector;
+    public PathfinderGoalSelector goalSelector = null;
 
-    public PathfinderGoalSelector targetSelector;
+    public PathfinderGoalSelector targetSelector = null;
 
-    private EntityLiving goalTarget;
+    private EntityLiving goalTarget = null;
 
-    private final EntitySenses bw;
+    private final EntitySenses bw = null;
 
-    private final ItemStack[] bx;
+    private final ItemStack[] bx = null;
 
-    public float[] dropChanceHand;
+    public float[] dropChanceHand = null;
 
-    private final ItemStack[] by;
+    private final ItemStack[] by = null;
 
-    public float[] dropChanceArmor;
+    public float[] dropChanceArmor = null;
 
-    public boolean canPickUpLoot;
+    public boolean canPickUpLoot = false;
 
-    public boolean persistent;
+    public boolean persistent = false;
 
-    private final Map<PathType, Float> bB;
+    private final Map<PathType, Float> bB = null;
 
-    private MinecraftKey bC;
+    private MinecraftKey bC = null;
 
-    private long bD;
+    private long bD = 0;
 
-    private boolean bE;
+    private boolean bE = false;
 
-    private Entity leashHolder;
+    private Entity leashHolder = null;
 
-    private NBTTagCompound bG;
+    private NBTTagCompound bG = null;
 
     public EntityInsentient(World world) {
     }
@@ -386,9 +386,9 @@ public abstract class EntityInsentient extends EntityLiving {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }

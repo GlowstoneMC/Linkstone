@@ -2,23 +2,23 @@ package net.minecraft.server;
 
 public abstract class PathfinderAbstract {
 
-    protected IBlockAccess a;
+    protected IBlockAccess a = null;
 
-    protected EntityInsentient b;
+    protected EntityInsentient b = null;
 
-    protected final IntHashMap<PathPoint> c;
+    protected final IntHashMap<PathPoint> c = null;
 
-    protected int d;
+    protected int d = 0;
 
-    protected int e;
+    protected int e = 0;
 
-    protected int f;
+    protected int f = 0;
 
-    protected boolean g;
+    protected boolean g = false;
 
-    protected boolean h;
+    protected boolean h = false;
 
-    protected boolean i;
+    protected boolean i = false;
 
     public PathfinderAbstract() {
     }

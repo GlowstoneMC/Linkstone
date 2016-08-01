@@ -10,23 +10,23 @@ import org.bukkit.event.entity.EntityTargetEvent.TargetReason;
 // CraftBukkit end
 public class EntityWolf extends EntityTameableAnimal {
 
-    private static final DataWatcherObject<Float> DATA_HEALTH;
+    private static final DataWatcherObject<Float> DATA_HEALTH = null;
 
-    private static final DataWatcherObject<Boolean> bC;
+    private static final DataWatcherObject<Boolean> bC = null;
 
-    private static final DataWatcherObject<Integer> bD;
+    private static final DataWatcherObject<Integer> bD = null;
 
-    private float bE;
+    private float bE = 0.0F;
 
-    private float bF;
+    private float bF = 0.0F;
 
-    private boolean bG;
+    private boolean bG = false;
 
-    private boolean bH;
+    private boolean bH = false;
 
-    private float bI;
+    private float bI = 0.0F;
 
-    private float bJ;
+    private float bJ = 0.0F;
 
     public EntityWolf(World world) {
     }

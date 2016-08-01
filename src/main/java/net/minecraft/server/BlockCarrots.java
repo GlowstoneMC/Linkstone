@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class BlockCarrots extends BlockCrops {
 
-    private static final AxisAlignedBB[] a;
+    private static final AxisAlignedBB[] a = null;
 
     public BlockCarrots() {
     }

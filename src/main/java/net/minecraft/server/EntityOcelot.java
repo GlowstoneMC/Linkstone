@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class EntityOcelot extends EntityTameableAnimal {
 
-    private static final DataWatcherObject<Integer> bB;
+    private static final DataWatcherObject<Integer> bB = null;
 
-    private PathfinderGoalAvoidTarget<EntityHuman> bC;
+    private PathfinderGoalAvoidTarget<EntityHuman> bC = null;
 
-    private PathfinderGoalTempt bD;
+    private PathfinderGoalTempt bD = null;
 
     public EntityOcelot(World world) {
     }

@@ -18,10 +18,10 @@ import org.apache.logging.log4j.Logger;
 
 public class LootItemFunctionEnchant extends LootItemFunction {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
     @Nullable
-    private final List<Enchantment> b;
+    private final List<Enchantment> b = null;
 
     public LootItemFunctionEnchant(LootItemCondition[] alootitemcondition, @Nullable List<Enchantment> list) {
     }

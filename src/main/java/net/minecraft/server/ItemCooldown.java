@@ -7,9 +7,9 @@ import java.util.Map.Entry;
 
 public class ItemCooldown {
 
-    private final Map<Item, ItemCooldown.Info> a;
+    private final Map<Item, ItemCooldown.Info> a = null;
 
-    private int b;
+    private int b = 0;
 
     public ItemCooldown() {
     }
@@ -39,9 +39,9 @@ public class ItemCooldown {
 
     class Info {
 
-        final int a;
+        final int a = 0;
 
-        final int b;
+        final int b = 0;
 
         private Info(int i, int j) {
         }

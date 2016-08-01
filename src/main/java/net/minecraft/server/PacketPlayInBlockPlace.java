@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayInBlockPlace implements Packet<PacketListenerPlayIn> {
 
-    private EnumHand a;
+    private EnumHand a = null;
 
-    public long timestamp;
+    public long timestamp = 0;
 
     // CraftBukkit
     public PacketPlayInBlockPlace() {

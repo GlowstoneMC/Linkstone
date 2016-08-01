@@ -9,7 +9,7 @@ import org.bukkit.event.entity.EntityInteractEvent;
 // CraftBukkit end
 public class BlockRedstoneOre extends Block {
 
-    private final boolean a;
+    private final boolean a = false;
 
     public BlockRedstoneOre(boolean flag) {
     }

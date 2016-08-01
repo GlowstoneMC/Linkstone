@@ -12,21 +12,21 @@ import java.util.logging.Level;
 // CraftBukkit end
 public abstract class CommandBlockListenerAbstract implements ICommandListener {
 
-    private static final SimpleDateFormat a;
+    private static final SimpleDateFormat a = null;
 
-    private int b;
+    private int b = 0;
 
-    private boolean c;
+    private boolean c = false;
 
-    private IChatBaseComponent d;
+    private IChatBaseComponent d = null;
 
-    private String e;
+    private String e = null;
 
-    private String f;
+    private String f = null;
 
-    private final CommandObjectiveExecutor g;
+    private final CommandObjectiveExecutor g = null;
 
-    protected org.bukkit.command.CommandSender sender;
+    protected org.bukkit.command.CommandSender sender = null;
 
     // CraftBukkit - add sender
     public CommandBlockListenerAbstract() {

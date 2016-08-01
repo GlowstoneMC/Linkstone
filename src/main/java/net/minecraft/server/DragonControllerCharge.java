@@ -6,11 +6,11 @@ import org.apache.logging.log4j.Logger;
 
 public class DragonControllerCharge extends AbstractDragonController {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    private Vec3D c;
+    private Vec3D c = null;
 
-    private int d;
+    private int d = 0;
 
     public DragonControllerCharge(EntityEnderDragon entityenderdragon) {
     }

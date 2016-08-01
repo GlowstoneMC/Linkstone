@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayOutResourcePackSend implements Packet<PacketListenerPlayOut> {
 
-    private String a;
+    private String a = null;
 
-    private String b;
+    private String b = null;
 
     public PacketPlayOutResourcePackSend() {
     }

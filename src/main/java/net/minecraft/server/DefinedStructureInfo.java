@@ -5,30 +5,30 @@ import javax.annotation.Nullable;
 
 public class DefinedStructureInfo {
 
-    private EnumBlockMirror a;
+    private EnumBlockMirror a = null;
 
-    private EnumBlockRotation b;
+    private EnumBlockRotation b = null;
 
-    private boolean c;
-
-    @Nullable
-    private Block d;
+    private boolean c = false;
 
     @Nullable
-    private ChunkCoordIntPair e;
+    private Block d = null;
 
     @Nullable
-    private StructureBoundingBox f;
-
-    private boolean g;
-
-    private float h;
+    private ChunkCoordIntPair e = null;
 
     @Nullable
-    private Random i;
+    private StructureBoundingBox f = null;
+
+    private boolean g = false;
+
+    private float h = 0.0F;
 
     @Nullable
-    private Long j;
+    private Random i = null;
+
+    @Nullable
+    private Long j = null;
 
     public DefinedStructureInfo() {
     }

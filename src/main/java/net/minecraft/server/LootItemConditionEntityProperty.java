@@ -11,9 +11,9 @@ import java.util.Map.Entry;
 
 public class LootItemConditionEntityProperty implements LootItemCondition {
 
-    private final LootEntityProperty[] a;
+    private final LootEntityProperty[] a = null;
 
-    private final LootTableInfo.EntityTarget b;
+    private final LootTableInfo.EntityTarget b = null;
 
     public LootItemConditionEntityProperty(LootEntityProperty[] alootentityproperty, LootTableInfo.EntityTarget loottableinfo_entitytarget) {
     }

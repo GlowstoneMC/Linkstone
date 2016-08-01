@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class LootItemFunctionSetCount extends LootItemFunction {
 
-    private final LootValueBounds a;
+    private final LootValueBounds a = null;
 
     public LootItemFunctionSetCount(LootItemCondition[] alootitemcondition, LootValueBounds lootvaluebounds) {
     }

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayOutSpawnPosition implements Packet<PacketListenerPlayOut> {
 
-    public BlockPosition position;
+    public BlockPosition position = null;
 
     public PacketPlayOutSpawnPosition() {
     }

@@ -41,24 +41,24 @@ import org.apache.commons.io.IOUtils;
 
 public class UserCache {
 
-    public static final SimpleDateFormat a;
+    public static final SimpleDateFormat a = null;
 
-    private static boolean c;
+    private static boolean c = false;
 
-    private final Map<String, UserCache.UserCacheEntry> d;
+    private final Map<String, UserCache.UserCacheEntry> d = null;
 
-    private final Map<UUID, UserCache.UserCacheEntry> e;
+    private final Map<UUID, UserCache.UserCacheEntry> e = null;
 
-    private final Deque<GameProfile> f;
+    private final Deque<GameProfile> f = null;
 
     // CraftBukkit
-    private final GameProfileRepository g;
+    private final GameProfileRepository g = null;
 
-    protected final Gson b;
+    protected final Gson b = null;
 
-    private final File h;
+    private final File h = null;
 
-    private static final ParameterizedType i;
+    private static final ParameterizedType i = null;
 
     public UserCache(GameProfileRepository gameprofilerepository, File file) {
     }
@@ -110,9 +110,9 @@ public class UserCache {
 
     class UserCacheEntry {
 
-        private final GameProfile b;
+        private final GameProfile b = null;
 
-        private final Date c;
+        private final Date c = null;
 
         private UserCacheEntry(GameProfile gameprofile, Date date) {
         }

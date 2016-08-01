@@ -9,23 +9,23 @@ import javax.annotation.Nullable;
 
 public class ChunkProviderFlat implements ChunkGenerator {
 
-    private final World a;
+    private final World a = null;
 
-    private final Random b;
+    private final Random b = null;
 
-    private final IBlockData[] c;
+    private final IBlockData[] c = null;
 
-    private final WorldGenFlatInfo d;
+    private final WorldGenFlatInfo d = null;
 
-    private final List<StructureGenerator> e;
+    private final List<StructureGenerator> e = null;
 
-    private final boolean f;
+    private final boolean f = false;
 
-    private final boolean g;
+    private final boolean g = false;
 
-    private WorldGenLakes h;
+    private WorldGenLakes h = null;
 
-    private WorldGenLakes i;
+    private WorldGenLakes i = null;
 
     public ChunkProviderFlat(World world, long i, boolean flag, String s) {
     }

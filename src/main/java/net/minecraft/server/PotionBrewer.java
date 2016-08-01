@@ -8,13 +8,13 @@ import javax.annotation.Nullable;
 
 public class PotionBrewer {
 
-    private static final List<PotionBrewer.PredicatedCombination<PotionRegistry>> a;
+    private static final List<PotionBrewer.PredicatedCombination<PotionRegistry>> a = null;
 
-    private static final List<PotionBrewer.PredicatedCombination<Item>> b;
+    private static final List<PotionBrewer.PredicatedCombination<Item>> b = null;
 
-    private static final List<PotionBrewer.PredicateItem> c;
+    private static final List<PotionBrewer.PredicateItem> c = null;
 
-    private static final Predicate<ItemStack> d;
+    private static final Predicate<ItemStack> d = null;
 
     public static boolean a(ItemStack itemstack) {
         return false;
@@ -59,9 +59,9 @@ public class PotionBrewer {
 
     static class PredicateItem implements Predicate<ItemStack> {
 
-        private final Item a;
+        private final Item a = null;
 
-        private final int b;
+        private final int b = 0;
 
         public PredicateItem(Item item) {
         }
@@ -80,11 +80,11 @@ public class PotionBrewer {
 
     static class PredicatedCombination<T> {
 
-        final T a;
+        final T a = null;
 
-        final Predicate<ItemStack> b;
+        final Predicate<ItemStack> b = null;
 
-        final T c;
+        final T c = null;
 
         public PredicatedCombination(T t0, Predicate<ItemStack> predicate, T t1) {
         }

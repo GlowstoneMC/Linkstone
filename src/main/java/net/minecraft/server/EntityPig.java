@@ -9,15 +9,15 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class EntityPig extends EntityAnimal {
 
-    private static final DataWatcherObject<Boolean> bx;
+    private static final DataWatcherObject<Boolean> bx = null;
 
-    private static final Set<Item> by;
+    private static final Set<Item> by = null;
 
-    private boolean bz;
+    private boolean bz = false;
 
-    private int bB;
+    private int bB = 0;
 
-    private int bC;
+    private int bC = 0;
 
     public EntityPig(World world) {
     }

@@ -9,53 +9,53 @@ import javax.annotation.Nullable;
 
 public class Block {
 
-    private static final MinecraftKey a;
+    private static final MinecraftKey a = null;
 
-    public static final RegistryBlocks<MinecraftKey, Block> REGISTRY;
+    public static final RegistryBlocks<MinecraftKey, Block> REGISTRY = null;
 
-    public static final RegistryBlockID<IBlockData> REGISTRY_ID;
+    public static final RegistryBlockID<IBlockData> REGISTRY_ID = null;
 
-    public static final AxisAlignedBB j;
+    public static final AxisAlignedBB j = null;
 
-    public static final AxisAlignedBB k;
+    public static final AxisAlignedBB k = null;
 
-    private CreativeModeTab creativeTab;
+    private CreativeModeTab creativeTab = null;
 
-    protected boolean l;
+    protected boolean l = false;
 
-    protected int m;
+    protected int m = 0;
 
-    protected boolean n;
+    protected boolean n = false;
 
-    protected int o;
+    protected int o = 0;
 
-    protected boolean p;
+    protected boolean p = false;
 
-    protected float strength;
+    protected float strength = 0.0F;
 
-    protected float durability;
+    protected float durability = 0.0F;
 
-    protected boolean s;
+    protected boolean s = false;
 
-    protected boolean t;
+    protected boolean t = false;
 
-    protected boolean isTileEntity;
+    protected boolean isTileEntity = false;
 
-    protected SoundEffectType stepSound;
+    protected SoundEffectType stepSound = null;
 
-    public float w;
+    public float w = 0.0F;
 
-    protected final Material material;
+    protected final Material material = null;
 
-    protected final MaterialMapColor y;
+    protected final MaterialMapColor y = null;
 
-    public float frictionFactor;
+    public float frictionFactor = 0.0F;
 
-    protected final BlockStateList blockStateList;
+    protected final BlockStateList blockStateList = null;
 
-    private IBlockData blockData;
+    private IBlockData blockData = null;
 
-    private String name;
+    private String name = null;
 
     public static int getId(Block block) {
         return 0;

@@ -15,13 +15,13 @@ import com.mojang.authlib.GameProfile;
 class CraftMetaSkull extends CraftMetaItem implements SkullMeta {
 
     @ItemMetaKey.Specific(ItemMetaKey.Specific.To.NBT)
-    static final ItemMetaKey SKULL_PROFILE;
+    static final ItemMetaKey SKULL_PROFILE = null;
 
-    static final ItemMetaKey SKULL_OWNER;
+    static final ItemMetaKey SKULL_OWNER = null;
 
-    static final int MAX_OWNER_LENGTH;
+    static final int MAX_OWNER_LENGTH = 0;
 
-    private GameProfile profile;
+    private GameProfile profile = null;
 
     CraftMetaSkull(CraftMetaItem meta) {
     }

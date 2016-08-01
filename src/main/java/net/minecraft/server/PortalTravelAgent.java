@@ -12,11 +12,11 @@ import org.bukkit.util.Vector;
 // CraftBukkit end
 public class PortalTravelAgent {
 
-    private final WorldServer world;
+    private final WorldServer world = null;
 
-    private final Random b;
+    private final Random b = null;
 
-    private final Long2ObjectMap<PortalTravelAgent.ChunkCoordinatesPortal> c;
+    private final Long2ObjectMap<PortalTravelAgent.ChunkCoordinatesPortal> c = null;
 
     public PortalTravelAgent(WorldServer worldserver) {
     }
@@ -60,7 +60,7 @@ public class PortalTravelAgent {
 
     public class ChunkCoordinatesPortal extends BlockPosition {
 
-        public long b;
+        public long b = 0;
 
         public ChunkCoordinatesPortal(BlockPosition blockposition, long i) {
         }

@@ -5,7 +5,7 @@ import org.bukkit.potion.PotionEffectType;
 
 public class CraftPotionEffectType extends PotionEffectType {
 
-    private final MobEffectList handle;
+    private final MobEffectList handle = null;
 
     public CraftPotionEffectType(MobEffectList handle) {
     }

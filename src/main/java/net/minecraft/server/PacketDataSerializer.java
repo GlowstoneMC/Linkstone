@@ -25,7 +25,7 @@ import org.bukkit.craftbukkit.inventory.CraftItemStack;
 // CraftBukkit
 public class PacketDataSerializer extends ByteBuf {
 
-    private final ByteBuf a;
+    private final ByteBuf a = null;
 
     public PacketDataSerializer(ByteBuf bytebuf) {
     }

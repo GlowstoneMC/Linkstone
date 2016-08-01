@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 public class LootItemFunctionSmelt extends LootItemFunction {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
     public LootItemFunctionSmelt(LootItemCondition[] alootitemcondition) {
     }

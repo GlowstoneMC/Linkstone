@@ -4,13 +4,13 @@ import java.io.IOException;
 
 public class PacketPlayOutRespawn implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private EnumDifficulty b;
+    private EnumDifficulty b = null;
 
-    private EnumGamemode c;
+    private EnumGamemode c = null;
 
-    private WorldType d;
+    private WorldType d = null;
 
     public PacketPlayOutRespawn() {
     }

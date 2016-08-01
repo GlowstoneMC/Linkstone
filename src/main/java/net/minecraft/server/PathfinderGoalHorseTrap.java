@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class PathfinderGoalHorseTrap extends PathfinderGoal {
 
-    private final EntityHorse a;
+    private final EntityHorse a = null;
 
     public PathfinderGoalHorseTrap(EntityHorse entityhorse) {
     }

@@ -4,23 +4,23 @@ import javax.annotation.Nullable;
 
 public class BlockFenceGate extends BlockFacingHorizontal {
 
-    public static final BlockStateBoolean OPEN;
+    public static final BlockStateBoolean OPEN = null;
 
-    public static final BlockStateBoolean POWERED;
+    public static final BlockStateBoolean POWERED = null;
 
-    public static final BlockStateBoolean IN_WALL;
+    public static final BlockStateBoolean IN_WALL = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
-    protected static final AxisAlignedBB e;
+    protected static final AxisAlignedBB e = null;
 
-    protected static final AxisAlignedBB f;
+    protected static final AxisAlignedBB f = null;
 
-    protected static final AxisAlignedBB g;
+    protected static final AxisAlignedBB g = null;
 
-    protected static final AxisAlignedBB B;
+    protected static final AxisAlignedBB B = null;
 
-    protected static final AxisAlignedBB C;
+    protected static final AxisAlignedBB C = null;
 
     public BlockFenceGate(BlockWood.EnumLogVariant blockwood_enumlogvariant) {
     }

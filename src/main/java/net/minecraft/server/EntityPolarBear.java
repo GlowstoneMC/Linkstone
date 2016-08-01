@@ -7,13 +7,13 @@ import javax.annotation.Nullable;
 
 public class EntityPolarBear extends EntityAnimal {
 
-    private static final DataWatcherObject<Boolean> bx;
+    private static final DataWatcherObject<Boolean> bx = null;
 
-    private float by;
+    private float by = 0.0F;
 
-    private float bz;
+    private float bz = 0.0F;
 
-    private int bB;
+    private int bB = 0;
 
     public EntityPolarBear(World world) {
     }
@@ -143,7 +143,7 @@ public class EntityPolarBear extends EntityAnimal {
 
     static class b implements GroupDataEntity {
 
-        public boolean a;
+        public boolean a = false;
 
         private b() {
         }

@@ -10,13 +10,13 @@ import javax.annotation.Nullable;
 
 public class ShapeDetector {
 
-    private final Predicate<ShapeDetectorBlock>[][][] a;
+    private final Predicate<ShapeDetectorBlock>[][][] a = null;
 
-    private final int b;
+    private final int b = 0;
 
-    private final int c;
+    private final int c = 0;
 
-    private final int d;
+    private final int d = 0;
 
     public ShapeDetector(Predicate<ShapeDetectorBlock>[][][] apredicate) {
     }
@@ -53,19 +53,19 @@ public class ShapeDetector {
 
     public static class ShapeDetectorCollection {
 
-        private final BlockPosition a;
+        private final BlockPosition a = null;
 
-        private final EnumDirection b;
+        private final EnumDirection b = null;
 
-        private final EnumDirection c;
+        private final EnumDirection c = null;
 
-        private final LoadingCache<BlockPosition, ShapeDetectorBlock> d;
+        private final LoadingCache<BlockPosition, ShapeDetectorBlock> d = null;
 
-        private final int e;
+        private final int e = 0;
 
-        private final int f;
+        private final int f = 0;
 
-        private final int g;
+        private final int g = 0;
 
         public ShapeDetectorCollection(BlockPosition blockposition, EnumDirection enumdirection, EnumDirection enumdirection1, LoadingCache<BlockPosition, ShapeDetectorBlock> loadingcache, int i, int j, int k) {
         }
@@ -101,9 +101,9 @@ public class ShapeDetector {
 
     static class BlockLoader extends CacheLoader<BlockPosition, ShapeDetectorBlock> {
 
-        private final World a;
+        private final World a = null;
 
-        private final boolean b;
+        private final boolean b = false;
 
         public BlockLoader(World world, boolean flag) {
         }

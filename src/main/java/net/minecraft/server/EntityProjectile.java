@@ -6,29 +6,29 @@ import javax.annotation.Nullable;
 
 public abstract class EntityProjectile extends Entity implements IProjectile {
 
-    private int blockX;
+    private int blockX = 0;
 
-    private int blockY;
+    private int blockY = 0;
 
-    private int blockZ;
+    private int blockZ = 0;
 
-    private Block inBlockId;
+    private Block inBlockId = null;
 
-    protected boolean inGround;
+    protected boolean inGround = false;
 
-    public int shake;
+    public int shake = 0;
 
-    public EntityLiving shooter;
+    public EntityLiving shooter = null;
 
-    public String shooterName;
+    public String shooterName = null;
 
-    private int av;
+    private int av = 0;
 
-    private int aw;
+    private int aw = 0;
 
-    public Entity c;
+    public Entity c = null;
 
-    private int ax;
+    private int ax = 0;
 
     public EntityProjectile(World world) {
     }

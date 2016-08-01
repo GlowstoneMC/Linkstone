@@ -12,9 +12,9 @@ import org.apache.logging.log4j.Logger;
 
 public class MojangsonParser {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final Pattern b;
+    private static final Pattern b = null;
 
     public static NBTTagCompound parse(String s) throws MojangsonParseException {
         return null;
@@ -62,23 +62,23 @@ public class MojangsonParser {
 
     static class MojangsonPrimitiveParser extends MojangsonParser.MojangsonTypeParser {
 
-        private static final Pattern c;
+        private static final Pattern c = null;
 
-        private static final Pattern d;
+        private static final Pattern d = null;
 
-        private static final Pattern e;
+        private static final Pattern e = null;
 
-        private static final Pattern f;
+        private static final Pattern f = null;
 
-        private static final Pattern g;
+        private static final Pattern g = null;
 
-        private static final Pattern h;
+        private static final Pattern h = null;
 
-        private static final Pattern i;
+        private static final Pattern i = null;
 
-        private static final Splitter j;
+        private static final Splitter j = null;
 
-        protected String b;
+        protected String b = null;
 
         public MojangsonPrimitiveParser(String s, String s1) {
         }
@@ -90,7 +90,7 @@ public class MojangsonParser {
 
     static class MojangsonListParser extends MojangsonParser.MojangsonTypeParser {
 
-        protected List<MojangsonParser.MojangsonTypeParser> b;
+        protected List<MojangsonParser.MojangsonTypeParser> b = null;
 
         public MojangsonListParser(String s) {
         }
@@ -102,7 +102,7 @@ public class MojangsonParser {
 
     static class MojangsonCompoundParser extends MojangsonParser.MojangsonTypeParser {
 
-        protected List<MojangsonParser.MojangsonTypeParser> b;
+        protected List<MojangsonParser.MojangsonTypeParser> b = null;
 
         public MojangsonCompoundParser(String s) {
         }
@@ -114,7 +114,7 @@ public class MojangsonParser {
 
     abstract static class MojangsonTypeParser {
 
-        protected String a;
+        protected String a = null;
 
         MojangsonTypeParser() {
         }

@@ -4,15 +4,15 @@ import java.io.IOException;
 
 public class PacketPlayOutEntityEffect implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private byte b;
+    private byte b = 0;
 
-    private byte c;
+    private byte c = 0;
 
-    private int d;
+    private int d = 0;
 
-    private byte e;
+    private byte e = 0;
 
     public PacketPlayOutEntityEffect() {
     }

@@ -6,13 +6,13 @@ import java.util.Random;
 
 public class WorldGenDesertWell extends WorldGenerator {
 
-    private static final BlockStatePredicate a;
+    private static final BlockStatePredicate a = null;
 
-    private final IBlockData b;
+    private final IBlockData b = null;
 
-    private final IBlockData c;
+    private final IBlockData c = null;
 
-    private final IBlockData d;
+    private final IBlockData d = null;
 
     public WorldGenDesertWell() {
     }

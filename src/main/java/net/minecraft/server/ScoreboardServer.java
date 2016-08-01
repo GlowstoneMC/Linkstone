@@ -10,11 +10,11 @@ import java.util.Set;
 
 public class ScoreboardServer extends Scoreboard {
 
-    private final MinecraftServer a;
+    private final MinecraftServer a = null;
 
-    private final Set<ScoreboardObjective> b;
+    private final Set<ScoreboardObjective> b = null;
 
-    private Runnable[] c;
+    private Runnable[] c = null;
 
     public ScoreboardServer(MinecraftServer minecraftserver) {
     }

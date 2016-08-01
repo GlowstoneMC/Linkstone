@@ -7,13 +7,13 @@ import java.util.List;
 
 public class BiomeCache {
 
-    private final WorldChunkManager a;
+    private final WorldChunkManager a = null;
 
-    private long b;
+    private long b = 0;
 
-    private final Long2ObjectMap<BiomeCache.a> c;
+    private final Long2ObjectMap<BiomeCache.a> c = null;
 
-    private final List<BiomeCache.a> d;
+    private final List<BiomeCache.a> d = null;
 
     public BiomeCache(WorldChunkManager worldchunkmanager) {
     }
@@ -35,13 +35,13 @@ public class BiomeCache {
 
     public class a {
 
-        public BiomeBase[] a;
+        public BiomeBase[] a = null;
 
-        public int b;
+        public int b = 0;
 
-        public int c;
+        public int c = 0;
 
-        public long d;
+        public long d = 0;
 
         public a(int i, int j) {
         }

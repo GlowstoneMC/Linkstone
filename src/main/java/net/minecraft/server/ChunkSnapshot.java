@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class ChunkSnapshot {
 
-    private static final IBlockData a;
+    private static final IBlockData a = null;
 
-    private final char[] b;
+    private final char[] b = null;
 
     public ChunkSnapshot() {
     }

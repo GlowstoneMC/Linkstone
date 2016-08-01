@@ -7,7 +7,7 @@ import java.util.Random;
 
 public class LootItemConditionRandomChance implements LootItemCondition {
 
-    private final float a;
+    private final float a = 0.0F;
 
     public LootItemConditionRandomChance(float f) {
     }

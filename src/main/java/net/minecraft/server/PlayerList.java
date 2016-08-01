@@ -39,51 +39,51 @@ import org.bukkit.util.Vector;
 // CraftBukkit end
 public abstract class PlayerList {
 
-    public static final File a;
+    public static final File a = null;
 
-    public static final File b;
+    public static final File b = null;
 
-    public static final File c;
+    public static final File c = null;
 
-    public static final File d;
+    public static final File d = null;
 
-    private static final Logger f;
+    private static final Logger f = null;
 
-    private static final SimpleDateFormat g;
+    private static final SimpleDateFormat g = null;
 
-    private final MinecraftServer server;
+    private final MinecraftServer server = null;
 
-    public final List<EntityPlayer> players;
+    public final List<EntityPlayer> players = null;
 
     // CraftBukkit - ArrayList -> CopyOnWriteArrayList: Iterator safety
-    private final Map<UUID, EntityPlayer> j;
+    private final Map<UUID, EntityPlayer> j = null;
 
-    private final GameProfileBanList k;
+    private final GameProfileBanList k = null;
 
-    private final IpBanList l;
+    private final IpBanList l = null;
 
-    private final OpList operators;
+    private final OpList operators = null;
 
-    private final WhiteList whitelist;
+    private final WhiteList whitelist = null;
 
-    private final Map<UUID, ServerStatisticManager> o;
+    private final Map<UUID, ServerStatisticManager> o = null;
 
-    public IPlayerFileData playerFileData;
+    public IPlayerFileData playerFileData = null;
 
-    private boolean hasWhitelist;
+    private boolean hasWhitelist = false;
 
-    protected int maxPlayers;
+    protected int maxPlayers = 0;
 
-    private int r;
+    private int r = 0;
 
-    private EnumGamemode s;
+    private EnumGamemode s = null;
 
-    private boolean t;
+    private boolean t = false;
 
-    private int u;
+    private int u = 0;
 
     // CraftBukkit start
-    private CraftServer cserver;
+    private CraftServer cserver = null;
 
     public PlayerList(MinecraftServer minecraftserver) {
     }

@@ -4,13 +4,13 @@ import java.io.IOException;
 
 public class PacketPlayInSteerVehicle implements Packet<PacketListenerPlayIn> {
 
-    private float a;
+    private float a = 0.0F;
 
-    private float b;
+    private float b = 0.0F;
 
-    private boolean c;
+    private boolean c = false;
 
-    private boolean d;
+    private boolean d = false;
 
     public PacketPlayInSteerVehicle() {
     }

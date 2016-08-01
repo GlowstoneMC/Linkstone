@@ -6,9 +6,9 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public abstract class BlockDiodeAbstract extends BlockFacingHorizontal {
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected final boolean d;
+    protected final boolean d = false;
 
     protected BlockDiodeAbstract(boolean flag) {
     }

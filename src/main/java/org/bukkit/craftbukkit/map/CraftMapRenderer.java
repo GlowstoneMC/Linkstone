@@ -11,7 +11,7 @@ import org.bukkit.map.MapView;
 
 public class CraftMapRenderer extends MapRenderer {
 
-    private final WorldMap worldMap;
+    private final WorldMap worldMap = null;
 
     public CraftMapRenderer(CraftMapView mapView, WorldMap worldMap) {
     }

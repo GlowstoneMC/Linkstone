@@ -15,13 +15,13 @@ import org.bukkit.map.MapView;
 
 public final class CraftMapView implements MapView {
 
-    private final Map<CraftPlayer, RenderData> renderCache;
+    private final Map<CraftPlayer, RenderData> renderCache = null;
 
-    private final List<MapRenderer> renderers;
+    private final List<MapRenderer> renderers = null;
 
-    private final Map<MapRenderer, Map<CraftPlayer, CraftMapCanvas>> canvases;
+    private final Map<MapRenderer, Map<CraftPlayer, CraftMapCanvas>> canvases = null;
 
-    protected final WorldMap worldMap;
+    protected final WorldMap worldMap = null;
 
     public CraftMapView(WorldMap worldMap) {
     }

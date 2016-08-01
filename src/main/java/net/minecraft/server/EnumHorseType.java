@@ -4,17 +4,17 @@ public enum EnumHorseType {
 
     HORSE("EntityHorse", "horse_white", SoundEffects.cp, SoundEffects.cw, SoundEffects.ct, LootTables.F), DONKEY("Donkey", "donkey", SoundEffects.ax, SoundEffects.aB, SoundEffects.aA, LootTables.F), MULE("Mule", "mule", SoundEffects.dD, SoundEffects.dF, SoundEffects.dE, LootTables.F), ZOMBIE("ZombieHorse", "horse_zombie", SoundEffects.hF, SoundEffects.hH, SoundEffects.hG, LootTables.G), SKELETON("SkeletonHorse", "horse_skeleton", SoundEffects.fv, SoundEffects.fx, SoundEffects.fw, LootTables.H);
 
-    private final ChatMessage f;
+    private final ChatMessage f = null;
 
-    private final MinecraftKey g;
+    private final MinecraftKey g = null;
 
-    private final SoundEffect h;
+    private final SoundEffect h = null;
 
-    private final SoundEffect i;
+    private final SoundEffect i = null;
 
-    private final SoundEffect j;
+    private final SoundEffect j = null;
 
-    private final MinecraftKey k;
+    private final MinecraftKey k = null;
 
     private EnumHorseType(String s, String s1, SoundEffect soundeffect, SoundEffect soundeffect1, SoundEffect soundeffect2, MinecraftKey minecraftkey) {
     }

@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class BlockRepeater extends BlockDiodeAbstract {
 
-    public static final BlockStateBoolean LOCKED;
+    public static final BlockStateBoolean LOCKED = null;
 
-    public static final BlockStateInteger DELAY;
+    public static final BlockStateInteger DELAY = null;
 
     protected BlockRepeater(boolean flag) {
     }

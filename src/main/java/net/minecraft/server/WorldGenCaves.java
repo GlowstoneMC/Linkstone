@@ -5,13 +5,13 @@ import java.util.Random;
 
 public class WorldGenCaves extends WorldGenBase {
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
-    protected static final IBlockData b;
+    protected static final IBlockData b = null;
 
-    protected static final IBlockData c;
+    protected static final IBlockData c = null;
 
-    protected static final IBlockData d;
+    protected static final IBlockData d = null;
 
     public WorldGenCaves() {
     }

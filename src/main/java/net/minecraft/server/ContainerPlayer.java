@@ -8,20 +8,20 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit end
 public class ContainerPlayer extends Container {
 
-    private static final EnumItemSlot[] h;
+    private static final EnumItemSlot[] h = null;
 
-    public InventoryCrafting craftInventory;
+    public InventoryCrafting craftInventory = null;
 
-    public IInventory resultInventory;
+    public IInventory resultInventory = null;
 
-    public boolean g;
+    public boolean g = false;
 
-    private final EntityHuman owner;
+    private final EntityHuman owner = null;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     // CraftBukkit end
     public ContainerPlayer(final PlayerInventory playerinventory, boolean flag, EntityHuman entityhuman) {

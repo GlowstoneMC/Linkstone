@@ -48,130 +48,130 @@ import org.bukkit.craftbukkit.Main;
 // CraftBukkit end
 public abstract class MinecraftServer implements Runnable, ICommandListener, IAsyncTaskHandler, IMojangStatistics {
 
-    public static final Logger LOGGER;
+    public static final Logger LOGGER = null;
 
-    public static final File a;
+    public static final File a = null;
 
-    public Convertable convertable;
+    public Convertable convertable = null;
 
-    private final MojangStatisticsGenerator m;
+    private final MojangStatisticsGenerator m = null;
 
-    public File universe;
+    public File universe = null;
 
-    private final List<ITickable> o;
+    private final List<ITickable> o = null;
 
-    public final ICommandHandler b;
+    public final ICommandHandler b = null;
 
-    public final MethodProfiler methodProfiler;
+    public final MethodProfiler methodProfiler = null;
 
-    private final ServerConnection p;
+    private final ServerConnection p = null;
 
-    private final ServerPing q;
+    private final ServerPing q = null;
 
-    private final Random r;
+    private final Random r = null;
 
-    private final DataConverterManager dataConverterManager;
+    private final DataConverterManager dataConverterManager = null;
 
-    private String serverIp;
+    private String serverIp = null;
 
-    private int u;
+    private int u = 0;
 
-    public WorldServer[] worldServer;
+    public WorldServer[] worldServer = null;
 
-    private PlayerList v;
+    private PlayerList v = null;
 
-    private boolean isRunning;
+    private boolean isRunning = false;
 
-    private boolean isStopped;
+    private boolean isStopped = false;
 
-    private int ticks;
+    private int ticks = 0;
 
-    protected final Proxy e;
+    protected final Proxy e = null;
 
-    public String f;
+    public String f = null;
 
-    public int g;
+    public int g = 0;
 
-    private boolean onlineMode;
+    private boolean onlineMode = false;
 
-    private boolean spawnAnimals;
+    private boolean spawnAnimals = false;
 
-    private boolean spawnNPCs;
+    private boolean spawnNPCs = false;
 
-    private boolean pvpMode;
+    private boolean pvpMode = false;
 
-    private boolean allowFlight;
+    private boolean allowFlight = false;
 
-    private String motd;
+    private String motd = null;
 
-    private int F;
+    private int F = 0;
 
-    private int G;
+    private int G = 0;
 
-    public final long[] h;
+    public final long[] h = null;
 
-    public long[][] i;
+    public long[][] i = null;
 
-    private KeyPair H;
+    private KeyPair H = null;
 
-    private String I;
+    private String I = null;
 
-    private String J;
+    private String J = null;
 
-    private boolean demoMode;
+    private boolean demoMode = false;
 
-    private boolean M;
+    private boolean M = false;
 
-    private String N;
+    private String N = null;
 
-    private String O;
+    private String O = null;
 
-    private boolean P;
+    private boolean P = false;
 
-    private long Q;
+    private long Q = 0;
 
-    private String R;
+    private String R = null;
 
-    private boolean S;
+    private boolean S = false;
 
-    private boolean T;
+    private boolean T = false;
 
-    private final YggdrasilAuthenticationService U;
+    private final YggdrasilAuthenticationService U = null;
 
-    private final MinecraftSessionService V;
+    private final MinecraftSessionService V = null;
 
-    private final GameProfileRepository W;
+    private final GameProfileRepository W = null;
 
-    private final UserCache X;
+    private final UserCache X = null;
 
-    private long Y;
+    private long Y = 0;
 
-    protected final Queue<FutureTask<?>> j;
+    protected final Queue<FutureTask<?>> j = null;
 
-    private Thread serverThread;
+    private Thread serverThread = null;
 
-    private long aa;
+    private long aa = 0;
 
     // CraftBukkit start
-    public List<WorldServer> worlds;
+    public List<WorldServer> worlds = null;
 
-    public org.bukkit.craftbukkit.CraftServer server;
+    public org.bukkit.craftbukkit.CraftServer server = null;
 
-    public OptionSet options;
+    public OptionSet options = null;
 
-    public org.bukkit.command.ConsoleCommandSender console;
+    public org.bukkit.command.ConsoleCommandSender console = null;
 
-    public org.bukkit.command.RemoteConsoleCommandSender remoteConsole;
+    public org.bukkit.command.RemoteConsoleCommandSender remoteConsole = null;
 
-    public ConsoleReader reader;
+    public ConsoleReader reader = null;
 
-    public static int currentTick;
+    public static int currentTick = 0;
 
-    public final Thread primaryThread;
+    public final Thread primaryThread = null;
 
-    public java.util.Queue<Runnable> processQueue;
+    public java.util.Queue<Runnable> processQueue = null;
 
-    public int autosavePeriod;
+    public int autosavePeriod = 0;
 
     // CraftBukkit end
     public MinecraftServer(OptionSet options, Proxy proxy, DataConverterManager dataconvertermanager, YggdrasilAuthenticationService yggdrasilauthenticationservice, MinecraftSessionService minecraftsessionservice, GameProfileRepository gameprofilerepository, UserCache usercache) {
@@ -225,9 +225,9 @@ public abstract class MinecraftServer implements Runnable, ICommandListener, IAs
     }
 
     // CraftBukkit start
-    private boolean hasStopped;
+    private boolean hasStopped = false;
 
-    private final Object stopLock;
+    private final Object stopLock = null;
 
     // CraftBukkit end
     public void stop() throws ExceptionWorldConflict {

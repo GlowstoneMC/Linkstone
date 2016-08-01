@@ -5,17 +5,17 @@ import javax.annotation.Nullable;
 
 public class AxisAlignedBB {
 
-    public final double a;
+    public final double a = 0.0;
 
-    public final double b;
+    public final double b = 0.0;
 
-    public final double c;
+    public final double c = 0.0;
 
-    public final double d;
+    public final double d = 0.0;
 
-    public final double e;
+    public final double e = 0.0;
 
-    public final double f;
+    public final double f = 0.0;
 
     public AxisAlignedBB(double d0, double d1, double d2, double d3, double d4, double d5) {
     }

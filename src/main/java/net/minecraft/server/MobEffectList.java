@@ -13,21 +13,21 @@ import org.bukkit.event.entity.EntityRegainHealthEvent.RegainReason;
 // CraftBukkit end
 public class MobEffectList {
 
-    public static final RegistryMaterials<MinecraftKey, MobEffectList> REGISTRY;
+    public static final RegistryMaterials<MinecraftKey, MobEffectList> REGISTRY = null;
 
-    private final Map<IAttribute, AttributeModifier> a;
+    private final Map<IAttribute, AttributeModifier> a = null;
 
-    private final boolean c;
+    private final boolean c = false;
 
-    private final int d;
+    private final int d = 0;
 
-    private String e;
+    private String e = null;
 
-    private int f;
+    private int f = 0;
 
-    public double durationModifier;
+    public double durationModifier = 0.0;
 
-    private boolean h;
+    private boolean h = false;
 
     @Nullable
     public static MobEffectList fromId(int i) {

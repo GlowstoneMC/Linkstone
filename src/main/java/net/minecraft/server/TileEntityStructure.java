@@ -10,33 +10,33 @@ import javax.annotation.Nullable;
 
 public class TileEntityStructure extends TileEntity {
 
-    private String a;
+    private String a = null;
 
-    private String f;
+    private String f = null;
 
-    private String g;
+    private String g = null;
 
-    private BlockPosition h;
+    private BlockPosition h = null;
 
-    private BlockPosition i;
+    private BlockPosition i = null;
 
-    private EnumBlockMirror j;
+    private EnumBlockMirror j = null;
 
-    private EnumBlockRotation k;
+    private EnumBlockRotation k = null;
 
-    private TileEntityStructure.UsageMode l;
+    private TileEntityStructure.UsageMode l = null;
 
-    private boolean m;
+    private boolean m = false;
 
-    private boolean n;
+    private boolean n = false;
 
-    private boolean o;
+    private boolean o = false;
 
-    private boolean p;
+    private boolean p = false;
 
-    private float q;
+    private float q = 0.0F;
 
-    private long r;
+    private long r = 0;
 
     public TileEntityStructure() {
     }
@@ -166,11 +166,11 @@ public class TileEntityStructure extends TileEntity {
 
         SAVE("save", 0), LOAD("load", 1), CORNER("corner", 2), DATA("data", 3);
 
-        private static final TileEntityStructure.UsageMode[] e;
+        private static final TileEntityStructure.UsageMode[] e = null;
 
-        private final String f;
+        private final String f = null;
 
-        private final int g;
+        private final int g = 0;
 
         private UsageMode(String s, int i) {
         }

@@ -6,14 +6,14 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit
 public class ContainerBeacon extends Container {
 
-    private final IInventory beacon;
+    private final IInventory beacon = null;
 
-    private final ContainerBeacon.SlotBeacon f;
+    private final ContainerBeacon.SlotBeacon f = null;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     // CraftBukkit end
     public ContainerBeacon(IInventory iinventory, IInventory iinventory1) {

@@ -20,24 +20,24 @@ import org.bukkit.inventory.InventoryView;
 // CraftBukkit end
 public abstract class Container {
 
-    public List<ItemStack> b;
+    public List<ItemStack> b = null;
 
-    public List<Slot> c;
+    public List<Slot> c = null;
 
-    public int windowId;
+    public int windowId = 0;
 
-    private int dragType;
+    private int dragType = 0;
 
-    private int g;
+    private int g = 0;
 
-    private final Set<Slot> h;
+    private final Set<Slot> h = null;
 
-    protected List<ICrafting> listeners;
+    protected List<ICrafting> listeners = null;
 
-    private final Set<EntityHuman> i;
+    private final Set<EntityHuman> i = null;
 
     // CraftBukkit start
-    public boolean checkReachable;
+    public boolean checkReachable = false;
 
     public abstract InventoryView getBukkitView();
 

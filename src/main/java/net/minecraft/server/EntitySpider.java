@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class EntitySpider extends EntityMonster {
 
-    private static final DataWatcherObject<Byte> a;
+    private static final DataWatcherObject<Byte> a = null;
 
     public EntitySpider(World world) {
     }
@@ -110,7 +110,7 @@ public class EntitySpider extends EntityMonster {
 
     public static class GroupDataSpider implements GroupDataEntity {
 
-        public MobEffectList a;
+        public MobEffectList a = null;
 
         public GroupDataSpider() {
         }

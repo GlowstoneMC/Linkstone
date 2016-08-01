@@ -4,13 +4,13 @@ import java.io.IOException;
 
 public class PacketPlayInUseEntity implements Packet<PacketListenerPlayIn> {
 
-    private int a;
+    private int a = 0;
 
-    private PacketPlayInUseEntity.EnumEntityUseAction action;
+    private PacketPlayInUseEntity.EnumEntityUseAction action = null;
 
-    private Vec3D c;
+    private Vec3D c = null;
 
-    private EnumHand d;
+    private EnumHand d = null;
 
     public PacketPlayInUseEntity() {
     }

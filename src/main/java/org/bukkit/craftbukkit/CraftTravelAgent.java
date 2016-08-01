@@ -8,13 +8,13 @@ import org.bukkit.TravelAgent;
 
 public class CraftTravelAgent extends PortalTravelAgent implements TravelAgent {
 
-    public static TravelAgent DEFAULT;
+    public static TravelAgent DEFAULT = null;
 
-    private int searchRadius;
+    private int searchRadius = 0;
 
-    private int creationRadius;
+    private int creationRadius = 0;
 
-    private boolean canCreatePortal;
+    private boolean canCreatePortal = false;
 
     public CraftTravelAgent(WorldServer worldserver) {
     }

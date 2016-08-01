@@ -19,11 +19,11 @@ import org.apache.logging.log4j.Logger;
 
 public class LootTable {
 
-    private static final Logger b;
+    private static final Logger b = null;
 
-    public static final LootTable a;
+    public static final LootTable a = null;
 
-    private final LootSelector[] c;
+    private final LootSelector[] c = null;
 
     public LootTable(LootSelector[] alootselector) {
     }

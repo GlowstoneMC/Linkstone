@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class GenLayerRiverMix extends GenLayer {
 
-    private final GenLayer c;
+    private final GenLayer c = null;
 
-    private final GenLayer d;
+    private final GenLayer d = null;
 
     public GenLayerRiverMix(long i, GenLayer genlayer, GenLayer genlayer1) {
     }

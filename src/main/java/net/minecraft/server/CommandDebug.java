@@ -13,11 +13,11 @@ import org.apache.logging.log4j.Logger;
 
 public class CommandDebug extends CommandAbstract {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private long b;
+    private long b = 0;
 
-    private int c;
+    private int c = 0;
 
     public CommandDebug() {
     }

@@ -5,15 +5,15 @@ import java.util.Set;
 
 public class ItemTool extends Item {
 
-    private final Set<Block> e;
+    private final Set<Block> e = null;
 
-    protected float a;
+    protected float a = 0.0F;
 
-    protected float b;
+    protected float b = 0.0F;
 
-    protected float c;
+    protected float c = 0.0F;
 
-    protected Item.EnumToolMaterial d;
+    protected Item.EnumToolMaterial d = null;
 
     protected ItemTool(float f, float f1, Item.EnumToolMaterial item_enumtoolmaterial, Set<Block> set) {
     }

@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayOutEntityDestroy implements Packet<PacketListenerPlayOut> {
 
-    private int[] a;
+    private int[] a = null;
 
     public PacketPlayOutEntityDestroy() {
     }

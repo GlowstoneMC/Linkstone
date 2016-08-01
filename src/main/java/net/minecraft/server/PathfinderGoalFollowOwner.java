@@ -2,23 +2,23 @@ package net.minecraft.server;
 
 public class PathfinderGoalFollowOwner extends PathfinderGoal {
 
-    private final EntityTameableAnimal d;
+    private final EntityTameableAnimal d = null;
 
-    private EntityLiving e;
+    private EntityLiving e = null;
 
-    World a;
+    World a = null;
 
-    private final double f;
+    private final double f = 0.0;
 
-    private final NavigationAbstract g;
+    private final NavigationAbstract g = null;
 
-    private int h;
+    private int h = 0;
 
-    float b;
+    float b = 0.0F;
 
-    float c;
+    float c = 0.0F;
 
-    private float i;
+    private float i = 0.0F;
 
     public PathfinderGoalFollowOwner(EntityTameableAnimal entitytameableanimal, double d0, float f, float f1) {
     }

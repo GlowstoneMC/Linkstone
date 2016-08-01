@@ -64,25 +64,25 @@ import org.bukkit.scoreboard.Scoreboard;
 @DelegateDeserialization(CraftOfflinePlayer.class)
 public class CraftPlayer extends CraftHumanEntity implements Player {
 
-    private long firstPlayed;
+    private long firstPlayed = 0;
 
-    private long lastPlayed;
+    private long lastPlayed = 0;
 
-    private boolean hasPlayedBefore;
+    private boolean hasPlayedBefore = false;
 
-    private final ConversationTracker conversationTracker;
+    private final ConversationTracker conversationTracker = null;
 
-    private final Set<String> channels;
+    private final Set<String> channels = null;
 
-    private final Set<UUID> hiddenPlayers;
+    private final Set<UUID> hiddenPlayers = null;
 
-    private int hash;
+    private int hash = 0;
 
-    private double health;
+    private double health = 0.0;
 
-    private boolean scaledHealth;
+    private boolean scaledHealth = false;
 
-    private double healthScale;
+    private double healthScale = 0.0;
 
     public CraftPlayer(CraftServer server, EntityPlayer entity) {
     }

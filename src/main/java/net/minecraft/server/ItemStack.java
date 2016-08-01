@@ -19,27 +19,27 @@ import org.bukkit.event.world.StructureGrowEvent;
 // CraftBukkit end
 public final class ItemStack {
 
-    public static final DecimalFormat a;
+    public static final DecimalFormat a = null;
 
-    public int count;
+    public int count = 0;
 
-    public int c;
+    public int c = 0;
 
-    private Item item;
+    private Item item = null;
 
-    private NBTTagCompound tag;
+    private NBTTagCompound tag = null;
 
-    private int damage;
+    private int damage = 0;
 
-    private EntityItemFrame g;
+    private EntityItemFrame g = null;
 
-    private Block h;
+    private Block h = null;
 
-    private boolean i;
+    private boolean i = false;
 
-    private Block j;
+    private Block j = null;
 
-    private boolean k;
+    private boolean k = false;
 
     public ItemStack(Block block) {
     }

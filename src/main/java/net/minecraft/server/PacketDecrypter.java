@@ -8,7 +8,7 @@ import javax.crypto.Cipher;
 
 public class PacketDecrypter extends MessageToMessageDecoder<ByteBuf> {
 
-    private final PacketEncryptionHandler a;
+    private final PacketEncryptionHandler a = null;
 
     public PacketDecrypter(Cipher cipher) {
     }

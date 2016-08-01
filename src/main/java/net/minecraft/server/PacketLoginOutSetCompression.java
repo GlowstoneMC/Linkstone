@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketLoginOutSetCompression implements Packet<PacketLoginOutListener> {
 
-    private int a;
+    private int a = 0;
 
     public PacketLoginOutSetCompression() {
     }

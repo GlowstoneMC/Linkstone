@@ -2,17 +2,17 @@ package net.minecraft.server;
 
 public class NextTickListEntry implements Comparable<NextTickListEntry> {
 
-    private static long d;
+    private static long d = 0;
 
-    private final Block e;
+    private final Block e = null;
 
-    public final BlockPosition a;
+    public final BlockPosition a = null;
 
-    public long b;
+    public long b = 0;
 
-    public int c;
+    public int c = 0;
 
-    private final long f;
+    private final long f = 0;
 
     public NextTickListEntry(BlockPosition blockposition, Block block) {
     }

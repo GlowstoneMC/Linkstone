@@ -14,11 +14,11 @@ import java.util.Random;
 
 public abstract class LotoSelectorEntry {
 
-    protected final int c;
+    protected final int c = 0;
 
-    protected final int d;
+    protected final int d = 0;
 
-    protected final LootItemCondition[] e;
+    protected final LootItemCondition[] e = null;
 
     protected LotoSelectorEntry(int i, int j, LootItemCondition[] alootitemcondition) {
     }

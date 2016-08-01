@@ -2,11 +2,11 @@ package net.minecraft.server;
 
 public class SoundEffect {
 
-    public static final RegistryMaterials<MinecraftKey, SoundEffect> a;
+    public static final RegistryMaterials<MinecraftKey, SoundEffect> a = null;
 
-    private final MinecraftKey b;
+    private final MinecraftKey b = null;
 
-    private static int c;
+    private static int c = 0;
 
     public SoundEffect(MinecraftKey minecraftkey) {
     }

@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class DefinedStructureProcessorRotation implements DefinedStructureProcessor {
 
-    private final float a;
+    private final float a = 0.0F;
 
-    private final Random b;
+    private final Random b = null;
 
     public DefinedStructureProcessorRotation(BlockPosition blockposition, DefinedStructureInfo definedstructureinfo) {
     }

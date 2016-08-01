@@ -12,7 +12,7 @@ import org.bukkit.craftbukkit.conversations.ConversationTracker;
  */
 public class CraftConsoleCommandSender extends ServerCommandSender implements ConsoleCommandSender {
 
-    protected final ConversationTracker conversationTracker;
+    protected final ConversationTracker conversationTracker = null;
 
     protected CraftConsoleCommandSender() {
     }

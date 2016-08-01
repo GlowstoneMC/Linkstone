@@ -4,9 +4,9 @@ public enum EnumZombieType {
 
     NORMAL("Zombie", false), VILLAGER_FARMER("Zombie", true), VILLAGER_LIBRARIAN("Zombie", true), VILLAGER_PRIEST("Zombie", true), VILLAGER_SMITH("Zombie", true), VILLAGER_BUTCHER("Zombie", true), HUSK("Husk", false);
 
-    private boolean h;
+    private boolean h = false;
 
-    private final ChatMessage i;
+    private final ChatMessage i = null;
 
     private EnumZombieType(String s, boolean flag) {
     }
@@ -57,7 +57,7 @@ public enum EnumZombieType {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

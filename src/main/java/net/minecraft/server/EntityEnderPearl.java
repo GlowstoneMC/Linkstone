@@ -9,7 +9,7 @@ import org.bukkit.event.player.PlayerTeleportEvent;
 // CraftBukkit end
 public class EntityEnderPearl extends EntityProjectile {
 
-    private EntityLiving d;
+    private EntityLiving d = null;
 
     public EntityEnderPearl(World world) {
     }

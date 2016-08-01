@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class BlockSnow extends Block {
 
-    public static final BlockStateInteger LAYERS;
+    public static final BlockStateInteger LAYERS = null;
 
-    protected static final AxisAlignedBB[] b;
+    protected static final AxisAlignedBB[] b = null;
 
     protected BlockSnow() {
     }

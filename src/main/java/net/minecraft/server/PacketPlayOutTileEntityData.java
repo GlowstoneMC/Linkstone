@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayOutTileEntityData implements Packet<PacketListenerPlayOut> {
 
-    private BlockPosition a;
+    private BlockPosition a = null;
 
-    private int b;
+    private int b = 0;
 
-    private NBTTagCompound c;
+    private NBTTagCompound c = null;
 
     public PacketPlayOutTileEntityData() {
     }

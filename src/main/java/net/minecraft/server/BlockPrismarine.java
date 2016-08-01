@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public class BlockPrismarine extends Block {
 
-    public static final BlockStateEnum<BlockPrismarine.EnumPrismarineVariant> VARIANT;
+    public static final BlockStateEnum<BlockPrismarine.EnumPrismarineVariant> VARIANT = null;
 
-    public static final int b;
+    public static final int b = 0;
 
-    public static final int c;
+    public static final int c = 0;
 
-    public static final int d;
+    public static final int d = 0;
 
     public BlockPrismarine() {
     }
@@ -41,13 +41,13 @@ public class BlockPrismarine extends Block {
 
         ROUGH(0, "prismarine", "rough"), BRICKS(1, "prismarine_bricks", "bricks"), DARK(2, "dark_prismarine", "dark");
 
-        private static final BlockPrismarine.EnumPrismarineVariant[] d;
+        private static final BlockPrismarine.EnumPrismarineVariant[] d = null;
 
-        private final int e;
+        private final int e = 0;
 
-        private final String f;
+        private final String f = null;
 
-        private final String g;
+        private final String g = null;
 
         private EnumPrismarineVariant(int i, String s, String s1) {
         }

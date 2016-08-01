@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class ItemSpade extends ItemTool {
 
-    private static final Set<Block> e;
+    private static final Set<Block> e = null;
 
     public ItemSpade(Item.EnumToolMaterial item_enumtoolmaterial) {
     }

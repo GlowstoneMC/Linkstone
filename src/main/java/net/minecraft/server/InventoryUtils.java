@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class InventoryUtils {
 
-    private static final Random a;
+    private static final Random a = null;
 
     public static void dropInventory(World world, BlockPosition blockposition, IInventory iinventory) {
     }

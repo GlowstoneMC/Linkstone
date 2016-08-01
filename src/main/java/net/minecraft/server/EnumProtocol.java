@@ -157,13 +157,13 @@ public enum EnumProtocol {
     }
     ;
 
-    private static final EnumProtocol[] e;
+    private static final EnumProtocol[] e = null;
 
-    private static final Map<Class<? extends Packet<?>>, EnumProtocol> f;
+    private static final Map<Class<? extends Packet<?>>, EnumProtocol> f = null;
 
-    private final int g;
+    private final int g = 0;
 
-    private final Map<EnumProtocolDirection, BiMap<Integer, Class<? extends Packet<?>>>> h;
+    private final Map<EnumProtocolDirection, BiMap<Integer, Class<? extends Packet<?>>>> h = null;
 
     private EnumProtocol(int i) {
     }

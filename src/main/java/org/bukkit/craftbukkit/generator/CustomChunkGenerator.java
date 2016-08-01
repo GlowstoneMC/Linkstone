@@ -10,17 +10,17 @@ import org.bukkit.craftbukkit.block.CraftBlock;
 
 public class CustomChunkGenerator extends InternalChunkGenerator {
 
-    private final ChunkGenerator generator;
+    private final ChunkGenerator generator = null;
 
-    private final WorldServer world;
+    private final WorldServer world = null;
 
-    private final Random random;
+    private final Random random = null;
 
-    private final WorldGenStronghold strongholdGen;
+    private final WorldGenStronghold strongholdGen = null;
 
     private static class CustomBiomeGrid implements BiomeGrid {
 
-        BiomeBase[] biome;
+        BiomeBase[] biome = null;
 
         @Override
         public Biome getBiome(int x, int z) {

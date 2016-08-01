@@ -6,33 +6,33 @@ import java.util.UUID;
 
 public class PacketPlayOutSpawnEntityLiving implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private UUID b;
+    private UUID b = null;
 
-    private int c;
+    private int c = 0;
 
-    private double d;
+    private double d = 0.0;
 
-    private double e;
+    private double e = 0.0;
 
-    private double f;
+    private double f = 0.0;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private int i;
+    private int i = 0;
 
-    private byte j;
+    private byte j = 0;
 
-    private byte k;
+    private byte k = 0;
 
-    private byte l;
+    private byte l = 0;
 
-    private DataWatcher m;
+    private DataWatcher m = null;
 
-    private List<DataWatcher.Item<?>> n;
+    private List<DataWatcher.Item<?>> n = null;
 
     public PacketPlayOutSpawnEntityLiving() {
     }

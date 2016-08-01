@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class ItemSeedFood extends ItemFood {
 
-    private final Block b;
+    private final Block b = null;
 
-    private final Block c;
+    private final Block c = null;
 
     public ItemSeedFood(int i, float f, Block block, Block block1) {
     }

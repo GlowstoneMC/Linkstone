@@ -12,11 +12,11 @@ import org.bukkit.craftbukkit.CraftServer;
 
 public class ColouredConsoleSender extends CraftConsoleCommandSender {
 
-    private final Terminal terminal;
+    private final Terminal terminal = null;
 
-    private final Map<ChatColor, String> replacements;
+    private final Map<ChatColor, String> replacements = null;
 
-    private final ChatColor[] colors;
+    private final ChatColor[] colors = null;
 
     protected ColouredConsoleSender() {
     }

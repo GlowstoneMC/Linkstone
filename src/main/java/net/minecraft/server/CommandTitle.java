@@ -9,7 +9,7 @@ import org.apache.logging.log4j.Logger;
 
 public class CommandTitle extends CommandAbstract {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
     public CommandTitle() {
     }

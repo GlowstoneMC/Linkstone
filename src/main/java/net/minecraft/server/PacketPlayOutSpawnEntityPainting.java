@@ -5,15 +5,15 @@ import java.util.UUID;
 
 public class PacketPlayOutSpawnEntityPainting implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private UUID b;
+    private UUID b = null;
 
-    private BlockPosition c;
+    private BlockPosition c = null;
 
-    private EnumDirection d;
+    private EnumDirection d = null;
 
-    private String e;
+    private String e = null;
 
     public PacketPlayOutSpawnEntityPainting() {
     }

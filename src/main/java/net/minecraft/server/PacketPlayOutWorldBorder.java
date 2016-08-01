@@ -4,23 +4,23 @@ import java.io.IOException;
 
 public class PacketPlayOutWorldBorder implements Packet<PacketListenerPlayOut> {
 
-    private PacketPlayOutWorldBorder.EnumWorldBorderAction a;
+    private PacketPlayOutWorldBorder.EnumWorldBorderAction a = null;
 
-    private int b;
+    private int b = 0;
 
-    private double c;
+    private double c = 0.0;
 
-    private double d;
+    private double d = 0.0;
 
-    private double e;
+    private double e = 0.0;
 
-    private double f;
+    private double f = 0.0;
 
-    private long g;
+    private long g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private int i;
+    private int i = 0;
 
     public PacketPlayOutWorldBorder() {
     }
@@ -39,7 +39,7 @@ public class PacketPlayOutWorldBorder implements Packet<PacketListenerPlayOut> {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

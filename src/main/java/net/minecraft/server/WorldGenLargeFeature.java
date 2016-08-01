@@ -10,13 +10,13 @@ import java.util.Map.Entry;
 
 public class WorldGenLargeFeature extends StructureGenerator {
 
-    private static final List<BiomeBase> a;
+    private static final List<BiomeBase> a = null;
 
-    private final List<BiomeBase.BiomeMeta> b;
+    private final List<BiomeBase.BiomeMeta> b = null;
 
-    private int d;
+    private int d = 0;
 
-    private final int h;
+    private final int h = 0;
 
     public WorldGenLargeFeature() {
     }

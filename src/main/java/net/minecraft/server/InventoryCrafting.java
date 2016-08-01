@@ -11,24 +11,24 @@ import org.bukkit.event.inventory.InventoryType;
 // CraftBukkit end
 public class InventoryCrafting implements IInventory {
 
-    private final ItemStack[] items;
+    private final ItemStack[] items = null;
 
-    private final int b;
+    private final int b = 0;
 
-    private final int c;
+    private final int c = 0;
 
-    private final Container d;
+    private final Container d = null;
 
     // CraftBukkit start - add fields
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    public IRecipe currentRecipe;
+    public IRecipe currentRecipe = null;
 
-    public IInventory resultInventory;
+    public IInventory resultInventory = null;
 
-    private EntityHuman owner;
+    private EntityHuman owner = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;

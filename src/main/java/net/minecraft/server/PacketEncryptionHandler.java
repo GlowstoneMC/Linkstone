@@ -7,11 +7,11 @@ import javax.crypto.ShortBufferException;
 
 public class PacketEncryptionHandler {
 
-    private final Cipher a;
+    private final Cipher a = null;
 
-    private byte[] b;
+    private byte[] b = null;
 
-    private byte[] c;
+    private byte[] c = null;
 
     protected PacketEncryptionHandler(Cipher cipher) {
     }

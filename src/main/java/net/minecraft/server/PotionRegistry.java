@@ -6,15 +6,15 @@ import javax.annotation.Nullable;
 
 public class PotionRegistry {
 
-    private static final MinecraftKey b;
+    private static final MinecraftKey b = null;
 
-    public static final RegistryBlocks<MinecraftKey, PotionRegistry> a;
+    public static final RegistryBlocks<MinecraftKey, PotionRegistry> a = null;
 
-    private static int c;
+    private static int c = 0;
 
-    private final String d;
+    private final String d = null;
 
-    private final ImmutableList<MobEffect> e;
+    private final ImmutableList<MobEffect> e = null;
 
     public static int a(PotionRegistry potionregistry) {
         return 0;

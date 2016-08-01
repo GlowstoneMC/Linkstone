@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class PacketPlayOutKeepAlive implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
     public PacketPlayOutKeepAlive() {
     }

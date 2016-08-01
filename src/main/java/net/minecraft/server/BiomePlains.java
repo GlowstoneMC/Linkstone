@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class BiomePlains extends BiomeBase {
 
-    protected boolean y;
+    protected boolean y = false;
 
     protected BiomePlains(boolean flag, BiomeBase.a biomebase_a) {
     }

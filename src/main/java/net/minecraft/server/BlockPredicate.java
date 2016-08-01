@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 
 public class BlockPredicate implements Predicate<IBlockData> {
 
-    private final Block a;
+    private final Block a = null;
 
     private BlockPredicate(Block block) {
     }

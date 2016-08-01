@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class RegionFileCache {
 
-    private static final Map<File, RegionFile> a;
+    private static final Map<File, RegionFile> a = null;
 
     public static synchronized RegionFile a(File file, int i, int j) {
         return null;

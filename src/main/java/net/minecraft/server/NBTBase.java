@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public abstract class NBTBase {
 
-    public static final String[] a;
+    public static final String[] a = null;
 
     abstract void write(DataOutput dataoutput) throws IOException;
 

@@ -4,7 +4,7 @@ import com.google.gson.JsonObject;
 
 public class JsonListEntry<T> {
 
-    private final T a;
+    private final T a = null;
 
     public JsonListEntry(T t0) {
     }

@@ -16,15 +16,15 @@ import org.apache.commons.lang3.StringUtils;
 
 public class ShapeDetectorBuilder {
 
-    private static final Joiner a;
+    private static final Joiner a = null;
 
-    private final List<String[]> b;
+    private final List<String[]> b = null;
 
-    private final Map<Character, Predicate<ShapeDetectorBlock>> c;
+    private final Map<Character, Predicate<ShapeDetectorBlock>> c = null;
 
-    private int d;
+    private int d = 0;
 
-    private int e;
+    private int e = 0;
 
     private ShapeDetectorBuilder() {
     }

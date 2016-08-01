@@ -17,21 +17,21 @@ import java.util.zip.InflaterInputStream;
 
 public class RegionFile {
 
-    private static final byte[] a;
+    private static final byte[] a = null;
 
-    private final File b;
+    private final File b = null;
 
-    private RandomAccessFile c;
+    private RandomAccessFile c = null;
 
-    private final int[] d;
+    private final int[] d = null;
 
-    private final int[] e;
+    private final int[] e = null;
 
-    private List<Boolean> f;
+    private List<Boolean> f = null;
 
-    private int g;
+    private int g = 0;
 
-    private long h;
+    private long h = 0;
 
     public RegionFile(File file) {
     }
@@ -79,9 +79,9 @@ public class RegionFile {
 
     class ChunkBuffer extends ByteArrayOutputStream {
 
-        private final int b;
+        private final int b = 0;
 
-        private final int c;
+        private final int c = 0;
 
         public ChunkBuffer(int i, int j) {
         }

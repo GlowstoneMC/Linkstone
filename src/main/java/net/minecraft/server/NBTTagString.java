@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class NBTTagString extends NBTBase {
 
-    private String data;
+    private String data = null;
 
     public NBTTagString() {
     }

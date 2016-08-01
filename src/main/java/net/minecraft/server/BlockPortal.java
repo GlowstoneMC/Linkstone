@@ -10,13 +10,13 @@ import org.bukkit.event.world.PortalCreateEvent;
 // CraftBukkit
 public class BlockPortal extends BlockHalfTransparent {
 
-    public static final BlockStateEnum<EnumDirection.EnumAxis> AXIS;
+    public static final BlockStateEnum<EnumDirection.EnumAxis> AXIS = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
-    protected static final AxisAlignedBB c;
+    protected static final AxisAlignedBB c = null;
 
-    protected static final AxisAlignedBB d;
+    protected static final AxisAlignedBB d = null;
 
     public BlockPortal() {
     }
@@ -82,9 +82,9 @@ public class BlockPortal extends BlockHalfTransparent {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }
@@ -92,23 +92,23 @@ public class BlockPortal extends BlockHalfTransparent {
 
     public static class Shape {
 
-        private final World a;
+        private final World a = null;
 
-        private final EnumDirection.EnumAxis b;
+        private final EnumDirection.EnumAxis b = null;
 
-        private final EnumDirection c;
+        private final EnumDirection c = null;
 
-        private final EnumDirection d;
+        private final EnumDirection d = null;
 
-        private int e;
+        private int e = 0;
 
-        private BlockPosition position;
+        private BlockPosition position = null;
 
-        private int height;
+        private int height = 0;
 
-        private int width;
+        private int width = 0;
 
-        java.util.Collection<org.bukkit.block.Block> blocks;
+        java.util.Collection<org.bukkit.block.Block> blocks = null;
 
         // CraftBukkit - add field
         public Shape(World world, BlockPosition blockposition, EnumDirection.EnumAxis enumdirection_enumaxis) {

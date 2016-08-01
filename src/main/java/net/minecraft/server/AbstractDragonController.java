@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public abstract class AbstractDragonController implements IDragonController {
 
-    protected final EntityEnderDragon a;
+    protected final EntityEnderDragon a = null;
 
     public AbstractDragonController(EntityEnderDragon entityenderdragon) {
     }

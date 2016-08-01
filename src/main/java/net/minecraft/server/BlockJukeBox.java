@@ -4,7 +4,7 @@ import javax.annotation.Nullable;
 
 public class BlockJukeBox extends BlockTileEntity {
 
-    public static final BlockStateBoolean HAS_RECORD;
+    public static final BlockStateBoolean HAS_RECORD = null;
 
     public static void a(DataConverterManager dataconvertermanager) {
     }
@@ -58,7 +58,7 @@ public class BlockJukeBox extends BlockTileEntity {
 
     public static class TileEntityRecordPlayer extends TileEntity {
 
-        private ItemStack record;
+        private ItemStack record = null;
 
         public TileEntityRecordPlayer() {
         }

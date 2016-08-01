@@ -11,11 +11,11 @@ import org.apache.logging.log4j.MarkerManager;
 
 public class PacketEncoder extends MessageToByteEncoder<Packet<?>> {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final Marker b;
+    private static final Marker b = null;
 
-    private final EnumProtocolDirection c;
+    private final EnumProtocolDirection c = null;
 
     public PacketEncoder(EnumProtocolDirection enumprotocoldirection) {
     }

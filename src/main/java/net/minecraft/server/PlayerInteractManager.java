@@ -11,27 +11,27 @@ import org.bukkit.event.player.PlayerInteractEvent;
 // CraftBukkit end
 public class PlayerInteractManager {
 
-    public World world;
+    public World world = null;
 
-    public EntityPlayer player;
+    public EntityPlayer player = null;
 
-    private EnumGamemode gamemode;
+    private EnumGamemode gamemode = null;
 
-    private boolean d;
+    private boolean d = false;
 
-    private int lastDigTick;
+    private int lastDigTick = 0;
 
-    private BlockPosition f;
+    private BlockPosition f = null;
 
-    private int currentTick;
+    private int currentTick = 0;
 
-    private boolean h;
+    private boolean h = false;
 
-    private BlockPosition i;
+    private BlockPosition i = null;
 
-    private int j;
+    private int j = 0;
 
-    private int k;
+    private int k = 0;
 
     public PlayerInteractManager(World world) {
     }
@@ -79,9 +79,9 @@ public class PlayerInteractManager {
     }
 
     // CraftBukkit start
-    public boolean interactResult;
+    public boolean interactResult = false;
 
-    public boolean firedInteract;
+    public boolean firedInteract = false;
 
     // CraftBukkit end
     public EnumInteractionResult a(EntityHuman entityhuman, World world, @Nullable ItemStack itemstack, EnumHand enumhand, BlockPosition blockposition, EnumDirection enumdirection, float f, float f1, float f2) {

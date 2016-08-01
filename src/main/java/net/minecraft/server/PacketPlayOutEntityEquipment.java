@@ -5,11 +5,11 @@ import javax.annotation.Nullable;
 
 public class PacketPlayOutEntityEquipment implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private EnumItemSlot b;
+    private EnumItemSlot b = null;
 
-    private ItemStack c;
+    private ItemStack c = null;
 
     public PacketPlayOutEntityEquipment() {
     }

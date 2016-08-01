@@ -10,11 +10,11 @@ import org.apache.logging.log4j.Logger;
 
 public class EULA {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private final File b;
+    private final File b = null;
 
-    private final boolean c;
+    private final boolean c = false;
 
     public EULA(File file) {
     }

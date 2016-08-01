@@ -5,15 +5,15 @@ import javax.annotation.Nullable;
 
 public class BlockDispenser extends BlockTileEntity {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
-    public static final BlockStateBoolean TRIGGERED;
+    public static final BlockStateBoolean TRIGGERED = null;
 
-    public static final RegistryDefault<Item, IDispenseBehavior> REGISTRY;
+    public static final RegistryDefault<Item, IDispenseBehavior> REGISTRY = null;
 
-    protected Random d;
+    protected Random d = null;
 
-    public static boolean eventFired;
+    public static boolean eventFired = false;
 
     // CraftBukkit
     protected BlockDispenser() {

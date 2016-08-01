@@ -8,11 +8,11 @@ import org.bukkit.craftbukkit.util.AsynchronousExecutor;
 
 public class ChunkIOExecutor {
 
-    static final int BASE_THREADS;
+    static final int BASE_THREADS = 0;
 
-    static final int PLAYERS_PER_THREAD;
+    static final int PLAYERS_PER_THREAD = 0;
 
-    private static final AsynchronousExecutor<QueuedChunk, Chunk, Runnable, RuntimeException> instance;
+    private static final AsynchronousExecutor<QueuedChunk, Chunk, Runnable, RuntimeException> instance = null;
 
     public static Chunk syncChunkLoad(World world, ChunkRegionLoader loader, ChunkProviderServer provider, int x, int z) {
         return null;

@@ -14,28 +14,28 @@ import org.bukkit.event.inventory.PrepareAnvilEvent;
 // CraftBukkit end
 public class ContainerAnvil extends Container {
 
-    private static final Logger f;
+    private static final Logger f = null;
 
-    private final IInventory g;
+    private final IInventory g = null;
 
-    private final IInventory h;
+    private final IInventory h = null;
 
-    private final World i;
+    private final World i = null;
 
-    private final BlockPosition j;
+    private final BlockPosition j = null;
 
-    public int a;
+    public int a = 0;
 
-    private int k;
+    private int k = 0;
 
-    private String l;
+    private String l = null;
 
-    private final EntityHuman m;
+    private final EntityHuman m = null;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     // CraftBukkit end
     public ContainerAnvil(PlayerInventory playerinventory, final World world, final BlockPosition blockposition, EntityHuman entityhuman) {
@@ -74,7 +74,7 @@ public class ContainerAnvil extends Container {
     // CraftBukkit end
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

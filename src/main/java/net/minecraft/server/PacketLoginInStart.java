@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class PacketLoginInStart implements Packet<PacketLoginInListener> {
 
-    private GameProfile a;
+    private GameProfile a = null;
 
     public PacketLoginInStart() {
     }

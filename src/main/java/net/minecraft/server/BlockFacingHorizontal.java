@@ -4,7 +4,7 @@ import com.google.common.base.Predicate;
 
 public abstract class BlockFacingHorizontal extends Block {
 
-    public static final BlockStateDirection FACING;
+    public static final BlockStateDirection FACING = null;
 
     protected BlockFacingHorizontal(Material material) {
     }

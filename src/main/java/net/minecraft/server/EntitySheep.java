@@ -12,15 +12,15 @@ import org.bukkit.inventory.InventoryView;
 // CraftBukkit end
 public class EntitySheep extends EntityAnimal {
 
-    private static final DataWatcherObject<Byte> bx;
+    private static final DataWatcherObject<Byte> bx = null;
 
-    private final InventoryCrafting container;
+    private final InventoryCrafting container = null;
 
-    private static final Map<EnumColor, float[]> bz;
+    private static final Map<EnumColor, float[]> bz = null;
 
-    private int bB;
+    private int bB = 0;
 
-    private PathfinderGoalEatTile bC;
+    private PathfinderGoalEatTile bC = null;
 
     public static float[] a(EnumColor enumcolor) {
         return null;
@@ -124,7 +124,7 @@ public class EntitySheep extends EntityAnimal {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

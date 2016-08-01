@@ -6,15 +6,15 @@ import java.util.Random;
 
 public class PathfinderGoalBreed extends PathfinderGoal {
 
-    private final EntityAnimal animal;
+    private final EntityAnimal animal = null;
 
-    World a;
+    World a = null;
 
-    private EntityAnimal partner;
+    private EntityAnimal partner = null;
 
-    int b;
+    int b = 0;
 
-    double c;
+    double c = 0.0;
 
     public PathfinderGoalBreed(EntityAnimal entityanimal, double d0) {
     }

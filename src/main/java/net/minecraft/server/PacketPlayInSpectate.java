@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 
 public class PacketPlayInSpectate implements Packet<PacketListenerPlayIn> {
 
-    private UUID a;
+    private UUID a = null;
 
     public PacketPlayInSpectate() {
     }

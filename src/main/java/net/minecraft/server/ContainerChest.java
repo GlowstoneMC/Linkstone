@@ -8,14 +8,14 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit end
 public class ContainerChest extends Container {
 
-    private final IInventory container;
+    private final IInventory container = null;
 
-    private final int f;
+    private final int f = 0;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     @Override
     public CraftInventoryView getBukkitView() {

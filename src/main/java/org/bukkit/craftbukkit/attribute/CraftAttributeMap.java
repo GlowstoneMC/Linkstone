@@ -8,7 +8,7 @@ import org.bukkit.attribute.AttributeInstance;
 
 public class CraftAttributeMap implements Attributable {
 
-    private final AttributeMapBase handle;
+    private final AttributeMapBase handle = null;
 
     public CraftAttributeMap(AttributeMapBase handle) {
     }

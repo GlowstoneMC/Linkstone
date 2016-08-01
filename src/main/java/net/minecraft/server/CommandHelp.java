@@ -10,9 +10,9 @@ import javax.annotation.Nullable;
 
 public class CommandHelp extends CommandAbstract {
 
-    private static final String[] a;
+    private static final String[] a = null;
 
-    private final Random b;
+    private final Random b = null;
 
     public CommandHelp() {
     }

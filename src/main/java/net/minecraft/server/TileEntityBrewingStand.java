@@ -11,34 +11,34 @@ import org.bukkit.event.inventory.BrewEvent;
 // CraftBukkit end
 public class TileEntityBrewingStand extends TileEntityContainer implements ITickable, IWorldInventory {
 
-    private static final int[] a;
+    private static final int[] a = null;
 
-    private static final int[] f;
+    private static final int[] f = null;
 
-    private static final int[] g;
+    private static final int[] g = null;
 
-    private ItemStack[] items;
+    private ItemStack[] items = null;
 
-    private int brewTime;
+    private int brewTime = 0;
 
-    private boolean[] j;
+    private boolean[] j = null;
 
-    private Item k;
+    private Item k = null;
 
-    private String l;
+    private String l = null;
 
-    private int m;
+    private int m = 0;
 
-    private int lastTick;
+    private int lastTick = 0;
 
     // CraftBukkit - add field
     public TileEntityBrewingStand() {
     }
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public void onOpen(CraftHumanEntity who) {
     }

@@ -4,21 +4,21 @@ import java.util.UUID;
 
 public abstract class BossBattle {
 
-    private final UUID h;
+    private final UUID h = null;
 
-    public IChatBaseComponent title;
+    public IChatBaseComponent title = null;
 
-    protected float b;
+    protected float b = 0.0F;
 
-    public BossBattle.BarColor color;
+    public BossBattle.BarColor color = null;
 
-    public BossBattle.BarStyle style;
+    public BossBattle.BarStyle style = null;
 
-    protected boolean e;
+    protected boolean e = false;
 
-    protected boolean f;
+    protected boolean f = false;
 
-    protected boolean g;
+    protected boolean g = false;
 
     public BossBattle(UUID uuid, IChatBaseComponent ichatbasecomponent, BossBattle.BarColor bossbattle_barcolor, BossBattle.BarStyle bossbattle_barstyle) {
     }

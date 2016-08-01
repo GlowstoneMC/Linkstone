@@ -4,11 +4,11 @@ public enum EnumGamemode {
 
     NOT_SET(-1, "", ""), SURVIVAL(0, "survival", "s"), CREATIVE(1, "creative", "c"), ADVENTURE(2, "adventure", "a"), SPECTATOR(3, "spectator", "sp");
 
-    int f;
+    int f = 0;
 
-    String g;
+    String g = null;
 
-    String h;
+    String h = null;
 
     private EnumGamemode(int i, String s, String s1) {
     }

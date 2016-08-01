@@ -18,19 +18,19 @@ import org.apache.logging.log4j.Logger;
 
 public class DataWatcher {
 
-    private static final Logger a;
+    private static final Logger a = null;
 
-    private static final Map<Class<? extends Entity>, Integer> b;
+    private static final Map<Class<? extends Entity>, Integer> b = null;
 
-    private final Entity c;
+    private final Entity c = null;
 
-    private final Map<Integer, DataWatcher.Item<?>> d;
+    private final Map<Integer, DataWatcher.Item<?>> d = null;
 
-    private final ReadWriteLock e;
+    private final ReadWriteLock e = null;
 
-    private boolean f;
+    private boolean f = false;
 
-    private boolean g;
+    private boolean g = false;
 
     public DataWatcher(Entity entity) {
     }
@@ -96,11 +96,11 @@ public class DataWatcher {
 
     public static class Item<T> {
 
-        private final DataWatcherObject<T> a;
+        private final DataWatcherObject<T> a = null;
 
-        private T b;
+        private T b = null;
 
-        private boolean c;
+        private boolean c = false;
 
         public Item(DataWatcherObject<T> datawatcherobject, T t0) {
         }

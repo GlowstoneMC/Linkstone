@@ -22,21 +22,21 @@ import net.minecraft.server.TileEntity;
 
 public class CraftBlockState implements BlockState {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final CraftChunk chunk;
+    private final CraftChunk chunk = null;
 
-    private final int x;
+    private final int x = 0;
 
-    private final int y;
+    private final int y = 0;
 
-    private final int z;
+    private final int z = 0;
 
-    protected int type;
+    protected int type = 0;
 
-    protected MaterialData data;
+    protected MaterialData data = null;
 
-    protected int flag;
+    protected int flag = 0;
 
     public CraftBlockState(final Block block) {
     }

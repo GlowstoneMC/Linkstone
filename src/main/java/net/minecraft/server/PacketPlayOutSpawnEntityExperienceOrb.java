@@ -4,15 +4,15 @@ import java.io.IOException;
 
 public class PacketPlayOutSpawnEntityExperienceOrb implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private double b;
+    private double b = 0.0;
 
-    private double c;
+    private double c = 0.0;
 
-    private double d;
+    private double d = 0.0;
 
-    private int e;
+    private int e = 0;
 
     public PacketPlayOutSpawnEntityExperienceOrb() {
     }

@@ -7,7 +7,7 @@ import org.bukkit.event.block.BlockFromToEvent;
 // CraftBukkit
 public class BlockDragonEgg extends Block {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
     public BlockDragonEgg() {
     }

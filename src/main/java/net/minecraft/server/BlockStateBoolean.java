@@ -6,7 +6,7 @@ import java.util.Collection;
 
 public class BlockStateBoolean extends BlockState<Boolean> {
 
-    private final ImmutableSet<Boolean> a;
+    private final ImmutableSet<Boolean> a = null;
 
     protected BlockStateBoolean(String s) {
     }

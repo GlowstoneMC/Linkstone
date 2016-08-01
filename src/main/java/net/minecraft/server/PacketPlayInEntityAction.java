@@ -4,11 +4,11 @@ import java.io.IOException;
 
 public class PacketPlayInEntityAction implements Packet<PacketListenerPlayIn> {
 
-    private int a;
+    private int a = 0;
 
-    private PacketPlayInEntityAction.EnumPlayerAction animation;
+    private PacketPlayInEntityAction.EnumPlayerAction animation = null;
 
-    private int c;
+    private int c = 0;
 
     public PacketPlayInEntityAction() {
     }

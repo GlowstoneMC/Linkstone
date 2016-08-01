@@ -13,7 +13,7 @@ import java.util.List;
  */
 public class BlockMetadataStore extends MetadataStoreBase<Block> implements MetadataStore<Block> {
 
-    private final World owningWorld;
+    private final World owningWorld = null;
 
     /**
      * Initializes a BlockMetadataStore.

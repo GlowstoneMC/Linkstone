@@ -18,37 +18,37 @@ import java.util.Map.Entry;
 
 public class RemoteStatusListener extends RemoteConnectionThread {
 
-    private long h;
+    private long h = 0;
 
-    private int i;
+    private int i = 0;
 
-    private final int j;
+    private final int j = 0;
 
-    private final int k;
+    private final int k = 0;
 
-    private final String l;
+    private final String l = null;
 
-    private final String m;
+    private final String m = null;
 
-    private DatagramSocket n;
+    private DatagramSocket n = null;
 
-    private final byte[] o;
+    private final byte[] o = null;
 
-    private DatagramPacket p;
+    private DatagramPacket p = null;
 
-    private final Map<SocketAddress, String> q;
+    private final Map<SocketAddress, String> q = null;
 
-    private String r;
+    private String r = null;
 
-    private String s;
+    private String s = null;
 
-    private final Map<SocketAddress, RemoteStatusListener.RemoteStatusChallenge> t;
+    private final Map<SocketAddress, RemoteStatusListener.RemoteStatusChallenge> t = null;
 
-    private final long u;
+    private final long u = 0;
 
-    private final RemoteStatusReply v;
+    private final RemoteStatusReply v = null;
 
-    private long w;
+    private long w = 0;
 
     public RemoteStatusListener(IMinecraftServer iminecraftserver) {
     }
@@ -93,15 +93,15 @@ public class RemoteStatusListener extends RemoteConnectionThread {
 
     class RemoteStatusChallenge {
 
-        private final long time;
+        private final long time = 0;
 
-        private final int token;
+        private final int token = 0;
 
-        private final byte[] identity;
+        private final byte[] identity = null;
 
-        private final byte[] response;
+        private final byte[] response = null;
 
-        private final String f;
+        private final String f = null;
 
         public RemoteStatusChallenge(DatagramPacket datagrampacket) {
         }

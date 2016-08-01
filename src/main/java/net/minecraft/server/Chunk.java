@@ -20,60 +20,60 @@ import org.bukkit.Server;
 // CraftBukkit
 public class Chunk {
 
-    private static final Logger e;
+    private static final Logger e = null;
 
-    public static final ChunkSection a;
+    public static final ChunkSection a = null;
 
-    private final ChunkSection[] sections;
+    private final ChunkSection[] sections = null;
 
-    private final byte[] g;
+    private final byte[] g = null;
 
-    private final int[] h;
+    private final int[] h = null;
 
-    private final boolean[] i;
+    private final boolean[] i = null;
 
-    private boolean j;
+    private boolean j = false;
 
-    public final World world;
+    public final World world = null;
 
-    public final int[] heightMap;
+    public final int[] heightMap = null;
 
-    public final int locX;
+    public final int locX = 0;
 
-    public final int locZ;
+    public final int locZ = 0;
 
-    private boolean m;
+    private boolean m = false;
 
-    public final Map<BlockPosition, TileEntity> tileEntities;
+    public final Map<BlockPosition, TileEntity> tileEntities = null;
 
-    public final EntitySlice<Entity>[] entitySlices;
+    public final EntitySlice<Entity>[] entitySlices = null;
 
-    private boolean done;
+    private boolean done = false;
 
-    private boolean lit;
+    private boolean lit = false;
 
-    private boolean r;
+    private boolean r = false;
 
-    private boolean s;
+    private boolean s = false;
 
-    private boolean t;
+    private boolean t = false;
 
-    private long lastSaved;
+    private long lastSaved = 0;
 
-    private int v;
+    private int v = 0;
 
-    private long w;
+    private long w = 0;
 
-    private int x;
+    private int x = 0;
 
-    private ConcurrentLinkedQueue<BlockPosition> y;
+    private ConcurrentLinkedQueue<BlockPosition> y = null;
 
-    public boolean d;
+    public boolean d = false;
 
     // CraftBukkit start - Neighbor loaded cache for chunk lighting and entity ticking
-    private int neighbors;
+    private int neighbors = 0;
 
-    public long chunkKey;
+    public long chunkKey = 0;
 
     public boolean areNeighborsLoaded(final int radius) {
         return false;
@@ -89,9 +89,9 @@ public class Chunk {
     public Chunk(World world, int i, int j) {
     }
 
-    public org.bukkit.Chunk bukkitChunk;
+    public org.bukkit.Chunk bukkitChunk = null;
 
-    public boolean mustSave;
+    public boolean mustSave = false;
 
     // CraftBukkit end
     public Chunk(World world, ChunkSnapshot chunksnapshot, int i, int j) {

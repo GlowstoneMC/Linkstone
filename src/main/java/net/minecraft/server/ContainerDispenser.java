@@ -8,12 +8,12 @@ import org.bukkit.craftbukkit.inventory.CraftInventoryView;
 // CraftBukkit end
 public class ContainerDispenser extends Container {
 
-    public final IInventory items;
+    public final IInventory items = null;
 
     // CraftBukkit start
-    private CraftInventoryView bukkitEntity;
+    private CraftInventoryView bukkitEntity = null;
 
-    private PlayerInventory player;
+    private PlayerInventory player = null;
 
     // CraftBukkit end
     public ContainerDispenser(IInventory iinventory, IInventory iinventory1) {

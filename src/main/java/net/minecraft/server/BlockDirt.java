@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class BlockDirt extends Block {
 
-    public static final BlockStateEnum<BlockDirt.EnumDirtVariant> VARIANT;
+    public static final BlockStateEnum<BlockDirt.EnumDirtVariant> VARIANT = null;
 
-    public static final BlockStateBoolean SNOWY;
+    public static final BlockStateBoolean SNOWY = null;
 
     protected BlockDirt() {
     }
@@ -41,15 +41,15 @@ public class BlockDirt extends Block {
 
         DIRT(0, "dirt", "default", MaterialMapColor.l), COARSE_DIRT(1, "coarse_dirt", "coarse", MaterialMapColor.l), PODZOL(2, "podzol", MaterialMapColor.J);
 
-        private static final BlockDirt.EnumDirtVariant[] d;
+        private static final BlockDirt.EnumDirtVariant[] d = null;
 
-        private final int e;
+        private final int e = 0;
 
-        private final String f;
+        private final String f = null;
 
-        private final String g;
+        private final String g = null;
 
-        private final MaterialMapColor h;
+        private final MaterialMapColor h = null;
 
         private EnumDirtVariant(int i, String s, MaterialMapColor materialmapcolor) {
         }

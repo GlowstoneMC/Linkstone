@@ -22,25 +22,25 @@ import com.google.common.collect.ImmutableMap.Builder;
 @DelegateDeserialization(SerializableMeta.class)
 class CraftMetaPotion extends CraftMetaItem implements PotionMeta {
 
-    static final ItemMetaKey AMPLIFIER;
+    static final ItemMetaKey AMPLIFIER = null;
 
-    static final ItemMetaKey AMBIENT;
+    static final ItemMetaKey AMBIENT = null;
 
-    static final ItemMetaKey DURATION;
+    static final ItemMetaKey DURATION = null;
 
-    static final ItemMetaKey SHOW_PARTICLES;
+    static final ItemMetaKey SHOW_PARTICLES = null;
 
-    static final ItemMetaKey POTION_EFFECTS;
+    static final ItemMetaKey POTION_EFFECTS = null;
 
-    static final ItemMetaKey ID;
+    static final ItemMetaKey ID = null;
 
-    static final ItemMetaKey DEFAULT_POTION;
+    static final ItemMetaKey DEFAULT_POTION = null;
 
     // Having an initial "state" in ItemMeta seems bit dirty but the UNCRAFTABLE potion type
     // is treated as the empty form of the meta because it represents an empty potion with no effect
-    private PotionData type;
+    private PotionData type = null;
 
-    private List<PotionEffect> customEffects;
+    private List<PotionEffect> customEffects = null;
 
     CraftMetaPotion(CraftMetaItem meta) {
     }

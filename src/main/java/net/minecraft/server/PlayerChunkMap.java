@@ -20,33 +20,33 @@ import java.util.LinkedList;
 // CraftBukkit end
 public class PlayerChunkMap {
 
-    private static final Predicate<EntityPlayer> a;
+    private static final Predicate<EntityPlayer> a = null;
 
-    private static final Predicate<EntityPlayer> b;
+    private static final Predicate<EntityPlayer> b = null;
 
-    private final WorldServer world;
+    private final WorldServer world = null;
 
-    private final List<EntityPlayer> managedPlayers;
+    private final List<EntityPlayer> managedPlayers = null;
 
-    private final Long2ObjectMap<PlayerChunk> e;
+    private final Long2ObjectMap<PlayerChunk> e = null;
 
-    private final Set<PlayerChunk> f;
+    private final Set<PlayerChunk> f = null;
 
-    private final List<PlayerChunk> g;
+    private final List<PlayerChunk> g = null;
 
-    private final List<PlayerChunk> h;
+    private final List<PlayerChunk> h = null;
 
-    private final List<PlayerChunk> i;
+    private final List<PlayerChunk> i = null;
 
-    private int j;
+    private int j = 0;
 
-    private long k;
+    private long k = 0;
 
-    private boolean l;
+    private boolean l = false;
 
-    private boolean m;
+    private boolean m = false;
 
-    private boolean wasNotEmpty;
+    private boolean wasNotEmpty = false;
 
     // CraftBukkit - add field
     public PlayerChunkMap(WorldServer worldserver) {
@@ -125,9 +125,9 @@ public class PlayerChunkMap {
     // CraftBukkit start - Sorter to load nearby chunks first
     private static class ChunkCoordComparator implements java.util.Comparator<ChunkCoordIntPair> {
 
-        private int x;
+        private int x = 0;
 
-        private int z;
+        private int z = 0;
 
         public ChunkCoordComparator(EntityPlayer entityplayer) {
         }

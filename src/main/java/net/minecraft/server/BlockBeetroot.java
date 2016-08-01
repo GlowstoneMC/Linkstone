@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class BlockBeetroot extends BlockCrops {
 
-    public static final BlockStateInteger a;
+    public static final BlockStateInteger a = null;
 
-    private static final AxisAlignedBB[] d;
+    private static final AxisAlignedBB[] d = null;
 
     public BlockBeetroot() {
     }

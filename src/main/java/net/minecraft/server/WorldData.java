@@ -13,89 +13,89 @@ import org.bukkit.event.weather.WeatherChangeEvent;
 // CraftBukkit end
 public class WorldData {
 
-    private String b;
+    private String b = null;
 
-    private int c;
+    private int c = 0;
 
-    private boolean d;
+    private boolean d = false;
 
-    public static final EnumDifficulty a;
+    public static final EnumDifficulty a = null;
 
-    private long e;
+    private long e = 0;
 
-    private WorldType f;
+    private WorldType f = null;
 
-    private String g;
+    private String g = null;
 
-    private int h;
+    private int h = 0;
 
-    private int i;
+    private int i = 0;
 
-    private int j;
+    private int j = 0;
 
-    private long k;
+    private long k = 0;
 
-    private long l;
+    private long l = 0;
 
-    private long m;
+    private long m = 0;
 
-    private long n;
+    private long n = 0;
 
-    private NBTTagCompound o;
+    private NBTTagCompound o = null;
 
-    private int p;
+    private int p = 0;
 
-    private String levelName;
+    private String levelName = null;
 
-    private int r;
+    private int r = 0;
 
-    private int s;
+    private int s = 0;
 
-    private boolean t;
+    private boolean t = false;
 
-    private int u;
+    private int u = 0;
 
-    private boolean v;
+    private boolean v = false;
 
-    private int w;
+    private int w = 0;
 
-    private EnumGamemode x;
+    private EnumGamemode x = null;
 
-    private boolean y;
+    private boolean y = false;
 
-    private boolean z;
+    private boolean z = false;
 
-    private boolean A;
+    private boolean A = false;
 
-    private boolean B;
+    private boolean B = false;
 
-    private EnumDifficulty C;
+    private EnumDifficulty C = null;
 
-    private boolean D;
+    private boolean D = false;
 
-    private double E;
+    private double E = 0.0;
 
-    private double F;
+    private double F = 0.0;
 
-    private double G;
+    private double G = 0.0;
 
-    private long H;
+    private long H = 0;
 
-    private double I;
+    private double I = 0.0;
 
-    private double J;
+    private double J = 0.0;
 
-    private double K;
+    private double K = 0.0;
 
-    private int L;
+    private int L = 0;
 
-    private int M;
+    private int M = 0;
 
-    private final Map<DimensionManager, NBTTagCompound> N;
+    private final Map<DimensionManager, NBTTagCompound> N = null;
 
-    private GameRules O;
+    private GameRules O = null;
 
-    public WorldServer world;
+    public WorldServer world = null;
 
     // CraftBukkit
     protected WorldData() {

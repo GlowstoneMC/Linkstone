@@ -5,23 +5,23 @@ import java.util.Collection;
 
 public class PacketPlayOutMap implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private byte b;
+    private byte b = 0;
 
-    private boolean c;
+    private boolean c = false;
 
-    private MapIcon[] d;
+    private MapIcon[] d = null;
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
-    private int g;
+    private int g = 0;
 
-    private int h;
+    private int h = 0;
 
-    private byte[] i;
+    private byte[] i = null;
 
     public PacketPlayOutMap() {
     }

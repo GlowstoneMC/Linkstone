@@ -4,19 +4,19 @@ import javax.annotation.Nullable;
 
 public class ItemFood extends Item {
 
-    public final int a;
+    public final int a = 0;
 
-    private final int b;
+    private final int b = 0;
 
-    private final float c;
+    private final float c = 0.0F;
 
-    private final boolean d;
+    private final boolean d = false;
 
-    private boolean e;
+    private boolean e = false;
 
-    private MobEffect f;
+    private MobEffect f = null;
 
-    private float n;
+    private float n = 0.0F;
 
     public ItemFood(int i, float f, boolean flag) {
     }

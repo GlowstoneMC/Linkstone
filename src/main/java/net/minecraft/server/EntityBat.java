@@ -5,9 +5,9 @@ import javax.annotation.Nullable;
 
 public class EntityBat extends EntityAmbient {
 
-    private static final DataWatcherObject<Byte> a;
+    private static final DataWatcherObject<Byte> a = null;
 
-    private BlockPosition b;
+    private BlockPosition b = null;
 
     public EntityBat(World world) {
     }

@@ -9,13 +9,13 @@ import org.bukkit.Material;
 // CraftBukkit end
 public class PathfinderGoalEatTile extends PathfinderGoal {
 
-    private static final Predicate<IBlockData> b;
+    private static final Predicate<IBlockData> b = null;
 
-    private final EntityInsentient c;
+    private final EntityInsentient c = null;
 
-    private final World d;
+    private final World d = null;
 
-    int a;
+    int a = 0;
 
     public PathfinderGoalEatTile(EntityInsentient entityinsentient) {
     }

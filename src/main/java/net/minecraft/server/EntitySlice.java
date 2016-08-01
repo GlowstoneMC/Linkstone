@@ -12,16 +12,16 @@ import java.util.Set;
 
 public class EntitySlice<T> extends AbstractSet<T> {
 
-    private static final Set<Class<?>> a;
+    private static final Set<Class<?>> a = null;
 
     // CraftBukkit
-    private final Map<Class<?>, List<T>> b;
+    private final Map<Class<?>, List<T>> b = null;
 
-    private final Set<Class<?>> c;
+    private final Set<Class<?>> c = null;
 
-    private final Class<T> d;
+    private final Class<T> d = null;
 
-    private final List<T> e;
+    private final List<T> e = null;
 
     public EntitySlice(Class<T> oclass) {
     }

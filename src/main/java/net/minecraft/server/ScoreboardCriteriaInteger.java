@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class ScoreboardCriteriaInteger implements IScoreboardCriteria {
 
-    private final String o;
+    private final String o = null;
 
     public ScoreboardCriteriaInteger(String s, EnumChatFormat enumchatformat) {
     }

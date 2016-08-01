@@ -10,7 +10,7 @@ import org.bukkit.event.block.BlockSpreadEvent;
 // CraftBukkit end
 public class BlockMushroom extends BlockPlant implements IBlockFragilePlantElement {
 
-    protected static final AxisAlignedBB a;
+    protected static final AxisAlignedBB a = null;
 
     protected BlockMushroom() {
     }

@@ -6,63 +6,63 @@ import javax.annotation.Nullable;
 
 public class ChunkProviderGenerate implements ChunkGenerator {
 
-    protected static final IBlockData a;
+    protected static final IBlockData a = null;
 
-    private final Random i;
+    private final Random i = null;
 
-    private final NoiseGeneratorOctaves j;
+    private final NoiseGeneratorOctaves j = null;
 
-    private final NoiseGeneratorOctaves k;
+    private final NoiseGeneratorOctaves k = null;
 
-    private final NoiseGeneratorOctaves l;
+    private final NoiseGeneratorOctaves l = null;
 
-    private final NoiseGenerator3 m;
+    private final NoiseGenerator3 m = null;
 
-    public NoiseGeneratorOctaves b;
+    public NoiseGeneratorOctaves b = null;
 
-    public NoiseGeneratorOctaves c;
+    public NoiseGeneratorOctaves c = null;
 
-    public NoiseGeneratorOctaves d;
+    public NoiseGeneratorOctaves d = null;
 
-    private final World n;
+    private final World n = null;
 
-    private final boolean o;
+    private final boolean o = false;
 
-    private final WorldType p;
+    private final WorldType p = null;
 
-    private final double[] q;
+    private final double[] q = null;
 
-    private final float[] r;
+    private final float[] r = null;
 
-    private CustomWorldSettingsFinal s;
+    private CustomWorldSettingsFinal s = null;
 
-    private IBlockData t;
+    private IBlockData t = null;
 
-    private double[] u;
+    private double[] u = null;
 
-    private final WorldGenBase v;
+    private final WorldGenBase v = null;
 
-    private final WorldGenStronghold w;
+    private final WorldGenStronghold w = null;
 
-    private final WorldGenVillage x;
+    private final WorldGenVillage x = null;
 
-    private final WorldGenMineshaft y;
+    private final WorldGenMineshaft y = null;
 
-    private final WorldGenLargeFeature z;
+    private final WorldGenLargeFeature z = null;
 
-    private final WorldGenBase A;
+    private final WorldGenBase A = null;
 
-    private final WorldGenMonument B;
+    private final WorldGenMonument B = null;
 
-    private BiomeBase[] C;
+    private BiomeBase[] C = null;
 
-    double[] e;
+    double[] e = null;
 
-    double[] f;
+    double[] f = null;
 
-    double[] g;
+    double[] g = null;
 
-    double[] h;
+    double[] h = null;
 
     public ChunkProviderGenerate(World world, long i, boolean flag, String s) {
     }

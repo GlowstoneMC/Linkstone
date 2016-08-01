@@ -4,13 +4,13 @@ import java.io.IOException;
 
 public class PacketPlayOutWorldEvent implements Packet<PacketListenerPlayOut> {
 
-    private int a;
+    private int a = 0;
 
-    private BlockPosition b;
+    private BlockPosition b = null;
 
-    private int c;
+    private int c = 0;
 
-    private boolean d;
+    private boolean d = false;
 
     public PacketPlayOutWorldEvent() {
     }

@@ -2,33 +2,33 @@ package net.minecraft.server;
 
 public class PathPoint {
 
-    public final int a;
+    public final int a = 0;
 
-    public final int b;
+    public final int b = 0;
 
-    public final int c;
+    public final int c = 0;
 
-    private final int n;
+    private final int n = 0;
 
-    public int d;
+    public int d = 0;
 
-    public float e;
+    public float e = 0.0F;
 
-    public float f;
+    public float f = 0.0F;
 
-    public float g;
+    public float g = 0.0F;
 
-    public PathPoint h;
+    public PathPoint h = null;
 
-    public boolean i;
+    public boolean i = false;
 
-    public float j;
+    public float j = 0.0F;
 
-    public float k;
+    public float k = 0.0F;
 
-    public float l;
+    public float l = 0.0F;
 
-    public PathType m;
+    public PathType m = null;
 
     public PathPoint(int i, int j, int k) {
     }

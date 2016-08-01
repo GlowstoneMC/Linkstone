@@ -13,9 +13,9 @@ import org.bukkit.inventory.Inventory;
 
 public class CraftDropper extends CraftBlockState implements Dropper {
 
-    private final CraftWorld world;
+    private final CraftWorld world = null;
 
-    private final TileEntityDropper dropper;
+    private final TileEntityDropper dropper = null;
 
     public CraftDropper(final Block block) {
     }

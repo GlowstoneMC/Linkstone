@@ -6,7 +6,7 @@ import java.util.Map.Entry;
 
 public class WorldGenMineshaft extends StructureGenerator {
 
-    private double a;
+    private double a = 0.0;
 
     public WorldGenMineshaft() {
     }

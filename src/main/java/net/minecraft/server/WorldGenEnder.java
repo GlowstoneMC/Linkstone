@@ -6,11 +6,11 @@ import javax.annotation.Nullable;
 
 public class WorldGenEnder extends WorldGenerator {
 
-    private boolean a;
+    private boolean a = false;
 
-    private WorldGenEnder.Spike b;
+    private WorldGenEnder.Spike b = null;
 
-    private BlockPosition c;
+    private BlockPosition c = null;
 
     public WorldGenEnder() {
     }
@@ -30,17 +30,17 @@ public class WorldGenEnder extends WorldGenerator {
 
     public static class Spike {
 
-        private final int a;
+        private final int a = 0;
 
-        private final int b;
+        private final int b = 0;
 
-        private final int c;
+        private final int c = 0;
 
-        private final int d;
+        private final int d = 0;
 
-        private final boolean e;
+        private final boolean e = false;
 
-        private final AxisAlignedBB f;
+        private final AxisAlignedBB f = null;
 
         public Spike(int i, int j, int k, int l, boolean flag) {
         }

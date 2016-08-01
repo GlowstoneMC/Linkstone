@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public abstract class PathfinderGoal {
 
-    private int a;
+    private int a = 0;
 
     public PathfinderGoal() {
     }

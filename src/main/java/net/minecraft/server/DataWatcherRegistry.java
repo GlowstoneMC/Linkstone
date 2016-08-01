@@ -6,33 +6,33 @@ import javax.annotation.Nullable;
 
 public class DataWatcherRegistry {
 
-    private static final RegistryID<DataWatcherSerializer<?>> n;
+    private static final RegistryID<DataWatcherSerializer<?>> n = null;
 
-    public static final DataWatcherSerializer<Byte> a;
+    public static final DataWatcherSerializer<Byte> a = null;
 
-    public static final DataWatcherSerializer<Integer> b;
+    public static final DataWatcherSerializer<Integer> b = null;
 
-    public static final DataWatcherSerializer<Float> c;
+    public static final DataWatcherSerializer<Float> c = null;
 
-    public static final DataWatcherSerializer<String> d;
+    public static final DataWatcherSerializer<String> d = null;
 
-    public static final DataWatcherSerializer<IChatBaseComponent> e;
+    public static final DataWatcherSerializer<IChatBaseComponent> e = null;
 
-    public static final DataWatcherSerializer<Optional<ItemStack>> f;
+    public static final DataWatcherSerializer<Optional<ItemStack>> f = null;
 
-    public static final DataWatcherSerializer<Optional<IBlockData>> g;
+    public static final DataWatcherSerializer<Optional<IBlockData>> g = null;
 
-    public static final DataWatcherSerializer<Boolean> h;
+    public static final DataWatcherSerializer<Boolean> h = null;
 
-    public static final DataWatcherSerializer<Vector3f> i;
+    public static final DataWatcherSerializer<Vector3f> i = null;
 
-    public static final DataWatcherSerializer<BlockPosition> j;
+    public static final DataWatcherSerializer<BlockPosition> j = null;
 
-    public static final DataWatcherSerializer<Optional<BlockPosition>> k;
+    public static final DataWatcherSerializer<Optional<BlockPosition>> k = null;
 
-    public static final DataWatcherSerializer<EnumDirection> l;
+    public static final DataWatcherSerializer<EnumDirection> l = null;
 
-    public static final DataWatcherSerializer<Optional<UUID>> m;
+    public static final DataWatcherSerializer<Optional<UUID>> m = null;
 
     public static void a(DataWatcherSerializer<?> datawatcherserializer) {
     }

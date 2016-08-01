@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class PersistentStructure extends PersistentBase {
 
-    private NBTTagCompound b;
+    private NBTTagCompound b = null;
 
     public PersistentStructure(String s) {
     }

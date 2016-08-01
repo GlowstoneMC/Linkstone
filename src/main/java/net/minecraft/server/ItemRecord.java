@@ -5,11 +5,11 @@ import java.util.Map;
 
 public class ItemRecord extends Item {
 
-    private static final Map<SoundEffect, ItemRecord> a;
+    private static final Map<SoundEffect, ItemRecord> a = null;
 
-    private final SoundEffect b;
+    private final SoundEffect b = null;
 
-    private final String c;
+    private final String c = null;
 
     protected ItemRecord(String s, SoundEffect soundeffect) {
     }

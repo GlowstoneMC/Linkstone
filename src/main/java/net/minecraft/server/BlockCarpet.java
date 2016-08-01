@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class BlockCarpet extends Block {
 
-    public static final BlockStateEnum<EnumColor> COLOR;
+    public static final BlockStateEnum<EnumColor> COLOR = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
     protected BlockCarpet() {
     }

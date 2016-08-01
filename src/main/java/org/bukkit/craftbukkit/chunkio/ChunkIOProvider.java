@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 class ChunkIOProvider implements AsynchronousExecutor.CallBackProvider<QueuedChunk, Chunk, Runnable, RuntimeException> {
 
-    private final AtomicInteger threadNumber;
+    private final AtomicInteger threadNumber = null;
 
     // async stuff
     public Chunk callStage1(QueuedChunk queuedChunk) throws RuntimeException {

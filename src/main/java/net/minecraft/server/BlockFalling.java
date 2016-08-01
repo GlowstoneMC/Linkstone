@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class BlockFalling extends Block {
 
-    public static boolean instaFall;
+    public static boolean instaFall = false;
 
     public BlockFalling() {
     }

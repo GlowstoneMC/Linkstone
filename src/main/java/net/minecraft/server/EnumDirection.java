@@ -12,25 +12,25 @@ public enum EnumDirection implements INamable {
 
     DOWN(0, 1, -1, "down", EnumDirection.EnumAxisDirection.NEGATIVE, EnumDirection.EnumAxis.Y, new BaseBlockPosition(0, -1, 0)), UP(1, 0, -1, "up", EnumDirection.EnumAxisDirection.POSITIVE, EnumDirection.EnumAxis.Y, new BaseBlockPosition(0, 1, 0)), NORTH(2, 3, 2, "north", EnumDirection.EnumAxisDirection.NEGATIVE, EnumDirection.EnumAxis.Z, new BaseBlockPosition(0, 0, -1)), SOUTH(3, 2, 0, "south", EnumDirection.EnumAxisDirection.POSITIVE, EnumDirection.EnumAxis.Z, new BaseBlockPosition(0, 0, 1)), WEST(4, 5, 1, "west", EnumDirection.EnumAxisDirection.NEGATIVE, EnumDirection.EnumAxis.X, new BaseBlockPosition(-1, 0, 0)), EAST(5, 4, 3, "east", EnumDirection.EnumAxisDirection.POSITIVE, EnumDirection.EnumAxis.X, new BaseBlockPosition(1, 0, 0));
 
-    private final int g;
+    private final int g = 0;
 
-    private final int h;
+    private final int h = 0;
 
-    private final int i;
+    private final int i = 0;
 
-    private final String j;
+    private final String j = null;
 
-    private final EnumDirection.EnumAxis k;
+    private final EnumDirection.EnumAxis k = null;
 
-    private final EnumDirection.EnumAxisDirection l;
+    private final EnumDirection.EnumAxisDirection l = null;
 
-    private final BaseBlockPosition m;
+    private final BaseBlockPosition m = null;
 
-    private static final EnumDirection[] n;
+    private static final EnumDirection[] n = null;
 
-    private static final EnumDirection[] o;
+    private static final EnumDirection[] o = null;
 
-    private static final Map<String, EnumDirection> p;
+    private static final Map<String, EnumDirection> p = null;
 
     private EnumDirection(int i, int j, int k, String s, EnumDirection.EnumAxisDirection enumdirection_enumaxisdirection, EnumDirection.EnumAxis enumdirection_enumaxis, BaseBlockPosition baseblockposition) {
     }
@@ -116,11 +116,11 @@ public enum EnumDirection implements INamable {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
-        static final int[] c;
+        static final int[] c = null;
 
         static {
         }
@@ -158,9 +158,9 @@ public enum EnumDirection implements INamable {
 
         POSITIVE(1, "Towards positive"), NEGATIVE(-1, "Towards negative");
 
-        private final int c;
+        private final int c = 0;
 
-        private final String d;
+        private final String d = null;
 
         private EnumAxisDirection(int i, String s) {
         }
@@ -178,11 +178,11 @@ public enum EnumDirection implements INamable {
 
         X("x", EnumDirection.EnumDirectionLimit.HORIZONTAL), Y("y", EnumDirection.EnumDirectionLimit.VERTICAL), Z("z", EnumDirection.EnumDirectionLimit.HORIZONTAL);
 
-        private static final Map<String, EnumDirection.EnumAxis> d;
+        private static final Map<String, EnumDirection.EnumAxis> d = null;
 
-        private final String e;
+        private final String e = null;
 
-        private final EnumDirection.EnumDirectionLimit f;
+        private final EnumDirection.EnumDirectionLimit f = null;
 
         private EnumAxis(String s, EnumDirection.EnumDirectionLimit enumdirection_enumdirectionlimit) {
         }

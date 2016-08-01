@@ -12,19 +12,19 @@ import org.bukkit.inventory.InventoryHolder;
 // CraftBukkit end
 public abstract class EntityMinecartContainer extends EntityMinecartAbstract implements ITileInventory, ILootable {
 
-    private ItemStack[] items;
+    private ItemStack[] items = null;
 
     // CraftBukkit - 36 -> 27
-    private boolean b;
+    private boolean b = false;
 
-    private MinecraftKey c;
+    private MinecraftKey c = null;
 
-    private long d;
+    private long d = 0;
 
     // CraftBukkit start
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;

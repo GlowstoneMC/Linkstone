@@ -2,9 +2,9 @@ package net.minecraft.server;
 
 public class RemoteControlCommandListener implements ICommandListener {
 
-    private final StringBuffer a;
+    private final StringBuffer a = null;
 
-    private final MinecraftServer b;
+    private final MinecraftServer b = null;
 
     public RemoteControlCommandListener(MinecraftServer minecraftserver) {
     }

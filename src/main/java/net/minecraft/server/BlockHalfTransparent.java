@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class BlockHalfTransparent extends Block {
 
-    private final boolean a;
+    private final boolean a = false;
 
     protected BlockHalfTransparent(Material material, boolean flag) {
     }

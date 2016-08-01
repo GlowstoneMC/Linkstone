@@ -4,81 +4,81 @@ import java.util.Random;
 
 public class BiomeDecorator {
 
-    protected boolean a;
+    protected boolean a = false;
 
-    protected BlockPosition b;
+    protected BlockPosition b = null;
 
-    protected CustomWorldSettingsFinal c;
+    protected CustomWorldSettingsFinal c = null;
 
-    protected WorldGenerator d;
+    protected WorldGenerator d = null;
 
-    protected WorldGenerator e;
+    protected WorldGenerator e = null;
 
-    protected WorldGenerator f;
+    protected WorldGenerator f = null;
 
-    protected WorldGenerator g;
+    protected WorldGenerator g = null;
 
-    protected WorldGenerator h;
+    protected WorldGenerator h = null;
 
-    protected WorldGenerator i;
+    protected WorldGenerator i = null;
 
-    protected WorldGenerator j;
+    protected WorldGenerator j = null;
 
-    protected WorldGenerator k;
+    protected WorldGenerator k = null;
 
-    protected WorldGenerator l;
+    protected WorldGenerator l = null;
 
-    protected WorldGenerator m;
+    protected WorldGenerator m = null;
 
-    protected WorldGenerator n;
+    protected WorldGenerator n = null;
 
-    protected WorldGenerator o;
+    protected WorldGenerator o = null;
 
-    protected WorldGenerator p;
+    protected WorldGenerator p = null;
 
-    protected WorldGenerator q;
+    protected WorldGenerator q = null;
 
-    protected WorldGenFlowers r;
+    protected WorldGenFlowers r = null;
 
-    protected WorldGenerator s;
+    protected WorldGenerator s = null;
 
-    protected WorldGenerator t;
+    protected WorldGenerator t = null;
 
-    protected WorldGenerator u;
+    protected WorldGenerator u = null;
 
-    protected WorldGenerator v;
+    protected WorldGenerator v = null;
 
-    protected WorldGenerator w;
+    protected WorldGenerator w = null;
 
-    protected WorldGenerator x;
+    protected WorldGenerator x = null;
 
-    protected int y;
+    protected int y = 0;
 
-    protected int z;
+    protected int z = 0;
 
-    protected float A;
+    protected float A = 0.0F;
 
-    protected int B;
+    protected int B = 0;
 
-    protected int C;
+    protected int C = 0;
 
-    protected int D;
+    protected int D = 0;
 
-    protected int E;
+    protected int E = 0;
 
-    protected int F;
+    protected int F = 0;
 
-    protected int G;
+    protected int G = 0;
 
-    protected int H;
+    protected int H = 0;
 
-    protected int I;
+    protected int I = 0;
 
-    protected int J;
+    protected int J = 0;
 
-    protected int K;
+    protected int K = 0;
 
-    public boolean L;
+    public boolean L = false;
 
     public BiomeDecorator() {
     }

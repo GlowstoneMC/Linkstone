@@ -7,7 +7,7 @@ import org.bukkit.craftbukkit.event.CraftEventFactory;
 // CraftBukkit
 public class BlockRedstoneLamp extends Block {
 
-    private final boolean a;
+    private final boolean a = false;
 
     public BlockRedstoneLamp(boolean flag) {
     }

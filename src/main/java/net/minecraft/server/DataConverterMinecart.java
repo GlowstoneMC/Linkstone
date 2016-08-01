@@ -5,7 +5,7 @@ import java.util.List;
 
 public class DataConverterMinecart implements IDataConverter {
 
-    private static final List<String> a;
+    private static final List<String> a = null;
 
     public DataConverterMinecart() {
     }

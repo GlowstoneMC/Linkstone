@@ -15,63 +15,63 @@ import org.bukkit.event.vehicle.VehicleMoveEvent;
 // CraftBukkit end
 public class EntityBoat extends Entity {
 
-    private static final DataWatcherObject<Integer> a;
+    private static final DataWatcherObject<Integer> a = null;
 
-    private static final DataWatcherObject<Integer> b;
+    private static final DataWatcherObject<Integer> b = null;
 
-    private static final DataWatcherObject<Float> c;
+    private static final DataWatcherObject<Float> c = null;
 
-    private static final DataWatcherObject<Integer> d;
+    private static final DataWatcherObject<Integer> d = null;
 
-    private static final DataWatcherObject<Boolean>[] e;
+    private static final DataWatcherObject<Boolean>[] e = null;
 
-    private final float[] f;
+    private final float[] f = null;
 
-    private float g;
+    private float g = 0.0F;
 
-    private float h;
+    private float h = 0.0F;
 
-    private float au;
+    private float au = 0.0F;
 
-    private int av;
+    private int av = 0;
 
-    private double aw;
+    private double aw = 0.0;
 
-    private double ax;
+    private double ax = 0.0;
 
-    private double ay;
+    private double ay = 0.0;
 
-    private double az;
+    private double az = 0.0;
 
-    private double aA;
+    private double aA = 0.0;
 
-    private boolean aB;
+    private boolean aB = false;
 
-    private boolean aC;
+    private boolean aC = false;
 
-    private boolean aD;
+    private boolean aD = false;
 
-    private boolean aE;
+    private boolean aE = false;
 
-    private double aF;
+    private double aF = 0.0;
 
-    private float aG;
+    private float aG = 0.0F;
 
-    private EntityBoat.EnumStatus aH;
+    private EntityBoat.EnumStatus aH = null;
 
-    private EntityBoat.EnumStatus aI;
+    private EntityBoat.EnumStatus aI = null;
 
-    private double aJ;
+    private double aJ = 0.0;
 
     // CraftBukkit start
     // PAIL: Some of these haven't worked since a few updates, and since 1.9 they are less and less applicable.
-    public double maxSpeed;
+    public double maxSpeed = 0.0;
 
-    public double occupiedDeceleration;
+    public double occupiedDeceleration = 0.0;
 
-    public double unoccupiedDeceleration;
+    public double unoccupiedDeceleration = 0.0;
 
-    public boolean landBoats;
+    public boolean landBoats = false;
 
     // CraftBukkit end
     public EntityBoat(World world) {
@@ -124,7 +124,7 @@ public class EntityBoat extends Entity {
         return null;
     }
 
-    private Location lastLocation;
+    private Location lastLocation = null;
 
     // CraftBukkit
     public void m() {
@@ -233,7 +233,7 @@ public class EntityBoat extends Entity {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -243,9 +243,9 @@ public class EntityBoat extends Entity {
 
         OAK(BlockWood.EnumLogVariant.OAK.a(), "oak"), SPRUCE(BlockWood.EnumLogVariant.SPRUCE.a(), "spruce"), BIRCH(BlockWood.EnumLogVariant.BIRCH.a(), "birch"), JUNGLE(BlockWood.EnumLogVariant.JUNGLE.a(), "jungle"), ACACIA(BlockWood.EnumLogVariant.ACACIA.a(), "acacia"), DARK_OAK(BlockWood.EnumLogVariant.DARK_OAK.a(), "dark_oak");
 
-        private final String g;
+        private final String g = null;
 
-        private final int h;
+        private final int h = 0;
 
         private EnumBoatType(int i, String s) {
         }

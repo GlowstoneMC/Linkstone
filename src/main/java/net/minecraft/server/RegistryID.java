@@ -7,17 +7,17 @@ import javax.annotation.Nullable;
 
 public class RegistryID<K> implements Registry<K>, Iterable<K> {
 
-    private static final Object a;
+    private static final Object a = null;
 
-    private K[] b;
+    private K[] b = null;
 
-    private int[] c;
+    private int[] c = null;
 
-    private K[] d;
+    private K[] d = null;
 
-    private int e;
+    private int e = 0;
 
-    private int f;
+    private int f = 0;
 
     public RegistryID(int i) {
     }

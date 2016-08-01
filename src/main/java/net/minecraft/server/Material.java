@@ -2,91 +2,91 @@ package net.minecraft.server;
 
 public class Material {
 
-    public static final Material AIR;
+    public static final Material AIR = null;
 
-    public static final Material GRASS;
+    public static final Material GRASS = null;
 
-    public static final Material EARTH;
+    public static final Material EARTH = null;
 
-    public static final Material WOOD;
+    public static final Material WOOD = null;
 
-    public static final Material STONE;
+    public static final Material STONE = null;
 
-    public static final Material ORE;
+    public static final Material ORE = null;
 
-    public static final Material HEAVY;
+    public static final Material HEAVY = null;
 
-    public static final Material WATER;
+    public static final Material WATER = null;
 
-    public static final Material LAVA;
+    public static final Material LAVA = null;
 
-    public static final Material LEAVES;
+    public static final Material LEAVES = null;
 
-    public static final Material PLANT;
+    public static final Material PLANT = null;
 
-    public static final Material REPLACEABLE_PLANT;
+    public static final Material REPLACEABLE_PLANT = null;
 
-    public static final Material SPONGE;
+    public static final Material SPONGE = null;
 
-    public static final Material CLOTH;
+    public static final Material CLOTH = null;
 
-    public static final Material FIRE;
+    public static final Material FIRE = null;
 
-    public static final Material SAND;
+    public static final Material SAND = null;
 
-    public static final Material ORIENTABLE;
+    public static final Material ORIENTABLE = null;
 
-    public static final Material WOOL;
+    public static final Material WOOL = null;
 
-    public static final Material SHATTERABLE;
+    public static final Material SHATTERABLE = null;
 
-    public static final Material BUILDABLE_GLASS;
+    public static final Material BUILDABLE_GLASS = null;
 
-    public static final Material TNT;
+    public static final Material TNT = null;
 
-    public static final Material CORAL;
+    public static final Material CORAL = null;
 
-    public static final Material ICE;
+    public static final Material ICE = null;
 
-    public static final Material SNOW_LAYER;
+    public static final Material SNOW_LAYER = null;
 
-    public static final Material PACKED_ICE;
+    public static final Material PACKED_ICE = null;
 
-    public static final Material SNOW_BLOCK;
+    public static final Material SNOW_BLOCK = null;
 
-    public static final Material CACTUS;
+    public static final Material CACTUS = null;
 
-    public static final Material CLAY;
+    public static final Material CLAY = null;
 
-    public static final Material PUMPKIN;
+    public static final Material PUMPKIN = null;
 
-    public static final Material DRAGON_EGG;
+    public static final Material DRAGON_EGG = null;
 
-    public static final Material PORTAL;
+    public static final Material PORTAL = null;
 
-    public static final Material CAKE;
+    public static final Material CAKE = null;
 
-    public static final Material WEB;
+    public static final Material WEB = null;
 
-    public static final Material PISTON;
+    public static final Material PISTON = null;
 
-    public static final Material BANNER;
+    public static final Material BANNER = null;
 
-    public static final Material J;
+    public static final Material J = null;
 
-    private boolean canBurn;
+    private boolean canBurn = false;
 
-    private boolean L;
+    private boolean L = false;
 
-    private boolean M;
+    private boolean M = false;
 
-    private final MaterialMapColor N;
+    private final MaterialMapColor N = null;
 
-    private boolean O;
+    private boolean O = false;
 
-    private EnumPistonReaction P;
+    private EnumPistonReaction P = null;
 
-    private boolean Q;
+    private boolean Q = false;
 
     public Material(MaterialMapColor materialmapcolor) {
     }

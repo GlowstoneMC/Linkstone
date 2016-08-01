@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class ChatHoverable {
 
-    private final ChatHoverable.EnumHoverAction a;
+    private final ChatHoverable.EnumHoverAction a = null;
 
-    private final IChatBaseComponent b;
+    private final IChatBaseComponent b = null;
 
     public ChatHoverable(ChatHoverable.EnumHoverAction chathoverable_enumhoveraction, IChatBaseComponent ichatbasecomponent) {
     }
@@ -36,11 +36,11 @@ public class ChatHoverable {
 
         SHOW_TEXT("show_text", true), SHOW_ACHIEVEMENT("show_achievement", true), SHOW_ITEM("show_item", true), SHOW_ENTITY("show_entity", true);
 
-        private static final Map<String, ChatHoverable.EnumHoverAction> e;
+        private static final Map<String, ChatHoverable.EnumHoverAction> e = null;
 
-        private final boolean f;
+        private final boolean f = false;
 
-        private final String g;
+        private final String g = null;
 
         private EnumHoverAction(String s, boolean flag) {
         }

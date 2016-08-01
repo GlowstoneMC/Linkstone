@@ -9,11 +9,11 @@ import javax.annotation.Nullable;
 
 public class BlockStatePredicate implements Predicate<IBlockData> {
 
-    public static final Predicate<IBlockData> a;
+    public static final Predicate<IBlockData> a = null;
 
-    private final BlockStateList b;
+    private final BlockStateList b = null;
 
-    private final Map<IBlockState<?>, Predicate<?>> c;
+    private final Map<IBlockState<?>, Predicate<?>> c = null;
 
     private BlockStatePredicate(BlockStateList blockstatelist) {
     }

@@ -4,13 +4,13 @@ import javax.annotation.Nullable;
 
 public class DataPaletteLinear implements DataPalette {
 
-    private final IBlockData[] a;
+    private final IBlockData[] a = null;
 
-    private final DataPaletteExpandable b;
+    private final DataPaletteExpandable b = null;
 
-    private final int c;
+    private final int c = 0;
 
-    private int d;
+    private int d = 0;
 
     public DataPaletteLinear(int i, DataPaletteExpandable datapaletteexpandable) {
     }

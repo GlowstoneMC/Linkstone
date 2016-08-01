@@ -9,9 +9,9 @@ import java.util.Set;
 
 public class AttributeMapServer extends AttributeMapBase {
 
-    private final Set<AttributeInstance> e;
+    private final Set<AttributeInstance> e = null;
 
-    protected final Map<String, AttributeInstance> d;
+    protected final Map<String, AttributeInstance> d = null;
 
     public AttributeMapServer() {
     }

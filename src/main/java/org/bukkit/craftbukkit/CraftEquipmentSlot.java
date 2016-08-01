@@ -5,9 +5,9 @@ import org.bukkit.inventory.EquipmentSlot;
 
 public class CraftEquipmentSlot {
 
-    private static final EnumItemSlot[] slots;
+    private static final EnumItemSlot[] slots = null;
 
-    private static final EquipmentSlot[] enums;
+    private static final EquipmentSlot[] enums = null;
 
     static {
     }

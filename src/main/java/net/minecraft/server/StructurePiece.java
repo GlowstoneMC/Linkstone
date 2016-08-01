@@ -7,16 +7,16 @@ import javax.annotation.Nullable;
 
 public abstract class StructurePiece {
 
-    protected StructureBoundingBox l;
+    protected StructureBoundingBox l = null;
 
     @Nullable
-    private EnumDirection a;
+    private EnumDirection a = null;
 
-    private EnumBlockMirror b;
+    private EnumBlockMirror b = null;
 
-    private EnumBlockRotation c;
+    private EnumBlockRotation c = null;
 
-    protected int m;
+    protected int m = 0;
 
     public StructurePiece() {
     }
@@ -131,7 +131,7 @@ public abstract class StructurePiece {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -139,7 +139,7 @@ public abstract class StructurePiece {
 
     public abstract static class StructurePieceBlockSelector {
 
-        protected IBlockData a;
+        protected IBlockData a = null;
 
         protected StructurePieceBlockSelector() {
         }

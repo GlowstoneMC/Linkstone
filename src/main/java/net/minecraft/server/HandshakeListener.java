@@ -8,14 +8,14 @@ import java.util.HashMap;
 public class HandshakeListener implements PacketHandshakingInListener {
 
     // CraftBukkit start - add fields
-    private static final HashMap<InetAddress, Long> throttleTracker;
+    private static final HashMap<InetAddress, Long> throttleTracker = null;
 
-    private static int throttleCounter;
+    private static int throttleCounter = 0;
 
     // CraftBukkit end
-    private final MinecraftServer a;
+    private final MinecraftServer a = null;
 
-    private final NetworkManager b;
+    private final NetworkManager b = null;
 
     public HandshakeListener(MinecraftServer minecraftserver, NetworkManager networkmanager) {
     }
@@ -28,7 +28,7 @@ public class HandshakeListener implements PacketHandshakingInListener {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

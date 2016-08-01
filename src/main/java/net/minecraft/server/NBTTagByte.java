@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class NBTTagByte extends NBTNumber {
 
-    private byte data;
+    private byte data = 0;
 
     NBTTagByte() {
     }

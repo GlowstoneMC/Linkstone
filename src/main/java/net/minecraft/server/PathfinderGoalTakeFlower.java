@@ -5,13 +5,13 @@ import java.util.List;
 
 public class PathfinderGoalTakeFlower extends PathfinderGoal {
 
-    private final EntityVillager a;
+    private final EntityVillager a = null;
 
-    private EntityIronGolem b;
+    private EntityIronGolem b = null;
 
-    private int c;
+    private int c = 0;
 
-    private boolean d;
+    private boolean d = false;
 
     public PathfinderGoalTakeFlower(EntityVillager entityvillager) {
     }

@@ -6,9 +6,9 @@ import javax.annotation.Nullable;
 
 public class BlockReed extends Block {
 
-    public static final BlockStateInteger AGE;
+    public static final BlockStateInteger AGE = null;
 
-    protected static final AxisAlignedBB b;
+    protected static final AxisAlignedBB b = null;
 
     protected BlockReed() {
     }

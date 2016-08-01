@@ -7,13 +7,13 @@ import org.bukkit.event.entity.EntityCombustEvent;
 // CraftBukkit
 public class EntitySkeleton extends EntityMonster implements IRangedEntity {
 
-    private static final DataWatcherObject<Integer> a;
+    private static final DataWatcherObject<Integer> a = null;
 
-    private static final DataWatcherObject<Boolean> b;
+    private static final DataWatcherObject<Boolean> b = null;
 
-    private final PathfinderGoalBowShoot c;
+    private final PathfinderGoalBowShoot c = null;
 
-    private final PathfinderGoalMeleeAttack bx;
+    private final PathfinderGoalMeleeAttack bx = null;
 
     public EntitySkeleton(World world) {
     }

@@ -2,7 +2,7 @@ package net.minecraft.server;
 
 public class BlockWood extends Block {
 
-    public static final BlockStateEnum<BlockWood.EnumLogVariant> VARIANT;
+    public static final BlockStateEnum<BlockWood.EnumLogVariant> VARIANT = null;
 
     public BlockWood() {
     }
@@ -31,15 +31,15 @@ public class BlockWood extends Block {
 
         OAK(0, "oak", MaterialMapColor.o), SPRUCE(1, "spruce", MaterialMapColor.J), BIRCH(2, "birch", MaterialMapColor.d), JUNGLE(3, "jungle", MaterialMapColor.l), ACACIA(4, "acacia", MaterialMapColor.q), DARK_OAK(5, "dark_oak", "big_oak", MaterialMapColor.B);
 
-        private static final BlockWood.EnumLogVariant[] g;
+        private static final BlockWood.EnumLogVariant[] g = null;
 
-        private final int h;
+        private final int h = 0;
 
-        private final String i;
+        private final String i = null;
 
-        private final String j;
+        private final String j = null;
 
-        private final MaterialMapColor k;
+        private final MaterialMapColor k = null;
 
         private EnumLogVariant(int i, String s, MaterialMapColor materialmapcolor) {
         }

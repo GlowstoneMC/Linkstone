@@ -4,13 +4,13 @@ import javax.annotation.Nullable;
 
 public abstract class AttributeBase implements IAttribute {
 
-    private final IAttribute a;
+    private final IAttribute a = null;
 
-    private final String b;
+    private final String b = null;
 
-    private final double c;
+    private final double c = 0.0;
 
-    private boolean d;
+    private boolean d = false;
 
     protected AttributeBase(@Nullable IAttribute iattribute, String s, double d0) {
     }

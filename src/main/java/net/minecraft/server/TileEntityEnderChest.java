@@ -2,13 +2,13 @@ package net.minecraft.server;
 
 public class TileEntityEnderChest extends TileEntity implements ITickable {
 
-    public float a;
+    public float a = 0.0F;
 
-    public float f;
+    public float f = 0.0F;
 
-    public int g;
+    public int g = 0;
 
-    private int h;
+    private int h = 0;
 
     public TileEntityEnderChest() {
     }

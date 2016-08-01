@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class ChatClickable {
 
-    private final ChatClickable.EnumClickAction a;
+    private final ChatClickable.EnumClickAction a = null;
 
-    private final String b;
+    private final String b = null;
 
     public ChatClickable(ChatClickable.EnumClickAction chatclickable_enumclickaction, String s) {
     }
@@ -36,11 +36,11 @@ public class ChatClickable {
 
         OPEN_URL("open_url", true), OPEN_FILE("open_file", false), RUN_COMMAND("run_command", true), SUGGEST_COMMAND("suggest_command", true), CHANGE_PAGE("change_page", true);
 
-        private static final Map<String, ChatClickable.EnumClickAction> f;
+        private static final Map<String, ChatClickable.EnumClickAction> f = null;
 
-        private final boolean g;
+        private final boolean g = false;
 
-        private final String h;
+        private final String h = null;
 
         private EnumClickAction(String s, boolean flag) {
         }

@@ -11,9 +11,9 @@ import javax.annotation.Nullable;
 
 public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
 
-    private PacketPlayOutPlayerInfo.EnumPlayerInfoAction a;
+    private PacketPlayOutPlayerInfo.EnumPlayerInfoAction a = null;
 
-    private final List<PacketPlayOutPlayerInfo.PlayerInfoData> b;
+    private final List<PacketPlayOutPlayerInfo.PlayerInfoData> b = null;
 
     public PacketPlayOutPlayerInfo() {
     }
@@ -39,7 +39,7 @@ public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }
@@ -47,13 +47,13 @@ public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
 
     public class PlayerInfoData {
 
-        private final int b;
+        private final int b = 0;
 
-        private final EnumGamemode c;
+        private final EnumGamemode c = null;
 
-        private final GameProfile d;
+        private final GameProfile d = null;
 
-        private final IChatBaseComponent e;
+        private final IChatBaseComponent e = null;
 
         public PlayerInfoData(GameProfile gameprofile, int i, EnumGamemode enumgamemode, @Nullable IChatBaseComponent ichatbasecomponent) {
         }

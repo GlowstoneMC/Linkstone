@@ -10,7 +10,7 @@ import org.bukkit.material.MaterialData;
 
 public class CraftFlowerPot extends CraftBlockState implements FlowerPot {
 
-    private final TileEntityFlowerPot pot;
+    private final TileEntityFlowerPot pot = null;
 
     public CraftFlowerPot(Block block) {
     }

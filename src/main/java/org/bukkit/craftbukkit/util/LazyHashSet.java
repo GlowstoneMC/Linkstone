@@ -6,7 +6,7 @@ import java.util.Set;
 
 public abstract class LazyHashSet<E> implements Set<E> {
 
-    Set<E> reference;
+    Set<E> reference = null;
 
     public int size() {
         return 0;

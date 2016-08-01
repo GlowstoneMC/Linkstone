@@ -16,50 +16,50 @@ import org.bukkit.util.Vector;
 // CraftBukkit end
 public abstract class EntityMinecartAbstract extends Entity implements INamableTileEntity {
 
-    private static final DataWatcherObject<Integer> a;
+    private static final DataWatcherObject<Integer> a = null;
 
-    private static final DataWatcherObject<Integer> b;
+    private static final DataWatcherObject<Integer> b = null;
 
-    private static final DataWatcherObject<Float> c;
+    private static final DataWatcherObject<Float> c = null;
 
-    private static final DataWatcherObject<Integer> d;
+    private static final DataWatcherObject<Integer> d = null;
 
-    private static final DataWatcherObject<Integer> e;
+    private static final DataWatcherObject<Integer> e = null;
 
-    private static final DataWatcherObject<Boolean> f;
+    private static final DataWatcherObject<Boolean> f = null;
 
-    private boolean g;
+    private boolean g = false;
 
-    private static final int[][][] h;
+    private static final int[][][] h = null;
 
-    private int au;
+    private int au = 0;
 
-    private double av;
+    private double av = 0.0;
 
-    private double aw;
+    private double aw = 0.0;
 
-    private double ax;
+    private double ax = 0.0;
 
-    private double ay;
+    private double ay = 0.0;
 
-    private double az;
+    private double az = 0.0;
 
     // CraftBukkit start
-    public boolean slowWhenEmpty;
+    public boolean slowWhenEmpty = false;
 
-    private double derailedX;
+    private double derailedX = 0.0;
 
-    private double derailedY;
+    private double derailedY = 0.0;
 
-    private double derailedZ;
+    private double derailedZ = 0.0;
 
-    private double flyingX;
+    private double flyingX = 0.0;
 
-    private double flyingY;
+    private double flyingY = 0.0;
 
-    private double flyingZ;
+    private double flyingZ = 0.0;
 
-    public double maxSpeed;
+    public double maxSpeed = 0.0;
 
     // CraftBukkit end
     public EntityMinecartAbstract(World world) {
@@ -207,9 +207,9 @@ public abstract class EntityMinecartAbstract extends Entity implements INamableT
 
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
-        static final int[] b;
+        static final int[] b = null;
 
         static {
         }
@@ -219,11 +219,11 @@ public abstract class EntityMinecartAbstract extends Entity implements INamableT
 
         RIDEABLE(0, "MinecartRideable"), CHEST(1, "MinecartChest"), FURNACE(2, "MinecartFurnace"), TNT(3, "MinecartTNT"), SPAWNER(4, "MinecartSpawner"), HOPPER(5, "MinecartHopper"), COMMAND_BLOCK(6, "MinecartCommandBlock");
 
-        private static final Map<Integer, EntityMinecartAbstract.EnumMinecartType> h;
+        private static final Map<Integer, EntityMinecartAbstract.EnumMinecartType> h = null;
 
-        private final int i;
+        private final int i = 0;
 
-        private final String j;
+        private final String j = null;
 
         private EnumMinecartType(int i, String s) {
         }

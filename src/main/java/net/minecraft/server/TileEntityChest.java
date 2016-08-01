@@ -10,37 +10,37 @@ import org.bukkit.entity.HumanEntity;
 // CraftBukkit end
 public class TileEntityChest extends TileEntityLootable implements ITickable, IInventory {
 
-    private ItemStack[] items;
+    private ItemStack[] items = null;
 
-    public boolean a;
+    public boolean a = false;
 
-    public TileEntityChest f;
+    public TileEntityChest f = null;
 
-    public TileEntityChest g;
+    public TileEntityChest g = null;
 
-    public TileEntityChest h;
+    public TileEntityChest h = null;
 
-    public TileEntityChest i;
+    public TileEntityChest i = null;
 
-    public float j;
+    public float j = 0.0F;
 
-    public float k;
+    public float k = 0.0F;
 
-    public int l;
+    public int l = 0;
 
-    private int p;
+    private int p = 0;
 
-    private BlockChest.Type q;
+    private BlockChest.Type q = null;
 
-    private String r;
+    private String r = null;
 
     public TileEntityChest() {
     }
 
     // CraftBukkit start - add fields and methods
-    public List<HumanEntity> transaction;
+    public List<HumanEntity> transaction = null;
 
-    private int maxStack;
+    private int maxStack = 0;
 
     public ItemStack[] getContents() {
         return null;
@@ -187,7 +187,7 @@ public class TileEntityChest extends TileEntityLootable implements ITickable, II
     // CraftBukkit end
     static class SyntheticClass_1 {
 
-        static final int[] a;
+        static final int[] a = null;
 
         static {
         }

@@ -4,9 +4,9 @@ import java.io.IOException;
 
 public class PacketPlayInUpdateSign implements Packet<PacketListenerPlayIn> {
 
-    private BlockPosition a;
+    private BlockPosition a = null;
 
-    private String[] b;
+    private String[] b = null;
 
     public PacketPlayInUpdateSign() {
     }

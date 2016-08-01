@@ -11,15 +11,15 @@ import javax.swing.Timer;
 
 public class GuiStatsComponent extends JComponent {
 
-    private static final DecimalFormat a;
+    private static final DecimalFormat a = null;
 
-    private final int[] b;
+    private final int[] b = null;
 
-    private int c;
+    private int c = 0;
 
-    private final String[] d;
+    private final String[] d = null;
 
-    private final MinecraftServer e;
+    private final MinecraftServer e = null;
 
     public GuiStatsComponent(MinecraftServer minecraftserver) {
     }

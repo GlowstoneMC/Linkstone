@@ -52,7 +52,7 @@ public interface IChatBaseComponent extends Iterable<IChatBaseComponent> {
 
     public static class ChatSerializer implements JsonDeserializer<IChatBaseComponent>, JsonSerializer<IChatBaseComponent> {
 
-        private static final Gson a;
+        private static final Gson a = null;
 
         public ChatSerializer() {
         }

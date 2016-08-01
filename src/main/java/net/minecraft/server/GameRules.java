@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class GameRules {
 
-    private final TreeMap<String, GameRules.GameRuleValue> a;
+    private final TreeMap<String, GameRules.GameRuleValue> a = null;
 
     public GameRules() {
     }
@@ -58,15 +58,15 @@ public class GameRules {
 
     static class GameRuleValue {
 
-        private String a;
+        private String a = null;
 
-        private boolean b;
+        private boolean b = false;
 
-        private int c;
+        private int c = 0;
 
-        private double d;
+        private double d = 0.0;
 
-        private final GameRules.EnumGameRuleType e;
+        private final GameRules.EnumGameRuleType e = null;
 
         public GameRuleValue(String s, GameRules.EnumGameRuleType gamerules_enumgameruletype) {
         }

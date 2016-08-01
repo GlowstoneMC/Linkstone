@@ -14,161 +14,161 @@ import java.lang.reflect.Type;
 
 public class CustomWorldSettingsFinal {
 
-    public final float a;
+    public final float a = 0.0F;
 
-    public final float b;
+    public final float b = 0.0F;
 
-    public final float c;
+    public final float c = 0.0F;
 
-    public final float d;
+    public final float d = 0.0F;
 
-    public final float e;
+    public final float e = 0.0F;
 
-    public final float f;
+    public final float f = 0.0F;
 
-    public final float g;
+    public final float g = 0.0F;
 
-    public final float h;
+    public final float h = 0.0F;
 
-    public final float i;
+    public final float i = 0.0F;
 
-    public final float j;
+    public final float j = 0.0F;
 
-    public final float k;
+    public final float k = 0.0F;
 
-    public final float l;
+    public final float l = 0.0F;
 
-    public final float m;
+    public final float m = 0.0F;
 
-    public final float n;
+    public final float n = 0.0F;
 
-    public final float o;
+    public final float o = 0.0F;
 
-    public final float p;
+    public final float p = 0.0F;
 
-    public final int q;
+    public final int q = 0;
 
-    public final boolean r;
+    public final boolean r = false;
 
-    public final boolean s;
+    public final boolean s = false;
 
-    public final int t;
+    public final int t = 0;
 
-    public final boolean u;
+    public final boolean u = false;
 
-    public final boolean v;
+    public final boolean v = false;
 
-    public final boolean w;
+    public final boolean w = false;
 
-    public final boolean x;
+    public final boolean x = false;
 
-    public final boolean y;
+    public final boolean y = false;
 
-    public final boolean z;
+    public final boolean z = false;
 
-    public final boolean A;
+    public final boolean A = false;
 
-    public final int B;
+    public final int B = 0;
 
-    public final boolean C;
+    public final boolean C = false;
 
-    public final int D;
+    public final int D = 0;
 
-    public final boolean E;
+    public final boolean E = false;
 
-    public final int F;
+    public final int F = 0;
 
-    public final int G;
+    public final int G = 0;
 
-    public final int H;
+    public final int H = 0;
 
-    public final int I;
+    public final int I = 0;
 
-    public final int J;
+    public final int J = 0;
 
-    public final int K;
+    public final int K = 0;
 
-    public final int L;
+    public final int L = 0;
 
-    public final int M;
+    public final int M = 0;
 
-    public final int N;
+    public final int N = 0;
 
-    public final int O;
+    public final int O = 0;
 
-    public final int P;
+    public final int P = 0;
 
-    public final int Q;
+    public final int Q = 0;
 
-    public final int R;
+    public final int R = 0;
 
-    public final int S;
+    public final int S = 0;
 
-    public final int T;
+    public final int T = 0;
 
-    public final int U;
+    public final int U = 0;
 
-    public final int V;
+    public final int V = 0;
 
-    public final int W;
+    public final int W = 0;
 
-    public final int X;
+    public final int X = 0;
 
-    public final int Y;
+    public final int Y = 0;
 
-    public final int Z;
+    public final int Z = 0;
 
-    public final int aa;
+    public final int aa = 0;
 
-    public final int ab;
+    public final int ab = 0;
 
-    public final int ac;
+    public final int ac = 0;
 
-    public final int ad;
+    public final int ad = 0;
 
-    public final int ae;
+    public final int ae = 0;
 
-    public final int af;
+    public final int af = 0;
 
-    public final int ag;
+    public final int ag = 0;
 
-    public final int ah;
+    public final int ah = 0;
 
-    public final int ai;
+    public final int ai = 0;
 
-    public final int aj;
+    public final int aj = 0;
 
-    public final int ak;
+    public final int ak = 0;
 
-    public final int al;
+    public final int al = 0;
 
-    public final int am;
+    public final int am = 0;
 
-    public final int an;
+    public final int an = 0;
 
-    public final int ao;
+    public final int ao = 0;
 
-    public final int ap;
+    public final int ap = 0;
 
-    public final int aq;
+    public final int aq = 0;
 
-    public final int ar;
+    public final int ar = 0;
 
-    public final int as;
+    public final int as = 0;
 
-    public final int at;
+    public final int at = 0;
 
-    public final int au;
+    public final int au = 0;
 
-    public final int av;
+    public final int av = 0;
 
-    public final int aw;
+    public final int aw = 0;
 
-    public final int ax;
+    public final int ax = 0;
 
-    public final int ay;
+    public final int ay = 0;
 
-    public final int az;
+    public final int az = 0;
 
     private CustomWorldSettingsFinal(CustomWorldSettingsFinal.CustomWorldSettings customworldsettingsfinal_customworldsettings) {
     }
@@ -204,163 +204,163 @@ public class CustomWorldSettingsFinal {
     public static class CustomWorldSettings {
 
         @VisibleForTesting
-        static final Gson a;
+        static final Gson a = null;
 
-        public float b;
+        public float b = 0.0F;
 
-        public float c;
+        public float c = 0.0F;
 
-        public float d;
+        public float d = 0.0F;
 
-        public float e;
+        public float e = 0.0F;
 
-        public float f;
+        public float f = 0.0F;
 
-        public float g;
+        public float g = 0.0F;
 
-        public float h;
+        public float h = 0.0F;
 
-        public float i;
+        public float i = 0.0F;
 
-        public float j;
+        public float j = 0.0F;
 
-        public float k;
+        public float k = 0.0F;
 
-        public float l;
+        public float l = 0.0F;
 
-        public float m;
+        public float m = 0.0F;
 
-        public float n;
+        public float n = 0.0F;
 
-        public float o;
+        public float o = 0.0F;
 
-        public float p;
+        public float p = 0.0F;
 
-        public float q;
+        public float q = 0.0F;
 
-        public int r;
+        public int r = 0;
 
-        public boolean s;
+        public boolean s = false;
 
-        public boolean t;
+        public boolean t = false;
 
-        public int u;
+        public int u = 0;
 
-        public boolean v;
+        public boolean v = false;
 
-        public boolean w;
+        public boolean w = false;
 
-        public boolean x;
+        public boolean x = false;
 
-        public boolean y;
+        public boolean y = false;
 
-        public boolean z;
+        public boolean z = false;
 
-        public boolean A;
+        public boolean A = false;
 
-        public boolean B;
+        public boolean B = false;
 
-        public int C;
+        public int C = 0;
 
-        public boolean D;
+        public boolean D = false;
 
-        public int E;
+        public int E = 0;
 
-        public boolean F;
+        public boolean F = false;
 
-        public int G;
+        public int G = 0;
 
-        public int H;
+        public int H = 0;
 
-        public int I;
+        public int I = 0;
 
-        public int J;
+        public int J = 0;
 
-        public int K;
+        public int K = 0;
 
-        public int L;
+        public int L = 0;
 
-        public int M;
+        public int M = 0;
 
-        public int N;
+        public int N = 0;
 
-        public int O;
+        public int O = 0;
 
-        public int P;
+        public int P = 0;
 
-        public int Q;
+        public int Q = 0;
 
-        public int R;
+        public int R = 0;
 
-        public int S;
+        public int S = 0;
 
-        public int T;
+        public int T = 0;
 
-        public int U;
+        public int U = 0;
 
-        public int V;
+        public int V = 0;
 
-        public int W;
+        public int W = 0;
 
-        public int X;
+        public int X = 0;
 
-        public int Y;
+        public int Y = 0;
 
-        public int Z;
+        public int Z = 0;
 
-        public int aa;
+        public int aa = 0;
 
-        public int ab;
+        public int ab = 0;
 
-        public int ac;
+        public int ac = 0;
 
-        public int ad;
+        public int ad = 0;
 
-        public int ae;
+        public int ae = 0;
 
-        public int af;
+        public int af = 0;
 
-        public int ag;
+        public int ag = 0;
 
-        public int ah;
+        public int ah = 0;
 
-        public int ai;
+        public int ai = 0;
 
-        public int aj;
+        public int aj = 0;
 
-        public int ak;
+        public int ak = 0;
 
-        public int al;
+        public int al = 0;
 
-        public int am;
+        public int am = 0;
 
-        public int an;
+        public int an = 0;
 
-        public int ao;
+        public int ao = 0;
 
-        public int ap;
+        public int ap = 0;
 
-        public int aq;
+        public int aq = 0;
 
-        public int ar;
+        public int ar = 0;
 
-        public int as;
+        public int as = 0;
 
-        public int at;
+        public int at = 0;
 
-        public int au;
+        public int au = 0;
 
-        public int av;
+        public int av = 0;
 
-        public int aw;
+        public int aw = 0;
 
-        public int ax;
+        public int ax = 0;
 
-        public int ay;
+        public int ay = 0;
 
-        public int az;
+        public int az = 0;
 
-        public int aA;
+        public int aA = 0;
 
         public static CustomWorldSettingsFinal.CustomWorldSettings a(String s) {
             return null;

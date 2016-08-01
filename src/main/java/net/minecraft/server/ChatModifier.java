@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 
 public class ChatModifier {
 
-    private ChatModifier a;
+    private ChatModifier a = null;
 
-    private EnumChatFormat b;
+    private EnumChatFormat b = null;
 
-    private Boolean c;
+    private Boolean c = null;
 
-    private Boolean d;
+    private Boolean d = null;
 
-    private Boolean e;
+    private Boolean e = null;
 
-    private Boolean f;
+    private Boolean f = null;
 
-    private Boolean g;
+    private Boolean g = null;
 
-    private ChatClickable h;
+    private ChatClickable h = null;
 
-    private ChatHoverable i;
+    private ChatHoverable i = null;
 
-    private String j;
+    private String j = null;
 
-    private static final ChatModifier k;
+    private static final ChatModifier k = null;
 
     public ChatModifier() {
     }

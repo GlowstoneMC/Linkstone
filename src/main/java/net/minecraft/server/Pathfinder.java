@@ -6,13 +6,13 @@ import javax.annotation.Nullable;
 
 public class Pathfinder {
 
-    private final Path a;
+    private final Path a = null;
 
-    private final Set<PathPoint> b;
+    private final Set<PathPoint> b = null;
 
-    private final PathPoint[] c;
+    private final PathPoint[] c = null;
 
-    private final PathfinderAbstract d;
+    private final PathfinderAbstract d = null;
 
     public Pathfinder(PathfinderAbstract pathfinderabstract) {
     }

@@ -1,0 +1,23 @@
+package net.minecraft.server;
+
+import com.google.common.base.Predicate;
+import java.util.Random;
+
+public class WorldGenMinable extends WorldGenerator {
+
+    private final IBlockData a;
+
+    private final int b;
+
+    private final Predicate<IBlockData> c;
+
+    public WorldGenMinable(IBlockData iblockdata, int i) {
+    }
+
+    public WorldGenMinable(IBlockData iblockdata, int i, Predicate<IBlockData> predicate) {
+    }
+
+    public boolean generate(World world, Random random, BlockPosition blockposition) {
+        return false;
+    }
+}

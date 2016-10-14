@@ -19,6 +19,15 @@
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
     </properties>
+	
+    <repositories>
+        <repository>
+            <id>glowstone-snapshots</id>
+            <name>Glowstone Snapshots</name>
+            <layout>default</layout>
+            <url>https://repo.glowstone.net/content/repositories/snapshots/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
 		<!-- CraftBukkit/Spigot dependencies
@@ -34,10 +43,15 @@
             <version>${minecraft.version}-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
-		<dependency>
+	<dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowkit</artifactId>
             <version>${bukkit.version}</version>
+        </dependency>
+	    <dependency>
+            <groupId>net.glowstone</groupId>
+            <artifactId>glowstone</artifactId>
+            <version>1.10.2-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>net.sf.jopt-simple</groupId>

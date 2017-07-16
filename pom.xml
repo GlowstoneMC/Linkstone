@@ -6,18 +6,17 @@
     <packaging>jar</packaging>
     <version>1.0.0</version>
     <name>Linkstone</name>
-    <url>http://www.bukkit.org</url>
+    <url>https://www.glowstone.net</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <api.version>unknown</api.version>
-        <minecraft.version>1.10.2</minecraft.version>
-        <minecraft_version>1_10_R1</minecraft_version>
-        <bukkit.version>1.10.2-R0.1-SNAPSHOT</bukkit.version>
+        <api.version>1.12-R0.1-SNAPSHOT</api.version>
+        <minecraft_version>1_12_R1</minecraft_version>
         <buildtag.prefix>git-Bukkit-</buildtag.prefix>
         <buildtag.suffix></buildtag.suffix>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 	
     <repositories>
@@ -30,20 +29,7 @@
     </repositories>
 
     <dependencies>
-		<!-- CraftBukkit/Spigot dependencies
-        <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>${project.version}</version>
-            <scope>compile</scope>
-        </dependency>	
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>minecraft-server</artifactId>
-            <version>${minecraft.version}-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency> -->
-	<dependency>
+	    <dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowkit</artifactId>
             <version>${bukkit.version}</version>
@@ -51,19 +37,7 @@
 	    <dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowstone</artifactId>
-            <version>1.10.2-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>net.sf.jopt-simple</groupId>
-            <artifactId>jopt-simple</artifactId>
-            <version>4.9</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>jline</groupId>
-            <artifactId>jline</artifactId>
-            <version>2.12</version>
-            <scope>compile</scope>
+            <version>2017.7.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.xerial</groupId>

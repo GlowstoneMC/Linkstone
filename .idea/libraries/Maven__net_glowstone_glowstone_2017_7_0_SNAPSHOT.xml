@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: net.glowstone:glowstone:2017.7.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/glowstone/glowstone/2017.7.0-SNAPSHOT/glowstone-2017.7.0-20170715.013107-31.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/net/glowstone/glowstone/2017.7.0-SNAPSHOT/glowstone-2017.7.0-20170715.013107-31-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/net/glowstone/glowstone/2017.7.0-SNAPSHOT/glowstone-2017.7.0-20170715.013107-31-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

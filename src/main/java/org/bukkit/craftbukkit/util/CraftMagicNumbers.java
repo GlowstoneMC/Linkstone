@@ -86,22 +86,12 @@ public final class CraftMagicNumbers implements UnsafeValues {
 
     @Override
     public ItemStack modifyItemStack(ItemStack stack, String arguments) {
-        net.minecraft.server.ItemStack nmsStack = CraftItemStack.asNMSCopy(stack);
-
-        try {
-            nmsStack.setTag((NBTTagCompound) MojangsonParser.parse(arguments));
-        } catch (MojangsonParseException ex) {
-            Logger.getLogger(CraftMagicNumbers.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        stack.setItemMeta(CraftItemStack.getItemMeta(nmsStack));
-
-        return stack;
+        return null;
     }
 
     @Override
     public Statistic getStatisticFromInternalName(String name) {
-        return CraftStatistic.getBukkitStatisticByName(name);
+        return null;
     }
 
     @Override
@@ -111,15 +101,7 @@ public final class CraftMagicNumbers implements UnsafeValues {
 
     @Override
     public List<String> tabCompleteInternalStatisticOrAchievementName(String token, List<String> completions) {
-        List<String> matches = new ArrayList<String>();
-        Iterator iterator = StatisticList.stats.iterator();
-        while (iterator.hasNext()) {
-            String statistic = ((net.minecraft.server.Statistic) iterator.next()).name;
-            if (statistic.startsWith(token)) {
-                matches.add(statistic);
-            }
-        }
-        return matches;
+        return null;
     }
 
     @Override

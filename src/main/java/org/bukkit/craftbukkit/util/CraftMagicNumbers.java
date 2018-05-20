@@ -57,8 +57,8 @@ public final class CraftMagicNumbers implements UnsafeValues {
     }
 
     @Deprecated
-    public static Item getItem(int id) {
-        return 0;
+    public static Object getItem(int id) {
+        return null;
     }
 
     @Deprecated

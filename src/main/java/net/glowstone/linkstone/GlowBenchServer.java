@@ -1,4 +1,4 @@
-package net.glowstone;
+package net.glowstone.linkstone;
 
 /**
  * TODO: Offcial Minecraft Mod API (Workbench) support. 

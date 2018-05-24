@@ -1,31 +1,15 @@
 package org.bukkit.craftbukkit.util;
 
-import com.google.common.base.Charsets;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
-import com.google.common.io.Files;
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
 import org.bukkit.Achievement;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.Statistic;
 import org.bukkit.UnsafeValues;
 import org.bukkit.advancement.Advancement;
-import org.bukkit.craftbukkit.CraftStatistic;
-import org.bukkit.craftbukkit.inventory.CraftItemStack;
+import org.bukkit.block.Block;
+import org.bukkit.entity.Item;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.util.StringUtil;
 
 @SuppressWarnings("deprecation")
 public final class CraftMagicNumbers implements UnsafeValues {
@@ -45,10 +29,10 @@ public final class CraftMagicNumbers implements UnsafeValues {
     @Deprecated
     // A bad method for bad magic.
     public static int getId(Block block) {
-        return Block.getId(block);
+        return 0;
     }
 
-    public static Material getMaterial(Obect block) {
+    public static Material getMaterial(Object block) {
         return Material.getMaterial(0);
     }
 

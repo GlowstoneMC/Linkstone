@@ -1,0 +1,7 @@
+name: Linkstone
+version: 0.1-dev
+description: Bridging the gap between Glowstone and CraftBukkit
+main: net.glowstone.linkstone.LinkPlugin
+commands:
+  linkstonetest:
+    description: Testing of linkstone functionality

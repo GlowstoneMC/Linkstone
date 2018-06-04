@@ -1,4 +1,5 @@
 package net.minecraft.server;
 
-public class EntityHuman extends EntityLiving {
+public abstract class EntityHuman extends EntityLiving {
+
 }

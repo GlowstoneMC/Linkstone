@@ -2,6 +2,10 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="lib" path="/home/isaiah/Downloads/glowstone.jar"/>
+	<classpathentry kind="lib" path="C:/Users/isaia/Desktop/oldcomput/glowstone.jar"/>
+	<classpathentry kind="lib" path="C:/Users/isaia/Desktop/oldcomput/mixin-0.7.8-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="C:/Users/isaia/Desktop/oldcomput/stickynote.jar"/>
+	<classpathentry kind="lib" path="C:/Users/isaia/Desktop/oldcomput/WhoCalled-1.1.jar"/>
+	<classpathentry kind="lib" path="F:/mavenrepo/repository/com/github/IsaiahPatton/UniversalAT/7a7fecbdac/UniversalAT-7a7fecbdac.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

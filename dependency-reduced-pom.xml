@@ -30,6 +30,7 @@
         <configuration>
           <archive>
             <manifestEntries>
+              <Main-Class>net.glowstone.linkstone.Linkstone</Main-Class>
               <Implementation-Title>CraftBukkit</Implementation-Title>
               <Implementation-Version>${describe}</Implementation-Version>
               <Implementation-Vendor>Bukkit Team</Implementation-Vendor>
@@ -46,12 +47,6 @@
               </manifestSection>
               <manifestSection>
                 <name>com/bukkit/</name>
-                <manifestEntries>
-                  <Sealed>true</Sealed>
-                </manifestEntries>
-              </manifestSection>
-              <manifestSection>
-                <name>org/bukkit/</name>
                 <manifestEntries>
                   <Sealed>true</Sealed>
                 </manifestEntries>
@@ -135,6 +130,21 @@
       <id>glowstone-snapshots</id>
       <name>Glowstone Snapshots</name>
       <url>https://repo.glowstone.net/content/repositories/snapshots/</url>
+    </repository>
+    <repository>
+      <id>jitpack.io</id>
+      <url>https://jitpack.io</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <updatePolicy>always</updatePolicy>
+      </snapshots>
+      <id>maven-repo-master</id>
+      <url>https://raw.githubusercontent.com/isaiahpatton/maven-repo/master/</url>
+    </repository>
+    <repository>
+      <id>spigot-repo</id>
+      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
   </repositories>
   <pluginRepositories>

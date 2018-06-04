@@ -1,4 +1,5 @@
 package net.minecraft.server;
 
-public class Entity {
+public abstract class Entity {
+
 }

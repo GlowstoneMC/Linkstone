@@ -1,0 +1,10 @@
+{
+  "minVersion": "0.6.9-SNAPSHOT",
+  "required": true,
+  "package": "net.glowstone.linkstone.mixins",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinBukkit",
+    "MixinGlowServer"
+  ]
+}

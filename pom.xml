@@ -26,6 +26,22 @@
             <layout>default</layout>
             <url>https://repo.glowstone.net/content/repositories/snapshots/</url>
         </repository>
+        <repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository> <!-- TODO: put on glowstone repo? -->
+		<repository>
+        	<id>maven-repo-master</id>
+        	<url>https://raw.githubusercontent.com/isaiahpatton/maven-repo/master/</url>
+        	<snapshots>
+            	<enabled>true</enabled>
+            	<updatePolicy>always</updatePolicy>
+        	</snapshots>
+    	</repository>
+		<repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
     </repositories>
 
     <dependencies>
@@ -33,11 +49,13 @@
             <groupId>net.glowstone</groupId>
             <artifactId>glowkit</artifactId>
             <version>${api.version}</version>
+            <!-- <scope>provided</scope> -->
         </dependency>
 	    <dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowstone</artifactId>
             <version>2018.5.0-SNAPSHOT</version>
+            <!-- <scope>provided</scope> -->
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
@@ -69,6 +87,23 @@
             <version>1.3</version>
             <scope>test</scope>
         </dependency>
+       	<dependency>
+       	    <!-- Using UniversalAT instead of Launchwrapper -->
+	        <groupId>com.github.IsaiahPatton</groupId> <!-- custom version -->
+	        <artifactId>UniversalAT</artifactId>
+	        <version>7a7fecbdac</version>
+        </dependency>
+        <dependency>
+       	    <!-- Custom mixins with UniversalAT above -->
+	        <groupId>net.glowstone</groupId>
+	        <artifactId>mixins</artifactId>
+	        <version>1.0</version>
+        </dependency>
+        <dependency>
+    		<groupId>it.unimi.dsi</groupId>
+    		<artifactId>fastutil</artifactId>
+    		<version>8.2.1</version>
+		</dependency>
     </dependencies>
 
     <!-- required until fixed plexus-compiler-eclipse is deployed -->
@@ -106,6 +141,7 @@
                     <archive>
                         <manifestEntries>
                             <!-- <Main-Class>org.bukkit.craftbukkit.Main</Main-Class> -->
+                            <Main-Class>net.glowstone.linkstone.Linkstone</Main-Class>
                             <Implementation-Title>CraftBukkit</Implementation-Title>
                             <Implementation-Version>${describe}</Implementation-Version>
                             <Implementation-Vendor>Bukkit Team</Implementation-Vendor>
@@ -122,12 +158,6 @@
                             </manifestSection>
                             <manifestSection>
                                 <name>com/bukkit/</name>
-                                <manifestEntries>
-                                    <Sealed>true</Sealed>
-                                </manifestEntries>
-                            </manifestSection>
-                            <manifestSection>
-                                <name>org/bukkit/</name>
                                 <manifestEntries>
                                     <Sealed>true</Sealed>
                                 </manifestEntries>
@@ -167,6 +197,21 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
+                        	<!-- <filters>
+			                	<filter>
+			                  	<artifact>net.glowstone:glowstone</artifact>
+			                  	<includes>
+			                  		<include>com/flowpowered/**</include>
+			                  		<include>org/objectweb/**</include>
+			                  		<include>org/bukkit/craftbukkit/**</include>
+			                  		<include>net/glowstone/linkstone/**</include>
+			                  	</includes>
+			                  	<excludes>
+			                    	<exclude>net/glowstone/**</exclude>
+			                    	<exclude>org/bukkit/**</exclude>
+			                  	</excludes>
+			                  	</filter>
+			              	</filters> -->
                             <relocations>
                                 <relocation>
                                     <pattern>joptsimple</pattern>

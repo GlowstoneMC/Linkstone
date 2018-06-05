@@ -6,9 +6,11 @@ org\bukkit\craftbukkit\help\CustomHelpTopic.class
 net\minecraft\server\EntityLiving.class
 net\minecraft\server\EntityPlayer.class
 net\minecraft\server\EnumMoveType.class
+org\bukkit\craftbukkit\entity\CraftHumanEntity.class
 net\glowstone\linkstone\Linkstone.class
 net\glowstone\linkstone\mixins\MixinGlowServer.class
 net\glowstone\linkstone\LinkPlugin.class
+org\bukkit\craftbukkit\entity\CraftLivingEntity.class
 net\glowstone\linkstone\GlowBenchServer.class
 net\glowstone\linkstone\PacketUtils.class
 org\bukkit\craftbukkit\util\DatFileFilter.class
@@ -30,9 +32,9 @@ net\glowstone\ServerProvider.class
 org\bukkit\craftbukkit\util\Versioning.class
 net\minecraft\server\MinecraftKey.class
 org\bukkit\craftbukkit\util\CraftMagicNumbers$NBT.class
+org\bukkit\command\PluginCommand.class
 org\bukkit\craftbukkit\util\permissions\CraftDefaultPermissions.class
 net\minecraft\server\EnumMonsterType.class
-org\bukkit\plugin\java\PluginClassLoader.class
 net\minecraft\server\Entity.class
 org\bukkit\craftbukkit\util\TerminalConsoleWriterThread.class
-co\aikar\timings\TimingsManager.class
+org\bukkit\craftbukkit\entity\CraftEntity.class

@@ -2,39 +2,48 @@ package net.minecraft.server;
 
 import org.bukkit.Bukkit;
 
+import net.glowstone.GlowServer;
+
 public class MinecraftServer {
     private String motd;
+    private GlowServer glowserver;
+    private static MinecraftServer inst;
 
     public MinecraftServer() {
+        MinecraftServer.inst = this;
+        this.glowserver = (GlowServer) Bukkit.getNonLinkstone();
         this.motd = Bukkit.getServer().getMotd(); 
     }
 
     public String getVersion() {
         return "1.12.2";
     }
+    
+    public static MinecraftServer getServer() {
+        return null == inst ? new MinecraftServer() : inst;
+    }
 
     public int getSpawnProtection() {
-        return 16;
+        return glowserver.getSpawnRadius();
     }
-    
+
     public boolean V() {
         return false; // demo mode
     }
-    
-    public void b(boolean flag) {
-        // Demomode
+
+    public void b(boolean flag) { // Demomode
     }
 
     public boolean getAllowNether() {
-        return true; // TODO: configuration
+        return glowserver.getAllowNether();
     }
 
     public int H() {
-        return Bukkit.getServer().getOnlinePlayers().size();
+        return glowserver.getOnlinePlayers().size();
     }
 
     public int I() {
-        return Bukkit.getServer().getMaxPlayers();
+        return glowserver.getMaxPlayers();
     }
 
     public String getServerModName() {
@@ -42,7 +51,7 @@ public class MinecraftServer {
     }
 
     public boolean getSpawnMonsters() {
-        return true; // TODO: read configuration
+        return glowserver.getMonstersSpawnEnabled();
     }
 
     public String getMotd() {

@@ -8,4 +8,4 @@ To achieve this, stub-code is generated to contain the same method, fields, cons
 
 # Builds
 Linkstone right now isn't fully functional right now, so if you're looking for a jar for your server than come back later when it's released.
-But, if you want to test Linkstone a precompiled jar will be at https://files.zunozap.com/linkstone/linkstone.jar but it is best to compile your self for the latest changes.
+But, if you want to test Linkstone a precompiled jar will be at the maven target folder but it is best to compile your self for the latest changes.

@@ -1,8 +1,5 @@
 package org.bukkit.craftbukkit;
 
-import net.glowstone.GlowServer;
-import net.glowstone.util.config.ServerConfig;
-
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Collection;
@@ -33,6 +30,7 @@ import org.bukkit.command.CommandMap;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.command.PluginCommand;
+import org.bukkit.craftbukkit.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryType;
@@ -54,6 +52,9 @@ import org.bukkit.scoreboard.ScoreboardManager;
 import org.bukkit.util.CachedServerIcon;
 
 import com.destroystokyo.paper.profile.PlayerProfile;
+
+import net.glowstone.GlowServer;
+import net.glowstone.entity.GlowPlayer;
 
 public class CraftServer implements Server {
     private final String serverName = "Linkstone";
@@ -345,7 +346,7 @@ public class CraftServer implements Server {
 
 	@Override
 	public Collection<? extends Player> getOnlinePlayers() {
-		return base.getOnlinePlayers();
+		return base.getOnlinePlayers(); // TODO: craftplayer
 	}
 
 	@Override
@@ -354,18 +355,18 @@ public class CraftServer implements Server {
 	}
 
 	@Override
-	public Player getPlayer(String arg0) {
-		return base.getPlayer(arg0);
+	public CraftPlayer getPlayer(String arg0) {
+		return new CraftPlayer((GlowPlayer) base.getPlayer(arg0));
 	}
 
 	@Override
-	public Player getPlayer(UUID arg0) {
-		return base.getPlayer(arg0);
+	public CraftPlayer getPlayer(UUID arg0) {
+		return new CraftPlayer((GlowPlayer) base.getPlayer(arg0));
 	}
 
 	@Override
-	public Player getPlayerExact(String arg0) {
-		return base.getPlayer(arg0);
+	public CraftPlayer getPlayerExact(String arg0) {
+		return new CraftPlayer((GlowPlayer) base.getPlayer(arg0));
 	}
 
 	@Override
@@ -535,7 +536,7 @@ public class CraftServer implements Server {
 
 	@Override
 	public List<Player> matchPlayer(String arg0) {
-		return base.matchPlayer(arg0);
+		return base.matchPlayer(arg0); // TODO: cast to craftplayer
 	}
 
 	@Override

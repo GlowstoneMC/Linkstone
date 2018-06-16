@@ -29,18 +29,30 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.scoreboard.Scoreboard;
 import com.destroystokyo.paper.Title;
 import com.destroystokyo.paper.profile.PlayerProfile;
+import com.mojang.authlib.GameProfile;
 
 import net.glowstone.GlowOfflinePlayer;
 import net.glowstone.entity.GlowPlayer;
 import net.md_5.bungee.api.chat.BaseComponent;
+import net.minecraft.server.EntityPlayer;
 
 @DelegateDeserialization(GlowOfflinePlayer.class)
 public class CraftPlayer extends CraftHumanEntity implements Player {
     private GlowPlayer base;
+    private EntityPlayer nms;
 
     public CraftPlayer(GlowPlayer p) {
         super(p);
         this.base = p;
+        this.nms = new EntityPlayer(base);
+    }
+
+    public GameProfile getProfile() {
+        return getHandle().getProfile();
+    }
+
+    public EntityPlayer getHandle() {
+        return nms;
     }
 
     @Override
@@ -80,7 +92,7 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
 
     @Override
     public Player getPlayer() {
-        return base.getPlayer(); // LINKSTONE AUTO GENERATED
+        return this;
     }
 
     @Override
@@ -898,5 +910,19 @@ public class CraftPlayer extends CraftHumanEntity implements Player {
     @Override
     public void updateTitle(Title arg0) {
         base.updateTitle(arg0); // LINKSTONE AUTO GENERATED
+    }
+
+    public void removeDisconnectingPlayer(Player player) {
+        // TODO
+    }
+
+    @Override
+    public String toString() {
+        return "CraftPlayer{" + "name=" + getName() + '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return base.hashCode(); // TODO
     }
 }

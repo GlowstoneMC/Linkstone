@@ -37,9 +37,6 @@ import com.destroystokyo.paper.profile.PlayerProfile;
 import net.glowstone.GlowServer;
 import net.glowstone.util.config.ServerConfig;
 
-/**
- * Represents the Bukkit core, for version and Server singleton handling
- */
 public final class Bukkit {
     private static Server server;
     private static Server nonlinkstone;
@@ -77,9 +74,8 @@ public final class Bukkit {
      * @param server Server instance
      */
     public static void setServer(Server server) {
-        if (Bukkit.nonlinkstone != null) {
+        if (Bukkit.nonlinkstone != null && Bukkit.server != null)
             throw new UnsupportedOperationException("Cannot redefine singleton Server");
-        }
 
         Bukkit.server = new CraftServer((GlowServer)server);
         Bukkit.nonlinkstone = server;
@@ -353,7 +349,7 @@ public final class Bukkit {
      * @see Server#configureDbConfig(ServerConfig config)
      */
     public static void configureDbConfig(ServerConfig config) {
-        // TODO
+        // TODO LINKSTONE
     }
 
     /**

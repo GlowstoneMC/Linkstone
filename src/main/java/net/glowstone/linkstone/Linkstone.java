@@ -13,6 +13,8 @@ import java.util.concurrent.TimeUnit;
 import org.bukkit.Bukkit;
 import org.bukkit.craftbukkit.CraftServer;
 
+import net.minecraft.server.MinecraftServer;
+
 public class Linkstone {
     public static String[] args;
 
@@ -20,7 +22,7 @@ public class Linkstone {
         // TODO: ASM class trickery
 
 	    // TODO: I'm just going to pack Glowstone with the Linkstone jar because 
-	    // TODO: trying to use sponge's Mixins with a Launchwrapper replacment is very errorfull (Fix one error, two more showup)
+	    // TODO: trying to use sponge's Mixins with a Launchwrapper replacment doesn't end well
     }
 
     public static void main(String[] arguments) throws MalformedURLException, IOException {
@@ -34,16 +36,6 @@ public class Linkstone {
     		return;
     	}
     	addURL(glowjar.toURI().toURL());*/
-    	Timer timer = new Timer();
-    	timer.schedule(new TimerTask() {
-    	    @Override
-    	    public void run() {
-    	      System.out.println("running linkstone debug:");
-    	      System.out.println(Bukkit.getServer().toString());
-    	      System.out.println(((CraftServer)Bukkit.getServer()).toString());
-    	    }
-    	  }, TimeUnit.MINUTES.toMillis(2));
-    	
     	net.glowstone.GlowServer.main(args);
     	//Launch.launch(new LinkstoneTweeker());
     }

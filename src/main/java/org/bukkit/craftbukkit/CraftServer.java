@@ -2,6 +2,7 @@ package org.bukkit.craftbukkit;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -44,6 +45,7 @@ import org.bukkit.inventory.Merchant;
 import org.bukkit.inventory.Recipe;
 import org.bukkit.map.MapView;
 import org.bukkit.plugin.Plugin;
+import org.bukkit.plugin.PluginLoadOrder;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.ServicesManager;
 import org.bukkit.plugin.messaging.Messenger;
@@ -55,6 +57,8 @@ import com.destroystokyo.paper.profile.PlayerProfile;
 
 import net.glowstone.GlowServer;
 import net.glowstone.entity.GlowPlayer;
+import net.minecraft.server.ICommandListener;
+import net.minecraft.server.MinecraftServer;
 
 public class CraftServer implements Server {
     private final String serverName = "Linkstone";
@@ -65,6 +69,49 @@ public class CraftServer implements Server {
     public CraftServer(GlowServer server) {
         this.base = server;
     }
+    
+    public boolean getPermissionOverride(ICommandListener listener) {
+        return false;
+    }
+
+    public boolean getCommandBlockOverride(String command) {
+        return false;
+    }
+
+    private File getConfigFile() {
+        return null;
+    }
+
+    private File getCommandsConfigFile() {
+        return null;
+    }
+
+    private void saveConfig() {
+        base.getConfig().save();
+    }
+
+    private void saveCommandsConfig() {
+    }
+
+    public void loadPlugins() {
+    }
+
+    public void enablePlugins(PluginLoadOrder type) {
+    }
+
+    public MinecraftServer getServer() {
+        return MinecraftServer.getServer();
+    }
+
+    public void disablePlugins() {
+        base.getPluginManager().disablePlugins();
+    }
+
+    private void setVanillaCommands() {
+    }
+
+    private void enablePlugin(Plugin plugin) {
+    }
 
     @Override
     public String toString() {
@@ -73,7 +120,7 @@ public class CraftServer implements Server {
 
     @Override
     public String getName() {
-        return "Linkstone";
+        return serverName;
     }
 
     @Override
@@ -536,7 +583,11 @@ public class CraftServer implements Server {
 
 	@Override
 	public List<Player> matchPlayer(String arg0) {
-		return base.matchPlayer(arg0); // TODO: cast to craftplayer
+	    List<Player> list = new ArrayList<>();
+	    for (Player p : base.matchPlayer(arg0)) {
+	        list.add(new CraftPlayer((GlowPlayer) p));
+	    }
+		return list;
 	}
 
 	@Override

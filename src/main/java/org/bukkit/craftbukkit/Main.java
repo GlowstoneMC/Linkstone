@@ -9,6 +9,7 @@ public class Main {
     public static boolean useConsole = true;
 
     public static void main(String[] args) {
+        System.out.println("Loading Linkstone...");
         try {
             net.glowstone.linkstone.Linkstone.main(args);
         } catch (IOException e) {

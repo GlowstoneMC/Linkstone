@@ -1,6 +1,5 @@
 package org.bukkit.craftbukkit;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
 
@@ -10,11 +9,7 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("Loading Linkstone...");
-        try {
-            net.glowstone.linkstone.Linkstone.main(args);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        net.glowstone.linkstone.Linkstone.main(args);
     }
 
     private static List<String> asList(String... params) {

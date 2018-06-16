@@ -1,20 +1,5 @@
 package net.glowstone.linkstone;
 
-import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.concurrent.TimeUnit;
-
-import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.CraftServer;
-
-import net.minecraft.server.MinecraftServer;
-
 public class Linkstone {
     public static String[] args;
 
@@ -25,33 +10,13 @@ public class Linkstone {
 	    // TODO: trying to use sponge's Mixins with a Launchwrapper replacment doesn't end well
     }
 
-    public static void main(String[] arguments) throws MalformedURLException, IOException {
+    public static void main(String[] arguments) {
     	args = arguments;
 
-    	System.out.println("Welcome to Linkstone! Your server is starting.\nLinkstone is an addon to Glowstone for NMS/OBC compatability");
-    	File config = new File("linkstone.yml");
-    	/*File glowjar = new File("glowstone.jar"); // TODO: config jar name?
-    	if (!glowjar.exists()) {
-    		System.err.println("Glowstone.jar does not exist");
-    		return;
-    	}
-    	addURL(glowjar.toURI().toURL());*/
+    	System.out.println("Welcome to Linkstone! Bridging the gap between CraftBukkit and Glowstone");
     	net.glowstone.GlowServer.main(args);
-    	//Launch.launch(new LinkstoneTweeker());
-    }
 
-    private static void addURL(URL u) throws IOException {
-        System.out.println("Adding url to classpath");
-        URLClassLoader sysloader = (URLClassLoader) ClassLoader.getSystemClassLoader();
-        Class<?> sysclass = URLClassLoader.class;
-
-        try {
-            Method method = sysclass.getDeclaredMethod("addURL", new Class[]{URL.class});
-            method.setAccessible(true);
-            method.invoke(sysloader, new Object[]{u});
-        } catch (Throwable t) {
-            t.printStackTrace();
-            throw new IOException("Error, could not add URL to system classloader");
-        }
+    	// addURL(glowjar.toURI().toURL());
+    	// Launch.launch(new LinkstoneTweeker());
     }
 }

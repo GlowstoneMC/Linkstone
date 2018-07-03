@@ -47,7 +47,7 @@ public class TemplateTransformer {
             if(!fieldMeta.hasAnnotation())continue;
 
             for(MethodNode getter : accessors.getGetters(fn)) {
-                MethodMeta meta = MethodMeta.from(getter);
+                GetterMeta meta = GetterMeta.from(getter);
                 if(!meta.getVersions().contains(this.version)) {
                     cn.methods.remove(getter);
                 }
@@ -57,9 +57,9 @@ public class TemplateTransformer {
             }
 
             for(MethodNode setter : accessors.getSetters(fn)) {
-                MethodMeta meta = MethodMeta.from(setter);
+                SetterMeta meta = SetterMeta.from(setter);
                 if(!meta.getVersions().contains(this.version)) {
-                    cn.methods.remove(meta);
+                    cn.methods.remove(setter);
                 }
                 setter.access = setPublic(setter.access);
                 setter.name = SETTER_PREFIX + fn.name;

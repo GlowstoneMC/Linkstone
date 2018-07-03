@@ -1,11 +1,10 @@
 package me.aki.linkstone.runtime;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 public class FieldSet {
     private final Set<FieldDescriptor> fields = new HashSet<>();
+    private final Map<String, Set<FieldDescriptor>> fieldsByClass = new HashMap<>();
 
     public boolean contains(String classname, String name, String descriptor) {
         FieldDescriptor fieldDescriptor = new FieldDescriptor(classname, name, descriptor);
@@ -14,12 +13,23 @@ public class FieldSet {
 
     public boolean remove(String classname, String name, String descriptor) {
         FieldDescriptor fieldDescriptor = new FieldDescriptor(classname, name, descriptor);
-        return fields.remove(fieldDescriptor);
+        boolean wasRemoved = fields.remove(fieldDescriptor);
+        if(wasRemoved) {
+            fieldsByClass.get(classname).remove(fieldDescriptor);
+        }
+        return wasRemoved;
     }
 
     public boolean add(String classname, String name, String descriptor) {
         FieldDescriptor fieldDescriptor = new FieldDescriptor(classname, name, descriptor);
+
+        fieldsByClass.computeIfAbsent(classname, x -> new HashSet<>()).add(fieldDescriptor);
         return fields.add(fieldDescriptor);
+    }
+
+    public Set<FieldDescriptor> get(String className) {
+        Set<FieldDescriptor> set = fieldsByClass.get(className);
+        return set == null ? Collections.emptySet() : Collections.unmodifiableSet(set);
     }
 
     private class FieldDescriptor {

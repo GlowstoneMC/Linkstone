@@ -8,7 +8,7 @@ public class Main {
     public static boolean useConsole = true;
 
     public static void main(String[] args) {
-        System.out.println("Loading Linkstone...");
+        System.out.println("Calling net.glowstone.linkstone.Linkstoone.main(String[]) ....");
         net.glowstone.linkstone.Linkstone.main(args);
     }
 

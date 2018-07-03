@@ -180,6 +180,10 @@ extends BaseBlockPosition {
         public MutableBlockPosition(int i2, int j, int k) {
             super(0, 0, 0);
         }
+
+        public void setValues(int chunkX, int i, int chunkZ) {
+            // TODO Auto-generated method stub
+        }
     }
 
     public static final class PooledBlockPosition extends MutableBlockPosition { // TODO

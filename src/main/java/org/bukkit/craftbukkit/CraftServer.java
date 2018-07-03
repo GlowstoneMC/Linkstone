@@ -31,6 +31,7 @@ import org.bukkit.command.CommandMap;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.command.PluginCommand;
+import org.bukkit.craftbukkit.boss.CraftBossBar;
 import org.bukkit.craftbukkit.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -69,7 +70,7 @@ public class CraftServer implements Server {
     public CraftServer(GlowServer server) {
         this.base = server;
     }
-    
+
     public boolean getPermissionOverride(ICommandListener listener) {
         return false;
     }
@@ -94,9 +95,11 @@ public class CraftServer implements Server {
     }
 
     public void loadPlugins() {
+        
     }
 
     public void enablePlugins(PluginLoadOrder type) {
+        System.out.println("[Linkstone]: CraftServer Unable to enable plugins ");
     }
 
     public MinecraftServer getServer() {
@@ -111,6 +114,7 @@ public class CraftServer implements Server {
     }
 
     private void enablePlugin(Plugin plugin) {
+        base.getPluginManager().enablePlugin(plugin);
     }
 
     @Override
@@ -132,7 +136,6 @@ public class CraftServer implements Server {
     public String getBukkitVersion() {
         return "1.12.2";
     }
-
 
 	@Override
 	public Set<String> getListeningPluginChannels() {
@@ -176,7 +179,7 @@ public class CraftServer implements Server {
 
 	@Override
 	public BossBar createBossBar(String arg0, BarColor arg1, BarStyle arg2, BarFlag... arg3) {
-		return base.createBossBar(arg0, arg1, arg2, arg3);
+		return new CraftBossBar(arg0, arg1, arg2, arg3);
 	}
 
 	@Override
@@ -574,19 +577,18 @@ public class CraftServer implements Server {
 	@Override
 	public CachedServerIcon loadServerIcon(File arg0) throws IllegalArgumentException, Exception {
 		return base.loadServerIcon(arg0);
-	}
+    }
 
-	@Override
-	public CachedServerIcon loadServerIcon(BufferedImage arg0) throws IllegalArgumentException, Exception {
-		return base.loadServerIcon(arg0);
-	}
+    @Override
+    public CachedServerIcon loadServerIcon(BufferedImage arg0) throws IllegalArgumentException, Exception {
+	    return base.loadServerIcon(arg0);
+    }
 
-	@Override
-	public List<Player> matchPlayer(String arg0) {
-	    List<Player> list = new ArrayList<>();
-	    for (Player p : base.matchPlayer(arg0)) {
-	        list.add(new CraftPlayer((GlowPlayer) p));
-	    }
+    @Override
+    public List<Player> matchPlayer(String arg0) { 
+        List<Player> list = new ArrayList<>();
+        for (Player p : base.matchPlayer(arg0)) 
+            list.add(new CraftPlayer((GlowPlayer) p));
 		return list;
 	}
 

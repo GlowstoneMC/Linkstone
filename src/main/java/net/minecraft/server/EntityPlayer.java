@@ -8,6 +8,7 @@ import net.glowstone.entity.GlowPlayer;
 
 // 1_12_2_R1
 public class EntityPlayer extends EntityHuman {
+
     public GlowPlayer glowPlayer;
     public PlayerConnection playerConnection;
 
@@ -36,4 +37,5 @@ public class EntityPlayer extends EntityHuman {
     public boolean z() { // isCreative
         return glowPlayer.getGameMode() == GameMode.CREATIVE;
     }
+
 }

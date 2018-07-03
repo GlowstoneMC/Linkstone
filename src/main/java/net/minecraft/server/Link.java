@@ -1,8 +1,12 @@
 package net.minecraft.server;
 
-// Linkstone stuff
+/**
+ * This file is part of Linkstone
+ */
 public class Link {
+
     public static void fixme(String methodname) {
-        System.out.println("[LINKSTONE]: MethodNotImplmented: net.minecraft.server." + methodname);
+        System.err.println("[LINKSTONE]: MethodNotImplmented: net.minecraft.server." + methodname);
     }
+
 }

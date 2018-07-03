@@ -47,7 +47,7 @@ public class CrashReport {
     }
 
     public String e() { // get content
-        return "Ooops! Minecraft has crashed!\nLinkstone has not implmented CrashReports so no infomation is advatable.";
+        return "Ooops! Minecraft has crashed!\nLinkstone has not implmented CrashReports so no infomation.";
     }
 
     public boolean a(File file) { // save crash report to file

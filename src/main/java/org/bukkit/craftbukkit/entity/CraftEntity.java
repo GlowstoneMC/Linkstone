@@ -9,6 +9,7 @@ import org.bukkit.Location;
 import org.bukkit.Server;
 import org.bukkit.World;
 import org.bukkit.block.PistonMoveReaction;
+import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.entity.EntityDamageEvent;
@@ -26,6 +27,11 @@ public class CraftEntity implements org.bukkit.entity.Entity {
     private GlowEntity base;
     public CraftEntity(GlowEntity e) {
         this.base = e;
+    }
+
+    public CraftEntity(CraftServer server, net.minecraft.server.Entity entity) {
+        System.out.println("[LINKSTONE]: TODO: CraftEntity(CraftServer, net.minecraft.server.Entity)");
+        // TODO
     }
 
     @Override

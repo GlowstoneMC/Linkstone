@@ -33,7 +33,6 @@ public class MojangStatisticsGenerator {
     }
 
     public void e() {
-        // timer cancel
     }
 
     public long g() {

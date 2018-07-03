@@ -52,11 +52,9 @@ public class CrashReportSystemDetails {
     }
 
     public static void a(CrashReportSystemDetails crashReportSystemDetails, final BlockPosition blockPosition, final Block block, final int n) {
-        // Add block type, data value, & location to crashReportSystemDetails
     }
 
     public static void a(CrashReportSystemDetails crashReportSystemDetails, final BlockPosition blockPosition, final IBlockData iBlockData) {
-        // Add "Block" & "Block location" to crashReportSystemDetails
     }
 
     static class CrashReportDetail {

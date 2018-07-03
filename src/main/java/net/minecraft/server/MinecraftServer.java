@@ -101,4 +101,8 @@ public abstract class MinecraftServer implements IMojangStatistics {
     public boolean isRunning() {
         return true; // TODO
     }
+
+    public boolean getPVP() {
+        return glowserver.isPvpEnabled();
+    }
 }

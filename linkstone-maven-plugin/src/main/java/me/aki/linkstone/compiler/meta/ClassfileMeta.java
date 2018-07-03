@@ -23,7 +23,7 @@ public class ClassfileMeta extends NamedMeta {
         String[] split = cn.name.split("/");
         String className = split[split.length - 1];
 
-        ClassfileMeta meta = new ClassfileMeta(className, new HashMap<>());
+        ClassfileMeta meta = new ClassfileMeta(className);
         if(cn.invisibleAnnotations != null) {
             for (AnnotationNode an : cn.invisibleAnnotations) {
                 if (an.desc.equals(CLASSFILE_ANNOTION_DESC) ||
@@ -35,7 +35,7 @@ public class ClassfileMeta extends NamedMeta {
         return meta;
     }
 
-    private ClassfileMeta(String templateName, Map<Version, Optional<String>> mapping) {
-        super(templateName, mapping);
+    private ClassfileMeta(String templateName) {
+        super(templateName);
     }
 }

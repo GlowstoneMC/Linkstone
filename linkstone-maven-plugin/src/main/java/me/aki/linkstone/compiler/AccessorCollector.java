@@ -30,11 +30,14 @@ public class AccessorCollector {
 
             fields.add(fn);
 
+            Set<MethodNode> getters = getterMap.computeIfAbsent(fn, x -> new HashSet<>());
+            Set<MethodNode> setters = setterMap.computeIfAbsent(fn, x -> new HashSet<>());
+
+            if(fieldMeta.isGenerate())continue;
+
             boolean isFinal = (fn.access & Opcodes.ACC_FINAL) != 0;
             Set<Version> notYetSeenGetterVersions = new HashSet<>(fieldMeta.getVersions());
             Set<Version> notYetSeenSetterVersions = new HashSet<>(fieldMeta.getVersions());
-            Set<MethodNode> getters = getterMap.computeIfAbsent(fn, x -> new HashSet<>());
-            Set<MethodNode> setters = setterMap.computeIfAbsent(fn, x -> new HashSet<>());
 
             while (methodIter.hasNext()) {
                 MethodNode mn = methodIter.next();

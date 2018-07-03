@@ -17,7 +17,7 @@ public class GetterMeta extends UnnamedMeta {
     private final static String GETTER_ANNOTION_DESC = Type.getDescriptor(Getter.class);
 
     public static GetterMeta from(MethodNode mn) {
-        GetterMeta meta = new GetterMeta(new HashSet<>());
+        GetterMeta meta = new GetterMeta();
         if(mn.invisibleAnnotations != null) {
             for (AnnotationNode an : mn.invisibleAnnotations) {
                 if (an.desc.equals(GETTER_ANNOTION_DESC)) {
@@ -26,9 +26,5 @@ public class GetterMeta extends UnnamedMeta {
             }
         }
         return meta;
-    }
-
-    private GetterMeta(Set<Version> versions) {
-        super(versions);
     }
 }

@@ -1,5 +1,7 @@
 package me.aki.linkstone.compiler;
 
+import static me.aki.linkstone.compiler.LinkstoneCompiler.GETTER_PREFIX;
+import static me.aki.linkstone.compiler.LinkstoneCompiler.SETTER_PREFIX;
 import static org.objectweb.asm.Opcodes.*;
 import me.aki.linkstone.compiler.meta.*;
 import me.aki.linkstone.annotations.Version;
@@ -14,9 +16,6 @@ import java.util.*;
  * It does also rename getters and setters.
  */
 public class TemplateTransformer {
-    private final static String GETTER_PREFIX = "$linkstone$getter$";
-    private final static String SETTER_PREFIX = "$linkstone$setter$";
-
     private final Version version;
 
     public TemplateTransformer(Version version) {

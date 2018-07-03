@@ -17,7 +17,7 @@ public class SetterMeta extends UnnamedMeta {
     private final static String SETTER_ANNOTION_DESC = Type.getDescriptor(Setter.class);
 
     public static SetterMeta from(MethodNode mn) {
-        SetterMeta meta = new SetterMeta(new HashSet<>());
+        SetterMeta meta = new SetterMeta();
         if(mn.invisibleAnnotations != null) {
             for (AnnotationNode an : mn.invisibleAnnotations) {
                 if (an.desc.equals(SETTER_ANNOTION_DESC)) {
@@ -26,9 +26,5 @@ public class SetterMeta extends UnnamedMeta {
             }
         }
         return meta;
-    }
-
-    private SetterMeta(Set<Version> versions) {
-        super(versions);
     }
 }

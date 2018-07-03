@@ -2,6 +2,7 @@ package me.aki.linkstone.compiler.meta;
 
 import me.aki.linkstone.annotations.Version;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
@@ -10,7 +11,11 @@ public abstract class NamedMeta implements Meta {
     private final String templateName;
     private final Map<Version, Optional<String>> mapping;
 
-    public NamedMeta(String templateName, Map<Version, Optional<String>> mapping) {
+    public NamedMeta(String templateName) {
+        this(templateName, new HashMap<>());
+    }
+
+    private NamedMeta(String templateName, Map<Version, Optional<String>> mapping) {
         this.templateName = templateName;
         this.mapping = mapping;
     }

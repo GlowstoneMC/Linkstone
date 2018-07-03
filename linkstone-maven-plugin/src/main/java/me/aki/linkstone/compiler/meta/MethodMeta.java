@@ -20,7 +20,7 @@ public class MethodMeta extends NamedMeta {
     private final static String METHOD_CONTAINER_ANNOTION_DESC = Type.getDescriptor(MethodContainer.class);
 
     public static MethodMeta from(MethodNode mn) {
-        MethodMeta meta = new MethodMeta(mn.name, new HashMap<>());
+        MethodMeta meta = new MethodMeta(mn.name);
         if(mn.invisibleAnnotations != null) {
             for (AnnotationNode an : mn.invisibleAnnotations) {
                 if (an.desc.equals(METHOD_ANNOTION_DESC) ||
@@ -32,7 +32,7 @@ public class MethodMeta extends NamedMeta {
         return meta;
     }
 
-    private MethodMeta(String templateName, Map<Version, Optional<String>> mapping) {
-        super(templateName, mapping);
+    private MethodMeta(String templateName) {
+        super(templateName);
     }
 }

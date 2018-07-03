@@ -22,7 +22,7 @@ public class PackageMeta extends NamedMeta {
 
     public static PackageMeta from(ClassNode cn) {
         String pkg = cn.name.substring(0, cn.name.lastIndexOf('/'));
-        PackageMeta meta = new PackageMeta(pkg, new HashMap<>());
+        PackageMeta meta = new PackageMeta(pkg);
         if(cn.invisibleAnnotations != null) {
             for (AnnotationNode an : cn.invisibleAnnotations) {
                 if (an.desc.equals(PACKAGE_ANNOTION_DESC) ||
@@ -36,8 +36,8 @@ public class PackageMeta extends NamedMeta {
 
     private final Map<Version, Mode> targetMap = new HashMap<>();
 
-    private PackageMeta(String templateName, Map<Version, Optional<String>> mapping) {
-        super(templateName, mapping);
+    private PackageMeta(String templateName) {
+        super(templateName);
     }
 
     /**

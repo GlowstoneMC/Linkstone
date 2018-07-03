@@ -3,6 +3,7 @@ package me.aki.linkstone.compiler;
 import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.compiler.linting.*;
 import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.commons.ClassRemapper;
 import org.objectweb.asm.commons.Remapper;
@@ -13,6 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LinkstoneCompiler {
+    public final static String GETTER_PREFIX = "$linkstone$getter$";
+    public final static String SETTER_PREFIX = "$linkstone$setter$";
+
     private final static Linter[] LINTER = new Linter[] {
             new DuplicatedClassMemberLinter(),
             new IllegalGetterSetterSignatureLinter(),
@@ -47,8 +51,11 @@ public class LinkstoneCompiler {
     public List<ClassNode> generateClasses(List<ClassNode> templates, Version version) {
         MappingModel mappingModel = collectMappingModel(templates, version);
 
-        // Leave only classes, fields amd methods that exists in the current version
+        // Leave only classes, fields and methods that exist in the current version
         new TemplateTransformer(version).processClasses(templates);
+
+        // Generate getters and setters
+        new AccessorGenerateVisitor(version).generateAccessors(templates);
 
         // Renames classes, methods, ... to their annotated name
         return remapClasses(templates, mappingModel);

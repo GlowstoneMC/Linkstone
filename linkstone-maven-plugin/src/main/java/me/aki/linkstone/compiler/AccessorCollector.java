@@ -69,6 +69,19 @@ public class AccessorCollector {
             onMissingAccessorError(fn, notYetSeenGetterVersions, notYetSeenSetterVersions);
             break fieldLoop;
         }
+
+        while(methodIter.hasNext()) {
+            MethodNode mn = methodIter.next();
+            GetterMeta getterMeta = GetterMeta.from(mn);
+            if(getterMeta.hasAnnotation()) {
+                onUnusedGetterError(mn);
+            } else {
+                SetterMeta setterMeta = SetterMeta.from(mn);
+                if(setterMeta.hasAnnotation()) {
+                    onUnusedSetterError(mn);
+                }
+            }
+        }
     }
 
 
@@ -82,6 +95,14 @@ public class AccessorCollector {
 
     protected void onDuplicatedSetterError(FieldNode fn, Version version) {
         throw new IllegalStateException("Duplicated setter");
+    }
+
+    protected void onUnusedGetterError(MethodNode mn) {
+        throw new IllegalStateException("Unused getter");
+    }
+
+    protected void onUnusedSetterError(MethodNode mn) {
+        throw new IllegalStateException("Unused setter");
     }
 
     /**

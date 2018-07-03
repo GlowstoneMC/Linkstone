@@ -59,6 +59,18 @@ public class IllegalGetterSetterSignatureLinter implements Linter {
                 String message = "Duplicated setter for version " + version.getName();
                 report.addError(new ErrorReport.Error(message, location));
             }
+
+            @Override
+            protected void onUnusedGetterError(MethodNode mn) {
+                ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                report.addError(new ErrorReport.Error("Unused getter", location));
+            }
+
+            @Override
+            protected void onUnusedSetterError(MethodNode mn) {
+                ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                report.addError(new ErrorReport.Error("Unused setter", location));
+            }
         };
     }
 

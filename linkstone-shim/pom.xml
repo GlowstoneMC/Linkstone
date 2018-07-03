@@ -12,14 +12,11 @@
     <packaging>jar</packaging>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <api.version>1.12.2-R4.2-SNAPSHOT</api.version>
         <minecraft_version>1_12_R1</minecraft_version>
         <buildtag.prefix>git-Bukkit-</buildtag.prefix>
         <buildtag.suffix></buildtag.suffix>
         <maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 	
     <repositories>
@@ -32,6 +29,12 @@
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>linkstone-annotations</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
 	    <dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowkit</artifactId>
@@ -42,10 +45,11 @@
             <artifactId>glowstone</artifactId>
             <version>2018.7.0-SNAPSHOT</version>
         </dependency>
+
         <dependency>
             <groupId>org.ow2.asm</groupId>
             <artifactId>asm</artifactId>
-            <version>5.0.3</version>
+            <version>${asm.version}</version>
         </dependency>
         <dependency>
             <groupId>org.xerial</groupId>
@@ -88,7 +92,7 @@
             <plugin>
                 <groupId>net.md-5</groupId>
                 <artifactId>scriptus</artifactId>
-                <version>0.2</version>
+                <version>0.3.1</version>
                 <configuration>
                     <format>git-Bukkit-%s</format>
                 </configuration>
@@ -100,11 +104,27 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>  
+            </plugin>
+            <plugin>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>linkstone-maven-plugin</artifactId>
+                <version>${project.version}</version>
+                <configuration>
+                    <version>${minecraft_version}</version>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>process-classes</phase>
+                        <goals>
+                            <goal>compile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.6</version>
+                <version>3.1.0</version>
                 <configuration>
                     <archive>
                         <manifestEntries>
@@ -142,7 +162,7 @@
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>animal-sniffer-maven-plugin</artifactId>
-                <version>1.14</version>
+                <version>1.17</version>
                 <executions>
                     <execution>
                         <phase>process-classes</phase>
@@ -162,7 +182,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.1</version>
+                <version>3.1.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
@@ -187,17 +207,6 @@
                                     <pattern>org.gjt</pattern>
                                     <shadedPattern>org.bukkit.craftbukkit.libs.org.gjt</shadedPattern>
                                 </relocation>
-                                <relocation>
-                                    <pattern>org.bukkit.craftbukkit</pattern>
-                                    <shadedPattern>org.bukkit.craftbukkit.v${minecraft_version}</shadedPattern>
-                                    <excludes>
-                                        <exclude>org.bukkit.craftbukkit.Main*</exclude>
-                                    </excludes>
-                                </relocation>
-                                <relocation>
-                                    <pattern>net.minecraft.server</pattern>
-                                    <shadedPattern>net.minecraft.server.v${minecraft_version}</shadedPattern>
-                                </relocation>
                             </relocations>
                         </configuration>
                     </execution>
@@ -207,7 +216,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <!-- versions after this appear to be broken -->
-                <version>3.1</version>
+                <version>3.7.0</version>
                 <configuration>
                     <!-- we use the Eclipse compiler as it doesn't need a JDK -->
                     <compilerId>eclipse</compilerId>
@@ -226,7 +235,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.19</version>
+                <version>2.22.0</version>
                 <configuration>
                     <workingDirectory>${basedir}/target/test-server</workingDirectory>
                     <excludes>

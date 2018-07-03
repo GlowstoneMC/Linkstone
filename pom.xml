@@ -6,11 +6,21 @@
 
     <groupId>net.glowstone</groupId>
     <artifactId>linkstone</artifactId>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
     <url>https://www.glowstone.net</url>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <asm.version>6.2</asm.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
     <modules>
-        <module>shim</module>
+        <module>linkstone-annotations</module>
+        <module>linkstone-maven-plugin</module>
+        <module>linkstone-runtime</module>
+        <module>linkstone-shim</module>
     </modules>
 </project>

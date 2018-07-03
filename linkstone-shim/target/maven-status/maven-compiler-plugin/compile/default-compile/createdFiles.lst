@@ -1,0 +1,9 @@
+net/minecraft/server/EntityLiving.class
+net/minecraft/server/EntityHuman.class
+net/minecraft/server/PacketListener.class
+net/minecraft/server/Entity.class
+net/minecraft/server/Packet.class
+net/minecraft/server/EntityPlayer.class
+net/minecraft/server/package-info.class
+net/minecraft/server/PlayerConnection.class
+net/glowstone/linkstone/Linkstone.class

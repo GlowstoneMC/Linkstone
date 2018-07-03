@@ -32,7 +32,7 @@ public class FieldSet {
         return set == null ? Collections.emptySet() : Collections.unmodifiableSet(set);
     }
 
-    private class FieldDescriptor {
+    public class FieldDescriptor {
         private final String classname;
         private final String name;
         private final String descriptor;

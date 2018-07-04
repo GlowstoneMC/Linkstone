@@ -70,7 +70,7 @@ public class OnClassInitInvokeVisitor extends ClassVisitor {
     }
 
     private void insertInvoke(MethodVisitor mv) {
-        mv.visitLdcInsn('L' + this.className + ';');
+        mv.visitLdcInsn(Type.getObjectType(this.className));
 
         boolean isInterface = method.getDeclaringClass().isInterface();
         String className = Type.getInternalName(method.getDeclaringClass());

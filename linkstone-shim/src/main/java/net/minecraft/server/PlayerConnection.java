@@ -14,7 +14,7 @@ public class PlayerConnection {
         throw new RuntimeException("NOT YET IMPLEMENTED");
     }
     @Setter(version = V1_12_R1)
-    public EntityPlayer setPlayer(EntityPlayer player) {
+    public void setPlayer(EntityPlayer player) {
         throw new RuntimeException("NOT YET IMPLEMENTED");
     }
 

@@ -18,7 +18,7 @@ public class LinkstoneFiller {
             f = new File(args[0]);
         } else {
             System.out.println("Usage: <pathToFile>");
-            f = new File("C:\\Users\\isaia\\Desktop\\oldcomput\\Linkstone\\src\\main\\java\\org\\bukkit\\craftbukkit\\block\\CraftBlock.java");
+            f = new File("C:\\Users\\isaia\\Desktop\\oldcomput\\Linkstone\\src\\main\\java\\org\\bukkit\\craftbukkit\\CraftChunk.java");
         }
 
         int i = 0;

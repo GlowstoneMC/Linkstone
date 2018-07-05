@@ -27,14 +27,6 @@
             <url>https://repo.glowstone.net/content/repositories/snapshots/</url>
         </repository>
 		<repository>
-        	<id>maven-repo-master</id>
-        	<url>https://raw.githubusercontent.com/isaiahpatton/maven-repo/master/</url>
-        	<snapshots>
-            	<enabled>true</enabled>
-            	<updatePolicy>always</updatePolicy>
-        	</snapshots>
-    	</repository>
-		<repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
         </repository>
@@ -82,12 +74,6 @@
             <artifactId>hamcrest-library</artifactId>
             <version>1.3</version>
             <scope>test</scope>
-        </dependency>
-       	<dependency>
-       	    <!-- Using UniversalAT instead of Launchwrapper because Launchwrapper is Mojang's -->
-	        <groupId>net.glowstone.linkstone</groupId> <!-- custom version -->
-	        <artifactId>UniversalAT</artifactId>
-	        <version>1.0</version>
         </dependency>
     </dependencies>
 

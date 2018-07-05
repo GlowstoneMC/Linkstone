@@ -11,8 +11,6 @@ import java.nio.file.Files;
 import java.util.Arrays;
 import java.util.List;
 
-import eu.thog92.universalat.loader.Launch;
-
 public class Linkstone {
     public static String[] args;
 
@@ -41,11 +39,10 @@ public class Linkstone {
 
     	File glowjar = new File(glowstone);
     	addURL(glowjar.toURI().toURL());
-    	Launch.launch(new LinkstoneTweeker());
     }
 
     private static void addURL(URL u) throws IOException {
-        System.out.println("Adding url to classpath");
+        System.out.println("Adding glowstone jar to classpath ...");
         URLClassLoader sysloader = (URLClassLoader) ClassLoader.getSystemClassLoader();
         Class<?> sysclass = URLClassLoader.class;
 
@@ -53,10 +50,22 @@ public class Linkstone {
             Method method = sysclass.getDeclaredMethod("addURL", new Class[]{URL.class});
             method.setAccessible(true);
             method.invoke(sysloader, u);
-            // Thread.currentThread().setContextClassLoader(sysloader);
+            Thread.currentThread().setContextClassLoader(sysloader);
         } catch (Throwable t) {
             t.printStackTrace();
-            throw new IOException("Error, could not add URL to system classloader");
+            System.err.println("Unable to launch glowstone jar. Could not add URL to classpath");
+            System.exit(1);
+            return;
+        }
+
+        System.out.println("Launching net.glowstone.GlowServer ...");
+        final Class<?> clazz;
+        try {
+            clazz = Class.forName("net.glowstone.GlowServer", false, sysloader);
+            final Method mainMethod = clazz.getMethod("main", new Class[]{String[].class});
+            mainMethod.invoke(null, (Object) args);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

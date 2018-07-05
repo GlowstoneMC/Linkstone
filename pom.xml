@@ -91,7 +91,7 @@
        	    <!-- Using UniversalAT instead of Launchwrapper because Launchwrapper is Mojang's -->
 	        <groupId>com.github.IsaiahPatton</groupId> <!-- custom version -->
 	        <artifactId>UniversalAT</artifactId>
-	        <version>7a7fecbdac</version>
+	        <version>-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

@@ -47,13 +47,14 @@ public class Linkstone {
     
     private static void addURL(URL u) throws IOException {
         System.out.println("Adding url to classpath");
-        URLClassLoader sysloader = (URLClassLoader) ClassLoader.getSystemClassLoader();
+        URLClassLoader sysloader = new URLClassLoader(new URL[]{u});
         Class<?> sysclass = URLClassLoader.class;
 
         try {
             Method method = sysclass.getDeclaredMethod("addURL", new Class[]{URL.class});
             method.setAccessible(true);
-            method.invoke(sysloader, new Object[]{u});
+            method.invoke(sysloader, u);
+            Thread.currentThread().setContextClassLoader(sysloader);
         } catch (Throwable t) {
             t.printStackTrace();
             throw new IOException("Error, could not add URL to system classloader");

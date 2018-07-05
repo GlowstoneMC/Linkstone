@@ -4,6 +4,9 @@ import sun.misc.Unsafe;
 
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Field;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.WeakHashMap;
 
 /**
  * Utility class that reflects on a {@link Field} to
@@ -35,7 +38,7 @@ public class FieldRedirectUtil {
         return isSupported;
     }
 
-    private final DynamicClassLoader classloader = new DynamicClassLoader();
+    private final Map<ClassLoader, DynamicClassLoader> classloaders = new WeakHashMap<>();
     private final Field[] accessorFields;
 
     public FieldRedirectUtil() throws NoSuchFieldException {
@@ -78,17 +81,23 @@ public class FieldRedirectUtil {
     }
 
     private Object newAccessor(Field field) throws IllegalAccessException, InstantiationException {
+        DynamicClassLoader classloader = getClassloader(field.getDeclaringClass().getClassLoader());
         FieldAccessorGenerator generator = new FieldAccessorGenerator(field);
         String className = generator.getClassName();
         Class<?> accessorClass;
 
         try {
-            accessorClass = classloader.loadClass(className);
+            accessorClass = Class.forName(className, false, classloader);
         } catch(ClassNotFoundException e) {
             byte[] bytecode = generator.generateAccessor();
             accessorClass = classloader.loadBytecode(className.replace('/', '.'), bytecode);
         }
 
         return accessorClass.newInstance();
+    }
+
+    private DynamicClassLoader getClassloader(ClassLoader classLoader) {
+        return classloaders.computeIfAbsent(classLoader,
+                loader -> new DynamicClassLoader(loader));
     }
 }

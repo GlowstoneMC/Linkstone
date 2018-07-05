@@ -82,7 +82,9 @@ public class FieldAccessorGenerator {
 
         if(!Modifier.isStatic(field.getModifiers())){
             mv.loadArg(0);
+            mv.checkCast(Type.getType(field.getDeclaringClass()));
         }
+
 
         invokeGetter(mv);
 
@@ -105,9 +107,11 @@ public class FieldAccessorGenerator {
 
         if(!Modifier.isStatic(field.getModifiers())) {
             mv.loadArg(0);
+            mv.checkCast(Type.getType(field.getDeclaringClass()));
         }
 
         mv.loadArg(1);
+        mv.checkCast(Type.getType(field.getType()));
 
         if(field.getType().isPrimitive()) {
             mv.unbox(Type.getType(field.getType()));

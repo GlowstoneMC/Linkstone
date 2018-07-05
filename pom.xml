@@ -26,10 +26,6 @@
             <layout>default</layout>
             <url>https://repo.glowstone.net/content/repositories/snapshots/</url>
         </repository>
-        <repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository> <!-- TODO: put on glowstone repo? -->
 		<repository>
         	<id>maven-repo-master</id>
         	<url>https://raw.githubusercontent.com/isaiahpatton/maven-repo/master/</url>
@@ -155,26 +151,6 @@
                     </archive>
                 </configuration>
             </plugin>
-            <!--<plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>animal-sniffer-maven-plugin</artifactId>
-                <version>1.14</version>
-                <executions>
-                    <execution>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <signature>
-                        <groupId>org.codehaus.mojo.signature</groupId>
-                        <artifactId>java16</artifactId>
-                        <version>1.1</version>
-                    </signature>
-                </configuration>
-            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -186,21 +162,6 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                        	<filters>
-			                	<filter>
-			                  	<artifact>org.spigotmc:spigot-api</artifact>
-			                  	<includes>
-			                  		<include>com/flowpowered/**</include>
-			                  		<include>org/objectweb/**</include>
-			                  		<include>org/bukkit/craftbukkit/**</include>
-			                  		<include>net/glowstone/linkstone/**</include>
-			                  	</includes>
-			                  	<excludes>
-			                    	<exclude>net/glowstone/**</exclude>
-			                    	<exclude>org/bukkit/**</exclude>
-			                  	</excludes>
-			                  	</filter>
-			              	</filters>
                             <relocations>
                                 <relocation>
                                     <pattern>joptsimple</pattern>

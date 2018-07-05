@@ -1,30 +1,23 @@
-package me.aki.linkstone.runtime;
-
-import static org.objectweb.asm.Opcodes.*;
+package me.aki.linkstone.runtime.inithook;
 
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Type;
 
-import java.lang.reflect.Method;
+import static org.objectweb.asm.Opcodes.*;
 
 /**
- * ClassVisitor that prepends a invoke of a static method in the &lt;clinit&gt; method.
+ * {@link ClassVisitor} that lets a class call a {@link ClassInitHook}.
  *
- * The static method must be of void type and take one parameter of type {@link java.lang.Class}.
+ * A invoke of {@link ClassInitHook#call(Class)} will be inserted in the static initializer.
+ * If no static initializer exists, one will be created.
  */
-public class OnClassInitInvokeVisitor extends ClassVisitor {
-    private final Method method;
+public class ClassInitInvokeVisitor extends ClassVisitor {
     private boolean wasClInitVisited = false;
     private String className;
 
-    public OnClassInitInvokeVisitor(Method method) {
-        this(method, null);
-    }
-
-    public OnClassInitInvokeVisitor(Method method, ClassVisitor cv) {
+    public ClassInitInvokeVisitor(ClassVisitor cv) {
         super(ASM6, cv);
-        this.method = method;
     }
 
     @Override
@@ -36,7 +29,7 @@ public class OnClassInitInvokeVisitor extends ClassVisitor {
     @Override
     public MethodVisitor visitMethod(int access, String name, String descriptor, String signature, String[] exceptions) {
         MethodVisitor mv = super.visitMethod(access, name, descriptor, signature, exceptions);
-        if(name.equals("<clinit>")) {
+        if(!wasClInitVisited && name.equals("<clinit>")) {
             mv = new MethodVisitor(api, mv) {
                 @Override
                 public void visitCode() {
@@ -57,7 +50,7 @@ public class OnClassInitInvokeVisitor extends ClassVisitor {
     @Override
     public void visitEnd() {
         if(!wasClInitVisited) {
-            MethodVisitor mv = visitMethod(ACC_PUBLIC | ACC_STATIC, "<clinit>", "()V", null, null);
+            MethodVisitor mv = super.visitMethod(ACC_PUBLIC | ACC_STATIC, "<clinit>", "()V", null, null);
             mv.visitCode();
 
             insertInvoke(mv);
@@ -66,14 +59,14 @@ public class OnClassInitInvokeVisitor extends ClassVisitor {
             mv.visitMaxs(1, 0);
             mv.visitEnd();
         }
+
         super.visitEnd();
     }
 
     private void insertInvoke(MethodVisitor mv) {
         mv.visitLdcInsn(Type.getObjectType(this.className));
 
-        boolean isInterface = method.getDeclaringClass().isInterface();
-        String className = Type.getInternalName(method.getDeclaringClass());
-        mv.visitMethodInsn(INVOKESTATIC, className, method.getName(), "(Ljava/lang/Class;)V", isInterface);
+        mv.visitMethodInsn(INVOKESTATIC, Type.getInternalName(ClassInitHook.class), "call",
+                "(Ljava/lang/Class;)V", false);
     }
 }

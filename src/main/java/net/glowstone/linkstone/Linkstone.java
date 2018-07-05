@@ -8,7 +8,6 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.nio.file.StandardOpenOption;
 import java.util.Arrays;
 import java.util.List;
 
@@ -44,17 +43,17 @@ public class Linkstone {
     	addURL(glowjar.toURI().toURL());
     	Launch.launch(new LinkstoneTweeker());
     }
-    
+
     private static void addURL(URL u) throws IOException {
         System.out.println("Adding url to classpath");
-        URLClassLoader sysloader = new URLClassLoader(new URL[]{u});
+        URLClassLoader sysloader = (URLClassLoader) ClassLoader.getSystemClassLoader();
         Class<?> sysclass = URLClassLoader.class;
 
         try {
             Method method = sysclass.getDeclaredMethod("addURL", new Class[]{URL.class});
             method.setAccessible(true);
             method.invoke(sysloader, u);
-            Thread.currentThread().setContextClassLoader(sysloader);
+            // Thread.currentThread().setContextClassLoader(sysloader);
         } catch (Throwable t) {
             t.printStackTrace();
             throw new IOException("Error, could not add URL to system classloader");

@@ -89,9 +89,9 @@
         </dependency>
        	<dependency>
        	    <!-- Using UniversalAT instead of Launchwrapper because Launchwrapper is Mojang's -->
-	        <groupId>com.github.IsaiahPatton</groupId> <!-- custom version -->
+	        <groupId>net.glowstone.linkstone</groupId> <!-- custom version -->
 	        <artifactId>UniversalAT</artifactId>
-	        <version>-SNAPSHOT</version>
+	        <version>1.0</version>
         </dependency>
     </dependencies>
 

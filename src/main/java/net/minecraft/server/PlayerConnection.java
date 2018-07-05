@@ -1,11 +1,11 @@
 package net.minecraft.server;
 
-import net.glowstone.linkstone.Linkstone;
+import net.glowstone.linkstone.PacketUtils;
 
 public class PlayerConnection {
     public EntityPlayer player;
 
     public void sendPacket(final Packet<?> packet) {
-        player.glowPlayer.getSession().send(Linkstone.packetToMessage(packet));
+        player.glowPlayer.getSession().send(PacketUtils.packetToMessage(packet));
     }
 }

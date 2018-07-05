@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <api.version>1.12-R0.1-SNAPSHOT</api.version>
+        <api.version>1.12.2-R4.2-SNAPSHOT</api.version>
         <minecraft_version>1_12_R1</minecraft_version>
         <buildtag.prefix>git-Bukkit-</buildtag.prefix>
         <buildtag.suffix></buildtag.suffix>
@@ -26,18 +26,24 @@
             <layout>default</layout>
             <url>https://repo.glowstone.net/content/repositories/snapshots/</url>
         </repository>
+		<repository>
+            <id>spigot-repo</id>
+            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+        </repository>
     </repositories>
 
     <dependencies>
-	    <dependency>
+	<dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowkit</artifactId>
             <version>${api.version}</version>
+            <scope>provided</scope>
         </dependency>
 	    <dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowstone</artifactId>
-            <version>2017.7.0-SNAPSHOT</version>
+            <version>2018.6.0-SNAPSHOT</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
@@ -106,6 +112,7 @@
                     <archive>
                         <manifestEntries>
                             <!-- <Main-Class>org.bukkit.craftbukkit.Main</Main-Class> -->
+                            <Main-Class>net.glowstone.linkstone.Linkstone</Main-Class>
                             <Implementation-Title>CraftBukkit</Implementation-Title>
                             <Implementation-Version>${describe}</Implementation-Version>
                             <Implementation-Vendor>Bukkit Team</Implementation-Vendor>
@@ -126,40 +133,14 @@
                                     <Sealed>true</Sealed>
                                 </manifestEntries>
                             </manifestSection>
-                            <manifestSection>
-                                <name>org/bukkit/</name>
-                                <manifestEntries>
-                                    <Sealed>true</Sealed>
-                                </manifestEntries>
-                            </manifestSection>
                         </manifestSections>
                     </archive>
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>animal-sniffer-maven-plugin</artifactId>
-                <version>1.14</version>
-                <executions>
-                    <execution>
-                        <phase>process-classes</phase>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <signature>
-                        <groupId>org.codehaus.mojo.signature</groupId>
-                        <artifactId>java16</artifactId>
-                        <version>1.1</version>
-                    </signature>
-                </configuration>
-            </plugin>
-            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.1</version>
+                <version>3.1.1</version>
                 <executions>
                     <execution>
                         <phase>package</phase>

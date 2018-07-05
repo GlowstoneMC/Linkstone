@@ -49,13 +49,13 @@
             <groupId>net.glowstone</groupId>
             <artifactId>glowkit</artifactId>
             <version>${api.version}</version>
-            <!-- <scope>provided</scope> -->
+            <scope>provided</scope>
         </dependency>
 	    <dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowstone</artifactId>
             <version>2018.6.0-SNAPSHOT</version>
-            <!-- <scope>provided</scope> -->
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.ow2.asm</groupId>
@@ -88,22 +88,11 @@
             <scope>test</scope>
         </dependency>
        	<dependency>
-       	    <!-- Using UniversalAT instead of Launchwrapper -->
+       	    <!-- Using UniversalAT instead of Launchwrapper because Launchwrapper is Mojang's -->
 	        <groupId>com.github.IsaiahPatton</groupId> <!-- custom version -->
 	        <artifactId>UniversalAT</artifactId>
 	        <version>7a7fecbdac</version>
         </dependency>
-        <dependency>
-       	    <!-- Custom mixins with UniversalAT above -->
-	        <groupId>net.glowstone</groupId>
-	        <artifactId>mixins</artifactId>
-	        <version>1.0</version>
-        </dependency>
-        <dependency>
-    		<groupId>it.unimi.dsi</groupId>
-    		<artifactId>fastutil</artifactId>
-    		<version>8.2.1</version>
-		</dependency>
     </dependencies>
 
     <!-- required until fixed plexus-compiler-eclipse is deployed -->
@@ -197,9 +186,9 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                        	<!-- <filters>
+                        	<filters>
 			                	<filter>
-			                  	<artifact>net.glowstone:glowstone</artifact>
+			                  	<artifact>org.spigotmc:spigot-api</artifact>
 			                  	<includes>
 			                  		<include>com/flowpowered/**</include>
 			                  		<include>org/objectweb/**</include>
@@ -211,7 +200,7 @@
 			                    	<exclude>org/bukkit/**</exclude>
 			                  	</excludes>
 			                  	</filter>
-			              	</filters> -->
+			              	</filters>
                             <relocations>
                                 <relocation>
                                     <pattern>joptsimple</pattern>

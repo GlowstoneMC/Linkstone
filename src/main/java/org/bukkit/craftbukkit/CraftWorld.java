@@ -26,6 +26,7 @@ import org.bukkit.WorldBorder;
 import org.bukkit.WorldType;
 import org.bukkit.block.Biome;
 import org.bukkit.block.Block;
+import org.bukkit.craftbukkit.block.CraftBlock;
 import org.bukkit.craftbukkit.entity.CraftEntity;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Entity;
@@ -45,6 +46,7 @@ import org.bukkit.util.Consumer;
 import org.bukkit.util.Vector;
 
 import net.glowstone.GlowWorld;
+import net.glowstone.block.GlowBlock;
 import net.glowstone.entity.GlowEntity;
 
 public class CraftWorld implements World {
@@ -160,12 +162,12 @@ public class CraftWorld implements World {
 
     @Override
     public Block getBlockAt(Location arg0) {
-        return base.getBlockAt(arg0); // LinkFiller
+        return new CraftBlock(base.getBlockAt(arg0));
     }
 
     @Override
     public Block getBlockAt(int arg0, int arg1, int arg2) {
-        return base.getBlockAt(arg0, arg1, arg2); // LinkFiller
+        return new CraftBlock(base.getBlockAt(arg0, arg1, arg2));
     }
 
     @Override
@@ -180,7 +182,7 @@ public class CraftWorld implements World {
 
     @Override
     public Chunk getChunkAt(Location arg0) {
-        return base.getChunkAt(arg0); // LinkFiller
+        return base.getChunkAt(arg0); // LinkFiller // TODO CraftChunk
     }
 
     @Override
@@ -280,12 +282,12 @@ public class CraftWorld implements World {
 
     @Override
     public Block getHighestBlockAt(Location arg0) {
-        return base.getHighestBlockAt(arg0); // LinkFiller
+        return new CraftBlock((GlowBlock) base.getHighestBlockAt(arg0));
     }
 
     @Override
     public Block getHighestBlockAt(int arg0, int arg1) {
-        return base.getHighestBlockAt(arg0, arg1); // LinkFiller
+        return new CraftBlock((GlowBlock) base.getHighestBlockAt(arg0, arg1));
     }
 
     @Override

@@ -1,5 +1,6 @@
 package org.bukkit.craftbukkit.entity;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -10,6 +11,7 @@ import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
 import org.bukkit.block.Block;
+import org.bukkit.craftbukkit.block.CraftBlock;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
@@ -20,6 +22,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
+import net.glowstone.block.GlowBlock;
 import net.glowstone.entity.GlowLivingEntity;
 import net.glowstone.entity.GlowPlayer;
 
@@ -152,7 +155,11 @@ public class CraftLivingEntity extends CraftEntity implements LivingEntity {
 
     @Override
     public List<Block> getLastTwoTargetBlocks(Set<Material> arg0, int arg1) {
-        return base.getLastTwoTargetBlocks(arg0, arg1); // LinkFiller
+        List<Block> list = new ArrayList<>();
+        for (Block b : base.getLastTwoTargetBlocks(arg0, arg1)) {
+            list.add(new CraftBlock((GlowBlock)b));
+        }
+        return list;
     }
 
     @Override
@@ -162,7 +169,11 @@ public class CraftLivingEntity extends CraftEntity implements LivingEntity {
 
     @Override
     public List<Block> getLineOfSight(Set<Material> arg0, int arg1) {
-        return base.getLineOfSight(arg0, arg1); // LinkFiller // TODO: CraftBlock
+        List<Block> list = new ArrayList<>();
+        for (Block b : base.getLineOfSight(arg0, arg1)) {
+            list.add(new CraftBlock((GlowBlock)b));
+        }
+        return list;
     }
 
     @Override
@@ -197,7 +208,7 @@ public class CraftLivingEntity extends CraftEntity implements LivingEntity {
 
     @Override
     public Block getTargetBlock(Set<Material> arg0, int arg1) {
-        return base.getTargetBlock(arg0, arg1); // LinkFiller
+        return new CraftBlock((GlowBlock) base.getTargetBlock(arg0, arg1));
     }
 
     @Override

@@ -95,7 +95,6 @@ public class CraftServer implements Server {
     }
 
     public void loadPlugins() {
-        
     }
 
     public void enablePlugins(PluginLoadOrder type) {
@@ -234,7 +233,7 @@ public class CraftServer implements Server {
 
 	@Override
 	public World createWorld(WorldCreator arg0) {
-		return base.createWorld(arg0);
+		return new CraftWorld(base.createWorld(arg0));
 	}
 
 	@Override

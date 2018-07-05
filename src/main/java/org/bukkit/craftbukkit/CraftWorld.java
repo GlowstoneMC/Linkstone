@@ -76,13 +76,11 @@ public class CraftWorld implements World {
     @Override
     public void removeMetadata(String arg0, Plugin arg1) {
         base.removeMetadata(arg0, arg1); // LinkFiller
-
     }
 
     @Override
     public void setMetadata(String arg0, MetadataValue arg1) {
         base.setMetadata(arg0, arg1); // LinkFiller
-
     }
 
     @Override
@@ -198,19 +196,16 @@ public class CraftWorld implements World {
     @Override
     public void getChunkAtAsync(Location arg0, ChunkLoadCallback arg1) {
         base.getChunkAtAsync(arg0, arg1); // LinkFiller
-
     }
 
     @Override
     public void getChunkAtAsync(Block arg0, ChunkLoadCallback arg1) {
         base.getChunkAtAsync(arg0, arg1); // LinkFiller
-
     }
 
     @Override
     public void getChunkAtAsync(int arg0, int arg1, ChunkLoadCallback arg2) {
         base.getChunkAtAsync(arg0, arg1, arg2); // LinkFiller
-
     }
 
     @Override
@@ -389,6 +384,7 @@ public class CraftWorld implements World {
     }
 
     @Override
+    @Deprecated
     public int getTickableTileEntityCount() {
         return base.getTickableTileEntityCount(); // LinkFiller
     }
@@ -404,6 +400,7 @@ public class CraftWorld implements World {
     }
 
     @Override
+    @Deprecated
     public int getTileEntityCount() {
         return base.getTileEntityCount(); // LinkFiller
     }
@@ -481,13 +478,11 @@ public class CraftWorld implements World {
     @Override
     public void loadChunk(Chunk arg0) {
         base.loadChunk(arg0); // LinkFiller
-
     }
 
     @Override
     public void loadChunk(int arg0, int arg1) {
         base.loadChunk(arg0, arg1); // LinkFiller
-
     }
 
     @Override
@@ -498,7 +493,6 @@ public class CraftWorld implements World {
     @Override
     public void playEffect(Location arg0, Effect arg1, int arg2) {
         base.playEffect(arg0, arg1, arg2); // LinkFiller
-
     }
 
     @Override
@@ -509,7 +503,6 @@ public class CraftWorld implements World {
     @Override
     public void playEffect(Location arg0, Effect arg1, int arg2, int arg3) {
         base.playEffect(arg0, arg1, arg2, arg3); // LinkFiller
-
     }
 
     @Override
@@ -520,25 +513,21 @@ public class CraftWorld implements World {
     @Override
     public void playSound(Location arg0, Sound arg1, float arg2, float arg3) {
         base.playSound(arg0, arg1, arg2, arg3); // LinkFiller
-
     }
 
     @Override
     public void playSound(Location arg0, String arg1, float arg2, float arg3) {
         base.playSound(arg0, arg1, arg2, arg3); // LinkFiller
-
     }
 
     @Override
     public void playSound(Location arg0, Sound arg1, SoundCategory arg2, float arg3, float arg4) {
         base.playSound(arg0, arg1, arg2, arg3, arg4); // LinkFiller
-
     }
 
     @Override
     public void playSound(Location arg0, String arg1, SoundCategory arg2, float arg3, float arg4) {
         base.playSound(arg0, arg1, arg2, arg3, arg4); // LinkFiller
-
     }
 
     @Override
@@ -554,43 +543,36 @@ public class CraftWorld implements World {
     @Override
     public void save() {
         base.save(); // LinkFiller
-
     }
 
     @Override
     public void setAmbientSpawnLimit(int arg0) {
         base.setAmbientSpawnLimit(arg0); // LinkFiller
-
     }
 
     @Override
     public void setAnimalSpawnLimit(int arg0) {
         base.setAnimalSpawnLimit(arg0); // LinkFiller
-
     }
 
     @Override
     public void setAutoSave(boolean arg0) {
         base.setAutoSave(arg0); // LinkFiller
-
     }
 
     @Override
     public void setBiome(int arg0, int arg1, Biome arg2) {
         base.setBiome(arg0, arg1, arg2); // LinkFiller
-
     }
 
     @Override
     public void setDifficulty(Difficulty arg0) {
         base.setDifficulty(arg0); // LinkFiller
-
     }
 
     @Override
     public void setFullTime(long arg0) {
         base.setFullTime(arg0); // LinkFiller
-
     }
 
     @Override
@@ -601,25 +583,21 @@ public class CraftWorld implements World {
     @Override
     public void setKeepSpawnInMemory(boolean arg0) {
         base.setKeepSpawnInMemory(arg0); // LinkFiller
-
     }
 
     @Override
     public void setMonsterSpawnLimit(int arg0) {
         base.setMonsterSpawnLimit(arg0); // LinkFiller
-
     }
 
     @Override
     public void setPVP(boolean arg0) {
         base.setPVP(arg0); // LinkFiller
-
     }
 
     @Override
     public void setSpawnFlags(boolean arg0, boolean arg1) {
         base.setSpawnFlags(arg0, arg1); // LinkFiller
-
     }
 
     @Override
@@ -635,49 +613,41 @@ public class CraftWorld implements World {
     @Override
     public void setStorm(boolean arg0) {
         base.setStorm(arg0); // LinkFiller
-
     }
 
     @Override
     public void setThunderDuration(int arg0) {
         base.setThunderDuration(arg0); // LinkFiller
-
     }
 
     @Override
     public void setThundering(boolean arg0) {
         base.setThundering(arg0); // LinkFiller
-
     }
 
     @Override
     public void setTicksPerAnimalSpawns(int arg0) {
         base.setTicksPerAnimalSpawns(arg0); // LinkFiller
-
     }
 
     @Override
     public void setTicksPerMonsterSpawns(int arg0) {
         base.setTicksPerMonsterSpawns(arg0); // LinkFiller
-
     }
 
     @Override
     public void setTime(long arg0) {
         base.setTime(arg0); // LinkFiller
-
     }
 
     @Override
     public void setWaterAnimalSpawnLimit(int arg0) {
         base.setWaterAnimalSpawnLimit(arg0); // LinkFiller
-
     }
 
     @Override
     public void setWeatherDuration(int arg0) {
         base.setWeatherDuration(arg0); // LinkFiller
-
     }
 
     @Override
@@ -724,13 +694,11 @@ public class CraftWorld implements World {
     @Override
     public void spawnParticle(Particle arg0, Location arg1, int arg2) {
         base.spawnParticle(arg0, arg1, arg2); // LinkFiller
-
     }
 
     @Override
     public <T> void spawnParticle(Particle arg0, Location arg1, int arg2, T arg3) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
@@ -752,49 +720,42 @@ public class CraftWorld implements World {
     public <T> void spawnParticle(Particle arg0, Location arg1, int arg2, double arg3, double arg4, double arg5,
             T arg6) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public void spawnParticle(Particle arg0, Location arg1, int arg2, double arg3, double arg4, double arg5,
             double arg6) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public void spawnParticle(Particle arg0, double arg1, double arg2, double arg3, int arg4, double arg5, double arg6,
             double arg7) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public <T> void spawnParticle(Particle arg0, Location arg1, int arg2, double arg3, double arg4, double arg5,
             double arg6, T arg7) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public <T> void spawnParticle(Particle arg0, double arg1, double arg2, double arg3, int arg4, double arg5,
             double arg6, double arg7, T arg8) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public void spawnParticle(Particle arg0, double arg1, double arg2, double arg3, int arg4, double arg5, double arg6,
             double arg7, double arg8) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
     public <T> void spawnParticle(Particle arg0, double arg1, double arg2, double arg3, int arg4, double arg5,
             double arg6, double arg7, double arg8, T arg9) {
         // TODO Auto-generated method stub
-
     }
 
     @Override
@@ -846,7 +807,6 @@ public class CraftWorld implements World {
     public <T> void spawnParticle(Particle arg0, List<Player> arg1, Player arg2, double arg3, double arg4, double arg5,
             int arg6, double arg7, double arg8, double arg9, double arg10, T arg11) {
         // TODO Auto-generated method stub
-        
     }
 
 }

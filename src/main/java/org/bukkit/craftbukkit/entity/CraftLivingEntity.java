@@ -21,6 +21,7 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.Vector;
 
 import net.glowstone.entity.GlowLivingEntity;
+import net.glowstone.entity.GlowPlayer;
 
 public class CraftLivingEntity extends CraftEntity implements LivingEntity {
     private GlowLivingEntity base;
@@ -31,52 +32,52 @@ public class CraftLivingEntity extends CraftEntity implements LivingEntity {
 
     @Override
     public AttributeInstance getAttribute(Attribute arg0) {
-        return base.getAttribute(arg0); // LinkFiller Generated
+        return base.getAttribute(arg0); // LinkFiller
     }
 
     @Override
     public void damage(double arg0) {
-        base.damage(arg0); // LinkFiller Generated
+        base.damage(arg0); // LinkFiller
     }
 
     @Override
     public void damage(double arg0, Entity arg1) {
-        base.damage(arg0, arg1); // LinkFiller Generated
+        base.damage(arg0, arg1); // LinkFiller
     }
 
     @Override
     public void damage(double arg0, DamageCause arg1) {
-        base.damage(arg0, arg1); // LinkFiller Generated
+        base.damage(arg0, arg1); // LinkFiller
     }
 
     @Override
     public void damage(double arg0, Entity arg1, DamageCause arg2) {
-        base.damage(arg0, arg1, arg2); // LinkFiller Generated
+        base.damage(arg0, arg1, arg2); // LinkFiller
     }
 
     @Override
     public double getHealth() {
-        return base.getHealth(); // LinkFiller Generated
+        return base.getHealth(); // LinkFiller
     }
 
     @Override
     public double getMaxHealth() {
-        return base.getMaxHealth(); // LinkFiller Generated
+        return base.getMaxHealth(); // LinkFiller
     }
 
     @Override
     public void resetMaxHealth() {
-        base.resetMaxHealth(); // LinkFiller Generated
+        base.resetMaxHealth(); // LinkFiller
     }
 
     @Override
     public void setHealth(double arg0) {
-        base.setHealth(arg0); // LinkFiller Generated
+        base.setHealth(arg0); // LinkFiller
     }
 
     @Override
     public void setMaxHealth(double arg0) {
-        base.setMaxHealth(arg0); // LinkFiller Generated
+        base.setMaxHealth(arg0); // LinkFiller
     }
 
     @Override
@@ -91,217 +92,217 @@ public class CraftLivingEntity extends CraftEntity implements LivingEntity {
 
     @Override
     public boolean addPotionEffect(PotionEffect arg0) {
-        return base.addPotionEffect(arg0); // LinkFiller Generated
+        return base.addPotionEffect(arg0); // LinkFiller
     }
 
     @Override
     public boolean addPotionEffect(PotionEffect arg0, boolean arg1) {
-        return base.addPotionEffect(arg0, arg1); // LinkFiller Generated
+        return base.addPotionEffect(arg0, arg1); // LinkFiller
     }
 
     @Override
     public boolean addPotionEffects(Collection<PotionEffect> arg0) {
-        return base.addPotionEffects(arg0); // LinkFiller Generated
+        return base.addPotionEffects(arg0); // LinkFiller
     }
 
     @Override
     public Collection<PotionEffect> getActivePotionEffects() {
-        return base.getActivePotionEffects(); // LinkFiller Generated
+        return base.getActivePotionEffects(); // LinkFiller
     }
 
     @Override
     public int getArrowsStuck() {
-        return base.getArrowsStuck(); // LinkFiller Generated
+        return base.getArrowsStuck(); // LinkFiller
     }
 
     @Override
     public boolean getCanPickupItems() {
-        return base.getCanPickupItems(); // LinkFiller Generated
+        return base.getCanPickupItems(); // LinkFiller
     }
 
     @Override
     public EntityEquipment getEquipment() {
-        return base.getEquipment(); // LinkFiller Generated
+        return base.getEquipment(); // LinkFiller
     }
 
     @Override
     public double getEyeHeight() {
-        return base.getEyeHeight(); // LinkFiller Generated
+        return base.getEyeHeight(); // LinkFiller
     }
 
     @Override
     public double getEyeHeight(boolean arg0) {
-        return base.getEyeHeight(arg0); // LinkFiller Generated
+        return base.getEyeHeight(arg0); // LinkFiller
     }
 
     @Override
     public Location getEyeLocation() {
-        return base.getEyeLocation(); // LinkFiller Generated
+        return base.getEyeLocation(); // LinkFiller
     }
 
     @Override
     public Player getKiller() {
-        return base.getKiller(); // LinkFiller Generated
+        return new CraftPlayer((GlowPlayer) base.getKiller());
     }
 
     @Override
     public double getLastDamage() {
-        return base.getLastDamage(); // LinkFiller Generated
+        return base.getLastDamage(); // LinkFiller
     }
 
     @Override
     public List<Block> getLastTwoTargetBlocks(Set<Material> arg0, int arg1) {
-        return base.getLastTwoTargetBlocks(arg0, arg1); // LinkFiller Generated
+        return base.getLastTwoTargetBlocks(arg0, arg1); // LinkFiller
     }
 
     @Override
     public Entity getLeashHolder() throws IllegalStateException {
-        return base.getLeashHolder(); // LinkFiller Generated
+        return base.getLeashHolder(); // LinkFiller
     }
 
     @Override
     public List<Block> getLineOfSight(Set<Material> arg0, int arg1) {
-        return base.getLineOfSight(arg0, arg1); // LinkFiller Generated
+        return base.getLineOfSight(arg0, arg1); // LinkFiller // TODO: CraftBlock
     }
 
     @Override
     public int getMaximumAir() {
-        return base.getMaximumAir(); // LinkFiller Generated
+        return base.getMaximumAir(); // LinkFiller
     }
 
     @Override
     public int getMaximumNoDamageTicks() {
-        return base.getMaximumNoDamageTicks(); // LinkFiller Generated
+        return base.getMaximumNoDamageTicks(); // LinkFiller
     }
 
     @Override
     public int getNoDamageTicks() {
-        return base.getNoDamageTicks(); // LinkFiller Generated
+        return base.getNoDamageTicks(); // LinkFiller
     }
 
     @Override
     public PotionEffect getPotionEffect(PotionEffectType arg0) {
-        return base.getPotionEffect(arg0); // LinkFiller Generated
+        return base.getPotionEffect(arg0); // LinkFiller
     }
 
     @Override
     public int getRemainingAir() {
-        return base.getRemainingAir(); // LinkFiller Generated
+        return base.getRemainingAir(); // LinkFiller
     }
 
     @Override
     public boolean getRemoveWhenFarAway() {
-        return base.getRemoveWhenFarAway(); // LinkFiller Generated
+        return base.getRemoveWhenFarAway(); // LinkFiller
     }
 
     @Override
     public Block getTargetBlock(Set<Material> arg0, int arg1) {
-        return base.getTargetBlock(arg0, arg1); // LinkFiller Generated
+        return base.getTargetBlock(arg0, arg1); // LinkFiller
     }
 
     @Override
     public boolean hasAI() {
-        return base.hasAI(); // LinkFiller Generated
+        return base.hasAI(); // LinkFiller
     }
 
     @Override
     public boolean hasLineOfSight(Entity arg0) {
-        return base.hasLineOfSight(arg0); // LinkFiller Generated
+        return base.hasLineOfSight(arg0); // LinkFiller
     }
 
     @Override
     public boolean hasPotionEffect(PotionEffectType arg0) {
-        return base.hasPotionEffect(arg0); // LinkFiller Generated
+        return base.hasPotionEffect(arg0); // LinkFiller
     }
 
     @Override
     public boolean isCollidable() {
-        return base.isCollidable(); // LinkFiller Generated
+        return base.isCollidable(); // LinkFiller
     }
 
     @Override
     public boolean isGliding() {
-        return base.isGliding(); // LinkFiller Generated
+        return base.isGliding(); // LinkFiller
     }
 
     @Override
     public boolean isLeashed() {
-        return base.isLeashed(); // LinkFiller Generated
+        return base.isLeashed(); // LinkFiller
     }
 
     @Override
     public void playAnimation(EntityAnimation arg0) {
-        base.playAnimation(arg0); // LinkFiller Generated
+        base.playAnimation(arg0); // LinkFiller
     }
 
     @Override
     public void removePotionEffect(PotionEffectType arg0) {
-        base.removePotionEffect(arg0); // LinkFiller Generated
+        base.removePotionEffect(arg0); // LinkFiller
     }
 
     @Override
     public void setAI(boolean arg0) {
-        base.setAI(arg0); // LinkFiller Generated
+        base.setAI(arg0); // LinkFiller
     }
 
     @Override
     public void setArrowsStuck(int arg0) {
-        base.setArrowsStuck(arg0); // LinkFiller Generated
+        base.setArrowsStuck(arg0); // LinkFiller
     }
 
     @Override
     public void setCanPickupItems(boolean arg0) {
-        base.setCanPickupItems(arg0); // LinkFiller Generated
+        base.setCanPickupItems(arg0); // LinkFiller
     }
 
     @Override
     public void setCollidable(boolean arg0) {
-        base.setCollidable(arg0); // LinkFiller Generated
+        base.setCollidable(arg0); // LinkFiller
     }
 
     @Override
     public void setGliding(boolean arg0) {
-        base.setGliding(arg0); // LinkFiller Generated
+        base.setGliding(arg0); // LinkFiller
     }
 
     @Override
     public void setKiller(Player arg0) {
-        base.setKiller(arg0); // LinkFiller Generated
+        base.setKiller(arg0); // LinkFiller
     }
 
     @Override
     public void setLastDamage(double arg0) {
-        base.setLastDamage(arg0); // LinkFiller Generated
+        base.setLastDamage(arg0); // LinkFiller
     }
 
     @Override
     public boolean setLeashHolder(Entity arg0) {
-        return base.setLeashHolder(arg0); // LinkFiller Generated
+        return base.setLeashHolder(arg0); // LinkFiller
     }
 
     @Override
     public void setMaximumAir(int arg0) {
-        base.setMaximumAir(arg0); // LinkFiller Generated
+        base.setMaximumAir(arg0); // LinkFiller
     }
 
     @Override
     public void setMaximumNoDamageTicks(int arg0) {
-        base.setMaximumNoDamageTicks(arg0); // LinkFiller Generated
+        base.setMaximumNoDamageTicks(arg0); // LinkFiller
     }
 
     @Override
     public void setNoDamageTicks(int arg0) {
-        base.setNoDamageTicks(arg0); // LinkFiller Generated
+        base.setNoDamageTicks(arg0); // LinkFiller
     }
 
     @Override
     public void setRemainingAir(int arg0) {
-        base.setRemainingAir(arg0); // LinkFiller Generated
+        base.setRemainingAir(arg0); // LinkFiller
     }
 
     @Override
     public void setRemoveWhenFarAway(boolean arg0) {
-        base.setRemoveWhenFarAway(arg0); // LinkFiller Generated
+        base.setRemoveWhenFarAway(arg0); // LinkFiller
     }
 
 }

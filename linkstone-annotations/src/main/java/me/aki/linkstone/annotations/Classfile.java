@@ -1,14 +1,13 @@
 package me.aki.linkstone.annotations;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Repeatable;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * Tell the generator in which versions this
  * classfile exists and how it should be named.
  */
 @Repeatable(ClassfileContainer.class)
+@Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
 public @interface Classfile {
     /**

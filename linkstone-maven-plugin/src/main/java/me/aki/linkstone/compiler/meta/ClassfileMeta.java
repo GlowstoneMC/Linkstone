@@ -24,8 +24,8 @@ public class ClassfileMeta extends NamedMeta {
         String className = split[split.length - 1];
 
         ClassfileMeta meta = new ClassfileMeta(className);
-        if(cn.invisibleAnnotations != null) {
-            for (AnnotationNode an : cn.invisibleAnnotations) {
+        if(cn.visibleAnnotations != null) {
+            for (AnnotationNode an : cn.visibleAnnotations) {
                 if (an.desc.equals(CLASSFILE_ANNOTION_DESC) ||
                         an.desc.equals(CLASSFILE_CONTAINER_ANNOTION_DESC)) {
                     an.accept(new NamedAnnotationVisitor<>(meta));

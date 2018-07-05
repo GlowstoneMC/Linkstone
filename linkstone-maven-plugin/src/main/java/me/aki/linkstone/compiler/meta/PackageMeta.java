@@ -23,8 +23,8 @@ public class PackageMeta extends NamedMeta {
     public static PackageMeta from(ClassNode cn) {
         String pkg = cn.name.substring(0, cn.name.lastIndexOf('/'));
         PackageMeta meta = new PackageMeta(pkg);
-        if(cn.invisibleAnnotations != null) {
-            for (AnnotationNode an : cn.invisibleAnnotations) {
+        if(cn.visibleAnnotations != null) {
+            for (AnnotationNode an : cn.visibleAnnotations) {
                 if (an.desc.equals(PACKAGE_ANNOTION_DESC) ||
                         an.desc.equals(PACKAGE_CONTAINER_ANNOTION_DESC)) {
                     an.accept(new PackageMetaVisitor(meta));

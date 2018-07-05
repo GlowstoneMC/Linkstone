@@ -18,8 +18,8 @@ public class SetterMeta extends UnnamedMeta {
 
     public static SetterMeta from(MethodNode mn) {
         SetterMeta meta = new SetterMeta();
-        if(mn.invisibleAnnotations != null) {
-            for (AnnotationNode an : mn.invisibleAnnotations) {
+        if(mn.visibleAnnotations != null) {
+            for (AnnotationNode an : mn.visibleAnnotations) {
                 if (an.desc.equals(SETTER_ANNOTION_DESC)) {
                     an.accept(new UnnamedAnnotationVisitor(meta));
                 }

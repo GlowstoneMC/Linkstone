@@ -18,8 +18,8 @@ public class FieldMeta extends NamedMeta {
 
     public static FieldMeta from(FieldNode fn) {
         FieldMeta meta = new FieldMeta(fn.name);
-        if(fn.invisibleAnnotations != null) {
-            for (AnnotationNode an : fn.invisibleAnnotations) {
+        if(fn.visibleAnnotations != null) {
+            for (AnnotationNode an : fn.visibleAnnotations) {
                 if (an.desc.equals(FIELD_ANNOTION_DESC) ||
                         an.desc.equals(FIELD_CONTAINER_ANNOTION_DESC)) {
                     an.accept(new NamedAnnotationVisitor<>(meta));

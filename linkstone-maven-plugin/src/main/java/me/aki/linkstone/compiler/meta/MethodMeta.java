@@ -21,8 +21,8 @@ public class MethodMeta extends NamedMeta {
 
     public static MethodMeta from(MethodNode mn) {
         MethodMeta meta = new MethodMeta(mn.name);
-        if(mn.invisibleAnnotations != null) {
-            for (AnnotationNode an : mn.invisibleAnnotations) {
+        if(mn.visibleAnnotations != null) {
+            for (AnnotationNode an : mn.visibleAnnotations) {
                 if (an.desc.equals(METHOD_ANNOTION_DESC) ||
                         an.desc.equals(METHOD_CONTAINER_ANNOTION_DESC)) {
                     an.accept(new NamedAnnotationVisitor<>(meta));

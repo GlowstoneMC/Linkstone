@@ -1,13 +1,12 @@
 package me.aki.linkstone.annotations;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Repeatable;
-import java.lang.annotation.Target;
+import java.lang.annotation.*;
 
 /**
  * Tell the generator how a package should be named for a certain version.
  */
 @Repeatable(PackageContainer.class)
+@Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.PACKAGE })
 public @interface Package {
     /**

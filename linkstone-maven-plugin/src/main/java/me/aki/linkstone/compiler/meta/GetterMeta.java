@@ -18,8 +18,8 @@ public class GetterMeta extends UnnamedMeta {
 
     public static GetterMeta from(MethodNode mn) {
         GetterMeta meta = new GetterMeta();
-        if(mn.invisibleAnnotations != null) {
-            for (AnnotationNode an : mn.invisibleAnnotations) {
+        if(mn.visibleAnnotations != null) {
+            for (AnnotationNode an : mn.visibleAnnotations) {
                 if (an.desc.equals(GETTER_ANNOTION_DESC)) {
                     an.accept(new UnnamedAnnotationVisitor(meta));
                 }

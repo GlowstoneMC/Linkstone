@@ -69,23 +69,7 @@ public class DelegateLinter implements Linter {
                         report.addError(new ErrorReport.Error(message, location));
                     }
                 }
-
-                MethodNode constructor = findConstructor(cn, fn);
-                if (constructor == null) {
-                    ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                    String message = "Could not find constructor corresponding constructor for delegate field";
-                    report.addError(new ErrorReport.Error(message, location));
-                }
             }
         }
-    }
-
-    private MethodNode findConstructor(ClassNode cn, FieldNode fn) {
-        for(MethodNode mn : cn.methods) {
-            if(mn.name.equals("<init>") && mn.desc.equals("(" + fn.desc + ")V")) {
-                return mn;
-            }
-        }
-        return null;
     }
 }

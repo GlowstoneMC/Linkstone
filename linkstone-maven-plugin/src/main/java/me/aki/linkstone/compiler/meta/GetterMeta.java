@@ -1,19 +1,15 @@
 package me.aki.linkstone.compiler.meta;
 
 import me.aki.linkstone.annotations.Getter;
-import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.compiler.collect.UnnamedAnnotationVisitor;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.MethodNode;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Represents the content of a {@link Getter} annotation.
  */
-public class GetterMeta extends UnnamedMeta {
+public class GetterMeta extends AbstractAccessorMeta {
     private final static String GETTER_ANNOTION_DESC = Type.getDescriptor(Getter.class);
 
     public static GetterMeta from(MethodNode mn) {
@@ -22,6 +18,7 @@ public class GetterMeta extends UnnamedMeta {
             for (AnnotationNode an : mn.visibleAnnotations) {
                 if (an.desc.equals(GETTER_ANNOTION_DESC)) {
                     an.accept(new UnnamedAnnotationVisitor(meta));
+                    meta.setAnnotated(true);
                 }
             }
         }

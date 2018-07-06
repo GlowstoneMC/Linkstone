@@ -11,7 +11,7 @@ import org.objectweb.asm.tree.FieldNode;
 /**
  * Represents the content of all {@link Field} annotations on a field in a template.
  */
-public class FieldMeta extends NamedMeta {
+public class FieldMeta extends NamedVersionedMeta {
     private final static String FIELD_ANNOTION_DESC = Type.getDescriptor(Field.class);
     private final static String FIELD_CONTAINER_ANNOTION_DESC = Type.getDescriptor(FieldContainer.class);
     private final static String GENERATE_ANNOTION_DESC = Type.getDescriptor(Generate.class);
@@ -23,6 +23,7 @@ public class FieldMeta extends NamedMeta {
                 if (an.desc.equals(FIELD_ANNOTION_DESC) ||
                         an.desc.equals(FIELD_CONTAINER_ANNOTION_DESC)) {
                     an.accept(new NamedAnnotationVisitor<>(meta));
+                    meta.setAnnotated(true);
                 } else if(an.desc.equals(GENERATE_ANNOTION_DESC)) {
                     meta.generate = true;
                 }

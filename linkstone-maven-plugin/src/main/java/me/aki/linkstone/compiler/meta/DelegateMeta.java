@@ -21,12 +21,14 @@ public class DelegateMeta implements Meta {
             for (AnnotationNode an : fn.visibleAnnotations) {
                 if (an.desc.equals(DELEGATE_ANNOTATION_DESC)) {
                     an.accept(new DelegateAnnotationVisitor(meta));
+                    meta.setAnnotated(true);
                 }
             }
         }
         return meta;
     }
 
+    private boolean isAnnotated;
     private List<Type> delegateClass = new ArrayList<>();
 
     /**
@@ -38,7 +40,11 @@ public class DelegateMeta implements Meta {
     }
 
     @Override
-    public boolean hasAnnotation() {
-        return !delegateClass.isEmpty();
+    public boolean isAnnotated() {
+        return isAnnotated;
+    }
+
+    public void setAnnotated(boolean annotated) {
+        isAnnotated = annotated;
     }
 }

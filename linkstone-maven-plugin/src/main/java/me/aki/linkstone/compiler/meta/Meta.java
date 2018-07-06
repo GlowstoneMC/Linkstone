@@ -5,7 +5,9 @@ package me.aki.linkstone.compiler.meta;
  */
 public interface Meta {
     /**
+     * Has the annotated entity the annotation or is this a null object.
+     *
      * @return was the entity annotated
      */
-    boolean hasAnnotation();
+    boolean isAnnotated();
 }

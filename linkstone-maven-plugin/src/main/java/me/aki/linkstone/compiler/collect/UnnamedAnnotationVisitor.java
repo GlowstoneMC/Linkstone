@@ -3,25 +3,22 @@ package me.aki.linkstone.compiler.collect;
 import me.aki.linkstone.annotations.Getter;
 import me.aki.linkstone.annotations.Setter;
 import me.aki.linkstone.annotations.Version;
-import me.aki.linkstone.compiler.meta.UnnamedMeta;
+import me.aki.linkstone.compiler.meta.AbstractAccessorMeta;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Opcodes;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * Visitor that adds all values of {@link Getter} and
- * {@link Setter} annotations to a UnnamedMeta.
+ * {@link Setter} annotations to a {@link AbstractAccessorMeta}.
  */
 public class UnnamedAnnotationVisitor extends AnnotationVisitor {
-    private final UnnamedMeta meta;
+    private final AbstractAccessorMeta meta;
 
-    public UnnamedAnnotationVisitor(UnnamedMeta meta) {
+    public UnnamedAnnotationVisitor(AbstractAccessorMeta meta) {
         this(meta, null);
     }
 
-    private UnnamedAnnotationVisitor(UnnamedMeta meta, AnnotationVisitor av) {
+    private UnnamedAnnotationVisitor(AbstractAccessorMeta meta, AnnotationVisitor av) {
         super(Opcodes.ASM6, av);
         this.meta = meta;
     }

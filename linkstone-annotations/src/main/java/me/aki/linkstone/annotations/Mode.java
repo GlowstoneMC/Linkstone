@@ -2,12 +2,12 @@ package me.aki.linkstone.annotations;
 
 public enum Mode {
     /**
-     * The annotated package should be renamed to the declared name
+     * The annotated package should be renamed to the declared name.
      */
-    SELF,
+    DEFAULT,
 
     /**
-     * The whole path should be replaced against the declared name
+     * The whole path should be replaced against the declared name.
      */
     ABSOLUTE
 }

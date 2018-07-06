@@ -39,7 +39,7 @@ public class MappingModelCollector {
     private void addPackage(ClassNode cn) {
         PackageMeta meta = PackageMeta.from(cn);
         if(meta.getVersions().contains(this.version)) {
-            mappingModel.putPackageName(meta.getTemplateName(), meta.getNameOrDefault(version), meta.getModeOrDefault(version));
+            mappingModel.putPackageName(meta.getDefaultName(), meta.getNameOrDefault(version), meta.getModeOrDefault(version));
         }
     }
 

@@ -30,7 +30,7 @@ public class TemplateFilter {
             ClassNode cn = iter.next();
             ClassfileMeta meta = ClassfileMeta.from(cn);
 
-            if(meta.hasAnnotation() && !meta.getVersions().contains(version)) {
+            if(meta.isAnnotated() && !meta.getVersions().contains(version)) {
                 iter.remove();
                 continue;
             }
@@ -45,7 +45,7 @@ public class TemplateFilter {
         AccessorCollector accessors = new AccessorCollector(cn);
         for(FieldNode fn : accessors.getFields()) {
             FieldMeta fieldMeta = FieldMeta.from(fn);
-            if(!fieldMeta.hasAnnotation())continue;
+            if(!fieldMeta.isAnnotated())continue;
 
             for(MethodNode getter : accessors.getGetters(fn)) {
                 GetterMeta meta = GetterMeta.from(getter);
@@ -81,7 +81,7 @@ public class TemplateFilter {
             FieldNode fn = iter.next();
             FieldMeta meta = FieldMeta.from(fn);
 
-            if(meta.hasAnnotation() && !meta.getVersions().contains(version)) {
+            if(meta.isAnnotated() && !meta.getVersions().contains(version)) {
                 iter.remove();
             }
         }
@@ -93,7 +93,7 @@ public class TemplateFilter {
             MethodNode mn = iter.next();
             MethodMeta meta = MethodMeta.from(mn);
 
-            if(meta.hasAnnotation() && !meta.getVersions().contains(version)) {
+            if(meta.isAnnotated() && !meta.getVersions().contains(version)) {
                 iter.remove();
             }
         }

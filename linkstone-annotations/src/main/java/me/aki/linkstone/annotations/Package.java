@@ -15,16 +15,15 @@ public @interface Package {
     Version[] version();
 
     /**
-     * Name of the annotated method in the generated class.
+     * Name of the annotated package in the generated class.
      *
-     * The method will not be renamed if the name is empty.
-     *
-     * @return name of generated method
+     * @return name of generated package
      */
     String name();
 
     /**
      * @return how should the annotated package should be renamed
+     * @see Mode
      */
-    Mode mode() default Mode.SELF;
+    Mode mode() default Mode.DEFAULT;
 }

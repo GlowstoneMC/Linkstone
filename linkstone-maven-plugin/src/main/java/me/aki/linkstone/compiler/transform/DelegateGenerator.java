@@ -23,9 +23,9 @@ public class DelegateGenerator {
 
     public void generateDelegateMethods(List<ClassNode> classnodes) {
         for (ClassNode cn : classnodes) {
-            for(FieldNode fn : cn.fields) {
+            for (FieldNode fn : cn.fields) {
                 DelegateMeta delegateMeta = DelegateMeta.from(fn);
-                if(delegateMeta.hasAnnotation()) {
+                if (delegateMeta.isAnnotated()) {
                     List<Type> classes = delegateMeta.getDelegateClasses();
 
                     inheritTypes(cn, classes);

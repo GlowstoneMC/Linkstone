@@ -16,7 +16,7 @@ import java.util.Optional;
 /**
  * Represents the content of all {@link Package} annotations on a package-info template.
  */
-public class PackageMeta extends NamedMeta {
+public class PackageMeta extends NamedVersionedMeta {
     private final static String PACKAGE_ANNOTION_DESC = Type.getDescriptor(Package.class);
     private final static String PACKAGE_CONTAINER_ANNOTION_DESC = Type.getDescriptor(PackageContainer.class);
 
@@ -28,6 +28,7 @@ public class PackageMeta extends NamedMeta {
                 if (an.desc.equals(PACKAGE_ANNOTION_DESC) ||
                         an.desc.equals(PACKAGE_CONTAINER_ANNOTION_DESC)) {
                     an.accept(new PackageMetaVisitor(meta));
+                    meta.setAnnotated(true);
                 }
             }
         }
@@ -49,13 +50,13 @@ public class PackageMeta extends NamedMeta {
     }
 
     /**
-     * Get the assigned mode or else {@link Mode#SELF}
+     * Get the assigned mode or else {@link Mode#DEFAULT}
      *
      * @param version where the mode is assigned
      * @return what part of the name should be replaced
      */
     public Mode getModeOrDefault(Version version) {
-        return targetMap.getOrDefault(version, Mode.SELF);
+        return targetMap.getOrDefault(version, Mode.DEFAULT);
     }
 
     public void putTarget(Version version, Mode target) {

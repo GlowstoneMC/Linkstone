@@ -1,6 +1,6 @@
 package me.aki.linkstone.compiler.collect;
 
-import me.aki.linkstone.compiler.meta.NamedMeta;
+import me.aki.linkstone.compiler.meta.NamedVersionedMeta;
 import me.aki.linkstone.annotations.Classfile;
 import me.aki.linkstone.annotations.Field;
 import me.aki.linkstone.annotations.Method;
@@ -14,9 +14,9 @@ import java.util.Optional;
 
 /**
  * Visitor that adds values of {@link Field}, {@link Method} or
- * {@link Classfile} annotations to a NamedMeta.
+ * {@link Classfile} annotations to a {@link NamedVersionedMeta}.
  */
-public class NamedAnnotationVisitor<T extends NamedMeta> extends AnnotationVisitor {
+public class NamedAnnotationVisitor<T extends NamedVersionedMeta> extends AnnotationVisitor {
     protected final T meta;
     protected List<Version> versions = new ArrayList<>();
     private Optional<String> name = Optional.empty();

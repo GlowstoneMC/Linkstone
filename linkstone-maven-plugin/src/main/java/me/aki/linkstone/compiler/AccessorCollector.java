@@ -26,7 +26,7 @@ public class AccessorCollector {
         fieldLoop: while (fieldIter.hasNext()) {
             FieldNode fn = fieldIter.next();
             FieldMeta fieldMeta = FieldMeta.from(fn);
-            if(!fieldMeta.hasAnnotation())continue;
+            if(!fieldMeta.isAnnotated())continue;
 
             fields.add(fn);
 
@@ -43,7 +43,7 @@ public class AccessorCollector {
                 MethodNode mn = methodIter.next();
                 GetterMeta getterMeta = GetterMeta.from(mn);
 
-                if(getterMeta.hasAnnotation()) {
+                if(getterMeta.isAnnotated()) {
                     getters.add(mn);
 
                     for(Version version : getterMeta.getVersions()) {
@@ -54,7 +54,7 @@ public class AccessorCollector {
                     }
                 } else if(!isFinal) {
                     SetterMeta setterMeta = SetterMeta.from(mn);
-                    if(setterMeta.hasAnnotation()) {
+                    if(setterMeta.isAnnotated()) {
                         setters.add(mn);
 
                         for(Version version : setterMeta.getVersions()) {
@@ -76,11 +76,11 @@ public class AccessorCollector {
         while(methodIter.hasNext()) {
             MethodNode mn = methodIter.next();
             GetterMeta getterMeta = GetterMeta.from(mn);
-            if(getterMeta.hasAnnotation()) {
+            if(getterMeta.isAnnotated()) {
                 onUnusedGetterError(mn);
             } else {
                 SetterMeta setterMeta = SetterMeta.from(mn);
-                if(setterMeta.hasAnnotation()) {
+                if(setterMeta.isAnnotated()) {
                     onUnusedSetterError(mn);
                 }
             }

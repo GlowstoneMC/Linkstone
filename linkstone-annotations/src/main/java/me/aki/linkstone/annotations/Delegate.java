@@ -13,6 +13,10 @@ import java.lang.annotation.Target;
 @Target(ElementType.FIELD)
 public @interface Delegate {
     /**
+     * The class containing the field will implement these interfaces.
+     * All methods will be implemented by delegating invokes to the annotated field.
+     * The type of the annotated field must therefore implement these interfaces.
+     *
      * @return type that the class will inherit
      */
     Class<?>[] value();

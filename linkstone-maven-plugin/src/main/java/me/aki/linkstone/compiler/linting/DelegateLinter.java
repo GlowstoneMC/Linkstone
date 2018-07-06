@@ -32,7 +32,7 @@ public class DelegateLinter implements Linter {
             int delegateCount = 0;
             for (FieldNode fn : cn.fields) {
                 DelegateMeta meta = DelegateMeta.from(fn);
-                if (!meta.hasAnnotation()) {
+                if (!meta.isAnnotated()) {
                     continue;
                 }
 

@@ -4,7 +4,6 @@ import sun.misc.Unsafe;
 
 import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Field;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.WeakHashMap;
 
@@ -28,9 +27,11 @@ public class FieldRedirectUtil {
     public static boolean isSupported() {
         if(isSupported == null) {
             try {
-                Field f = FieldRedirectUtil.class.getDeclaredField("testField");
-                new FieldRedirectUtil().redirectField(f);
-                isSupported = f.getBoolean(null);
+                Field f0 = FieldRedirectUtil.class.getDeclaredField("testField");
+                new FieldRedirectUtil().redirectField(f0);
+
+                Field f1 = FieldRedirectUtil.class.getDeclaredField("testField");
+                isSupported = f1.getBoolean(null);
             } catch(Throwable t) {
                 isSupported = false;
             }

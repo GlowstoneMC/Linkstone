@@ -28,11 +28,11 @@ public class ClassStore {
         byte[] cache = new byte[8192];
         ZipEntry entry;
         while ((entry = in.getNextEntry()) != null) {
-            if(!entry.isDirectory() && entry.getName().endsWith(".class")) {
+            if (!entry.isDirectory() && entry.getName().endsWith(".class")) {
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
                 int len;
-                while((len = in.read(cache)) > 0) {
+                while ((len = in.read(cache)) > 0) {
                     baos.write(cache, 0, len);
                 }
 
@@ -51,16 +51,16 @@ public class ClassStore {
     }
 
     public void insert(Collection<ClassNode> cns) {
-        for(ClassNode cn : cns) {
+        for (ClassNode cn : cns) {
             this.insert(cn);
         }
     }
 
     public ClassNode getClass(String name) {
         ClassNode cn = classes.get(name);
-        if(cn == null) {
+        if (cn == null) {
             byte[] bytecode = classfiles.get(name);
-            if(bytecode != null) {
+            if (bytecode != null) {
                 cn = new ClassNode();
                 new ClassReader(bytecode).accept(cn, 0);
                 classes.put(name, cn);

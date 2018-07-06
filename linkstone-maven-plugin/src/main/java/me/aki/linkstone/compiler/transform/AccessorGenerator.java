@@ -26,18 +26,18 @@ public class AccessorGenerator {
     }
 
     public void generateAccessors(List<ClassNode> cns) {
-        for(ClassNode cn : cns) {
+        for (ClassNode cn : cns) {
             generateAccessor(cn);
         }
     }
 
     private void generateAccessor(ClassNode cn) {
-        for(FieldNode fn : cn.fields) {
+        for (FieldNode fn : cn.fields) {
             FieldMeta meta = FieldMeta.from(fn);
-            if(meta.isGenerate()) {
+            if (meta.isGenerate()) {
                 cn.methods.add(generateGetter(cn, fn, meta));
 
-                if(!Modifier.isFinal(fn.access)) {
+                if (!Modifier.isFinal(fn.access)) {
                     cn.methods.add(generateSetter(cn, fn, meta));
                 }
             }
@@ -51,7 +51,7 @@ public class AccessorGenerator {
         GeneratorAdapter mv = new GeneratorAdapter(mn, mn.access, mn.name, mn.desc);
         mv.visitCode();
 
-        if(Modifier.isStatic(fn.access)) {
+        if (Modifier.isStatic(fn.access)) {
             mv.getStatic(Type.getObjectType(owner.name), fn.name, Type.getType(fn.desc));
         } else {
             mv.loadThis();
@@ -71,7 +71,7 @@ public class AccessorGenerator {
         GeneratorAdapter mv = new GeneratorAdapter(mn, mn.access, mn.name, mn.desc);
         mv.visitCode();
 
-        if(Modifier.isStatic(fn.access)) {
+        if (Modifier.isStatic(fn.access)) {
             mv.loadArg(0);
             mv.putStatic(Type.getObjectType(owner.name), fn.name, Type.getType(fn.desc));
         } else {

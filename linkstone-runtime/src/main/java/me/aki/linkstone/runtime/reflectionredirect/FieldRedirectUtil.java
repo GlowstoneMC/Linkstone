@@ -25,7 +25,7 @@ public class FieldRedirectUtil {
      * @return whether this utility works
      */
     public static boolean isSupported() {
-        if(isSupported == null) {
+        if (isSupported == null) {
             try {
                 Field f0 = FieldRedirectUtil.class.getDeclaredField("testField");
                 new FieldRedirectUtil().redirectField(f0);
@@ -48,7 +48,7 @@ public class FieldRedirectUtil {
                 Field.class.getDeclaredField("overrideFieldAccessor"),
         };
 
-        for(Field f : this.accessorFields) {
+        for (Field f : this.accessorFields) {
             makeAccessible(f);
         }
     }
@@ -76,7 +76,7 @@ public class FieldRedirectUtil {
     public void redirectField(Field field) throws InstantiationException, IllegalAccessException {
         Object accessor = newAccessor(field);
 
-        for(Field accessorField : accessorFields) {
+        for (Field accessorField : accessorFields) {
             accessorField.set(field, accessor);
         }
     }

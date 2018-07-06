@@ -31,7 +31,7 @@ public class ReflectFieldAccessReplaceVisitor extends ClassVisitor {
         mv = new MethodVisitor(api, mv) {
             @Override
             public void visitMethodInsn(int opcode, String owner, String name, String descriptor, boolean isInterface) {
-                if(owner.equals("java/lang/reflect/Field")) {
+                if (owner.equals("java/lang/reflect/Field")) {
                     switch (name) {
                         case "get": visitGet(); return;
                         case "set" : visitSet(); return;

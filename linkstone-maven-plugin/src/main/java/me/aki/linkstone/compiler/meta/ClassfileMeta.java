@@ -19,7 +19,7 @@ public class ClassfileMeta extends NamedVersionedMeta {
         String className = split[split.length - 1];
 
         ClassfileMeta meta = new ClassfileMeta(className);
-        if(cn.visibleAnnotations != null) {
+        if (cn.visibleAnnotations != null) {
             for (AnnotationNode an : cn.visibleAnnotations) {
                 if (an.desc.equals(CLASSFILE_ANNOTION_DESC) ||
                         an.desc.equals(CLASSFILE_CONTAINER_ANNOTION_DESC)) {

@@ -43,8 +43,10 @@ public class LinkstoneMojo extends AbstractMojo {
         classStore.insert(templates);
         loadDependencies(classStore);
 
+
+
         List<ErrorReport.Error> errors = compiler.runLints(templates, classStore).getErrors();
-        if(!errors.isEmpty()) {
+        if (!errors.isEmpty()) {
             printErrors(errors);
             throw new MojoExecutionException("Templates contain errors");
         }
@@ -56,7 +58,7 @@ public class LinkstoneMojo extends AbstractMojo {
     }
 
     private void loadDependencies(ClassStore resolver) throws MojoExecutionException {
-        for(Artifact artifact : project.getDependencyArtifacts()) {
+        for (Artifact artifact : project.getDependencyArtifacts()) {
             try {
                 resolver.insertArtifact(artifact);
             } catch (IOException e) {
@@ -68,7 +70,7 @@ public class LinkstoneMojo extends AbstractMojo {
     private void printErrors(List<ErrorReport.Error> errors) {
         getLog().error("Found " + errors.size() + " errors in your Template");
 
-        for(ErrorReport.Error error : errors) {
+        for (ErrorReport.Error error : errors) {
             getLog().error(" ");
             getLog().error(error.getMessage());
             getLog().error("Location: " + error.getLocation().toString());

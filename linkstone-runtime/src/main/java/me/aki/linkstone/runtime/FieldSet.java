@@ -14,7 +14,7 @@ public class FieldSet {
     public boolean remove(String classname, String name, String descriptor) {
         FieldDescriptor fieldDescriptor = new FieldDescriptor(classname, name, descriptor);
         boolean wasRemoved = fields.remove(fieldDescriptor);
-        if(wasRemoved) {
+        if (wasRemoved) {
             fieldsByClass.get(classname).remove(fieldDescriptor);
         }
         return wasRemoved;

@@ -18,13 +18,13 @@ public class FieldMeta extends NamedVersionedMeta {
 
     public static FieldMeta from(FieldNode fn) {
         FieldMeta meta = new FieldMeta(fn.name);
-        if(fn.visibleAnnotations != null) {
+        if (fn.visibleAnnotations != null) {
             for (AnnotationNode an : fn.visibleAnnotations) {
                 if (an.desc.equals(FIELD_ANNOTION_DESC) ||
                         an.desc.equals(FIELD_CONTAINER_ANNOTION_DESC)) {
                     an.accept(new NamedAnnotationVisitor<>(meta));
                     meta.setAnnotated(true);
-                } else if(an.desc.equals(GENERATE_ANNOTION_DESC)) {
+                } else if (an.desc.equals(GENERATE_ANNOTION_DESC)) {
                     meta.generate = true;
                 }
             }

@@ -43,7 +43,7 @@ public class AnnotatedFieldCollectVisitor extends ClassVisitor {
         fv = new FieldVisitor(api, fv) {
             @Override
             public AnnotationVisitor visitAnnotation(String annotationDescriptor, boolean visible) {
-                if(annotationDescriptor.equals(FIELD_ANNOTATION_SIGNATURE) ||
+                if (annotationDescriptor.equals(FIELD_ANNOTATION_SIGNATURE) ||
                         annotationDescriptor.equals(FIELD_CONTAINER_ANNOTATION_SIGNATURE)) {
                     annotatedFields.add(className, name, fieldDescriptor);
                 }

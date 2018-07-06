@@ -37,7 +37,7 @@ public class NamedAnnotationVisitor<T extends NamedVersionedMeta> extends Annota
     @Override
     public void visit(String name, Object value) {
         super.visit(name, value);
-        if(name.equals("name")) {
+        if (name.equals("name")) {
             this.name = Optional.of((String)value);
         }
     }
@@ -74,7 +74,7 @@ public class NamedAnnotationVisitor<T extends NamedVersionedMeta> extends Annota
     @Override
     public void visitEnd() {
         super.visitEnd();
-        for(Version version : versions) {
+        for (Version version : versions) {
             meta.getMapping().put(version, name);
         }
     }

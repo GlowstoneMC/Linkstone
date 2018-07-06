@@ -36,7 +36,7 @@ public class DelegateLinter implements Linter {
                     continue;
                 }
 
-                if(delegateCount++ >= 1) {
+                if (delegateCount++ >= 1) {
                     ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
                     String message = "Multiple @Delegate fields found";
                     report.addError(new ErrorReport.Error(message, location));
@@ -46,7 +46,7 @@ public class DelegateLinter implements Linter {
                     if (t.getSort() == Type.OBJECT) {
                         ClassNode tcn = classStore.getClass(t.getInternalName());
 
-                        if(tcn == null) {
+                        if (tcn == null) {
                             ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
                             String message = "Could not find class " + t.getInternalName() + " in dependency artifacts";
                             report.addError(new ErrorReport.Error(message, location));

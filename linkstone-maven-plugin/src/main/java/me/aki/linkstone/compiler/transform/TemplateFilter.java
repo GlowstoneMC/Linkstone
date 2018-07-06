@@ -30,7 +30,7 @@ public class TemplateFilter {
             ClassNode cn = iter.next();
             ClassfileMeta meta = ClassfileMeta.from(cn);
 
-            if(meta.isAnnotated() && !meta.getVersions().contains(version)) {
+            if (meta.isAnnotated() && !meta.getVersions().contains(version)) {
                 iter.remove();
                 continue;
             }
@@ -43,13 +43,13 @@ public class TemplateFilter {
 
     private void processFieldAccessors(ClassNode cn) {
         AccessorCollector accessors = new AccessorCollector(cn);
-        for(FieldNode fn : accessors.getFields()) {
+        for (FieldNode fn : accessors.getFields()) {
             FieldMeta fieldMeta = FieldMeta.from(fn);
-            if(!fieldMeta.isAnnotated())continue;
+            if (!fieldMeta.isAnnotated())continue;
 
-            for(MethodNode getter : accessors.getGetters(fn)) {
+            for (MethodNode getter : accessors.getGetters(fn)) {
                 GetterMeta meta = GetterMeta.from(getter);
-                if(!meta.getVersions().contains(this.version)) {
+                if (!meta.getVersions().contains(this.version)) {
                     cn.methods.remove(getter);
                 }
 
@@ -57,9 +57,9 @@ public class TemplateFilter {
                 getter.name = GETTER_PREFIX + fn.name;
             }
 
-            for(MethodNode setter : accessors.getSetters(fn)) {
+            for (MethodNode setter : accessors.getSetters(fn)) {
                 SetterMeta meta = SetterMeta.from(setter);
-                if(!meta.getVersions().contains(this.version)) {
+                if (!meta.getVersions().contains(this.version)) {
                     cn.methods.remove(setter);
                 }
                 setter.access = setPublic(setter.access);
@@ -81,7 +81,7 @@ public class TemplateFilter {
             FieldNode fn = iter.next();
             FieldMeta meta = FieldMeta.from(fn);
 
-            if(meta.isAnnotated() && !meta.getVersions().contains(version)) {
+            if (meta.isAnnotated() && !meta.getVersions().contains(version)) {
                 iter.remove();
             }
         }
@@ -93,7 +93,7 @@ public class TemplateFilter {
             MethodNode mn = iter.next();
             MethodMeta meta = MethodMeta.from(mn);
 
-            if(meta.isAnnotated() && !meta.getVersions().contains(version)) {
+            if (meta.isAnnotated() && !meta.getVersions().contains(version)) {
                 iter.remove();
             }
         }

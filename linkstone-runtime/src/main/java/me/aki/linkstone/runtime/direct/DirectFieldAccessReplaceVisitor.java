@@ -37,7 +37,7 @@ public class DirectFieldAccessReplaceVisitor extends ClassVisitor {
         mv = new MethodVisitor(api, mv) {
             @Override
             public void visitFieldInsn(int opcode, String owner, String name, String descriptor) {
-                if(fieldsToReplace.contains(owner, name, descriptor)) {
+                if (fieldsToReplace.contains(owner, name, descriptor)) {
                     switch (opcode) {
                         case GETFIELD:
                         case GETSTATIC: {

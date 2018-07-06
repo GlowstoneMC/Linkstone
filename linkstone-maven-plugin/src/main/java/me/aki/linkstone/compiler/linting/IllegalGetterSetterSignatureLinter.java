@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 public class IllegalGetterSetterSignatureLinter implements Linter {
     @Override
     public void lint(List<ClassNode> classes, ErrorReport report) {
-        for(ClassNode cn : classes) {
+        for (ClassNode cn : classes) {
             AccessorCollector accessors = find(cn, report);
             checkGetterSignatures(cn, accessors, report);
             checkSetterSignatures(cn, accessors, report);
@@ -31,14 +31,14 @@ public class IllegalGetterSetterSignatureLinter implements Linter {
             protected void onMissingAccessorError(FieldNode fn, Set<Version> missingGetterVersions, Set<Version> missingSetterVersions) {
                 ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
 
-                if(!missingGetterVersions.isEmpty()) {
+                if (!missingGetterVersions.isEmpty()) {
                     String joinedVersions = missingGetterVersions.stream().map(Version::getName)
                             .collect(Collectors.joining(", "));
                     String message = "Missing getters for version " + joinedVersions;
                     report.addError(new ErrorReport.Error(message, location));
                 }
 
-                if(!missingSetterVersions.isEmpty()) {
+                if (!missingSetterVersions.isEmpty()) {
                     String joinedVersions = missingSetterVersions.stream().map(Version::getName)
                             .collect(Collectors.joining(", "));
                     String message = "Missing setters for version " + joinedVersions;
@@ -75,9 +75,9 @@ public class IllegalGetterSetterSignatureLinter implements Linter {
     }
 
     private void checkGetterSignatures(ClassNode cn, AccessorCollector accessors, ErrorReport report) {
-        for(FieldNode field : accessors.getFields()) {
+        for (FieldNode field : accessors.getFields()) {
             boolean isStatic = Modifier.isStatic(field.access);
-            for(MethodNode getter : accessors.getGetters(field)) {
+            for (MethodNode getter : accessors.getGetters(field)) {
                 if (Type.getArgumentTypes(getter.desc).length != 0) {
                     ErrorReport.Method location = new ErrorReport.Method(cn.name, getter.name, getter.desc);
                     String message = "Getters may have parameters";
@@ -92,7 +92,7 @@ public class IllegalGetterSetterSignatureLinter implements Linter {
                     report.addError(new ErrorReport.Error(message, location));
                 }
 
-                if(isStatic != Modifier.isStatic(getter.access)) {
+                if (isStatic != Modifier.isStatic(getter.access)) {
                     String staticString = isStatic ? "static" : "non-static";
                     ErrorReport.Method location = new ErrorReport.Method(cn.name, getter.name, getter.desc);
                     String message = "Getters for " + staticString + " fields must be " + staticString;
@@ -103,10 +103,10 @@ public class IllegalGetterSetterSignatureLinter implements Linter {
     }
 
     private void checkSetterSignatures(ClassNode cn, AccessorCollector accessors, ErrorReport report) {
-        for(FieldNode field : accessors.getFields()) {
+        for (FieldNode field : accessors.getFields()) {
             boolean isStatic = Modifier.isStatic(field.access);
 
-            for(MethodNode setter : accessors.getSetters(field)) {
+            for (MethodNode setter : accessors.getSetters(field)) {
                 Type[] arguments = Type.getArgumentTypes(setter.desc);
                 if (arguments.length == 1) {
                     if (!arguments[0].getDescriptor().equals(field.desc)) {
@@ -126,7 +126,7 @@ public class IllegalGetterSetterSignatureLinter implements Linter {
                     report.addError(new ErrorReport.Error(message, location));
                 }
 
-                if(isStatic != Modifier.isStatic(setter.access)) {
+                if (isStatic != Modifier.isStatic(setter.access)) {
                     ErrorReport.Method location = new ErrorReport.Method(cn.name, setter.name, setter.desc);
                     String staticString = isStatic ? "static" : "non-static";
                     String message = "Setters for " + staticString + " fields must be " + staticString;

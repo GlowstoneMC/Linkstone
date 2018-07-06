@@ -26,7 +26,7 @@ public class UnnamedAnnotationVisitor extends AnnotationVisitor {
     @Override
     public AnnotationVisitor visitArray(String name) {
         AnnotationVisitor av = super.visitArray(name);
-        if(name.equals("version")) {
+        if (name.equals("version")) {
             av = new AnnotationVisitor(api, av) {
                 @Override
                 public void visitEnum(String name, String descriptor, String value) {

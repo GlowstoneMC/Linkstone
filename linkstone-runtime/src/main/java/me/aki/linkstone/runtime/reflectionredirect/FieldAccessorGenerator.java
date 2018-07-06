@@ -80,7 +80,7 @@ public class FieldAccessorGenerator {
         GeneratorAdapter mv = new GeneratorAdapter(ACC_PUBLIC, method, null, exceptions, cv);
         mv.visitCode();
 
-        if(!Modifier.isStatic(field.getModifiers())){
+        if (!Modifier.isStatic(field.getModifiers())){
             mv.loadArg(0);
             mv.checkCast(Type.getType(field.getDeclaringClass()));
         }
@@ -88,7 +88,7 @@ public class FieldAccessorGenerator {
 
         invokeGetter(mv);
 
-        if(field.getType().isPrimitive()) {
+        if (field.getType().isPrimitive()) {
             mv.box(Type.getType(field.getType()));
         }
 
@@ -105,7 +105,7 @@ public class FieldAccessorGenerator {
         GeneratorAdapter mv = new GeneratorAdapter(ACC_PUBLIC, method, null, exceptions, cv);
         mv.visitCode();
 
-        if(!Modifier.isStatic(field.getModifiers())) {
+        if (!Modifier.isStatic(field.getModifiers())) {
             mv.loadArg(0);
             mv.checkCast(Type.getType(field.getDeclaringClass()));
         }
@@ -113,7 +113,7 @@ public class FieldAccessorGenerator {
         mv.loadArg(1);
         mv.checkCast(Type.getType(field.getType()));
 
-        if(field.getType().isPrimitive()) {
+        if (field.getType().isPrimitive()) {
             mv.unbox(Type.getType(field.getType()));
         }
 
@@ -140,7 +140,7 @@ public class FieldAccessorGenerator {
         GeneratorAdapter mv = new GeneratorAdapter(ACC_PUBLIC, method, null, exceptions, cv);
         mv.visitCode();
 
-        if(type.equals(field.getType())) {
+        if (type.equals(field.getType())) {
             if (!Modifier.isStatic(field.getModifiers())) {
                 mv.loadArg(0);
             }
@@ -172,7 +172,7 @@ public class FieldAccessorGenerator {
 
         mv.visitCode();
 
-        if(field.getType().equals(primitiveType)) {
+        if (field.getType().equals(primitiveType)) {
             if (!Modifier.isStatic(field.getModifiers())) {
                 mv.loadArg(0);
             }

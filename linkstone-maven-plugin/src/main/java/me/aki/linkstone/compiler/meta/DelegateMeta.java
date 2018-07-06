@@ -17,7 +17,7 @@ public class DelegateMeta implements Meta {
 
     public static DelegateMeta from(FieldNode fn) {
         DelegateMeta meta = new DelegateMeta();
-        if(fn.visibleAnnotations != null) {
+        if (fn.visibleAnnotations != null) {
             for (AnnotationNode an : fn.visibleAnnotations) {
                 if (an.desc.equals(DELEGATE_ANNOTATION_DESC)) {
                     an.accept(new DelegateAnnotationVisitor(meta));

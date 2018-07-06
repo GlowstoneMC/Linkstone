@@ -11,8 +11,8 @@ public class FileUtils {
      * @param file that will be deleted
      */
     public static void delete(File file) {
-        if(file.isDirectory()) {
-            for(File f : file.listFiles()) {
+        if (file.isDirectory()) {
+            for (File f : file.listFiles()) {
                 delete(f);
             }
         }
@@ -31,8 +31,8 @@ public class FileUtils {
     }
 
     private static void collectFiles(File file, List<File> list) {
-        if(file.isDirectory()) {
-            for(File f : file.listFiles()) {
+        if (file.isDirectory()) {
+            for (File f : file.listFiles()) {
                 collectFiles(f, list);
             }
         } else {

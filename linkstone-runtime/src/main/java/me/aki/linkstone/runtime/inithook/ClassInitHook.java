@@ -25,7 +25,7 @@ public class ClassInitHook {
     }
 
     public static void call(Class<?> clazz) {
-        for(Observer observer : observers) {
+        for (Observer observer : observers) {
             observer.onInit(clazz);
         }
     }

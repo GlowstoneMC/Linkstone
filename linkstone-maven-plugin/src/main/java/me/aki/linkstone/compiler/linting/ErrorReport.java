@@ -117,7 +117,7 @@ public class ErrorReport {
             Type[] argumentTypes = Type.getArgumentTypes(descriptor);
             for (int i = 0; i < argumentTypes.length; i++) {
                 builder.append(argumentTypes[i].getClassName());
-                if(i < argumentTypes.length - 1) {
+                if (i < argumentTypes.length - 1) {
                     builder.append(", ");
                 }
             }

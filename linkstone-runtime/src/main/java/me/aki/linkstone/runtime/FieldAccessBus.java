@@ -37,7 +37,7 @@ public class FieldAccessBus {
     public static Object getField(Field field, Object instance) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         Class<?> owner = field.getDeclaringClass();
         String classname = owner.getName().replace('.', '/');
-        if(fields.contains(classname, field.getName(), Type.getDescriptor(field.getType()))) {
+        if (fields.contains(classname, field.getName(), Type.getDescriptor(field.getType()))) {
             Method method = owner.getDeclaredMethod("$linkstone$getter$" + field.getName());
             return method.invoke(instance);
         } else {
@@ -59,7 +59,7 @@ public class FieldAccessBus {
     public static void setField(Field field, Object instance, Object value) throws IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         Class<?> owner = field.getDeclaringClass();
         String classname = owner.getName().replace('.', '/');
-        if(fields.contains(classname, field.getName(), Type.getDescriptor(field.getType()))) {
+        if (fields.contains(classname, field.getName(), Type.getDescriptor(field.getType()))) {
             Method method = owner.getDeclaredMethod("$linkstone$setter$" + field.getName(), field.getType());
             method.invoke(instance, value);
         } else {

@@ -28,8 +28,8 @@ public class LinkstoneCompiler {
      */
     public List<ClassNode> loadClasses(File directory) {
         List<ClassNode> classes = new ArrayList<>();
-        for(File classfile : FileUtils.listFiles(directory)) {
-            if(!classfile.isFile() || !classfile.getName().endsWith(".class"))continue;
+        for (File classfile : FileUtils.listFiles(directory)) {
+            if (!classfile.isFile() || !classfile.getName().endsWith(".class"))continue;
 
             try {
                 ClassNode cn = new ClassNode();
@@ -59,7 +59,7 @@ public class LinkstoneCompiler {
                 new DelegateLinter(classStore)
         };
 
-        for(Linter linter : linters) {
+        for (Linter linter : linters) {
             linter.lint(templates, report);
         }
 
@@ -93,7 +93,7 @@ public class LinkstoneCompiler {
         Remapper remapper = new MappingModelRemapper(mappingModel);
         List<ClassNode> newClasses = new ArrayList<>(cns.size());
 
-        for(ClassNode cn : cns) {
+        for (ClassNode cn : cns) {
             ClassNode newClassNode = new ClassNode();
             cn.accept(new ClassRemapper(newClassNode, remapper));
             newClasses.add(newClassNode);
@@ -116,7 +116,7 @@ public class LinkstoneCompiler {
      * @param cns Classnodes that should be written
      */
     public void writeClasses(final File dir, List<ClassNode> cns) {
-        for(ClassNode cn : cns) {
+        for (ClassNode cn : cns) {
             String[] split = cn.name.split("/");
             String className = split[split.length - 1];
 

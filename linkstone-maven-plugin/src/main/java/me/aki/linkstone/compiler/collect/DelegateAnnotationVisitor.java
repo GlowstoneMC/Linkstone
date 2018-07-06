@@ -29,7 +29,7 @@ public class DelegateAnnotationVisitor extends AnnotationVisitor {
     @Override
     public AnnotationVisitor visitArray(String name) {
         AnnotationVisitor av = super.visitArray(name);
-        if(name.equals("value")) {
+        if (name.equals("value")) {
             av = new AnnotationVisitor(api, av) {
                 @Override
                 public void visit(String name, Object value) {

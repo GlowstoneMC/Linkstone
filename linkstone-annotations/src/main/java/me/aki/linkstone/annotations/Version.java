@@ -7,7 +7,7 @@ public enum Version {
     V1_12_R1("1_12_R1");
 
     public static Version forName(String name) {
-        for(Version version : values()) {
+        for (Version version : values()) {
             if (version.getName().equals(name)) {
                 return version;
             }

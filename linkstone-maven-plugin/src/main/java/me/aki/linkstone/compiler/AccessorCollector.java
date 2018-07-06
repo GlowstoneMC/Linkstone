@@ -26,14 +26,14 @@ public class AccessorCollector {
         fieldLoop: while (fieldIter.hasNext()) {
             FieldNode fn = fieldIter.next();
             FieldMeta fieldMeta = FieldMeta.from(fn);
-            if(!fieldMeta.isAnnotated())continue;
+            if (!fieldMeta.isAnnotated())continue;
 
             fields.add(fn);
 
             Set<MethodNode> getters = getterMap.computeIfAbsent(fn, x -> new HashSet<>());
             Set<MethodNode> setters = setterMap.computeIfAbsent(fn, x -> new HashSet<>());
 
-            if(fieldMeta.isGenerate())continue;
+            if (fieldMeta.isGenerate())continue;
 
             boolean isFinal = (fn.access & Opcodes.ACC_FINAL) != 0;
             Set<Version> notYetSeenGetterVersions = new HashSet<>(fieldMeta.getVersions());
@@ -43,22 +43,22 @@ public class AccessorCollector {
                 MethodNode mn = methodIter.next();
                 GetterMeta getterMeta = GetterMeta.from(mn);
 
-                if(getterMeta.isAnnotated()) {
+                if (getterMeta.isAnnotated()) {
                     getters.add(mn);
 
-                    for(Version version : getterMeta.getVersions()) {
-                        if(!notYetSeenGetterVersions.remove(version)) {
+                    for (Version version : getterMeta.getVersions()) {
+                        if (!notYetSeenGetterVersions.remove(version)) {
                             onDuplicatedGetterError(fn, version);
                             break fieldLoop;
                         }
                     }
-                } else if(!isFinal) {
+                } else if (!isFinal) {
                     SetterMeta setterMeta = SetterMeta.from(mn);
-                    if(setterMeta.isAnnotated()) {
+                    if (setterMeta.isAnnotated()) {
                         setters.add(mn);
 
-                        for(Version version : setterMeta.getVersions()) {
-                            if(!notYetSeenSetterVersions.remove(version)) {
+                        for (Version version : setterMeta.getVersions()) {
+                            if (!notYetSeenSetterVersions.remove(version)) {
                                 onDuplicatedSetterError(fn, version);
                                 break fieldLoop;
                             }
@@ -66,21 +66,21 @@ public class AccessorCollector {
                     }
                 }
 
-                if(notYetSeenGetterVersions.isEmpty() && (isFinal || notYetSeenSetterVersions.isEmpty()))break fieldLoop;
+                if (notYetSeenGetterVersions.isEmpty() && (isFinal || notYetSeenSetterVersions.isEmpty()))break fieldLoop;
             }
 
             onMissingAccessorError(fn, notYetSeenGetterVersions, notYetSeenSetterVersions);
             break fieldLoop;
         }
 
-        while(methodIter.hasNext()) {
+        while (methodIter.hasNext()) {
             MethodNode mn = methodIter.next();
             GetterMeta getterMeta = GetterMeta.from(mn);
-            if(getterMeta.isAnnotated()) {
+            if (getterMeta.isAnnotated()) {
                 onUnusedGetterError(mn);
             } else {
                 SetterMeta setterMeta = SetterMeta.from(mn);
-                if(setterMeta.isAnnotated()) {
+                if (setterMeta.isAnnotated()) {
                     onUnusedSetterError(mn);
                 }
             }

@@ -37,12 +37,12 @@ public class MappingModel {
         String newClassName = classes.get(qualifiedClassName);
 
         int lastSlashIndex = qualifiedClassName.lastIndexOf('/');
-        if(lastSlashIndex < 0) {
+        if (lastSlashIndex < 0) {
             // class has no package
             return newClassName == null ? qualifiedClassName : newClassName;
         } else {
             String pkg = qualifiedClassName.substring(0, lastSlashIndex);
-            if(newClassName == null) {
+            if (newClassName == null) {
                 newClassName = qualifiedClassName.substring(lastSlashIndex + 1, qualifiedClassName.length());
             }
 
@@ -53,7 +53,7 @@ public class MappingModel {
     private String resolvePackage(String packagePath) {
         List<String> packageBuilder = new LinkedList<>();
 
-        while(true) {
+        while (true) {
             int lastSlashIndex = packagePath.lastIndexOf('/');
 
             PackageMapping mapping = packages.get(packagePath);
@@ -64,8 +64,8 @@ public class MappingModel {
 
             packageBuilder.add(0, currentPackageName);
 
-            if(mapping != null && mapping.getMode() == Mode.ABSOLUTE)break;
-            if(lastSlashIndex < 0)break;
+            if (mapping != null && mapping.getMode() == Mode.ABSOLUTE)break;
+            if (lastSlashIndex < 0)break;
 
             packagePath = packagePath.substring(0, lastSlashIndex);
         }

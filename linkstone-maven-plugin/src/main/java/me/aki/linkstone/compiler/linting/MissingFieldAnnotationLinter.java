@@ -20,7 +20,7 @@ public class MissingFieldAnnotationLinter implements Linter {
     public void lint(List<ClassNode> classes, ErrorReport report) {
         for (ClassNode cn : classes) {
             for (FieldNode fn  : cn.fields) {
-                if(fn.visibleAnnotations == null) {
+                if (fn.visibleAnnotations == null) {
                     continue;
                 }
 
@@ -35,7 +35,7 @@ public class MissingFieldAnnotationLinter implements Linter {
                     }
                 }
 
-                if(hasGenerateAnnotation && !hasFieldAnnotation) {
+                if (hasGenerateAnnotation && !hasFieldAnnotation) {
                     ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
                     String message = "Field has a @Generate annotation but not @Field annotations";
                     report.addError(new ErrorReport.Error(message, location));

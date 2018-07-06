@@ -30,7 +30,7 @@ public class PackageMetaVisitor extends NamedAnnotationVisitor<PackageMeta> {
     @Override
     public void visitEnum(String name, String descriptor, String value) {
         super.visitEnum(name, descriptor, value);
-        if(name.equals("mode")) {
+        if (name.equals("mode")) {
             mode = Optional.of(Mode.valueOf(value));
         }
     }
@@ -39,7 +39,7 @@ public class PackageMetaVisitor extends NamedAnnotationVisitor<PackageMeta> {
     public void visitEnd() {
         super.visitEnd();
         mode.ifPresent(mode -> {
-            for(Version version : versions) {
+            for (Version version : versions) {
                 meta.putTarget(version, mode);
             }
         });

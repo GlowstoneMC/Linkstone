@@ -29,7 +29,7 @@ public class ClassInitInvokeVisitor extends ClassVisitor {
     @Override
     public MethodVisitor visitMethod(int access, String name, String descriptor, String signature, String[] exceptions) {
         MethodVisitor mv = super.visitMethod(access, name, descriptor, signature, exceptions);
-        if(!wasClInitVisited && name.equals("<clinit>")) {
+        if (!wasClInitVisited && name.equals("<clinit>")) {
             mv = new MethodVisitor(api, mv) {
                 @Override
                 public void visitCode() {
@@ -49,7 +49,7 @@ public class ClassInitInvokeVisitor extends ClassVisitor {
 
     @Override
     public void visitEnd() {
-        if(!wasClInitVisited) {
+        if (!wasClInitVisited) {
             MethodVisitor mv = super.visitMethod(ACC_PUBLIC | ACC_STATIC, "<clinit>", "()V", null, null);
             mv.visitCode();
 

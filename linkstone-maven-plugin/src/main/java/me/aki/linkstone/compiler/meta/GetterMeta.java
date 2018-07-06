@@ -14,7 +14,7 @@ public class GetterMeta extends AbstractAccessorMeta {
 
     public static GetterMeta from(MethodNode mn) {
         GetterMeta meta = new GetterMeta();
-        if(mn.visibleAnnotations != null) {
+        if (mn.visibleAnnotations != null) {
             for (AnnotationNode an : mn.visibleAnnotations) {
                 if (an.desc.equals(GETTER_ANNOTION_DESC)) {
                     an.accept(new UnnamedAnnotationVisitor(meta));

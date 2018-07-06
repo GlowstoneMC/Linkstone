@@ -55,6 +55,7 @@ public class LinkstoneCompiler {
                 new DuplicatedClassMemberLinter(),
                 new IllegalGetterSetterSignatureLinter(),
                 new MissingClassVersionLinter(),
+                new MissingFieldAnnotationLinter(),
                 new DelegateLinter(classStore)
         };
 

@@ -2,8 +2,11 @@ package me.aki.linkstone.compiler;
 
 import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.compiler.linting.*;
+import me.aki.linkstone.compiler.transform.AccessorGenerator;
+import me.aki.linkstone.compiler.transform.DelegateGenerator;
+import me.aki.linkstone.compiler.transform.MappingModelRemapper;
+import me.aki.linkstone.compiler.transform.TemplateFilter;
 import org.objectweb.asm.ClassReader;
-import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.commons.ClassRemapper;
 import org.objectweb.asm.commons.Remapper;
@@ -17,15 +20,15 @@ public class LinkstoneCompiler {
     public final static String GETTER_PREFIX = "$linkstone$getter$";
     public final static String SETTER_PREFIX = "$linkstone$setter$";
 
-    private final static Linter[] LINTER = new Linter[] {
-            new DuplicatedClassMemberLinter(),
-            new IllegalGetterSetterSignatureLinter(),
-            new MissingClassVersionLinter()
-    };
-
-    public List<ClassNode> loadClasses(File classDirectory) {
+    /**
+     * Read all classfiles in a directory
+     *
+     * @param directory containing classfiles
+     * @return list of all parsed classfiles
+     */
+    public List<ClassNode> loadClasses(File directory) {
         List<ClassNode> classes = new ArrayList<>();
-        for(File classfile : FileUtils.listFiles(classDirectory)) {
+        for(File classfile : FileUtils.listFiles(directory)) {
             if(!classfile.isFile() || !classfile.getName().endsWith(".class"))continue;
 
             try {
@@ -39,23 +42,47 @@ public class LinkstoneCompiler {
         return classes;
     }
 
-    public ErrorReport runLints(List<ClassNode> templates) {
+    /**
+     * Check the provided templates for error and report them.
+     *
+     * @param templates to check
+     * @param classStore containing all dependencies
+     * @return detected errors
+     */
+    public ErrorReport runLints(List<ClassNode> templates, ClassStore classStore) {
         ErrorReport report = new ErrorReport();
-        for(Linter linter : LINTER) {
+        Linter[] linters = new Linter[] {
+                new DuplicatedClassMemberLinter(),
+                new IllegalGetterSetterSignatureLinter(),
+                new MissingClassVersionLinter(),
+                new DelegateLinter(classStore)
+        };
+
+        for(Linter linter : linters) {
             linter.lint(templates, report);
         }
+
         return report;
     }
 
-
-    public List<ClassNode> generateClasses(List<ClassNode> templates, Version version) {
+    /**
+     * Generate the final classes and apply patches defined by annotations.
+     *
+     * @param templates user written, annotated source code
+     * @param classStore containing all dependencies
+     * @param version to generate for
+     * @return generated classes
+     */
+    public List<ClassNode> generateClasses(List<ClassNode> templates, ClassStore classStore, Version version) {
         MappingModel mappingModel = collectMappingModel(templates, version);
 
         // Leave only classes, fields and methods that exist in the current version
-        new TemplateTransformer(version).processClasses(templates);
+        new TemplateFilter(version).processClasses(templates);
 
         // Generate getters and setters
-        new AccessorGenerateVisitor(version).generateAccessors(templates);
+        new AccessorGenerator(version).generateAccessors(templates);
+
+        new DelegateGenerator(classStore).generateDelegateMethods(templates);
 
         // Renames classes, methods, ... to their annotated name
         return remapClasses(templates, mappingModel);
@@ -81,22 +108,28 @@ public class LinkstoneCompiler {
         return mappingModel;
     }
 
-    public void writeClasses(final File outputDir, List<ClassNode> cns) {
+    /**
+     * Write a list of classnodes into a directory
+     *
+     * @param dir output directory
+     * @param cns Classnodes that should be written
+     */
+    public void writeClasses(final File dir, List<ClassNode> cns) {
         for(ClassNode cn : cns) {
             String[] split = cn.name.split("/");
             String className = split[split.length - 1];
 
-            File packageDir = outputDir;
+            File file = dir;
             for (int i = 0; i < (split.length - 1); i++) {
-                packageDir = new File(packageDir, split[i]);
+                file = new File(file, split[i]);
             }
 
             ClassWriter cw = new ClassWriter(0);
             cn.accept(cw);
 
             try {
-                File sourceLocation = new File(packageDir, className + ".class");
-                packageDir.mkdirs();
+                File sourceLocation = new File(file, className + ".class");
+                file.mkdirs();
 
                 FileOutputStream out = new FileOutputStream(sourceLocation);
                 out.write(cw.toByteArray());

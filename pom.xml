@@ -22,5 +22,6 @@
         <module>linkstone-maven-plugin</module>
         <module>linkstone-runtime</module>
         <module>linkstone-shim</module>
+        <module>test</module>
     </modules>
 </project>

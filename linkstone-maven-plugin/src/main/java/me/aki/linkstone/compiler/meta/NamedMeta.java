@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 
-public abstract class NamedMeta implements Meta {
+public abstract class NamedMeta implements VersionedMeta {
     private final String templateName;
     private final Map<Version, Optional<String>> mapping;
 

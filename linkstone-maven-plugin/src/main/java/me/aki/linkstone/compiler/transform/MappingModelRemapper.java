@@ -1,9 +1,10 @@
-package me.aki.linkstone.compiler;
+package me.aki.linkstone.compiler.transform;
 
+import me.aki.linkstone.compiler.MappingModel;
 import org.objectweb.asm.commons.Remapper;
 
 /**
- * Adapter for the ASM {@link Remapper} type
+ * Delegate for the ASM {@link Remapper} type
  */
 public class MappingModelRemapper extends Remapper {
     private final MappingModel mappingModel;

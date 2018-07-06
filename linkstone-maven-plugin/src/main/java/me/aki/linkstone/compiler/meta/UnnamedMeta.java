@@ -5,7 +5,7 @@ import me.aki.linkstone.annotations.Version;
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class UnnamedMeta implements Meta {
+public abstract class UnnamedMeta implements VersionedMeta {
     private final Set<Version> versions;
 
     public UnnamedMeta() {

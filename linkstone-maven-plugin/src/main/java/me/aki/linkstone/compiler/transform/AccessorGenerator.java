@@ -1,4 +1,4 @@
-package me.aki.linkstone.compiler;
+package me.aki.linkstone.compiler.transform;
 
 import static me.aki.linkstone.compiler.LinkstoneCompiler.GETTER_PREFIX;
 import static me.aki.linkstone.compiler.LinkstoneCompiler.SETTER_PREFIX;
@@ -18,10 +18,10 @@ import java.util.List;
 /**
  * Utility class that generates getters and setters for fields annotated with {@link Generate}
  */
-public class AccessorGenerateVisitor {
+public class AccessorGenerator {
     private final Version version;
 
-    public AccessorGenerateVisitor(Version version) {
+    public AccessorGenerator(Version version) {
         this.version = version;
     }
 

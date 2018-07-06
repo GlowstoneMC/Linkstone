@@ -1,8 +1,10 @@
-package me.aki.linkstone.compiler;
+package me.aki.linkstone.compiler.transform;
 
 import static me.aki.linkstone.compiler.LinkstoneCompiler.GETTER_PREFIX;
 import static me.aki.linkstone.compiler.LinkstoneCompiler.SETTER_PREFIX;
 import static org.objectweb.asm.Opcodes.*;
+
+import me.aki.linkstone.compiler.AccessorCollector;
 import me.aki.linkstone.compiler.meta.*;
 import me.aki.linkstone.annotations.Version;
 import org.objectweb.asm.tree.ClassNode;
@@ -15,10 +17,10 @@ import java.util.*;
  * Removes all classes, methods, fields, getters and setters that do not exist for a certain version.
  * It does also rename getters and setters.
  */
-public class TemplateTransformer {
+public class TemplateFilter {
     private final Version version;
 
-    public TemplateTransformer(Version version) {
+    public TemplateFilter(Version version) {
         this.version = version;
     }
 

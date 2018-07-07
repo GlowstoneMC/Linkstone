@@ -1,10 +1,10 @@
 package me.aki.linkstone.compiler.linting;
 
 import me.aki.linkstone.annotations.Delegate;
-import me.aki.linkstone.annotations.Overridden;
+import me.aki.linkstone.annotations.Overrides;
 import me.aki.linkstone.compiler.ClassStore;
 import me.aki.linkstone.compiler.meta.DelegateMeta;
-import me.aki.linkstone.compiler.meta.OverriddenMeta;
+import me.aki.linkstone.compiler.meta.OverridesMeta;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
@@ -29,9 +29,9 @@ public class DelegateLinter implements Linter {
         for (ClassNode cn : classes) {
             List<ClassNode> interfaces = collectAllDelegateInterfaces(cn, report);
 
-            lintNotOverriddenMethods(cn, interfaces, report);
+            lintNotOverridingMethods(cn, interfaces, report);
 
-            lintMissingOverriddenMethods(cn, interfaces, report);
+            lintMissingOverridesAnnotation(cn, interfaces, report);
         }
     }
 
@@ -87,26 +87,26 @@ public class DelegateLinter implements Linter {
     }
 
     /**
-     * Get all methods with a {@link Overridden} annotation in a class.
+     * Get all methods with a {@link Overrides} annotation in a class.
      *
      * @param cn class that is currently checked
      * @return the annotated methods
      */
     private List<MethodNode> getAnnotatedMethods(ClassNode cn) {
         return cn.methods.stream()
-                .filter(mn -> OverriddenMeta.from(mn).isAnnotated())
+                .filter(mn -> OverridesMeta.from(mn).isAnnotated())
                 .collect(Collectors.toList());
     }
 
     /**
-     * Lint if a method has a {@link Overridden} annotation but does not override
+     * Lint if a method has a {@link Overrides} annotation but does not override
      * a delegated method.
      *
      * @param cn class that is currently checked
      * @param delegatees interfaces that should be delegated
      * @param report error report for user
      */
-    private void lintNotOverriddenMethods(ClassNode cn, List<ClassNode> delegatees, ErrorReport report) {
+    private void lintNotOverridingMethods(ClassNode cn, List<ClassNode> delegatees, ErrorReport report) {
         List<MethodNode> notOverridenMethods = getAnnotatedMethods(cn);
 
         for (ClassNode delegatee : delegatees) {
@@ -124,22 +124,22 @@ public class DelegateLinter implements Linter {
     }
 
     /**
-     * Lint if a method would override a delegated method but has not {@link Overridden} annotation.
+     * Lint if a method would override a delegated method but has not {@link Overrides} annotation.
      *
-     *  @param cn class to check against
+     * @param cn class to check against
      * @param delegateClasses interfaces that should be delegated
      * @param report error report for user
      */
-    private void lintMissingOverriddenMethods(ClassNode cn, List<ClassNode> delegateClasses, ErrorReport report) {
+    private void lintMissingOverridesAnnotation(ClassNode cn, List<ClassNode> delegateClasses, ErrorReport report) {
         for (ClassNode delegateInterface : delegateClasses) {
             for (MethodNode interfaceMethod : delegateInterface.methods) {
                 for (MethodNode mn : cn.methods) {
                     if (interfaceMethod.name.equals(mn.name) &&
                             interfaceMethod.desc.equals(mn.desc)) {
-                        OverriddenMeta meta = OverriddenMeta.from(mn);
+                        OverridesMeta meta = OverridesMeta.from(mn);
                         if (!meta.isAnnotated()) {
                             ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
-                            String message = "Method overrides a delegated method but has no @Overridden annotation";
+                            String message = "Method overrides a delegated method but has no @Overrides annotation";
                             report.addError(new ErrorReport.Error(message, location));
                         }
                     }

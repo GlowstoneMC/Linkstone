@@ -2,10 +2,7 @@ package me.aki.linkstone.compiler;
 
 import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.compiler.linting.*;
-import me.aki.linkstone.compiler.transform.AccessorGenerator;
-import me.aki.linkstone.compiler.transform.DelegateGenerator;
-import me.aki.linkstone.compiler.transform.MappingModelRemapper;
-import me.aki.linkstone.compiler.transform.TemplateFilter;
+import me.aki.linkstone.compiler.transform.*;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.commons.ClassRemapper;
@@ -77,13 +74,15 @@ public class LinkstoneCompiler {
     public List<ClassNode> generateClasses(List<ClassNode> templates, ClassStore classStore, Version version) {
         MappingModel mappingModel = collectMappingModel(templates, version);
 
-        // Leave only classes, fields and methods that exist in the current version
-        new TemplateFilter(version).processClasses(templates);
+        CodeTransformer[] codeTransformers = {
+                new TemplateFilter(version),
+                new AccessorGenerator(version),
+                new DelegateGenerator(classStore)
+        };
 
-        // Generate getters and setters
-        new AccessorGenerator(version).generateAccessors(templates);
-
-        new DelegateGenerator(classStore).generateDelegateMethods(templates);
+        for(CodeTransformer transformer : codeTransformers) {
+            transformer.transform(templates);
+        }
 
         // Renames classes, methods, ... to their annotated name
         return remapClasses(templates, mappingModel);

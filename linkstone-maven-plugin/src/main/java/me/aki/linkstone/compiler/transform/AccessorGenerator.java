@@ -18,14 +18,14 @@ import java.util.List;
 /**
  * Utility class that generates getters and setters for fields annotated with {@link Generate}
  */
-public class AccessorGenerator {
+public class AccessorGenerator implements CodeTransformer {
     private final Version version;
 
     public AccessorGenerator(Version version) {
         this.version = version;
     }
 
-    public void generateAccessors(List<ClassNode> cns) {
+    public void transform(List<ClassNode> cns) {
         for (ClassNode cn : cns) {
             generateAccessor(cn);
         }

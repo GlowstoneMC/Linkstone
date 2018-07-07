@@ -17,14 +17,14 @@ import java.util.*;
  * Removes all classes, methods, fields, getters and setters that do not exist for a certain version.
  * It does also rename getters and setters.
  */
-public class TemplateFilter {
+public class TemplateFilter implements CodeTransformer {
     private final Version version;
 
     public TemplateFilter(Version version) {
         this.version = version;
     }
 
-    public void processClasses(List<ClassNode> cns) {
+    public void transform(List<ClassNode> cns) {
         Iterator<ClassNode> iter = cns.iterator();
         while (iter.hasNext()) {
             ClassNode cn = iter.next();
@@ -41,12 +41,15 @@ public class TemplateFilter {
         }
     }
 
+    /**
+     * Remove all getters and setters that do not exist in the targeted version and
+     * rename the left over getters and setters.
+     *
+     * @param cn class to process
+     */
     private void processFieldAccessors(ClassNode cn) {
         AccessorCollector accessors = new AccessorCollector(cn);
         for (FieldNode fn : accessors.getFields()) {
-            FieldMeta fieldMeta = FieldMeta.from(fn);
-            if (!fieldMeta.isAnnotated())continue;
-
             for (MethodNode getter : accessors.getGetters(fn)) {
                 GetterMeta meta = GetterMeta.from(getter);
                 if (!meta.getVersions().contains(this.version)) {
@@ -75,28 +78,29 @@ public class TemplateFilter {
         return access;
     }
 
+    /**
+     * Leave only fields that exist in the target version.
+     *
+     * @param fields to filter
+     */
     private void processFields(List<FieldNode> fields) {
-        Iterator<FieldNode> iter = fields.iterator();
-        while (iter.hasNext()) {
-            FieldNode fn = iter.next();
+        fields.removeIf(fn -> {
             FieldMeta meta = FieldMeta.from(fn);
 
-            if (meta.isAnnotated() && !meta.getVersions().contains(version)) {
-                iter.remove();
-            }
-        }
+            return meta.isAnnotated() && !meta.getVersions().contains(version);
+        });
     }
 
+    /**
+     * Leave only methods that exist in the targeted version
+     *
+     * @param methods to filter
+     */
     private void processMethods(List<MethodNode> methods) {
-        Iterator<MethodNode> iter = methods.iterator();
-        while (iter.hasNext()) {
-            MethodNode mn = iter.next();
+        methods.removeIf(mn -> {
             MethodMeta meta = MethodMeta.from(mn);
 
-            if (meta.isAnnotated() && !meta.getVersions().contains(version)) {
-                iter.remove();
-            }
-        }
+            return meta.isAnnotated() && !meta.getVersions().contains(version);
+        });
     }
-
 }

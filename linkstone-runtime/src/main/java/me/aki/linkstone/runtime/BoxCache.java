@@ -32,14 +32,19 @@ public class BoxCache {
      * @param expectedBox class of the box
      * @return boxed Type
      */
+    @SuppressWarnings("unchecked")
     public static <T> T box(Object objectToBox, Class<T> expectedBox) {
         if (objectToBox == null) {
             return null;
         }
 
+        if(expectedBox.isAssignableFrom(objectToBox.getClass())) {
+            return (T) objectToBox;
+        }
+
         BoxAndBoxed idealBox = getBoxType(objectToBox.getClass(), expectedBox);
         if (idealBox == null) {
-            throw new RuntimeException("Cannot box " + objectToBox.getClass().getName() + " into " + expectedBox.getClass().getName());
+            throw new RuntimeException("Cannot box " + objectToBox.getClass().getName() + " into " + expectedBox.getName());
         }
 
         Map<Class<?>, Object> boxMap;

@@ -102,14 +102,21 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
 
         Label returnNull = new Label();
         Label returnBox = new Label();
+        Label returnObjectToBox = new Label();
         Label throwIllegalTypeException = new Label();
 
         String methodDescriptor = Type.getMethodDescriptor(boxType, Type.getObjectType("java/lang/Object"));
         MethodNode mv = new MethodNode(ACC_PUBLIC | ACC_STATIC, STATIC_BOX_CONSTRUCTOR, methodDescriptor, null, null);
         mv.visitCode();
 
+        // if the "object to box" is null, then return null
         mv.visitVarInsn(ALOAD, objectToBox);
         mv.visitJumpInsn(IFNULL, returnNull);
+
+        // If the "object to box" is already a box, then cast and return it
+        mv.visitVarInsn(ALOAD, objectToBox);
+        mv.visitTypeInsn(INSTANCEOF, boxType.getInternalName());
+        mv.visitJumpInsn(IFNE, returnObjectToBox);
 
         // Lookup the object in the cache
         mv.visitFieldInsn(GETSTATIC, boxType.getInternalName(), BOX_CACHE_MAP, "Ljava/util/Map;");
@@ -146,8 +153,9 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
         mv.visitVarInsn(ALOAD, boxLocal);
         mv.visitInsn(ARETURN);
 
-        mv.visitFrame(F_SAME, 0, null, 0, null);
         mv.visitLabel(throwIllegalTypeException);
+        mv.visitFrame(F_SAME, 0, null, 0, null);
+        // The "object to box" is not of a type that this class can box, so throw an exception
         mv.visitTypeInsn(NEW, "java/lang/RuntimeException");
         mv.visitInsn(DUP);
         mv.visitTypeInsn(NEW, "java/lang/StringBuilder");
@@ -162,10 +170,17 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
         mv.visitMethodInsn(INVOKESPECIAL, "java/lang/RuntimeException", "<init>", "(Ljava/lang/String;)V", false);
         mv.visitInsn(ATHROW);
 
-        mv.visitFrame(F_CHOP,1, null, 0, null);
         mv.visitLabel(returnNull);
-        // Object to wrap is null, so return null
+        mv.visitFrame(F_CHOP,1, null, 0, null);
+        // The "object to wrap" is null, so return null
         mv.visitInsn(ACONST_NULL);
+        mv.visitInsn(ARETURN);
+
+        mv.visitLabel(returnObjectToBox);
+        mv.visitFrame(F_SAME, 0, null, 0, null);
+        // The "object to box" is already a box, so cast and return it
+        mv.visitVarInsn(ALOAD, objectToBox);
+        mv.visitTypeInsn(CHECKCAST, boxType.getInternalName());
         mv.visitInsn(ARETURN);
 
         mv.visitMaxs(3, 2);

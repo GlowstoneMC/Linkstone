@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -24,7 +25,14 @@ public class BoxCache {
                     .weakKeys()
                     .build();
 
-    public static Object box(Object objectToBox, Class<?> expectedBox) throws ExecutionException, ClassNotFoundException {
+    /**
+     * Wrap an object into a box if its not already cached.
+     *
+     * @param objectToBox object that should be boxed
+     * @param expectedBox class of the box
+     * @return boxed Type
+     */
+    public static <T> T box(Object objectToBox, Class<T> expectedBox) {
         if (objectToBox == null) {
             return null;
         }
@@ -34,27 +42,36 @@ public class BoxCache {
             throw new RuntimeException("Cannot box " + objectToBox.getClass().getName() + " into " + expectedBox.getClass().getName());
         }
 
-        Map<Class<?>, Object> boxMap = boxCache.get(objectToBox, HashMap::new);
-
-        synchronized (boxMap) {
-            return boxMap.computeIfAbsent(idealBox.boxClass, boxClass -> {
-                try {
-                    return boxClass.getConstructor(idealBox.boxedClass).newInstance(objectToBox);
-                } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
-                    throw new RuntimeException("Could not create Linkstone box " + idealBox.boxClass.getName() + " for type " + idealBox.boxedClass.getName());
-                }
-            });
+        Map<Class<?>, Object> boxMap;
+        try {
+            boxMap = boxCache.get(objectToBox, ConcurrentHashMap::new);
+        } catch (ExecutionException e) {
+            throw new RuntimeException("An error occurred while creating a HashMap", e);
         }
+
+        return (T) boxMap.computeIfAbsent(idealBox.boxClass, boxClass -> {
+            try {
+                return boxClass.getConstructor(idealBox.boxedClass).newInstance(objectToBox);
+            } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
+                throw new RuntimeException("Could not create Linkstone box " + idealBox.boxClass.getName() + " for type " + idealBox.boxedClass.getName());
+            }
+        });
     }
 
-    private static BoxAndBoxed getBoxType(Class<?> classToBox, Class<?> expectedBox) throws ClassNotFoundException {
+    private static BoxAndBoxed getBoxType(Class<?> classToBox, Class<?> expectedBox) {
         Boxes boxes = LinkstoneRuntimeData.getBoxes();
         ClassLoader pluginClassLoader = LinkstoneRuntimeData.getPluginClassLoader();
 
         do {
             Set<Type> availableBoxes = boxes.getBoxTypes(Type.getType(classToBox));
             for(Type boxType : availableBoxes) {
-                Class<?> boxClass = pluginClassLoader.loadClass(boxType.getClassName());
+                Class<?> boxClass = null;
+                try {
+                    boxClass = pluginClassLoader.loadClass(boxType.getClassName());
+                } catch (ClassNotFoundException e) {
+                    throw new RuntimeException("Could not load Box class " + boxType.getInternalName(), e);
+                }
+
                 if (expectedBox.isAssignableFrom(boxClass)) {
                     return new BoxAndBoxed(boxClass, classToBox);
                 }

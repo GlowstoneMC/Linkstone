@@ -11,8 +11,17 @@ import java.lang.reflect.Method;
  * @see ReflectFieldAccessReplaceVisitor
  */
 public class LinkstoneRuntimeData {
+    private static ClassLoader pluginClassLoader;
     private static Boxes boxes;
     private static FieldSet fields;
+
+    public static ClassLoader getPluginClassLoader() {
+        return pluginClassLoader;
+    }
+
+    public static void setPluginClassLoader(ClassLoader pluginClassLoader) {
+        LinkstoneRuntimeData.pluginClassLoader = pluginClassLoader;
+    }
 
     public static FieldSet getFields() {
         return fields;

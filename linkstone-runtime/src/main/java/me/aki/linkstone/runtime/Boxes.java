@@ -2,8 +2,7 @@ package me.aki.linkstone.runtime;
 
 import org.objectweb.asm.Type;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Datastructure that stores boxes and what type they box.
@@ -12,7 +11,12 @@ public class Boxes {
     /**
      * Map box types to the type they are boxing.
      */
-    private final Map<Type, Type> boxes = new HashMap<>();
+    private final Map<Type, Type> boxToBoxed = new HashMap<>();
+
+    /**
+     * Map a class to all boxes that can box it.
+     */
+    private final Map<Type, Set<Type>> boxedToBoxes = new HashMap<>();
 
     /**
      * Register a new box type
@@ -21,7 +25,9 @@ public class Boxes {
      * @param boxedType Type that the box contains
      */
     public void addBox(Type boxType, Type boxedType) {
-        boxes.put(boxType, boxedType);
+        boxToBoxed.put(boxType, boxedType);
+
+        boxedToBoxes.computeIfAbsent(boxedType, x -> new HashSet<>()).add(boxType);
     }
 
     /**
@@ -31,6 +37,16 @@ public class Boxes {
      * @return boxed type or null if boxType is not a box
      */
     public Type getBoxedType(Type boxType) {
-        return boxes.get(boxType);
+        return boxToBoxed.get(boxType);
+    }
+
+    /**
+     * Check what types may box a certain type.
+     *
+     * @param boxedType type to be boxed
+     * @return all available boxes
+     */
+    public Set<Type> getBoxTypes(Type boxedType) {
+        return boxedToBoxes.getOrDefault(boxedType, Collections.emptySet());
     }
 }

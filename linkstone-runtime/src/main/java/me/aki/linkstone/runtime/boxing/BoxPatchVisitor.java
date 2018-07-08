@@ -33,8 +33,10 @@ public class BoxPatchVisitor extends ClassVisitor {
                     Type boxType = Type.getObjectType(type);
                     Type boxedType = boxes.getBoxedType(boxType);
                     if (boxedType != null) {
-                        String desc = Type.getMethodDescriptor(boxType, Type.getObjectType("java/lang/Object"));
-                        super.visitMethodInsn(INVOKESTATIC, type, "$linkstone$box$init$", desc, false);
+                        super.visitLdcInsn(boxType);
+                        super.visitMethodInsn(INVOKESTATIC, "me/aki/linkstone/runtime/BoxCache", "box",
+                                "(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;", false);
+                        super.visitTypeInsn(CHECKCAST, boxType.getInternalName());
                         return;
                     }
                 }

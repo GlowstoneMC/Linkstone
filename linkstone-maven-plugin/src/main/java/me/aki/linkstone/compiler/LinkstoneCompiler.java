@@ -53,7 +53,8 @@ public class LinkstoneCompiler {
                 new IllegalGetterSetterSignatureLinter(),
                 new MissingClassVersionLinter(),
                 new MissingFieldAnnotationLinter(),
-                new DelegateLinter(classStore)
+                new DelegateLinter(classStore),
+                new BoxLinter()
         };
 
         for (Linter linter : linters) {
@@ -77,7 +78,8 @@ public class LinkstoneCompiler {
         CodeTransformer[] codeTransformers = {
                 new TemplateFilter(version),
                 new AccessorGenerator(version),
-                new DelegateGenerator(classStore)
+                new DelegateGenerator(classStore),
+                new BoxDelegateGenerator()
         };
 
         for(CodeTransformer transformer : codeTransformers) {

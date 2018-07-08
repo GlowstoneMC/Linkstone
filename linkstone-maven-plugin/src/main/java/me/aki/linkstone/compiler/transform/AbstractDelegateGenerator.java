@@ -17,14 +17,15 @@ public class AbstractDelegateGenerator {
      * @param cn where to add the generated method
      * @param instanceField instance that will be invoked
      * @param owner interface containing the method to delegate
-     * @param method method that should be called
+     * @param name name of method to be called
+     * @param desc descriptor of method to be called
      */
-    protected void generateDelegateMethod(ClassNode cn, FieldNode instanceField, Type owner, MethodNode method) {
-        if (existsMethod(cn, method.name, method.desc)) {
+    protected void generateDelegateMethod(ClassNode cn, FieldNode instanceField, Type owner, String name, String desc) {
+        if (existsMethod(cn, name, desc)) {
             return;
         }
 
-        MethodNode mn = new MethodNode(ACC_PUBLIC, method.name, method.desc, null, null);
+        MethodNode mn = new MethodNode(ACC_PUBLIC, name, desc, null, null);
         cn.methods.add(mn);
 
         GeneratorAdapter mv = new GeneratorAdapter(mn, mn.access, mn.name, mn.desc);
@@ -40,7 +41,7 @@ public class AbstractDelegateGenerator {
             mv.loadArg(i);
         }
 
-        mv.visitMethodInsn(INVOKEINTERFACE, owner.getInternalName(), method.name, method.desc, true);
+        mv.visitMethodInsn(INVOKEINTERFACE, owner.getInternalName(), name, desc, true);
 
         mv.returnValue();
 

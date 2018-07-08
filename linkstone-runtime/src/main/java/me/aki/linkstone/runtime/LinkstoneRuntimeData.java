@@ -6,13 +6,12 @@ import org.objectweb.asm.Type;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.Arrays;
-import java.util.stream.Collectors;
 
 /**
  * @see ReflectFieldAccessReplaceVisitor
  */
-public class FieldAccessBus {
+public class LinkstoneRuntimeData {
+    private static Boxes boxes;
     private static FieldSet fields;
 
     public static FieldSet getFields() {
@@ -20,7 +19,15 @@ public class FieldAccessBus {
     }
 
     public static void setFields(FieldSet fields) {
-        FieldAccessBus.fields = fields;
+        LinkstoneRuntimeData.fields = fields;
+    }
+
+    public static Boxes getBoxes() {
+        return boxes;
+    }
+
+    public static void setBoxes(Boxes boxes) {
+        LinkstoneRuntimeData.boxes = boxes;
     }
 
     /**

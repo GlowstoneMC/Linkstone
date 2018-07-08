@@ -41,7 +41,7 @@ public class DelegateGenerator extends AbstractDelegateGenerator implements Code
             for (Type clazz : classes) {
                 ClassNode tcn = classStore.getClass(clazz.getInternalName());
                 for (MethodNode mn : tcn.methods) {
-                    generateDelegateMethod(cn, fn, clazz, mn);
+                    generateDelegateMethod(cn, fn, clazz, mn.name, mn.desc);
                 }
             }
         }

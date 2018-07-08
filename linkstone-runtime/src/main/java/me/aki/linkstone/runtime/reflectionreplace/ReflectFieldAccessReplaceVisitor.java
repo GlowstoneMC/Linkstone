@@ -1,6 +1,6 @@
 package me.aki.linkstone.runtime.reflectionreplace;
 
-import me.aki.linkstone.runtime.FieldAccessBus;
+import me.aki.linkstone.runtime.LinkstoneRuntimeData;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Type;
@@ -11,11 +11,11 @@ import static org.objectweb.asm.Opcodes.*;
 
 /**
  * Visitor that replaces calls of get and set methods on a {@link Field}
- * against invokes on the {@link FieldAccessBus#getField(Field, Object)}
- * and {@link FieldAccessBus#setField(Field, Object, Object)} methods.
+ * against invokes on the {@link LinkstoneRuntimeData#getField(Field, Object)}
+ * and {@link LinkstoneRuntimeData#setField(Field, Object, Object)} methods.
  */
 public class ReflectFieldAccessReplaceVisitor extends ClassVisitor {
-    private final static String INVOKE_BUS_NAME = Type.getInternalName(FieldAccessBus.class);
+    private final static String INVOKE_BUS_NAME = Type.getInternalName(LinkstoneRuntimeData.class);
 
     public ReflectFieldAccessReplaceVisitor() {
         super(ASM6);

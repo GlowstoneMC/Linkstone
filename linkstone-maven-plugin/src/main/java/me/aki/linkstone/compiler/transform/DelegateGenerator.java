@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 
 import static org.objectweb.asm.Opcodes.*;
 
-public class DelegateGenerator extends AbstractDelegateGenerator implements CodeTransformer {
+public class DelegateGenerator implements CodeTransformer {
     private final ClassStore classStore;
 
     public DelegateGenerator(ClassStore classStore) {
@@ -61,5 +61,55 @@ public class DelegateGenerator extends AbstractDelegateGenerator implements Code
                 cn.interfaces.add(name);
             }
         }
+    }
+
+    /**
+     * Generate a method that redirects call to the annotated field.
+     *
+     * @param cn where to add the generated method
+     * @param instanceField instance that will be invoked
+     * @param owner interface containing the method to delegate
+     * @param name name of method to be called
+     * @param desc descriptor of method to be called
+     */
+    private void generateDelegateMethod(ClassNode cn, FieldNode instanceField, Type owner, String name, String desc) {
+        if (existsMethod(cn, name, desc)) {
+            return;
+        }
+
+        MethodNode mn = new MethodNode(ACC_PUBLIC, name, desc, null, null);
+        cn.methods.add(mn);
+
+        GeneratorAdapter mv = new GeneratorAdapter(mn, mn.access, mn.name, mn.desc);
+        mv.visitCode();
+
+        boolean isStatic = Modifier.isStatic(instanceField.access);
+        if (isStatic) {
+            mv.getStatic(Type.getObjectType(cn.name), instanceField.name, Type.getType(instanceField.desc));
+        } else {
+            mv.loadThis();
+            mv.getField(Type.getObjectType(cn.name), instanceField.name, Type.getType(instanceField.desc));
+        }
+
+        int paramCount = Type.getArgumentTypes(mn.desc).length;
+        for (int i = 0; i < paramCount; i++) {
+            mv.loadArg(i);
+        }
+
+        mv.visitMethodInsn(INVOKEINTERFACE, owner.getInternalName(), name, desc, true);
+
+        mv.returnValue();
+
+        mv.visitMaxs(0, 0);
+        mv.visitEnd();
+    }
+
+    private boolean existsMethod(ClassNode cn, String name, String desc) {
+        for (MethodNode mn : cn.methods) {
+            if (name.equals(mn.name) && desc.equals(mn.desc)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

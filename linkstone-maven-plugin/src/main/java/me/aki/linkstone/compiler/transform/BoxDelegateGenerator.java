@@ -2,13 +2,11 @@ package me.aki.linkstone.compiler.transform;
 
 import static org.objectweb.asm.Opcodes.*;
 
-import com.google.common.cache.Cache;
-import com.google.common.cache.CacheBuilder;
 import me.aki.linkstone.annotations.Box;
 import me.aki.linkstone.compiler.meta.BoxMeta;
 import me.aki.linkstone.compiler.meta.BoxedMeta;
-import org.objectweb.asm.Label;
 import org.objectweb.asm.Type;
+import org.objectweb.asm.commons.GeneratorAdapter;
 import org.objectweb.asm.tree.*;
 
 import java.util.List;
@@ -17,7 +15,7 @@ import java.util.List;
  * Transform classes with a {@link Box} annotations. Generate a static method that
  * initializes the box and delegate the equal, hashcode and toString method.
  */
-public class BoxDelegateGenerator extends AbstractDelegateGenerator implements CodeTransformer {
+public class BoxDelegateGenerator implements CodeTransformer {
     @Override
     public void transform(List<ClassNode> classes) {
         for (ClassNode cn : classes) {
@@ -32,9 +30,38 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
                     .filter(fn -> BoxedMeta.from(fn).isAnnotated())
                     .findFirst().get();
 
-            generateDelegateMethod(cn, boxedField, boxedType, "equals", "(Ljava/lang/Object;)Z");
-            generateDelegateMethod(cn, boxedField, boxedType, "hashCode", "()I");
-            generateDelegateMethod(cn, boxedField, boxedType, "toString", "()Ljava/lang/String;");
+            generateObjectDelegatedMethod(cn, boxedField, "equals", "(Ljava/lang/Object;)Z");
+            generateObjectDelegatedMethod(cn, boxedField, "hashCode", "()I");
+            generateObjectDelegatedMethod(cn, boxedField, "toString", "()Ljava/lang/String;");
         }
+    }
+
+    private void generateObjectDelegatedMethod(ClassNode cn, FieldNode instanceField, String name, String desc) {
+        for (MethodNode mn : cn.methods) {
+            if (name.equals(mn.name) && desc.equals(mn.desc)) {
+                return;
+            }
+        }
+
+        MethodNode mn = new MethodNode(ACC_PUBLIC, name, desc, null, null);
+        cn.methods.add(mn);
+
+        GeneratorAdapter mv = new GeneratorAdapter(mn, mn.access, mn.name, mn.desc);
+        mv.visitCode();
+
+        mv.loadThis();
+        mv.getField(Type.getObjectType(cn.name), instanceField.name, Type.getType(instanceField.desc));
+
+        int paramCount = Type.getArgumentTypes(mn.desc).length;
+        for (int i = 0; i < paramCount; i++) {
+            mv.loadArg(i);
+        }
+
+        mv.visitMethodInsn(INVOKEVIRTUAL, "java/lang/Object", name, desc, false);
+
+        mv.returnValue();
+
+        mv.visitMaxs(0, 0);
+        mv.visitEnd();
     }
 }

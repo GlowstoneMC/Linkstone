@@ -6,13 +6,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotate a method implementing a getter of a field
+ * The annotated class is a box around another type.
+ * Casts to that type will be replaced against wrapping it in the annotated box.
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
-public @interface Getter {
+@Target(ElementType.TYPE)
+public @interface LBox {
     /**
-     * @return versions where the annotated method implements the getter
+     * @return type boxed by the annotated class
      */
-    Version[] version();
+    Class<?> value();
 }

@@ -5,20 +5,20 @@ import net.glowstone.linkstone.Linkstone;
 
 import static me.aki.linkstone.annotations.Version.*;
 
-@Classfile(version = V1_12_R1)
+@LClassfile(version = V1_12_R1)
 public class PlayerConnection {
-    @Field(version = V1_12_R1)
+    @LField(version = V1_12_R1)
     public EntityPlayer player;
-    @Getter(version = V1_12_R1)
+    @LGetter(version = V1_12_R1)
     public EntityPlayer getPlayer() {
         throw new RuntimeException("NOT YET IMPLEMENTED");
     }
-    @Setter(version = V1_12_R1)
+    @LSetter(version = V1_12_R1)
     public void setPlayer(EntityPlayer player) {
         throw new RuntimeException("NOT YET IMPLEMENTED");
     }
 
-    @Method(version = V1_12_R1)
+    @LMethod(version = V1_12_R1)
     public void sendPacket(final Packet<?> packet) {
         player.glowPlayer.getSession().send(Linkstone.packetToMessage(packet));
     }

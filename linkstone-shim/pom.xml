@@ -34,6 +34,11 @@
             <artifactId>linkstone-annotations</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>linkstone-runtime</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
 	    <dependency>
             <groupId>net.glowstone</groupId>

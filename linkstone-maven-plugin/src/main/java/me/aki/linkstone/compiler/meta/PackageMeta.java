@@ -1,7 +1,7 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Package;
-import me.aki.linkstone.annotations.PackageContainer;
+import me.aki.linkstone.annotations.LPackage;
+import me.aki.linkstone.annotations.LPackageContainer;
 import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.annotations.Mode;
 import me.aki.linkstone.compiler.collect.PackageMetaVisitor;
@@ -14,11 +14,11 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
- * Represents the content of all {@link Package} annotations on a package-info template.
+ * Represents the content of all {@link LPackage} annotations on a package-info template.
  */
 public class PackageMeta extends NamedVersionedMeta {
-    private final static String PACKAGE_ANNOTION_DESC = Type.getDescriptor(Package.class);
-    private final static String PACKAGE_CONTAINER_ANNOTION_DESC = Type.getDescriptor(PackageContainer.class);
+    private final static String PACKAGE_ANNOTION_DESC = Type.getDescriptor(LPackage.class);
+    private final static String PACKAGE_CONTAINER_ANNOTION_DESC = Type.getDescriptor(LPackageContainer.class);
 
     public static PackageMeta from(ClassNode cn) {
         String pkg = cn.name.substring(0, cn.name.lastIndexOf('/'));

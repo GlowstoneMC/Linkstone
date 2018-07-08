@@ -1,15 +1,15 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Boxed;
+import me.aki.linkstone.annotations.LBoxed;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.FieldNode;
 
 /**
- * Represents the content of a {@link Boxed} annotation.
+ * Represents the content of a {@link LBoxed} annotation.
  */
 public class BoxedMeta implements Meta {
-    public static final String BOXED_ANNOTATION_DESC = Type.getDescriptor(Boxed.class);
+    public static final String BOXED_ANNOTATION_DESC = Type.getDescriptor(LBoxed.class);
 
     public static BoxedMeta from(FieldNode fn) {
         BoxedMeta meta = new BoxedMeta();

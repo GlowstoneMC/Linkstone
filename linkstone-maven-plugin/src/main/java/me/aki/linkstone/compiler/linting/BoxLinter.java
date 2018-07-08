@@ -1,10 +1,9 @@
 package me.aki.linkstone.compiler.linting;
 
-import me.aki.linkstone.annotations.Box;
-import me.aki.linkstone.annotations.Boxed;
+import me.aki.linkstone.annotations.LBox;
+import me.aki.linkstone.annotations.LBoxed;
 import me.aki.linkstone.compiler.meta.BoxMeta;
 import me.aki.linkstone.compiler.meta.BoxedMeta;
-import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
@@ -14,14 +13,12 @@ import org.objectweb.asm.tree.MethodNode;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Spliterators;
 import java.util.stream.Collectors;
-import java.util.stream.StreamSupport;
 
 import static org.objectweb.asm.Opcodes.INVOKESPECIAL;
 
 /**
- * Lint if a {@link Box} annotation has illegal types or the annotated class
+ * Lint if a {@link LBox} annotation has illegal types or the annotated class
  * has no corresponding constructor.
  */
 public class BoxLinter implements Linter {
@@ -50,7 +47,7 @@ public class BoxLinter implements Linter {
     }
 
     /**
-     * Lint if there's no field with a {@link Boxed} annotation that has the corrent type.
+     * Lint if there's no field with a {@link LBoxed} annotation that has the corrent type.
      *
      * @param cn current class being processed
      * @param boxType type that the class boxes
@@ -64,7 +61,7 @@ public class BoxLinter implements Linter {
         switch (annotatedFields.size()) {
             case 0: {
                 ErrorReport.Class location = new ErrorReport.Class(cn.name);
-                String message = "Cannot find field with @Boxed annotation";
+                String message = "Cannot find field with @LBoxed annotation";
                 report.addError(new ErrorReport.Error(message, location));
                 break;
             }
@@ -73,7 +70,7 @@ public class BoxLinter implements Linter {
                 FieldNode fn = annotatedFields.get(0);
                 if (!fn.desc.equals(boxType.getDescriptor())) {
                     ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                    String message = "@Boxed field has a different type than the @Box annotation";
+                    String message = "@LBoxed field has a different type than the @LBox annotation";
                     report.addError(new ErrorReport.Error(message, location));
                 }
                 break;
@@ -81,7 +78,7 @@ public class BoxLinter implements Linter {
 
             default: {
                 ErrorReport.Class location = new ErrorReport.Class(cn.name);
-                String message = "Multiple fields have a @Boxed annotation";
+                String message = "Multiple fields have a @LBoxed annotation";
                 report.addError(new ErrorReport.Error(message, location));
                 break;
             }

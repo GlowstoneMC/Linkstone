@@ -1,7 +1,7 @@
 package me.aki.linkstone.runtime.collect;
 
-import me.aki.linkstone.annotations.Field;
-import me.aki.linkstone.annotations.FieldContainer;
+import me.aki.linkstone.annotations.LField;
+import me.aki.linkstone.annotations.LFieldContainer;
 import me.aki.linkstone.runtime.FieldSet;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassVisitor;
@@ -11,12 +11,12 @@ import org.objectweb.asm.Type;
 import static org.objectweb.asm.Opcodes.*;
 
 /**
- * Class visitor that stores all fields annotated with a {@link Field} or
- * {@link FieldContainer} annotation in a {@link FieldSet}.
+ * Class visitor that stores all fields annotated with a {@link LField} or
+ * {@link LFieldContainer} annotation in a {@link FieldSet}.
  */
 public class AnnotatedFieldCollectVisitor extends ClassVisitor {
-    private final static String FIELD_ANNOTATION_SIGNATURE = Type.getDescriptor(Field.class);
-    private final static String FIELD_CONTAINER_ANNOTATION_SIGNATURE = Type.getDescriptor(FieldContainer.class);
+    private final static String FIELD_ANNOTATION_SIGNATURE = Type.getDescriptor(LField.class);
+    private final static String FIELD_CONTAINER_ANNOTATION_SIGNATURE = Type.getDescriptor(LFieldContainer.class);
 
     private final FieldSet annotatedFields;
     private String className;

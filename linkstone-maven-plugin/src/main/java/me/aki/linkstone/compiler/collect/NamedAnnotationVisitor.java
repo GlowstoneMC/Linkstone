@@ -1,9 +1,9 @@
 package me.aki.linkstone.compiler.collect;
 
+import me.aki.linkstone.annotations.LField;
 import me.aki.linkstone.compiler.meta.NamedVersionedMeta;
-import me.aki.linkstone.annotations.Classfile;
-import me.aki.linkstone.annotations.Field;
-import me.aki.linkstone.annotations.Method;
+import me.aki.linkstone.annotations.LClassfile;
+import me.aki.linkstone.annotations.LMethod;
 import me.aki.linkstone.annotations.Version;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Opcodes;
@@ -13,8 +13,8 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Visitor that adds values of {@link Field}, {@link Method} or
- * {@link Classfile} annotations to a {@link NamedVersionedMeta}.
+ * Visitor that adds values of {@link LField}, {@link LMethod} or
+ * {@link LClassfile} annotations to a {@link NamedVersionedMeta}.
  */
 public class NamedAnnotationVisitor<T extends NamedVersionedMeta> extends AnnotationVisitor {
     protected final T meta;

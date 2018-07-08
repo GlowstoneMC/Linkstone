@@ -1,13 +1,13 @@
 package me.aki.linkstone.compiler.collect;
 
-import me.aki.linkstone.annotations.Delegate;
+import me.aki.linkstone.annotations.LDelegate;
 import me.aki.linkstone.compiler.meta.DelegateMeta;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 
 /**
- * Visitor that adds values of {@link Delegate} annotations to a {@link DelegateMeta}.
+ * Visitor that adds values of {@link LDelegate} annotations to a {@link DelegateMeta}.
  */
 public class DelegateAnnotationVisitor extends AnnotationVisitor {
     private final DelegateMeta meta;

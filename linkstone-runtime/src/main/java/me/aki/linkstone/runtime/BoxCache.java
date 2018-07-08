@@ -69,7 +69,7 @@ public class BoxCache {
                 try {
                     boxClass = pluginClassLoader.loadClass(boxType.getClassName());
                 } catch (ClassNotFoundException e) {
-                    throw new RuntimeException("Could not load Box class " + boxType.getInternalName(), e);
+                    throw new RuntimeException("Could not load LBox class " + boxType.getInternalName(), e);
                 }
 
                 if (expectedBox.isAssignableFrom(boxClass)) {

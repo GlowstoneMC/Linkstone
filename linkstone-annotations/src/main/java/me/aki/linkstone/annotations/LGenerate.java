@@ -5,8 +5,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/**
+ * Annotation that tells the linkstone compiler to generate
+ * a getter and setter that accesses the annotated field.
+ */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
-public @interface FieldContainer {
-    Field[] value();
+@Target(ElementType.FIELD)
+public @interface LGenerate {
 }

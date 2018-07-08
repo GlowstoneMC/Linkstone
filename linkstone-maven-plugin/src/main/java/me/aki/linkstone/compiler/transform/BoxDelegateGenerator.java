@@ -2,7 +2,7 @@ package me.aki.linkstone.compiler.transform;
 
 import static org.objectweb.asm.Opcodes.*;
 
-import me.aki.linkstone.annotations.Box;
+import me.aki.linkstone.annotations.LBox;
 import me.aki.linkstone.compiler.meta.BoxMeta;
 import me.aki.linkstone.compiler.meta.BoxedMeta;
 import org.objectweb.asm.Type;
@@ -12,7 +12,7 @@ import org.objectweb.asm.tree.*;
 import java.util.List;
 
 /**
- * Transform classes with a {@link Box} annotations. Generate a static method that
+ * Transform classes with a {@link LBox} annotations. Generate a static method that
  * initializes the box and delegate the equal, hashcode and toString method.
  */
 public class BoxDelegateGenerator implements CodeTransformer {

@@ -4,23 +4,23 @@ import java.lang.annotation.*;
 
 /**
  * Tell the generator in which versions this
- * field exists and how it should be named.
+ * classfile exists and how it should be named.
  */
-@Repeatable(FieldContainer.class)
+@Repeatable(LClassfileContainer.class)
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
-public @interface Field {
+public @interface LClassfile {
     /**
      * @return version where this class exists and has this name.
      */
     Version[] version();
 
     /**
-     * Name of the annotated field in the generated class.
+     * Name of the annotated classfile in the generated class.
      *
-     * The field will not be renamed if the name is empty.
+     * The classfile will not be renamed if the name is empty.
      *
-     * @return name of generated field
+     * @return name of generated classfile
      */
     String name() default "";
 }

@@ -2,14 +2,14 @@ package me.aki.linkstone.compiler.collect;
 
 import me.aki.linkstone.compiler.meta.PackageMeta;
 import me.aki.linkstone.annotations.Mode;
-import me.aki.linkstone.annotations.Package;
+import me.aki.linkstone.annotations.LPackage;
 import me.aki.linkstone.annotations.Version;
 import org.objectweb.asm.AnnotationVisitor;
 
 import java.util.Optional;
 
 /**
- * Visitor that adds the values of a {@link Package} annotations to a {@link PackageMeta}
+ * Visitor that adds the values of a {@link LPackage} annotations to a {@link PackageMeta}
  */
 public class PackageMetaVisitor extends NamedAnnotationVisitor<PackageMeta> {
     private Optional<Mode> mode = Optional.empty();

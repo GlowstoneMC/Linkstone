@@ -1,10 +1,8 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Classfile;
-import me.aki.linkstone.annotations.Field;
-import me.aki.linkstone.annotations.Method;
-import me.aki.linkstone.annotations.Package;
-import me.aki.linkstone.annotations.Version;
+import me.aki.linkstone.annotations.*;
+import me.aki.linkstone.annotations.LMethod;
+import me.aki.linkstone.annotations.LPackage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -14,10 +12,10 @@ import java.util.Set;
 /**
  * Superclass for metas of annotations that map versions to (optional) names.
  *
- * @see Package
- * @see Classfile
- * @see Field
- * @see Method
+ * @see LPackage
+ * @see LClassfile
+ * @see LField
+ * @see LMethod
  */
 public abstract class NamedVersionedMeta implements VersionedMeta {
     private boolean isAnnotated = false;

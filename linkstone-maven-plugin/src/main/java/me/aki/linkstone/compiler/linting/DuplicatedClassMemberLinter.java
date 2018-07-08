@@ -1,8 +1,6 @@
 package me.aki.linkstone.compiler.linting;
 
-import me.aki.linkstone.annotations.Classfile;
 import me.aki.linkstone.annotations.Version;
-import me.aki.linkstone.compiler.meta.ClassfileMeta;
 import me.aki.linkstone.compiler.meta.FieldMeta;
 import me.aki.linkstone.compiler.meta.MethodMeta;
 import org.objectweb.asm.tree.ClassNode;

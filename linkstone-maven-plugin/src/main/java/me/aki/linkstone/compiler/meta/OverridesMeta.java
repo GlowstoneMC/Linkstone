@@ -1,15 +1,15 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Overrides;
+import me.aki.linkstone.annotations.LOverrides;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 
 /**
- * Represents the content of a {@link Overrides} annotation.
+ * Represents the content of a {@link LOverrides} annotation.
  */
 public class OverridesMeta implements Meta {
-    private final static String OVERRIDDEN_ANNOTATION_DESC = Type.getDescriptor(Overrides.class);
+    private final static String OVERRIDDEN_ANNOTATION_DESC = Type.getDescriptor(LOverrides.class);
 
     public static OverridesMeta from(MethodNode mn) {
         OverridesMeta meta = new OverridesMeta();

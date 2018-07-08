@@ -5,10 +5,10 @@ import java.lang.annotation.*;
 /**
  * Tell the generator how a package should be named for a certain version.
  */
-@Repeatable(PackageContainer.class)
+@Repeatable(LPackageContainer.class)
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.PACKAGE })
-public @interface Package {
+public @interface LPackage {
     /**
      * @return version where this class exists and has this name.
      */

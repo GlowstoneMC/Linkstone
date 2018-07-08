@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface Delegate {
+public @interface LDelegate {
     /**
      * The class containing the field will implement these interfaces.
      * All methods will be implemented by delegating invokes to the annotated field.

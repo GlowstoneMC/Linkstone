@@ -1,16 +1,16 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Setter;
+import me.aki.linkstone.annotations.LSetter;
 import me.aki.linkstone.compiler.collect.UnnamedAnnotationVisitor;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.MethodNode;
 
 /**
- * Represents the content of a {@link Setter} annotation.
+ * Represents the content of a {@link LSetter} annotation.
  */
 public class SetterMeta extends AbstractAccessorMeta {
-    private final static String SETTER_ANNOTION_DESC = Type.getDescriptor(Setter.class);
+    private final static String SETTER_ANNOTION_DESC = Type.getDescriptor(LSetter.class);
 
     public static SetterMeta from(MethodNode mn) {
         SetterMeta meta = new SetterMeta();

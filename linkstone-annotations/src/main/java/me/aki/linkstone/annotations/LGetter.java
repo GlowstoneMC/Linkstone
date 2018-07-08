@@ -6,13 +6,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * This annotation marks methods that override delegated methods.
- *
- * It's similar to {@link Override}, but that annotation would cause a compile error.
- *
- * @see Delegate
+ * Annotate a method implementing a getter of a field
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface Overrides {
+public @interface LGetter {
+    /**
+     * @return versions where the annotated method implements the getter
+     */
+    Version[] version();
 }

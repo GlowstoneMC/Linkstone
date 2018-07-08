@@ -2,7 +2,7 @@ package me.aki.linkstone.compiler.transform;
 
 import static me.aki.linkstone.compiler.LinkstoneCompiler.GETTER_PREFIX;
 import static me.aki.linkstone.compiler.LinkstoneCompiler.SETTER_PREFIX;
-import me.aki.linkstone.annotations.Generate;
+import me.aki.linkstone.annotations.LGenerate;
 import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.compiler.meta.FieldMeta;
 import org.objectweb.asm.Opcodes;
@@ -16,7 +16,7 @@ import java.lang.reflect.Modifier;
 import java.util.List;
 
 /**
- * Utility class that generates getters and setters for fields annotated with {@link Generate}
+ * Utility class that generates getters and setters for fields annotated with {@link LGenerate}
  */
 public class AccessorGenerator implements CodeTransformer {
     private final Version version;

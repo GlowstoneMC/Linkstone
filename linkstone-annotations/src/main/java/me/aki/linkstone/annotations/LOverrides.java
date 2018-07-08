@@ -6,10 +6,13 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation that tells the linkstone compiler to generate
- * a getter and setter that accesses the annotated field.
+ * This annotation marks methods that override delegated methods.
+ *
+ * It's similar to {@link Override}, but that annotation would cause a compile error.
+ *
+ * @see LDelegate
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.FIELD)
-public @interface Generate {
+@Target(ElementType.METHOD)
+public @interface LOverrides {
 }

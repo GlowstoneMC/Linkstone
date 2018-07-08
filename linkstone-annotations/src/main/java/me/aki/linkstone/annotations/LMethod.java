@@ -6,10 +6,10 @@ import java.lang.annotation.*;
  * Tell the generator in which versions this
  * method exists and how it should be named.
  */
-@Repeatable(MethodContainer.class)
+@Repeatable(LMethodContainer.class)
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
-public @interface Method {
+public @interface LMethod {
     /**
      * @return version where this class exists and has this name.
      */

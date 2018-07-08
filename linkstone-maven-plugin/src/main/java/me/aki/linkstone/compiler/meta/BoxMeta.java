@@ -1,16 +1,16 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Box;
+import me.aki.linkstone.annotations.LBox;
 import me.aki.linkstone.compiler.collect.BoxAnnotationVisitor;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.ClassNode;
 
 /**
- * Represents the content of a {@link Box} annotation.
+ * Represents the content of a {@link LBox} annotation.
  */
 public class BoxMeta implements Meta {
-    public static final String BOX_ANNOTATION_DESC = Type.getDescriptor(Box.class);
+    public static final String BOX_ANNOTATION_DESC = Type.getDescriptor(LBox.class);
 
     public static BoxMeta from(ClassNode cn) {
         BoxMeta meta = new BoxMeta();

@@ -1,7 +1,7 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Getter;
-import me.aki.linkstone.annotations.Setter;
+import me.aki.linkstone.annotations.LGetter;
+import me.aki.linkstone.annotations.LSetter;
 import me.aki.linkstone.annotations.Version;
 
 import java.util.HashSet;
@@ -12,8 +12,8 @@ import java.util.Set;
  *
  * They have in common that they represent a set of versions.
  *
- * @see Getter
- * @see Setter
+ * @see LGetter
+ * @see LSetter
  */
 public abstract class AbstractAccessorMeta implements VersionedMeta {
     private boolean isAnnotated;

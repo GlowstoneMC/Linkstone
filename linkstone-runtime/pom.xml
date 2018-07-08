@@ -19,7 +19,7 @@
             <version>${project.version}</version>
         </dependency>
 
-        <!-- The @Box annotated classes use a google cache internally -->
+        <!-- The @LBox annotated classes use a google cache internally -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>

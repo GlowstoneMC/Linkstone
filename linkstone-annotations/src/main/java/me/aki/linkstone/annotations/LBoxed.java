@@ -6,13 +6,11 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotate a method implementing a setter of a field
+ * Annotation to mark the field that contains the boxed value.
+ *
+ * @see LBox
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.METHOD })
-public @interface Setter {
-    /**
-     * @return versions where the annotated method implements the getter
-     */
-    Version[] version();
+@Target(ElementType.FIELD)
+public @interface LBoxed {
 }

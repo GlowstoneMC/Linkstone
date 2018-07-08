@@ -1,15 +1,15 @@
 package me.aki.linkstone.compiler.collect;
 
-import me.aki.linkstone.annotations.Getter;
-import me.aki.linkstone.annotations.Setter;
+import me.aki.linkstone.annotations.LGetter;
+import me.aki.linkstone.annotations.LSetter;
 import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.compiler.meta.AbstractAccessorMeta;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Opcodes;
 
 /**
- * Visitor that adds all values of {@link Getter} and
- * {@link Setter} annotations to a {@link AbstractAccessorMeta}.
+ * Visitor that adds all values of {@link LGetter} and
+ * {@link LSetter} annotations to a {@link AbstractAccessorMeta}.
  */
 public class UnnamedAnnotationVisitor extends AnnotationVisitor {
     private final AbstractAccessorMeta meta;

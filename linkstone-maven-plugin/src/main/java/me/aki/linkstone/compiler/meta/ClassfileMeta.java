@@ -1,18 +1,18 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Classfile;
-import me.aki.linkstone.annotations.ClassfileContainer;
+import me.aki.linkstone.annotations.LClassfile;
+import me.aki.linkstone.annotations.LClassfileContainer;
 import me.aki.linkstone.compiler.collect.NamedAnnotationVisitor;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.ClassNode;
 
 /**
- * Represents the content of all {@link Classfile} annotations on a template class.
+ * Represents the content of all {@link LClassfile} annotations on a template class.
  */
 public class ClassfileMeta extends NamedVersionedMeta {
-    private final static String CLASSFILE_ANNOTION_DESC = Type.getDescriptor(Classfile.class);
-    private final static String CLASSFILE_CONTAINER_ANNOTION_DESC = Type.getDescriptor(ClassfileContainer.class);
+    private final static String CLASSFILE_ANNOTION_DESC = Type.getDescriptor(LClassfile.class);
+    private final static String CLASSFILE_CONTAINER_ANNOTION_DESC = Type.getDescriptor(LClassfileContainer.class);
 
     public static ClassfileMeta from(ClassNode cn) {
         String[] split = cn.name.split("/");

@@ -1,7 +1,7 @@
 package me.aki.linkstone.compiler.linting;
 
-import me.aki.linkstone.annotations.Delegate;
-import me.aki.linkstone.annotations.Overrides;
+import me.aki.linkstone.annotations.LDelegate;
+import me.aki.linkstone.annotations.LOverrides;
 import me.aki.linkstone.compiler.ClassStore;
 import me.aki.linkstone.compiler.meta.DelegateMeta;
 import me.aki.linkstone.compiler.meta.OverridesMeta;
@@ -15,7 +15,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Lint if a {@link Delegate} annotation is used wrong
+ * Lint if a {@link LDelegate} annotation is used wrong
  */
 public class DelegateLinter implements Linter {
     private final ClassStore classStore;
@@ -77,7 +77,7 @@ public class DelegateLinter implements Linter {
                     }
                 } else {
                     ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                    String message = "@Delegate annotations may only contain interface types";
+                    String message = "@LDelegate annotations may only contain interface types";
                     report.addError(new ErrorReport.Error(message, location));
                 }
             }
@@ -87,7 +87,7 @@ public class DelegateLinter implements Linter {
     }
 
     /**
-     * Get all methods with a {@link Overrides} annotation in a class.
+     * Get all methods with a {@link LOverrides} annotation in a class.
      *
      * @param cn class that is currently checked
      * @return the annotated methods
@@ -99,7 +99,7 @@ public class DelegateLinter implements Linter {
     }
 
     /**
-     * Lint if a method has a {@link Overrides} annotation but does not override
+     * Lint if a method has a {@link LOverrides} annotation but does not override
      * a delegated method.
      *
      * @param cn class that is currently checked
@@ -124,7 +124,7 @@ public class DelegateLinter implements Linter {
     }
 
     /**
-     * Lint if a method would override a delegated method but has not {@link Overrides} annotation.
+     * Lint if a method would override a delegated method but has not {@link LOverrides} annotation.
      *
      * @param cn class to check against
      * @param delegateClasses interfaces that should be delegated
@@ -139,7 +139,7 @@ public class DelegateLinter implements Linter {
                         OverridesMeta meta = OverridesMeta.from(mn);
                         if (!meta.isAnnotated()) {
                             ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
-                            String message = "Method overrides a delegated method but has no @Overrides annotation";
+                            String message = "Method overrides a delegated method but has no @LOverrides annotation";
                             report.addError(new ErrorReport.Error(message, location));
                         }
                     }

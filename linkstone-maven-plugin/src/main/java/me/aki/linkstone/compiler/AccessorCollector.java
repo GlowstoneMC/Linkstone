@@ -1,6 +1,6 @@
 package me.aki.linkstone.compiler;
 
-import me.aki.linkstone.annotations.Field;
+import me.aki.linkstone.annotations.LField;
 import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.compiler.meta.FieldMeta;
 import me.aki.linkstone.compiler.meta.GetterMeta;
@@ -109,7 +109,7 @@ public class AccessorCollector {
     }
 
     /**
-     * @return all fields with a {@link Field} annotation
+     * @return all fields with a {@link LField} annotation
      */
     public Set<FieldNode> getFields() {
         return fields;
@@ -117,7 +117,7 @@ public class AccessorCollector {
 
     /**
      * Get all getters for a field or null
-     * if it has no {@link Field} annotation.
+     * if it has no {@link LField} annotation.
      *
      * @param fn the field
      * @return getters for the field
@@ -128,7 +128,7 @@ public class AccessorCollector {
 
     /**
      * Get all setters for a field or null
-     * if it has no {@link Field} annotation.
+     * if it has no {@link LField} annotation.
      *
      * @param fn the field
      * @return setters for the field

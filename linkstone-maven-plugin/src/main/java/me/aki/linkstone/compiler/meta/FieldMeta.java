@@ -1,20 +1,20 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Field;
-import me.aki.linkstone.annotations.FieldContainer;
-import me.aki.linkstone.annotations.Generate;
+import me.aki.linkstone.annotations.LField;
+import me.aki.linkstone.annotations.LFieldContainer;
+import me.aki.linkstone.annotations.LGenerate;
 import me.aki.linkstone.compiler.collect.NamedAnnotationVisitor;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.FieldNode;
 
 /**
- * Represents the content of all {@link Field} annotations on a field in a template.
+ * Represents the content of all {@link LField} annotations on a field in a template.
  */
 public class FieldMeta extends NamedVersionedMeta {
-    private final static String FIELD_ANNOTION_DESC = Type.getDescriptor(Field.class);
-    private final static String FIELD_CONTAINER_ANNOTION_DESC = Type.getDescriptor(FieldContainer.class);
-    private final static String GENERATE_ANNOTION_DESC = Type.getDescriptor(Generate.class);
+    private final static String FIELD_ANNOTION_DESC = Type.getDescriptor(LField.class);
+    private final static String FIELD_CONTAINER_ANNOTION_DESC = Type.getDescriptor(LFieldContainer.class);
+    private final static String GENERATE_ANNOTION_DESC = Type.getDescriptor(LGenerate.class);
 
     public static FieldMeta from(FieldNode fn) {
         FieldMeta meta = new FieldMeta(fn.name);
@@ -40,7 +40,7 @@ public class FieldMeta extends NamedVersionedMeta {
 
     /**
      * @return whether the compiler generates a getter and setter.
-     * @see Generate
+     * @see LGenerate
      */
     public boolean isGenerate() {
         return generate;

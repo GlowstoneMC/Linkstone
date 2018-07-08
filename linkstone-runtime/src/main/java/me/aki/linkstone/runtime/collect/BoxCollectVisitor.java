@@ -1,6 +1,6 @@
 package me.aki.linkstone.runtime.collect;
 
-import me.aki.linkstone.annotations.Box;
+import me.aki.linkstone.annotations.LBox;
 import me.aki.linkstone.runtime.Boxes;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassVisitor;
@@ -9,10 +9,10 @@ import org.objectweb.asm.Type;
 
 /**
  * Visitor that registers the visited class in a {@link Boxes} collection if
- * it has a {@link Box} annotation.
+ * it has a {@link LBox} annotation.
  */
 public class BoxCollectVisitor extends ClassVisitor {
-    private static final String BOX_ANNOTATION_DESC = Type.getDescriptor(Box.class);
+    private static final String BOX_ANNOTATION_DESC = Type.getDescriptor(LBox.class);
 
     private final Boxes boxes;
     private String className;

@@ -1,14 +1,14 @@
 package me.aki.linkstone.runtime.boxing;
 
 import static org.objectweb.asm.Opcodes.*;
-import me.aki.linkstone.annotations.Box;
+import me.aki.linkstone.annotations.LBox;
 import me.aki.linkstone.runtime.Boxes;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Type;
 
 /**
- * Visitor that replaces casts to a type annotated as {@link Box} against
+ * Visitor that replaces casts to a type annotated as {@link LBox} against
  * the initialization of that box.
  */
 public class BoxPatchVisitor extends ClassVisitor {

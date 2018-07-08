@@ -1,7 +1,7 @@
 package me.aki.linkstone.compiler.linting;
 
-import me.aki.linkstone.annotations.Field;
-import me.aki.linkstone.annotations.Generate;
+import me.aki.linkstone.annotations.LField;
+import me.aki.linkstone.annotations.LGenerate;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.ClassNode;
@@ -10,11 +10,11 @@ import org.objectweb.asm.tree.FieldNode;
 import java.util.List;
 
 /**
- * Lint if a field has a {@link Generate} annotation but no {@link Field} annotations
+ * Lint if a field has a {@link LGenerate} annotation but no {@link LField} annotations
  */
 public class MissingFieldAnnotationLinter implements Linter {
-    private final static String FIELD_ANNOTION_DESC = Type.getDescriptor(Field.class);
-    private final static String GENERATE_ANNOTION_DESC = Type.getDescriptor(Generate.class);
+    private final static String FIELD_ANNOTION_DESC = Type.getDescriptor(LField.class);
+    private final static String GENERATE_ANNOTION_DESC = Type.getDescriptor(LGenerate.class);
 
     @Override
     public void lint(List<ClassNode> classes, ErrorReport report) {
@@ -37,7 +37,7 @@ public class MissingFieldAnnotationLinter implements Linter {
 
                 if (hasGenerateAnnotation && !hasFieldAnnotation) {
                     ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                    String message = "Field has a @Generate annotation but not @Field annotations";
+                    String message = "Field has a @LGenerate annotation but not @LField annotations";
                     report.addError(new ErrorReport.Error(message, location));
                 }
             }

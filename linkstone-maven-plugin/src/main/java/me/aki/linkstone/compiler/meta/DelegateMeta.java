@@ -1,6 +1,6 @@
 package me.aki.linkstone.compiler.meta;
 
-import me.aki.linkstone.annotations.Delegate;
+import me.aki.linkstone.annotations.LDelegate;
 import me.aki.linkstone.compiler.collect.DelegateAnnotationVisitor;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
@@ -10,10 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Represents the content of a {@link Delegate} annotation.
+ * Represents the content of a {@link LDelegate} annotation.
  */
 public class DelegateMeta implements Meta {
-    public static final String DELEGATE_ANNOTATION_DESC = Type.getDescriptor(Delegate.class);
+    public static final String DELEGATE_ANNOTATION_DESC = Type.getDescriptor(LDelegate.class);
 
     public static DelegateMeta from(FieldNode fn) {
         DelegateMeta meta = new DelegateMeta();
@@ -33,7 +33,7 @@ public class DelegateMeta implements Meta {
 
     /**
      * @return types that the class will inherit
-     * @see Delegate#value()
+     * @see LDelegate#value()
      */
     public List<Type> getDelegateClasses() {
         return delegateClass;

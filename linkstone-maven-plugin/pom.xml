@@ -60,6 +60,13 @@
             <artifactId>asm-util</artifactId>
             <version>${asm.version}</version>
         </dependency>
+
+        <!-- Google caches -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.1-jre</version>
+        </dependency>
     </dependencies>
 
     <build>

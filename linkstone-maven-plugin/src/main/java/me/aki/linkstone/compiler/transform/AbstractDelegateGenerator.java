@@ -31,10 +31,13 @@ public class AbstractDelegateGenerator {
         GeneratorAdapter mv = new GeneratorAdapter(mn, mn.access, mn.name, mn.desc);
         mv.visitCode();
 
-        if (!Modifier.isStatic(instanceField.access)) {
+        boolean isStatic = Modifier.isStatic(instanceField.access);
+        if (isStatic) {
+            mv.getStatic(Type.getObjectType(cn.name), instanceField.name, Type.getType(instanceField.desc));
+        } else {
             mv.loadThis();
+            mv.getField(Type.getObjectType(cn.name), instanceField.name, Type.getType(instanceField.desc));
         }
-        mv.getField(Type.getObjectType(cn.name), instanceField.name, Type.getType(instanceField.desc));
 
         int paramCount = Type.getArgumentTypes(mn.desc).length;
         for (int i = 0; i < paramCount; i++) {

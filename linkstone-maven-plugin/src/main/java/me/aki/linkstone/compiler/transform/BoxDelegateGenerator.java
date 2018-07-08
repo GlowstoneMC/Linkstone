@@ -2,6 +2,8 @@ package me.aki.linkstone.compiler.transform;
 
 import static org.objectweb.asm.Opcodes.*;
 
+import com.google.common.cache.Cache;
+import com.google.common.cache.CacheBuilder;
 import me.aki.linkstone.annotations.Box;
 import me.aki.linkstone.compiler.meta.BoxMeta;
 import me.aki.linkstone.compiler.meta.BoxedMeta;
@@ -10,7 +12,6 @@ import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.*;
 
 import java.util.List;
-import java.util.WeakHashMap;
 
 /**
  * Transform classes with a {@link Box} annotations. Generate a static method that
@@ -19,6 +20,8 @@ import java.util.WeakHashMap;
 public class BoxDelegateGenerator extends AbstractDelegateGenerator implements CodeTransformer {
     private final static String STATIC_BOX_CONSTRUCTOR = "$linkstone$box$init$";
     private final static String BOX_CACHE_MAP = "$linkstone$box$cache$";
+    private final static Type CACHE_TYPE = Type.getType(Cache.class);
+    private final static Type CACHE_BUILDER_TYPE = Type.getType(CacheBuilder.class);
 
     @Override
     public void transform(List<ClassNode> classes) {
@@ -44,12 +47,12 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
     }
 
     /**
-     * Generate and initialize a {@link WeakHashMap} that caches box instances.
+     * Generate and initialize a {@link Cache} that caches box instances.
      *
      * @param cn class of the box
      */
     private void generateBoxCache(ClassNode cn) {
-        FieldNode fn = new FieldNode(ACC_PRIVATE | ACC_FINAL | ACC_STATIC, BOX_CACHE_MAP, "Ljava/util/Map;", null, null);
+        FieldNode fn = new FieldNode(ACC_PRIVATE | ACC_FINAL | ACC_STATIC, BOX_CACHE_MAP, CACHE_TYPE.getDescriptor(), null, null);
         fn.visitEnd();
         cn.fields.add(fn);
 
@@ -57,10 +60,10 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
         clinit.maxStack = Math.max(clinit.maxStack, 2);
 
         InsnList insns = new InsnList();
-        insns.add(new TypeInsnNode(NEW, "java/util/WeakHashMap"));
-        insns.add(new InsnNode(DUP));
-        insns.add(new MethodInsnNode(INVOKESPECIAL, "java/util/WeakHashMap", "<init>", "()V", false));
-        insns.add(new FieldInsnNode(PUTSTATIC, cn.name, BOX_CACHE_MAP, "Ljava/util/Map;"));
+        insns.add(new MethodInsnNode(INVOKESTATIC, CACHE_BUILDER_TYPE.getInternalName(), "newBuilder", "()" + CACHE_BUILDER_TYPE.getDescriptor(), false));
+        insns.add(new MethodInsnNode(INVOKEVIRTUAL, CACHE_BUILDER_TYPE.getInternalName(), "weakKeys", "()" + CACHE_BUILDER_TYPE.getDescriptor(), false));
+        insns.add(new MethodInsnNode(INVOKEVIRTUAL, CACHE_BUILDER_TYPE.getInternalName(), "build", "()" + CACHE_TYPE.getDescriptor(), false));
+        insns.add(new FieldInsnNode(PUTSTATIC, cn.name, BOX_CACHE_MAP, CACHE_TYPE.getDescriptor()));
 
         clinit.instructions.insertBefore(clinit.instructions.getFirst(), insns);
     }
@@ -78,7 +81,7 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
             }
         }
 
-        MethodNode mn = new MethodNode(ACC_PUBLIC, "<clinit>", "()V", null, null);
+        MethodNode mn = new MethodNode(ACC_PUBLIC | ACC_STATIC, "<clinit>", "()V", null, null);
         mn.visitCode();
         mn.visitInsn(RETURN);
         mn.visitMaxs(0, 0);
@@ -119,9 +122,9 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
         mv.visitJumpInsn(IFNE, returnObjectToBox);
 
         // Lookup the object in the cache
-        mv.visitFieldInsn(GETSTATIC, boxType.getInternalName(), BOX_CACHE_MAP, "Ljava/util/Map;");
+        mv.visitFieldInsn(GETSTATIC, boxType.getInternalName(), BOX_CACHE_MAP, CACHE_TYPE.getDescriptor());
         mv.visitVarInsn(ALOAD, objectToBox);
-        mv.visitMethodInsn(INVOKEINTERFACE, "java/util/Map", "get", "(Ljava/lang/Object;)Ljava/lang/Object;", true);
+        mv.visitMethodInsn(INVOKEINTERFACE, CACHE_TYPE.getInternalName(), "getIfPresent", "(Ljava/lang/Object;)Ljava/lang/Object;", true);
         mv.visitTypeInsn(CHECKCAST, boxType.getInternalName());
         mv.visitVarInsn(ASTORE, boxLocal);
 
@@ -137,15 +140,15 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
         mv.visitTypeInsn(NEW, boxType.getInternalName());
         mv.visitInsn(DUP);
         mv.visitVarInsn(ALOAD, objectToBox);
-        mv.visitMethodInsn(INVOKESPECIAL, boxType.getInternalName(), "<init>", "(Lnet/glowstone/entity/GlowPlayer;)V", false);
+        mv.visitTypeInsn(CHECKCAST, boxedType.getInternalName());
+        mv.visitMethodInsn(INVOKESPECIAL, boxType.getInternalName(), "<init>", "(" + boxedType.getDescriptor() + ")V", false);
         mv.visitVarInsn(ASTORE, boxLocal);
 
         // Store the new box in the cache
-        mv.visitFieldInsn(GETSTATIC, boxType.getInternalName(), BOX_CACHE_MAP, "Ljava/util/Map;");
+        mv.visitFieldInsn(GETSTATIC, boxType.getInternalName(), BOX_CACHE_MAP, CACHE_TYPE.getDescriptor());
         mv.visitVarInsn(ALOAD, objectToBox);
         mv.visitVarInsn(ALOAD, boxLocal);
-        mv.visitMethodInsn(INVOKEINTERFACE, "java/util/Map", "put", "(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;", true);
-        mv.visitInsn(POP);
+        mv.visitMethodInsn(INVOKEINTERFACE, CACHE_TYPE.getInternalName(), "put", "(Ljava/lang/Object;Ljava/lang/Object;)V", true);
 
         mv.visitLabel(returnBox);
         mv.visitFrame(F_APPEND,1, new Object[] {boxType.getInternalName()}, 0, null);
@@ -160,7 +163,7 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
         mv.visitInsn(DUP);
         mv.visitTypeInsn(NEW, "java/lang/StringBuilder");
         mv.visitInsn(DUP);
-        mv.visitLdcInsn("Cannot initialize CraftPlayer box for type ");
+        mv.visitLdcInsn("Cannot initialize box " + boxType.getInternalName() + " for type ");
         mv.visitMethodInsn(INVOKESPECIAL, "java/lang/StringBuilder", "<init>", "(Ljava/lang/String;)V", false);
         mv.visitVarInsn(ALOAD, 0);
         mv.visitMethodInsn(INVOKEVIRTUAL, "java/lang/Object", "getClass", "()Ljava/lang/Class;", false);
@@ -183,7 +186,7 @@ public class BoxDelegateGenerator extends AbstractDelegateGenerator implements C
         mv.visitTypeInsn(CHECKCAST, boxType.getInternalName());
         mv.visitInsn(ARETURN);
 
-        mv.visitMaxs(3, 2);
+        mv.visitMaxs(0, 0);
         mv.visitEnd();
 
         cn.methods.add(mv);

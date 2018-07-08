@@ -4,10 +4,12 @@ import me.aki.linkstone.annotations.Version;
 import me.aki.linkstone.compiler.linting.*;
 import me.aki.linkstone.compiler.transform.*;
 import org.objectweb.asm.ClassReader;
+import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.commons.ClassRemapper;
 import org.objectweb.asm.commons.Remapper;
 import org.objectweb.asm.tree.ClassNode;
+import org.objectweb.asm.util.CheckClassAdapter;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -126,7 +128,7 @@ public class LinkstoneCompiler {
                 file = new File(file, split[i]);
             }
 
-            ClassWriter cw = new ClassWriter(0);
+            ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
             cn.accept(cw);
 
             try {

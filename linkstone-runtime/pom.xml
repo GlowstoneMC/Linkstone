@@ -19,6 +19,13 @@
             <version>${project.version}</version>
         </dependency>
 
+        <!-- The @Box annotated classes use a google cache internally -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>25.1-jre</version>
+        </dependency>
+
         <!-- Objectweb ASM-->
         <dependency>
             <groupId>org.ow2.asm</groupId>

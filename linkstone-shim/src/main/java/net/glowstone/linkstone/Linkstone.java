@@ -1,7 +1,7 @@
 package net.glowstone.linkstone;
 
 import com.flowpowered.network.Message;
-import me.aki.linkstone.runtime.BoxCache;
+import net.glowstone.linkstone.runtime.BoxCache;
 import net.glowstone.net.message.play.game.PingMessage;
 import net.minecraft.server.Packet;
 

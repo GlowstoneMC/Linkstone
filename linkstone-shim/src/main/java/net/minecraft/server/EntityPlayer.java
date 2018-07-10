@@ -1,9 +1,9 @@
 package net.minecraft.server;
 
-import me.aki.linkstone.annotations.*;
 import net.glowstone.entity.GlowPlayer;
+import net.glowstone.linkstone.annotations.*;
 
-import static me.aki.linkstone.annotations.Version.*;
+import static net.glowstone.linkstone.annotations.Version.*;
 
 @LBox(GlowPlayer.class)
 @LClassfile(version = V1_12_R1)

@@ -5,17 +5,14 @@ import me.aki.linkstone.annotations.LBoxed;
 import me.aki.linkstone.compiler.meta.BoxMeta;
 import me.aki.linkstone.compiler.meta.BoxedMeta;
 import org.objectweb.asm.Type;
-import org.objectweb.asm.tree.ClassNode;
-import org.objectweb.asm.tree.FieldNode;
-import org.objectweb.asm.tree.MethodInsnNode;
-import org.objectweb.asm.tree.MethodNode;
+import org.objectweb.asm.tree.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import static org.objectweb.asm.Opcodes.INVOKESPECIAL;
+import static org.objectweb.asm.Opcodes.*;
 
 /**
  * Lint if a {@link LBox} annotation has illegal types or the annotated class
@@ -42,6 +39,7 @@ public class BoxLinter implements Linter {
         for (ClassNode cn : classes) {
             for (MethodNode mn : cn.methods) {
                 lintIllegalConstructorAccess(cn, mn, boxToBoxed, report);
+                lintBoxMethodUsage(cn, mn, boxToBoxed, report);
             }
         }
     }
@@ -164,5 +162,59 @@ public class BoxLinter implements Linter {
         String fullName = type.getInternalName();
         int lastSlashIndex = fullName.lastIndexOf('/');
         return lastSlashIndex < 0 ? fullName : fullName.substring(lastSlashIndex + 1);
+    }
+
+    /**
+     * Lint if the Linkstone.box method is used in a wrong way.
+     *
+     * @param cn current class being processed
+     * @param mn current method being processed
+     * @param boxToBoxed Map mapping boxes to the type they box
+     * @param report user report for the user
+     */
+    private void lintBoxMethodUsage(ClassNode cn, MethodNode mn, Map<Type, Type> boxToBoxed, ErrorReport report) {
+        mn.instructions.iterator().forEachRemaining(insn -> {
+            if (insn.getOpcode() != INVOKESTATIC) {
+                return;
+            }
+
+            MethodInsnNode min = (MethodInsnNode) insn;
+            if (!min.owner.equals("net/glowstone/linkstone/Linkstone") ||
+                    !min.name.equals("box") || !min.desc.equals("(Ljava/lang/Object;)Ljava/lang/Object;")) {
+                return;
+            }
+
+            AbstractInsnNode nextInsn = min.getNext();
+            switch (nextInsn.getOpcode()) {
+                case CHECKCAST: {
+                    Type boxType = Type.getObjectType(((TypeInsnNode) nextInsn).desc);
+                    Type boxedType = boxToBoxed.get(boxType);
+                    if (boxedType == null) {
+                        ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                        String message = "The request type for boxing (" + boxType.getInternalName() + ") is not a box";
+                        report.addError(new ErrorReport.Error(message, location));
+                    }
+                    break;
+                }
+
+                case POP:
+                case POP2: {
+                    // Unsed box calls do no generate a cast instruction so the type cannot be compile time checked.
+                    // Since there's no point in boxing but not using a value, let's forbid it.
+                    ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                    String message = "Unused Linkstone.box invoke result";
+                    report.addError(new ErrorReport.Error(message, location));
+                    break;
+                }
+
+                default: {
+                    // Since the was no cast, the box type would either be object or
+                    // the compiler did not interfere it as the user expected.
+                    ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                    String message = "Type annotation for Linkstone.box call has not been interfered";
+                    report.addError(new ErrorReport.Error(message, location));
+                }
+            }
+        });
     }
 }

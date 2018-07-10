@@ -146,7 +146,7 @@ public class BoxLinter implements Linter {
 
             ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
             String message = "Boxes should not be initialized with the new keyword. " +
-                    "Use \"BoxCache.box(objectToBox, " + getSimpleName(boxType) + ".class)\" instead.";
+                    "Use \"Linkstone.<" + getSimpleName(boxType) + ">box(objectToBox)\" instead.";
             report.addError(new ErrorReport.Error(message, location));
         });
     }

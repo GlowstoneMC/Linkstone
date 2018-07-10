@@ -1,7 +1,6 @@
 package net.glowstone.linkstone;
 
 import com.flowpowered.network.Message;
-import net.glowstone.linkstone.runtime.BoxCache;
 import net.glowstone.net.message.play.game.PingMessage;
 import net.minecraft.server.Packet;
 
@@ -16,7 +15,7 @@ public class Linkstone {
      * <code>(EntityPlayer) Linkstone.&lt;EntityPlayer&gt;box(player)</code>.
      *
      * The linkstone runtime replaces casts to types that are a box against the usage of
-     * {@link BoxCache#box(Object, Class)}. So the above code will be transformed to the
+     * BoxCache#box(Object, Class). So the above code will be transformed to the
      * following before its loaded by Glowstone:
      * <code>BoxCache.box(Linkstone.&lt;EntityPlayer&gt;box(player), EntityPlayer.class)</code>
      *

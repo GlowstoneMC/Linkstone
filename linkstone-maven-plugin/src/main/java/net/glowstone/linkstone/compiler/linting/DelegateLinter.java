@@ -131,18 +131,17 @@ public class DelegateLinter implements Linter {
      * @param report error report for user
      */
     private void lintMissingOverridesAnnotation(ClassNode cn, List<ClassNode> delegateClasses, ErrorReport report) {
-        for (ClassNode delegateInterface : delegateClasses) {
-            for (MethodNode interfaceMethod : delegateInterface.methods) {
-                for (MethodNode mn : cn.methods) {
-                    if (interfaceMethod.name.equals(mn.name) &&
-                            interfaceMethod.desc.equals(mn.desc)) {
-                        OverridesMeta meta = OverridesMeta.from(mn);
-                        if (!meta.isAnnotated()) {
-                            ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
-                            String message = "Method overrides a delegated method but has no @LOverrides annotation";
-                            report.addError(new ErrorReport.Error(message, location));
-                        }
-                    }
+        for (MethodNode mn : cn.methods) {
+            boolean doesOverride = delegateClasses.stream()
+                    .flatMap(iface -> iface.methods.stream())
+                    .anyMatch(imn -> imn.name.equals(mn.name) && imn.desc.equals(mn.desc));
+
+            if (doesOverride) {
+                OverridesMeta meta = OverridesMeta.from(mn);
+                if (!meta.isAnnotated()) {
+                    ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                    String message = "Method overrides a delegated method but has no @LOverrides annotation";
+                    report.addError(new ErrorReport.Error(message, location));
                 }
             }
         }

@@ -54,6 +54,7 @@ public class LinkstoneCompiler {
                 new MissingClassVersionLinter(),
                 new MissingFieldAnnotationLinter(),
                 new DelegateLinter(classStore),
+                new LintDelegateCollisions(classStore),
                 new BoxLinter()
         };
 

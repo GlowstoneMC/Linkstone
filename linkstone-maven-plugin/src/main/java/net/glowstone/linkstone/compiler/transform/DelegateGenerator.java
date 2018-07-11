@@ -10,6 +10,7 @@ import org.objectweb.asm.tree.MethodNode;
 
 import java.lang.reflect.Modifier;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import static org.objectweb.asm.Opcodes.*;
 
@@ -33,14 +34,41 @@ public class DelegateGenerator implements CodeTransformer {
                 continue;
             }
 
-            List<Type> classes = delegateMeta.getDelegateClasses();
+            Set<Type> interfaces = delegateMeta.getDelegateClasses().stream()
+                    .flatMap(iface -> withExtendedInterfaces(iface).stream())
+                    .collect(Collectors.toSet());
 
-            inheritTypes(cn, classes);
+            inheritInterfaces(cn, interfaces);
 
-            for (Type clazz : classes) {
+            for (Type clazz : interfaces) {
                 ClassNode tcn = classStore.getClass(clazz.getInternalName());
                 for (MethodNode mn : tcn.methods) {
                     generateDelegateMethod(cn, fn, clazz, mn.name, mn.desc);
+                }
+            }
+        }
+    }
+
+    /**
+     * Get a set containing a interfaces and all interfaces it extends.
+     *
+     * @param iface the interface
+     * @return the set
+     */
+    private Set<Type> withExtendedInterfaces(Type iface) {
+        Set<Type> ifaces = new HashSet<>();
+        ifaces.add(iface);
+        addExtendedInterfaces(iface, ifaces);
+        return ifaces;
+    }
+
+    private void addExtendedInterfaces(Type target, Set<Type> interfaces) {
+        ClassNode cn = classStore.getClass(target.getInternalName());
+        if (cn.interfaces != null) {
+            for (String iface : cn.interfaces) {
+                Type ifaceType = Type.getObjectType(iface);
+                if (interfaces.add(ifaceType)) {
+                    addExtendedInterfaces(ifaceType, interfaces);
                 }
             }
         }
@@ -52,7 +80,7 @@ public class DelegateGenerator implements CodeTransformer {
      * @param cn class to add interfaces
      * @param interfaces interfaces to add
      */
-    private void inheritTypes(ClassNode cn, List<Type> interfaces) {
+    private void inheritInterfaces(ClassNode cn, Collection<Type> interfaces) {
         for (Type iface : interfaces) {
             String name = iface.getInternalName();
 

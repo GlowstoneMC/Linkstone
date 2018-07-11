@@ -27,7 +27,7 @@ public class DelegateLinter implements Linter {
     @Override
     public void lint(List<ClassNode> classes, ErrorReport report) {
         for (ClassNode cn : classes) {
-            List<ClassNode> interfaces = collectAllDelegateInterfaces(cn, report);
+            Collection<ClassNode> interfaces = collectAllDelegateInterfaces(cn, report);
 
             lintNotOverridingMethods(cn, interfaces, report);
 
@@ -40,11 +40,11 @@ public class DelegateLinter implements Linter {
      *
      * @param cn class to scan
      * @param report error report for user
-     * @return all interfaces to delegate
+     * @return ClassNodes of all interfaces to delegate
      */
-    private List<ClassNode> collectAllDelegateInterfaces(ClassNode cn, ErrorReport report) {
-        List<ClassNode> interfaces = new ArrayList<>();
-        Set<Type> delegateInterfaces = new HashSet<>();
+    private Collection<ClassNode> collectAllDelegateInterfaces(ClassNode cn, ErrorReport report) {
+        Set<ClassNode> interfaceNodes = new HashSet<>();
+        Set<Type> interfaceTypes = new HashSet<>();
 
         for (FieldNode fn : cn.fields) {
             DelegateMeta meta = DelegateMeta.from(fn);
@@ -52,38 +52,70 @@ public class DelegateLinter implements Linter {
                 continue;
             }
 
-            for (Type t : meta.getDelegateClasses()) {
-                if (t.getSort() == Type.OBJECT) {
-                    ClassNode tcn = classStore.getClass(t.getInternalName());
-
-                    if (tcn == null) {
-                        ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                        String message = "Could not find interface " + t.getInternalName() + " in dependency artifacts";
-                        report.addError(new ErrorReport.Error(message, location));
-                    } else {
-                        interfaces.add(tcn);
-
-                        if (!Modifier.isInterface(tcn.access)) {
-                            ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                            String message = "Type to delegate is not an interface.";
-                            report.addError(new ErrorReport.Error(message, location));
-                        }
-
-                        if (!delegateInterfaces.add(t)) {
-                            ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                            String message = "Multiple fields try to delegate the interface " + t.getInternalName();
-                            report.addError(new ErrorReport.Error(message, location));
-                        }
-                    }
-                } else {
-                    ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                    String message = "@LDelegate annotations may only contain interface types";
-                    report.addError(new ErrorReport.Error(message, location));
-                }
+            Set<Type> fieldInterfaces = new HashSet<>();
+            for (Type iface : meta.getDelegateClasses()) {
+                addInterfacesRecursive(cn, fn, iface, interfaceNodes,
+                        interfaceTypes, fieldInterfaces, report);
             }
         }
 
-        return interfaces;
+        return interfaceNodes;
+    }
+
+    /**
+     * Check whether a certain type is a delegable interfaces and thereby add them to certain sets.
+     *
+     * @param cn class containing field to scan
+     * @param fn field to scan
+     * @param iface the interface to delegate
+     * @param interfaceNodes ClassNodes of all already checked delegated interfaces
+     * @param allInterfaces types of all already checked delegated interface
+     * @param fieldInterfaces already checked interfaces delegated by the field
+     * @param report error report for the user
+     */
+    private void addInterfacesRecursive(ClassNode cn, FieldNode fn, Type iface,
+                                        Set<ClassNode> interfaceNodes, Set<Type> allInterfaces,
+                                        Set<Type> fieldInterfaces, ErrorReport report) {
+        if (iface.getSort() != Type.OBJECT) {
+            ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
+            String message = "@LDelegate annotations may only contain interface types";
+            report.addError(new ErrorReport.Error(message, location));
+            return;
+        }
+
+        ClassNode tcn = classStore.getClass(iface.getInternalName());
+        if (tcn == null) {
+            ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
+            String message = "Could not find interface " + iface.getInternalName() + " in dependency artifacts";
+            report.addError(new ErrorReport.Error(message, location));
+            return;
+        }
+
+        if (!Modifier.isInterface(tcn.access)) {
+            ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
+            String message = "Type to delegate is not an interface.";
+            report.addError(new ErrorReport.Error(message, location));
+            return;
+        }
+
+        if (fieldInterfaces.add(iface)) {
+            if (!allInterfaces.add(iface)) {
+                ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
+                String message = "Multiple fields try to delegate the interface " + iface.getInternalName();
+                report.addError(new ErrorReport.Error(message, location));
+                return;
+            }
+
+            interfaceNodes.add(tcn);
+
+            if (tcn.interfaces != null) {
+                for (String iface2 : tcn.interfaces) {
+                    Type ifaceType = Type.getObjectType(iface2);
+                    addInterfacesRecursive(cn, fn, ifaceType, interfaceNodes,
+                            allInterfaces, fieldInterfaces, report);
+                }
+            }
+        }
     }
 
     /**
@@ -106,7 +138,7 @@ public class DelegateLinter implements Linter {
      * @param delegatees interfaces that should be delegated
      * @param report error report for user
      */
-    private void lintNotOverridingMethods(ClassNode cn, List<ClassNode> delegatees, ErrorReport report) {
+    private void lintNotOverridingMethods(ClassNode cn, Collection<ClassNode> delegatees, ErrorReport report) {
         List<MethodNode> notOverridenMethods = getAnnotatedMethods(cn);
 
         for (ClassNode delegatee : delegatees) {
@@ -130,7 +162,7 @@ public class DelegateLinter implements Linter {
      * @param delegateClasses interfaces that should be delegated
      * @param report error report for user
      */
-    private void lintMissingOverridesAnnotation(ClassNode cn, List<ClassNode> delegateClasses, ErrorReport report) {
+    private void lintMissingOverridesAnnotation(ClassNode cn, Collection<ClassNode> delegateClasses, ErrorReport report) {
         for (MethodNode mn : cn.methods) {
             boolean doesOverride = delegateClasses.stream()
                     .flatMap(iface -> iface.methods.stream())

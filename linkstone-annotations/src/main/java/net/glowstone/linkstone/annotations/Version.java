@@ -1,7 +1,7 @@
 package net.glowstone.linkstone.annotations;
 
 /**
- * Server versions
+ * CraftBukkit releases that can be targeted by the compiler.
  */
 public enum Version {
     V1_12_R1("1_12_R1");
@@ -15,6 +15,9 @@ public enum Version {
         throw new IllegalArgumentException("No enum named " + name + ".");
     }
 
+    /**
+     * Name of the version as set in the maven plugin configuration
+     */
     private final String name;
 
     Version(String name) {

@@ -1,8 +1,5 @@
 package net.glowstone.linkstone.runtime.reflectionredirect;
 
-import sun.misc.Unsafe;
-
-import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Field;
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -27,11 +24,9 @@ public class FieldRedirectUtil {
     public static boolean isSupported() {
         if (isSupported == null) {
             try {
-                Field f0 = FieldRedirectUtil.class.getDeclaredField("testField");
-                new FieldRedirectUtil().redirectField(f0);
-
-                Field f1 = FieldRedirectUtil.class.getDeclaredField("testField");
-                isSupported = f1.getBoolean(null);
+                Field f = FieldRedirectUtil.class.getDeclaredField("testField");
+                new FieldRedirectUtil().redirectField(f);
+                isSupported = f.getBoolean(null);
             } catch(Throwable t) {
                 isSupported = false;
             }
@@ -49,22 +44,7 @@ public class FieldRedirectUtil {
         };
 
         for (Field f : this.accessorFields) {
-            makeAccessible(f);
-        }
-    }
-
-    private void makeAccessible(Field f) {
-        try {
-            // Try to avoid "illegal reflective access" warning on jvm 9+
-            Field theUnsafeField = Unsafe.class.getDeclaredField("theUnsafe");
-            theUnsafeField.setAccessible(true);
-            Unsafe theUnsafe = (Unsafe)theUnsafeField.get(null);
-
-            Field overrideField = AccessibleObject.class.getDeclaredField("override");
-            long overrideFieldOffset = theUnsafe.objectFieldOffset(overrideField);
-            theUnsafe.putBoolean(f, overrideFieldOffset, true);
-        } catch (Throwable t) {
-            f.setAccessible(true);
+            ReflectionUtil.setAccessible(f, true);
         }
     }
 
@@ -84,14 +64,14 @@ public class FieldRedirectUtil {
     private Object newAccessor(Field field) throws IllegalAccessException, InstantiationException {
         DynamicClassLoader classloader = getClassloader(field.getDeclaringClass().getClassLoader());
         FieldAccessorGenerator generator = new FieldAccessorGenerator(field);
-        String className = generator.getClassName();
+        String className = generator.getClassName().replace('/', '.');
         Class<?> accessorClass;
 
         try {
             accessorClass = Class.forName(className, false, classloader);
         } catch(ClassNotFoundException e) {
             byte[] bytecode = generator.generateAccessor();
-            accessorClass = classloader.loadBytecode(className.replace('/', '.'), bytecode);
+            accessorClass = classloader.loadBytecode(className, bytecode);
         }
 
         return accessorClass.newInstance();

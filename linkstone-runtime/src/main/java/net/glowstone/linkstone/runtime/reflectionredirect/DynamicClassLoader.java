@@ -5,6 +5,8 @@ package net.glowstone.linkstone.runtime.reflectionredirect;
  */
 public class DynamicClassLoader extends ClassLoader {
 
+    public DynamicClassLoader() {}
+
     public DynamicClassLoader(ClassLoader classLoader) {
         super(classLoader);
     }

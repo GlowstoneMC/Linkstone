@@ -2,19 +2,21 @@ package net.glowstone.linkstone.runtime.reflectionredirect.method;
 
 import static org.objectweb.asm.Opcodes.*;
 
+import net.glowstone.linkstone.runtime.reflectionredirect.ClassSource;
 import org.objectweb.asm.*;
 
 /**
  * Generate the bytecode for a adapter for the MethodAccessor type used in the reflection api
  * that delegates invokes to a {@link LMethodAccessor}.
  */
-public class JMethodAccessorAdapterGenerator {
-    public static final String CLASS_NAME = "net/glowstone/linkstone/$generated$accessors$adapters$/JMethodAccessorWrapper";
+public class JMethodAccessorAdapterGenerator implements ClassSource {
+    public static final String JVM_CLASS_NAME = "net/glowstone/linkstone/$generated$accessors$adapters$/JMethodAccessorWrapper";
+    public static final String JAVA_CLASS_NAME = JVM_CLASS_NAME.replace('/', '.');
 
     public static final Type JDK_METHOD_ACCESSOR;
     public static final Type LINKSTONE_METHOD_ACCESSOR = Type.getType(LMethodAccessor.class);
 
-    private static final String DELEGATEE_FIELD = "wrappedField";
+    public static final String DELEGATEE_FIELD = "wrappedField";
 
     static {
         String accessorClass;
@@ -27,10 +29,16 @@ public class JMethodAccessorAdapterGenerator {
         JDK_METHOD_ACCESSOR = Type.getObjectType(accessorClass);
     }
 
-    public byte[] generate() {
+    @Override
+    public String getClassName() {
+        return JAVA_CLASS_NAME;
+    }
+
+    @Override
+    public byte[] getBytecode() {
         ClassWriter cw = new ClassWriter(0);
         ClassVisitor cv = cw;
-        cv.visit(V1_7, ACC_PUBLIC, CLASS_NAME, null, "java/lang/Object",
+        cv.visit(V1_7, ACC_PUBLIC, JVM_CLASS_NAME, null, "java/lang/Object",
                 new String[] { JDK_METHOD_ACCESSOR.getInternalName() });
 
         visitDelegateeField(cv);
@@ -56,7 +64,7 @@ public class JMethodAccessorAdapterGenerator {
 
         mv.visitIntInsn(ALOAD, 0);
         mv.visitIntInsn(ALOAD, 1);
-        mv.visitFieldInsn(PUTFIELD, CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_METHOD_ACCESSOR.getDescriptor());
+        mv.visitFieldInsn(PUTFIELD, JVM_CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_METHOD_ACCESSOR.getDescriptor());
         mv.visitInsn(RETURN);
 
         mv.visitMaxs(2, 2);
@@ -69,7 +77,7 @@ public class JMethodAccessorAdapterGenerator {
         mv.visitCode();
 
         mv.visitIntInsn(ALOAD, 0);
-        mv.visitFieldInsn(GETFIELD, CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_METHOD_ACCESSOR.getDescriptor());
+        mv.visitFieldInsn(GETFIELD, JVM_CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_METHOD_ACCESSOR.getDescriptor());
 
         mv.visitIntInsn(ALOAD, 1);
         mv.visitIntInsn(ALOAD, 2);

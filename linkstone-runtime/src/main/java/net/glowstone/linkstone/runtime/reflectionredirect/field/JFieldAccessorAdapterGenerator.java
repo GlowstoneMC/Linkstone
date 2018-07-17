@@ -1,5 +1,6 @@
 package net.glowstone.linkstone.runtime.reflectionredirect.field;
 
+import net.glowstone.linkstone.runtime.reflectionredirect.ClassSource;
 import org.objectweb.asm.*;
 
 import static net.glowstone.linkstone.runtime.reflectionredirect.field.LFieldAccessorAdapterGenerator.JDK_FIELD_ACCESSOR;
@@ -10,14 +11,21 @@ import static org.objectweb.asm.Opcodes.*;
  * Generate an adapter for the FieldAccessor type used by the reflection api that delegates
  * all invokes to a {@link LFieldAccessor}.
  */
-public class JFieldAccessorAdapterGenerator {
-    public static final String CLASS_NAME = "net/glowstone/linkstone/$generated$accessors$adapters$/JFieldAccessorWrapper";
-    private static final String DELEGATEE_FIELD = "wrappedField";
+public class JFieldAccessorAdapterGenerator implements ClassSource {
+    public static final String JVM_CLASS_NAME = "net/glowstone/linkstone/$generated$accessors$adapters$/JFieldAccessorWrapper";
+    public static final String JAVA_CLASS_NAME = JVM_CLASS_NAME.replace('/', '.');
+    public static final String DELEGATEE_FIELD = "wrappedField";
 
-    public byte[] generate() {
+    @Override
+    public String getClassName() {
+        return JAVA_CLASS_NAME;
+    }
+
+    @Override
+    public byte[] getBytecode() {
         ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_MAXS);
         ClassVisitor cv = cw;
-        cv.visit(V1_7, ACC_PUBLIC, CLASS_NAME, null, "java/lang/Object",
+        cv.visit(V1_7, ACC_PUBLIC, JVM_CLASS_NAME, null, "java/lang/Object",
                 new String[] { JDK_FIELD_ACCESSOR.getInternalName() });
 
         visitDelegateField(cv);
@@ -61,7 +69,7 @@ public class JFieldAccessorAdapterGenerator {
 
         mv.visitVarInsn(ALOAD, 0);
         mv.visitVarInsn(ALOAD, 1);
-        mv.visitFieldInsn(PUTFIELD, CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_FIELD_ACCESSOR.getDescriptor());
+        mv.visitFieldInsn(PUTFIELD, JVM_CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_FIELD_ACCESSOR.getDescriptor());
 
         mv.visitInsn(RETURN);
 
@@ -75,7 +83,7 @@ public class JFieldAccessorAdapterGenerator {
         mv.visitCode();
 
         mv.visitVarInsn(ALOAD, 0);
-        mv.visitFieldInsn(GETFIELD, CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_FIELD_ACCESSOR.getDescriptor());
+        mv.visitFieldInsn(GETFIELD, JVM_CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_FIELD_ACCESSOR.getDescriptor());
 
         mv.visitVarInsn(ALOAD, 1);
 
@@ -117,7 +125,7 @@ public class JFieldAccessorAdapterGenerator {
         mv.visitCode();
 
         mv.visitVarInsn(ALOAD, 0);
-        mv.visitFieldInsn(GETFIELD, CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_FIELD_ACCESSOR.getDescriptor());
+        mv.visitFieldInsn(GETFIELD, JVM_CLASS_NAME, DELEGATEE_FIELD, LINKSTONE_FIELD_ACCESSOR.getDescriptor());
 
         mv.visitVarInsn(ALOAD, 1);
 

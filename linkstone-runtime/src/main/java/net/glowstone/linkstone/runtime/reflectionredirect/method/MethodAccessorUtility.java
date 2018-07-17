@@ -91,19 +91,20 @@ public class MethodAccessorUtility {
      * @return jvm method accessor adapter
      */
     private Object wrapLinkstoneMethodAccessor(LMethodAccessor accessor) {
-        String wrapperClassName = JMethodAccessorAdapterGenerator.CLASS_NAME.replace('/', '.');
-        Class<?> wrapper;
         try {
-            wrapper = Class.forName(wrapperClassName, false, classLoader);
-        } catch (ClassNotFoundException e) {
-            byte[] bytecode = new JMethodAccessorAdapterGenerator().generate();
-            wrapper = classLoader.loadBytecode(wrapperClassName, bytecode);
-        }
+            if (accessor == null) {
+                return null;
+            }
 
-        try {
+            if (accessor.getClass().getName().equals(LMethodAccessorAdapterGenerator.JAVA_CLASS_NAME)) {
+                Field field = accessor.getClass().getDeclaredField(LMethodAccessorAdapterGenerator.DELEGATEE_FIELD);
+                return field.get(accessor);
+            }
+
+            Class<?> wrapper = classLoader.getOrLoad(new JMethodAccessorAdapterGenerator());
             Constructor<?> constructor = wrapper.getConstructor(LMethodAccessor.class);
             return constructor.newInstance(accessor);
-        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+        } catch (ReflectiveOperationException e) {
             // This should only happen if we generated wrong bytecode
             throw new RuntimeException(e);
         }
@@ -117,19 +118,20 @@ public class MethodAccessorUtility {
      * @return jvm method accessor adapter
      */
     private LMethodAccessor wrapJvmMethodAccessor(Object accessor) {
-        String wrapperClassName = LMethodAccessorAdapterGenerator.CLASS_NAME.replace('/', '.');
-        Class<?> wrapper;
         try {
-            wrapper = Class.forName(wrapperClassName, false, classLoader);
-        } catch (ClassNotFoundException e) {
-            byte[] bytecode = new LMethodAccessorAdapterGenerator().generate();
-            wrapper = classLoader.loadBytecode(wrapperClassName, bytecode);
-        }
+            if (accessor == null) {
+                return null;
+            }
 
-        try {
+            if (accessor.getClass().getName().equals(JMethodAccessorAdapterGenerator.JAVA_CLASS_NAME)) {
+                Field field = accessorField.getClass().getDeclaredField(JMethodAccessorAdapterGenerator.DELEGATEE_FIELD);
+                return (LMethodAccessor) field.get(accessor);
+            }
+
+            Class<?> wrapper = classLoader.getOrLoad(new LMethodAccessorAdapterGenerator());
             Constructor<?> constructor = wrapper.getDeclaredConstructors()[0];
             return (LMethodAccessor) constructor.newInstance(accessor);
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
+        } catch (ReflectiveOperationException e) {
             // This should only happen if we generated wrong bytecode
             throw new RuntimeException(e);
         }

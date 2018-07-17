@@ -5,7 +5,6 @@ import net.glowstone.linkstone.runtime.reflectionredirect.ReflectionUtil;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -166,19 +165,20 @@ public class FieldAccessorUtility {
      * @return jvm field accessor adapter
      */
     private Object wrapLinkstoneFieldAccessor(LFieldAccessor accessor) {
-        String wrapperClassName = JFieldAccessorAdapterGenerator.CLASS_NAME.replace('/', '.');
-        Class<?> wrapper;
         try {
-            wrapper = Class.forName(wrapperClassName, false, classLoader);
-        } catch (ClassNotFoundException e) {
-            byte[] bytecode = new JFieldAccessorAdapterGenerator().generate();
-            wrapper = classLoader.loadBytecode(wrapperClassName, bytecode);
-        }
+            if (accessor == null) {
+                return null;
+            }
 
-        try {
+            if (accessor.getClass().getName().equals(LFieldAccessorAdapterGenerator.JAVA_CLASS_NAME)) {
+                Field field = accessor.getClass().getDeclaredField(LFieldAccessorAdapterGenerator.DELEGATEE_FIELD);
+                return field.get(accessor);
+            }
+
+            Class<?> wrapper = classLoader.getOrLoad(new JFieldAccessorAdapterGenerator());
             Constructor<?> constructor = wrapper.getConstructor(LFieldAccessor.class);
             return constructor.newInstance(accessor);
-        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+        } catch (ReflectiveOperationException e) {
             // This should only happen if we generated wrong bytecode
             throw new RuntimeException(e);
         }
@@ -192,19 +192,20 @@ public class FieldAccessorUtility {
      * @return jvm field accessor adapter
      */
     private LFieldAccessor wrapJvmFieldAccessor(Object accessor) {
-        String wrapperClassName = LFieldAccessorAdapterGenerator.CLASS_NAME.replace('/', '.');
-        Class<?> wrapper;
         try {
-            wrapper = Class.forName(wrapperClassName, false, classLoader);
-        } catch (ClassNotFoundException e) {
-            byte[] bytecode = new LFieldAccessorAdapterGenerator().generate();
-            wrapper = classLoader.loadBytecode(wrapperClassName, bytecode);
-        }
+            if (accessor == null) {
+                return null;
+            }
 
-        try {
+            if (accessor.getClass().getName().equals(JFieldAccessorAdapterGenerator.JAVA_CLASS_NAME)) {
+                Field field = accessor.getClass().getDeclaredField(JFieldAccessorAdapterGenerator.DELEGATEE_FIELD);
+                return (LFieldAccessor) field.get(accessor);
+            }
+
+            Class<?> wrapper = classLoader.getOrLoad(new LFieldAccessorAdapterGenerator());
             Constructor<?> constructor = wrapper.getDeclaredConstructors()[0];
             return (LFieldAccessor) constructor.newInstance(accessor);
-        } catch (InstantiationException | IllegalAccessException | InvocationTargetException e) {
+        } catch (ReflectiveOperationException e) {
             // This should only happen if we generated wrong bytecode
             throw new RuntimeException(e);
         }

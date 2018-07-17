@@ -26,7 +26,6 @@ public class Boxes {
      */
     public void addBox(Type boxType, Type boxedType) {
         boxToBoxed.put(boxType, boxedType);
-
         boxedToBoxes.computeIfAbsent(boxedType, x -> new HashSet<>()).add(boxType);
     }
 
@@ -48,5 +47,12 @@ public class Boxes {
      */
     public Set<Type> getBoxTypes(Type boxedType) {
         return boxedToBoxes.getOrDefault(boxedType, Collections.emptySet());
+    }
+
+    /**
+     * @return whether this collection contains no values
+     */
+    public boolean isEmpty() {
+        return boxToBoxed.isEmpty();
     }
 }

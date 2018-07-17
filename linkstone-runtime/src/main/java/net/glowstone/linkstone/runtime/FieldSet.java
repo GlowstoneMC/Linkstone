@@ -27,9 +27,22 @@ public class FieldSet {
         return fields.add(fieldDescriptor);
     }
 
+    /**
+     * Get all field in this collection that are declared within a certain class.
+     *
+     * @param className name of class whose fields to get
+     * @return fields declared within the class
+     */
     public Set<FieldDescriptor> get(String className) {
         Set<FieldDescriptor> set = fieldsByClass.get(className);
         return set == null ? Collections.emptySet() : Collections.unmodifiableSet(set);
+    }
+
+    /**
+     * @return whether this collection is empty
+     */
+    public boolean isEmpty() {
+        return fields.isEmpty();
     }
 
     public class FieldDescriptor {

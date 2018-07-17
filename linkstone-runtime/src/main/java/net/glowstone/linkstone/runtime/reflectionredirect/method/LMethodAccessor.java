@@ -1,4 +1,4 @@
-package net.glowstone.linkstone.runtime.reflectionredirect;
+package net.glowstone.linkstone.runtime.reflectionredirect.method;
 
 /**
  * Since the MethodAccessor in java's reflection api is in different packages on different JVMs,

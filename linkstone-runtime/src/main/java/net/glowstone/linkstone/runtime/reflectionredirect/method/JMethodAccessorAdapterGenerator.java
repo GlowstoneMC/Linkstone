@@ -1,4 +1,4 @@
-package net.glowstone.linkstone.runtime.reflectionredirect;
+package net.glowstone.linkstone.runtime.reflectionredirect.method;
 
 import static org.objectweb.asm.Opcodes.*;
 

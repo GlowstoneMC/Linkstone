@@ -1,4 +1,7 @@
-package net.glowstone.linkstone.runtime.reflectionredirect;
+package net.glowstone.linkstone.runtime.reflectionredirect.method;
+
+import net.glowstone.linkstone.runtime.reflectionredirect.DynamicClassLoader;
+import net.glowstone.linkstone.runtime.reflectionredirect.ReflectionUtil;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -26,7 +29,7 @@ public class MethodAccessorUtility {
                 LMethodAccessor accessor = (Object instance, Object[] arguments) -> isSupported = true;
                 new MethodAccessorUtility().setAccessor(method, accessor);
                 method.invoke(null);
-            } catch (Exception e) {
+            } catch (Throwable e) {
                 isSupported = false;
             }
         }
@@ -35,6 +38,8 @@ public class MethodAccessorUtility {
 
     private final DynamicClassLoader classLoader = new DynamicClassLoader();
     private Field accessorField;
+
+    private Method acquireMethodAccessorMethod;
 
     public MethodAccessorUtility() throws NoSuchFieldException {
         this.accessorField = Method.class.getDeclaredField("methodAccessor");
@@ -58,11 +63,24 @@ public class MethodAccessorUtility {
      *
      * @param method whose we want
      * @return the internal method accessor
-     * @throws IllegalAccessException the accessor could not be accessed
+     * @throws ReflectiveOperationException the accessor could not be accessed
      */
-    public LMethodAccessor getAccessor(Method method) throws IllegalAccessException {
+    public LMethodAccessor getAccessor(Method method) throws ReflectiveOperationException {
         Object jvmAccesor = accessorField.get(method);
+        if (jvmAccesor == null) {
+            initializeMethodAccessor(method);
+            jvmAccesor = accessorField.get(method);
+        }
         return wrapJvmMethodAccessor(jvmAccesor);
+    }
+
+    private void initializeMethodAccessor(Method method) throws ReflectiveOperationException {
+        if (acquireMethodAccessorMethod == null) {
+            acquireMethodAccessorMethod = Method.class.getDeclaredMethod("acquireMethodAccessor");
+            ReflectionUtil.setAccessible(acquireMethodAccessorMethod, true);
+        }
+
+        acquireMethodAccessorMethod.invoke(method);
     }
 
     /**

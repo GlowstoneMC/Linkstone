@@ -1,9 +1,9 @@
-package net.glowstone.linkstone.runtime.reflectionredirect;
+package net.glowstone.linkstone.runtime.reflectionredirect.method;
 
 import org.objectweb.asm.*;
 
 import static org.objectweb.asm.Opcodes.*;
-import static net.glowstone.linkstone.runtime.reflectionredirect.JMethodAccessorAdapterGenerator.*;
+import static net.glowstone.linkstone.runtime.reflectionredirect.method.JMethodAccessorAdapterGenerator.*;
 
 /**
  * Generate the bytecode for a adapter for {@link LMethodAccessor} that delegates invokes to a

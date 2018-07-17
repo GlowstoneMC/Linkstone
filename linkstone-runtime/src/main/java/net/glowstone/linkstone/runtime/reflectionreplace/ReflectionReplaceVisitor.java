@@ -6,22 +6,24 @@ import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Type;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import static org.objectweb.asm.Opcodes.*;
 
 /**
- * Visitor that replaces calls of get and set methods on a {@link Field}
- * against invokes on the {@link LinkstoneRuntimeData#getField(Field, Object)}
- * and {@link LinkstoneRuntimeData#setField(Field, Object, Object)} methods.
+ * Visitor that replaces calls of get and set methods on a {@link Field} and invokes of
+ * the {@link Method#invoke(Object, Object...)} method against invokes of the
+ * {@link LinkstoneRuntimeData#getField(Field, Object)}, {@link LinkstoneRuntimeData#setField(Field, Object, Object)}
+ * and {@link LinkstoneRuntimeData#invoke(Method, Object, Object[])} methods.
  */
-public class ReflectFieldAccessReplaceVisitor extends ClassVisitor {
+public class ReflectionReplaceVisitor extends ClassVisitor {
     private final static String INVOKE_BUS_NAME = Type.getInternalName(LinkstoneRuntimeData.class);
 
-    public ReflectFieldAccessReplaceVisitor() {
+    public ReflectionReplaceVisitor() {
         super(ASM6);
     }
 
-    public ReflectFieldAccessReplaceVisitor(ClassVisitor classVisitor) {
+    public ReflectionReplaceVisitor(ClassVisitor classVisitor) {
         super(ASM6, classVisitor);
     }
 
@@ -56,6 +58,12 @@ public class ReflectFieldAccessReplaceVisitor extends ClassVisitor {
                     }
                 }
 
+                if (owner.equals("java/lang/reflect/Method") && name.equals("invoke")) {
+                    super.visitMethodInsn(INVOKESTATIC, INVOKE_BUS_NAME, "invoke",
+                            "(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;", false);
+                    return;
+                }
+
                 super.visitMethodInsn(opcode, owner, name, descriptor, isInterface);
             }
 
@@ -70,6 +78,7 @@ public class ReflectFieldAccessReplaceVisitor extends ClassVisitor {
                 String unboxMethodDescriptor = "()" + primitiveType.getDescriptor();
 
                 visitGet();
+                super.visitTypeInsn(CHECKCAST, boxedType.getInternalName());
                 super.visitMethodInsn(INVOKEVIRTUAL, boxedType.getInternalName(), unboxMethodName, unboxMethodDescriptor, false);
             }
 

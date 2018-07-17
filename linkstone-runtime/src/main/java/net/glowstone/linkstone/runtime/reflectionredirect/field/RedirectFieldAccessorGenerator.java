@@ -1,4 +1,4 @@
-package net.glowstone.linkstone.runtime.reflectionredirect;
+package net.glowstone.linkstone.runtime.reflectionredirect.field;
 
 import org.objectweb.asm.*;
 import org.objectweb.asm.commons.GeneratorAdapter;
@@ -10,26 +10,13 @@ import java.lang.reflect.Modifier;
 import static org.objectweb.asm.Opcodes.*;
 
 /**
- * Generate an implementation of a FieldAccessor that invokes a getter and setter.
+ * Generate an implementation of a {@link LFieldAccessor} that invokes the getter and setter.
  */
-public class FieldAccessorGenerator {
-    private final static String FIELD_ACCESSOR;
-
-    static {
-        String accessor;
-        try {
-            Class.forName("sun.reflect.FieldAccessor");
-            accessor = "sun/reflect/FieldAccessor";
-        } catch (ClassNotFoundException e) {
-            accessor = "jdk/internal/reflect/FieldAccessor";
-        }
-        FIELD_ACCESSOR = accessor;
-    }
-
+public class RedirectFieldAccessorGenerator {
     private final Field field;
     private final String className;
 
-    public FieldAccessorGenerator(Field field) {
+    public RedirectFieldAccessorGenerator(Field field) {
         this.field = field;
 
         String escapedClassName = field.getDeclaringClass().getName().replace('.', '$');
@@ -42,7 +29,8 @@ public class FieldAccessorGenerator {
 
     public byte[] generateAccessor() {
         ClassWriter cv = new ClassWriter(ClassWriter.COMPUTE_MAXS);
-        cv.visit(V1_7, ACC_PUBLIC, className, null, "java/lang/Object", new String[] { FIELD_ACCESSOR });
+        cv.visit(V1_7, ACC_PUBLIC, className, null, "java/lang/Object",
+                new String[] { Type.getInternalName(LFieldAccessor.class) });
 
         visitConstructor(cv);
 
@@ -143,6 +131,7 @@ public class FieldAccessorGenerator {
         if (type.equals(field.getType())) {
             if (!Modifier.isStatic(field.getModifiers())) {
                 mv.loadArg(0);
+                mv.checkCast(Type.getType(field.getDeclaringClass()));
             }
 
             invokeGetter(mv);
@@ -175,6 +164,7 @@ public class FieldAccessorGenerator {
         if (field.getType().equals(primitiveType)) {
             if (!Modifier.isStatic(field.getModifiers())) {
                 mv.loadArg(0);
+                mv.checkCast(Type.getType(field.getDeclaringClass()));
             }
 
             mv.loadArg(1);

@@ -34,18 +34,53 @@ public class DelegateGenerator implements CodeTransformer {
                 continue;
             }
 
-            Set<Type> interfaces = delegateMeta.getDelegateClasses().stream()
+            Set<Type> interfacesToDelegate = delegateMeta.getDelegateClasses().stream()
                     .flatMap(iface -> withExtendedInterfaces(iface).stream())
                     .collect(Collectors.toSet());
 
-            inheritInterfaces(cn, interfaces);
+            inheritInterfaces(cn, interfacesToDelegate);
 
-            for (Type clazz : interfaces) {
+            // Do not generate delegation methods for interfaces that have already been
+            // delegated by the superclasses.
+            interfacesToDelegate.removeAll(getAllDelegatedInterfaces(cn.superName));
+
+            for (Type clazz : interfacesToDelegate) {
                 ClassNode tcn = classStore.getClass(clazz.getInternalName());
                 for (MethodNode mn : tcn.methods) {
                     generateDelegateMethod(cn, fn, clazz, mn.name, mn.desc);
                 }
             }
+        }
+    }
+
+    /**
+     * Get all interfaces that a class (and its superclasses) delegate.
+     *
+     * @param internalName of class whose delegated interfaces are requested
+     * @return the delegated interfaces
+     */
+    private Set<Type> getAllDelegatedInterfaces(String internalName) {
+        Set<Type> ifaces = new HashSet<>();
+        addDelegatedInterfaces(ifaces, internalName);
+        return ifaces;
+    }
+
+    private void addDelegatedInterfaces(Set<Type> interfaces, String internalName) {
+        ClassNode cn = classStore.getClass(internalName);
+        if (cn == null) {
+            // Classes that are not in the ClassStore are probably part of the java runtime.
+            // Therefore we can expect that it will not contains any delegation annotations.
+            return;
+        }
+
+        cn.fields.stream()
+                .map(DelegateMeta::from)
+                .filter(DelegateMeta::isAnnotated)
+                .map(DelegateMeta::getDelegateClasses)
+                .forEach(interfaces::addAll);
+
+        if (cn.superName != null) {
+            addDelegatedInterfaces(interfaces, cn.superName);
         }
     }
 

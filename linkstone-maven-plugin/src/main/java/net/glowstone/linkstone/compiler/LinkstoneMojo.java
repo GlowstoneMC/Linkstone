@@ -60,7 +60,7 @@ public class LinkstoneMojo extends AbstractMojo {
     private void loadDependencies(ClassStore resolver) throws MojoExecutionException {
         for (Artifact artifact : project.getDependencyArtifacts()) {
             try {
-                resolver.insertArtifact(artifact);
+                resolver.insertArtifact(artifact.getFile());
             } catch (IOException e) {
                 throw new MojoExecutionException("Could not read artifact", e);
             }

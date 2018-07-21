@@ -11,20 +11,20 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 /**
- * Stores ClassNodes or loads them from Maven Artifacts
+ * Stores ClassNodes or loads them from jar files.
  */
 public class ClassStore {
     private final Map<String, ClassNode> classes = new HashMap<>();
     private final Map<String, byte[]> classfiles = new HashMap<>();
 
     /**
-     * Add a maven artifact to the class store.
+     * Add a jar file to this ClassStore.
      *
-     * @param artifact to be loaded
+     * @param file jar file to load
      * @throws IOException file could not be read
      */
-    public void insertArtifact(Artifact artifact) throws IOException {
-        ZipInputStream in = new ZipInputStream(new FileInputStream(artifact.getFile()));
+    public void insertArtifact(File file) throws IOException {
+        ZipInputStream in = new ZipInputStream(new FileInputStream(file));
         byte[] cache = new byte[8192];
         ZipEntry entry;
         while ((entry = in.getNextEntry()) != null) {

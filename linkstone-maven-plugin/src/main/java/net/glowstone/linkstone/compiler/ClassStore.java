@@ -11,7 +11,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 /**
- * Stores
+ * Stores ClassNodes or loads them from Maven Artifacts
  */
 public class ClassStore {
     private final Map<String, ClassNode> classes = new HashMap<>();

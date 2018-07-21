@@ -15,13 +15,12 @@ import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
-
 @Mojo(
         name = "compile",
         defaultPhase = LifecyclePhase.PROCESS_CLASSES
 )
 public class LinkstoneMojo extends AbstractMojo {
-    @Parameter( readonly = true, defaultValue = "${project}" )
+    @Parameter(readonly = true, defaultValue = "${project}")
     private MavenProject project;
 
     @Parameter()
@@ -42,8 +41,6 @@ public class LinkstoneMojo extends AbstractMojo {
         ClassStore classStore = new ClassStore();
         classStore.insert(templates);
         loadDependencies(classStore);
-
-
 
         List<ErrorReport.Error> errors = compiler.runLints(templates, classStore).getErrors();
         if (!errors.isEmpty()) {

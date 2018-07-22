@@ -20,6 +20,12 @@ import java.util.stream.Collectors;
 public class DelegateLinter implements Linter {
     private final ClassStore classStore;
 
+    /**
+     * Map a class to all interfaces delegated by the fields in that class.
+     * This includes all interfaces extended by delegated interfaces.
+     */
+    private final Map<Type, Set<ClassNode>> delegatedInterfaces = new HashMap<>();
+
     public DelegateLinter(ClassStore classStore) {
         this.classStore = classStore;
     }
@@ -27,24 +33,28 @@ public class DelegateLinter implements Linter {
     @Override
     public void lint(List<ClassNode> classes, ErrorReport report) {
         for (ClassNode cn : classes) {
-            Collection<ClassNode> interfaces = collectAllDelegateInterfaces(cn, report);
+            Set<ClassNode> delegateInterfaces = collectDelegatedInterfaces(cn, report);
+            delegatedInterfaces.put(Type.getObjectType(cn.name), delegateInterfaces);
+        }
 
+        for (ClassNode cn : classes) {
+            Collection<ClassNode> interfaces = getAllDelegateInterfaces(cn);
             lintNotOverridingMethods(cn, interfaces, report);
-
             lintMissingOverridesAnnotation(cn, interfaces, report);
         }
     }
 
     /**
-     * Create a list of all interfaces that should be delegated or report if they are invalid.
+     * Get the ClassNodes of all interfaces delegated to the fields of a class or
+     * report if types in the annotations cannot be delegated.
      *
-     * @param cn class to scan
-     * @param report error report for user
-     * @return ClassNodes of all interfaces to delegate
+     * @param cn the class to scan
+     * @param report error report for the user
+     * @return ClassNodes of delegated interfaces
      */
-    private Collection<ClassNode> collectAllDelegateInterfaces(ClassNode cn, ErrorReport report) {
-        Set<ClassNode> interfaceNodes = new HashSet<>();
+    private Set<ClassNode> collectDelegatedInterfaces(ClassNode cn, ErrorReport report) {
         Set<Type> interfaceTypes = new HashSet<>();
+        Set<ClassNode> interfaceNodes = new HashSet<>();
 
         for (FieldNode fn : cn.fields) {
             DelegateMeta meta = DelegateMeta.from(fn);
@@ -52,10 +62,10 @@ public class DelegateLinter implements Linter {
                 continue;
             }
 
-            Set<Type> fieldInterfaces = new HashSet<>();
+            Set<Type> fieldInterfaceTypes = new HashSet<>();
             for (Type iface : meta.getDelegateClasses()) {
-                addInterfacesRecursive(cn, fn, iface, interfaceNodes,
-                        interfaceTypes, fieldInterfaces, report);
+                addInterfacesRecursive(cn, fn, iface, interfaceNodes, interfaceTypes,
+                        fieldInterfaceTypes, report);
             }
         }
 
@@ -63,18 +73,18 @@ public class DelegateLinter implements Linter {
     }
 
     /**
-     * Check whether a certain type is a delegable interfaces and thereby add them to certain sets.
+     * Check whether a certain type is a delegable interfaces and thereby add it to certain sets.
      *
-     * @param cn class containing field to scan
-     * @param fn field to scan
-     * @param iface the interface to delegate
-     * @param interfaceNodes ClassNodes of all already checked delegated interfaces
-     * @param allInterfaces types of all already checked delegated interface
-     * @param fieldInterfaces already checked interfaces delegated by the field
+     * @param cn current processed class containing the delegated field
+     * @param fn the delegated field being processed
+     * @param iface the interface to delegate to the field
+     * @param interfaceNodes ClassNodes of interfaces delegated by the current processed class
+     * @param interfaceTypes types of interfaces delegated by the current processed class
+     * @param fieldInterfaces all interfaces delegated by the current field
      * @param report error report for the user
      */
     private void addInterfacesRecursive(ClassNode cn, FieldNode fn, Type iface,
-                                        Set<ClassNode> interfaceNodes, Set<Type> allInterfaces,
+                                        Set<ClassNode> interfaceNodes, Set<Type> interfaceTypes,
                                         Set<Type> fieldInterfaces, ErrorReport report) {
         if (iface.getSort() != Type.OBJECT) {
             ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
@@ -99,7 +109,7 @@ public class DelegateLinter implements Linter {
         }
 
         if (fieldInterfaces.add(iface)) {
-            if (!allInterfaces.add(iface)) {
+            if (!interfaceTypes.add(iface)) {
                 ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
                 String message = "Multiple fields try to delegate the interface " + iface.getInternalName();
                 report.addError(new ErrorReport.Error(message, location));
@@ -112,9 +122,33 @@ public class DelegateLinter implements Linter {
                 for (String iface2 : tcn.interfaces) {
                     Type ifaceType = Type.getObjectType(iface2);
                     addInterfacesRecursive(cn, fn, ifaceType, interfaceNodes,
-                            allInterfaces, fieldInterfaces, report);
+                            interfaceTypes, fieldInterfaces, report);
                 }
             }
+        }
+    }
+
+    /**
+     * Get the ClassNodes of all interfaces delegated by a class and its superclasses
+     *
+     * @param cn class whose delegated interfaces we want.
+     * @return all interfaces to delegate
+     */
+    private Set<ClassNode> getAllDelegateInterfaces(ClassNode cn) {
+        Set<ClassNode> delegatedInterface = new HashSet<>();
+        addInterfacesToDelegateRecursive(delegatedInterface, cn);
+        return delegatedInterface;
+    }
+
+    private void addInterfacesToDelegateRecursive(Set<ClassNode> allDelegatedInterface, ClassNode cn) {
+        Set<ClassNode> interfaces = delegatedInterfaces.get(Type.getObjectType(cn.name));
+        if (interfaces != null) {
+            allDelegatedInterface.addAll(interfaces);
+        }
+
+        ClassNode superClass = classStore.getClass(cn.superName);
+        if (superClass != null) {
+            addInterfacesToDelegateRecursive(allDelegatedInterface, superClass);
         }
     }
 

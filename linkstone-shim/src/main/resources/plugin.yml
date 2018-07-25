@@ -1,0 +1,4 @@
+name: Linkstone
+version: 1.0.0
+main: net.glowstone.linkstone.Plugin
+description: Bridging the gap between vanilla and Glowstone

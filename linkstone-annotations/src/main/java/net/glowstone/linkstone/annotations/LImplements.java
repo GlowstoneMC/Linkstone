@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * This annotation marks methods that override delegated methods.
+ * This annotation marks methods that implement a method of a delegated interface.
  *
  * It's similar to {@link Override}, but that annotation would cause a compile error.
  *
@@ -14,5 +14,5 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface LOverrides {
+public @interface LImplements {
 }

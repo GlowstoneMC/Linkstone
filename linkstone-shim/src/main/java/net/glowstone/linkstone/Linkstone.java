@@ -29,4 +29,8 @@ public class Linkstone {
     public static <T> T box(Object obj) {
         return (T) obj;
     }
+
+    public static <T> T notYetImplemented() {
+        throw new NotYetImplementedException();
+    }
 }

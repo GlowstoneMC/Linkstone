@@ -2,9 +2,13 @@ package net.minecraft.server;
 
 import javax.annotation.concurrent.Immutable;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 @Immutable
 public class BlockPosition
 extends BaseBlockPosition {

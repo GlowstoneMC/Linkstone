@@ -2,15 +2,19 @@ package org.bukkit.command;
 
 import java.util.List;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.apache.commons.lang.Validate;
 import org.bukkit.craftbukkit.entity.CraftPlayer; // LINKSTONE
 import org.bukkit.plugin.Plugin;
 
 import net.glowstone.entity.GlowPlayer; // LINKSTONE
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
 /**
  * Represents a {@link Command} belonging to a plugin
  */
+@LClassfile(version = V1_12_R1)
 public final class PluginCommand extends Command implements PluginIdentifiableCommand {
     private final Plugin owningPlugin;
     private CommandExecutor executor;

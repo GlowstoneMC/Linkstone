@@ -2,6 +2,7 @@ package org.bukkit.craftbukkit.boss;
 
 import java.util.List;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.boss.BarColor;
 import org.bukkit.boss.BarFlag;
 import org.bukkit.boss.BarStyle;
@@ -10,6 +11,9 @@ import org.bukkit.entity.Player;
 
 import net.glowstone.boss.GlowBossBar;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CraftBossBar implements BossBar {
     private GlowBossBar base;
 

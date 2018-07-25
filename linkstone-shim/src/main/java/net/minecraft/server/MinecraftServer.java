@@ -1,9 +1,13 @@
 package net.minecraft.server;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.Bukkit;
 
 import net.glowstone.GlowServer;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public abstract class MinecraftServer implements IMojangStatistics {
     private String motd;
     private GlowServer glowserver;
@@ -11,7 +15,7 @@ public abstract class MinecraftServer implements IMojangStatistics {
 
     public MinecraftServer() {
         MinecraftServer.inst = this;
-        this.glowserver = (GlowServer) Bukkit.getNonLinkstone();
+        this.glowserver = (GlowServer) Bukkit.getServer();
         this.motd = Bukkit.getServer().getMotd(); 
     }
 

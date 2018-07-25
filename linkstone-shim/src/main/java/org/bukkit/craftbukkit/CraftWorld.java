@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.BlockChangeDelegate;
 import org.bukkit.Chunk;
 import org.bukkit.ChunkSnapshot;
@@ -49,6 +50,9 @@ import net.glowstone.GlowWorld;
 import net.glowstone.block.GlowBlock;
 import net.glowstone.entity.GlowEntity;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CraftWorld implements World {
     public GlowWorld base;
     public CraftWorld(GlowWorld base) {

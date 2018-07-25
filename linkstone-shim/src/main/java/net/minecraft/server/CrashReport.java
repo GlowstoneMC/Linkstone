@@ -4,9 +4,13 @@ import com.google.common.collect.Lists;
 import java.io.File;
 import java.util.List;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CrashReport {
     private static final Logger a = LogManager.getLogger();
     private final String b;

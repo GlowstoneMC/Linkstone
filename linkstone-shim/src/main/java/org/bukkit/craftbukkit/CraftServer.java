@@ -11,6 +11,7 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.logging.Logger;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.BanList;
 import org.bukkit.BanList.Type;
 import org.bukkit.GameMode;
@@ -61,6 +62,9 @@ import net.glowstone.entity.GlowPlayer;
 import net.minecraft.server.ICommandListener;
 import net.minecraft.server.MinecraftServer;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CraftServer implements Server {
     private final String serverName = "Linkstone";
     private final String serverVersion = "Linkstone-1.12";

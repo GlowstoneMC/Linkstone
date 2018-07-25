@@ -1,11 +1,15 @@
 package net.minecraft.server;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.Bukkit;
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.craftbukkit.CraftWorld;
 
 import net.glowstone.GlowWorld;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public abstract class World implements IBlockAccess {
 
     public GlowWorld base;

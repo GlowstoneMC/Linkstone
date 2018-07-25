@@ -6,6 +6,7 @@ package org.bukkit.craftbukkit;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.Chunk;
 import org.bukkit.ChunkSnapshot;
 import org.bukkit.World;
@@ -17,6 +18,9 @@ import org.bukkit.entity.Entity;
 import net.glowstone.chunk.GlowChunk;
 import net.glowstone.entity.GlowEntity;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CraftChunk implements Chunk {
     public GlowChunk base;
     public CraftChunk(GlowChunk c) {

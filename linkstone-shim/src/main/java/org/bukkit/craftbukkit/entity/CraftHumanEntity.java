@@ -1,5 +1,6 @@
 package org.bukkit.craftbukkit.entity;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -18,6 +19,9 @@ import org.bukkit.inventory.PlayerInventory;
 import net.glowstone.entity.GlowEntity;
 import net.glowstone.entity.GlowHumanEntity;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CraftHumanEntity extends CraftLivingEntity implements HumanEntity {
     private GlowHumanEntity base;
     public CraftHumanEntity(GlowHumanEntity e) {

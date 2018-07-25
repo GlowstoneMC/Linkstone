@@ -1,10 +1,14 @@
 package net.minecraft.server;
 
+import net.glowstone.linkstone.annotations.LClassfile;
+
 import java.util.Random;
 import java.util.UUID;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 import static net.minecraft.server.Link.fixme; // LINKSTONE
 
+@LClassfile(version = V1_12_R1)
 public class MathHelper {
     public static final float a;
     private static final float[] b;

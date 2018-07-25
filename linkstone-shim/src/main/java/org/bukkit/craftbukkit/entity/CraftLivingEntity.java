@@ -5,6 +5,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.EntityAnimation;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -26,6 +27,9 @@ import net.glowstone.block.GlowBlock;
 import net.glowstone.entity.GlowLivingEntity;
 import net.glowstone.entity.GlowPlayer;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CraftLivingEntity extends CraftEntity implements LivingEntity {
     private GlowLivingEntity base;
     public CraftLivingEntity(GlowLivingEntity p) {

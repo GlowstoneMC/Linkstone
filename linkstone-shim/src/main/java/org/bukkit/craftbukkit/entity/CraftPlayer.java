@@ -3,6 +3,8 @@ package org.bukkit.craftbukkit.entity;
 import java.net.InetSocketAddress;
 import java.util.Map;
 import java.util.Set;
+
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.Achievement;
 import org.bukkit.Effect;
 import org.bukkit.EntityAnimation;
@@ -36,6 +38,9 @@ import net.glowstone.entity.GlowPlayer;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.minecraft.server.EntityPlayer;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 @DelegateDeserialization(GlowOfflinePlayer.class)
 public class CraftPlayer extends CraftHumanEntity implements Player {
     private GlowPlayer base;

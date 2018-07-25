@@ -1,12 +1,15 @@
 package net.minecraft.server;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.GameMode;
 
 import com.mojang.authlib.GameProfile;
 
 import net.glowstone.entity.GlowPlayer;
 
-// 1_12_2_R1
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class EntityPlayer extends EntityHuman {
 
     public GlowPlayer glowPlayer;

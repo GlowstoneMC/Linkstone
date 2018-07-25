@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.EntityEffect;
 import org.bukkit.Location;
 import org.bukkit.Server;
@@ -25,6 +26,9 @@ import org.bukkit.util.Vector;
 
 import net.glowstone.entity.GlowEntity;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CraftEntity implements org.bukkit.entity.Entity {
     private GlowEntity base;
     public CraftEntity(GlowEntity e) {

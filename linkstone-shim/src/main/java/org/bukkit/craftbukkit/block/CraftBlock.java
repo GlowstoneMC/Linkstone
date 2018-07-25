@@ -6,6 +6,7 @@ package org.bukkit.craftbukkit.block;
 import java.util.Collection;
 import java.util.List;
 
+import net.glowstone.linkstone.annotations.LClassfile;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -22,6 +23,9 @@ import org.bukkit.plugin.Plugin;
 
 import net.glowstone.block.GlowBlock;
 
+import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
+
+@LClassfile(version = V1_12_R1)
 public class CraftBlock implements Block {
     public GlowBlock base;
     public CraftBlock(GlowBlock glow) {

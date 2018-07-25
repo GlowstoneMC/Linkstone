@@ -1,24 +1,25 @@
 package net.glowstone.linkstone.compiler.collect;
 
+import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LGetter;
 import net.glowstone.linkstone.annotations.LSetter;
 import net.glowstone.linkstone.annotations.Version;
-import net.glowstone.linkstone.compiler.meta.AbstractAccessorMeta;
+import net.glowstone.linkstone.compiler.meta.AbstractVersionMeta;
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.Opcodes;
 
 /**
- * Visitor that adds all values of {@link LGetter} and
- * {@link LSetter} annotations to a {@link AbstractAccessorMeta}.
+ * Visitor that adds all values of {@link LGetter}, {@link LSetter} and {@link LConstructor}
+ * annotations to a {@link AbstractVersionMeta}.
  */
-public class UnnamedAnnotationVisitor extends AnnotationVisitor {
-    private final AbstractAccessorMeta meta;
+public class VersionAnnotationVisitor extends AnnotationVisitor {
+    private final AbstractVersionMeta meta;
 
-    public UnnamedAnnotationVisitor(AbstractAccessorMeta meta) {
+    public VersionAnnotationVisitor(AbstractVersionMeta meta) {
         this(meta, null);
     }
 
-    private UnnamedAnnotationVisitor(AbstractAccessorMeta meta, AnnotationVisitor av) {
+    private VersionAnnotationVisitor(AbstractVersionMeta meta, AnnotationVisitor av) {
         super(Opcodes.ASM6, av);
         this.meta = meta;
     }

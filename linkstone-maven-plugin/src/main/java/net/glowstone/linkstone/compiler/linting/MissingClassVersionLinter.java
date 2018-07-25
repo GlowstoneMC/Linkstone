@@ -40,6 +40,7 @@ public class MissingClassVersionLinter implements Linter {
         for (MethodNode mn : cn.methods) {
             Set<Version> methodVersions = new HashSet<>();
 
+            methodVersions.addAll(ConstructorMeta.from(mn).getVersions());
             methodVersions.addAll(MethodMeta.from(mn).getVersions());
             methodVersions.addAll(GetterMeta.from(mn).getVersions());
             methodVersions.addAll(SetterMeta.from(mn).getVersions());

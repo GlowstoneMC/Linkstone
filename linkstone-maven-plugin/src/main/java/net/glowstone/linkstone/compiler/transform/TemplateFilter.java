@@ -92,13 +92,14 @@ public class TemplateFilter implements CodeTransformer {
     }
 
     /**
-     * Leave only methods that exist in the targeted version
+     * Leave only methods and constructors that exist in the targeted version
      *
      * @param methods to filter
      */
     private void processMethods(List<MethodNode> methods) {
         methods.removeIf(mn -> {
-            MethodMeta meta = MethodMeta.from(mn);
+            VersionedMeta meta = mn.name.equals("<init>")
+                    ? ConstructorMeta.from(mn) : MethodMeta.from(mn);
 
             return meta.isAnnotated() && !meta.getVersions().contains(version);
         });

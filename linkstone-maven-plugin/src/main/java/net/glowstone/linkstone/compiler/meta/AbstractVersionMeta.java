@@ -1,5 +1,6 @@
 package net.glowstone.linkstone.compiler.meta;
 
+import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LGetter;
 import net.glowstone.linkstone.annotations.LSetter;
 import net.glowstone.linkstone.annotations.Version;
@@ -8,22 +9,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Superclass for accessor annotation metas.
+ * Superclass for metas of annotations that store only a set of versions.
  *
- * They have in common that they represent a set of versions.
- *
+ * @see LConstructor
  * @see LGetter
  * @see LSetter
  */
-public abstract class AbstractAccessorMeta implements VersionedMeta {
+public abstract class AbstractVersionMeta implements VersionedMeta {
     private boolean isAnnotated;
     private final Set<Version> versions;
 
-    public AbstractAccessorMeta() {
+    public AbstractVersionMeta() {
         this(new HashSet<>());
     }
 
-    private AbstractAccessorMeta(Set<Version> versions) {
+    private AbstractVersionMeta(Set<Version> versions) {
         this.versions = versions;
     }
 

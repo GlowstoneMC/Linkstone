@@ -17,10 +17,10 @@ import java.util.stream.Collectors;
  * Lint if multiple fields delegate interfaces that both contain a method with the same signature.
  *
  */
-public class LintDelegateCollisions implements Linter {
+public class LintDelegateCollisionLinter implements Linter {
     private final ClassStore classStore;
 
-    public LintDelegateCollisions(ClassStore classStore) {
+    public LintDelegateCollisionLinter(ClassStore classStore) {
         this.classStore = classStore;
     }
 

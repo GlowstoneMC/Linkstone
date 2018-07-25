@@ -5,7 +5,6 @@ import net.glowstone.net.message.play.game.PingMessage;
 import net.minecraft.server.Packet;
 
 public class Linkstone {
-
     /**
      * This method wraps objects into the requested box.
      * It's just an identity method, so what's the magic behind it?
@@ -29,14 +28,5 @@ public class Linkstone {
     @SuppressWarnings("unchecked")
     public static <T> T box(Object obj) {
         return (T) obj;
-    }
-
-    public Linkstone() {
-        // TODO: ASM class trickery
-    }
-
-    public static Message packetToMessage(Packet message) {
-        String className = message.getClass().getName();
-        return new PingMessage(0);
     }
 }

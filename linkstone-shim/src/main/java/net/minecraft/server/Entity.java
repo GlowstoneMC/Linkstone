@@ -1,8 +1,10 @@
 package net.minecraft.server;
 
-import static net.glowstone.linkstone.annotations.Version.*;
-import net.glowstone.linkstone.annotations.LClassfile;
+public abstract class Entity {
 
-@LClassfile(version = V1_12_R1)
-public class Entity {
+    public int locX;
+    public int locY;
+    public int locZ;
+    public boolean valid;
+
 }

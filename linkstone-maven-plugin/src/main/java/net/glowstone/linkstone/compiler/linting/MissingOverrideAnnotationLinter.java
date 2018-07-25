@@ -1,9 +1,9 @@
 package net.glowstone.linkstone.compiler.linting;
 
 import net.glowstone.linkstone.annotations.LMethod;
-import net.glowstone.linkstone.annotations.LMethodOverride;
+import net.glowstone.linkstone.annotations.LOverride;
 import net.glowstone.linkstone.compiler.meta.MethodMeta;
-import net.glowstone.linkstone.compiler.meta.MethodOverrideMeta;
+import net.glowstone.linkstone.compiler.meta.OverrideMeta;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
@@ -13,10 +13,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * Lint if a methods lacks a {@link LMethodOverride} or has one but overrides
+ * Lint if a methods lacks a {@link LOverride} annotation or has one but overrides
  * no {@link LMethod} annotated method.
  */
-public class MissingMethodOverrideAnnotationLinter implements Linter {
+public class MissingOverrideAnnotationLinter implements Linter {
     private Map<Type, ClassNode> classNodes;
 
     @Override
@@ -33,7 +33,7 @@ public class MissingMethodOverrideAnnotationLinter implements Linter {
 
     private void checkClass(ClassNode cn, ErrorReport report) {
         for (MethodNode mn : cn.methods) {
-            boolean isOverride = MethodOverrideMeta.from(mn).isAnnotated();
+            boolean isOverride = OverrideMeta.from(mn).isAnnotated();
 
             if (isOverride) {
                 boolean foundOverriddenMethod = false;
@@ -45,7 +45,7 @@ public class MissingMethodOverrideAnnotationLinter implements Linter {
                 }
 
                 for (MethodNode overriddenMethod : getOverriddenMethods(cn, mn)) {
-                    if (MethodOverrideMeta.from(overriddenMethod).isAnnotated()) {
+                    if (OverrideMeta.from(overriddenMethod).isAnnotated()) {
                         continue;
                     }
 
@@ -60,7 +60,7 @@ public class MissingMethodOverrideAnnotationLinter implements Linter {
 
                 if (!foundOverriddenMethod) {
                     ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
-                    String message = "@LMethodOverride annotated method overrides nothing";
+                    String message = "@LOverride annotated method overrides nothing";
                     report.addError(new ErrorReport.Error(message, location));
                 }
             } else {
@@ -69,7 +69,7 @@ public class MissingMethodOverrideAnnotationLinter implements Linter {
 
                 if (overridesAnnotatedMethod) {
                     ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
-                    String message = "The method lacks a @LMethodOverride annotation";
+                    String message = "The method lacks a @LOverride annotation";
                     report.addError(new ErrorReport.Error(message, location));
                 }
             }

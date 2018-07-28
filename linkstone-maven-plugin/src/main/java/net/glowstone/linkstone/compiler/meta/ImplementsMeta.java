@@ -1,18 +1,18 @@
 package net.glowstone.linkstone.compiler.meta;
 
-import net.glowstone.linkstone.annotations.LOverrides;
+import net.glowstone.linkstone.annotations.LImplements;
 import org.objectweb.asm.tree.MethodNode;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.AnnotationNode;
 
 /**
- * Represents the content of a {@link LOverrides} annotation.
+ * Represents the content of a {@link LImplements} annotation.
  */
-public class OverridesMeta implements Meta {
-    private final static String OVERRIDDEN_ANNOTATION_DESC = Type.getDescriptor(LOverrides.class);
+public class ImplementsMeta implements Meta {
+    private final static String OVERRIDDEN_ANNOTATION_DESC = Type.getDescriptor(LImplements.class);
 
-    public static OverridesMeta from(MethodNode mn) {
-        OverridesMeta meta = new OverridesMeta();
+    public static ImplementsMeta from(MethodNode mn) {
+        ImplementsMeta meta = new ImplementsMeta();
         if (mn.visibleAnnotations != null) {
             for (AnnotationNode an : mn.visibleAnnotations) {
                 if (an.desc.equals(OVERRIDDEN_ANNOTATION_DESC)) {

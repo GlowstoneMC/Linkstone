@@ -1,10 +1,10 @@
 package net.glowstone.linkstone.compiler.linting;
 
 import net.glowstone.linkstone.annotations.LDelegate;
-import net.glowstone.linkstone.annotations.LOverrides;
+import net.glowstone.linkstone.annotations.LImplements;
 import net.glowstone.linkstone.compiler.ClassStore;
 import net.glowstone.linkstone.compiler.meta.DelegateMeta;
-import net.glowstone.linkstone.compiler.meta.OverridesMeta;
+import net.glowstone.linkstone.compiler.meta.ImplementsMeta;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
@@ -17,23 +17,23 @@ import java.util.stream.Collectors;
  * Lint if multiple fields delegate interfaces that both contain a method with the same signature.
  *
  */
-public class LintDelegateCollisions implements Linter {
+public class LintDelegateCollisionLinter implements Linter {
     private final ClassStore classStore;
 
-    public LintDelegateCollisions(ClassStore classStore) {
+    public LintDelegateCollisionLinter(ClassStore classStore) {
         this.classStore = classStore;
     }
 
     @Override
     public void lint(List<ClassNode> classes, ErrorReport report) {
         for (ClassNode cn : classes) {
-            Set<MethodSignature> overrides = getOverriddenMethods(cn);
+            Set<MethodSignature> implementors = getImplementsMethods(cn);
             Map<Type, FieldNode> interfaceToField = getInterfacesToDelegate(cn);
             Map<MethodSignature, Set<Type>> methodToDelegate =
                     getMethodsToDelegate(interfaceToField.keySet());
 
             methodToDelegate.forEach((method, interfaces) -> {
-                if (interfaces.size() <= 1 || overrides.contains(method)) {
+                if (interfaces.size() <= 1 || implementors.contains(method)) {
                     return;
                 }
 
@@ -54,14 +54,14 @@ public class LintDelegateCollisions implements Linter {
     }
 
     /**
-     * Get the signatures of all methods that have a {@link LOverrides} annotation.
+     * Get the signatures of all methods that have a {@link LImplements} annotation.
      *
      * @param cn class to scan
      * @return all annotated methods
      */
-    private Set<MethodSignature> getOverriddenMethods(ClassNode cn) {
+    private Set<MethodSignature> getImplementsMethods(ClassNode cn) {
         return cn.methods.stream()
-                .filter(mn -> OverridesMeta.from(mn).isAnnotated())
+                .filter(mn -> ImplementsMeta.from(mn).isAnnotated())
                 .map(mn -> new MethodSignature(mn.name, mn.desc))
                 .collect(Collectors.toSet());
     }

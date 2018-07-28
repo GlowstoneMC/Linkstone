@@ -1,6 +1,7 @@
 package net.glowstone.linkstone.compiler.linting;
 
 import net.glowstone.linkstone.annotations.Version;
+import net.glowstone.linkstone.compiler.meta.ConstructorMeta;
 import net.glowstone.linkstone.compiler.meta.FieldMeta;
 import net.glowstone.linkstone.compiler.meta.MethodMeta;
 import org.objectweb.asm.tree.ClassNode;
@@ -17,6 +18,7 @@ public class DuplicatedClassMemberLinter implements Linter {
     public void lint(List<ClassNode> classes, ErrorReport report) {
         for (ClassNode cn : classes) {
             lintFields(cn, report);
+            lintConstructors(cn, report);
             lintMethods(cn, report);
         }
     }
@@ -49,6 +51,22 @@ public class DuplicatedClassMemberLinter implements Linter {
                 if (!signatures.add(methodName + mn.desc)) {
                     ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
                     String message = "Duplicated method in version " + version.getName();
+                    report.addError(new ErrorReport.Error(message, location));
+                }
+            }
+        }
+    }
+
+    private void lintConstructors(ClassNode cn, ErrorReport report) {
+        Map<Version, Set<String>> map = new HashMap<>();
+        for (MethodNode mn : cn.methods) {
+            ConstructorMeta meta = ConstructorMeta.from(mn);
+            for (Version version : meta.getVersions()) {
+                Set<String> signatures = map.computeIfAbsent(version, x -> new HashSet<>());
+
+                if (!signatures.add(mn.desc)) {
+                    ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                    String message = "Duplicated constructor in version " + version.getName();
                     report.addError(new ErrorReport.Error(message, location));
                 }
             }

@@ -6,13 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * This annotation marks methods that override delegated methods.
- *
- * It's similar to {@link Override}, but that annotation would cause a compile error.
- *
- * @see LDelegate
+ * Tell the compiler in which version the annotated constructor exists.
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
-public @interface LOverrides {
+@Target(ElementType.CONSTRUCTOR)
+public @interface LConstructor {
+    Version[] version();
 }

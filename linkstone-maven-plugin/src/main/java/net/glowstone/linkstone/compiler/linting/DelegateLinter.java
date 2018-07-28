@@ -1,10 +1,10 @@
 package net.glowstone.linkstone.compiler.linting;
 
 import net.glowstone.linkstone.annotations.LDelegate;
-import net.glowstone.linkstone.annotations.LOverrides;
+import net.glowstone.linkstone.annotations.LImplements;
 import net.glowstone.linkstone.compiler.ClassStore;
 import net.glowstone.linkstone.compiler.meta.DelegateMeta;
-import net.glowstone.linkstone.compiler.meta.OverridesMeta;
+import net.glowstone.linkstone.compiler.meta.ImplementsMeta;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
@@ -39,8 +39,8 @@ public class DelegateLinter implements Linter {
 
         for (ClassNode cn : classes) {
             Collection<ClassNode> interfaces = getAllDelegateInterfaces(cn);
-            lintNotOverridingMethods(cn, interfaces, report);
-            lintMissingOverridesAnnotation(cn, interfaces, report);
+            lintNotImplementingMethods(cn, interfaces, report);
+            lintMissingImplementsAnnotation(cn, interfaces, report);
         }
     }
 
@@ -153,60 +153,61 @@ public class DelegateLinter implements Linter {
     }
 
     /**
-     * Get all methods with a {@link LOverrides} annotation in a class.
+     * Get all methods with a {@link LImplements} annotation in a class.
      *
      * @param cn class that is currently checked
      * @return the annotated methods
      */
     private List<MethodNode> getAnnotatedMethods(ClassNode cn) {
         return cn.methods.stream()
-                .filter(mn -> OverridesMeta.from(mn).isAnnotated())
+                .filter(mn -> ImplementsMeta.from(mn).isAnnotated())
                 .collect(Collectors.toList());
     }
 
     /**
-     * Lint if a method has a {@link LOverrides} annotation but does not override
-     * a delegated method.
+     * Lint if a method has a {@link LImplements} annotation but implements no method
+     * of a delegated interface.
      *
      * @param cn class that is currently checked
      * @param delegatees interfaces that should be delegated
      * @param report error report for user
      */
-    private void lintNotOverridingMethods(ClassNode cn, Collection<ClassNode> delegatees, ErrorReport report) {
-        List<MethodNode> notOverridenMethods = getAnnotatedMethods(cn);
+    private void lintNotImplementingMethods(ClassNode cn, Collection<ClassNode> delegatees, ErrorReport report) {
+        List<MethodNode> notImplementingMethods = getAnnotatedMethods(cn);
 
         for (ClassNode delegatee : delegatees) {
             for (MethodNode mn : delegatee.methods) {
-                notOverridenMethods.removeIf(mn2 ->
+                notImplementingMethods.removeIf(mn2 ->
                         mn.name.equals(mn2.name) && mn.desc.equals(mn2.desc));
             }
         }
 
-        for (MethodNode mn : notOverridenMethods) {
+        for (MethodNode mn : notImplementingMethods) {
             ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
-            String message = "Method overrides no delegated method";
+            String message = "Method implements no delegated method";
             report.addError(new ErrorReport.Error(message, location));
         }
     }
 
     /**
-     * Lint if a method would override a delegated method but has not {@link LOverrides} annotation.
+     * Lint if a method would implement a method of a delegated interface but has no
+     * {@link LImplements} annotation.
      *
      * @param cn class to check against
-     * @param delegateClasses interfaces that should be delegated
+     * @param delegateInterfaces interfaces that should be delegated
      * @param report error report for user
      */
-    private void lintMissingOverridesAnnotation(ClassNode cn, Collection<ClassNode> delegateClasses, ErrorReport report) {
+    private void lintMissingImplementsAnnotation(ClassNode cn, Collection<ClassNode> delegateInterfaces, ErrorReport report) {
         for (MethodNode mn : cn.methods) {
-            boolean doesOverride = delegateClasses.stream()
+            boolean doesImplement = delegateInterfaces.stream()
                     .flatMap(iface -> iface.methods.stream())
                     .anyMatch(imn -> imn.name.equals(mn.name) && imn.desc.equals(mn.desc));
 
-            if (doesOverride) {
-                OverridesMeta meta = OverridesMeta.from(mn);
+            if (doesImplement) {
+                ImplementsMeta meta = ImplementsMeta.from(mn);
                 if (!meta.isAnnotated()) {
                     ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
-                    String message = "Method overrides a delegated method but has no @LOverrides annotation";
+                    String message = "Method implements a method of a delegated interface but has no @LImplements annotation";
                     report.addError(new ErrorReport.Error(message, location));
                 }
             }

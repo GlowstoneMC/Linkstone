@@ -75,6 +75,8 @@ public class LinkstoneCompiler {
      * @return generated classes
      */
     public List<ClassNode> generateClasses(List<ClassNode> templates, ClassStore classStore, Version version) {
+        new OverridenAnnotationApplier().transform(templates);
+
         MappingModel mappingModel = collectMappingModel(templates, version);
 
         CodeTransformer[] codeTransformers = {

@@ -11,8 +11,8 @@ import org.objectweb.asm.tree.MethodNode;
  * Represents the content of all {@link LMethod} annotations on a method in a template.
  */
 public class MethodMeta extends NamedVersionedMeta {
-    private final static String METHOD_ANNOTION_DESC = Type.getDescriptor(LMethod.class);
-    private final static String METHOD_CONTAINER_ANNOTION_DESC = Type.getDescriptor(LMethodContainer.class);
+    public final static String METHOD_ANNOTION_DESC = Type.getDescriptor(LMethod.class);
+    public final static String METHOD_CONTAINER_ANNOTION_DESC = Type.getDescriptor(LMethodContainer.class);
 
     public static MethodMeta from(MethodNode mn) {
         MethodMeta meta = new MethodMeta(mn.name);

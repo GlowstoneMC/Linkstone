@@ -55,7 +55,7 @@ public class LinkstoneCompiler {
                 new MissingFieldAnnotationLinter(),
                 new DelegateLinter(classStore),
                 new LintDelegateCollisionLinter(classStore),
-                new MissingOverrideAnnotationLinter(),
+                new MissingOverrideAnnotationLinter(classStore),
                 new BoxLinter()
         };
 
@@ -75,7 +75,7 @@ public class LinkstoneCompiler {
      * @return generated classes
      */
     public List<ClassNode> generateClasses(List<ClassNode> templates, ClassStore classStore, Version version) {
-        new OverridenAnnotationApplier().transform(templates);
+        new OverridenAnnotationApplier(classStore).transform(templates);
 
         MappingModel mappingModel = collectMappingModel(templates, version);
 

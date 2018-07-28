@@ -2,33 +2,28 @@ package net.glowstone.linkstone.compiler.linting;
 
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LOverride;
+import net.glowstone.linkstone.compiler.ClassStore;
 import net.glowstone.linkstone.compiler.meta.MethodMeta;
 import net.glowstone.linkstone.compiler.meta.OverrideMeta;
-import org.objectweb.asm.Type;
+import net.glowstone.linkstone.compiler.util.ClassStoreUtil;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * Lint if a methods lacks a {@link LOverride} annotation or has one but overrides
  * no {@link LMethod} annotated method.
  */
 public class MissingOverrideAnnotationLinter implements Linter {
-    private Map<Type, ClassNode> classNodes;
+    private final ClassStoreUtil classStoreUtil;
+
+    public MissingOverrideAnnotationLinter(ClassStore classStore) {
+        this.classStoreUtil = new ClassStoreUtil(classStore);
+    }
 
     @Override
     public void lint(List<ClassNode> classes, ErrorReport report) {
-        initClassMap(classes);
-        classes.stream().forEach(cn -> checkClass(cn, report));
-    }
-
-    private void initClassMap(List<ClassNode> classes) {
-        classNodes = classes.stream().collect(Collectors.toMap(
-                cn -> Type.getObjectType(cn.name),
-                cn -> cn));
+        classes.forEach(cn -> checkClass(cn, report));
     }
 
     private void checkClass(ClassNode cn, ErrorReport report) {
@@ -44,7 +39,7 @@ public class MissingOverrideAnnotationLinter implements Linter {
                     report.addError(new ErrorReport.Error(message, location));
                 }
 
-                for (MethodNode overriddenMethod : getOverriddenMethods(cn, mn)) {
+                for (MethodNode overriddenMethod : classStoreUtil.getOverriddenMethods(cn, mn)) {
                     if (OverrideMeta.from(overriddenMethod).isAnnotated()) {
                         continue;
                     }
@@ -64,7 +59,7 @@ public class MissingOverrideAnnotationLinter implements Linter {
                     report.addError(new ErrorReport.Error(message, location));
                 }
             } else {
-                boolean overridesAnnotatedMethod = getOverriddenMethods(cn, mn).stream()
+                boolean overridesAnnotatedMethod = classStoreUtil.getOverriddenMethods(cn, mn).stream()
                         .anyMatch(overriddenMethod -> MethodMeta.from(overriddenMethod).isAnnotated());
 
                 if (overridesAnnotatedMethod) {
@@ -74,34 +69,5 @@ public class MissingOverrideAnnotationLinter implements Linter {
                 }
             }
         }
-
-    }
-
-    private List<ClassNode> getSuperClasses(ClassNode cn) {
-        List<ClassNode> classes = new ArrayList<>();
-        while (cn.superName != null
-                && (cn = classNodes.get(Type.getObjectType(cn.superName))) != null) {
-            classes.add(cn);
-        }
-        return classes;
-    }
-
-    /**
-     * Get all methods that are overridden by a certain method.
-     *
-     * @param cn class containing the method that overrides
-     * @param mn method that overrides others
-     * @return all overridden methods
-     */
-    private List<MethodNode> getOverriddenMethods(ClassNode cn, MethodNode mn) {
-        List<MethodNode> overrides = new ArrayList<>();
-        for (ClassNode superClass : getSuperClasses(cn)) {
-            for (MethodNode superMethod : superClass.methods) {
-                if (mn.name.equals(superMethod.name) && mn.desc.equals(superMethod.desc)) {
-                    overrides.add(superMethod);
-                }
-            }
-        }
-        return overrides;
     }
 }

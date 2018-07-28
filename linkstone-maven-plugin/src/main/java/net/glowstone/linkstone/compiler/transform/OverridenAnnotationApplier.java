@@ -3,28 +3,28 @@ package net.glowstone.linkstone.compiler.transform;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LMethodContainer;
 import net.glowstone.linkstone.annotations.LOverride;
+import net.glowstone.linkstone.compiler.ClassStore;
 import net.glowstone.linkstone.compiler.meta.MethodMeta;
 import net.glowstone.linkstone.compiler.meta.OverrideMeta;
-import org.objectweb.asm.Type;
+import net.glowstone.linkstone.compiler.util.ClassStoreUtil;
 import org.objectweb.asm.tree.AnnotationNode;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.MethodNode;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * Add {@link LMethod}/{@link LMethodContainer} annotation of overridden methods to the overriding methods.
  */
 public class OverridenAnnotationApplier implements CodeTransformer {
-    private Map<Type, ClassNode> classMap;
+    private final ClassStoreUtil classStoreUtil;
+
+    public OverridenAnnotationApplier(ClassStore classStore) {
+        this.classStoreUtil = new ClassStoreUtil(classStore);
+    }
 
     @Override
     public void transform(List<ClassNode> classes) {
-        initClassMap(classes);
-
         for (ClassNode cn : classes) {
             for (MethodNode mn : cn.methods) {
                 if (!OverrideMeta.from(mn).isAnnotated()) {
@@ -32,40 +32,25 @@ public class OverridenAnnotationApplier implements CodeTransformer {
                 }
 
                 MethodNode overriddenMethod = getOverriddenMethod(cn, mn);
+
                 AnnotationNode lmethodAnnotation = getLMethodAnnotation(overriddenMethod);
                 mn.visibleAnnotations.add(lmethodAnnotation);
             }
         }
     }
 
-    private void initClassMap(List<ClassNode> classes) {
-        this.classMap = classes.stream().collect(Collectors.toMap(
-                cn -> Type.getObjectType(cn.name),
-                cn -> cn));
-    }
-
     /**
      * Find the method that a {@link LOverride} annotated method overrides.
+     * That method has a {@link LMethod} annotation.
      *
      * @param cn class containing the overriding method
      * @param mn method with {@link LOverride} annotation
      * @return the overridden method
      */
     private MethodNode getOverriddenMethod(ClassNode cn, MethodNode mn) {
-        return getSuperClasses(cn).stream()
-                .flatMap(c -> c.methods.stream())
-                .filter(m -> m.name.equals(mn.name) && m.desc.equals(mn.desc))
+        return classStoreUtil.getOverriddenMethods(cn, mn).stream()
                 .filter(m -> MethodMeta.from(m).isAnnotated())
-                .findAny()
-                .orElseThrow(() -> new RuntimeException("Could find method overridden by " + cn.name + "." + mn.name + mn.desc));
-    }
-
-    private List<ClassNode> getSuperClasses(ClassNode cn) {
-        List<ClassNode> superClasses = new ArrayList<>();
-        while ((cn = classMap.get(Type.getObjectType(cn.superName))) != null) {
-            superClasses.add(cn);
-        }
-        return superClasses;
+                .findAny().get();
     }
 
     /**

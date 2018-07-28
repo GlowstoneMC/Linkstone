@@ -1,2 +1,2 @@
 #!/bin/sh
-mvn -am clean install
+mvn -am clean install $@

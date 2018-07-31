@@ -1,6 +1,9 @@
 package net.minecraft.server;
 
+import net.glowstone.linkstone.Linkstone;
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LMethod;
+import net.glowstone.linkstone.annotations.LOverride;
 import org.bukkit.Bukkit;
 
 import net.glowstone.GlowServer;
@@ -9,104 +12,121 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public abstract class MinecraftServer implements IMojangStatistics {
-    private String motd;
-    private GlowServer glowserver;
+    private GlowServer glow;
     private static MinecraftServer inst;
 
     public MinecraftServer() {
         MinecraftServer.inst = this;
-        this.glowserver = (GlowServer) Bukkit.getServer();
-        this.motd = Bukkit.getServer().getMotd(); 
-    }
-
-    public abstract boolean getGenerateStructures();
-
-    public abstract EnumGamemode getGamemode();
-
-    public abstract EnumDifficulty getDifficulty();
-
-    public abstract boolean isHardcore();
-
-    public abstract int q();
-
-    public abstract boolean r();
-
-    public abstract boolean s();
-
-    public String getVersion() {
-        return "1.12.2";
+        this.glow = (GlowServer) Bukkit.getServer();
     }
 
     @Deprecated
+    @LMethod(version = V1_12_R1)
     public static MinecraftServer getServer() {
         return inst;
     }
 
+    @LMethod(version = V1_12_R1)
+    public abstract boolean getGenerateStructures();
+
+    @LMethod(version = V1_12_R1)
+    public abstract EnumGamemode getGamemode();
+
+    @LMethod(version = V1_12_R1)
+    public abstract EnumDifficulty getDifficulty();
+
+    @LMethod(version = V1_12_R1)
+    public abstract boolean isHardcore();
+
+    //TODO @Isaiah Deobfuscate and Annotated Method
+    public abstract int q();
+
+    //TODO @Isaiah Deobfuscate and Annotated Method
+    public abstract boolean r();
+
+    //TODO @Isaiah Deobfuscate and Annotated Method
+    public abstract boolean s();
+
+    @LMethod(version = V1_12_R1)
+    public String getVersion() {
+        return GlowServer.GAME_VERSION;
+    }
+
+    @LMethod(version = V1_12_R1)
     public int getSpawnProtection() {
-        return glowserver.getSpawnRadius();
+        return glow.getSpawnRadius();
     }
 
-    public boolean V() {
-        return false; // demo mode
+    @LMethod(version = V1_12_R1, name = "V")
+    public boolean isDemoMode() {
+        return false;
     }
 
-    public void b(boolean flag) { // Demomode
-    }
-
+    @LMethod(version = V1_12_R1)
     public boolean getAllowNether() {
-        return glowserver.getAllowNether();
+        return glow.getAllowNether();
     }
 
-    public int H() { // online players
-        return glowserver.getOnlinePlayers().size();
+    @LMethod(version = V1_12_R1, name = "H")
+    public int getPlayerCount() {
+        return glow.getOnlinePlayers().size();
     }
 
-    public int I() { // max players
-        return glowserver.getMaxPlayers();
+    @LMethod(version = V1_12_R1, name = "I")
+    public int getMaxPlayers() {
+        return glow.getMaxPlayers();
     }
 
+    @LMethod(version = V1_12_R1)
     public String getServerModName() {
-        return "Linkstone";
+        return glow.getName();
     }
 
+    @LMethod(version = V1_12_R1)
     public boolean getSpawnMonsters() {
-        return glowserver.getMonstersSpawnEnabled();
+        return glow.getMonstersSpawnEnabled();
     }
 
+    @LMethod(version = V1_12_R1)
     public String getMotd() {
-        return this.motd;
+        return glow.getMotd();
     }
 
-    public void setMotd(String s) {
-        this.motd = s;
-    }
-
-    public static long aw() {
+    @LMethod(version = V1_12_R1, name = "aw")
+    public static long getCurrentTimeMillis() {
         return System.currentTimeMillis();
     }
 
     @Override
+    @LOverride
     public void a(MojangStatisticsGenerator a) {
     }
 
     @Override
+    @LOverride
     public void b(MojangStatisticsGenerator a) {
     }
 
     @Override
+    @LOverride
     public boolean getSnooperEnabled() {
-        return false; // TODO: send data to Mojang?
+        // TODO: send data to Mojang?
+        return false;
     }
 
+    @LMethod(version = V1_12_R1)
     public void stop() {
-        glowserver.shutdown("MinecraftServer#stop() called");
+        glow.shutdown("MinecraftServer#stop() called");
     }
 
+    @LMethod(version = V1_12_R1)
     public boolean isRunning() {
-        return true; // TODO
+        // TODO
+        return true;
     }
 
+    @LMethod(version = V1_12_R1)
     public boolean getPVP() {
-        return glowserver.isPvpEnabled();
+        return glow.isPvpEnabled();
     }
 }

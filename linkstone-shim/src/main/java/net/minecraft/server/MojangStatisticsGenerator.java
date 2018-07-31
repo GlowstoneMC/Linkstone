@@ -16,6 +16,7 @@ public class MojangStatisticsGenerator {
     @LField(version = V1_12_R1, name = "h")
     private final long startTime;
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     private boolean i;
 
     public MojangStatisticsGenerator(String string, IMojangStatistics iMojangStatistics, long startTime) {
@@ -23,28 +24,36 @@ public class MojangStatisticsGenerator {
         this.startTime = startTime;
     }
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     public void a() {
     }
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     private void h() {
     }
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     private void i() {
     }
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     public void b() {
     }
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     public void a(String string, Object object) {
     }
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     public void b(String string, Object object) {
     }
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     public boolean d() {
         return this.i;
     }
 
+    //TODO @Isaiah Deobfuscate and Annotated Method
     public void e() {
     }
 

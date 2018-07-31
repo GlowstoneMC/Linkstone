@@ -1,21 +1,21 @@
 package net.glowstone.linkstone.compiler.linting;
 
+import static org.objectweb.asm.Opcodes.*;
+
 import net.glowstone.linkstone.annotations.LDelegate;
 import net.glowstone.linkstone.annotations.LImplements;
 import net.glowstone.linkstone.compiler.ClassStore;
 import net.glowstone.linkstone.compiler.meta.DelegateMeta;
 import net.glowstone.linkstone.compiler.meta.ImplementsMeta;
 import org.objectweb.asm.Type;
-import org.objectweb.asm.tree.ClassNode;
-import org.objectweb.asm.tree.FieldNode;
-import org.objectweb.asm.tree.MethodNode;
+import org.objectweb.asm.tree.*;
 
 import java.lang.reflect.Modifier;
 import java.util.*;
 import java.util.stream.Collectors;
 
 /**
- * Lint if a {@link LDelegate} annotation is used wrong
+ * Lint if a {@link LDelegate} annotation or the 'Linkstone.as(...)' method is used wrong.
  */
 public class DelegateLinter implements Linter {
     private final ClassStore classStore;
@@ -34,13 +34,19 @@ public class DelegateLinter implements Linter {
     public void lint(List<ClassNode> classes, ErrorReport report) {
         for (ClassNode cn : classes) {
             Set<ClassNode> delegateInterfaces = collectDelegatedInterfaces(cn, report);
-            delegatedInterfaces.put(Type.getObjectType(cn.name), delegateInterfaces);
+            if (delegateInterfaces != null && !delegateInterfaces.isEmpty()) {
+                delegatedInterfaces.put(Type.getObjectType(cn.name), delegateInterfaces);
+            }
         }
 
         for (ClassNode cn : classes) {
             Collection<ClassNode> interfaces = getAllDelegateInterfaces(cn);
             lintNotImplementingMethods(cn, interfaces, report);
             lintMissingImplementsAnnotation(cn, interfaces, report);
+
+            for (MethodNode mn : cn.methods) {
+                lintAsMethodUsage(cn, mn, report);
+            }
         }
     }
 
@@ -213,4 +219,109 @@ public class DelegateLinter implements Linter {
             }
         }
     }
+
+    /**
+     * Check whether a method contains an illegal 'Linkstone.as(...)' invoke.
+     *
+     * @param cn class that contains the method
+     * @param mn method to scan
+     * @param report error report for the user
+     */
+    private void lintAsMethodUsage(ClassNode cn, MethodNode mn, ErrorReport report) {
+        for (MethodInsnNode invoke : getAsInvokes(mn)) {
+            Type interfaceType = getInterfaceType(cn, mn, invoke, report);
+            Type concreteClass = getFromType(cn, mn, invoke, report);
+
+            if (interfaceType != null && concreteClass != null) {
+                final String internalInterfaceName = interfaceType.getInternalName();
+                Set<ClassNode> delegatedInterfaces = this.delegatedInterfaces.getOrDefault(concreteClass, Collections.emptySet());
+                boolean isDelegable = delegatedInterfaces.stream().anyMatch(n -> n.name.equals(internalInterfaceName));
+                if (!isDelegable) {
+                    ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                    String message = "Class " + concreteClass.getInternalName() + " does not delegate interface " + internalInterfaceName + "." ;
+                    report.addError(new ErrorReport.Error(message, location));
+                }
+            }
+        }
+    }
+
+    /**
+     * Get the interface type to which the parameter of a 'Linkstone.as(...)' invoke should be converted.
+     *
+     * @param cn class containing the instruction
+     * @param mn method containing the instruction
+     * @param invoke instruction that invokes 'Linkstone.as(...)'
+     * @param report error report for the user
+     * @return interface type or {@code null}
+     */
+    private Type getInterfaceType(ClassNode cn, MethodNode mn, MethodInsnNode invoke, ErrorReport report) {
+        AbstractInsnNode nextInsn = invoke.getNext();
+        switch (nextInsn.getOpcode()) {
+            case CHECKCAST: {
+                return Type.getObjectType(((TypeInsnNode) nextInsn).desc);
+            }
+
+            case POP:
+            case POP2: {
+                ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                String message = "Unused result of Linkstone.as invoke";
+                report.addError(new ErrorReport.Error(message, location));
+                return null;
+            }
+
+            default: {
+                ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+                String message = "Interface type for Linkstone.as invoke was not interferred";
+                report.addError(new ErrorReport.Error(message, location));
+                return null;
+            }
+        }
+    }
+
+    /**
+     * Get the type from which the parameter of a 'Linkstone.as(...)' is converted.
+     *
+     * @param cn class containing the instruction
+     * @param mn method containing the instruction
+     * @param invoke instruction that invokes 'Linkstone.as(...)'
+     * @param report error report for the user
+     * @return type of parameter or {@code null}
+     */
+    private Type getFromType(ClassNode cn, MethodNode mn, MethodInsnNode invoke, ErrorReport report) {
+        AbstractInsnNode prevInsn = invoke.getPrevious();
+        if (prevInsn.getOpcode() == LDC) {
+            Object push = ((LdcInsnNode) prevInsn).cst;
+            if (push instanceof Type) {
+                return (Type) push;
+            }
+        }
+
+        ErrorReport.Method location = new ErrorReport.Method(cn.name, mn.name, mn.desc);
+        String message = "Class parameter of Linkstone.as invoke must be a class constant";
+        report.addError(new ErrorReport.Error(message, location));
+        return null;
+    }
+
+    /**
+     * Find all instructions that invoke the 'Linkstone.as(...)' method.
+     *
+     * @param mn Method to scan
+     * @return all invoking instructions
+     */
+    private List<MethodInsnNode> getAsInvokes(MethodNode mn) {
+        List<MethodInsnNode> invokes = new ArrayList<>();
+        mn.instructions.iterator().forEachRemaining(insn -> {
+            if (insn.getOpcode() != INVOKESTATIC) {
+                return;
+            }
+
+            MethodInsnNode min = (MethodInsnNode) insn;
+            if (min.owner.equals("net/glowstone/linkstone/Linkstone") && min.name.equals("as") &&
+                    min.desc.equals("(Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/Object;")) {
+                invokes.add(min);
+            }
+        });
+        return invokes;
+    }
+
 }

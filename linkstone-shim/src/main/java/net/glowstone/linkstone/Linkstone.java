@@ -3,9 +3,10 @@ package net.glowstone.linkstone;
 import com.flowpowered.network.Message;
 import net.glowstone.net.message.play.game.PingMessage;
 import net.minecraft.server.Packet;
+import net.org.bukkit.craftbukkit.CraftPlayer;
+import org.bukkit.entity.Player;
 
 public class Linkstone {
-
     /**
      * This method wraps objects into the requested box.
      * It's just an identity method, so what's the magic behind it?
@@ -31,8 +32,29 @@ public class Linkstone {
         return (T) obj;
     }
 
-    public Linkstone() {
-        // TODO: ASM class trickery
+    /**
+     * Cast a class to one of its delegated interface.
+     *
+     * This method works similar to {@link Linkstone#box(Object)}.
+     *
+     * There is a lint build into the compiler that checks if this methods is used correct,
+     * so do not build your own method!
+     *
+     * @param obj object to cast
+     * @param objClass Type of the object that will be casted
+     * @param <T> Interface implemented by the object
+     * @param <U> Type of the object
+     * @return the casted object
+     */
+    @SuppressWarnings("unchecked")
+    public static <T, U> T as(U obj, Class<U> objClass) {
+        return (T) obj;
+    }
+
+    static {
+        CraftPlayer cp = null;
+        Player player = Linkstone.as(cp, CraftPlayer.class);
+        System.out.println(player);
     }
 
     public static Message packetToMessage(Packet message) {

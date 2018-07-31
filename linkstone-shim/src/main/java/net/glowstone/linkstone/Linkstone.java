@@ -14,7 +14,7 @@ public class Linkstone {
      * following before its loaded by Glowstone:
      * <code>BoxCache.box(Linkstone.&lt;EntityPlayer&gt;box(player), EntityPlayer.class)</code>
      *
-     * There is a lint build into the compiler that checks if this methods is use correct,
+     * There is a lint build into the compiler that checks if this methods is used correct,
      * so do not build your own boxing method!
      *
      * @param obj object to be boxed

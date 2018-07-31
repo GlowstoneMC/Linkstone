@@ -22,7 +22,7 @@ public abstract class World implements IBlockAccess {
 
     public World(CraftWorld craft) {
         this.craft = craft;
-        this.base = craft.base;
+        this.base = craft.glow;
     }
 
     public CraftWorld getWorld() {

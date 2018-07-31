@@ -1,9 +1,5 @@
 package net.glowstone.linkstone;
 
-import com.flowpowered.network.Message;
-import net.glowstone.net.message.play.game.PingMessage;
-import net.minecraft.server.Packet;
-
 public class Linkstone {
     /**
      * This method wraps objects into the requested box.
@@ -27,6 +23,25 @@ public class Linkstone {
      */
     @SuppressWarnings("unchecked")
     public static <T> T box(Object obj) {
+        return (T) obj;
+    }
+
+    /**
+     * Cast a class to one of its delegated interface.
+     *
+     * This method works similar to {@link Linkstone#box(Object)}.
+     *
+     * There is a lint build into the compiler that checks if this methods is used correct,
+     * so do not build your own method!
+     *
+     * @param obj object to cast
+     * @param objClass Type of the object that will be casted
+     * @param <T> Interface implemented by the object
+     * @param <U> Type of the object
+     * @return the casted object
+     */
+    @SuppressWarnings("unchecked")
+    public static <T, U> T as(U obj, Class<U> objClass) {
         return (T) obj;
     }
 

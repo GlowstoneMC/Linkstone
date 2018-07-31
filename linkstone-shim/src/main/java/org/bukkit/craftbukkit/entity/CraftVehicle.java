@@ -17,8 +17,4 @@ public abstract class CraftVehicle<V extends GlowEntity & Vehicle> extends Craft
     public CraftVehicle(V glow) {
         super(glow);
     }
-
-    public CraftVehicle(CraftServer server, net.minecraft.server.Entity entity) {
-        super(server, entity);
-    }
 }

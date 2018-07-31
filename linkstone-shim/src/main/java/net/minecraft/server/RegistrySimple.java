@@ -1,6 +1,7 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LOverride;
 
 import java.util.Iterator;
 
@@ -16,7 +17,8 @@ public class RegistrySimple<K, V> implements IRegistry<K, V>  {
     }
 
     @Override
-    public void a(K var1, V var2) {
+    @LOverride
+    public void add(K var1, V var2) {
         // TODO Auto-generated method stub
     }
 

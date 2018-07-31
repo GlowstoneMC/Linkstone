@@ -1,6 +1,8 @@
 package net.minecraft.server;
 
+import net.glowstone.linkstone.Linkstone;
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LMethod;
 import org.bukkit.Bukkit;
 import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.craftbukkit.CraftWorld;
@@ -25,19 +27,18 @@ public abstract class World implements IBlockAccess {
         this.base = craft.glow;
     }
 
+    @LMethod(version = V1_12_R1)
     public CraftWorld getWorld() {
         return this.craft;
     }
 
-    public CraftServer getServer() {
-        return (CraftServer) Bukkit.getServer();
-    }
-
-    public World b() { // get this
+    @LMethod(version = V1_12_R1, name = "b")
+    public World getNmsWorld() { // get this
         return this;
     }
 
-    protected void b(Entity entity) { // add entity?
-        entity.valid = true;
+    @LMethod(version = V1_12_R1)
+    public CraftServer getServer() {
+        return Linkstone.box(Bukkit.getServer());
     }
 }

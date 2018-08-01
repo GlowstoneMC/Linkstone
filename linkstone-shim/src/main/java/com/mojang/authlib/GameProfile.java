@@ -3,56 +3,45 @@ package com.mojang.authlib;
 import com.mojang.authlib.properties.PropertyMap;
 
 import net.glowstone.entity.meta.profile.GlowPlayerProfile;
+import net.glowstone.linkstone.annotations.LBox;
+import net.glowstone.linkstone.annotations.LBoxed;
+import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LMethod;
+import net.glowstone.linkstone.annotations.Version;
 
 import java.util.UUID;
 
+@LBox(GlowPlayerProfile.class)
+@LClassfile(version = Version.V1_12_R1)
 public class GameProfile {
-    private final UUID id;
-    private final String name;
-    private final PropertyMap properties = new PropertyMap();
+    @LBoxed
+    public GlowPlayerProfile glow;
 
-    public GlowPlayerProfile g;
-
-    public GameProfile(GlowPlayerProfile g) {
-        this.id = g.getId();
-        this.name = g.getName();
-        this.g = g;
+    public GameProfile(GlowPlayerProfile glow) {
+        this.glow = glow;
     }
 
-    public GameProfile(UUID id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
+    @LMethod(version = Version.V1_12_R1)
     public UUID getId() {
-        return this.id;
+        return this.glow.getId();
     }
 
+    @LMethod(version = Version.V1_12_R1)
     public String getName() {
-        return this.name;
+        return this.glow.getName();
     }
 
+    @LMethod(version = Version.V1_12_R1)
     public PropertyMap getProperties() {
-        g.getProperties();
-        return this.properties;
+        return new PropertyMap(glow);
     }
 
+    @LMethod(version = Version.V1_12_R1)
     public boolean isComplete() {
-        return g.isComplete();
+        return glow.isComplete();
     }
 
-    public boolean equals(Object o) {
-        return g.equals(((GameProfile)o).g);
-    }
-
-    public int hashCode() {
-        return g.hashCode();
-    }
-
-    public String toString() {
-        return g.toString();
-    }
-
+    @LMethod(version = Version.V1_12_R1)
     public boolean isLegacy() {
         return false;
     }

@@ -1,17 +1,20 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LField;
+import net.glowstone.linkstone.annotations.LGenerate;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
-
 public enum EnumWorldBorderState {
-    GROWING(0), SHRINKING(0), STATIONARY(0);
+    GROWING(4259712), SHRINKING(16724016), STATIONARY(2138367);
 
-    private final int d;
+    @LGenerate
+    @LField(version = V1_12_R1, name = "d")
+    private final int id;
 
-    private EnumWorldBorderState(int n2) {
-        this.d = n2;
+    EnumWorldBorderState(int id) {
+        this.id = id;
     }
 }

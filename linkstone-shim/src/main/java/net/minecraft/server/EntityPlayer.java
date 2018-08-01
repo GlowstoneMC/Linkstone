@@ -5,11 +5,8 @@ import net.glowstone.linkstone.annotations.LBoxed;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LGenerate;
-import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LOverride;
 import org.bukkit.GameMode;
-
-import com.mojang.authlib.GameProfile;
 
 import net.glowstone.entity.GlowPlayer;
 
@@ -19,7 +16,7 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 @LClassfile(version = V1_12_R1)
 public class EntityPlayer extends EntityHuman {
     @LBoxed
-    public GlowPlayer glow;
+    public final GlowPlayer glow;
 
     @LGenerate
     @LField(version = V1_12_R1)

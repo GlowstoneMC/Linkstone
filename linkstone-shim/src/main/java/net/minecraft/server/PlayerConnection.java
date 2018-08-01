@@ -13,8 +13,12 @@ public class PlayerConnection {
     @LField(version = V1_12_R1)
     public EntityPlayer player;
 
+    public PlayerConnection(EntityPlayer player) {
+        this.player = player;
+    }
+
     @LMethod(version = V1_12_R1)
     public void sendPacket(final Packet<?> packet) {
-        player.glowPlayer.getSession().send(packet.toGlowMessage());
+        player.glow.getSession().send(packet.toGlowMessage());
     }
 }

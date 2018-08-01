@@ -1,6 +1,12 @@
 package net.minecraft.server;
 
+import net.glowstone.linkstone.annotations.LBox;
+import net.glowstone.linkstone.annotations.LBoxed;
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LField;
+import net.glowstone.linkstone.annotations.LGenerate;
+import net.glowstone.linkstone.annotations.LMethod;
+import net.glowstone.linkstone.annotations.LOverride;
 import org.bukkit.GameMode;
 
 import com.mojang.authlib.GameProfile;
@@ -9,36 +15,31 @@ import net.glowstone.entity.GlowPlayer;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
+@LBox(GlowPlayer.class)
 @LClassfile(version = V1_12_R1)
 public class EntityPlayer extends EntityHuman {
+    @LBoxed
+    public GlowPlayer glow;
 
-    public GlowPlayer glowPlayer;
-    public PlayerConnection playerConnection;
+    @LGenerate
+    @LField(version = V1_12_R1)
+    public PlayerConnection playerConnection = new PlayerConnection(this);
 
-    public EntityPlayer(GlowPlayer p) {
-        this.glowPlayer = p;
-    }
-
-    public GameProfile getProfile() {
-        return new GameProfile(glowPlayer.getProfile());
-    }
-
-    public int getViewDistance() {
-        return glowPlayer.getViewDistance();
-    }
-
-    public void setViewDistance(int arg0) {
-        glowPlayer.setViewDistance(arg0);
+    public EntityPlayer(GlowPlayer glow) {
+        super(glow);
+        this.glow = glow;
     }
 
     @Override
+    @LOverride
     public boolean isSpectator() {
-        return glowPlayer.getGameMode() == GameMode.SPECTATOR;
+        return glow.getGameMode() == GameMode.SPECTATOR;
     }
 
     @Override
-    public boolean z() { // isCreative
-        return glowPlayer.getGameMode() == GameMode.CREATIVE;
+    @LOverride
+    public boolean isCreative() {
+        return glow.getGameMode() == GameMode.CREATIVE;
     }
 
 }

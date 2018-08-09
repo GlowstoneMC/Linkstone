@@ -1,8 +1,14 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LConstructor;
+import net.glowstone.linkstone.annotations.LField;
+import net.glowstone.linkstone.annotations.LGenerate;
+import net.glowstone.linkstone.annotations.LMethod;
 
 import javax.annotation.concurrent.Immutable;
+
+import java.util.Objects;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
@@ -10,81 +16,150 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 @Immutable
 public class BaseBlockPosition implements Comparable<BaseBlockPosition> {
     public static final BaseBlockPosition ZERO = new BaseBlockPosition(0, 0, 0);
-    protected int a; // x?
-    protected int b; // y?
-    protected int c; // z?
 
-    public final boolean isValidLocation() {
-        return b < 256; // TODO
+    @LGenerate
+    @LField(version = V1_12_R1, name = "a")
+    protected int x;
+
+    @LGenerate
+    @LField(version = V1_12_R1, name = "b")
+    protected int y;
+
+    @LGenerate
+    @LField(version = V1_12_R1, name = "c")
+    protected int z;
+
+    @LConstructor(version = V1_12_R1)
+    public BaseBlockPosition(int x, int y, int z) {
+        this.x = x;
+        this.y = y;
+        this.z = z;
     }
 
-    public boolean isInvalidYLocation() {
-        return b < 0 || b > 256;
+    @LConstructor(version = V1_12_R1)
+    public BaseBlockPosition(double x, double y, double z) {
+        this(MathHelper.floor(x), MathHelper.floor(y), MathHelper.floor(z));
     }
 
-    public BaseBlockPosition(int a, int b, int c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+    @LMethod(version = V1_12_R1)
+    public int getX() {
+        return this.x;
     }
 
-    public BaseBlockPosition(double a, double b, double c) {
-        this(MathHelper.floor(a), MathHelper.floor(b), MathHelper.floor(c));
+    @LMethod(version = V1_12_R1)
+    public int getY() {
+        return this.y;
     }
 
-    public boolean equals(Object o) {
-        if (!(o instanceof BaseBlockPosition)) return false;
-
-        BaseBlockPosition z = (BaseBlockPosition) o;
-        return this == o || (a == z.a && b == z.b && c == z.c); 
+    @LMethod(version = V1_12_R1)
+    public int getZ() {
+        return this.z;
     }
 
-    public int hashCode() {
-        return 0; // TODO
+    /**
+     * Calculate the cross product of this and another vector.
+     * The result is orthogonal to both vectors.
+     *
+     * @param that the other vector
+     * @return a orthogonal vector to 'this' and 'that'
+     */
+    @LMethod(version = V1_12_R1, name = "d")
+    public BaseBlockPosition crossProduct(BaseBlockPosition that) {
+        return new BaseBlockPosition(
+                this.getY() * that.getZ() - this.getZ() * that.getY(),
+                this.getZ() * that.getX() - this.getX() * that.getZ(),
+                this.getX() * that.getY() - this.getY() * that.getY());
     }
 
-    public int l(BaseBlockPosition baseblockposition) {
-        return 0; // TODO
+    /**
+     * Get the distance from this to another point.
+     *
+     * @param x coordinate of the other point
+     * @param y coordinate of the other point
+     * @param z coordinate of the other point
+     * @return distance to the other point
+     */
+    @LMethod(version = V1_12_R1, name = "h")
+    public double h(int x, int y, int z) {
+        int dx = this.getX() - x;
+        int dy = this.getY() - y;
+        int dz = this.getZ() - z;
+        return Math.sqrt(dx * dx + dy * dy + dz * dz);
     }
 
-    public final int getX() {
-        return this.a;
+    /**
+     * Get the squared distance from this to another point.
+     *
+     * @param x coordinate of the other point
+     * @param y coordinate of the other point
+     * @param z coordinate of the other point
+     * @return distance to the other point
+     */
+    @LMethod(version = V1_12_R1)
+    public double distanceSquared(double x, double y, double z) {
+        double dx = this.getX() - x;
+        double dy = this.getY() - y;
+        double dz = this.getZ() - z;
+        return dx * dx + dy * dy + dz * dz;
     }
 
-    public final int getY() {
-        return this.b;
+    /**
+     * Get the squared distance from this to another point.
+     *
+     * @param that the other point
+     * @return distance to the other point
+     */
+    @LMethod(version = V1_12_R1, name = "n")
+    public double distanceSquared(BaseBlockPosition that) {
+        return distanceSquared(that.getX(), that.getY(), that.getZ());
     }
 
-    public final int getZ() {
-        return this.c;
+    /**
+     * Get the squared distance from the middle of the block at this location to another point.
+     *
+     * @param x coordinate of the other point
+     * @param y coordinate of the other point
+     * @param z coordinate of the other point
+     * @return distance to the other point
+     */
+    @LMethod(version = V1_12_R1, name = "g")
+    public double squaredBlockDistance(double x, double y, double z) {
+        double dx = (this.getX() + 0.5D) - x;
+        double dy = (this.getY() + 0.5D) - y;
+        double dz = (this.getZ() + 0.5D) - z;
+        return dx * dx + dy * dy + dz * dz;
     }
 
-    public BaseBlockPosition d(BaseBlockPosition baseblockposition) {
-        return null; // TODO
-    }
-
-    public double h(int i2, int j, int k) {
-        return 0; // TODO
-    }
-
-    public double distanceSquared(double d0, double d1, double d2) {
-        return 0; // TODO
-    }
-
-    public double g(double d0, double d1, double d2) {
-        return 0; // TODO
-    }
-
-    public double n(BaseBlockPosition z) {
-        return this.distanceSquared(z.a, z.b, z.c);
-    }
-
-    public String toString() {
-        return "LINKSTONE"; // TODO
+    /**
+     * Compare two block position as done by {@link Comparable#compareTo(Object)}.
+     * Thereby dominate differences on the y-axis, then the z-axis and x-axis.
+     *
+     * @param that position to compare with
+     * @return a negative value, positive value or zero
+     */
+    @LMethod(version = V1_12_R1, name = "l")
+    public int compare(BaseBlockPosition that) {
+        if (this.getY() != that.getY()) return this.getY() - that.getY();
+        if (this.getZ() != that.getZ()) return this.getZ() - that.getZ();
+        if (this.getX() != that.getX()) return this.getX() - that.getX();
+        return 0;
     }
 
     @Override
     public int compareTo(BaseBlockPosition object) {
-        return this.l(object);
+        return this.compare(object);
+    }
+
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof BaseBlockPosition)) return false;
+
+        BaseBlockPosition that = (BaseBlockPosition) o;
+        return this.getX() == that.getX() && this.getY() == that.getY() && this.getZ() == that.getZ();
+    }
+
+    public int hashCode() {
+        // hashCode implementation might differ from vanilla
+        return Objects.hash(this.getX(), this.getY(), this.getZ());
     }
 }

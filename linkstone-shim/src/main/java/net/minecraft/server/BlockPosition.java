@@ -2,20 +2,18 @@ package net.minecraft.server;
 
 import javax.annotation.concurrent.Immutable;
 
-import com.google.common.collect.AbstractIterator;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LOverride;
-import org.apache.commons.lang.mutable.Mutable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.NoSuchElementException;
+import java.util.List;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
@@ -532,15 +530,159 @@ public class BlockPosition extends BaseBlockPosition {
 
         @LMethod(version = V1_12_R1, name = "c")
         public BlockPosition.MutableBlockPosition shiftSelf(EnumDirection direction, int offset) {
-            this.x += direction.getAdjacentX() * offset;
-            this.y += direction.getAdjacentY() * offset;
-            this.z += direction.getAdjacentZ() * offset;
-            return this;
+            return update(
+                    getX() + direction.getAdjacentX() * offset,
+                    getY() + direction.getAdjacentY() * offset,
+                    getZ() + direction.getAdjacentZ() * offset);
         }
     }
 
+    /**
+     * Mutable BlockPosition that gets reused.
+     *
+     * Up to 99 BlockPositions are kept in a pool once they're no longer required.
+     */
     @LClassfile(version = V1_12_R1)
     public static final class PooledBlockPosition extends MutableBlockPosition {
-        // TODO
+        /**
+         * Pool that stores up to 99 no longer used PooledBlockPositions.
+         */
+        @LGenerate
+        @LField(version = V1_12_R1, name = "g")
+        private static final List<PooledBlockPosition> POOL = new ArrayList<>();
+
+        /**
+         * Has the BlockPosition been dropped?
+         */
+        @LGenerate
+        @LField(version = V1_12_R1, name = "f")
+        private boolean isReleased = false;
+
+        /**
+         * Create or reuse a BlockPosition from the pool and initialize it with zeros.
+         *
+         * @return origin of the world
+         */
+        @LMethod(version = V1_12_R1, name = "s")
+        public static PooledBlockPosition acquire() {
+            return acquire(0, 0, 0);
+        }
+
+        /**
+         * Create or reuse a BlockPosition from the pool.
+         *
+         * @param x x-coordinate of the position
+         * @param y y-coordinate of the position
+         * @param z z-coordinate of the position
+         * @return requested block position
+         */
+        @LMethod(version = V1_12_R1, name = "d")
+        public static PooledBlockPosition acquire(double x, double y, double z) {
+            return acquire(MathHelper.floor(x), MathHelper.floor(y), MathHelper.floor(z));
+        }
+
+        /**
+         * Create or reuse a BlockPosition from the pool.
+         *
+         * @param x x-coordinate of the position
+         * @param y y-coordinate of the position
+         * @param z z-coordinate of the position
+         * @return requested block position
+         */
+        @LMethod(version = V1_12_R1, name = "e")
+        public static PooledBlockPosition acquire(int x, int y, int z) {
+            synchronized (POOL) {
+                if (POOL.isEmpty()) {
+                    return new PooledBlockPosition(x, y, z);
+                } else {
+                    PooledBlockPosition pos = POOL.remove(POOL.size() - 1);
+                    pos.isReleased = false;
+                    pos.x = x;
+                    pos.y = y;
+                    pos.z = z;
+                    return pos;
+                }
+            }
+        }
+
+        @LConstructor(version = V1_12_R1)
+        public PooledBlockPosition(int x, int y, int z) {
+            super(x, y, z);
+        }
+
+        /**
+         * Mark that this BlockPosition is no longer in use.
+         *
+         * It might get stored in the {@link PooledBlockPosition#POOL} and be reused.
+         */
+        @LMethod(version = V1_12_R1, name = "t")
+        public void release() {
+            synchronized (POOL) {
+                if (POOL.size() < 100) {
+                    POOL.add(this);
+                }
+                this.isReleased = true;
+            }
+        }
+
+        @Override
+        @LOverride
+        public MutableBlockPosition update(int x, int y, int z) {
+            return _update(x, y, z);
+        }
+
+        @LMethod(version = V1_12_R1, name = "f")
+        public PooledBlockPosition _update(int x, int y, int z) {
+            super.update(x, y, z);
+            return this;
+        }
+
+        @Override
+        @LOverride
+        public MutableBlockPosition update(double x, double y, double z) {
+            return _update(x, y, z);
+        }
+
+        @LMethod(version = V1_12_R1, name = "e")
+        public PooledBlockPosition _update(double x, double y, double z) {
+            super.update(x, y, z);
+            return this;
+        }
+
+        @Override
+        @LOverride
+        public MutableBlockPosition update(BaseBlockPosition position) {
+            return _update(position);
+        }
+
+        @LMethod(version = V1_12_R1, name = "j")
+        public PooledBlockPosition _update(BaseBlockPosition position) {
+            super.update(position);
+            return this;
+        }
+
+        @Override
+        @LOverride
+        public MutableBlockPosition shiftSelf(EnumDirection direction) {
+            return _shiftSelf(direction);
+        }
+
+        @LMethod(version = V1_12_R1, name = "c")
+        public PooledBlockPosition _shiftSelf(EnumDirection direction) {
+            super.shiftSelf(direction);
+            return this;
+        }
+
+        @Override
+        @LOverride
+        public MutableBlockPosition shiftSelf(EnumDirection direction, int offset) {
+            return _shiftSelf(direction, offset);
+        }
+
+        @LMethod(version = V1_12_R1, name = "c")
+        public PooledBlockPosition _shiftSelf(EnumDirection direction, int offset) {
+            super.shiftSelf(direction, offset);
+            return this;
+        }
     }
 }

@@ -35,14 +35,14 @@ public enum EnumDirection {
     }
 
     @LGenerate
-    @LMethod(version = V1_12_R1, name = "g")
+    @LField(version = V1_12_R1, name = "g")
     private final int index;
 
     /**
      * Index where indices of directions on the same axis are swapped
      */
     @LGenerate
-    @LMethod(version = V1_12_R1, name = "h")
+    @LField(version = V1_12_R1, name = "h")
     private final int opposite;
 
     /**
@@ -50,26 +50,26 @@ public enum EnumDirection {
      * Negative for non-horizontal directions.
      */
     @LGenerate
-    @LMethod(version = V1_12_R1, name = "i")
+    @LField(version = V1_12_R1, name = "i")
     private final int rotationIndex;
 
     @LGenerate
-    @LMethod(version = V1_12_R1, name = "j")
+    @LField(version = V1_12_R1, name = "j")
     private final String name;
 
     @LGenerate
-    @LMethod(version = V1_12_R1, name = "k")
+    @LField(version = V1_12_R1, name = "k")
     private final EnumAxis axis;
 
     @LGenerate
-    @LMethod(version = V1_12_R1, name = "l")
+    @LField(version = V1_12_R1, name = "l")
     private final EnumAxisDirection axisDirection;
 
     /**
      * Normalized vector pointing into the direction.
      */
     @LGenerate
-    @LMethod(version = V1_12_R1, name = "m")
+    @LField(version = V1_12_R1, name = "m")
     private final BaseBlockPosition vector;
 
     EnumDirection(int index, int opposite, int rotationIndex, String name, EnumAxis axis, EnumAxisDirection axisDirection, BaseBlockPosition vector) {

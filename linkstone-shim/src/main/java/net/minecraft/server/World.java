@@ -19,7 +19,7 @@ public abstract class World implements IBlockAccess {
 
     public World(GlowWorld glow) {
         this.base = glow;
-        this.craft = new CraftWorld(glow);
+        this.craft = Linkstone.box(glow);
     }
 
     public World(CraftWorld craft) {

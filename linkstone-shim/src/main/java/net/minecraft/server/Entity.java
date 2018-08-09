@@ -3,6 +3,7 @@ package net.minecraft.server;
 import net.glowstone.entity.GlowEntity;
 import net.glowstone.linkstone.annotations.LBox;
 import net.glowstone.linkstone.annotations.LBoxed;
+import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LGetter;
 import net.glowstone.linkstone.annotations.LSetter;
@@ -10,6 +11,7 @@ import net.glowstone.linkstone.annotations.LSetter;
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LBox(GlowEntity.class)
+@LClassfile(version = V1_12_R1)
 public abstract class Entity {
     @LBoxed
     public final GlowEntity glow;

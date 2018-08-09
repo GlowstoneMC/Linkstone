@@ -2,6 +2,8 @@ package org.bukkit.craftbukkit;
 
 import java.io.File;
 
+import net.glowstone.linkstone.annotations.LBox;
+import net.glowstone.linkstone.annotations.LBoxed;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LDelegate;
 import net.glowstone.linkstone.annotations.LImplements;
@@ -15,12 +17,14 @@ import net.minecraft.server.MinecraftServer;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
+@LBox(GlowServer.class)
 @LClassfile(version = V1_12_R1)
 public class CraftServer {
     private final String serverName = "Linkstone";
     private final String serverVersion = "Linkstone-1.12";
     private final String consoleVersion = "1.12.2";
 
+    @LBoxed
     @LDelegate(Server.class)
     private GlowServer glow;
 

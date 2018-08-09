@@ -2,6 +2,7 @@ package net.minecraft.server;
 
 import com.mojang.authlib.GameProfile;
 import net.glowstone.entity.GlowHumanEntity;
+import net.glowstone.linkstone.Linkstone;
 import net.glowstone.linkstone.annotations.LBox;
 import net.glowstone.linkstone.annotations.LBoxed;
 import net.glowstone.linkstone.annotations.LClassfile;
@@ -22,7 +23,7 @@ public abstract class EntityHuman extends EntityLiving {
 
     @LMethod(version = V1_12_R1)
     public GameProfile getProfile() {
-        return new GameProfile(glow.getProfile());
+        return Linkstone.box(glow.getProfile());
     }
 
     @LMethod(version = V1_12_R1)

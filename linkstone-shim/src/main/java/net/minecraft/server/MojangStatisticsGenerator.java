@@ -9,6 +9,7 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class MojangStatisticsGenerator {
+    @LGenerate
     @LField(version = V1_12_R1, name = "e")
     private final IMojangStatistics iMojangStatistics;
 

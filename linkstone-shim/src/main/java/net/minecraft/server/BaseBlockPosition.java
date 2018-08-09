@@ -80,7 +80,7 @@ public class BaseBlockPosition implements Comparable<BaseBlockPosition> {
      * @return distance to the other point
      */
     @LMethod(version = V1_12_R1, name = "h")
-    public double h(int x, int y, int z) {
+    public double distanceSquared(int x, int y, int z) {
         int dx = this.getX() - x;
         int dy = this.getY() - y;
         int dz = this.getZ() - z;

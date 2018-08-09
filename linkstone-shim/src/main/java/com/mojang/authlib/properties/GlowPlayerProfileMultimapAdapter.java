@@ -163,7 +163,7 @@ public class GlowPlayerProfileMultimapAdapter implements Multimap<String, Proper
     public Multiset<String> keys() {
         return glow.getProperties().stream()
                 .map(ProfileProperty::getName)
-                .collect(Collectors.toCollection(HashMultiset::create));
+                .collect(Collectors.<String, Multiset<String>>toCollection(HashMultiset::create));
     }
 
     @Override
@@ -176,7 +176,7 @@ public class GlowPlayerProfileMultimapAdapter implements Multimap<String, Proper
     @Override
     public Collection<Map.Entry<String, Property>> entries() {
         return glow.getProperties().stream()
-                .map(p -> new Map.Entry<String, Property>() {
+                .map(p -> (Map.Entry<String, Property>) new Map.Entry<String, Property>() {
                     @Override
                     public String getKey() {
                         return p.getName();
@@ -186,10 +186,9 @@ public class GlowPlayerProfileMultimapAdapter implements Multimap<String, Proper
                     public Property getValue() {
                         return Linkstone.box(p);
                     }
-
                     @Override
                     public Property setValue(Property value) {
-                        return null;
+                        return Linkstone.notYetImplemented();
                     }
 
                     @Override

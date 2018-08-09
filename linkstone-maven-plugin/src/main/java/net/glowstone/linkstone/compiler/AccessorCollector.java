@@ -66,7 +66,9 @@ public class AccessorCollector {
                     }
                 }
 
-                if (notYetSeenGetterVersions.isEmpty() && (isFinal || notYetSeenSetterVersions.isEmpty()))break fieldLoop;
+                if (notYetSeenGetterVersions.isEmpty() && (isFinal || notYetSeenSetterVersions.isEmpty())) {
+                    continue fieldLoop;
+                }
             }
 
             onMissingAccessorError(fn, notYetSeenGetterVersions, notYetSeenSetterVersions);
@@ -86,7 +88,6 @@ public class AccessorCollector {
             }
         }
     }
-
 
     protected void onMissingAccessorError(FieldNode fn, Set<Version> missingGetterVersions, Set<Version> missingSetterVersions) {
         throw new IllegalStateException("Missing accessor");

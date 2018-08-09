@@ -177,18 +177,27 @@ public class GlowPlayerProfileMultimapAdapter implements Multimap<String, Proper
     public Collection<Map.Entry<String, Property>> entries() {
         return glow.getProperties().stream()
                 .map(p -> (Map.Entry<String, Property>) new Map.Entry<String, Property>() {
+                    Property property = Linkstone.box(p);
+
                     @Override
                     public String getKey() {
-                        return p.getName();
+                        return property.getName();
                     }
 
                     @Override
                     public Property getValue() {
-                        return Linkstone.box(p);
+                        return property;
                     }
+
                     @Override
-                    public Property setValue(Property value) {
-                        return Linkstone.notYetImplemented();
+                    public Property setValue(Property newValue) {
+                        Property oldValue = property;
+                        property = newValue;
+
+                        glow.removeProperty(oldValue.glow);
+                        glow.setProperty(newValue.glow);
+
+                        return oldValue;
                     }
 
                     @Override

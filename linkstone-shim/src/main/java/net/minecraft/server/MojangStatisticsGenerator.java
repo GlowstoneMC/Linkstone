@@ -17,16 +17,18 @@ public class MojangStatisticsGenerator {
     @LField(version = V1_12_R1, name = "h")
     private final long startTime;
 
-    //TODO @Isaiah Deobfuscate and Annotated Method
-    private boolean i;
+    @LGenerate
+    @LField(version = V1_12_R1, name = "i")
+    private boolean isRunning = true;
 
     public MojangStatisticsGenerator(String string, IMojangStatistics iMojangStatistics, long startTime) {
         this.iMojangStatistics = iMojangStatistics;
         this.startTime = startTime;
     }
 
-    //TODO @Isaiah Deobfuscate and Annotated Method
-    public void a() {
+    @LMethod(version = V1_12_R1, name = "a")
+    public void onStart() {
+        this.isRunning = true;
     }
 
     //TODO @Isaiah Deobfuscate and Annotated Method
@@ -50,8 +52,9 @@ public class MojangStatisticsGenerator {
     }
 
     //TODO @Isaiah Deobfuscate and Annotated Method
-    public boolean d() {
-        return this.i;
+    @LMethod(version = V1_12_R1, name = "d")
+    public boolean isRunning() {
+        return this.isRunning;
     }
 
     //TODO @Isaiah Deobfuscate and Annotated Method

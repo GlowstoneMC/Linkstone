@@ -10,13 +10,11 @@ import java.lang.annotation.*;
 @Target({ ElementType.PACKAGE })
 public @interface LPackage {
     /**
-     * @return version where this class exists and has this name.
+     * @return version where this package has this name.
      */
     Version[] version();
 
     /**
-     * Name of the annotated package in the generated class.
-     *
      * @return name of generated package
      */
     String name();

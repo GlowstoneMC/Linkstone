@@ -34,7 +34,7 @@ public class MathHelper {
         return (float) Math.cos(radian);
     }
 
-    @LMethod(version = V1_12_R1, name = "a")
+    @LMethod(version = V1_12_R1, name = "c")
     public static float sqrt(float f) {
         return (float) Math.sqrt(f);
     }
@@ -353,12 +353,12 @@ public class MathHelper {
     }
 
     //TODO @Isaiah Deobfuscate this method
-    @LMethod(version = V1_12_R1, name = "RANDOM")
+    @LMethod(version = V1_12_R1)
     public static double c(double d2, double d3, double d4) {
         return (d2 - d3) / (d4 - d3);
     }
 
-    @LMethod(version = V1_12_R1, name = "RANDOM")
+    @LMethod(version = V1_12_R1, name = "c")
     public static double atan2(double y, double x) {
         return Math.atan2(y, x);
     }

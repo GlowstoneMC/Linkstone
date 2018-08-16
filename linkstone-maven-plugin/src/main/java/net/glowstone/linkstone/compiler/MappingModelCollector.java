@@ -9,53 +9,65 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
 import org.objectweb.asm.tree.MethodNode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
- * Create a mapping model from class nodes
+ * Create mapping models for all versions from class nodes
  */
 public class MappingModelCollector {
-    private final MappingModel mappingModel;
-    private final Version version;
+    private final Map<Version, MappingModel> models;
 
-    public MappingModelCollector(MappingModel mappingModel, Version version) {
-        this.mappingModel = mappingModel;
-        this.version = version;
+    public MappingModelCollector() {
+        this.models = new HashMap<>();
+        for (Version version : Version.values()) {
+            this.models.put(version, new MappingModel());
+        }
+    }
+
+    public Map<Version, MappingModel> getModels() {
+        return models;
     }
 
     public void addClass(ClassNode cn) {
         if (cn.name.endsWith("/package-info")) {
             addPackage(cn);
-        }
+        } else {
+            ClassfileMeta classMeta = ClassfileMeta.from(cn);
+            models.forEach(((version, mapping) -> {
+                if (classMeta.getVersions().contains(version)) {
+                    String newClassName = classMeta.getNameOrDefault(version);
+                    mapping.putClassName(cn.name, newClassName);
 
-        ClassfileMeta classMeta = ClassfileMeta.from(cn);
-        if (classMeta.getVersions().contains(this.version)) {
-            String newClassName = classMeta.getNameOrDefault(this.version);
-            mappingModel.putClassName(cn.name, newClassName);
-
-            cn.fields.forEach(fn -> addField(cn.name, fn));
-            cn.methods.forEach(mn -> addMethod(cn.name, mn));
+                    cn.fields.forEach(fn -> addField(cn.name, fn, version, mapping));
+                    cn.methods.forEach(mn -> addMethod(cn.name, mn, version, mapping));
+                }
+            }));
         }
     }
 
     private void addPackage(ClassNode cn) {
         PackageMeta meta = PackageMeta.from(cn);
-        if (meta.getVersions().contains(this.version)) {
-            mappingModel.putPackageName(meta.getDefaultName(), meta.getNameOrDefault(version), meta.getModeOrDefault(version));
-        }
+        models.forEach(((version, mapping) -> {
+            if (meta.getVersions().contains(version)) {
+                mapping.putPackageName(meta.getDefaultName(), meta.getNameOrDefault(version), meta.getModeOrDefault(version));
+            }
+        }));
     }
 
-    private void addField(String classname, FieldNode fn) {
+    private void addField(String classname, FieldNode fn, Version version, MappingModel mapping) {
         FieldMeta fieldMeta = FieldMeta.from(fn);
-        if (fieldMeta.getVersions().contains(this.version)) {
-            String newFieldName = fieldMeta.getNameOrDefault(this.version);
-            mappingModel.putFieldName(classname, fn.name, fn.desc, newFieldName);
+        if (fieldMeta.getVersions().contains(version)) {
+            String newFieldName = fieldMeta.getNameOrDefault(version);
+            mapping.putFieldName(classname, fn.name, fn.desc, newFieldName);
         }
     }
 
-    private void addMethod(String classname, MethodNode mn) {
+    private void addMethod(String classname, MethodNode mn, Version version, MappingModel mapping) {
         MethodMeta methodMeta = MethodMeta.from(mn);
-        if (methodMeta.getVersions().contains(this.version)) {
-            String newMethodName = methodMeta.getNameOrDefault(this.version);
-            mappingModel.setMethodName(classname, mn.name, mn.desc, newMethodName);
+        if (methodMeta.getVersions().contains(version)) {
+            String newMethodName = methodMeta.getNameOrDefault(version);
+            mapping.setMethodName(classname, mn.name, mn.desc, newMethodName);
         }
     }
 }

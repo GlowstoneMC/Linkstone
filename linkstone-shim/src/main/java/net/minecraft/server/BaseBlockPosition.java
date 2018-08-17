@@ -80,11 +80,8 @@ public class BaseBlockPosition implements Comparable<BaseBlockPosition> {
      * @return distance to the other point
      */
     @LMethod(version = V1_12_R1, name = "h")
-    public double distanceSquared(int x, int y, int z) {
-        int dx = this.getX() - x;
-        int dy = this.getY() - y;
-        int dz = this.getZ() - z;
-        return Math.sqrt(dx * dx + dy * dy + dz * dz);
+    public double distance(int x, int y, int z) {
+        return Math.sqrt(distanceSquared((double) x, (double) y, (double) z));
     }
 
     /**
@@ -93,7 +90,7 @@ public class BaseBlockPosition implements Comparable<BaseBlockPosition> {
      * @param x coordinate of the other point
      * @param y coordinate of the other point
      * @param z coordinate of the other point
-     * @return distance to the other point
+     * @return squared distance to the other point
      */
     @LMethod(version = V1_12_R1)
     public double distanceSquared(double x, double y, double z) {

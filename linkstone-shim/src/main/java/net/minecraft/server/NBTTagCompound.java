@@ -270,7 +270,7 @@ public class NBTTagCompound extends NBTBase {
     }
 
     @Override
-    public Tag<?> toGlowstone() {
+    public CompoundTag toGlowstone() {
         Map<String, Tag> values = this.map.entrySet().stream()
                 .collect(Collectors.toMap(Map.Entry::getKey, e -> e.getValue().toGlowstone()));
         return new CompoundTag(values);

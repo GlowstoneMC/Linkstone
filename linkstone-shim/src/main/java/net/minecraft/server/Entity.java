@@ -9,6 +9,7 @@ import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LGetter;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LSetter;
+import net.glowstone.util.nbt.CompoundTag;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
@@ -58,5 +59,15 @@ public abstract class Entity {
     @LMethod(version = V1_12_R1, name = "f")
     public void loadNbtTag(NBTTagCompound tag) {
         EntityStorage.load(glow, tag.toGlowstone());
+    }
+
+    @LMethod(version = V1_12_R1, name = "save")
+    public NBTTagCompound writeToNbtTag(NBTTagCompound tag) {
+        CompoundTag glowTag = tag.toGlowstone();
+        EntityStorage.save(glow, glowTag);
+
+        // Some plugins expect that the tag supplied as argument is mutated and returned
+        tag.addAll(NBTTagCompound.fromGlowstone(glowTag));
+        return tag;
     }
 }

@@ -14,6 +14,10 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class NBTTagDouble extends NBTNumber {
+    public static NBTTagDouble fromGlowstone(DoubleTag tag) {
+        return new NBTTagDouble(tag.getValue());
+    }
+
     @LGenerate
     @LField(version = V1_12_R1)
     private double data;

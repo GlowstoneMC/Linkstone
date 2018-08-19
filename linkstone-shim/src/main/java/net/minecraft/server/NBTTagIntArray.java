@@ -15,6 +15,10 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class NBTTagIntArray extends NBTBase {
+    public static NBTTagIntArray fromGlowstone(IntArrayTag tag) {
+        return new NBTTagIntArray(tag.getValue());
+    }
+
     @LGenerate
     @LField(version = V1_12_R1)
     private int[] data;

@@ -14,6 +14,9 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class NBTTagString extends NBTBase {
+    public static NBTTagString fromGlowstone(StringTag tag) {
+        return new NBTTagString(tag.getValue());
+    }
 
     @LGenerate
     @LField(version = V1_12_R1)

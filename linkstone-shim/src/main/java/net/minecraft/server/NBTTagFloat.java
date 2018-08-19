@@ -14,6 +14,10 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class NBTTagFloat extends NBTNumber {
+    public static NBTTagFloat fromGlowstone(FloatTag tag) {
+        return new NBTTagFloat(tag.getValue());
+    }
+
     @LGenerate
     @LField(version = V1_12_R1)
     private float data;

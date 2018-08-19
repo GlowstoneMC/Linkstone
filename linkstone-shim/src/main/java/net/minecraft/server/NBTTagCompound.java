@@ -6,6 +6,7 @@ import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LOverride;
+import net.glowstone.util.nbt.ByteArrayTag;
 import net.glowstone.util.nbt.CompoundTag;
 import net.glowstone.util.nbt.Tag;
 
@@ -20,6 +21,11 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class NBTTagCompound extends NBTBase {
+    public static NBTTagCompound fromGlowstone(CompoundTag tag) {
+        return new NBTTagCompound(tag.getValue().entrySet().stream()
+                .collect(Collectors.toMap(Map.Entry::getKey, e -> NBTBase.fromGlowstone(e.getValue()))));
+    }
+
     @LGenerate
     @LField(version = V1_12_R1)
     private final Map<String, NBTBase> map;

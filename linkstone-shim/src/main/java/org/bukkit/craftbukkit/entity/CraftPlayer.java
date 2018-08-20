@@ -1,6 +1,8 @@
 package org.bukkit.craftbukkit.entity;
 
 import net.glowstone.linkstone.Linkstone;
+import net.glowstone.linkstone.annotations.LBox;
+import net.glowstone.linkstone.annotations.LBoxed;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LDelegate;
 import org.bukkit.configuration.serialization.DelegateDeserialization;
@@ -13,9 +15,11 @@ import org.bukkit.entity.Player;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
+@LBox(GlowPlayer.class)
 @LClassfile(version = V1_12_R1)
 @DelegateDeserialization(GlowOfflinePlayer.class)
 public class CraftPlayer extends CraftHumanEntity {
+    @LBoxed
     @LDelegate(Player.class)
     private GlowPlayer base;
 

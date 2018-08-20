@@ -2,7 +2,6 @@ package org.bukkit.craftbukkit.entity;
 
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LDelegate;
-import org.bukkit.craftbukkit.CraftServer;
 import org.bukkit.entity.Vehicle;
 
 import net.glowstone.entity.GlowEntity;

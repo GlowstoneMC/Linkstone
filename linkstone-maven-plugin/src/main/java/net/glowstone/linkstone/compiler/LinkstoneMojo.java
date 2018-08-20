@@ -40,6 +40,9 @@ public class LinkstoneMojo extends AbstractMojo {
         List<ClassNode> templates = compiler.loadClasses(outputDir);
         ClassStore classStore = createDependencyClassStore(templates);
         Map<Version, ClassStore> templateJars = compiler.loadTemplateJars();
+
+        compiler.runTemplateFixes(templates, classStore);
+
         Map<Version, MappingModel> mappings = compiler.collectMappingModel(templates);
 
         List<ErrorReport.Error> errors = compiler.runLints(templates, templateJars, mappings, classStore).getErrors();

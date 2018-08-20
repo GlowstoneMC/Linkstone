@@ -1,19 +1,16 @@
 package net.glowstone.linkstone.compiler;
 
-import org.apache.maven.artifact.Artifact;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.tree.ClassNode;
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 
 /**
- * Stores ClassNodes or loads them from jar files.
+ * Stores ClassNodes or lazily loads them from jar files.
  */
 public class ClassStore {
     private final Map<String, ClassNode> classes = new HashMap<>();

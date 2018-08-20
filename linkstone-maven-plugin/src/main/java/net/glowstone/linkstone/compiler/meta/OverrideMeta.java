@@ -9,7 +9,7 @@ import org.objectweb.asm.tree.MethodNode;
  * Represents the content of a {@link LOverride} annotation.
  */
 public class OverrideMeta implements Meta {
-    private final static String METHOD_OVERRIDE_ANNOTATION_DESC = Type.getDescriptor(LOverride.class);
+    public final static String METHOD_OVERRIDE_ANNOTATION_DESC = Type.getDescriptor(LOverride.class);
 
     public static OverrideMeta from(MethodNode mn) {
         OverrideMeta meta = new OverrideMeta();

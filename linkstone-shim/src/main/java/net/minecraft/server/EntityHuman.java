@@ -7,6 +7,7 @@ import net.glowstone.linkstone.annotations.LBox;
 import net.glowstone.linkstone.annotations.LBoxed;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LMethod;
+import net.glowstone.linkstone.annotations.LOverride;
 import org.bukkit.craftbukkit.entity.CraftHumanEntity;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
@@ -33,7 +34,8 @@ public abstract class EntityHuman extends EntityLiving {
     @LMethod(version = V1_12_R1, name = "z")
     public abstract boolean isCreative();
 
-    @LMethod(version = V1_12_R1)
+    @Override
+    @LOverride
     public CraftHumanEntity getBukkitEntity() {
         return Linkstone.box(glow);
     }

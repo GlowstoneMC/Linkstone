@@ -43,7 +43,8 @@ public class EntityPlayer extends EntityHuman {
         return glow.getGameMode() == GameMode.CREATIVE;
     }
 
-    @LMethod(version = V1_12_R1)
+    @Override
+    @LOverride
     public CraftPlayer getBukkitEntity() {
         return Linkstone.box(glow);
     }

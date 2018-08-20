@@ -56,7 +56,7 @@ public class Property {
     }
 
     @LMethod(version = Version.V1_12_R1)
-    public boolean verifySignature(PublicKey publicKey) {
+    public boolean isSignatureValid(PublicKey publicKey) {
         try {
             Signature signature = Signature.getInstance("SHA1withRSA");
             signature.initVerify(publicKey);

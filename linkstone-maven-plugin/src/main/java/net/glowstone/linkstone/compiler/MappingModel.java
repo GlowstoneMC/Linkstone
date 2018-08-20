@@ -9,7 +9,6 @@ import java.util.stream.Collectors;
  * Store all annotated classes, fields and methods for one version.
  */
 public class MappingModel {
-
     private final Map<String, PackageMapping> packages = new HashMap<>();
     private final Map<String, String> classes = new HashMap<>();
     private final Map<ClassMember, String> fields = new HashMap<>();

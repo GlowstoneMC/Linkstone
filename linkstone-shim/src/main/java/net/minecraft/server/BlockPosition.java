@@ -667,7 +667,7 @@ public class BlockPosition extends BaseBlockPosition {
             return _shiftSelf(direction);
         }
 
-        @LMethod(version = V1_12_R1, name = "c")
+        @LMethod(version = V1_12_R1, name = "d")
         public PooledBlockPosition _shiftSelf(EnumDirection direction) {
             super.shiftSelf(direction);
             return this;
@@ -679,7 +679,7 @@ public class BlockPosition extends BaseBlockPosition {
             return _shiftSelf(direction, offset);
         }
 
-        @LMethod(version = V1_12_R1, name = "c")
+        @LMethod(version = V1_12_R1, name = "d")
         public PooledBlockPosition _shiftSelf(EnumDirection direction, int offset) {
             super.shiftSelf(direction, offset);
             return this;

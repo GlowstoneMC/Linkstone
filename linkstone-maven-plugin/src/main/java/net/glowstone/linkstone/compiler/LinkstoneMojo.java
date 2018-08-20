@@ -14,6 +14,7 @@ import org.objectweb.asm.tree.ClassNode;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 @Mojo(
         name = "compile",
@@ -37,12 +38,11 @@ public class LinkstoneMojo extends AbstractMojo {
 
         LinkstoneCompiler compiler = new LinkstoneCompiler();
         List<ClassNode> templates = compiler.loadClasses(outputDir);
+        ClassStore classStore = createDependencyClassStore(templates);
+        Map<Version, ClassStore> templateJars = compiler.loadTemplateJars();
+        Map<Version, MappingModel> mappings = compiler.collectMappingModel(templates);
 
-        ClassStore classStore = new ClassStore();
-        classStore.insert(templates);
-        loadDependencies(classStore);
-
-        List<ErrorReport.Error> errors = compiler.runLints(templates, classStore).getErrors();
+        List<ErrorReport.Error> errors = compiler.runLints(templates, templateJars, mappings, classStore).getErrors();
         if (!errors.isEmpty()) {
             printErrors(errors);
             throw new MojoExecutionException("Templates contain errors");
@@ -50,18 +50,25 @@ public class LinkstoneMojo extends AbstractMojo {
 
         FileUtils.delete(outputDir);
 
-        List<ClassNode> generatedClasses = compiler.generateClasses(templates, classStore, version);
+        List<ClassNode> generatedClasses = compiler.generateClasses(templates, classStore, version, mappings);
         compiler.writeClasses(outputDir, generatedClasses);
     }
 
-    private void loadDependencies(ClassStore resolver) throws MojoExecutionException {
+
+    private ClassStore createDependencyClassStore(List<ClassNode> templates) throws MojoExecutionException {
+        ClassStore classStore = new ClassStore();
+
+        classStore.insert(templates);
+
         for (Artifact artifact : project.getDependencyArtifacts()) {
             try {
-                resolver.insertArtifact(artifact.getFile());
+                classStore.insertArtifact(artifact.getFile());
             } catch (IOException e) {
                 throw new MojoExecutionException("Could not read artifact", e);
             }
         }
+
+        return classStore;
     }
 
     private void printErrors(List<ErrorReport.Error> errors) {

@@ -11,11 +11,18 @@ import org.objectweb.asm.tree.ClassNode;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class LinkstoneCompiler {
     public final static String GETTER_PREFIX = "$linkstone$getter$";
     public final static String SETTER_PREFIX = "$linkstone$setter$";
+
+    private final static File TEMPLATE_JAR_DIR = new File("templates");
 
     /**
      * Read all classfiles in a directory
@@ -43,12 +50,15 @@ public class LinkstoneCompiler {
      * Check the provided templates for error and report them.
      *
      * @param templates to check
+     * @param templateJars Template jar files for all versions
+     * @param mappings MappingModels of all versions
      * @param classStore containing all dependencies
      * @return detected errors
      */
-    public ErrorReport runLints(List<ClassNode> templates, ClassStore classStore) {
+    public ErrorReport runLints(List<ClassNode> templates, Map<Version, ClassStore> templateJars, Map<Version, MappingModel> mappings, ClassStore classStore) {
         ErrorReport report = new ErrorReport();
         Linter[] linters = new Linter[] {
+                new TemplateCompareLinter(templateJars, mappings),
                 new DuplicatedClassMemberLinter(),
                 new IllegalGetterSetterSignatureLinter(),
                 new MissingClassVersionLinter(),
@@ -72,12 +82,11 @@ public class LinkstoneCompiler {
      * @param templates user written, annotated source code
      * @param classStore containing all dependencies
      * @param version to generate for
+     * @param mappings MappingModels for all versions
      * @return generated classes
      */
-    public List<ClassNode> generateClasses(List<ClassNode> templates, ClassStore classStore, Version version) {
+    public List<ClassNode> generateClasses(List<ClassNode> templates, ClassStore classStore, Version version, Map<Version, MappingModel> mappings) {
         new OverridenAnnotationApplier(classStore).transform(templates);
-
-        MappingModel mappingModel = collectMappingModel(templates, version);
 
         CodeTransformer[] codeTransformers = {
                 new TemplateFilter(version),
@@ -90,8 +99,8 @@ public class LinkstoneCompiler {
             transformer.transform(templates);
         }
 
-        // Renames classes, methods, ... to their annotated name
-        return remapClasses(templates, mappingModel);
+        // Renames classes, methods, ... to their annotated names
+        return remapClasses(templates, mappings.get(version));
     }
 
     private List<ClassNode> remapClasses(List<ClassNode> cns, MappingModel mappingModel) {
@@ -107,11 +116,36 @@ public class LinkstoneCompiler {
         return newClasses;
     }
 
-    private MappingModel collectMappingModel(List<ClassNode> cns, Version version) {
-        MappingModel mappingModel = new MappingModel();
-        MappingModelCollector collector = new MappingModelCollector(mappingModel, version);
+    public Map<Version, MappingModel> collectMappingModel(List<ClassNode> cns) {
+        MappingModelCollector collector = new MappingModelCollector();
         cns.stream().forEach(collector::addClass);
-        return mappingModel;
+        return collector.getModels();
+    }
+
+    /**
+     * Map all versions to a {@link ClassStore} containing the corresponding template jar file.
+     *
+     * @return map from all version to a ClassStore
+     */
+    public Map<Version, ClassStore> loadTemplateJars() {
+        Map<Version, ClassStore> templateJars = new HashMap<>();
+        for (Version version : Version.values()) {
+            File jarFile = new File(TEMPLATE_JAR_DIR, version.getName() + ".jar");
+            ClassStore store = new ClassStore();
+
+            if (!jarFile.exists()) {
+                throw new RuntimeException("Could not find template jar at location " + jarFile.getPath());
+            }
+
+            try {
+                store.insertArtifact(jarFile);
+            } catch (IOException e) {
+                throw new RuntimeException("Could not read template jar " + jarFile.getName(), e);
+            }
+
+            templateJars.put(version, store);
+        }
+        return templateJars;
     }
 
     /**

@@ -179,7 +179,7 @@ public class NBTTagCompound extends NBTBase {
         set(key, new NBTTagIntArray(value));
     }
 
-    @LMethod(version = V1_12_R1)
+    @LMethod(version = V1_12_R1, name = "a")
     public void setUUID(String key, UUID uuid) {
         setLong(key + "Least", uuid.getLeastSignificantBits());
         setLong(key + "Most", uuid.getMostSignificantBits());

@@ -39,14 +39,14 @@ public class NBTTagList extends NBTBase {
      */
     @LGenerate
     @LField(version = V1_12_R1)
-    private int type;
+    private byte type;
 
     @LConstructor(version = V1_12_R1)
     public NBTTagList() {
-        this(new ArrayList<>(), 0);
+        this(new ArrayList<>(), (byte) 0);
     }
 
-    private NBTTagList(List<NBTBase> list, int type) {
+    private NBTTagList(List<NBTBase> list, byte type) {
         this.list = list;
         this.type = type;
     }

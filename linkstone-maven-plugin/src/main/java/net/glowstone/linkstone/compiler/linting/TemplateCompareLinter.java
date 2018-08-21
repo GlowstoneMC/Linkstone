@@ -10,6 +10,7 @@ import net.glowstone.linkstone.compiler.meta.ClassfileMeta;
 import net.glowstone.linkstone.compiler.meta.ConstructorMeta;
 import net.glowstone.linkstone.compiler.meta.FieldMeta;
 import net.glowstone.linkstone.compiler.meta.MethodMeta;
+import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.FieldNode;
@@ -17,6 +18,8 @@ import org.objectweb.asm.tree.MethodNode;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Compare the templates with jar files and lint if classes, fields, methods or constructors
@@ -39,8 +42,61 @@ public class TemplateCompareLinter implements Linter {
 
             for (ClassNode cn : classes) {
                 checkClass(cn, templateJar, model, version, report);
+
+                if (isEnum(cn.access)) {
+                    checkEnumFields(cn, templateJar, model, report);
+                }
             }
         }
+    }
+
+    /**
+     * Check whether the fields of an enum also exist in the template.
+     *
+     * @param cn ClassNode of the enum
+     * @param templateJar Template jar fo
+     * @param model
+     * @param report
+     */
+    private void checkEnumFields(ClassNode cn, ClassStore templateJar, MappingModel model, ErrorReport report) {
+        String resolvedEnumName = model.resolveClass(cn.name);
+        ClassNode template = templateJar.getClass(resolvedEnumName);
+
+        if (template == null) {
+            // This error has already been linted
+            return;
+        }
+
+        if (!isEnum(template.access)) {
+            ErrorReport.Class location = new ErrorReport.Class(cn.name);
+            String message = "Template classfile is not an enum";
+            report.addError(new ErrorReport.Error(message, location));
+            return;
+        }
+
+        List<FieldNode> templateFields = getEnumFields(template);
+        List<FieldNode> enumFields = getEnumFields(cn);
+
+        for (FieldNode fn : enumFields) {
+            boolean doesFieldExist = templateFields.stream()
+                    .anyMatch(f -> f.name.equals(fn.name));
+
+            if (!doesFieldExist) {
+                ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
+                String message = "Enum field does not exist in template";
+                report.addError(new ErrorReport.Error(message, location));
+            }
+        }
+    }
+
+    private List<FieldNode> getEnumFields(ClassNode enumNode) {
+        return enumNode.fields.stream()
+                .filter(fn -> isEnum(fn.access))
+                .collect(Collectors.toList());
+    }
+
+    private boolean isEnum(int flag) {
+        return (flag & Opcodes.ACC_ENUM) != 0;
     }
 
     private void checkClass(ClassNode cn, ClassStore templateJar, MappingModel model, Version version, ErrorReport report) {

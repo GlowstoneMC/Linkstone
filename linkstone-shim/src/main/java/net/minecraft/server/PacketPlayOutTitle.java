@@ -6,10 +6,6 @@ import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.net.message.play.game.TitleMessage;
-import net.glowstone.util.TextMessage;
-import net.md_5.bungee.chat.ComponentSerializer;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
@@ -79,9 +75,7 @@ public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
             case TITLE:
             case SUBTITlE:
             case ACTIONBAR:
-                String jsonMessage = ComponentSerializer.toString(text.toGlowstone());
-                JSONObject parsedJson = (JSONObject)JSONValue.parse(jsonMessage);
-                return new TitleMessage(glowAction, new TextMessage(parsedJson));
+                return new TitleMessage(glowAction, IChatBaseComponent.toGlowMessage(text));
 
             case TIMES:
                 return new TitleMessage(glowAction, fadeInTime, stayTime, fadeOutTime);

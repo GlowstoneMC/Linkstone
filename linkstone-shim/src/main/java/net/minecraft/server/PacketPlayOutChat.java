@@ -9,9 +9,6 @@ import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.net.message.play.game.ChatMessage;
 import net.glowstone.util.TextMessage;
 import net.md_5.bungee.api.chat.BaseComponent;
-import net.md_5.bungee.chat.ComponentSerializer;
-import org.json.simple.JSONObject;
-import org.json.simple.JSONValue;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
@@ -54,11 +51,10 @@ public class PacketPlayOutChat implements Packet<PacketListenerPlayOut> {
 
     @Override
     public Message toGlowMessage() {
-        String jsonMessage = components == null ?
-                ComponentSerializer.toString(text.toGlowstone()) :
-                ComponentSerializer.toString(components);
+        TextMessage text = components == null ?
+                IChatBaseComponent.toGlowMessage(this.text) :
+                IChatBaseComponent.toGlowMessage(this.components);
 
-        TextMessage text = new TextMessage((JSONObject) JSONValue.parse(jsonMessage));
         return new ChatMessage(text, messageType.getId());
     }
 }

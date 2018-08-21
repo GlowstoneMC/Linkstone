@@ -1,6 +1,6 @@
 package net.glowstone.linkstone.compiler.transform;
 
-import net.glowstone.linkstone.annotations.LGenerate;
+import net.glowstone.linkstone.annotations.LRedirect;
 import net.glowstone.linkstone.annotations.Version;
 import net.glowstone.linkstone.compiler.meta.FieldMeta;
 import net.glowstone.linkstone.compiler.LinkstoneCompiler;
@@ -15,7 +15,7 @@ import java.lang.reflect.Modifier;
 import java.util.List;
 
 /**
- * Utility class that generates getters and setters for fields annotated with {@link LGenerate}
+ * Utility class that generates getters and setters for fields not annotated with {@link LRedirect}
  */
 public class AccessorGenerator implements CodeTransformer {
     private final Version version;

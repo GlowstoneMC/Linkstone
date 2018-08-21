@@ -6,10 +6,10 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Annotation that tells the linkstone compiler to generate
- * a getter and setter that accesses the annotated field.
+ * Annotation for fields that have a custom getter and setter.
+ * They will be invoked instead of accessing/setting the field value.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface LGenerate {
+public @interface LRedirect {
 }

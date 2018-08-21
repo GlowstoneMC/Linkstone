@@ -27,6 +27,9 @@ public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
     private List<PlayerInfoData> entires;
 
     @LConstructor(version = V1_12_R1)
+    public PacketPlayOutPlayerInfo() {}
+
+    @LConstructor(version = V1_12_R1)
     public PacketPlayOutPlayerInfo(EnumPlayerInfoAction action, EntityPlayer... players) {
         this(action, Arrays.asList(players));
     }

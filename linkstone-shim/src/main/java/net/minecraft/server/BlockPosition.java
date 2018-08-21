@@ -5,7 +5,6 @@ import javax.annotation.concurrent.Immutable;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LOverride;
 import org.apache.logging.log4j.LogManager;
@@ -20,32 +19,27 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 @LClassfile(version = V1_12_R1)
 @Immutable
 public class BlockPosition extends BaseBlockPosition {
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     private static final Logger LOGGER = LogManager.getLogger();
 
-    @LGenerate
     @LField(version = V1_12_R1)
     public static final BlockPosition ZERO = new BlockPosition(0, 0, 0);
 
     /**
      * Amount of bits that the x-coordinate fills in a long encoded BlockPosition.
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "c")
     private static final int X_COORD_BIT_COUNT = 26;
 
     /**
      * Amount of bits that the y-coordinate fills in a long encoded BlockPosition.
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "f")
     private static final int Y_COORD_BIT_COUNT = 12;
 
     /**
      * Amount of bits that the z-coordinate fills in a long encoded BlockPosition.
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "d")
     private static final int Z_COORD_BIT_COUNT = 26;
 
@@ -57,26 +51,21 @@ public class BlockPosition extends BaseBlockPosition {
     /**
      * Offset of the y-coordinate in a long encoded BlockPosition
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "g")
     private static final int Y_COORD_OFFSET = Z_COORD_OFFSET + Z_COORD_BIT_COUNT;
 
     /**
      * Offset of the x-coordinate in a long encoded BlockPosition
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "h")
     private static final int X_COORD_OFFSET = Y_COORD_OFFSET + Y_COORD_BIT_COUNT;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "i")
     private static final long X_COORD_BIT_MASK = getBitMask(X_COORD_BIT_COUNT);
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "j")
     private static final long Y_COORD_BIT_MASK = getBitMask(Y_COORD_BIT_COUNT);
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "k")
     private static final long Z_COORD_BIT_MASK = getBitMask(Z_COORD_BIT_COUNT);
 
@@ -406,15 +395,12 @@ public class BlockPosition extends BaseBlockPosition {
 
     @LClassfile(version = V1_12_R1)
     public static class MutableBlockPosition extends BlockPosition {
-        @LGenerate
         @LField(version = V1_12_R1, name = "b")
         protected int x;
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "c")
         protected int y;
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "d")
         protected int z;
 
@@ -547,14 +533,12 @@ public class BlockPosition extends BaseBlockPosition {
         /**
          * Pool that stores up to 99 no longer used PooledBlockPositions.
          */
-        @LGenerate
         @LField(version = V1_12_R1, name = "g")
         private static final List<PooledBlockPosition> POOL = new ArrayList<>();
 
         /**
          * Has the BlockPosition been dropped?
          */
-        @LGenerate
         @LField(version = V1_12_R1, name = "f")
         private boolean isReleased = false;
 

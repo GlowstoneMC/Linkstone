@@ -2,7 +2,6 @@ package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import org.bukkit.GameMode;
 
@@ -62,15 +61,12 @@ public enum EnumGamemode {
         return fallback;
     }
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "f")
     int id;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "g")
     String name;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "h")
     String shortName;
 

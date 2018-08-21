@@ -9,6 +9,7 @@ import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LGetter;
 import net.glowstone.linkstone.annotations.LMethod;
+import net.glowstone.linkstone.annotations.LRedirect;
 import net.glowstone.linkstone.annotations.LSetter;
 import net.glowstone.util.nbt.CompoundTag;
 import org.bukkit.craftbukkit.entity.CraftEntity;
@@ -21,6 +22,7 @@ public abstract class Entity {
     @LBoxed
     public final GlowEntity glow;
 
+    @LRedirect
     @LField(version = V1_12_R1)
     public double locX;
     @LGetter(version = V1_12_R1)
@@ -32,6 +34,7 @@ public abstract class Entity {
         glow.getLocation().setX(x);
     }
 
+    @LRedirect
     @LField(version = V1_12_R1)
     public double locY;
     @LGetter(version = V1_12_R1)
@@ -43,6 +46,7 @@ public abstract class Entity {
         glow.getLocation().setY(y);
     }
 
+    @LRedirect
     @LField(version = V1_12_R1)
     public double locZ;
     @LGetter(version = V1_12_R1)

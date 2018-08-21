@@ -2,7 +2,6 @@ package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 
 import java.util.Random;
@@ -13,7 +12,6 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class MathHelper {
-    @LGenerate
     @LField(version = V1_12_R1, name = "c")
     private static final Random RANDOM;
 

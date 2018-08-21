@@ -4,7 +4,6 @@ import com.flowpowered.network.Message;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.net.message.play.game.ChatMessage;
 import net.glowstone.util.TextMessage;
@@ -14,18 +13,15 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class PacketPlayOutChat implements Packet<PacketListenerPlayOut> {
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     private IChatBaseComponent text;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     private ChatMessageType messageType;
 
     /**
      * This field is preferred over {@link PacketPlayOutChat#messageType} if available.
      */
-    @LGenerate
     @LField(version = V1_12_R1)
     public BaseComponent[] components;
 

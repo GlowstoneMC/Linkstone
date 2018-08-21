@@ -3,7 +3,6 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.md_5.bungee.api.chat.BaseComponent;
 
@@ -11,43 +10,33 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class ChatModifier {
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     private ChatModifier parent;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     private EnumChatFormat color;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "c")
     private Boolean bold;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "d")
     private Boolean italic;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "e")
     private Boolean underline;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "f")
     private Boolean strikethrough;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "g")
     private Boolean random;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "h")
     private ChatClickable chatClickable;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "i")
     private ChatHoverable chatHoverable;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "j")
     private String insertion;
 

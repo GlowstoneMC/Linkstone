@@ -4,7 +4,6 @@ import com.flowpowered.network.Message;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.net.message.play.entity.DestroyEntitiesMessage;
 
 import java.util.Arrays;
@@ -15,7 +14,6 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class PacketPlayOutEntityDestroy implements Packet<PacketListenerPlayOut> {
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     private int[] entityIds;
 

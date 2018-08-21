@@ -3,10 +3,8 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LOverride;
-import net.glowstone.util.nbt.IntArrayTag;
 import net.glowstone.util.nbt.ListTag;
 import net.glowstone.util.nbt.Tag;
 import net.glowstone.util.nbt.TagType;
@@ -30,14 +28,12 @@ public class NBTTagList extends NBTBase {
         return new NBTTagList(elements, tag.getChildType().getId());
     }
 
-    @LGenerate
     @LField(version = V1_12_R1)
     private List<NBTBase> list;
 
     /**
      * Type of the elements or zero if the list is empty
      */
-    @LGenerate
     @LField(version = V1_12_R1)
     private byte type;
 

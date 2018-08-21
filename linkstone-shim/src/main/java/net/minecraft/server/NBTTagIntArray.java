@@ -3,7 +3,6 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.linkstone.annotations.LOverride;
 import net.glowstone.util.nbt.IntArrayTag;
@@ -19,7 +18,6 @@ public class NBTTagIntArray extends NBTBase {
         return new NBTTagIntArray(tag.getValue());
     }
 
-    @LGenerate
     @LField(version = V1_12_R1)
     private int[] data;
 

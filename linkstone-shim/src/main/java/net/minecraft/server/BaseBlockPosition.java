@@ -3,7 +3,6 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 
 import javax.annotation.concurrent.Immutable;
@@ -17,15 +16,12 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 public class BaseBlockPosition implements Comparable<BaseBlockPosition> {
     public static final BaseBlockPosition ZERO = new BaseBlockPosition(0, 0, 0);
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     protected int x;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     protected int y;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "c")
     protected int z;
 

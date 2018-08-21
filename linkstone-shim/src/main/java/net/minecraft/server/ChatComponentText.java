@@ -3,7 +3,6 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LOverride;
 import net.glowstone.linkstone.annotations.Version;
 import net.md_5.bungee.api.chat.BaseComponent;
@@ -11,7 +10,6 @@ import net.md_5.bungee.api.chat.TextComponent;
 
 @LClassfile(version = Version.V1_12_R1)
 public class ChatComponentText extends ChatBaseComponent {
-    @LGenerate
     @LField(version = Version.V1_12_R1, name = "b")
     private final String text;
 

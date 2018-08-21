@@ -2,7 +2,6 @@ package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 
 import java.util.Arrays;
@@ -34,14 +33,12 @@ public enum EnumDirection {
         return HORIZONTAL_DIRECTIONS[MathHelper.abs(var0 % HORIZONTAL_DIRECTIONS.length)];
     }
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "g")
     private final int index;
 
     /**
      * Index where indices of directions on the same axis are swapped
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "h")
     private final int opposite;
 
@@ -49,26 +46,21 @@ public enum EnumDirection {
      * Index for horizontal directions from south to east.
      * Negative for non-horizontal directions.
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "i")
     private final int rotationIndex;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "j")
     private final String name;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "k")
     private final EnumAxis axis;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "l")
     private final EnumAxisDirection axisDirection;
 
     /**
      * Normalized vector pointing into the direction.
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "m")
     private final BaseBlockPosition vector;
 
@@ -171,15 +163,12 @@ public enum EnumDirection {
         Y("y", EnumDirectionLimit.VERTICAL),
         Z("z", EnumDirectionLimit.HORIZONTAL);
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "d")
         private static final Map<String, EnumAxis> axisByName;
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "e")
         private final String name;
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "f")
         private final EnumDirectionLimit axisDirection;
 
@@ -229,11 +218,9 @@ public enum EnumDirection {
         POSITIVE(1, "Towards positive"),
         NEGATIVE(-1, "Towards negative");
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "c")
         private final int factor;
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "d")
         private final String description;
 

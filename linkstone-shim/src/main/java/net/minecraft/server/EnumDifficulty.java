@@ -2,10 +2,7 @@ package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
-
-import java.util.Locale;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
@@ -18,15 +15,12 @@ public enum EnumDifficulty {
         return values[n % values.length];
     }
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "e")
     private static final EnumDifficulty[] values = EnumDifficulty.values();
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "f")
     private final int id;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "g")
     private final String optionName;
 

@@ -3,9 +3,7 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
-import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.chat.BaseComponent;
 import net.md_5.bungee.api.chat.HoverEvent;
 
@@ -25,11 +23,9 @@ public class ChatHoverable {
         return new HoverEvent(action, value);
     }
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     private final ChatHoverable.EnumHoverAction action;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     private final IChatBaseComponent value;
 

@@ -3,7 +3,6 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LOverride;
 import net.glowstone.linkstone.annotations.Version;
 
@@ -14,11 +13,9 @@ import java.util.NoSuchElementException;
 
 @LClassfile(version = Version.V1_12_R1)
 public abstract class ChatBaseComponent implements IChatBaseComponent {
-    @LGenerate
     @LField(version = Version.V1_12_R1, name = "a")
     private List<IChatBaseComponent> siblings = new ArrayList<>();
 
-    @LGenerate
     @LField(version = Version.V1_12_R1, name = "b")
     private ChatModifier modifier = new ChatModifier();
 

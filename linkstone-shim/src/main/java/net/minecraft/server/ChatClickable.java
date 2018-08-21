@@ -3,7 +3,6 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.md_5.bungee.api.chat.ClickEvent;
 
@@ -22,11 +21,9 @@ public class ChatClickable {
         return new ClickEvent(action, chatClickable.getValue());
     }
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     private final ChatClickable.EnumClickAction action;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     private final String value;
 

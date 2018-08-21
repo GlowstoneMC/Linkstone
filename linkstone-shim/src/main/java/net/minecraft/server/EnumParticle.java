@@ -1,8 +1,6 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
-import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;

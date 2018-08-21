@@ -4,42 +4,36 @@ import com.flowpowered.network.Message;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.net.message.play.game.TitleMessage;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     private EnumTitleAction action;
 
     /**
      * Text for {@link EnumTitleAction#TITLE}, {@link EnumTitleAction#SUBTITlE} and {@link EnumTitleAction#ACTIONBAR}
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     private IChatBaseComponent text;
 
     /**
      * Ticks to spend fading text in for {@link EnumTitleAction#TIMES}
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "c")
     private int fadeInTime;
 
     /**
      * Ticks to keep the title displayed for {@link EnumTitleAction#TIMES}
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "d")
     private int stayTime;
 
     /**
      * Ticks to spend out, not when to start fading out for {@link EnumTitleAction#TIMES}
      */
-    @LGenerate
     @LField(version = V1_12_R1, name = "e")
     private int fadeOutTime;
 

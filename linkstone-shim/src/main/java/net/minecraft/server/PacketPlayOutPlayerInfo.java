@@ -6,7 +6,6 @@ import com.mojang.authlib.GameProfile;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.net.message.play.game.UserListItemMessage;
 
@@ -18,11 +17,9 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     private EnumPlayerInfoAction action;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     private List<PlayerInfoData> entires;
 
@@ -89,19 +86,15 @@ public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
 
     @LClassfile(version = V1_12_R1)
     public class PlayerInfoData {
-        @LGenerate
         @LField(version = V1_12_R1, name = "d")
         private GameProfile profile;
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "b")
         private int ping;
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "c")
         private EnumGamemode gamemode;
 
-        @LGenerate
         @LField(version = V1_12_R1, name = "e")
         private IChatBaseComponent displayName;
 

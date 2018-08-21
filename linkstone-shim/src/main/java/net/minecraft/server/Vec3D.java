@@ -3,7 +3,6 @@ package net.minecraft.server;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 
 import java.util.Objects;
 
@@ -11,15 +10,12 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class Vec3D {
-    @LGenerate
     @LField(version = V1_12_R1)
     public final double x;
 
-    @LGenerate
     @LField(version = V1_12_R1)
     public final double y;
 
-    @LGenerate
     @LField(version = V1_12_R1)
     public final double z;
 

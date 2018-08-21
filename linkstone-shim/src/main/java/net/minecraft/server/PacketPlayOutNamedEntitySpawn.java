@@ -5,7 +5,6 @@ import net.glowstone.entity.meta.MetadataMap;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
 import net.glowstone.linkstone.annotations.LField;
-import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.net.message.play.entity.SpawnPlayerMessage;
 import net.glowstone.util.Position;
 
@@ -16,31 +15,24 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public class PacketPlayOutNamedEntitySpawn implements Packet<PacketListenerPlayOut> {
-    @LGenerate
     @LField(version = V1_12_R1, name = "a")
     private int entityId;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "b")
     private UUID uuid;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "c")
     private double x;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "d")
     private double y;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "e")
     private double z;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "f")
     private byte yaw;
 
-    @LGenerate
     @LField(version = V1_12_R1, name = "g")
     private byte pitch;
 

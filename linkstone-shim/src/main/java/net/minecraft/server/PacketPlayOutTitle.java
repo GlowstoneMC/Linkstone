@@ -14,7 +14,7 @@ public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
     private EnumTitleAction action;
 
     /**
-     * Text for {@link EnumTitleAction#TITLE}, {@link EnumTitleAction#SUBTITlE} and {@link EnumTitleAction#ACTIONBAR}
+     * Text for {@link EnumTitleAction#TITLE}, {@link EnumTitleAction#SUBTITLE} and {@link EnumTitleAction#ACTIONBAR}
      */
     @LField(version = V1_12_R1, name = "b")
     private IChatBaseComponent text;
@@ -67,7 +67,7 @@ public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
         TitleMessage.Action glowAction = EnumTitleAction.toGlowstone(action);
         switch (action) {
             case TITLE:
-            case SUBTITlE:
+            case SUBTITLE:
             case ACTIONBAR:
                 return new TitleMessage(glowAction, IChatBaseComponent.toGlowMessage(text));
 
@@ -86,7 +86,7 @@ public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
     @LClassfile(version = V1_12_R1)
     public static enum EnumTitleAction {
         TITLE,
-        SUBTITlE,
+        SUBTITLE,
         TIMES,
         ACTIONBAR,
         CLEAR,
@@ -99,7 +99,7 @@ public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
 
             switch (action) {
                 case TITLE: return TitleMessage.Action.TITLE;
-                case SUBTITlE: return TitleMessage.Action.SUBTITLE;
+                case SUBTITLE: return TitleMessage.Action.SUBTITLE;
                 case TIMES: return TitleMessage.Action.TIMES;
                 case ACTIONBAR: return TitleMessage.Action.ACTION;
                 case CLEAR: return TitleMessage.Action.CLEAR;

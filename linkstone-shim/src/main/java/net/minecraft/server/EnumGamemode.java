@@ -4,6 +4,7 @@ import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LGenerate;
 import net.glowstone.linkstone.annotations.LMethod;
+import org.bukkit.GameMode;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
@@ -87,5 +88,33 @@ public enum EnumGamemode {
     @LMethod(version = V1_12_R1, name = "b")
     public String getName() {
         return name;
+    }
+
+    public static GameMode toGlowstone(EnumGamemode gamemode) {
+        if (gamemode == null) {
+            return null;
+        }
+
+        switch (gamemode) {
+            case SURVIVAL: return GameMode.SURVIVAL;
+            case CREATIVE: return GameMode.CREATIVE;
+            case ADVENTURE: return GameMode.ADVENTURE;
+            case SPECTATOR: return GameMode.SPECTATOR;
+            default: throw new AssertionError();
+        }
+    }
+
+    public static EnumGamemode fromGlowstone(GameMode gameMode) {
+        if (gameMode == null) {
+            return null;
+        }
+
+        switch (gameMode) {
+            case SURVIVAL: return EnumGamemode.SURVIVAL;
+            case CREATIVE: return EnumGamemode.CREATIVE;
+            case ADVENTURE: return EnumGamemode.ADVENTURE;
+            case SPECTATOR: return EnumGamemode.SPECTATOR;
+            default: throw new AssertionError();
+        }
     }
 }

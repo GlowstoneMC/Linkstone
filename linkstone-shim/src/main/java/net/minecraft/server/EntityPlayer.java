@@ -24,11 +24,16 @@ public class EntityPlayer extends EntityHuman {
 
     @LGenerate
     @LField(version = V1_12_R1)
+    public final PlayerInteractManager playerInteractManager;
+
+    @LGenerate
+    @LField(version = V1_12_R1)
     public PlayerConnection playerConnection = new PlayerConnection(this);
 
     public EntityPlayer(GlowPlayer glow) {
         super(glow);
         this.glow = glow;
+        this.playerInteractManager = new PlayerInteractManager(this);
     }
 
     @Override

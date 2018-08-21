@@ -56,7 +56,6 @@ public class PacketPlayOutEntityTeleport implements Packet<PacketListenerPlayOut
 
     @Override
     public Message toGlowMessage() {
-        new EntityTeleportMessage(entityId, x, y, z, yaw, pitch, onGround);
-        return null;
+        return new EntityTeleportMessage(entityId, x, y, z, yaw, pitch, onGround);
     }
 }

@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
 public @interface LField {
     /**
-     * @return version where this class exists and has this name.
+     * @return version where this field exists and has this name.
      */
     Version[] version();
 

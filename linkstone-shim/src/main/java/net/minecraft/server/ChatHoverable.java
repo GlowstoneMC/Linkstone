@@ -62,6 +62,7 @@ public class ChatHoverable {
         return Objects.hash(action, value);
     }
 
+    @LClassfile(version = V1_12_R1)
     public static enum EnumHoverAction {
         @LEnum(version = V1_12_R1)
         SHOW_ITEM,

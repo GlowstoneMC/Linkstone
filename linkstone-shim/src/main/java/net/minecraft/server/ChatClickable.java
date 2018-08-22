@@ -60,6 +60,7 @@ public class ChatClickable {
         return Objects.hash(action, value);
     }
 
+    @LClassfile(version = V1_12_R1)
     public static enum EnumClickAction {
         @LEnum(version = V1_12_R1)
         OPEN_FILE,

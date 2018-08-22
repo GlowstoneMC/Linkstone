@@ -1,33 +1,77 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.md_5.bungee.api.ChatColor;
 
 import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public enum EnumChatFormat {
+    @LEnum(version = V1_12_R1)
     BLACK,
+
+    @LEnum(version = V1_12_R1)
     DARK_BLUE,
+
+    @LEnum(version = V1_12_R1)
     DARK_GREEN,
+
+    @LEnum(version = V1_12_R1)
     DARK_AQUA,
+
+    @LEnum(version = V1_12_R1)
     DARK_RED,
+
+    @LEnum(version = V1_12_R1)
     DARK_PURPLE,
+
+    @LEnum(version = V1_12_R1)
     GOLD,
+
+    @LEnum(version = V1_12_R1)
     GRAY,
+
+    @LEnum(version = V1_12_R1)
     DARK_GRAY,
+
+    @LEnum(version = V1_12_R1)
     BLUE,
+
+    @LEnum(version = V1_12_R1)
     GREEN,
+
+    @LEnum(version = V1_12_R1)
     AQUA,
+
+    @LEnum(version = V1_12_R1)
     RED,
+
+    @LEnum(version = V1_12_R1)
     LIGHT_PURPLE,
+
+    @LEnum(version = V1_12_R1)
     YELLOW,
+
+    @LEnum(version = V1_12_R1)
     WHITE,
+
+    @LEnum(version = V1_12_R1)
     OBFUSCATED,
+
+    @LEnum(version = V1_12_R1)
     BOLD,
+
+    @LEnum(version = V1_12_R1)
     STRIKETHROUGH,
+
+    @LEnum(version = V1_12_R1)
     UNDERLINE,
+
+    @LEnum(version = V1_12_R1)
     ITALIC,
+
+    @LEnum(version = V1_12_R1)
     RESET;
 
     public static ChatColor toGlowstone(EnumChatFormat color) {

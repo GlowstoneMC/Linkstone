@@ -2,6 +2,7 @@ package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.md_5.bungee.api.chat.BaseComponent;
@@ -62,8 +63,13 @@ public class ChatHoverable {
     }
 
     public static enum EnumHoverAction {
+        @LEnum(version = V1_12_R1)
         SHOW_ITEM,
+
+        @LEnum(version = V1_12_R1)
         SHOW_TEXT,
+
+        @LEnum(version = V1_12_R1)
         SHOW_ENTITY;
 
         public static HoverEvent.Action toGlowstone(EnumHoverAction action) {

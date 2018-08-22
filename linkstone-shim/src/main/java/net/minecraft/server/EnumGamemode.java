@@ -1,6 +1,7 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LMethod;
 import org.bukkit.GameMode;
@@ -9,9 +10,16 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public enum EnumGamemode {
+    @LEnum(version = V1_12_R1)
     SURVIVAL(0, "survival", "s"),
+
+    @LEnum(version = V1_12_R1)
     CREATIVE(1, "creative", "c"),
+
+    @LEnum(version = V1_12_R1)
     ADVENTURE(2, "adventure", "a"),
+
+    @LEnum(version = V1_12_R1)
     SPECTATOR(3, "spectator", "sp");
 
     /**

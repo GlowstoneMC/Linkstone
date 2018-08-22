@@ -1,6 +1,7 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LMethod;
 
@@ -13,11 +14,22 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public enum EnumDirection {
+    @LEnum(version = V1_12_R1)
     DOWN(0, 1, -1, "down", EnumAxis.Y, EnumAxisDirection.NEGATIVE, new BaseBlockPosition(0, -1, 0)),
+
+    @LEnum(version = V1_12_R1)
     UP(1, 0, -1, "up", EnumAxis.Y, EnumAxisDirection.POSITIVE, new BaseBlockPosition(0, 1, 0)),
+
+    @LEnum(version = V1_12_R1)
     NORTH(2, 3, 2, "north", EnumAxis.Z, EnumAxisDirection.NEGATIVE, new BaseBlockPosition(0, 0, -1)),
+
+    @LEnum(version = V1_12_R1)
     SOUTH(3, 2, 0, "south", EnumAxis.Z, EnumAxisDirection.POSITIVE, new BaseBlockPosition(0, 0, 1)),
+
+    @LEnum(version = V1_12_R1)
     WEST(4, 5, 1, "west", EnumAxis.X, EnumAxisDirection.NEGATIVE, new BaseBlockPosition(-1, 0, 0)),
+
+    @LEnum(version = V1_12_R1)
     EAST(5, 4, 3, "east", EnumAxis.X, EnumAxisDirection.POSITIVE, new BaseBlockPosition(1, 0, 0));
 
     private static final EnumDirection[] DIRECTIONS = values();
@@ -159,8 +171,13 @@ public enum EnumDirection {
 
     @LClassfile(version = V1_12_R1)
     public enum EnumAxis {
+        @LEnum(version = V1_12_R1)
         X("x", EnumDirectionLimit.HORIZONTAL),
+
+        @LEnum(version = V1_12_R1)
         Y("y", EnumDirectionLimit.VERTICAL),
+
+        @LEnum(version = V1_12_R1)
         Z("z", EnumDirectionLimit.HORIZONTAL);
 
         @LField(version = V1_12_R1, name = "d")
@@ -215,7 +232,10 @@ public enum EnumDirection {
 
     @LClassfile(version = V1_12_R1)
     public enum EnumAxisDirection {
+        @LEnum(version = V1_12_R1)
         POSITIVE(1, "Towards positive"),
+
+        @LEnum(version = V1_12_R1)
         NEGATIVE(-1, "Towards negative");
 
         @LField(version = V1_12_R1, name = "c")
@@ -242,6 +262,10 @@ public enum EnumDirection {
 
     @LClassfile(version = V1_12_R1)
     public enum EnumDirectionLimit {
-        HORIZONTAL, VERTICAL;
+        @LEnum(version = V1_12_R1)
+        HORIZONTAL,
+
+        @LEnum(version = V1_12_R1)
+        VERTICAL;
     }
 }

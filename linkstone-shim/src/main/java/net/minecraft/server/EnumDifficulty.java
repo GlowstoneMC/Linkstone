@@ -1,6 +1,7 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LMethod;
 
@@ -8,7 +9,17 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public enum EnumDifficulty {
-    PEACEFUL(0, "peaceful"), EASY(1, "easy"), NORMAL(2, "normal"), HARD(3, "hard");
+    @LEnum(version = V1_12_R1)
+    PEACEFUL(0, "peaceful"),
+
+    @LEnum(version = V1_12_R1)
+    EASY(1, "easy"),
+
+    @LEnum(version = V1_12_R1)
+    NORMAL(2, "normal"),
+
+    @LEnum(version = V1_12_R1)
+    HARD(3, "hard");
 
     @LMethod(version = V1_12_R1)
     public static EnumDifficulty getById(int n) {

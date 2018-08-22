@@ -2,6 +2,7 @@ package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.md_5.bungee.api.chat.ClickEvent;
@@ -60,10 +61,19 @@ public class ChatClickable {
     }
 
     public static enum EnumClickAction {
+        @LEnum(version = V1_12_R1)
         OPEN_FILE,
+
+        @LEnum(version = V1_12_R1)
         RUN_COMMAND,
+
+        @LEnum(version = V1_12_R1)
         OPEN_URL,
+
+        @LEnum(version = V1_12_R1)
         SUGGEST_COMMAND,
+
+        @LEnum(version = V1_12_R1)
         CHANGE_PAGE;
 
         public static ClickEvent.Action toGlowstone(EnumClickAction action) {

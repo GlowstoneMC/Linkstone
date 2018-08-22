@@ -3,6 +3,7 @@ package net.minecraft.server;
 import com.flowpowered.network.Message;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.net.message.play.game.TitleMessage;
 
@@ -85,11 +86,22 @@ public class PacketPlayOutTitle implements Packet<PacketListenerPlayOut> {
 
     @LClassfile(version = V1_12_R1)
     public static enum EnumTitleAction {
+        @LEnum(version = V1_12_R1)
         TITLE,
+
+        @LEnum(version = V1_12_R1)
         SUBTITLE,
+
+        @LEnum(version = V1_12_R1)
         TIMES,
+
+        @LEnum(version = V1_12_R1)
         ACTIONBAR,
+
+        @LEnum(version = V1_12_R1)
         CLEAR,
+
+        @LEnum(version = V1_12_R1)
         RESET;
 
         public static TitleMessage.Action toGlowstone(EnumTitleAction action) {

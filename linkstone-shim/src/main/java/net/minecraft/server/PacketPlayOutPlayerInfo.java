@@ -5,6 +5,7 @@ import com.google.common.collect.Streams;
 import com.mojang.authlib.GameProfile;
 import net.glowstone.linkstone.annotations.LClassfile;
 import net.glowstone.linkstone.annotations.LConstructor;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LMethod;
 import net.glowstone.net.message.play.game.UserListItemMessage;
@@ -62,10 +63,19 @@ public class PacketPlayOutPlayerInfo implements Packet<PacketListenerPlayOut> {
 
     @LClassfile(version = V1_12_R1)
     public enum EnumPlayerInfoAction {
+        @LEnum(version = V1_12_R1)
         ADD_PLAYER,
+
+        @LEnum(version = V1_12_R1)
         UPDATE_GAME_MODE,
+
+        @LEnum(version = V1_12_R1)
         UPDATE_LATENCY,
+
+        @LEnum(version = V1_12_R1)
         UPDATE_DISPLAY_NAME,
+
+        @LEnum(version = V1_12_R1)
         REMOVE_PLAYER;
 
         public static UserListItemMessage.Action toGlowstone(EnumPlayerInfoAction action) {

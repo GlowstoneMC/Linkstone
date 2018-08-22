@@ -1,6 +1,7 @@
 package net.minecraft.server;
 
 import net.glowstone.linkstone.annotations.LClassfile;
+import net.glowstone.linkstone.annotations.LEnum;
 import net.glowstone.linkstone.annotations.LField;
 import net.glowstone.linkstone.annotations.LMethod;
 
@@ -8,9 +9,16 @@ import static net.glowstone.linkstone.annotations.Version.V1_12_R1;
 
 @LClassfile(version = V1_12_R1)
 public enum EnumBlockRotation {
+    @LEnum(version = V1_12_R1)
     NONE("rotate_0"),
+
+    @LEnum(version = V1_12_R1)
     CLOCKWISE_90("rotate_90"),
+
+    @LEnum(version = V1_12_R1)
     CLOCKWISE_180("rotate_180"),
+
+    @LEnum(version = V1_12_R1)
     COUNTERCLOCKWISE_90("rotate_270");
 
     @LField(version = V1_12_R1, name = "e")

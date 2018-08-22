@@ -8,6 +8,7 @@ import net.glowstone.linkstone.compiler.MappingModel;
 import net.glowstone.linkstone.compiler.collect.VersionAnnotationVisitor;
 import net.glowstone.linkstone.compiler.meta.ClassfileMeta;
 import net.glowstone.linkstone.compiler.meta.ConstructorMeta;
+import net.glowstone.linkstone.compiler.meta.EnumMeta;
 import net.glowstone.linkstone.compiler.meta.FieldMeta;
 import net.glowstone.linkstone.compiler.meta.MethodMeta;
 import org.objectweb.asm.Opcodes;
@@ -42,49 +43,6 @@ public class TemplateCompareLinter implements Linter {
 
             for (ClassNode cn : classes) {
                 checkClass(cn, templateJar, model, version, report);
-
-                if (isEnum(cn.access)) {
-                    checkEnumFields(cn, templateJar, model, report);
-                }
-            }
-        }
-    }
-
-    /**
-     * Check whether the fields of an enum also exist in the template.
-     *
-     * @param cn ClassNode of the enum
-     * @param templateJar Template jar fo
-     * @param model
-     * @param report
-     */
-    private void checkEnumFields(ClassNode cn, ClassStore templateJar, MappingModel model, ErrorReport report) {
-        String resolvedEnumName = model.resolveClass(cn.name);
-        ClassNode template = templateJar.getClass(resolvedEnumName);
-
-        if (template == null) {
-            // This error has already been linted
-            return;
-        }
-
-        if (!isEnum(template.access)) {
-            ErrorReport.Class location = new ErrorReport.Class(cn.name);
-            String message = "Template classfile is not an enum";
-            report.addError(new ErrorReport.Error(message, location));
-            return;
-        }
-
-        List<FieldNode> templateFields = getEnumFields(template);
-        List<FieldNode> enumFields = getEnumFields(cn);
-
-        for (FieldNode fn : enumFields) {
-            boolean doesFieldExist = templateFields.stream()
-                    .anyMatch(f -> f.name.equals(fn.name));
-
-            if (!doesFieldExist) {
-                ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
-                String message = "Enum field does not exist in template";
-                report.addError(new ErrorReport.Error(message, location));
             }
         }
     }
@@ -112,9 +70,34 @@ public class TemplateCompareLinter implements Linter {
             String message = "Class '" + resolvedClassName + "' does not exist in template jar for version " + version.getName();
             report.addError(new ErrorReport.Error(message, location));
         } else {
+            if (isEnum(cn.access)) {
+                checkEnumFields(cn, template, model, version, resolvedClassName, report);
+            }
+
             checkFields(cn, template, model, version, resolvedClassName, report);
             checkConstructors(cn, template, model, version, resolvedClassName, report);
             checkMethods(cn, template, model, version, resolvedClassName, report);
+        }
+    }
+
+    private void checkEnumFields(ClassNode cn, ClassNode template, MappingModel model, Version version, String resolvedClassName, ErrorReport report) {
+        for (FieldNode fn : cn.fields) {
+            EnumMeta meta = EnumMeta.from(fn);
+            if (!meta.isAnnotated()) {
+                continue;
+            }
+
+            String resolvedConstantName = model.resolveFieldName(cn.name, fn.name, fn.desc);
+            String resolvedDesc = resolveTypeDescriptor(Type.getType(fn.desc), model);
+            boolean existsEnumField = template.fields.stream().anyMatch(f ->
+                    f.name.equals(resolvedConstantName) && f.desc.equals(resolvedDesc));
+
+            if (!existsEnumField) {
+                ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
+                String message = "Enum constant '" + resolvedConstantName + "' in enum '" +
+                        resolvedClassName + "' does not exist in template jar for version " + version.getName();
+                report.addError(new ErrorReport.Error(message, location));
+            }
         }
     }
 

@@ -25,8 +25,12 @@ public class MissingClassVersionLinter implements Linter {
 
     private void validateFields(ClassNode cn, Set<Version> classVersions, ErrorReport report) {
         for (FieldNode fn : cn.fields) {
-            FieldMeta meta = FieldMeta.from(fn);
-            for (Version fieldVersion : meta.getVersions()) {
+            Set<Version> fieldVersions = new HashSet<>();
+
+            fieldVersions.addAll(FieldMeta.from(fn).getVersions());
+            fieldVersions.addAll(EnumMeta.from(fn).getVersions());
+
+            for (Version fieldVersion : fieldVersions) {
                 if (!classVersions.contains(fieldVersion)) {
                     ErrorReport.Field location = new ErrorReport.Field(cn.name, fn.name, fn.desc);
                     String message = "The class does not exist in version " + fieldVersion.getName() + " but the field does.";

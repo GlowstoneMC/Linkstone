@@ -84,11 +84,8 @@ public class TemplateFilter implements CodeTransformer {
      * @param fields to filter
      */
     private void processFields(List<FieldNode> fields) {
-        fields.removeIf(fn -> {
-            FieldMeta meta = FieldMeta.from(fn);
-
-            return meta.isAnnotated() && !meta.getVersions().contains(version);
-        });
+        fields.removeIf(fn -> Arrays.asList(FieldMeta.from(fn), EnumMeta.from(fn)).stream()
+                    .anyMatch(meta -> meta.isAnnotated() && !meta.getVersions().contains(version)));
     }
 
     /**

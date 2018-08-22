@@ -59,7 +59,7 @@ public class TemplateCompareLinter implements Linter {
 
     private void checkClass(ClassNode cn, ClassStore templateJar, MappingModel model, Version version, ErrorReport report) {
         ClassfileMeta meta = ClassfileMeta.from(cn);
-        if (!meta.isAnnotated()) {
+        if (!meta.isAnnotated() || !meta.getVersions().contains(version)) {
             return;
         }
 
@@ -83,7 +83,7 @@ public class TemplateCompareLinter implements Linter {
     private void checkEnumFields(ClassNode cn, ClassNode template, MappingModel model, Version version, String resolvedClassName, ErrorReport report) {
         for (FieldNode fn : cn.fields) {
             EnumMeta meta = EnumMeta.from(fn);
-            if (!meta.isAnnotated()) {
+            if (!meta.isAnnotated() || !meta.getVersions().contains(version)) {
                 continue;
             }
 
@@ -104,7 +104,7 @@ public class TemplateCompareLinter implements Linter {
     private void checkFields(ClassNode cn, ClassNode template, MappingModel model, Version version, String resolvedClassName, ErrorReport report) {
         for (FieldNode fn : cn.fields) {
             FieldMeta meta = FieldMeta.from(fn);
-            if (!meta.isAnnotated()) {
+            if (!meta.isAnnotated() || !meta.getVersions().contains(version)) {
                 continue;
             }
 
@@ -125,7 +125,7 @@ public class TemplateCompareLinter implements Linter {
     private void checkConstructors(ClassNode cn, ClassNode template, MappingModel model, Version version, String resolvedClassName, ErrorReport report) {
         for (MethodNode mn : cn.methods) {
             ConstructorMeta meta = ConstructorMeta.from(mn);
-            if (!meta.isAnnotated()) {
+            if (!meta.isAnnotated() || !meta.getVersions().contains(version)) {
                 continue;
             }
 
@@ -145,7 +145,7 @@ public class TemplateCompareLinter implements Linter {
     private void checkMethods(ClassNode cn, ClassNode template, MappingModel model, Version version, String resolvedClassName, ErrorReport report) {
         for (MethodNode mn : cn.methods) {
             MethodMeta meta = MethodMeta.from(mn);
-            if (!meta.isAnnotated()) {
+            if (!meta.isAnnotated() || !meta.getVersions().contains(version)) {
                 continue;
             }
 

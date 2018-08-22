@@ -34,23 +34,28 @@ public class LinkstoneMojo extends AbstractMojo {
 
         File outputDir = new File(project.getBuild().getOutputDirectory());
         Version version = Version.forName(this.version);
-        getLog().info("Generating classes for version " + version.getName());
+        getLog().info("Targeting version " + version.getName());
 
         LinkstoneCompiler compiler = new LinkstoneCompiler();
         List<ClassNode> templates = compiler.loadClasses(outputDir);
+        getLog().info("Loading dependencies ...");
         ClassStore classStore = createDependencyClassStore(templates);
+
+        getLog().info("Loading template jars ...");
         Map<Version, ClassStore> templateJars = compiler.loadTemplateJars();
 
+        getLog().info("Preparing templates classes ...");
         compiler.runTemplateFixes(templates, classStore);
-
         Map<Version, MappingModel> mappings = compiler.collectMappingModel(templates);
 
+        getLog().info("Checking template classes for errors");
         List<ErrorReport.Error> errors = compiler.runLints(templates, templateJars, mappings, classStore).getErrors();
         if (!errors.isEmpty()) {
             printErrors(errors);
             throw new MojoExecutionException("Templates contain errors");
         }
 
+        getLog().info("Generating output classes ...");
         FileUtils.delete(outputDir);
 
         List<ClassNode> generatedClasses = compiler.generateClasses(templates, classStore, version, mappings);

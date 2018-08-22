@@ -7,7 +7,7 @@ import java.lang.annotation.*;
  */
 @Repeatable(LPackageContainer.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.PACKAGE })
+@Target(ElementType.PACKAGE)
 public @interface LPackage {
     /**
      * @return version where this package has this name.

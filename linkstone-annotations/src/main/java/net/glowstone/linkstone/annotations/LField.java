@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  */
 @Repeatable(LFieldContainer.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
+@Target(ElementType.FIELD)
 public @interface LField {
     /**
      * @return version where this field exists and has this name.

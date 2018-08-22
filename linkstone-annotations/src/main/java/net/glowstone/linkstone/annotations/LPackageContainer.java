@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.PACKAGE })
+@Target(ElementType.PACKAGE)
 public @interface LPackageContainer {
     LPackage[] value();
 }

@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * Annotate a method implementing a setter of a field
  */
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.METHOD })
+@Target(ElementType.METHOD)
 public @interface LSetter {
     /**
      * @return versions where the annotated method implements the getter

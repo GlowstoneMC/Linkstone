@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  */
 @Repeatable(LMethodContainer.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
+@Target(ElementType.METHOD)
 public @interface LMethod {
     /**
      * @return version where this method exists and has this name.

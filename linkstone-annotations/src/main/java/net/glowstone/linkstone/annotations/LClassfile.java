@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  */
 @Repeatable(LClassfileContainer.class)
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.TYPE, ElementType.FIELD, ElementType.METHOD })
+@Target(ElementType.TYPE)
 public @interface LClassfile {
     /**
      * @return version where this class exists and has this name.

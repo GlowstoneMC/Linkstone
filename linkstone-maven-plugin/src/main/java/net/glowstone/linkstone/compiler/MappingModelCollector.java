@@ -1,6 +1,7 @@
 package net.glowstone.linkstone.compiler;
 
 import net.glowstone.linkstone.compiler.meta.ClassfileMeta;
+import net.glowstone.linkstone.compiler.meta.EnumMeta;
 import net.glowstone.linkstone.compiler.meta.FieldMeta;
 import net.glowstone.linkstone.compiler.meta.MethodMeta;
 import net.glowstone.linkstone.compiler.meta.PackageMeta;
@@ -60,6 +61,12 @@ public class MappingModelCollector {
         if (fieldMeta.getVersions().contains(version)) {
             String newFieldName = fieldMeta.getNameOrDefault(version);
             mapping.putFieldName(classname, fn.name, fn.desc, newFieldName);
+        }
+
+        EnumMeta enumMeta = EnumMeta.from(fn);
+        if (enumMeta.getVersions().contains(version)) {
+            String newEnumFieldName = enumMeta.getNameOrDefault(version);
+            mapping.putFieldName(classname, fn.name, fn.desc, newEnumFieldName);
         }
     }
 

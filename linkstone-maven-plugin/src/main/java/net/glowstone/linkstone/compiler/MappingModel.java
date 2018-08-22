@@ -101,7 +101,7 @@ public class MappingModel {
     }
 
     /**
-     * Uniquely identifies a field of method
+     * Uniquely identifies a field or method
      */
     private static class ClassMember {
         private final String className;

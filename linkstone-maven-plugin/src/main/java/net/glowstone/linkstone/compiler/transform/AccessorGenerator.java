@@ -33,7 +33,7 @@ public class AccessorGenerator implements CodeTransformer {
     private void generateAccessor(ClassNode cn) {
         for (FieldNode fn : cn.fields) {
             FieldMeta meta = FieldMeta.from(fn);
-            if (meta.isGenerate()) {
+            if (meta.isAnnotated() && meta.isGenerate()) {
                 cn.methods.add(generateGetter(cn, fn, meta));
 
                 if (!Modifier.isFinal(fn.access)) {

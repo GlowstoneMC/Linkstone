@@ -15,6 +15,7 @@ import org.objectweb.asm.tree.TypeInsnNode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -45,37 +46,42 @@ public class EnumBoilerplateFix implements CodeTransformer {
 
     private void fixEnum(ClassNode enumNode) {
         MethodNode clinit = getStaticClassInitializer(enumNode);
-        List<FieldNode> enumConstants = getEnumConstants(enumNode);
+        List<FieldNode> unorderedEnumConstants = getEnumConstants(enumNode);
+        ValuesArrayInitializationCodeBlock valuesArrayInitialization = getValueArrayInitialization(enumNode, clinit, unorderedEnumConstants);
 
-        // Update ordinal and name of enum constants or
-        // remove the code block that initializes them
-        int ordinal = 0;
-        for (FieldNode constant : enumConstants) {
-            ConstantInitializerCodeBlock block = getConstantInitializerCodeBlock(enumNode, clinit, constant);
+        // All enum constants as ordered in the "values" array.
+        List<FieldNode> orderedConstants = valuesArrayInitialization.valueAssignments.stream()
+                .sorted(Comparator.comparingInt(assignment -> assignment.getIndex()))
+                .map(assignment -> assignment.constant)
+                .collect(Collectors.toList());
 
-            EnumMeta meta = EnumMeta.from(constant);
-            if (meta.isAnnotated() && !meta.getVersions().contains(version)) {
-                block.remove();
-            } else {
-                block.setOrdinal(ordinal++);
-                block.setName(meta.getNameOrDefault(version));
-            }
-        }
-
-        // Update the "values" array
-        ValueArrayInitialization valueArrayInitialization = getValueArrayInitialization(enumNode, clinit, enumConstants);
         int index = 0;
-        for (FieldNode constant : enumConstants) {
-            ValueArrayInitialization.ValueAssignment assignment = valueArrayInitialization.getAssignment(constant);
+        for (FieldNode constant : orderedConstants) {
+            ConstantInitializerCodeBlock constantInitialization = getConstantInitializerCodeBlock(enumNode, clinit, constant);
+            ValuesArrayInitializationCodeBlock.ValueAssignment valuesArrayAssignment = valuesArrayInitialization.getAssignment(constant);
 
             EnumMeta meta = EnumMeta.from(constant);
             if (meta.isAnnotated() && !meta.getVersions().contains(version)) {
-                assignment.remove();
+                // The constant does not exist in the targeted version
+                // The initialization of the constant and the storage in the "values" array is removed.
+                constantInitialization.remove();
+                valuesArrayAssignment.remove();
             } else {
-                assignment.setIndex(index++);
+                int ordinal = index++;
+
+                // Updates the name and ordinal of a constant initialization.
+                // The name might change through obfuscation wih the LEnum annotation.
+                // The ordinal changes if a preceding constant was removed.
+                constantInitialization.setOrdinal(ordinal);
+                constantInitialization.setName(meta.getNameOrDefault(version));
+
+                // Update the index of this constant in the "values" array.
+                // It has to be changed as well if a preceding constant was removed.
+                valuesArrayAssignment.setIndex(ordinal);
             }
         }
-        valueArrayInitialization.setArraySize(index);
+
+        valuesArrayInitialization.setArraySize(index);
     }
 
     /**
@@ -229,10 +235,10 @@ public class EnumBoilerplateFix implements CodeTransformer {
      * @param constants fields of all constants in the enum
      * @return code block that initializes the values array
      */
-    private ValueArrayInitialization getValueArrayInitialization(ClassNode cn, MethodNode clinit, List<FieldNode> constants) {
+    private ValuesArrayInitializationCodeBlock getValueArrayInitialization(ClassNode cn, MethodNode clinit, List<FieldNode> constants) {
         for (AbstractInsnNode insn = clinit.instructions.getFirst(); insn != null; insn = insn.getNext()) {
             if (insn.getOpcode() == ANEWARRAY && ((TypeInsnNode) insn).desc.equals(cn.name)) {
-                return new ValueArrayInitialization(clinit.instructions, insn, constants);
+                return new ValuesArrayInitializationCodeBlock(clinit.instructions, insn, constants);
             }
         }
 
@@ -242,7 +248,7 @@ public class EnumBoilerplateFix implements CodeTransformer {
     /**
      * Wraps the instructions that initialize the "values" array that contains all enum constants.
      */
-    class ValueArrayInitialization {
+    class ValuesArrayInitializationCodeBlock {
         private final InsnList insnList;
 
         /**
@@ -255,7 +261,7 @@ public class EnumBoilerplateFix implements CodeTransformer {
          */
         private List<ValueAssignment> valueAssignments = new ArrayList<>();
 
-        public ValueArrayInitialization(InsnList insnList, AbstractInsnNode newArrayInsn, List<FieldNode> constants) {
+        public ValuesArrayInitializationCodeBlock(InsnList insnList, AbstractInsnNode newArrayInsn, List<FieldNode> constants) {
             this.insnList = insnList;
 
             this.sizePushInsn = newArrayInsn.getPrevious();
@@ -335,12 +341,25 @@ public class EnumBoilerplateFix implements CodeTransformer {
         class ValueAssignment {
             private final List<AbstractInsnNode> insns;
             private final FieldNode constant;
+
+            /**
+             * Instruction that pushed the index in the values array
+             */
             private AbstractInsnNode indexPushInsn;
 
             public ValueAssignment(List<AbstractInsnNode> insns, FieldNode constant, AbstractInsnNode indexPushInsn) {
                 this.insns = insns;
                 this.constant = constant;
                 this.indexPushInsn = indexPushInsn;
+            }
+
+            /**
+             * Get the index in the "values" array in which this code block stores the constant.
+             *
+             * @return index in "values" array
+             */
+            public int getIndex() {
+                return AsmUtil.getPushedInt(indexPushInsn);
             }
 
             /**

@@ -105,6 +105,7 @@ public class LinkstoneCompiler {
         new OverridenAnnotationApplier(classStore).transform(templates);
 
         CodeTransformer[] codeTransformers = {
+                new EnumBoilerplateFix(version),
                 new TemplateFilter(version),
                 new AccessorGenerator(version),
                 new DelegateGenerator(classStore),

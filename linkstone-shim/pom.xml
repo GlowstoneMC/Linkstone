@@ -12,7 +12,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <api.version>1.12.2-R4.2-SNAPSHOT</api.version>
+        <api.version>1.12.2-R5.0-SNAPSHOT</api.version>
         <minecraft_version>1_12_R1</minecraft_version>
         <buildtag.prefix>git-Bukkit-</buildtag.prefix>
         <buildtag.suffix></buildtag.suffix>

@@ -31,7 +31,7 @@ jobs:
                     - linkstone-
 
             - run: ./build-external.sh
-            - run: mvn -am -T 1C -B dependency:go-offline
+            #- run: mvn -am -T 1C -B dependency:go-offline
 
             - save_cache:
                 paths:
@@ -63,7 +63,7 @@ jobs:
                     - linkstone-
 
             - run: ./build-external.sh
-            - run: mvn -am -T 1C -B dependency:go-offline
+            #- run: mvn -am -T 1C -B dependency:go-offline
 
             - save_cache:
                 paths:

@@ -1,6 +1,3 @@
-# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
-# For more information see: https://github.com/actions/setup-java#apache-maven-with-a-settings-path
-
 name: Build and Deploy
 
 on:
@@ -32,6 +29,8 @@ jobs:
             ${{ runner.os }}-maven-
       #- name: Cache Maven
       #  run: mvn -T 1C -B -am dependency:go-offline
+      - name: Download template JAR
+        run: ./build-external.sh
       - name: Maven Build and Deploy
         run: mvn -T 1C -B -am source:jar javadoc:jar deploy -Pbuild-extras
         env:

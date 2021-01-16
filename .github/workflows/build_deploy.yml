@@ -30,8 +30,8 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: Cache Maven
-        run: mvn -T 1C -B -am dependency:go-offline
+      #- name: Cache Maven
+      #  run: mvn -T 1C -B -am dependency:go-offline
       - name: Maven Build and Deploy
         run: mvn -T 1C -B -am source:jar javadoc:jar deploy -Pbuild-extras
         env:

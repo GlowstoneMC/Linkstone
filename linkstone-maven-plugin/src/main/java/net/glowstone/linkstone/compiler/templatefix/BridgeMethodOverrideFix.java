@@ -29,11 +29,11 @@ import java.util.stream.Collectors;
  *
  * <code>
  *     class Entity {
- *         @LMethod(version={Version.V1_12_R1})
+ *         {@literal @}LMethod(version={Version.V1_12_R1})
  *         public CraftEntity getBukkitEntity() { ... }
  *     }
  *     class EntityHuman extends Entity {
- *         @LOverride
+ *         {@literal @}LOverride
  *         public CraftHumanEntity getBukkitEntity() { ... }
  *     }
  * </code>
@@ -41,7 +41,7 @@ import java.util.stream.Collectors;
  * That code compiles to something like this:
  * <code>
  *     class EntityHuman extends Entity {
- *         @LOverride
+ *         {@literal @}LOverride
  *         public CraftHumanEntity getBukkitEntity() { ... }
  *
  *         // This method has the bridge access flag.

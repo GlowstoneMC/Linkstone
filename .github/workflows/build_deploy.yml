@@ -1,0 +1,39 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java#apache-maven-with-a-settings-path
+
+name: Build and Deploy
+
+on:
+  push:
+    branches: [master]
+    paths-ignore: 
+      - .gitignore
+      - LICENSE
+      - README.md
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+          server-id: glowstone-upstream
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Cache Maven
+        run: mvn -T 1C -B -am dependency:go-offline
+      - name: Maven Build and Deploy
+        run: mvn -T 1C -B -am source:jar javadoc:jar deploy -Pbuild-extras
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.MAVEN_PASSWORD }}

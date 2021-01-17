@@ -23,12 +23,14 @@ jobs:
       - name: Cache
         uses: actions/cache@v2
         with:
-          path: ~/.m2/repository
+          path: |
+            ~/.m2/repository
+            templates/
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      #- name: Cache Maven
-      #  run: mvn -T 1C -B -am dependency:go-offline
+      - name: Cache Maven
+        run: mvn -T 1C -B -am dependency:go-offline
       - name: Download template JAR
         run: ./build-external.sh
       - name: Maven Build and Deploy

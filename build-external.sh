@@ -1,7 +1,7 @@
 #!/bin/bash
 target=spigot-1.12.2.jar
 ext_folder=ext/
-ext_jar=${ext}${target}
+ext_jar=${ext_folder}${target}
 template_jar=templates/${target}
 if [ ! -f ${template_jar} ]; then
   mkdir $ext_folder

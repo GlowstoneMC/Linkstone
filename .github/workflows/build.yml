@@ -1,0 +1,29 @@
+name: Build
+
+on:
+  push:
+    branches-ignore: [master]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.m2/repository
+            templates/
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Download template JAR
+        run: ./build-external.sh
+      - name: Maven Build
+        run: mvn -T 1C -B -am package dependency:go-offline -Pbuild-extras

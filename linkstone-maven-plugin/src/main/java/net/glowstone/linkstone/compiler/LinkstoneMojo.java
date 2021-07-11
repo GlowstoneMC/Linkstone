@@ -56,7 +56,7 @@ public class LinkstoneMojo extends AbstractMojo {
         }
 
         getLog().info("Generating output classes ...");
-        FileUtils.delete(outputDir);
+        FileUtils.delete(outputDir, ".class");
 
         List<ClassNode> generatedClasses = compiler.generateClasses(templates, classStore, version, mappings);
         compiler.writeClasses(outputDir, generatedClasses);

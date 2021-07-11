@@ -10,14 +10,16 @@ public class FileUtils {
      *
      * @param file that will be deleted
      */
-    public static void delete(File file) {
+    public static void delete(File file, String extension) {
         if (file.isDirectory()) {
             for (File f : file.listFiles()) {
-                delete(f);
+                delete(f, extension);
             }
         }
 
-        file.delete();
+        if (file.getName().endsWith(extension)) {
+            file.delete();
+        }
     }
 
     /**

@@ -90,9 +90,9 @@
     <!-- This builds a completely 'ready to start' jar with all dependencies inside -->
     <build>
         <resources>
-          <resource>
-            <directory>${project.basedir}/src/main/resources</directory>
-          </resource>
+            <resource>
+                <directory>${project.basedir}/src/main/resources</directory>
+            </resource>
         </resources>
 
         <plugins>
@@ -218,6 +218,11 @@
                         <version>2.5.0-spigotmc</version>
                     </dependency>
                 </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.2.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

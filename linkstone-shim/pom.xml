@@ -89,6 +89,12 @@
 
     <!-- This builds a completely 'ready to start' jar with all dependencies inside -->
     <build>
+        <resources>
+          <resource>
+            <directory>${project.basedir}/src/main/resources</directory>
+          </resource>
+        </resources>
+
         <plugins>
             <plugin>
                 <groupId>net.md-5</groupId>

@@ -43,7 +43,7 @@
 	    <dependency>
             <groupId>net.glowstone</groupId>
             <artifactId>glowstone</artifactId>
-            <version>2018.10.0-SNAPSHOT</version>
+            <version>2021.7.0-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
